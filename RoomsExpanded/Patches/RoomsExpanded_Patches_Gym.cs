@@ -1,0 +1,56 @@
+﻿using Harmony;
+using UnityEngine;
+using Klei.AI;
+using TUNING;
+
+namespace RoomsExpanded
+{
+    class RoomsExpanded_Patches_Gym
+    {
+        [HarmonyPatch(typeof(ManualGeneratorConfig))]
+        [HarmonyPatch("DoPostConfigureComplete")]
+        public static class ManualGeneratorConfig_DoPostConfigureComplete_Patch
+        {
+            public static void Postfix(GameObject go)
+            {
+                if (!Settings.Instance.Gym.IncludeRoom) return;
+                go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.RunningWheelGeneratorTag);
+            }
+        }
+
+        [HarmonyPatch(typeof(ManualGenerator))]
+        [HarmonyPatch("OnWorkTick")]
+        public static class ManualGenerator_OnWorkTick_Patch
+        {
+            private static string AthleticsId = "";
+
+            public static void Postfix(ref Worker worker, float dt, ref ManualGenerator __instance)
+            {
+                if (!Settings.Instance.Gym.IncludeRoom) return;
+                if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeGymData.RoomId))
+                {
+                    if (string.IsNullOrEmpty(AthleticsId))
+                        AthleticsId = Db.Get().Attributes.Athletics.Id;
+
+                    AttributeLevels component = worker.GetComponent<AttributeLevels>();
+                    if (component != null && Settings.Instance.Gym.Bonus.HasValue)
+                        component.AddExperience(AthleticsId,
+                                                dt * Settings.Instance.Gym.Bonus.Value,
+                                                DUPLICANTSTATS.ATTRIBUTE_LEVELING.ALL_DAY_EXPERIENCE);
+                }
+
+            }
+        }
+
+        [HarmonyPatch(typeof(WaterCoolerConfig))]
+        [HarmonyPatch("ConfigureBuildingTemplate")]
+        public static class WaterCoolerConfig_ConfigureBuildingTemplate_Patch
+        {
+            public static void Postfix(GameObject go)
+            {
+                if (!Settings.Instance.Gym.IncludeRoom) return;
+                go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.WaterCoolerTag);
+            }
+        }
+    }
+}
