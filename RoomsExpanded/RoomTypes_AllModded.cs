@@ -88,6 +88,17 @@ namespace RoomsExpanded
             }
         }
 
+        private static RoomType prv_Botanical = null;
+        public static RoomType Botanical
+        {
+            get
+            {
+                if (prv_Botanical == null)
+                    prv_Botanical = new RoomTypeBotanicalData().GetRoomType();
+                return prv_Botanical;
+            }
+        }
+
         private static RoomType prv_Industrial = null;
         public static RoomType IndustrialRoom(RoomType[] upgrades)
         {

@@ -7,13 +7,7 @@ namespace RoomsExpanded
 {
     class RoomTypeAquariumData : RoomTypeAbstractData
     {
-        private int requiredFishCount = 2;
-
         public static readonly string RoomId = "AquariumRoom";
-
-        public static readonly string AquariumReleaseTag = "FishRelease";
-        public static readonly string AquariumFeederTag = "FishFeeder";
-        public static readonly string FishCount = "FishCount";
 
         public RoomTypeAquariumData()
         {

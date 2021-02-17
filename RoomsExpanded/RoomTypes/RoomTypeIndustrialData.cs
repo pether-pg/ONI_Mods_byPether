@@ -7,8 +7,6 @@ namespace RoomsExpanded
     {
         public static readonly string RoomId = "IndustrialRoom";
 
-        public static readonly string IndustrialTagName = "IndustrialMachinery";
-
         public RoomTypeIndustrialData(RoomType[] upgr = null)
         {
             Id = RoomId;

@@ -4,6 +4,7 @@ using KMod;
 using System.IO;
 using static Localization;
 using System.Reflection;
+using STRINGS;
 
 namespace RoomsExpanded
 {
@@ -34,6 +35,7 @@ namespace RoomsExpanded
                 GenerateStringsTemplate(root, GetTranslationDir());
 
                 Debug.Log($"Rooms Expanded: using translation done by {STRINGS.TRANSLATION.AUTHOR.NAME}");
+
             }
 
             private static string GetTranslationDir()

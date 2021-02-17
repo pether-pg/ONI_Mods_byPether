@@ -85,7 +85,7 @@ namespace RoomsExpanded
                 public class BOTANICAL
                 {
                     public static LocString NAME = (LocString)"Botanical Garden";
-                    public static LocString EFFECT = (LocString)" - Bonus decor for plants";
+                    public static LocString EFFECT = (LocString)" - Morale bonus";
                     public static LocString TOOLTIP = (LocString)"Serene harmony of exotic plants amazes everyone who enters Botanical Garden.";
                 }
 
@@ -199,6 +199,12 @@ namespace RoomsExpanded
                 {
                     public static LocString NAME = (LocString)"{0} Plants";
                     public static LocString DESCRIPTION = (LocString)"At least {0} plants of any kind.";
+                }
+
+                public class NOWILDPLANTS
+                {
+                    public static LocString NAME = (LocString)"No wild plants";
+                    public static LocString DESCRIPTION = (LocString)"All plants must be domesticated.";
                 }
 
                 public class DECORPLANTS

@@ -6,7 +6,6 @@ namespace RoomsExpanded
     public class RoomTypeGraveyardData : RoomTypeAbstractData
     {
         public static readonly string RoomId = "GraveyardRoom";
-        public static readonly string GravestoneName = "TastefulMemorial";
 
         public RoomTypeGraveyardData()
         {

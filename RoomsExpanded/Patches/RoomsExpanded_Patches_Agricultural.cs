@@ -1,12 +1,41 @@
 ﻿using Harmony;
 using UnityEngine;
 using System.Collections.Generic;
+using Database;
+using STRINGS;
 
 namespace RoomsExpanded
 {
     class RoomsExpanded_Patches_Agricultural
     {
-        
+        public static void PrepareModifications()
+        {
+            if (Settings.Instance.Agricultural.IncludeRoom)
+            {
+                ROOMS.TYPES.CREATUREPEN.NAME = STRINGS.ROOMS.TYPES.AGRICULTURAL.NAME;
+                ROOMS.TYPES.CREATUREPEN.EFFECT = STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT;
+                ROOMS.TYPES.CREATUREPEN.TOOLTIP = STRINGS.ROOMS.TYPES.AGRICULTURAL.TOOLTIP;
+                RoomConstraints.RANCH_STATION = RoomTypeAgriculturalData.MODIFIED_CONSTRAINT;
+                if (Settings.Instance.Gym.IncludeRoom)
+                {
+                    if (RoomConstraints.RANCH_STATION.stomp_in_conflict == null)
+                        RoomConstraints.RANCH_STATION.stomp_in_conflict = new List<RoomConstraints.Constraint>();
+                    RoomConstraints.RANCH_STATION.stomp_in_conflict.Add(RoomTypes_AllModded.GymRoom.primary_constraint);
+                }
+            }
+        }
+
+        public static void ModifyRoom(ref RoomTypes __instance)
+        {
+            if (Settings.Instance.Agricultural.IncludeRoom)
+            {
+                for (int i = 0; i < __instance.CreaturePen.additional_constraints.Length; i++)
+                    if (__instance.CreaturePen.additional_constraints[i].name.Contains("Maximum size:"))
+                        __instance.CreaturePen.additional_constraints[i] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Agricultural.MaxSize);
+
+            }
+        }
+
         [HarmonyPatch(typeof(FarmStationConfig))]
         [HarmonyPatch("DoPostConfigureComplete")]
         public static class FarmStationConfig_DoPostConfigureComplete_Patch
@@ -29,19 +58,6 @@ namespace RoomsExpanded
                 RoomTracker roomTracker = prefab.AddOrGet<RoomTracker>();
                 roomTracker.requiredRoomType = Db.Get().RoomTypes.CreaturePen.Id;
             }
-        }
-
-        [HarmonyPatch(typeof(OverlayModes.Rooms))]
-        [HarmonyPatch("GetCustomLegendData")]
-        public static class Rooms_GetCustomLegendData_Patch
-        {
-            public static void Postfix(ref List<LegendEntry> __result)
-            {
-                if (!Settings.Instance.Agricultural.IncludeRoom) return;
-                LegendEntry farm = __result.Find(entry => ((LegendEntry)entry).name.Contains("Farm"));
-                if (farm != null)
-                    __result.Remove(farm);
-            }
-        }        
+        }      
     }
 }

@@ -1,10 +1,16 @@
 ﻿using Harmony;
 using UnityEngine;
+using Database;
 
 namespace RoomsExpanded
 {
     class RoomsExpanded_Patches_Aquarium
     {
+        public static void AddRoom(ref RoomTypes __instance)
+        {
+            if (Settings.Instance.Aquarium.IncludeRoom)
+                __instance.Add(RoomTypes_AllModded.Aquarium);
+        }
 
         [HarmonyPatch(typeof(FishFeederConfig))]
         [HarmonyPatch("ConfigureBuildingTemplate")]

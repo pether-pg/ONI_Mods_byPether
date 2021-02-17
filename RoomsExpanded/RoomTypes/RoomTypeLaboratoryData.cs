@@ -6,9 +6,10 @@ namespace RoomsExpanded
     class RoomTypeLaboratoryData : RoomTypeAbstractData
     {
         public static readonly string RoomId = "LaboratoryRoom";
+
         public RoomTypeLaboratoryData()
         {
-            {
+            
                 Id = RoomId;
                 Name = STRINGS.ROOMS.TYPES.LABORATORY.NAME;
                 Tooltip = STRINGS.ROOMS.TYPES.LABORATORY.TOOLTIP;
@@ -34,8 +35,7 @@ namespace RoomsExpanded
                 SingleAssignee = false;
                 PriorityUse = false;
                 Effects = null;
-                SortKey = SortingCounter.GetAndIncrement(0);
-            }
+                SortKey = SortingCounter.GetAndIncrement(0);  
         }
     }
 }

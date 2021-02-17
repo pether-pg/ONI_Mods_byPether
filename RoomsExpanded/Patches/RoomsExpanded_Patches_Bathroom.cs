@@ -8,6 +8,22 @@ namespace RoomsExpanded
 {
     class RoomsExpanded_Patches_Bathroom
     {
+        public static void AddRoom(ref RoomTypes __instance)
+        {
+            if (Settings.Instance.Bathroom.IncludeRoom)
+            {
+                __instance.Add(RoomTypes_AllModded.BathroomRoom);
+
+                if (__instance.PlumbedBathroom.primary_constraint.stomp_in_conflict == null)
+                    __instance.PlumbedBathroom.primary_constraint.stomp_in_conflict = new List<RoomConstraints.Constraint>();
+                __instance.PlumbedBathroom.primary_constraint.stomp_in_conflict.Add(RoomTypes_AllModded.BathroomRoom.primary_constraint);
+
+                if (__instance.Hospital.primary_constraint.stomp_in_conflict == null)
+                    __instance.Hospital.primary_constraint.stomp_in_conflict = new List<RoomConstraints.Constraint>();
+                __instance.Hospital.primary_constraint.stomp_in_conflict.Add(RoomTypes_AllModded.BathroomRoom.primary_constraint);
+            }
+        }
+
         [HarmonyPatch(typeof(Shower))]
         [HarmonyPatch("OnWorkTick")]
         public static class Shower_OnWorkTick_Patch

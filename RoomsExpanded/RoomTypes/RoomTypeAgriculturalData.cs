@@ -10,8 +10,7 @@ namespace RoomsExpanded
         public static readonly string AgriculturalStation = "AgriculturalStation";
 
 
-        public static RoomConstraints.Constraint MODIFIED_CONSTRAINT = new RoomConstraints.Constraint(
-                                                                            (Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraints.ConstraintTags.RanchStation)
+        public static RoomConstraints.Constraint MODIFIED_CONSTRAINT = new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraints.ConstraintTags.RanchStation)
                                                                                                 || bc.HasTag(RoomConstraints.ConstraintTags.FarmStation)),
                                                                                                 (Func<Room, bool>)null,
                                                                                                 name: STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME,

@@ -7,9 +7,6 @@ namespace RoomsExpanded
     {
         public static readonly string RoomId = "KitchenRoom";
 
-        public static string KitchenBuildingTagName = "CookingStation";
-        public static string RefrigeratorTagName = "Refrigerator";
-
         public RoomTypeKitchenData()
         {
             Id = RoomId;

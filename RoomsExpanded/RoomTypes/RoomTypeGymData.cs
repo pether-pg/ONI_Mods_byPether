@@ -7,8 +7,6 @@ namespace RoomsExpanded
     class RoomTypeGymData : RoomTypeAbstractData
     {
         public static readonly string RoomId = "GymRoom";
-        public static readonly string GeneratorTagsName = "ManualGenerator";
-        public static readonly string WaterCoolerTagName = "WaterCooler";
 
         public RoomTypeGymData()
         {

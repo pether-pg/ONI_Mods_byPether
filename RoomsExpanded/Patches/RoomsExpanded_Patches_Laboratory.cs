@@ -8,8 +8,14 @@ namespace RoomsExpanded
 {
     class RoomsExpanded_Patches_Laboratory
     {
-        // All 3 research station are using the same Research Center script
+        public static void AddRoom(ref RoomTypes __instance)
+        {
+            if (Settings.Instance.Laboratory.IncludeRoom)
+                __instance.Add(RoomTypes_AllModded.LaboratoryRoom);
+        }
 
+        // All 3 research station are using the same Research Center script
+        
         [HarmonyPatch(typeof(ResearchCenter))]
         [HarmonyPatch("ConvertMassToResearchPoints")]
         public static class ResearchCenter_ConvertMassToResearchPoints_Patch
@@ -22,7 +28,6 @@ namespace RoomsExpanded
                 if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeLaboratoryData.RoomId)
                     && Settings.Instance.Laboratory.Bonus.HasValue)
                     mass_consumed *= (1 + Settings.Instance.Laboratory.Bonus.Value);
-
             }
         }
 

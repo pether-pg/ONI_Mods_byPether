@@ -42,6 +42,7 @@ namespace RoomsExpanded
         private Settings()
         { }
 
+        public bool HideLegendEffect = true;
         public string EnforcedLanguage = "";
         public RoomSettings Laboratory = new RoomSettings(true, 64, 0.1f);
         public RoomSettings Kitchen = new RoomSettings(true, 64, 0.1f);
@@ -52,6 +53,7 @@ namespace RoomsExpanded
         public RoomSettings Gym = new RoomSettings(true, 64, 0.1f);
         public RoomSettings Nursery = new RoomSettings(true, 64, 0.1f);
         public RoomSettings Aquarium = new RoomSettings(true, 96, 0.2f);
+        public RoomSettings Botanical = new RoomSettings(true, 96, null);
         public RoomSettings HospitalUpdate = new RoomSettings(true, 96, null);
     }
 }

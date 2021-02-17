@@ -67,6 +67,11 @@
     <Compile Include="Patches\RoomsExpanded_Patches_Nursery.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Aquarium.cs" />
     <Compile Include="Patches\RoomsExpanded_Translation_Patches.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_Hospital.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_Graveyard.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_Industrial.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_Botanical.cs" />
+    <Compile Include="RoomTypes\RoomTypeBotanicalData.cs" />
     <Compile Include="RoomTypes\RoomTypeAquariumData.cs" />
     <Compile Include="RoomTypes\RoomTypeNurseryData.cs" />
     <Compile Include="RoomTypes\RoomTypeGymData.cs" />

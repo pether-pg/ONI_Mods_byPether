@@ -8,6 +8,11 @@ namespace RoomsExpanded
 {
     class RoomsExpanded_Patches_Kitchen
     {
+        public static void AddRoom(ref RoomTypes __instance)
+        {
+            if (Settings.Instance.Kitchen.IncludeRoom)
+                __instance.Add(RoomTypes_AllModded.KitchenRoom);
+        }
 
         private static void ModifyKitchenResultUnits(ref List<GameObject> __result, ref CookingStation __instance)
         {
