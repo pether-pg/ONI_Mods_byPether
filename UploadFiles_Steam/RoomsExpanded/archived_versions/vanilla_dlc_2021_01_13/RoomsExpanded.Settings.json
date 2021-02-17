@@ -1,0 +1,17 @@
+{
+"IncludeLaboratory":true,
+"IncludeKitchen":true,
+"IncludeBathroom":true,
+"IncludeIndustrial":false,
+"IncludeGraveyard":false,
+"IncludeAgricultural":true,
+"LaboratoryBonus":0.1,
+"KitchenBonus":0.1,
+"BathroomBonus":0.2,
+"LaboratoryMaxSize":64,
+"KitchenMaxSize":64,
+"BathroomMaxSize":64,
+"IndustrialMaxSize":96,
+"GraveyardMaxSize":96,
+"AgriculturalMaxSize":96
+}
