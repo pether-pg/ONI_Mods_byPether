@@ -51,7 +51,10 @@ namespace RocketPresenceAutomationPort
         public void SendSignal()
         {
             LogicPorts presencePort = this.gameObject.GetComponent<LogicPorts>();
-            presencePort.SendSignal(this.PortName, currentState.Value == true ? 1 : 0);
+            if (presencePort == null)
+                return;
+            if(currentState.HasValue && this.PortName != null && presencePort.IsPortConnected(this.PortName))
+                presencePort.SendSignal(this.PortName, currentState.Value == true ? 1 : 0);
         }
 
         public void Sim200ms(float dt)
