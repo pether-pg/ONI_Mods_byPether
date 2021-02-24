@@ -13,6 +13,7 @@ namespace RoomsExpanded
         {
             public static void OnLoad()
             {
+                Debug.Log("RoomsExpanded: Loaded mod. Last mod update: 2021.02.24");
             }
         }
 

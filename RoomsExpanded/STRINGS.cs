@@ -209,7 +209,7 @@ namespace RoomsExpanded
 
                 public class DECORPLANTS
                 {
-                    public static LocString NAME = (LocString)"{0} Decorative Plants";
+                    public static LocString NAME = (LocString)"{0} different Decorative Plants";
                     public static LocString DESCRIPTION = (LocString)"At least {0} decorative plants of different types.";
                 }
 
