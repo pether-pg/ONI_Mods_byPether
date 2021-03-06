@@ -13,16 +13,11 @@ namespace RoomsExpanded
             {
                 __instance.Add(RoomTypes_AllModded.Nursery);
 
-                if (__instance.Farm.primary_constraint.stomp_in_conflict == null)
-                    __instance.Farm.primary_constraint.stomp_in_conflict = new List<RoomConstraints.Constraint>();
-                __instance.Farm.primary_constraint.stomp_in_conflict.Add(RoomTypes_AllModded.Nursery.primary_constraint);
+                RoomConstraintTags.AddStompInConflict(__instance.Farm, RoomTypes_AllModded.Nursery);
+                RoomConstraintTags.AddStompInConflict(__instance.CreaturePen, RoomTypes_AllModded.Nursery);
 
-                if (Settings.Instance.Agricultural.IncludeRoom)
-                {
-                    if (__instance.CreaturePen.primary_constraint.stomp_in_conflict == null)
-                        __instance.CreaturePen.primary_constraint.stomp_in_conflict = new List<RoomConstraints.Constraint>();
-                    __instance.CreaturePen.primary_constraint.stomp_in_conflict.Add(RoomTypes_AllModded.Nursery.primary_constraint);
-                }
+                if (Settings.Instance.Botanical.IncludeRoom)
+                    RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.Botanical, RoomTypes_AllModded.Nursery);
             }
         }
 
