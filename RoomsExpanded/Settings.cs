@@ -44,16 +44,20 @@ namespace RoomsExpanded
 
         public bool HideLegendEffect = true;
         public string EnforcedLanguage = "";
+        public int ResizeMaxRoomSize64 = 64;
+        public int ResizeMaxRoomSize96 = 96;
+        public int ResizeMaxRoomSize120 = 120;
         public RoomSettings Laboratory = new RoomSettings(true, 64, 0.1f);
         public RoomSettings Kitchen = new RoomSettings(true, 64, 0.1f);
         public RoomSettings Bathroom = new RoomSettings(true, 64, 0.2f);
         public RoomSettings Industrial = new RoomSettings(false, 96);
-        public RoomSettings Graveyard = new RoomSettings(false, 96);
+        public RoomSettings Graveyard = new RoomSettings(false, 96, 0.2f);
         public RoomSettings Agricultural = new RoomSettings(true, 96);
         public RoomSettings Gym = new RoomSettings(true, 64, 0.1f);
         public RoomSettings Nursery = new RoomSettings(true, 64, 0.1f);
         public RoomSettings Aquarium = new RoomSettings(true, 96, 0.2f);
         public RoomSettings Botanical = new RoomSettings(true, 96, null);
+        public RoomSettings Museum = new RoomSettings(true, 96, 0.3f);
         public RoomSettings HospitalUpdate = new RoomSettings(true, 96, null);
     }
 }
