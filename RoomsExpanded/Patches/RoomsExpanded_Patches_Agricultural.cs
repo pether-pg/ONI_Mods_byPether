@@ -3,6 +3,8 @@ using UnityEngine;
 using System.Collections.Generic;
 using Database;
 using STRINGS;
+using System;
+using System.Linq;
 
 namespace RoomsExpanded
 {
@@ -57,6 +59,29 @@ namespace RoomsExpanded
                 if (!Settings.Instance.Agricultural.IncludeRoom) return;
                 RoomTracker roomTracker = prefab.AddOrGet<RoomTracker>();
                 roomTracker.requiredRoomType = Db.Get().RoomTypes.CreaturePen.Id;
+            }
+        }
+
+        [HarmonyPatch(typeof(ColonyAchievement), MethodType.Constructor, new Type[] { typeof(string), typeof(string), typeof(string), typeof(string), typeof(bool), typeof(List<ColonyAchievementRequirement>), typeof(string), typeof(string), typeof(string), typeof(string), typeof(System.Action<KMonoBehaviour>), typeof(string), typeof(string) })]
+        public static class ColonyAchievement_Constructor_Patch
+        {
+            public static void Prefix(string steamAchievementId, ref List<ColonyAchievementRequirement> requirementChecklist)
+            {
+                if (!Settings.Instance.Agricultural.IncludeRoom) return;
+                if (steamAchievementId != "VARIETY_OF_ROOMS") return;
+
+                ColonyAchievementRequirement delete = null;
+                foreach(var req in requirementChecklist)
+                {
+                    RoomType roomType = Traverse.Create(req).Field("roomType").GetValue<RoomType>();
+                    if (roomType.Id == "Farm")
+                        delete = req;
+                }
+                if (delete != null)
+                {
+                    requirementChecklist.Remove(delete);
+                    Debug.Log("RoomsExpanded: VARIETY_OF_ROOMS - removed Farm requirement");
+                }
             }
         }      
     }
