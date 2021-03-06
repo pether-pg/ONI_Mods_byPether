@@ -54,11 +54,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DecorProviderModifier.cs" />
-    <Compile Include="GraveyardEffectTrigger.cs" />
+    <Compile Include="EffectScripts\DecorProviderModifier.cs" />
+    <Compile Include="EffectScripts\GraveyardEffectTrigger.cs" />
     <Compile Include="GVD.cs" />
     <Compile Include="JsonSerializer.cs" />
-    <Compile Include="MuseumEffectTrigger.cs" />
+    <Compile Include="EffectScripts\MuseumEffectTrigger.cs" />
     <Compile Include="RoomConstraintTags.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
