@@ -6,6 +6,7 @@ namespace RoomsExpanded
     public class RoomTypeGraveyardData : RoomTypeAbstractData
     {
         public static readonly string RoomId = "GraveyardRoom";
+        public static readonly string EffectId = "GraveyardEffectId";
 
         public RoomTypeGraveyardData()
         {
