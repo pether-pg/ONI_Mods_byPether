@@ -13,7 +13,8 @@ namespace RoomsExpanded
         {
             public static void OnLoad()
             {
-                Debug.Log("RoomsExpanded: Loaded mod. Last mod update: 2021.02.24");
+                GVD.VersionAlert(DlcManager.IsExpansion1Active(), "OnLoad() version check");
+                //Debug.Log("RoomsExpanded: Loaded mod. Last mod update: 2021.02.24");
             }
         }
 
@@ -40,6 +41,28 @@ namespace RoomsExpanded
                 RoomsExpanded_Patches_Graveyard.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Hospital.UpdateRoom(ref __instance);
                 RoomsExpanded_Patches_Industrial.AddRoom(ref __instance);
+                RoomsExpanded_Patches_Museum.AddRoom(ref __instance);
+
+                ResizeRooms(ref __instance);
+            }
+
+            static void ResizeRooms(ref RoomTypes __instance)
+            {
+                for (int i = 0; i < __instance.Count; i++)
+                {
+                    if (__instance[i] == null || __instance[i].additional_constraints == null)
+                        continue;
+
+                    for (int add = 0; add < __instance[i].additional_constraints.Length; add++)
+                    {
+                        if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_64)
+                            __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize64);
+                        else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_96)
+                            __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize96);
+                        else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_120)
+                            __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize120);
+                    }
+                }
             }
         }
 
