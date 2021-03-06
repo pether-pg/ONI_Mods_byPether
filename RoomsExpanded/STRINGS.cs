@@ -237,6 +237,27 @@ namespace RoomsExpanded
                     public static LocString DESCRIPTION = (LocString)"At least {0} Sculptures of different type.";
                 }
             }
+
+            public class EFFECTS
+            {
+                public class MUSEUM
+                {
+                    public static LocString NAME = (LocString)"Museum";
+                    public static LocString DESCRIPTION = (LocString)"Visited Museum";
+                }
+
+                public class GRAVE_GOOD
+                {
+                    public static LocString NAME = (LocString)"Graveyard Serenity";
+                    public static LocString DESCRIPTION = (LocString)"This Duplicant has accepted inevitable fate and is ready to embrace it.";
+                }
+
+                public class GRAVE_BAD
+                {
+                    public static LocString NAME = (LocString)"Graveyard Dread";
+                    public static LocString DESCRIPTION = (LocString)"This Duplicant feels cold claws of Death crawling up their spine.";
+                }
+            }
         }
     }
 }
