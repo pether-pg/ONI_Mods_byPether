@@ -20,7 +20,7 @@ namespace RoomsExpanded
                                                                                             description: STRINGS.ROOMS.CRITERIA.COOKING.DESCRIPTION);
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
-                                        new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraintTags.RefrigeratorTag)),
+                                        new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.GetComponent<Refrigerator>() != null),
                                                                                             (Func<Room, bool>)null,
                                                                                             name: STRINGS.ROOMS.CRITERIA.FRIDGE.NAME,
                                                                                             description: STRINGS.ROOMS.CRITERIA.FRIDGE.DESCRIPTION),
