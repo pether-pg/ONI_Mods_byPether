@@ -54,7 +54,7 @@ namespace RoomsExpanded
             }
         }
 
-        public static RoomType prv_gym = null;
+        private static RoomType prv_gym = null;
 
         public static RoomType GymRoom
         {
@@ -96,6 +96,17 @@ namespace RoomsExpanded
                 if (prv_Botanical == null)
                     prv_Botanical = new RoomTypeBotanicalData().GetRoomType();
                 return prv_Botanical;
+            }
+        }
+
+        private static RoomType prv_Museum = null;
+        public static RoomType Museum
+        {
+            get
+            {
+                if (prv_Museum == null)
+                    prv_Museum = new RoomTypeMuseumData().GetRoomType();
+                return prv_Museum;
             }
         }
 
