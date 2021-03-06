@@ -55,7 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DecorProviderModifier.cs" />
+    <Compile Include="GraveyardEffectTrigger.cs" />
+    <Compile Include="GVD.cs" />
     <Compile Include="JsonSerializer.cs" />
+    <Compile Include="MuseumEffectTrigger.cs" />
     <Compile Include="RoomConstraintTags.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +74,8 @@
     <Compile Include="Patches\RoomsExpanded_Patches_Graveyard.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Industrial.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Botanical.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_Museum.cs" />
+    <Compile Include="RoomTypes\RoomTypeMuseumData.cs" />
     <Compile Include="RoomTypes\RoomTypeBotanicalData.cs" />
     <Compile Include="RoomTypes\RoomTypeAquariumData.cs" />
     <Compile Include="RoomTypes\RoomTypeNurseryData.cs" />
