@@ -49,23 +49,5 @@ namespace RoomsExpanded
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.ItemPedestalTag);
             }
         }
-
-        [HarmonyPatch(typeof(Effects))]
-        [HarmonyPatch("Add")]
-        [HarmonyPatch(new Type[] { typeof(Effect), typeof(bool) })]
-        public static class Effects_Add_Patch
-        {
-            public static void Prefix(Effect effect)
-            {
-                return;
-                Debug.Log($"Adding Effect: {effect.Name}, " +
-                    $"customIcon = {effect.customIcon}, " +
-                    $"description = {effect.description}, " +
-                    $"duration = {effect.duration}");
-
-                foreach (AttributeModifier attr in effect.SelfModifiers)
-                    Debug.Log($"Effect modifier: {attr.Description}, attrId = {attr.AttributeId}, value = {attr.Value}, CB = {attr.DescriptionCB}");
-            }
-        }
     }
 }

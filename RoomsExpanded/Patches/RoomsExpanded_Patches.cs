@@ -14,7 +14,7 @@ namespace RoomsExpanded
             public static void OnLoad()
             {
                 GVD.VersionAlert(DlcManager.IsExpansion1Active(), "OnLoad() version check");
-                //Debug.Log("RoomsExpanded: Loaded mod. Last mod update: 2021.02.24");
+                Debug.Log("RoomsExpanded: Loaded DLC version of the mod. Last update: 2021.03.07");
             }
         }
 
