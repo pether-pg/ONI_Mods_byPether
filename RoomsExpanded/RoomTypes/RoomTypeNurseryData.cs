@@ -10,7 +10,6 @@ namespace RoomsExpanded
 
         public static readonly string RoomId = "NurseryRoom";
         public static readonly string PlanterBoxTagName = "PlanterBox";
-        public static readonly string PlantTagsName = "SeedPlants";
 
         public RoomTypeNurseryData()
         {
