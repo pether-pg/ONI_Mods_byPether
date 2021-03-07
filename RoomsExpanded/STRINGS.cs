@@ -249,7 +249,7 @@ namespace RoomsExpanded
                 public class GRAVE_GOOD
                 {
                     public static LocString NAME = (LocString)"Graveyard Serenity";
-                    public static LocString DESCRIPTION = (LocString)"This Duplicant has accepted inevitable fate and is ready to embrace it.";
+                    public static LocString DESCRIPTION = (LocString)"This Duplicant has accepted their inevitable fate and is ready to embrace it.";
                 }
 
                 public class GRAVE_BAD

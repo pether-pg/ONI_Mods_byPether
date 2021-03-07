@@ -25,7 +25,9 @@ namespace RoomsExpanded
 
             GameObject gameObject = (GameObject)data;
             float duration = 600 * Settings.Instance.Graveyard.Bonus.Value;
-            bool positive = new System.Random().Next() % 2 == 0;
+            bool positive = false;
+            if(!GameClock.Instance.IsNighttime())
+                positive = new System.Random().Next() % 2 == 0;
             float value = - 0.016666667f * (positive ? 1 : -1);
             string name = positive ? STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME : STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME;
             string description = positive ? STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION : STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION;
