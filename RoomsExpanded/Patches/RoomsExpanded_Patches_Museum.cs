@@ -22,6 +22,8 @@ namespace RoomsExpanded
             RoomConstraintTags.AddStompInConflict(__instance.Hospital, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.MassageClinic, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.RecRoom, RoomTypes_AllModded.Museum);
+            RoomConstraintTags.AddStompInConflict(__instance.Farm, RoomTypes_AllModded.Museum);
+            RoomConstraintTags.AddStompInConflict(__instance.CreaturePen, RoomTypes_AllModded.Museum);
 
             if(Settings.Instance.Aquarium.IncludeRoom)
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.Aquarium, RoomTypes_AllModded.Museum);
@@ -43,8 +45,7 @@ namespace RoomsExpanded
             {
                 if (!Settings.Instance.Museum.IncludeRoom) return;
 
-                GVD.VersionAlert(expectBaseGame: true, "Museum Effect tirgger script"); // Effect constructors differ in vanilla and DLC
-
+                GVD.VersionAlert(expectDLC: false, "Museum Effect tirgger script"); // Effect constructors differ in vanilla and DLC
                 go.AddOrGet<MuseumEffectTrigger>();
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.ItemPedestalTag);
             }

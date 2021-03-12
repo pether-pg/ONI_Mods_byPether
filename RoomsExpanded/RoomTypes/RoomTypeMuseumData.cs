@@ -56,7 +56,7 @@ namespace RoomsExpanded
             SingleAssignee = false;
             PriorityUse = false;
             Effects = null;
-            SortKey = SortingCounter.GetAndIncrement(SortingCounter.CreaturePenSortKey + 1);
+            SortKey = SortingCounter.GetAndIncrement(SortingCounter.ParkSortKey + 2);
         }
     }
 }

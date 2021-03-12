@@ -41,48 +41,48 @@ namespace RoomsExpanded
             ConstraintPrimary = RoomConstraints.PARK_BUILDING;
 
             ConstrantsAdditional = new RoomConstraints.Constraint[5]
-                                        {
-                                        new RoomConstraints.Constraint((Func<KPrefabID, bool>) null,
-                                                                            (Func<Room, bool>)(room =>
-                                                                            {
-                                                                                List<string> names = new List<string>();
-                                                                                foreach (var plant in room.cavity.plants)
-                                                                                {
-                                                                                    if(plant == null) continue;
-                                                                                    if(!DecorativeNames.Contains(plant.name)) continue;
-                                                                                    if(!names.Contains(plant.name))
-                                                                                        names.Add(plant.name);
-                                                                                }
-                                                                                return names.Count >= requiredDecorative;
-                                                                            }),
-                                                                            name: string.Format(STRINGS.ROOMS.CRITERIA.DECORPLANTS.NAME, requiredDecorative) ,
-                                                                            description: string.Format(STRINGS.ROOMS.CRITERIA.DECORPLANTS.DESCRIPTION, requiredDecorative)),
-                                        new RoomConstraints.Constraint((Func<KPrefabID, bool>) null,
-                                                                        (Func<Room, bool>)(room => room.cavity.plants.Count >= requiredPlants),
-                                                                        name: string.Format(STRINGS.ROOMS.CRITERIA.PLANTCOUNT.NAME, requiredPlants) ,
-                                                                        description: string.Format(STRINGS.ROOMS.CRITERIA.PLANTCOUNT.DESCRIPTION, requiredPlants)),
-                                        new RoomConstraints.Constraint((Func<KPrefabID, bool>) null,
-                                                                        (Func<Room, bool>)(room =>
+                                {
+                                new RoomConstraints.Constraint((Func<KPrefabID, bool>) null,
+                                                                (Func<Room, bool>)(room =>
+                                                                {
+                                                                    List<string> names = new List<string>();
+                                                                    foreach (var plant in room.cavity.plants)
+                                                                    {
+                                                                        if(plant == null) continue;
+                                                                        if(!DecorativeNames.Contains(plant.name)) continue;
+                                                                        if(!names.Contains(plant.name))
+                                                                            names.Add(plant.name);
+                                                                    }
+                                                                    return names.Count >= requiredDecorative;
+                                                                }),
+                                                                name: string.Format(STRINGS.ROOMS.CRITERIA.DECORPLANTS.NAME, requiredDecorative) ,
+                                                                description: string.Format(STRINGS.ROOMS.CRITERIA.DECORPLANTS.DESCRIPTION, requiredDecorative)),
+                                new RoomConstraints.Constraint((Func<KPrefabID, bool>) null,
+                                                                (Func<Room, bool>)(room => room.cavity.plants.Count >= requiredPlants),
+                                                                name: string.Format(STRINGS.ROOMS.CRITERIA.PLANTCOUNT.NAME, requiredPlants) ,
+                                                                description: string.Format(STRINGS.ROOMS.CRITERIA.PLANTCOUNT.DESCRIPTION, requiredPlants)),
+                                new RoomConstraints.Constraint((Func<KPrefabID, bool>) null,
+                                                                (Func<Room, bool>)(room =>
+                                                                {
+                                                                    foreach (KPrefabID plant in room.cavity.plants)
+                                                                    {
+                                                                        if ((UnityEngine.Object) plant != (UnityEngine.Object) null)
                                                                         {
-                                                                            foreach (KPrefabID plant in room.cavity.plants)
-                                                                            {
-                                                                                if ((UnityEngine.Object) plant != (UnityEngine.Object) null)
-                                                                                {
-                                                                                    BasicForagePlantPlanted component1 = plant.GetComponent<BasicForagePlantPlanted>();
-                                                                                    ReceptacleMonitor component2 = plant.GetComponent<ReceptacleMonitor>();
-                                                                                    if ((UnityEngine.Object) component2 != (UnityEngine.Object) null && !component2.Replanted)
-                                                                                        return false;
-                                                                                    else if ((UnityEngine.Object) component1 != (UnityEngine.Object) null)
-                                                                                        return false;
-                                                                                }
-                                                                            }
-                                                                            return true;
-                                                                        }),
-                                                                        name: STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.NAME,
-                                                                        description: STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.DESCRIPTION),
-                                        RoomConstraints.MINIMUM_SIZE_32,
-                                        RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Botanical.MaxSize)
-                                        };
+                                                                            BasicForagePlantPlanted component1 = plant.GetComponent<BasicForagePlantPlanted>();
+                                                                            ReceptacleMonitor component2 = plant.GetComponent<ReceptacleMonitor>();
+                                                                            if ((UnityEngine.Object) component2 != (UnityEngine.Object) null && !component2.Replanted)
+                                                                                return false;
+                                                                            else if ((UnityEngine.Object) component1 != (UnityEngine.Object) null)
+                                                                                return false;
+                                                                        }
+                                                                    }
+                                                                    return true;
+                                                                }),
+                                                                name: STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.NAME,
+                                                                description: STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.DESCRIPTION),
+                                RoomConstraints.MINIMUM_SIZE_32,
+                                RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Botanical.MaxSize)
+                                };
 
             RoomDetails = new RoomDetails.Detail[2]
                                 {

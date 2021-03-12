@@ -7,11 +7,11 @@ namespace RoomsExpanded
 {
     class GVD // = Game Version Dependencies
     {
-        private static readonly bool UsesExpansion = true;
+        private static readonly bool UsesExpansion = false;
 
-        public static void VersionAlert(bool expectBaseGame, string details = "")
+        public static void VersionAlert(bool expectDLC, string details = "")
         {
-            if (expectBaseGame != UsesExpansion)
+            if (expectDLC != UsesExpansion)
             {
                 string message = "Resolve Vanilla/DLC version differences";
                 if (!string.IsNullOrEmpty(details))

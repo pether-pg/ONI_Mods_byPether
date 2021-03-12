@@ -34,8 +34,7 @@ namespace RoomsExpanded
                 // Creates template for users to edit
                 GenerateStringsTemplate(root, GetTranslationDir());
 
-                Debug.Log($"Rooms Expanded: using translation done by {STRINGS.TRANSLATION.AUTHOR.NAME}");
-
+                Debug.Log($"RoomsExpanded: using translation done by {STRINGS.TRANSLATION.AUTHOR.NAME}");
             }
 
             private static string GetTranslationDir()
@@ -56,11 +55,11 @@ namespace RoomsExpanded
 
                 string path = Path.Combine(GetTranslationDir(), code + ".po");
 
-                Debug.Log($"Rooms Expanded: Loading translation file: {path}");
+                Debug.Log($"RoomsExpanded: Loading translation file: {path}");
                 if (File.Exists(path))
                     OverloadStrings(LoadStringsFile(path, false));
                 else
-                    Debug.Log("Rooms Expanded: Translation file not found, using default strings.");
+                    Debug.Log("RoomsExpanded: Translation file not found, using default strings.");
             }
         }
     }

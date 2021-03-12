@@ -38,5 +38,24 @@ namespace RoomsExpanded
                 stomping.primary_constraint.stomp_in_conflict = new List<RoomConstraints.Constraint>();
             stomping.primary_constraint.stomp_in_conflict.Add(stomped.primary_constraint);
         }
+
+        public static void ResizeRooms(ref Database.RoomTypes __instance)
+        {
+            for (int i = 0; i < __instance.Count; i++)
+            {
+                if (__instance[i] == null || __instance[i].additional_constraints == null)
+                    continue;
+
+                for (int add = 0; add < __instance[i].additional_constraints.Length; add++)
+                {
+                    if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_64)
+                        __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize64);
+                    else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_96)
+                        __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize96);
+                    else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_120)
+                        __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize120);
+                }
+            }
+        }
     }
 }

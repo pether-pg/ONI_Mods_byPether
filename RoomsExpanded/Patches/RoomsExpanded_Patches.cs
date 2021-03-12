@@ -4,6 +4,7 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 using STRINGS;
+using System.Reflection;
 
 namespace RoomsExpanded
 {
@@ -14,11 +15,50 @@ namespace RoomsExpanded
             public static void OnLoad()
             {
                 GVD.VersionAlert(DlcManager.IsExpansion1Active(), "OnLoad() version check");
-                Debug.Log("RoomsExpanded: Loaded DLC version of the mod. Last update: 2021.03.07");
+                Debug.Log("RoomsExpanded: Loaded Vanilla version of the mod. Last update: 2021.03.12 for build 449549.");
+                Debug.Log("RoomsExpanded: Loaded from: " + Assembly.GetExecutingAssembly().Location);
             }
         }
 
-        [HarmonyPatch(typeof(RoomTypes), MethodType.Constructor, new Type[] { typeof(ResourceSet) })]
+
+        [HarmonyPatch(typeof(Db))]
+        [HarmonyPatch("Initialize")]
+        public class Db_Initialize_Patch
+        {
+            static bool Patched = false;
+
+            public static void Prefix()
+            {
+                if (Db_Initialize_Patch.Patched)
+                    return;
+
+                // This way of patching RoomTypes constructor is required not to lock english translations in.
+                // Credit to Peter Han and asquared314 for helping me with this way of patching.
+
+                HarmonyInstance harmony = HarmonyInstance.Create("pether.mods.oxygen-not-included.rooms-expanded");
+                Type roomTypesType = Type.GetType("Database.RoomTypes, Assembly-CSharp", false);
+                if (roomTypesType == null)
+                {
+                    Debug.Log("RoomsExpanded: Error - RoomTypes type is null...");
+                    return;
+                }
+                var original = roomTypesType.GetConstructor(new Type[] { typeof(ResourceSet) });
+                var prefix = typeof(RoomTypes_Constructor_Patch)?.GetMethod("Prefix");
+                var postfix = typeof(RoomTypes_Constructor_Patch)?.GetMethod("Postfix");
+
+                if (original == null || prefix == null || postfix == null)
+                    Debug.Log("RoomsExpanded: Error - unable to patch RoomTypes constructor - at least one method is null...");
+                else
+                {
+                    harmony.Patch(original, new HarmonyMethod(prefix), new HarmonyMethod(postfix));
+                    Db_Initialize_Patch.Patched = true;
+                }
+            }
+        }
+
+        // This method of patching causes an issue with KLEI's translations of Room Constraints. 
+        // Must be patched manually to avoid the issue.
+        //[HarmonyPatch(typeof(RoomTypes), MethodType.Constructor, new Type[] { typeof(ResourceSet) })]
         public class RoomTypes_Constructor_Patch
         {
             public static void Prefix()
@@ -43,28 +83,25 @@ namespace RoomsExpanded
                 RoomsExpanded_Patches_Industrial.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Museum.AddRoom(ref __instance);
 
-                ResizeRooms(ref __instance);
-            }
-
-            static void ResizeRooms(ref RoomTypes __instance)
-            {
-                for (int i = 0; i < __instance.Count; i++)
-                {
-                    if (__instance[i] == null || __instance[i].additional_constraints == null)
-                        continue;
-
-                    for (int add = 0; add < __instance[i].additional_constraints.Length; add++)
-                    {
-                        if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_64)
-                            __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize64);
-                        else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_96)
-                            __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize96);
-                        else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_120)
-                            __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize120);
-                    }
-                }
+                // Temporary "Room Size" mod functionality restored for DLC
+                // Must be removed once "Room Size" is updated for DLC
+                // Original mod by trevis can be found here: https://steamcommunity.com/sharedfiles/filedetails/?id=1715802131
+                RoomConstraintTags.ResizeRooms(ref __instance);
             }
         }
+
+        [HarmonyPatch(typeof(RoomProber), MethodType.Constructor)]
+        public static class RoomProber_Constructor_Patch
+        {
+            public static void Postfix()
+            {
+                // Temporary "Room Size" mod functionality restored for DLC
+                // Must be removed once "Room Size" is updated for DLC
+                // Original mod by trevis can be found here: https://steamcommunity.com/sharedfiles/filedetails/?id=1715802131
+                TuningData<RoomProber.Tuning>.Get().maxRoomSize = Settings.Instance.ResizeMaxRoomSize;
+            }
+        }
+
 
         [HarmonyPatch(typeof(OverlayModes.Rooms))]
         [HarmonyPatch("GetCustomLegendData")]

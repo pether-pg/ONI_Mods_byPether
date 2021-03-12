@@ -1,435 +1,404 @@
 msgid ""
 msgstr ""
-"Application: Oxygen Not Included"
-"POT Version: 2.0"
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: ru\n" 
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.DESCRIPTION"
 msgid "Requires a single Grooming Station or Farm Station"
-msgstr ""
+msgstr "Требуется как минимум одна Станция ухода за существами или Фермерская станция"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME"
 msgid "Grooming or Farm Station"
-msgstr ""
+msgstr "Станция ухода за существами или Фермерская станция"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.DESCRIPTION"
 msgid "At least one Microbe Musher, Electric Grill or Gas Range."
-msgstr ""
+msgstr "Как минимум один Микробный преобразователь, Электрогриль или Газовая плита"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.NAME"
 msgid "Cooking Station"
-msgstr ""
+msgstr "Микробный преобразователь, Электрогриль или Газовая плита"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECORPLANTS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECORPLANTS.DESCRIPTION"
 msgid "At least {0} decorative plants of different types."
-msgstr ""
+msgstr "Минимум {0} декоративных растений различных видов."
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECORPLANTS.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECORPLANTS.NAME"
-msgid "{0} different Decorative Plants"
-msgstr ""
+msgid "{0} Decorative Plants"
+msgstr "{0} Декоративных растений"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DIFFERENTFISH.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DIFFERENTFISH.DESCRIPTION"
 msgid "At least {0} Fish critters of different type."
-msgstr ""
+msgstr "Минимум {0} рыб разных видов."
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DIFFERENTFISH.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DIFFERENTFISH.NAME"
 msgid "{0} Different Fish"
-msgstr ""
+msgstr "{0} различных рыб"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHFEEDER.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHFEEDER.DESCRIPTION"
 msgid "At least one Fish Feeder"
-msgstr ""
+msgstr "Минимум одна Кормушка для рыб"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHFEEDER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHFEEDER.NAME"
 msgid "Fish Feeder"
-msgstr ""
+msgstr "Кормушка для рыб"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.DESCRIPTION"
 msgid "At least one Fish Release"
-msgstr ""
+msgstr "Минимум один пункт доставки рыб"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.NAME"
 msgid "Fish Release"
-msgstr ""
+msgstr "Пункт доставки рыб"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FLOWERPOT.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FLOWERPOT.DESCRIPTION"
 msgid "At least one Flower Pot, Wall Pot, Hanging Pot or Aero Pot."
-msgstr ""
+msgstr "Минимум один Цветочный, Настенный, Подвесной или Аэро горшок"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FLOWERPOT.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FLOWERPOT.NAME"
 msgid "Flower Pot of any kind"
-msgstr ""
+msgstr "Горшок любого вида"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.DESCRIPTION"
 msgid "At least one Refrigerator."
-msgstr ""
+msgstr "Минимум один холодильник"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.NAME"
 msgid "Refrigerator"
-msgstr ""
+msgstr "Холодильник"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION"
 msgid "At least one Tasteful Memorial"
-msgstr ""
+msgstr "Минимум один Изящный мемориал"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.NAME"
 msgid "Tasteful Memorial"
-msgstr ""
+msgstr "Изящный мемориал"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.DESCRIPTION"
 msgid "At least one Industrial Machinery building"
-msgstr ""
+msgstr "Минимум одна Промышленная постройка."
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME"
 msgid "Industrial Machinery"
-msgstr ""
+msgstr "Промышленная постройка"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION"
 msgid "At least one Manual Generator"
-msgstr ""
+msgstr "Минимум один Ручной генератор"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME"
 msgid "Manual Generator"
-msgstr ""
+msgstr "Ручной генератор"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION"
 msgid "At least {0} Masterpieces."
-msgstr ""
+msgstr "Минимум шедевров: {0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME"
 msgid "{0} Masterpieces"
-msgstr ""
-
-#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.DESCRIPTION
-msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.DESCRIPTION"
-msgid "All plants must be domesticated."
-msgstr ""
-
-#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.NAME
-msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.NAME"
-msgid "No wild plants"
-msgstr ""
+msgstr "{0} Шедевров"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILTING.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILTING.DESCRIPTION"
 msgid "Room conditions must allow all plants to thrive."
-msgstr ""
+msgstr "Условия помещения должны позволять всем растениям процветать."
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILTING.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILTING.NAME"
 msgid "No Wilting Plants"
-msgstr ""
+msgstr "Без увядающих растений"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION"
 msgid "At least {0} Paintings of different type."
-msgstr ""
+msgstr "Минимум картин различных видов: {0}."
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.NAME"
 msgid "{0} Different Paintings"
-msgstr ""
+msgstr "Разных картин: {0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PEDESTAL.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PEDESTAL.DESCRIPTION"
 msgid "At least one Pedestal"
-msgstr ""
+msgstr "Минимум один пьедестал"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME"
 msgid "Pedestal"
-msgstr ""
+msgstr "Пьедестал"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTCOUNT.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTCOUNT.DESCRIPTION"
 msgid "At least {0} plants of any kind."
-msgstr ""
+msgstr "Минимум растений любых видов: {0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTCOUNT.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTCOUNT.NAME"
 msgid "{0} Plants"
-msgstr ""
+msgstr "{0} Растения"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.DESCRIPTION"
 msgid "At least one Planter Box"
-msgstr ""
+msgstr "Минимум один Цветочный горшок"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.NAME"
 msgid "Planter Box"
-msgstr ""
+msgstr "Цветочный горшок"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.DESCRIPTION"
 msgid "At least {0} Sculptures of different type."
-msgstr ""
+msgstr "Минимум скульптур разных типов: {0}."
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.NAME"
 msgid "{0} Different Sculptures"
-msgstr ""
+msgstr "Скульптур разных типов: {0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.DESCRIPTION"
 msgid "At least {0} Plants growing seeds of different types."
-msgstr ""
+msgstr "Минимум высаженных растений: {0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.NAME"
 msgid "{0} Different Seed Plants"
-msgstr ""
+msgstr "Высаженных растений: {0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.DESCRIPTION"
 msgid "At least one Shower"
-msgstr ""
+msgstr "Минимум один душ"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME"
 msgid "Shower"
-msgstr ""
+msgstr "Душ"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.DESCRIPTION"
 msgid "At least {0} swimming critters"
-msgstr ""
+msgstr "Минимум плавающих животных: {0}."
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.NAME"
 msgid "{0} Swimming Critters"
-msgstr ""
+msgstr "Плавающих животных: {0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION"
 msgid "At least one Water Cooler"
-msgstr ""
+msgstr "Минимум один Кулер"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME"
 msgid "Water Cooler"
-msgstr ""
-
-#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION
-msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION"
-msgid "This Duplicant feels cold claws of Death crawling up their spine."
-msgstr ""
-
-#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME
-msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME"
-msgid "Graveyard Dread"
-msgstr ""
-
-#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION
-msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION"
-msgid "This Duplicant has accepted their inevitable fate and is ready to embrace it."
-msgstr ""
-
-#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME
-msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME"
-msgid "Graveyard Serenity"
-msgstr ""
-
-#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION
-msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION"
-msgid "Visited Museum"
-msgstr ""
-
-#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME
-msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME"
-msgid "Museum"
-msgstr ""
+msgstr "Кулер"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT"
 msgid " - Enables Farm and Grooming Stations"
-msgstr ""
+msgstr " - Позволяет строить в одной комнате Фермерскую станцию и Станцию по уходу за существами"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.NAME"
 msgid "Agricultural Room"
-msgstr ""
+msgstr "Сельскохозяйственное помещение"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.TOOLTIP"
 msgid "Area, where all critters and plants can happily live together in harmony."
-msgstr ""
+msgstr "Пространство, где животные и растения могут жить вместе в гармонии."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.EFFECT"
 msgid " - Bonus decor for inhabitating fish"
-msgstr ""
+msgstr " - Бонусный декор за рыбу внутри"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.NAME"
 msgid "Aquarium"
-msgstr ""
+msgstr "Аквариум"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.TOOLTIP"
 msgid "Properly exposed critters seem to be much prettier."
-msgstr ""
+msgstr "Правильно показанные существа выглядят намного привлекательнее."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.EFFECT"
 msgid " - Morale bonus"
-msgstr ""
+msgstr " - Бонус к морали"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.NAME"
 msgid "Botanical Garden"
-msgstr ""
+msgstr "Ботанический сад"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.TOOLTIP"
 msgid "Serene harmony of exotic plants amazes everyone who enters Botanical Garden."
-msgstr ""
+msgstr "Безмятежная гармония экзотических растений поражает всех, кто входит в Ботанический сад."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT"
 msgid " - (no additional effect)"
-msgstr ""
+msgstr " - (без дополнительных эффектов)"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME"
 msgid "Graveyard"
-msgstr ""
+msgstr "Кладбище"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP"
 msgid "It makes duplicants happy to think that they are still alive."
-msgstr ""
+msgstr "Осознание того, что они всё ещё живы, делает дубликантов счастливее."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT"
 msgid " - Faster athletics increase"
-msgstr ""
+msgstr " - Ускоренное повышение Атлетичности"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.NAME"
 msgid "Gym Room"
-msgstr ""
+msgstr "Тренажёрный зал"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP"
 msgid "Professional Gym Room allows duplicants to exercise more efficiently."
-msgstr ""
+msgstr "Профессиональный Тренажёрный зал позволяет дубликантам упражняться эффективнее."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.EFFECT"
 msgid " - (no additional effect)"
-msgstr ""
+msgstr " - (без дополнительных эффектов)"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.NAME"
 msgid "Industrial Room"
-msgstr ""
+msgstr "Машинный зал"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.TOOLTIP"
 msgid "This room contains some noisy, greasy machinery."
-msgstr ""
+msgstr "В этой комнате находятся шумные, покрытые маслом механизмы."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.EFFECT"
 msgid " - More food produced"
-msgstr ""
+msgstr " - Производится больше еды"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.NAME"
 msgid "Kitchen"
-msgstr ""
+msgstr "Кухня"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP"
 msgid "It appears that nobody dares to steal food from chef's kitchen."
-msgstr ""
+msgstr "Похоже, никто не осмеливается красть еду с кухни шеф-повара."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.EFFECT"
 msgid " - Faster research"
-msgstr ""
+msgstr " - Ускоренные исследования"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.NAME"
 msgid "Laboratory"
-msgstr ""
+msgstr "Лаборатория"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.TOOLTIP"
 msgid "Conducting research in a designated room proves to be more efficient."
-msgstr ""
+msgstr "Проведение исследований в специально отведенном помещении оказывается более эффективным."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT"
 msgid " - Morale bonus"
-msgstr ""
+msgstr " - Бонус к морали"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.NAME"
 msgid "Museum"
-msgstr ""
+msgstr "Музей"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP"
 msgid "It used to be a storehouse, before Meep confused Pedestal content with art."
-msgstr ""
+msgstr "Это было складом до того момента, пока Мип случайно не поставил на пьедестал картину"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.EFFECT"
 msgid " - Chance for additional seeds"
-msgstr ""
+msgstr " - Шанс получить дополнительные семена"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.NAME"
 msgid "Plant Nursery"
-msgstr ""
+msgstr "Теплица"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.TOOLTIP"
 msgid "Enriched environment improves plant development."
-msgstr ""
+msgstr "Обогащенная среда улучшает развитие растений."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT"
 msgid " - Shorter shower time"
-msgstr ""
+msgstr " - Дубликанты тратят меньше времени на принятие душа"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.NAME"
 msgid "Shower Room"
-msgstr ""
+msgstr "Душевая"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.TOOLTIP"
 msgid "Just entering such a nice bathroom make duplicants feel cleaner."
-msgstr ""
+msgstr "Едва войдя в такую замечательную душевую дубликанты чувствуют себя чище."
 
 #. RoomsExpanded.STRINGS.TRANSLATION.AUTHOR.NAME
 msgctxt "RoomsExpanded.STRINGS.TRANSLATION.AUTHOR.NAME"
 msgid "pether.pg"
-msgstr ""
-
+msgstr "Dr_Jekyll"

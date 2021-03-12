@@ -44,9 +44,6 @@ namespace RoomsExpanded
 
         public bool HideLegendEffect = true;
         public string EnforcedLanguage = "";
-        public int ResizeMaxRoomSize64 = 64;
-        public int ResizeMaxRoomSize96 = 96;
-        public int ResizeMaxRoomSize120 = 120;
         public RoomSettings Laboratory = new RoomSettings(true, 64, 0.1f);
         public RoomSettings Kitchen = new RoomSettings(true, 64, 0.1f);
         public RoomSettings Bathroom = new RoomSettings(true, 64, 0.2f);
@@ -59,5 +56,12 @@ namespace RoomsExpanded
         public RoomSettings Botanical = new RoomSettings(true, 96, null);
         public RoomSettings Museum = new RoomSettings(true, 96, 0.3f);
         public RoomSettings HospitalUpdate = new RoomSettings(true, 96, null);
+        public string comment = "Below settings are for temporary \"Room Size\" mod functionality restored for DLC. " +
+            "Please let me know when original mod is updated to support DLC so I could remove this feature from my mod. " +
+            "Original mod by trevis can be found here: https://steamcommunity.com/sharedfiles/filedetails/?id=1715802131";
+        public int ResizeMaxRoomSize64 = 64;
+        public int ResizeMaxRoomSize96 = 96;
+        public int ResizeMaxRoomSize120 = 120;
+        public int ResizeMaxRoomSize = 128;
     }
 }
