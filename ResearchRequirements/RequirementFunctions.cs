@@ -70,9 +70,13 @@ namespace ResearchRequirements
             StoredLiquids = new Dictionary<Tag, float>();
 
             if (!TechRequirements.Instance.GetGameTech("Plastics").IsComplete())
+                StoredLiquids.Add(ElementLoader.FindElementByHash(SimHashes.CrudeOil).tag, 0);
+            if (!TechRequirements.Instance.GetGameTech("ValveMiniaturization").IsComplete())
                 StoredLiquids.Add(ElementLoader.FindElementByHash(SimHashes.Petroleum).tag, 0);
             if (!TechRequirements.Instance.GetGameTech("LiquidFiltering").IsComplete())
                 StoredLiquids.Add(ElementLoader.FindElementByHash(SimHashes.SaltWater).tag, 0);
+            if (!TechRequirements.Instance.GetGameTech("LiquidFiltering").IsComplete())
+                StoredLiquids.Add(ElementLoader.FindElementByHash(SimHashes.Brine).tag, 0);
             if (!TechRequirements.Instance.GetGameTech("Distillation").IsComplete())
                 StoredLiquids.Add(ElementLoader.FindElementByHash(SimHashes.DirtyWater).tag, 0);
 
@@ -80,6 +84,12 @@ namespace ResearchRequirements
                 StoredGases.Add(ElementLoader.FindElementByHash(SimHashes.CarbonDioxide).tag, 0);
             if (!TechRequirements.Instance.GetGameTech("RenewableEnergy").IsComplete())
                 StoredGases.Add(ElementLoader.FindElementByHash(SimHashes.Steam).tag, 0);
+
+            //DLC Techs:
+            if (DlcManager.IsExpansion1Active() && !TechRequirements.Instance.GetGameTech("CryoFuelPropulsion").IsComplete())
+                StoredLiquids.Add(ElementLoader.FindElementByHash(SimHashes.LiquidHydrogen).tag, 0);
+            if (DlcManager.IsExpansion1Active() && !TechRequirements.Instance.GetGameTech("HydrocarbonPropulsion").IsComplete())
+                StoredLiquids.Add(ElementLoader.FindElementByHash(SimHashes.LiquidOxygen).tag, 0);
         }
 
         private static void PopulateDictionary(BuildingComplete building, ref Dictionary<Tag, float> dictionary)
@@ -261,7 +271,6 @@ namespace ResearchRequirements
             int count = 0;
             foreach (object brain in Components.Brains)
             {
-
                 CreatureBrain cmp = brain as CreatureBrain;
                 if ((UnityEngine.Object)cmp != (UnityEngine.Object)null && cmp.name.Contains(name))
                     count++;
@@ -272,12 +281,16 @@ namespace ResearchRequirements
         public static float Resources(SimHashes hash)
         {
             Tag tag = ElementLoader.FindElementByHash(hash).tag;
-            return WorldInventory.Instance.GetTotalAmount(tag);
+            return Resources(tag);
         }
 
         public static float Resources(Tag tag)
         {
-            return WorldInventory.Instance.GetTotalAmount(tag);
+            if(ClusterManager.Instance.GetAllWorldsAccessibleAmounts().ContainsKey(tag))
+                return ClusterManager.Instance.GetAllWorldsAccessibleAmounts()[tag];
+            return 0;
+            // Works for vanilla
+            //return WorldInventory.Instance.GetTotalAmount(tag);
         }
 
         public static float DailyReport_Average(ReportManager.ReportType entryType)
@@ -310,6 +323,28 @@ namespace ResearchRequirements
             return Math.Max(yesterday, today);
         }
 
+        public static int DomesticatedCritters()
+        {
+            int count = 0;
+            foreach (object brain in Components.Brains)
+            {
+                CreatureBrain cmp = brain as CreatureBrain;
+                if ((UnityEngine.Object)cmp != (UnityEngine.Object)null)
+                    if (!cmp.HasTag(GameTags.Creatures.Wild))
+                        count++;
+            }
+            return count;
+        }
+
+        public static int NonManualGeneratorsCount()
+        {
+            int count = 0;
+            foreach (Generator generator in Components.Generators)
+                if (!generator.ToString().Contains("ManualGenerator"))
+                    count++;
+            return count;
+        }
+
         public static float NonManualGenertorsPercent()
         {
             int nonManual = 0;
@@ -332,6 +367,93 @@ namespace ResearchRequirements
                 return 0;
             return 100.0f * nonManual / (Components.Generators.Count - gymGenerators);
         }
-    }
 
+        // DLC specific functions
+
+        public static int PilotWithTrait(string traitId)
+        {
+            int count = 0;
+            foreach (MinionResume resume in Components.MinionResumes)
+                if (resume.HasMasteredSkill("RocketPiloting1"))
+                {
+                    Klei.AI.Traits traits = resume.gameObject.GetComponent<Klei.AI.Traits>();
+                    if (traits != null)
+                    {
+                        if (traits.HasTrait(traitId))
+                            count++;
+                    }
+                }
+            return count;
+        }
+
+        public static int WorldsWithBeds()
+        {
+            List<int> UniqueWorldIds = new List<int>();
+            foreach (Sleepable sleepable in Components.Sleepables)
+                if (!UniqueWorldIds.Contains(sleepable.GetMyWorldId()) && !sleepable.GetMyWorld().IsModuleInterior)
+                    UniqueWorldIds.Add(sleepable.GetMyWorldId());
+
+            foreach (int i in UniqueWorldIds)
+                Debug.Log($"Unique sleepable world: {i}");
+
+            return UniqueWorldIds.Count;
+        }
+
+        public static int RevealedSpaceHexes(int radiusMin, int radiusMax)
+        {
+            int count = 0;
+            ClusterFogOfWarManager.Instance smi = SaveGame.Instance.GetSMI<ClusterFogOfWarManager.Instance>();
+            if (smi == null)
+                return 0;
+
+            List<AxialI> ColonisedWorlds = new List<AxialI>();
+            foreach (Sleepable sleepable in Components.Sleepables)
+                if (!ColonisedWorlds.Contains(sleepable.GetMyWorldLocation()))
+                    ColonisedWorlds.Add(sleepable.GetMyWorldLocation());
+
+            List<AxialI> HexesMinRad = new List<AxialI>();
+            List<AxialI> HexesMaxRad = new List<AxialI>();
+            List<AxialI> SearchedHexes = new List<AxialI>();
+
+            foreach(AxialI world in ColonisedWorlds)
+            {
+                foreach (AxialI hex in AxialUtil.GetAllPointsWithinRadius(world, radiusMin))
+                    if (!HexesMinRad.Contains(hex))
+                        HexesMinRad.Add(hex);
+
+                foreach (AxialI hex in AxialUtil.GetAllPointsWithinRadius(world, radiusMax))
+                    if (!HexesMaxRad.Contains(hex))
+                        HexesMaxRad.Add(hex);
+            }
+            foreach (AxialI hex in HexesMaxRad)
+                if (!HexesMinRad.Contains(hex))
+                    SearchedHexes.Add(hex);
+
+            foreach (AxialI hex in SearchedHexes)
+                if (smi.IsLocationRevealed(hex))
+                    count++;
+
+            return count;
+        }
+
+        public static int DuplicantsWithMorale(int morale)
+        {
+            int count = 0;
+            foreach (MinionIdentity identity in Components.MinionIdentities)
+            {
+                //MinionModifiers modifiers = identity.GetComponent<MinionModifiers>();
+                //if (modifiers == null)
+                    //continue;
+
+                Klei.AI.AttributeInstance attributeInstance = Db.Get().Attributes.QualityOfLife.Lookup((Component)identity.gameObject.GetComponent<MinionModifiers>());
+                if (attributeInstance == null)
+                    continue;
+
+                float value = attributeInstance.GetTotalValue();
+                if (value >= morale)
+                    count++;
+            }
+            return count;
+        }
+    }
 }
