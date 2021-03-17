@@ -95,6 +95,26 @@ namespace ResearchRequirements
             {"SolidManagement", false},
             {"BasicRocketry", false},
             {"Jetpacks", false }
+
+            // DLC            
+            ,
+            {"PortableGasses", false},
+            {"LiquidDistribution", false},
+            {"SpacePower", false},
+            {"HydrocarbonPropulsion", false},
+            {"CryoFuelPropulsion", false},
+            {"SpaceProgram", false},
+            {"CrashPlan", false},
+            {"DurableLifeSupport", false},
+            {"RoboticTools", false},
+            {"GasDistribution", false},
+            {"AdvancedScanners", false},
+            {"SolidDistribution", false},
+            {"NuclearResearch", false},
+            {"RadiationProtection", false},
+            {"Monuments", false},
+            {"AdvancedSanitation", false},
+            {"NuclearRefinement", false},
         };
     }
 }

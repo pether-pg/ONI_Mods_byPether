@@ -1,6 +1,7 @@
 ﻿using Harmony;
 using System.Collections.Generic;
 using STRINGS;
+using System.Reflection;
 
 namespace ResearchRequirements
 {
@@ -10,7 +11,9 @@ namespace ResearchRequirements
         {
             public static void OnLoad()
             {
-                Debug.Log("ResearchRequirements: Loaded");
+                GVD.VersionAlert(DlcManager.IsExpansion1Active());
+                Debug.Log("ResearchRequirements: Loaded DLC version of the mod. Last update: 16.03.2021 for 455509 build.");
+                Debug.Log("ResearchRequirements: Loaded from: " + Assembly.GetExecutingAssembly().Location);
             }
         }
 
@@ -37,6 +40,10 @@ namespace ResearchRequirements
         {
             public static void Postfix(ResearchCenter __instance)
             {
+                //throw new System.NotImplementedException("ResearchCenter_OnWorkTick_Patch - not implemented for DLC");
+                /*
+                 * Works vor vanilla
+                 * 
                 TechInstance activeResearch = Research.Instance.GetActiveResearch();
                 Tech tech = activeResearch.tech;
                 TechRequirements.TechReq req = TechRequirements.Instance.GetTechReq(tech.Id);
@@ -48,6 +55,24 @@ namespace ResearchRequirements
                         ResearchScreen researchScreen = (ResearchScreen)ManagementMenu.Instance.researchScreen;
                         researchScreen.CancelResearch();
                         Research.Instance.SetActiveResearch(null, true);
+                    }
+                */
+                GVD.VersionAlert(true);
+
+                TechInstance activeResearch = Research.Instance.GetActiveResearch();
+                Tech tech = activeResearch.tech;
+                TechRequirements.TechReq req = TechRequirements.Instance.GetTechReq(tech.Id);
+
+                if (req.ContinuousCheck)
+                    if (!req.ReqUnlocked())
+                    {
+                        __instance.StopWork(__instance.worker, true);
+                        ResearchScreen researchScreen = Traverse.Create(ManagementMenu.Instance).Field("researchScreen").GetValue<ResearchScreen>();
+                        if (researchScreen == null)
+                            return;
+                        researchScreen.CancelResearch();
+                        Research.Instance.SetActiveResearch(null, true);
+                        Debug.Log("ResearchRequirements: research canceled");
                     }
             }
         }
@@ -64,19 +89,19 @@ namespace ResearchRequirements
                 if (screenData.toggleInfo == researchInfo && activeScreen == screenData)
                 {
                     RequirementFunctions.CountResourcesInReservoirs();
-                    ResearchScreen researchScreen = (ResearchScreen)ManagementMenu.Instance.researchScreen;
+                    ResearchScreen researchScreen = Traverse.Create(ManagementMenu.Instance).Field("researchScreen").GetValue<ResearchScreen>();
+                    if (researchScreen == null)
+                        return;
                     Dictionary<Tech, ResearchEntry> entryMap = Traverse.Create(researchScreen).Field("entryMap").GetValue<Dictionary<Tech, ResearchEntry>>();
                     foreach (Tech tech in entryMap.Keys)
                     {
                         if(!tech.IsComplete())
                         {
                             LocText researchName = Traverse.Create(entryMap[tech]).Field("researchName").GetValue<LocText>();
-                            if (!TechRequirements.Instance.HasTechReq(tech.Id))
-                                continue;
                             researchName.GetComponent<ToolTip>().toolTip = CreateTechTooltipText(tech);
                         }
                     }
-                }
+                }//*/
                 /*else if (screenData.toggleInfo == researchInfo && activeScreen != screenData)
                     Debug.Log("ResearchRequirements: Research closed");
                 else
