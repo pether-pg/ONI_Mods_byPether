@@ -10,7 +10,7 @@ namespace RocketPresenceAutomationPort
         {
             public static void OnLoad()
             {
-                Debug.Log("RocketPresenceAutomationPort: Mod version updated for 452481 DLC build. Last mod update: 2021.02.21");
+                //Debug.Log("RocketPresenceAutomationPort: Mod version updated for 452481 DLC build. Last mod update: 2021.02.21");
             }
         }
 
@@ -121,6 +121,16 @@ namespace RocketPresenceAutomationPort
             }
         }
 
+        [HarmonyPatch(typeof(HEPEngineConfig))]
+        [HarmonyPatch("CreateBuildingDef")]
+        public static class HEPEngineConfig_CreateBuildingDef_Patch
+        {
+            public static void Postfix(ref BuildingDef __result)
+            {
+                AddLogicPort(ref __result);
+            }
+        }
+
         [HarmonyPatch(typeof(SteamEngineConfig))]
         [HarmonyPatch("ConfigureBuildingTemplate")]
         public static class SteamEngineConfig_ConfigureBuildingTemplate_Patch
@@ -204,6 +214,16 @@ namespace RocketPresenceAutomationPort
         [HarmonyPatch(typeof(HydrogenEngineClusterConfig))]
         [HarmonyPatch("ConfigureBuildingTemplate")]
         public static class HydrogenEngineClusterConfig_ConfigureBuildingTemplate_Patch
+        {
+            public static void Postfix(GameObject go)
+            {
+                AddPortScipt(go);
+            }
+        }
+
+        [HarmonyPatch(typeof(HEPEngineConfig))]
+        [HarmonyPatch("ConfigureBuildingTemplate")]
+        public static class HEPEngineConfig_ConfigureBuildingTemplate_Patch
         {
             public static void Postfix(GameObject go)
             {

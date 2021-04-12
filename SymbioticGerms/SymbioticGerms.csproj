@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BonusFunctions.cs" />
     <Compile Include="Numbers.cs" />
     <Compile Include="SymbioticGerms_Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

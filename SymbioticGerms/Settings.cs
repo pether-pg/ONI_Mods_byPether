@@ -21,9 +21,13 @@ namespace SymbioticGerms
 
         public float MaxWheatChance = 0.2f;
         public float MaxBeansChance = 0.2f;
+        public float MaxPacuBonus = 0.2f;
+        public float MaxDreckoBonus = 0.2f;
+        public float MaxPuftBonus = 0.2f;
         public float MaxSlicksterBonus = 0.2f;
         public float MaxMealLiceBonus = 0.2f;
         public float MaxBogBucketBonus = 0.2f;
         public float MaxDuskCupBonus = 2f;
+        public float MaxPepperTempScale = 1.1f;
     }
 }
