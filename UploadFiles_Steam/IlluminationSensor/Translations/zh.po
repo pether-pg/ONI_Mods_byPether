@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included"
+"POT Version: 2.0"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.DESCRIPTION
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.DESCRIPTION"
+msgid "Illumination sensors can turn additional light sources on when the surrounding is too dim."
+msgstr "光照度传感器可以在周围环境太暗时打开额外的光源。"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.EFFECT
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.EFFECT"
+msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> or a <b><style=\"logic_off\">Red Signal</style></b> when <link=\"LIGHT\">Illumination</link> enters the chosen range."
+msgstr "当<link=\"LIGHT\">光照度</link>在选定范围时，发送<b><style=\"logic_on\">绿色信号</style></b>或<b><style=\"logic_off\">红色信号</style></b>。"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT"
+msgid "Surrounding<link=\"LIGHT\">Illumination</link>"
+msgstr "周围的<link=\"LIGHT\">光照度</link>"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_ACTIVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_ACTIVE"
+msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> if <link=\"LIGHT\">Illumination</link> is within the selected range"
+msgstr "如果<link=\"LIGHT\">光照度</link>在选定范围时，发送<b><style=\"logic_on\">绿色信号</style></b>。"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_INACTIVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_INACTIVE"
+msgid "Otherwise, sends a <b><style=\"logic_off\">Red Signal</style></b>"
+msgstr "否则，发送<b><style=\"logic_off\">红色信号</style></b>。"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.NAME
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.NAME"
+msgid "Illumination Sensor"
+msgstr "光照度传感器"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_ABOVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_ABOVE"
+msgid "Will send a <b><style=\"logic_on\">Green Signal</style></b> if the <style=\"KKeyword\">Illumination</style> is above <b>{0} Lux</b>"
+msgstr "如果<style=\"KKeyword\">光照度</style>高于<b>{0} Lux</b>，将发送<b><style=\"logic_on\">绿色信号</style></b>。"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_BELOW
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_BELOW"
+msgid "Will send a <b><style=\"logic_on\">Green Signal</style></b> if the <style=\"KKeyword\">Illumination</style> is below <b>{0} Lux</b>"
+msgstr "如果<style=\"KKeyword\">光照度</style>低于<b>{0} Lux</b>，将发送<b><style=\"logic_on\">绿色信号</style></b>。"
+
+#. IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr "pether.pg"
