@@ -119,13 +119,13 @@ namespace IlluminationSensor
 
         public float GetRangeMaxInputField() => this.RangeMax;
 
-        public LocString Title => (LocString)LogicIlluminationSensorConfig.Name;
+        public LocString Title => STRINGS.ILLUMINATIONSENSOR.NAME;
 
         public LocString ThresholdValueName => UI.UNITSUFFIXES.LIGHT.LUX;
 
-        public string AboveToolTip => LogicIlluminationSensorConfig.TooltipPatternAbove;
+        public string AboveToolTip => STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_ABOVE;
 
-        public string BelowToolTip => LogicIlluminationSensorConfig.TooltipPatternBelow;
+        public string BelowToolTip => STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_BELOW;
 
         public string Format(float value, bool units) => ((int)value).ToString();
 

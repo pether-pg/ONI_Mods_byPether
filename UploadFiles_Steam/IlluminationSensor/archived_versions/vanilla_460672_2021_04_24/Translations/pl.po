@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n"
+"%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: pl\n"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.DESCRIPTION
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.DESCRIPTION"
+msgid ""
+"Illumination sensors can turn additional light sources on when the "
+"surrounding is too dim."
+msgstr ""
+"Czujniki oświetlenia mogą włączyć dodatkowe źródła światła kiedy otoczenie "
+"jest zbyt ciemne."
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.EFFECT
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.EFFECT"
+msgid ""
+"Sends a <b><style=\"logic_on\">Green Signal</style></b> or a <b><style="
+"\"logic_off\">Red Signal</style></b> when <link=\"LIGHT\">Illumination</"
+"link> enters the chosen range."
+msgstr ""
+"Wysyła <b><style=\"logic_on\">Zielony Sygnał</style></b> lub <b><style="
+"\"logic_off\">Czerwony Sygnał</style></b> kiedy <link=\"LIGHT"
+"\">Oświetlenie</link> znajduje się w wybranym zakresie."
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT"
+msgid "Surrounding<link=\"LIGHT\">Illumination</link>"
+msgstr "<link=\"LIGHT\">Oświetlenie</link> otoczenia"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_ACTIVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_ACTIVE"
+msgid ""
+"Sends a <b><style=\"logic_on\">Green Signal</style></b> if <link=\"LIGHT"
+"\">Illumination</link> is within the selected range"
+msgstr ""
+"Wysyła <b><style=\"logic_on\">Zielony Sygnał</style></b> jeśli <link="
+"\"LIGHT\">Oświetlenie</link> znajduje się w wybranym zakresie"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_INACTIVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_INACTIVE"
+msgid "Otherwise, sends a <b><style=\"logic_off\">Red Signal</style></b>"
+msgstr ""
+"W przeciwnym razie wysyła <b><style=\"logic_off\">Czerwony Sygnał</style></"
+"b>"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.NAME
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.NAME"
+msgid "Illumination Sensor"
+msgstr "Czujnik Oświetlenia"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_ABOVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_ABOVE"
+msgid ""
+"Will send a <b><style=\"logic_on\">Green Signal</style></b> if the <style="
+"\"KKeyword\">Illumination</style> is above <b>{0} Lux</b>"
+msgstr ""
+"Wyśle <b><style=\"logic_on\">Zielony Sygnał</style></b> jeśli <style="
+"\"KKeyword\">Oświetlenie</style> będzie większe niż <b>{0} Lux</b>"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_BELOW
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_BELOW"
+msgid ""
+"Will send a <b><style=\"logic_on\">Green Signal</style></b> if the <style="
+"\"KKeyword\">Illumination</style> is below <b>{0} Lux</b>"
+msgstr ""
+"Wyśle <b><style=\"logic_on\">Zielony Sygnał</style></b> jeśli <style="
+"\"KKeyword\">Oświetlenie</style> będzie mniejsze niż <b>{0} Lux</b>"
+
+#. IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr "pether.pg"
