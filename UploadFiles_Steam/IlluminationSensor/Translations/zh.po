@@ -46,4 +46,4 @@ msgstr "如果<style=\"KKeyword\">光照度</style>低于<b>{0} Lux</b>，将发
 #. IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME
 msgctxt "IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME"
 msgid "pether.pg"
-msgstr "pether.pg"
+msgstr "Juijote"
