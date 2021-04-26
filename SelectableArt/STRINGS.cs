@@ -15,7 +15,7 @@ namespace SelectableArt
         public class ROTATE_ART_BUTTON
         {
             public static LocString TEXT = (LocString)"Rotate Art";
-            public static LocString TOOLTIP = (LocString)"Rotates artwork. {Hotkey}";
+            public static LocString TOOLTIP = "Rotates artwork. {Hotkey}";
         }
     }
 }

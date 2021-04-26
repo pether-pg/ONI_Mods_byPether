@@ -50,16 +50,20 @@ namespace SelectableArt
         private void OnRotateClicked()
         {
             Rotatable rotatable = this.gameObject.GetComponent<Rotatable>();
-            if (rotatable != null) rotatable.Rotate();
+            if (rotatable != null)
+            {
+                rotatable.Rotate();
 
-            BuildingDef def = this.gameObject.GetComponent<Building>()?.Def;
-            if (def != null && def.WidthInCells % 2 == 0)
-                this.transform.position += rotatable.GetOrientation() != Orientation.Neutral ? new UnityEngine.Vector3(1, 0, 0) : new UnityEngine.Vector3(-1, 0, 0);
+                // Buildings with even width values jump one tile when rotating and must be moved back
+                Building building = this.gameObject.GetComponent<Building>();
+                if (building != null && building.Def != null && building.Def.WidthInCells % 2 == 0)
+                    this.transform.position += rotatable.GetOrientation() != Orientation.Neutral ? new UnityEngine.Vector3(1, 0, 0)
+                                                                                                : new UnityEngine.Vector3(-1, 0, 0);
 
-            artable.SetStage(artable.CurrentStage, false);
+            }
         }
 
-        private void OnRefreshUserMenu(object _)
+        private void OnRefreshUserMenu(object obj)
         {
             if (!((UnityEngine.Object)this.artable != (UnityEngine.Object)null) || this.artable.CurrentStatus == Artable.Status.Ready)
                 return;
@@ -71,7 +75,10 @@ namespace SelectableArt
             if (count > 1)
                 Game.Instance?.userMenu?.AddButton(this.gameObject, new KIconButtonMenu.ButtonInfo(nextIcon, STRINGS.NEXT_ART_BUTTON.TEXT, new System.Action(this.OnNextArtClicked), Action.BuildMenuKeyQ, tooltipText: ((string)STRINGS.NEXT_ART_BUTTON.TOOLTIP)));
             if(this.gameObject.GetComponent<Rotatable>() != null)
-                Game.Instance?.userMenu?.AddButton(this.gameObject, new KIconButtonMenu.ButtonInfo(rotateIcon, STRINGS.ROTATE_ART_BUTTON.TEXT, new System.Action(this.OnRotateClicked), Action.BuildMenuKeyO, tooltipText: ((string)STRINGS.ROTATE_ART_BUTTON.TOOLTIP)));
+            {
+                var rotationButton = new KIconButtonMenu.ButtonInfo(rotateIcon, STRINGS.ROTATE_ART_BUTTON.TEXT, new System.Action(this.OnRotateClicked), Action.BuildMenuKeyO, tooltipText: ((string)STRINGS.ROTATE_ART_BUTTON.TOOLTIP));
+                Game.Instance?.userMenu?.AddButton(this.gameObject, rotationButton);
+            }                
         }
     }
 }
