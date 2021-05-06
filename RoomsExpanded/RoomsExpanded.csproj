@@ -59,6 +59,7 @@
     <Compile Include="GVD.cs" />
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="EffectScripts\MuseumEffectTrigger.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_PrivateRoom.cs" />
     <Compile Include="RoomConstraintTags.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="RoomTypes\RoomTypeKitchenData.cs" />
     <Compile Include="RoomTypes\RoomTypeLaboratoryData.cs" />
     <Compile Include="RoomTypes\RoomTypeIndustrialData.cs" />
+    <Compile Include="RoomTypes\RoomTypePrivateRoomData.cs" />
     <Compile Include="RoomTypes_AllModded.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="SortingCounter.cs" />

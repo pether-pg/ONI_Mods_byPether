@@ -8,6 +8,7 @@ namespace RoomsExpanded
     public static class SortingCounter
     {
         public static readonly int PlumbedBathroomSortKey = 2;
+        public static readonly int BedroomSortKey = 4;
         public static readonly int FarmSortKey = 11;
         public static readonly int CreaturePenSortKey = 12;
         public static readonly int RecreationRoom = 14;

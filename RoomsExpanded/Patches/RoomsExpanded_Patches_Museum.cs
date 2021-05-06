@@ -45,7 +45,7 @@ namespace RoomsExpanded
             {
                 if (!Settings.Instance.Museum.IncludeRoom) return;
 
-                GVD.VersionAlert(expectDLC: false, "Museum Effect tirgger script"); // Effect constructors differ in vanilla and DLC
+                GVD.VersionAlert(expectDLC: true, "Museum Effect tirgger script"); // Effect constructors differ in vanilla and DLC
                 go.AddOrGet<MuseumEffectTrigger>();
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.ItemPedestalTag);
             }

@@ -110,6 +110,18 @@ namespace RoomsExpanded
             }
         }
 
+        private static RoomType prv_Private = null;
+
+        public static RoomType PrivateRoom
+        {
+            get
+            {
+                if (prv_Private == null)
+                    prv_Private = new RoomTypePrivateRoomData().GetRoomType();
+                return prv_Private;
+            }
+        }
+
         private static RoomType prv_Industrial = null;
         public static RoomType IndustrialRoom(RoomType[] upgrades)
         {

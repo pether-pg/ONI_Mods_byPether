@@ -56,6 +56,7 @@ namespace RoomsExpanded
         public RoomSettings Botanical = new RoomSettings(true, 96, null);
         public RoomSettings Museum = new RoomSettings(true, 96, 0.3f);
         public RoomSettings HospitalUpdate = new RoomSettings(true, 96, null);
+        public RoomSettings PrivateBedroom = new RoomSettings(true, 32, null);
         public string comment = "Below settings are for temporary \"Room Size\" mod functionality restored for DLC. " +
             "Please let me know when original mod is updated to support DLC so I could remove this feature from my mod. " +
             "Original mod by trevis can be found here: https://steamcommunity.com/sharedfiles/filedetails/?id=1715802131";

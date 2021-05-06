@@ -95,6 +95,13 @@ namespace RoomsExpanded
                     public static LocString EFFECT = (LocString)" - Morale bonus";
                     public static LocString TOOLTIP = (LocString)"It used to be a storehouse, before Meep confused Pedestal content with art.";
                 }
+
+                public class PRIVATEROOM
+                {
+                    public static LocString NAME = (LocString)"Private Bedroom";
+                    public static LocString EFFECT = (LocString)" - Morale bonus";
+                    public static LocString TOOLTIP = (LocString)"For duplicants who want to have some privacy.";
+                }
             }
 
             public class CRITERIA
@@ -236,6 +243,18 @@ namespace RoomsExpanded
                     public static LocString NAME = (LocString)"{0} Different Sculptures";
                     public static LocString DESCRIPTION = (LocString)"At least {0} Sculptures of different type.";
                 }
+
+                public class ANYBED
+                {
+                    public static LocString NAME = (LocString)"Any bed";
+                    public static LocString DESCRIPTION = (LocString)"One Cott or Luxury Bed.";
+                }
+
+                public class ONLYONEBED
+                {
+                    public static LocString NAME = (LocString)"No more than one bed.";
+                    public static LocString DESCRIPTION = (LocString)"The room cannot have more than one bed.";
+                }
             }
 
             public class EFFECTS
@@ -256,6 +275,18 @@ namespace RoomsExpanded
                 {
                     public static LocString NAME = (LocString)"Graveyard Dread";
                     public static LocString DESCRIPTION = (LocString)"This Duplicant feels cold claws of Death crawling up their spine.";
+                }
+
+                public class PRIVATEROOM
+                {
+                    public static LocString NAME = (LocString)"Private Bedroom";
+                    public static LocString DESCRIPTION = (LocString)"This Duplicant slept in his Private Bedroom.";
+                }
+
+                public class LUXURYPRIVATEROOM
+                {
+                    public static LocString NAME = (LocString)"Luxury Private Bedroom";
+                    public static LocString DESCRIPTION = (LocString)"This Duplicant slept in his Luxury Private Bedroom.";
                 }
             }
         }

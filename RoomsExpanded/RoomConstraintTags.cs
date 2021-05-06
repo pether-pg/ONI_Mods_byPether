@@ -32,6 +32,13 @@ namespace RoomsExpanded
                 description: string.Format((string)ROOMS.CRITERIA.MAXIMUM_SIZE.DESCRIPTION, (object)maxSize.ToString()));
         }
 
+        public static void AddStompInConflict(RoomConstraints.Constraint stomping, RoomConstraints.Constraint stomped)
+        {
+            if (stomping.stomp_in_conflict == null)
+                stomping.stomp_in_conflict = new List<RoomConstraints.Constraint>();
+            stomping.stomp_in_conflict.Add(stomped);
+        }
+
         public static void AddStompInConflict(RoomType stomping, RoomType stomped)
         {
             if (stomping.primary_constraint.stomp_in_conflict == null)

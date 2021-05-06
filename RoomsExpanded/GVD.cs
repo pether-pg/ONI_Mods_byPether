@@ -7,7 +7,7 @@ namespace RoomsExpanded
 {
     class GVD // = Game Version Dependencies
     {
-        private static readonly bool UsesExpansion = false;
+        private static readonly bool UsesExpansion = true;
 
         public static void VersionAlert(bool expectDLC, string details = "")
         {

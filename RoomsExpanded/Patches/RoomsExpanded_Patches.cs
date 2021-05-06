@@ -15,7 +15,7 @@ namespace RoomsExpanded
             public static void OnLoad()
             {
                 GVD.VersionAlert(DlcManager.IsExpansion1Active(), "OnLoad() version check");
-                Debug.Log("RoomsExpanded: Loaded Vanilla version of the mod. Last update: 2021.03.12 for build 449549.");
+                //Debug.Log("RoomsExpanded: Loaded Vanilla version of the mod. Last update: 2021.03.12 for build 449549.");
                 Debug.Log("RoomsExpanded: Loaded from: " + Assembly.GetExecutingAssembly().Location);
             }
         }
@@ -82,6 +82,7 @@ namespace RoomsExpanded
                 RoomsExpanded_Patches_Hospital.UpdateRoom(ref __instance);
                 RoomsExpanded_Patches_Industrial.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Museum.AddRoom(ref __instance);
+                RoomsExpanded_Patches_PrivateRoom.AddRoom(ref __instance);
 
                 // Temporary "Room Size" mod functionality restored for DLC
                 // Must be removed once "Room Size" is updated for DLC

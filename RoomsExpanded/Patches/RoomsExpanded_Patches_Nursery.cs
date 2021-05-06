@@ -45,8 +45,10 @@ namespace RoomsExpanded
                     || !Settings.Instance.Nursery.Bonus.HasValue)
                     return;
 
-                double chance = (double)Settings.Instance.Nursery.Bonus.Value;
-                __instance.ProduceSeed(__instance.seedInfo.seedId, (double)UnityEngine.Random.Range(0.0f, 1f) <= chance ? 1 : 0);
+                double chance = Settings.Instance.Nursery.Bonus.Value;
+                if ((double)UnityEngine.Random.Range(0.0f, 1f) <= chance)
+                    Traverse.Create(__instance).Method("ProduceSeed", new object[] { __instance.seedInfo.seedId, 5 }).GetValue<GameObject>();
+                    //__instance.ProduceSeed(__instance.seedInfo.seedId, 1);
             }
         }
     }

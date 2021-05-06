@@ -2,6 +2,7 @@
 using Klei.AI;
 using System.Linq;
 using System;
+using System.Collections.Generic;
 
 namespace RoomsExpanded
 {
@@ -40,7 +41,7 @@ namespace RoomsExpanded
                 moraleBonus = 10;
 
             Effect effect = new Effect(RoomTypeMuseumData.EffectId, STRINGS.ROOMS.EFFECTS.MUSEUM.NAME, STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION, 240, false, true, false);
-            effect.SelfModifiers = new System.Collections.Generic.List<AttributeModifier>();
+            effect.SelfModifiers = new List<AttributeModifier>();
             effect.SelfModifiers.Add(new AttributeModifier("QualityOfLife", moraleBonus, description: STRINGS.ROOMS.EFFECTS.MUSEUM.NAME));
 
             Effects effects = gameObject.GetComponent<Effects>();

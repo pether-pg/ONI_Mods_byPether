@@ -19,7 +19,7 @@ namespace RoomsExpanded
             public static void Postfix(GameObject go)
             {
                 if (!Settings.Instance.Graveyard.IncludeRoom) return;
-                GVD.VersionAlert(expectDLC: false, "Graveyard effect trigger script"); // Effect constructors differ in vanilla and DLC
+                GVD.VersionAlert(expectDLC: true, "Graveyard effect trigger script"); // Effect constructors differ in vanilla and DLC
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.GravestoneTag);
                 go.AddOrGet<GraveyardEffectTrigger>();
             }
