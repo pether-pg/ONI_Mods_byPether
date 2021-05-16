@@ -12,7 +12,8 @@ namespace ResearchRequirements
             public static void OnLoad()
             {
                 GVD.VersionAlert(DlcManager.IsExpansion1Active());
-                Debug.Log("ResearchRequirements: Loaded DLC version of the mod. Last update: 16.03.2021 for 455509 build.");
+                //Debug.Log("RoomsExpanded: Loaded DLC version of the mod. Last update: 2021.05.14 for build 463874.");
+                Debug.Log("RoomsExpanded: Loaded Vanilla version of the mod. Last update: 2021.05.14 for build 460672.");
                 Debug.Log("ResearchRequirements: Loaded from: " + Assembly.GetExecutingAssembly().Location);
             }
         }
@@ -40,10 +41,10 @@ namespace ResearchRequirements
         {
             public static void Postfix(ResearchCenter __instance)
             {
-                //throw new System.NotImplementedException("ResearchCenter_OnWorkTick_Patch - not implemented for DLC");
+                GVD.VersionAlert(false);
                 /*
                  * Works vor vanilla
-                 * 
+                 * */
                 TechInstance activeResearch = Research.Instance.GetActiveResearch();
                 Tech tech = activeResearch.tech;
                 TechRequirements.TechReq req = TechRequirements.Instance.GetTechReq(tech.Id);
@@ -56,9 +57,11 @@ namespace ResearchRequirements
                         researchScreen.CancelResearch();
                         Research.Instance.SetActiveResearch(null, true);
                     }
-                */
-                GVD.VersionAlert(true);
+                
 
+                /*
+                 * Works vor DLC
+                 * 
                 TechInstance activeResearch = Research.Instance.GetActiveResearch();
                 Tech tech = activeResearch.tech;
                 TechRequirements.TechReq req = TechRequirements.Instance.GetTechReq(tech.Id);
@@ -74,6 +77,7 @@ namespace ResearchRequirements
                         Research.Instance.SetActiveResearch(null, true);
                         Debug.Log("ResearchRequirements: research canceled");
                     }
+                */
             }
         }
 
@@ -101,11 +105,7 @@ namespace ResearchRequirements
                             researchName.GetComponent<ToolTip>().toolTip = CreateTechTooltipText(tech);
                         }
                     }
-                }//*/
-                /*else if (screenData.toggleInfo == researchInfo && activeScreen != screenData)
-                    Debug.Log("ResearchRequirements: Research closed");
-                else
-                    Debug.Log("ResearchRequirements: Other screen toogled");*/
+                }
             }
 
             public static string CreateTechTooltipText(Tech targetTech)

@@ -102,5 +102,12 @@ namespace ResearchRequirements
             public static LocString ADVANCED_SANITATION         = (LocString)"TBD: {0}";
             public static LocString NUCLEAR_REFINEMENT          = (LocString)"Have Duplicants with Hazmat Digging skill: {0}";
         }
+        public class TRANSLATION
+        {
+            public class AUTHOR
+            {
+                public static LocString NAME = (LocString)"pether.pg";
+            }
+        }
     }
 }
