@@ -1,10 +1,10 @@
 ﻿using System;
 using Harmony;
-using KMod;
 using System.IO;
 using static Localization;
 using System.Reflection;
 using STRINGS;
+using KMod;
 
 namespace IlluminationSensor
 {
