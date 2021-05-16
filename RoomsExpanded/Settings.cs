@@ -2,17 +2,33 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json;
+using PeterHan.PLib;
+using PeterHan.PLib.Options;
 
 namespace RoomsExpanded
 {
     [Serializable]
+    [RestartRequired]
+    [ConfigFileAttribute("RoomsExpanded.Settings.json", true)]
     public class Settings
     {
+        [Serializable]
         public class RoomSettings
         {
-            public bool IncludeRoom;
-            public int MaxSize;
-            public float? Bonus;
+            [JsonProperty]
+            [Option("IncludeRoom", "Do you want to play with this room?")]
+            public bool IncludeRoom { get; set; }
+
+            [JsonProperty]
+            [Limit(12, 256)]
+            [Option("MaxSize", "How big this room can be?")]
+            public int MaxSize { get; set; }
+            
+            [JsonProperty]
+            [Limit(0.0, 1.0)]
+            [Option("Bonus", "How big bonus the room should provide?")]
+            public float? Bonus { get; set; }
 
             public RoomSettings(bool include, int max, float? bonus = null)
             {
@@ -20,10 +36,28 @@ namespace RoomsExpanded
                 MaxSize = max;
                 Bonus = bonus;
             }
-
         }
 
-        private static Settings _instance = null;
+        [Serializable]
+        public class PlainRoomSettings
+        {
+            [JsonProperty]
+            [Option("IncludeRoom", "Do you want to play with this room?")]
+            public bool IncludeRoom { get; set; }
+
+            [JsonProperty]
+            [Limit(12, 256)]
+            [Option("MaxSize", "How big this room can be?")]
+            public int MaxSize { get; set; }
+
+            public PlainRoomSettings(bool include, int max)
+            {
+                IncludeRoom = include;
+                MaxSize = max;
+            }
+        }
+
+            private static Settings _instance = null;
         public static Settings Instance
         {
             get 
@@ -39,30 +73,115 @@ namespace RoomsExpanded
             }
         }
 
-        private Settings()
-        { }
+        public Settings()
+        {
+            HideLegendEffect = true; 
+            EnforcedLanguage = "";
 
-        public bool HideLegendEffect = true;
-        public string EnforcedLanguage = "";
-        public RoomSettings Laboratory = new RoomSettings(true, 64, 0.1f);
-        public RoomSettings Kitchen = new RoomSettings(true, 64, 0.1f);
-        public RoomSettings Bathroom = new RoomSettings(true, 64, 0.2f);
-        public RoomSettings Industrial = new RoomSettings(false, 96);
-        public RoomSettings Graveyard = new RoomSettings(false, 96, 0.2f);
-        public RoomSettings Agricultural = new RoomSettings(true, 96);
-        public RoomSettings Gym = new RoomSettings(true, 64, 0.1f);
-        public RoomSettings Nursery = new RoomSettings(true, 64, 0.1f);
-        public RoomSettings Aquarium = new RoomSettings(true, 96, 0.2f);
-        public RoomSettings Botanical = new RoomSettings(true, 96, null);
-        public RoomSettings Museum = new RoomSettings(true, 96, 0.3f);
-        public RoomSettings HospitalUpdate = new RoomSettings(true, 96, null);
-        public RoomSettings PrivateBedroom = new RoomSettings(true, 32, null);
-        public string comment = "Below settings are for temporary \"Room Size\" mod functionality restored for DLC. " +
-            "Please let me know when original mod is updated to support DLC so I could remove this feature from my mod. " +
-            "Original mod by trevis can be found here: https://steamcommunity.com/sharedfiles/filedetails/?id=1715802131";
-        public int ResizeMaxRoomSize64 = 64;
-        public int ResizeMaxRoomSize96 = 96;
-        public int ResizeMaxRoomSize120 = 120;
-        public int ResizeMaxRoomSize = 128;
+            Laboratory = new RoomSettings(true, 64, 0.1f);
+            Kitchen = new RoomSettings(true, 64, 0.1f);
+            Bathroom = new RoomSettings(true, 64, 0.2f);
+            Industrial = new PlainRoomSettings(false, 96);
+            Graveyard = new RoomSettings(false, 96, 0.2f);
+            Agricultural = new PlainRoomSettings(true, 96);
+            Gym = new RoomSettings(true, 64, 0.1f);
+            Nursery = new RoomSettings(true, 64, 0.1f);
+            Aquarium = new RoomSettings(true, 96, 0.2f);
+            Botanical = new PlainRoomSettings(true, 96);
+            Museum = new RoomSettings(true, 96, 0.3f);
+            HospitalUpdate = new PlainRoomSettings(true, 96);
+            PrivateBedroom = new PlainRoomSettings(true, 32);
+
+            ResizeMaxRoomSize64 = 64;
+            ResizeMaxRoomSize96 = 96;
+            ResizeMaxRoomSize120 = 120;
+            ResizeMaxRoomSize = 128;
+        }
+
+        [JsonProperty]
+        [Option("Hide Legend Effect", "HideLegendEffect", category: "RoomsExpanded: Additional")]
+        public bool HideLegendEffect { get; set; }
+
+        [JsonProperty]
+        [Limit(0, 2)]
+        [Option("Enforced Language", "EnforcedLanguage", category: "RoomsExpanded: Additional")]
+        public string EnforcedLanguage { get; set; }
+
+        [JsonProperty]
+        [Option("Laboratory")]
+        public RoomSettings Laboratory { get; set; }
+
+        [JsonProperty]
+        [Option("Kitchen")]
+        public RoomSettings Kitchen { get; set; }
+
+        [JsonProperty]
+        [Option("Bathroom")]
+        public RoomSettings Bathroom { get; set; }
+
+        [JsonProperty]
+        [Option("Industrial")]
+        public PlainRoomSettings Industrial { get; set; }
+
+        [JsonProperty]
+        [Option("Graveyard")]
+        public RoomSettings Graveyard { get; set; }
+
+        [JsonProperty]
+        [Option("Agricultural")]
+        public PlainRoomSettings Agricultural { get; set; }
+
+        [JsonProperty]
+        [Option("Gym")]
+        public RoomSettings Gym { get; set; }
+
+        [JsonProperty]
+        [Option("Nursery")]
+        public RoomSettings Nursery { get; set; }
+
+        [JsonProperty]
+        [Option("Aquarium")]
+        public RoomSettings Aquarium { get; set; }
+
+        [JsonProperty]
+        [Option("Botanical Garden")]
+        public PlainRoomSettings Botanical { get; set; }
+
+        [JsonProperty]
+        [Option("Museum")]
+        public RoomSettings Museum { get; set; }
+
+        [JsonProperty]
+        [Option("Hospital Update")]
+        public PlainRoomSettings HospitalUpdate { get; set; }
+
+        [JsonProperty]
+        [Option("Private Bedroom")]
+        public PlainRoomSettings PrivateBedroom { get; set; }
+
+        [JsonProperty]
+        [Limit(12, 256)]
+        [Option("ResizeMaxRoomSize64", "Change max room size from 64 tiles - temporal DLC support for \"Room Size\" mod id=1715802131", category: "RoomSize")]
+        public int ResizeMaxRoomSize64 { get; set; }
+
+        [JsonProperty]
+        [Limit(12, 256)]
+        [Option("ResizeMaxRoomSize96", "Change max room size from 96 tiles - temporal DLC support for \"Room Size\" mod id=1715802131", category: "RoomSize")]
+        public int ResizeMaxRoomSize96 { get; set; }
+
+        [JsonProperty]
+        [Limit(12, 256)]
+        [Option("ResizeMaxRoomSize120", "Change max room size from 120 tiles - temporal DLC support for \"Room Size\" mod id=1715802131", category: "RoomSize")]
+        public int ResizeMaxRoomSize120 { get; set; }
+
+        [JsonProperty]
+        [Limit(128, 256)]
+        [Option("ResizeMaxRoomSize", "Change max room size - temporal DLC support for \"Room Size\" mod id=1715802131", category: "RoomSize")]
+        public int ResizeMaxRoomSize { get; set; }
+
+        public static void PLib_Initalize()
+        {
+            _instance = POptions.ReadSettingsForAssembly<Settings>();
+        }
     }
 }

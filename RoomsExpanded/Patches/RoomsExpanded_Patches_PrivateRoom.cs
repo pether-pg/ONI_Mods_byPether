@@ -35,6 +35,8 @@ namespace RoomsExpanded
         {
             public static void Prefix(string id, ref RoomType[] upgrade_paths)
             {
+                if (!Settings.Instance.PrivateBedroom.IncludeRoom) return;
+
                 if(id == "Barracks" || id == "Bedroom")
                 {
                     List<RoomType> list = new List<RoomType>();
@@ -44,22 +46,6 @@ namespace RoomsExpanded
                     list.Add(RoomTypes_AllModded.PrivateRoom);
                     upgrade_paths = list.ToArray();
                 }
-            }
-        }
-
-        [HarmonyPatch(typeof(Bed))]
-        [HarmonyPatch("RemoveEffects")]
-        public static class BedConfig_RemoveEffects_Patch
-        {
-            public static void Prefix(Bed __instance)
-            {
-                if (!Settings.Instance.PrivateBedroom.IncludeRoom) return;
-
-                Worker targetWorker = Traverse.Create(__instance).Field("targetWorker").GetValue<Worker>();
-                if (targetWorker == null) return;
-
-                targetWorker.GetComponent<Effects>().Remove(RoomTypePrivateRoomData.BasicEffectId);
-                targetWorker.GetComponent<Effects>().Remove(RoomTypePrivateRoomData.LuxuryEffectId);
             }
         }
 
@@ -76,9 +62,9 @@ namespace RoomsExpanded
                 if (sleepable == null) return;
 
                 if (__instance.gameObject.name == "BedComplete")
-                    sleepable.worker.GetComponent<Effects>().Add(RoomTypePrivateRoomData.BasicEffectId, false);
+                    sleepable.worker.GetComponent<Effects>().Add(RoomTypePrivateRoomData.BasicEffectId, true);
                 else if (__instance.gameObject.name == "LuxuryBedComplete")
-                    sleepable.worker.GetComponent<Effects>().Add(RoomTypePrivateRoomData.LuxuryEffectId, false);
+                    sleepable.worker.GetComponent<Effects>().Add(RoomTypePrivateRoomData.LuxuryEffectId, true);
                 else
                     Debug.Log($"RoomsExpanded: invalid bed name in Private Bedroom: {__instance.gameObject.name}");
             }
@@ -90,6 +76,9 @@ namespace RoomsExpanded
         {
             public static void Postfix()
             {
+                if (!Settings.Instance.PrivateBedroom.IncludeRoom)
+                    return;
+
                 Effect basicEffect = new Effect(RoomTypePrivateRoomData.BasicEffectId, STRINGS.ROOMS.EFFECTS.PRIVATEROOM.NAME, STRINGS.ROOMS.EFFECTS.PRIVATEROOM.DESCRIPTION, 500, false, false, false);
                 basicEffect.SelfModifiers = new List<AttributeModifier>();
                 basicEffect.SelfModifiers.Add(new AttributeModifier("QualityOfLife", 2, description: STRINGS.ROOMS.EFFECTS.PRIVATEROOM.NAME));

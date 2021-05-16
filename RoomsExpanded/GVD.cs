@@ -19,5 +19,10 @@ namespace RoomsExpanded
                 throw new NotSupportedException(message);
             }
         }
+
+        public static bool ExecutedWithDLC()
+        {
+            return UsesExpansion;
+        }
     }
 }
