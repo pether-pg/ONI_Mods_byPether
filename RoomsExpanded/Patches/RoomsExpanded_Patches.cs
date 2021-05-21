@@ -9,22 +9,22 @@ using System.Reflection;
 using PeterHan.PLib;
 using PeterHan.PLib.Options;
 
+
 namespace RoomsExpanded
 {
     public class RoomsExpanded_Patches
     {
         public static class Mod_OnLoad
-        {
+        {             
             public static void OnLoad()
             {
                 PUtil.InitLibrary();
                 POptions.RegisterOptions(typeof(Settings));
                 Settings.PLib_Initalize();
 
-                GVD.VersionAlert(DlcManager.IsExpansion1Active(), "OnLoad() version check");
-                //Debug.Log("RoomsExpanded: Loaded Vanilla version of the mod. Last update: 2021.05.13 for build 460672.");
-                Debug.Log("RoomsExpanded: Loaded DLC version of the mod. Last update: 2021.05.13 for build 463874.");
-                Debug.Log("RoomsExpanded: Loaded from: " + Assembly.GetExecutingAssembly().Location);
+                //ModInfo.Initalize(ModInfo.GetAssemblyVersion(), true, 464434);
+                ModInfo.Instance.VersionAlert(DlcManager.IsExpansion1Active(), "OnLoad() version check");
+                ModInfo.Instance.LogDetails();
             }
         }
 

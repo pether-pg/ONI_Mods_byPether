@@ -38,7 +38,8 @@ namespace RoomsExpanded
                     PlumbedBathroomId = Db.Get().RoomTypes.PlumbedBathroom.Id;
 
                 if ((RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeBathroomData.RoomId)
-                    || RoomTypes_AllModded.IsInTheRoom(__instance, PlumbedBathroomId))
+                    || RoomTypes_AllModded.IsInTheRoom(__instance, PlumbedBathroomId)
+                    || RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypePrivateRoomData.RoomId))
                     && Settings.Instance.Bathroom.Bonus.HasValue)
                 {
                     __instance.WorkTimeRemaining -= dt * Settings.Instance.Bathroom.Bonus.Value;

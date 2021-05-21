@@ -48,7 +48,7 @@ namespace RoomsExpanded
                 double chance = Settings.Instance.Nursery.Bonus.Value;
                 if ((double)UnityEngine.Random.Range(0.0f, 1f) <= chance)
                 {
-                    if(GVD.ExecutedWithDLC())
+                    if(ModInfo.Instance.ExecutedWithDLC())
                         Traverse.Create(__instance).Method("ProduceSeed", new object[] { __instance.seedInfo.seedId, 1, true}).GetValue<GameObject>();
                     else
                         Traverse.Create(__instance).Method("ProduceSeed", new object[] { __instance.seedInfo.seedId, 1 }).GetValue<GameObject>();

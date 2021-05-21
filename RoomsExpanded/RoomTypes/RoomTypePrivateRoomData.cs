@@ -28,12 +28,14 @@ namespace RoomsExpanded
                                         (Func<Room, bool>) (room =>
                                                             {
                                                                 int count = 0;
-                                                                foreach(KPrefabID building in room.buildings)
-                                                                {
-                                                                    Bed bed = building.GetComponent<Bed>();
-                                                                    if(bed != null)
-                                                                        count ++;
-                                                                }
+                                                                if(room != null)
+                                                                    foreach(KPrefabID building in room.buildings)
+                                                                        if(building != null)
+                                                                        {
+                                                                            Bed bed = building.GetComponent<Bed>();
+                                                                            if(bed != null)
+                                                                                count ++;
+                                                                        }
                                                                 return count == 1;
                                                             }),
                                         name: STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME,

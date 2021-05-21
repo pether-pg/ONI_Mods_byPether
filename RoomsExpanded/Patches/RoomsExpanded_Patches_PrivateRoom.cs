@@ -21,7 +21,11 @@ namespace RoomsExpanded
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.PrivateRoom, __instance.Bedroom);
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.PrivateRoom, __instance.MassageClinic);
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.PrivateRoom, __instance.RecRoom);
+                RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.PrivateRoom, __instance.PlumbedBathroom);
                 RoomConstraintTags.AddStompInConflict(__instance.Hospital, RoomTypes_AllModded.PrivateRoom);
+
+                if(Settings.Instance.Bathroom.IncludeRoom)
+                    RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.PrivateRoom, RoomTypes_AllModded.BathroomRoom);
 
                 if (Settings.Instance.Museum.IncludeRoom)
                     RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.PrivateRoom, RoomTypes_AllModded.Museum);

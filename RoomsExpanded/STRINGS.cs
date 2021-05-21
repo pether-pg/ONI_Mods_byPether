@@ -255,6 +255,12 @@ namespace RoomsExpanded
                     public static LocString NAME = (LocString)"No more than one bed.";
                     public static LocString DESCRIPTION = (LocString)"The room cannot have more than one bed.";
                 }
+
+                public class ONLYONEBATHROOMSET
+                {
+                    public static LocString NAME = (LocString)"No more than one bathroom set.";
+                    public static LocString DESCRIPTION = (LocString)"The room cannot have more than one shower, sink or toilet.";
+                }
             }
 
             public class EFFECTS
@@ -280,13 +286,19 @@ namespace RoomsExpanded
                 public class PRIVATEROOM
                 {
                     public static LocString NAME = (LocString)"Private Bedroom";
-                    public static LocString DESCRIPTION = (LocString)"This Duplicant slept in his Private Bedroom.";
+                    public static LocString DESCRIPTION = (LocString)"This Duplicant slept in their Private Bedroom.";
                 }
 
                 public class LUXURYPRIVATEROOM
                 {
                     public static LocString NAME = (LocString)"Luxury Private Bedroom";
-                    public static LocString DESCRIPTION = (LocString)"This Duplicant slept in his Luxury Private Bedroom.";
+                    public static LocString DESCRIPTION = (LocString)"This Duplicant slept in their Luxury Private Bedroom.";
+                }
+
+                public class PRIVATEBATHROOM
+                {
+                    public static LocString NAME = (LocString)"Private Bathroom";
+                    public static LocString DESCRIPTION = (LocString)"This Duplicant visited their Private Bathroom.";
                 }
             }
         }
