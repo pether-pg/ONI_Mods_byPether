@@ -1,0 +1,68 @@
+{
+  "HideLegendEffect": true,
+  "EnforcedLanguage": "",
+  "Laboratory": {
+    "IncludeRoom": true,
+    "MaxSize": 64,
+    "Bonus": 0.1
+  },
+  "Kitchen": {
+    "IncludeRoom": true,
+    "MaxSize": 64,
+    "Bonus": 0.1
+  },
+  "Bathroom": {
+    "IncludeRoom": true,
+    "MaxSize": 64,
+    "Bonus": 0.2
+  },
+  "Industrial": {
+    "IncludeRoom": false,
+    "MaxSize": 96
+  },
+  "Graveyard": {
+    "IncludeRoom": false,
+    "MaxSize": 96,
+    "Bonus": 0.2
+  },
+  "Agricultural": {
+    "IncludeRoom": true,
+    "MaxSize": 96
+  },
+  "Gym": {
+    "IncludeRoom": true,
+    "MaxSize": 64,
+    "Bonus": 0.1
+  },
+  "Nursery": {
+    "IncludeRoom": true,
+    "MaxSize": 64,
+    "Bonus": 0.1
+  },
+  "Aquarium": {
+    "IncludeRoom": true,
+    "MaxSize": 96,
+    "Bonus": 0.2
+  },
+  "Botanical": {
+    "IncludeRoom": true,
+    "MaxSize": 96
+  },
+  "Museum": {
+    "IncludeRoom": true,
+    "MaxSize": 96,
+    "Bonus": 0.3
+  },
+  "HospitalUpdate": {
+    "IncludeRoom": true,
+    "MaxSize": 96
+  },
+  "PrivateBedroom": {
+    "IncludeRoom": true,
+    "MaxSize": 32
+  },
+  "ResizeMaxRoomSize64": 64,
+  "ResizeMaxRoomSize96": 96,
+  "ResizeMaxRoomSize120": 120,
+  "ResizeMaxRoomSize": 128
+}
