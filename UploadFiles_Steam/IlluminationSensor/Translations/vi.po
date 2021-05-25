@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: vi\n"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.DESCRIPTION
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.DESCRIPTION"
+msgid ""
+"Illumination sensors can turn additional light sources on when the "
+"surrounding is too dim."
+msgstr ""
+"Cảm biến chiếu sáng tự động bật các nguồn sáng bổ sung khi xung quanh quá "
+"mờ."
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.EFFECT
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.EFFECT"
+msgid ""
+"Sends a <b><style=\"logic_on\">Green Signal</style></b> or a <b><style="
+"\"logic_off\">Red Signal</style></b> when <link=\"LIGHT\">Illumination</"
+"link> enters the chosen range."
+msgstr ""
+"Gửi <b><style=\"logic_on\">Tín Hiệu Xanh</style></b> hoặc <b><style="
+"\"logic_off\">Tín Hiệu Đỏ</style></b> khi <link=\"LIGHT\">Ánh Sáng</link> "
+"trong phạm vi đã chọn."
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT"
+msgid "Surrounding<link=\"LIGHT\">Illumination</link>"
+msgstr "<link=\"LIGHT\">Ánh Sáng</link> xung quanh"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_ACTIVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_ACTIVE"
+msgid ""
+"Sends a <b><style=\"logic_on\">Green Signal</style></b> if <link=\"LIGHT"
+"\">Illumination</link> is within the selected range"
+msgstr ""
+"Gửi <b><style=\"logic_on\">Tín Hiệu Xanh</style></b> nếu <link=\"LIGHT"
+"\">Ánh Sáng</link> nằm trong phạm vi đã chọn"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_INACTIVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_INACTIVE"
+msgid "Otherwise, sends a <b><style=\"logic_off\">Red Signal</style></b>"
+msgstr "Nếu không, sẽ gửi <b><style=\"logic_off\">Tín Hiệu Đỏ</style></b>"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.NAME
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.NAME"
+msgid "Illumination Sensor"
+msgstr "Cảm biến chiếu sáng"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_ABOVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_ABOVE"
+msgid ""
+"Will send a <b><style=\"logic_on\">Green Signal</style></b> if the <style="
+"\"KKeyword\">Illumination</style> is above <b>{0} Lux</b>"
+msgstr ""
+"Sẽ gửi <b><style=\"logic_on\">Tín Hiệu Xanh</style></b> nếu <style="
+"\"KKeyword\">Ánh Sáng</style> cao hơn <b>{0} Lux</b>"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_BELOW
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_BELOW"
+msgid ""
+"Will send a <b><style=\"logic_on\">Green Signal</style></b> if the <style="
+"\"KKeyword\">Illumination</style> is below <b>{0} Lux</b>"
+msgstr ""
+"Sẽ gửi <b><style=\"logic_on\">Tín Hiệu Xanh</style></b> nếu <style="
+"\"KKeyword\">Ánh Sáng</style> thấp hơn <b>{0} Lux</b>"
+
+#. IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr "Rô Còi"
