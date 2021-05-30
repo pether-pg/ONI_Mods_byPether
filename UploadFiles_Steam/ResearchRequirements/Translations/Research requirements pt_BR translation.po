@@ -81,7 +81,7 @@ msgstr "Armazene Dióxido de Carbono: {0}"
 #. ResearchRequirements.STRINGS.REQUIREMENTS.CLOTHING
 msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.CLOTHING"
 msgid "Gather Fiber: {0}"
-msgstr "Reúna Fibras de Caniço: {0}"
+msgstr "Consiga Fibras de Caniço: {0}"
 
 #. ResearchRequirements.STRINGS.REQUIREMENTS.COMBUSTION
 msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.COMBUSTION"
@@ -106,7 +106,7 @@ msgstr "Tenha suas camas e banheiros expostos a outros gases além de Oxigênio:
 #. ResearchRequirements.STRINGS.REQUIREMENTS.DISTILLATION
 msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.DISTILLATION"
 msgid "Store Polluted Water: {0}"
-msgstr "Armazena Água Poluída: {0}"
+msgstr "Armazene Água Poluída: {0}"
 
 #. ResearchRequirements.STRINGS.REQUIREMENTS.DUPE_TRAFFIC_CONTROL
 msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.DUPE_TRAFFIC_CONTROL"
@@ -411,7 +411,7 @@ msgstr "Tenha Duplicantes com a habilidade \"Carregamento Melhorado II\": {0}"
 #. ResearchRequirements.STRINGS.REQUIREMENTS.SMELTING
 msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SMELTING"
 msgid "Gather Refined Metals: {0} kg"
-msgstr "Reúna metais refinados: {0} kg"
+msgstr "Consiga metais refinados: {0} kg"
 
 #. ResearchRequirements.STRINGS.REQUIREMENTS.SOLID_DISTRIBUTION
 msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SOLID_DISTRIBUTION"
