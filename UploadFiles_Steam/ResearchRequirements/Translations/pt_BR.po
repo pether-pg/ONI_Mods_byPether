@@ -461,4 +461,4 @@ msgstr "Armazene Petróleo: {0} litros"
 #. ResearchRequirements.STRINGS.TRANSLATION.AUTHOR.NAME
 msgctxt "ResearchRequirements.STRINGS.TRANSLATION.AUTHOR.NAME"
 msgid "pether.pg"
-msgstr "pether.pg"
+msgstr "Nipodemos"
