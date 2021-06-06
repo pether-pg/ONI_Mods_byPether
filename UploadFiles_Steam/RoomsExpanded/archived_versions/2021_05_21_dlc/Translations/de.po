@@ -233,6 +233,22 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME"
 msgid "Water Cooler"
 msgstr "Wasserspender"
 
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME"
+msgid "Any Bed"
+msgstr "Jedes Bett"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME"
+msgid "No more than one bed."
+msgstr "Genau ein Bett"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME"
+msgid "No more than one bathroom set."
+msgstr "Jeweils genau eins: Waschbecken, Dusche, Toilette."
+
+
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT"
 msgid " - Enables Farm and Grooming Stations"
@@ -397,6 +413,24 @@ msgstr "Dusche"
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.TOOLTIP"
 msgid "Just entering such a nice bathroom make duplicants feel cleaner."
 msgstr "Allein das Betreten einer Dusche sorgt für ein Gefühl von Reinheit."
+
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT"
+msgid " - Morale bonus"
+msgstr " - Moralbonus"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.NAME"
+msgid "Private Bedroom"
+msgstr "Einzelzimmer"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.TOOLTIP"
+msgid "For duplicants who want to have some privacy."
+msgstr "Für Duplikants mit einem Bedürfnis nach Privatssphäre"
+
+
 
 #. RoomsExpanded.STRINGS.TRANSLATION.AUTHOR.NAME
 msgctxt "RoomsExpanded.STRINGS.TRANSLATION.AUTHOR.NAME"

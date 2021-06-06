@@ -12,8 +12,8 @@ namespace ResearchRequirements
             public static void OnLoad()
             {
                 GVD.VersionAlert(DlcManager.IsExpansion1Active());
-                //Debug.Log("RoomsExpanded: Loaded DLC version of the mod. Last update: 2021.05.14 for build 463874.");
-                Debug.Log("RoomsExpanded: Loaded Vanilla version of the mod. Last update: 2021.05.14 for build 460672.");
+                Debug.Log("ResearchRequirements: Loaded DLC version of the mod. Last update: 2021.05.14 for build 463874.");
+                //Debug.Log("ResearchRequirements: Loaded Vanilla version of the mod. Last update: 2021.05.14 for build 460672.");
                 Debug.Log("ResearchRequirements: Loaded from: " + Assembly.GetExecutingAssembly().Location);
             }
         }
