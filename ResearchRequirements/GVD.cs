@@ -4,7 +4,7 @@ namespace ResearchRequirements
 {
     class GVD // = Game Version Dependencies
     {
-        private static bool ExpansionActive = false;
+        private static bool ExpansionActive = true;
 
         public static int LowTierTechs => ExpansionActive ? 19 : 18;
 

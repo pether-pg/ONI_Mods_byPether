@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using System.Collections.Generic;
 using STRINGS;
 using System.Reflection;
@@ -7,14 +7,16 @@ namespace ResearchRequirements
 {
     public class ResearchRequirements_Patches
     {
-        public static class Mod_OnLoad
+        public class Mod_OnLoad : KMod.UserMod2
         {
-            public static void OnLoad()
+            public override void OnLoad(Harmony harmony)
             {
+                base.OnLoad(harmony);
+
                 GVD.VersionAlert(DlcManager.IsExpansion1Active());
-                Debug.Log("ResearchRequirements: Loaded DLC version of the mod. Last update: 2021.05.14 for build 463874.");
-                //Debug.Log("ResearchRequirements: Loaded Vanilla version of the mod. Last update: 2021.05.14 for build 460672.");
-                Debug.Log("ResearchRequirements: Loaded from: " + Assembly.GetExecutingAssembly().Location);
+                Debug.Log($"{GetType().Namespace}: Loaded from: {this.mod.ContentPath}");
+                Debug.Log($"{GetType().Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
+                            $"supporting game build {this.mod.packagedModInfo.lastWorkingBuild} ({this.mod.packagedModInfo.supportedContent})");
             }
         }
 
@@ -41,10 +43,10 @@ namespace ResearchRequirements
         {
             public static void Postfix(ResearchCenter __instance)
             {
-                GVD.VersionAlert(false);
+                GVD.VersionAlert(true);
                 /*
                  * Works vor vanilla
-                 * */
+                 * 
                 TechInstance activeResearch = Research.Instance.GetActiveResearch();
                 Tech tech = activeResearch.tech;
                 TechRequirements.TechReq req = TechRequirements.Instance.GetTechReq(tech.Id);
@@ -57,11 +59,11 @@ namespace ResearchRequirements
                         researchScreen.CancelResearch();
                         Research.Instance.SetActiveResearch(null, true);
                     }
-                
+                */
 
                 /*
                  * Works vor DLC
-                 * 
+                 * */
                 TechInstance activeResearch = Research.Instance.GetActiveResearch();
                 Tech tech = activeResearch.tech;
                 TechRequirements.TechReq req = TechRequirements.Instance.GetTechReq(tech.Id);
@@ -77,7 +79,7 @@ namespace ResearchRequirements
                         Research.Instance.SetActiveResearch(null, true);
                         Debug.Log("ResearchRequirements: research canceled");
                     }
-                */
+                
             }
         }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Harmony;
+using HarmonyLib;
 using UnityEngine;
 
 namespace ResearchRequirements
@@ -286,14 +286,15 @@ namespace ResearchRequirements
 
         public static float Resources(Tag tag)
         {
-            GVD.VersionAlert(false);
+            GVD.VersionAlert(true);
             // Works for DLC
-            /* 
+            /* */
             if(ClusterManager.Instance.GetAllWorldsAccessibleAmounts().ContainsKey(tag))
                 return ClusterManager.Instance.GetAllWorldsAccessibleAmounts()[tag];
-            return 0;*/
-            // Works for vanilla
-            return WorldInventory.Instance.GetTotalAmount(tag);
+            return 0;
+            // Works for vanilla 
+            /*
+            return WorldInventory.Instance.GetTotalAmount(tag);*/
         }
 
         public static float DailyReport_Average(ReportManager.ReportType entryType)
@@ -391,11 +392,11 @@ namespace ResearchRequirements
 
         public static int WorldsWithBeds()
         {
-            GVD.VersionAlert(false);
+            GVD.VersionAlert(true);
             // Vanilla - default return
-            return 0;
+            //return 0;
             // DLC only code
-            /*
+            /**/
             List<int> UniqueWorldIds = new List<int>();
             foreach (Sleepable sleepable in Components.Sleepables)
                 if (!UniqueWorldIds.Contains(sleepable.GetMyWorldId()) && !sleepable.GetMyWorld().IsModuleInterior)
@@ -404,16 +405,16 @@ namespace ResearchRequirements
             foreach (int i in UniqueWorldIds)
                 Debug.Log($"Unique sleepable world: {i}");
 
-            return UniqueWorldIds.Count;*/
+            return UniqueWorldIds.Count;
         }
 
         public static int RevealedSpaceHexes(int radiusMin, int radiusMax)
         {
-            GVD.VersionAlert(false);
+            GVD.VersionAlert(true);
             // Vanilla - default return
-            return 0;
+            //return 0;
             // DLC only code
-            /*
+            /**/
             int count = 0;
             ClusterFogOfWarManager.Instance smi = SaveGame.Instance.GetSMI<ClusterFogOfWarManager.Instance>();
             if (smi == null)
@@ -446,7 +447,7 @@ namespace ResearchRequirements
                 if (smi.IsLocationRevealed(hex))
                     count++;
 
-            return count;*/
+            return count;
         }
 
         public static int DuplicantsWithMorale(int morale)
