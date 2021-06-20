@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using UnityEngine;
 using System.Collections.Generic;
 
@@ -6,11 +6,15 @@ namespace RocketPresenceAutomationPort
 {
     public class RocketPresenceAutomationPort_Patches
     {
-        public static class Mod_OnLoad
+        public class Mod_OnLoad : KMod.UserMod2
         {
-            public static void OnLoad()
+            public override void OnLoad(Harmony harmony)
             {
-                //Debug.Log("RocketPresenceAutomationPort: Mod version updated for 452481 DLC build. Last mod update: 2021.02.21");
+                base.OnLoad(harmony);
+
+                Debug.Log($"{GetType().Namespace}: Loaded from: {this.mod.ContentPath}");
+                Debug.Log($"{GetType().Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
+                            $"supporting game build {this.mod.packagedModInfo.lastWorkingBuild} ({this.mod.packagedModInfo.supportedContent})");
             }
         }
 
