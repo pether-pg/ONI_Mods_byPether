@@ -15,8 +15,8 @@ namespace IlluminationSensor
         public static void AddToTech(string tech, string id)
         {
             // worked on vanilla 445739, 460672
-            var techList = new List<string>(Database.Techs.TECH_GROUPING[tech]) { id };
-            Database.Techs.TECH_GROUPING[tech] = techList.ToArray();
+            //var techList = new List<string>(Database.Techs.TECH_GROUPING[tech]) { id };
+            //Database.Techs.TECH_GROUPING[tech] = techList.ToArray();
         }
     }
 }

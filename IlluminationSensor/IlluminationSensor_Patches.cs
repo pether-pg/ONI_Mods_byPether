@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using UnityEngine;
 using System.Collections.Generic;
 using STRINGS;
@@ -6,15 +6,16 @@ using TUNING;
 
 namespace IlluminationSensor
 {
-    public class IlluminationSensor_Patches
-    {
-		public static class Mod_OnLoad
-        {
-            public static void OnLoad()
-			{
-				//Debug.Log("IlluminationSensor: Loaded version of the mod for Vanilla buid 460672. Last update: 24.04.2021");
-			}
-        }
+    public class IlluminationSensor_Patches : KMod.UserMod2
+	{
+		public override void OnLoad(Harmony harmony)
+		{
+			base.OnLoad(harmony);
+
+			Debug.Log($"{GetType().Namespace}: Loaded from: {this.mod.ContentPath}");
+			Debug.Log($"{GetType().Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
+				$"supporting game version {this.mod.packagedModInfo.supportedContent}, build {this.mod.packagedModInfo.lastWorkingBuild}");
+		}
 
 		[HarmonyPatch(typeof(GeneratedBuildings))]
 		[HarmonyPatch(nameof(GeneratedBuildings.LoadGeneratedBuildings))]
@@ -31,7 +32,7 @@ namespace IlluminationSensor
 			}
 		}
 
-		
+		/*
 		[HarmonyPatch(typeof(Db))]
 		[HarmonyPatch("Initialize")]
 		public static class Db_Initialize_Patch
@@ -39,11 +40,11 @@ namespace IlluminationSensor
 			public static void Prefix()
 			{
 				// for vanilla version
-				BasicModUtils.AddToTech("GenericSensors", LogicIlluminationSensorConfig.ID);
+				//BasicModUtils.AddToTech("GenericSensors", LogicIlluminationSensorConfig.ID);
 			}
-		}
+		}*/
 
-		/*
+		/**/
 		[HarmonyPatch(typeof(Database.Techs))]
 		[HarmonyPatch("Init")]
 		public static class Techs_Init_Patch
@@ -54,6 +55,6 @@ namespace IlluminationSensor
 				Tech tech = __instance.TryGet("GenericSensors");
 				tech.unlockedItemIDs.Add(LogicIlluminationSensorConfig.ID);
 			}
-		}*/
+		}
 	}
 }
