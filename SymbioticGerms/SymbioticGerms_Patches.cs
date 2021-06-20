@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using UnityEngine;
 using System.Collections.Generic;
 using System;
@@ -7,13 +7,6 @@ namespace SymbioticGerms
 {
     public class SymbioticGerms_Patches
     {
-        public static class Mod_OnLoad
-        {
-            public static void OnLoad()
-            {
-            }
-        }
-
         [HarmonyPatch(typeof(CreatureCalorieMonitor.Instance))]
         [HarmonyPatch("Poop")]
         public class CreatureCalorieMonitor_Poop_Patch
@@ -36,8 +29,8 @@ namespace SymbioticGerms
         }
 
         [HarmonyPatch(typeof(Crop))]
-        [HarmonyPatch("SpawnFruit")] // vanilla
-        //[HarmonyPatch("SpawnSomeFruit")] // dlc
+        //[HarmonyPatch("SpawnFruit")] // vanilla
+        [HarmonyPatch("SpawnSomeFruit")] // dlc
         public class Crop_SpawnFruit_Patch
         {
 
