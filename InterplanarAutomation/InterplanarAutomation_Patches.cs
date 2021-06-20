@@ -7,9 +7,11 @@ namespace InterplanarAutomation
     {
         public override void OnLoad(Harmony harmony)
         {
+            base.OnLoad(harmony);
+
             Debug.Log($"{GetType().Namespace}: Loaded from: {this.mod.ContentPath}");
             Debug.Log($"{GetType().Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
-                $"build for {this.mod.packagedModInfo.supportedContent}, version {this.mod.packagedModInfo.lastWorkingBuild}");
+                        $"supporting game build {this.mod.packagedModInfo.lastWorkingBuild} ({this.mod.packagedModInfo.supportedContent})");
         }
 
         [HarmonyPatch(typeof(GeneratedBuildings))]

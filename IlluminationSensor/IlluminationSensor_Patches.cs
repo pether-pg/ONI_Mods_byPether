@@ -14,7 +14,7 @@ namespace IlluminationSensor
 
 			Debug.Log($"{GetType().Namespace}: Loaded from: {this.mod.ContentPath}");
 			Debug.Log($"{GetType().Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
-				$"supporting game version {this.mod.packagedModInfo.supportedContent}, build {this.mod.packagedModInfo.lastWorkingBuild}");
+						$"supporting game build {this.mod.packagedModInfo.lastWorkingBuild} ({this.mod.packagedModInfo.supportedContent})");
 		}
 
 		[HarmonyPatch(typeof(GeneratedBuildings))]
