@@ -1,15 +1,15 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using UnityEngine;
 
 namespace InterplanarAutomation
 {
-    public class InterplanarAutomation_Patches
+    public class InterplanarAutomation_Patches : KMod.UserMod2
     {
-        public static class Mod_OnLoad
+        public override void OnLoad(Harmony harmony)
         {
-            public static void OnLoad()
-            {
-            }
+            Debug.Log($"{GetType().Namespace}: Loaded from: {this.mod.ContentPath}");
+            Debug.Log($"{GetType().Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
+                $"build for {this.mod.packagedModInfo.supportedContent}, version {this.mod.packagedModInfo.lastWorkingBuild}");
         }
 
         [HarmonyPatch(typeof(GeneratedBuildings))]
