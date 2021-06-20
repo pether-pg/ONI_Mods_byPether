@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Reflection;
@@ -8,13 +8,6 @@ namespace ConveyorRailDisplay
 {
     public class ConveyorRailDisplay_Patches
     {
-        public static class Mod_OnLoad
-        {
-            public static void OnLoad()
-            {
-            }
-        }
-
         public static bool IsLayerOn = false;
 
         public static Dictionary<SaveLoadRoot, float> InitialZValues = new Dictionary<SaveLoadRoot, float>();
