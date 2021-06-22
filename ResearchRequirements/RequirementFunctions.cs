@@ -150,7 +150,7 @@ namespace ResearchRequirements
             foreach (MinionResume resume in Components.MinionResumes)
             {
                 if (resume.gameObject.GetComponent<Snorer>() != null
-                    || resume.gameObject.GetComponent<Stinky>() != null)
+                    || resume.gameObject.GetComponent<Flatulence>() != null)
                     count++;
             }
             return count;
