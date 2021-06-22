@@ -20,14 +20,14 @@ namespace ResearchRequirements
             public static LocString AGRICULTURE                 = (LocString)"Have Duplicants with \"Crop Tending\" skill: {0}";
             public static LocString RANCHING                    = (LocString)"Have Duplicant with \"Critter Ranching\" skill: {0}";
             public static LocString ANIMAL_CONTROL              = (LocString)"Domesticate Critters: {0}";
-            public static LocString IMPROVED_OXYGEN             = (LocString)"Daily Oxygen consuption: {0} kg";
+            public static LocString IMPROVED_OXYGEN             = (LocString)"Daily Oxygen consumption: {0} kg";
             public static LocString GAS_PIPING                  = (LocString)"Daily Oxygen production: {0} kg";
             public static LocString IMPROVED_GAS_PIPING         = (LocString)"Have Duplicants suffering from Popped Ear Drums: {0} %";
             public static LocString PRESSURE_MANAGER            = (LocString)"{0}";
             public static LocString DIRECTED_AIR_STREAMS        = (LocString)"Have your beds and toilets exposed to other gases than Oxygen: {0} %";
             public static LocString LIQUID_FILTERING            = (LocString)"Store Salt Water and/or Brine: {0} liters";
             public static LocString MEDICINE_I                  = (LocString)"Have Duplicant suffering from Allergies or Food Poisoning: {0}";
-            public static LocString MEDICINE_II                 = (LocString)"Have Duplicant suffering from Slimeling: {0}";
+            public static LocString MEDICINE_II                 = (LocString)"Have Duplicant suffering from Slimelung: {0}";
             public static LocString MEDICINE_III                = (LocString)"Have Duplicant with \"Advanced Medical Care\" skill: {0}";
             public static LocString MEDICINE_IV                 = (LocString)"Have Duplicant suffering from Zombie Sickness: {0}";
             public static LocString LIQUID_PIPING               = (LocString)"Have Duplicant interested with Tidying: {0}";
@@ -47,7 +47,7 @@ namespace ResearchRequirements
             public static LocString INTERIOR_DECOR              = (LocString)"Researchable only at night: {0}";
             public static LocString ARTISTRY                    = (LocString)"Have Duplicant with \"Art Fundamentals\" skill: {0}";
             public static LocString CLOTHING                    = (LocString)"Gather Fiber: {0}";
-            public static LocString ACOUSTICS                   = (LocString)"Have one Snoring of Farting Duplicant: {0}";
+            public static LocString ACOUSTICS                   = (LocString)"Have one Snoring or Farting Duplicant: {0}";
             public static LocString FINE_ART                    = (LocString)"Have Duplicants with \"Aesthetic Design\" skill: {0}";
             public static LocString ENVIRONMENTAL_APPRECIATION  = (LocString)"Have Duplicant suffering from Sunburn: {0}";
             public static LocString LUXURY                      = (LocString)"Gather Plastic: {0} kg";
@@ -78,7 +78,7 @@ namespace ResearchRequirements
             public static LocString SKY_DETECTORS               = (LocString)"Complete \"Home Sweet Home\" quest: {0}";
             public static LocString TRAVEL_TUBES                = (LocString)"Daily time spent traveling: {0} %";
             public static LocString SMART_STORAGE               = (LocString)"Have Duplicant with \"Improved Carrying II\" skill: {0}"; 
-            public static LocString SOLID_TRANSPORT             = (LocString)"Have Duplicant with high Strenght attribute: {0}";
+            public static LocString SOLID_TRANSPORT             = (LocString)"Have Duplicant with high Strength attribute: {0}";
             public static LocString SOLID_MANAGEMENT            = (LocString)"{0}";
             public static LocString BASIC_ROCKETRY              = (LocString)"Analyse planets: {0}";
             public static LocString JETPACKS                    = (LocString)"Control Slicksters: {0}";
@@ -96,7 +96,7 @@ namespace ResearchRequirements
             public static LocString GAS_DISTRIBUTION            = (LocString)"Have Senior Pilot with Mouth Breather trait: {0}";
             public static LocString ADVANCED_SCANNERS           = (LocString)"Scan deep space hexes (at least 3 tiles away from your asteroids): {0}";
             public static LocString SOLID_DISTRIBUTION          = (LocString)"Have Senior Pilot with Bottomless Stomach trait: {0}";
-            public static LocString NUCLEAR_RESEARCH            = (LocString)"Research 45 technologies: {0}";
+            public static LocString NUCLEAR_RESEARCH            = (LocString)"Research technologies: {0}";
             public static LocString RADIATION_PROTECTION        = (LocString)"Have Duplicant suffering from Radiation Sickness: {0}";
             public static LocString MONUMENTS                   = (LocString)"Have Duplicants with 16 morale: {0}";
             public static LocString ADVANCED_SANITATION         = (LocString)"TBD: {0}";
