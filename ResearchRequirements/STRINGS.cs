@@ -96,7 +96,7 @@ namespace ResearchRequirements
             public static LocString GAS_DISTRIBUTION            = (LocString)"Have Senior Pilot with Mouth Breather trait: {0}";
             public static LocString ADVANCED_SCANNERS           = (LocString)"Scan deep space hexes (at least 3 tiles away from your asteroids): {0}";
             public static LocString SOLID_DISTRIBUTION          = (LocString)"Have Senior Pilot with Bottomless Stomach trait: {0}";
-            public static LocString NUCLEAR_RESEARCH            = (LocString)"Research 50 technologies: {0}";
+            public static LocString NUCLEAR_RESEARCH            = (LocString)"Research technologies: {0}";
             public static LocString RADIATION_PROTECTION        = (LocString)"Have Duplicant suffering from Radiation Sickness: {0}";
             public static LocString MONUMENTS                   = (LocString)"Have Duplicants with 16 morale: {0}";
             public static LocString ADVANCED_SANITATION         = (LocString)"TBD: {0}";
