@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using Database;
 using System;
 using UnityEngine;
@@ -14,15 +14,15 @@ namespace RoomsExpanded
 {
     public class RoomsExpanded_Patches
     {
-        public static class Mod_OnLoad
-        {             
-            public static void OnLoad()
+        public class Mod_OnLoad : KMod.UserMod2
+        {
+            public override void OnLoad(Harmony harmony)
             {
-                PUtil.InitLibrary();
-                POptions.RegisterOptions(typeof(Settings));
-                Settings.PLib_Initalize();
+                //PUtil.InitLibrary();
+                //POptions.RegisterOptions(typeof(Settings));
+                //Settings.PLib_Initalize();
 
-                //ModInfo.Initalize(ModInfo.GetAssemblyVersion(), true, 464434);
+                ModInfo.Initalize(ModInfo.GetAssemblyVersion(), true, 464434);
                 ModInfo.Instance.VersionAlert(DlcManager.IsExpansion1Active(), "OnLoad() version check");
                 ModInfo.Instance.LogDetails();
             }
@@ -43,7 +43,8 @@ namespace RoomsExpanded
                 // This way of patching RoomTypes constructor is required not to lock english translations in.
                 // Credit to Peter Han and asquared314 for helping me with this way of patching.
 
-                HarmonyInstance harmony = HarmonyInstance.Create("pether.mods.oxygen-not-included.rooms-expanded");
+                Harmony harmony = new Harmony("pether-pg.RoomsExpanded");
+                Debug.Log("RoomsExpanded: Trying to get RoomTypes type...");
                 Type roomTypesType = Type.GetType("Database.RoomTypes, Assembly-CSharp", false);
                 if (roomTypesType == null)
                 {
