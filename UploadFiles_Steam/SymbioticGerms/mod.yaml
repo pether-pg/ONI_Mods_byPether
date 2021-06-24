@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Symbiotic Germs" 
+# currently unused, but may be someday
+description: "Encourages players to risk germs exposure by giving them additional, positive effects." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.SymbioticGerms" 
