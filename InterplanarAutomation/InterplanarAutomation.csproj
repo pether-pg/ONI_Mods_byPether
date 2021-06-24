@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>InterplanarAutomation</RootNamespace>
     <AssemblyName>InterplanarAutomation</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -56,6 +56,7 @@
     <Compile Include="BasicModUtils.cs" />
     <Compile Include="LogicRibbonWarpBridge.cs" />
     <Compile Include="InterplanarAutomation_Patches.cs" />
+    <Compile Include="ModInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RadioEther.cs" />
     <Compile Include="RadioTower.cs" />

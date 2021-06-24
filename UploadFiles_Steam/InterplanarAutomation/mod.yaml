@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[DLC] Interplanar Automation" 
+# currently unused, but may be someday
+description: "Allows to send logic signal between asteroids: Adds Logic Ribbon ports to the Warp Conduits and Radio Tower buildings." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.InterplanarAutomation" 
