@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Research Requirements" 
+# currently unused, but may be someday
+description: "Enhances Techs with requirements that must be unlocked before the tech can be research, as a result slowing down the speed of the tech unlocking." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.ResearchRequirements" 

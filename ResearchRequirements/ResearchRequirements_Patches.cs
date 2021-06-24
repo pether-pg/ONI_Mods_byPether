@@ -7,19 +7,6 @@ namespace ResearchRequirements
 {
     public class ResearchRequirements_Patches
     {
-        public class Mod_OnLoad : KMod.UserMod2
-        {
-            public override void OnLoad(Harmony harmony)
-            {
-                base.OnLoad(harmony);
-
-                GVD.VersionAlert(DlcManager.IsExpansion1Active());
-                Debug.Log($"{GetType().Namespace}: Loaded from: {this.mod.ContentPath}");
-                Debug.Log($"{GetType().Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
-                            $"supporting game build {this.mod.packagedModInfo.lastWorkingBuild} ({this.mod.packagedModInfo.supportedContent})");
-            }
-        }
-
         [HarmonyPatch(typeof(Research))]
         [HarmonyPatch("SetActiveResearch")]
         public class Research_SetActiveResearch_Patch
