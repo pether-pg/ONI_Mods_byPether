@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Illumination Sensor" 
+# currently unused, but may be someday
+description: "Adds Illumination Sensor building that allows you to send logic signals based on light presence." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.IlluminationSensor" 

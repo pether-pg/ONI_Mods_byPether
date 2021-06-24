@@ -6,17 +6,8 @@ using TUNING;
 
 namespace IlluminationSensor
 {
-    public class IlluminationSensor_Patches : KMod.UserMod2
+    public class IlluminationSensor_Patches
 	{
-		public override void OnLoad(Harmony harmony)
-		{
-			base.OnLoad(harmony);
-
-			Debug.Log($"{GetType().Namespace}: Loaded from: {this.mod.ContentPath}");
-			Debug.Log($"{GetType().Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
-						$"supporting game build {this.mod.packagedModInfo.lastWorkingBuild} ({this.mod.packagedModInfo.supportedContent})");
-		}
-
 		[HarmonyPatch(typeof(GeneratedBuildings))]
 		[HarmonyPatch(nameof(GeneratedBuildings.LoadGeneratedBuildings))]
 		public static class GeneratedBuildings_LoadGeneratedBuildings_Patch

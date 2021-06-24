@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included"
+"POT Version: 2.0"
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.DESCRIPTION
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.DESCRIPTION"
+msgid "Illumination sensors can turn additional light sources on when the surrounding is too dim."
+msgstr ""
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.EFFECT
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.EFFECT"
+msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> or a <b><style=\"logic_off\">Red Signal</style></b> when <link=\"LIGHT\">Illumination</link> enters the chosen range."
+msgstr ""
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT"
+msgid "Surrounding<link=\"LIGHT\">Illumination</link>"
+msgstr ""
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_ACTIVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_ACTIVE"
+msgid "Sends a <b><style=\"logic_on\">Green Signal</style></b> if <link=\"LIGHT\">Illumination</link> is within the selected range"
+msgstr ""
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_INACTIVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.LOGIC_PORT_INACTIVE"
+msgid "Otherwise, sends a <b><style=\"logic_off\">Red Signal</style></b>"
+msgstr ""
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.NAME
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.NAME"
+msgid "Illumination Sensor"
+msgstr ""
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_ABOVE
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_ABOVE"
+msgid "Will send a <b><style=\"logic_on\">Green Signal</style></b> if the <style=\"KKeyword\">Illumination</style> is above <b>{0} Lux</b>"
+msgstr ""
+
+#. IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_BELOW
+msgctxt "IlluminationSensor.STRINGS.ILLUMINATIONSENSOR.TOOLTIP_PATTERN_BELOW"
+msgid "Will send a <b><style=\"logic_on\">Green Signal</style></b> if the <style=\"KKeyword\">Illumination</style> is below <b>{0} Lux</b>"
+msgstr ""
+
+#. IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "IlluminationSensor.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr ""
+
