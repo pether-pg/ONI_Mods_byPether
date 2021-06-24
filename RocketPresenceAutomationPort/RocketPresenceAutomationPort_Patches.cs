@@ -6,18 +6,6 @@ namespace RocketPresenceAutomationPort
 {
     public class RocketPresenceAutomationPort_Patches
     {
-        public class Mod_OnLoad : KMod.UserMod2
-        {
-            public override void OnLoad(Harmony harmony)
-            {
-                base.OnLoad(harmony);
-
-                Debug.Log($"{GetType().Namespace}: Loaded from: {this.mod.ContentPath}");
-                Debug.Log($"{GetType().Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
-                            $"supporting game build {this.mod.packagedModInfo.lastWorkingBuild} ({this.mod.packagedModInfo.supportedContent})");
-            }
-        }
-
         private static void AddLogicPort(ref BuildingDef result, bool smallEngine = false)
         {
             result.LogicOutputPorts = new List<LogicPorts.Port>();
