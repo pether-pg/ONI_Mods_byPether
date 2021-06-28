@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("InterplanarAutomation")]
+[assembly: AssemblyTitle("FreeSkillpoints")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("InterplanarAutomation")]
+[assembly: AssemblyProduct("FreeSkillpoints")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2c468998-706a-4cc7-a5af-b7d4f702e54f")]
+[assembly: Guid("a10cb788-41b2-4c26-add2-627d6e1651cb")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2021.6.25.2336")]
-[assembly: AssemblyFileVersion("2021.6.25.2336")]
+[assembly: AssemblyVersion("2021.6.28.1704")]
+[assembly: AssemblyFileVersion("2021.6.28.1704")]
