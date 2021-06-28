@@ -6,29 +6,13 @@ using System.Collections;
 using System.Collections.Generic;
 using STRINGS;
 using System.Reflection;
-using PeterHan.PLib;
-using PeterHan.PLib.Options;
+
 
 
 namespace RoomsExpanded
 {
     public class RoomsExpanded_Patches
     {
-        public class Mod_OnLoad : KMod.UserMod2
-        {
-            public override void OnLoad(Harmony harmony)
-            {
-                //PUtil.InitLibrary();
-                //POptions.RegisterOptions(typeof(Settings));
-                //Settings.PLib_Initalize();
-
-                ModInfo.Initalize(ModInfo.GetAssemblyVersion(), true, 464434);
-                ModInfo.Instance.VersionAlert(DlcManager.IsExpansion1Active(), "OnLoad() version check");
-                ModInfo.Instance.LogDetails();
-            }
-        }
-
-
         [HarmonyPatch(typeof(Db))]
         [HarmonyPatch("Initialize")]
         public class Db_Initialize_Patch

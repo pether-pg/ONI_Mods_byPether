@@ -56,8 +56,8 @@ namespace RoomsExpanded
                 MaxSize = max;
             }
         }
-
-            private static Settings _instance = null;
+            
+        private static Settings _instance = null;
         public static Settings Instance
         {
             get 
@@ -108,55 +108,55 @@ namespace RoomsExpanded
         public string EnforcedLanguage { get; set; }
 
         [JsonProperty]
-        [Option("Laboratory")]
+        [Option("Laboratory", category: "New Room - Laboratory")]
         public RoomSettings Laboratory { get; set; }
 
         [JsonProperty]
-        [Option("Kitchen")]
+        [Option("Kitchen", category: "New Room - Kitchen")]
         public RoomSettings Kitchen { get; set; }
 
         [JsonProperty]
-        [Option("Bathroom")]
+        [Option("Bathroom", category: "New Room - Shower Room")]
         public RoomSettings Bathroom { get; set; }
 
         [JsonProperty]
-        [Option("Industrial")]
+        [Option("Industrial", category: "New Room - Industrial Room")]
         public PlainRoomSettings Industrial { get; set; }
 
         [JsonProperty]
-        [Option("Graveyard")]
+        [Option("Graveyard", category: "New Room - Graveyard")]
         public RoomSettings Graveyard { get; set; }
 
         [JsonProperty]
-        [Option("Agricultural")]
+        [Option("Agricultural", category: "New Room - Agricultural")]
         public PlainRoomSettings Agricultural { get; set; }
 
         [JsonProperty]
-        [Option("Gym")]
+        [Option("Gym", category: "New Room - Gym")]
         public RoomSettings Gym { get; set; }
 
         [JsonProperty]
-        [Option("Nursery")]
+        [Option("Nursery", category: "New Room - Plant Nursery")]
         public RoomSettings Nursery { get; set; }
 
         [JsonProperty]
-        [Option("Aquarium")]
+        [Option("Aquarium", category: "New Room - Aquarium")]
         public RoomSettings Aquarium { get; set; }
 
         [JsonProperty]
-        [Option("Botanical Garden")]
+        [Option("Botanical Garden", category: "New Room - Botanical Garden")]
         public PlainRoomSettings Botanical { get; set; }
 
         [JsonProperty]
-        [Option("Museum")]
+        [Option("Museum", category: "New Room - Museum")]
         public RoomSettings Museum { get; set; }
 
         [JsonProperty]
-        [Option("Hospital Update")]
+        [Option("Hospital Update", category: "Room Modification - Hospital")]
         public PlainRoomSettings HospitalUpdate { get; set; }
 
         [JsonProperty]
-        [Option("Private Bedroom")]
+        [Option("Private Bedroom", category: "New Room - Private Bedroom")]
         public PlainRoomSettings PrivateBedroom { get; set; }
 
         [JsonProperty]
@@ -181,7 +181,7 @@ namespace RoomsExpanded
 
         public static void PLib_Initalize()
         {
-            _instance = POptions.ReadSettingsForAssembly<Settings>();
+            _instance = POptions.ReadSettings<Settings>();
         }
     }
 }

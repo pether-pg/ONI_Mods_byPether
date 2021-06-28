@@ -30,7 +30,7 @@ namespace RoomsExpanded
                     mass_consumed *= (1 + Settings.Instance.Laboratory.Bonus.Value);
             }
         }
-        /*
+        
         [HarmonyPatch(typeof(NuclearResearchCenterWorkable))]
         [HarmonyPatch("OnWorkTick")]
         public static class NuclearResearchCenterWorkable_OnWorkTick_Patch
@@ -67,7 +67,7 @@ namespace RoomsExpanded
                 if (!Settings.Instance.Laboratory.IncludeRoom) return;
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraints.ConstraintTags.ResearchStation);
             }
-        }*/
+        }
 
         // Virtual Planetarium (vanilla)
         [HarmonyPatch(typeof(CosmicResearchCenterConfig))]
