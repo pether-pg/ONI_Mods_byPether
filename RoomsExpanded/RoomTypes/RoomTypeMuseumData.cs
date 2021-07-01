@@ -27,14 +27,16 @@ namespace RoomsExpanded
                                                                         (Func<Room, bool>) (room => 
                                                                         {
                                                                             int count = 0;
-                                                                            foreach(KPrefabID building in room.buildings)
-                                                                            {
-                                                                                Artable art = building.GetComponent<Artable>();
-                                                                                if(art == null)
-                                                                                    continue;
-                                                                                if(art.CurrentStatus == Artable.Status.Great)
-                                                                                    count ++;
-                                                                            }
+                                                                            if(room != null)
+                                                                                foreach(KPrefabID building in room.buildings)
+                                                                                    if(building != null)
+                                                                                    {
+                                                                                        Artable art = building.GetComponent<Artable>();
+                                                                                        if(art == null)
+                                                                                            continue;
+                                                                                        if(art.CurrentStatus == Artable.Status.Great)
+                                                                                            count ++;
+                                                                                    }
                                                                             return count >= requiredMasterpieces; 
                                                                         }),
                                                                         name: string.Format(STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME, requiredMasterpieces),
