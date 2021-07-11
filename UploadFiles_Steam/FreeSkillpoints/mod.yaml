@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Free Skillpoints" 
+# currently unused, but may be someday
+description: "Ensures you always have enough experience for all those skills you need." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.FreeSkillpoints" 

@@ -561,3 +561,5 @@ packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/System.Runtime.
 packages/System.Runtime.InteropServices.RuntimeInformation.4.3.0/ThirdPartyNotices.txt
 RoomsExpanded/bin/Release/UnityEngine.InputLegacyModule.dll
 RoomsExpanded/bin/Release/UnityEngine.UnityWebRequestModule.dll
+FreeSkillpoints/bin/Release/Newtonsoft.Json.dll
+FreeSkillpoints/bin/Release/Newtonsoft.Json.xml
