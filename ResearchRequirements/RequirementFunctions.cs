@@ -286,7 +286,7 @@ namespace ResearchRequirements
 
         public static float Resources(Tag tag)
         {
-            GVD.VersionAlert(true);
+            GVD.VersionAlert(false);
             // Works for DLC
             /* */
             if(ClusterManager.Instance.GetAllWorldsAccessibleAmounts().ContainsKey(tag))
@@ -392,7 +392,7 @@ namespace ResearchRequirements
 
         public static int WorldsWithBeds()
         {
-            GVD.VersionAlert(true);
+            GVD.VersionAlert(false);
             // Vanilla - default return
             //return 0;
             // DLC only code
@@ -410,7 +410,7 @@ namespace ResearchRequirements
 
         public static int RevealedSpaceHexes(int radiusMin, int radiusMax)
         {
-            GVD.VersionAlert(true);
+            GVD.VersionAlert(false);
             // Vanilla - default return
             //return 0;
             // DLC only code

@@ -30,7 +30,7 @@ namespace ResearchRequirements
         {
             public static void Postfix(ResearchCenter __instance)
             {
-                GVD.VersionAlert(true);
+                GVD.VersionAlert(false);
                 /*
                  * Works vor vanilla
                  * 
