@@ -23,6 +23,16 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME"
 msgid "Grooming or Farm Station"
 msgstr "동물 단장 작업대 또는 농장 작업대"
 
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.DESCRIPTION"
+msgid "One Cott or Luxury Bed."
+msgstr "간이 침대 또는 편안한 침대."
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME"
+msgid "Any bed"
+msgstr "침대 종류"
+
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.DESCRIPTION"
 msgid "At least one Microbe Musher, Electric Grill or Gas Range."
@@ -153,6 +163,26 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILTING.NAME"
 msgid "No Wilting Plants"
 msgstr "시든 식물 없음"
 
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.DESCRIPTION"
+msgid "The room cannot have more than one shower, sink or toilet."
+msgstr "그 방은 샤워기, 세면기 또는 화장실을 하나씩만 둘 수 있습니다."
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME"
+msgid "No more than one bathroom set."
+msgstr "화장실 세트는 하나여야만 함."
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.DESCRIPTION"
+msgid "The room cannot have more than one bed."
+msgstr "그 방은 침대를 하나만 둘 수 있습니다."
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME"
+msgid "No more than one bed."
+msgstr "침대는 하나여야만 함."
+
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION"
 msgid "At least {0} Paintings of different type."
@@ -263,6 +293,16 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME"
 msgid "Graveyard Serenity"
 msgstr "평온한 묘지"
 
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.LUXURYPRIVATEROOM.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.LUXURYPRIVATEROOM.DESCRIPTION"
+msgid "This Duplicant slept in their Luxury Private Bedroom."
+msgstr "이 듀플리칸트는 고급 개인 침실에서 잠을 잤습니다."
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.LUXURYPRIVATEROOM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.LUXURYPRIVATEROOM.NAME"
+msgid "Luxury Private Bedroom"
+msgstr "고급 개인 침실"
+
 #. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION"
 msgid "Visited Museum"
@@ -272,6 +312,26 @@ msgstr "박물관을 방문함"
 msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME"
 msgid "Museum"
 msgstr "박물관"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.DESCRIPTION"
+msgid "This Duplicant visited their Private Bathroom."
+msgstr "이 듀플리칸트는 개인 침실에 방문했습니다."
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.NAME"
+msgid "Private Bathroom"
+msgstr "개인 침실"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEROOM.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEROOM.DESCRIPTION"
+msgid "This Duplicant slept in their Private Bedroom."
+msgstr "이 듀플리칸트는 개인 침실에서 잠을 잤습니다."
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEROOM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEROOM.NAME"
+msgid "Private Bedroom"
+msgstr "개인 침실"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT"
@@ -422,6 +482,22 @@ msgstr "재배실"
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.TOOLTIP"
 msgid "Enriched environment improves plant development."
 msgstr "좋은 환경은 식물 성장에 도움을 줍니다."
+
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT"
+msgid " - Morale bonus"
+msgstr " - 사기 보너스"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.NAME"
+msgid "Private Bedroom"
+msgstr "개인 침실"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.TOOLTIP"
+msgid "For duplicants who want to have some privacy."
+msgstr "프라이버시를 가지길 원하는 듀플리칸트들을 위하여."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT"
