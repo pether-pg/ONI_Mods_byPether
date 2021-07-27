@@ -33,7 +33,7 @@ namespace InterplanarAutomation
             EffectorValues none = TUNING.NOISE_POLLUTION.NONE;
             EffectorValues tier4 = TUNING.BUILDINGS.DECOR.PENALTY.TIER4;
             EffectorValues noise = none;
-            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, 2, 4, "meteor_detector_kanim", 30, 30f, tier6, refinedMetals, 1600f, BuildLocationRule.OnFloor, tier4, noise);
+            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, 2, 4, "radio_tower_kanim", 30, 30f, tier6, refinedMetals, 1600f, BuildLocationRule.OnFloor, tier4, noise);
             buildingDef.Overheatable = false;
             buildingDef.Floodable = true;
             buildingDef.Entombable = true;

@@ -8,6 +8,35 @@ namespace InterplanarAutomation
     class RadioTower : KMonoBehaviour, ISim200ms
     {
         private static readonly Operational.Flag visibleSkyFlag = new Operational.Flag("VisibleSky", Operational.Flag.Type.Requirement);
+        int blinkingCounter = 0;
+        int framesPerBlink = 2;
+        int maxBlinkingCounter = 2 * 3;
+        string message = ".--./.-.././.-/..././/..././-./-..//---/-..-/-.--/--././-.///"; //please send oxygen
+        List<bool> messageSignals = null;
+
+        private void GenerateMorseSignals(string morseCode)
+        {
+            messageSignals = new List<bool>();
+            for(int i=0; i< morseCode.Length; i++)
+                switch (morseCode[i])
+                {
+                    case '.':
+                        messageSignals.Add(true);
+                        messageSignals.Add(false);
+                        break;
+                    case '-':
+                        messageSignals.Add(true);
+                        messageSignals.Add(true);
+                        messageSignals.Add(true);
+                        messageSignals.Add(false);
+                        break;
+                    case '/':
+                        messageSignals.Add(false);
+                        messageSignals.Add(false);
+                        messageSignals.Add(false);
+                        break;
+                }
+        }
 
         public bool CheckSunExposition(int radius = 2)
         {
@@ -24,14 +53,36 @@ namespace InterplanarAutomation
 
         public void ScanEther()
         {
+            KPrefabID component = this.GetComponent<KPrefabID>();
             EnergyConsumer consumer = this.gameObject.GetComponent<EnergyConsumer>();
             Operational operational = this.gameObject.GetComponent<Operational>();
-            if (consumer == null || operational == null)
+            KBatchedAnimController bac = this.GetComponent<KBatchedAnimController>();
+            if (consumer == null || operational == null || component == null)
                 return;
 
+            if (messageSignals == null || messageSignals.Count() == 0)
+                GenerateMorseSignals(message);
+
             int signal = 0;
-            if (consumer.IsPowered && operational.IsOperational)
-                signal = RadioEther.Instance.GetSignal();
+            if (consumer.IsPowered)
+            {
+                if (CheckSunExposition())
+                {
+                    component.AddTag(GameTags.Detecting);
+                    signal = RadioEther.Instance.GetSignal();
+                    bool[] signalBits = new bool[4] { (signal & 1) > 0, (signal & 2) > 0, (signal & 4) > 0, (signal & 8) > 0 };
+
+                    blinkingCounter = (blinkingCounter + 1) % (messageSignals.Count * framesPerBlink);
+                    //bac.SetSymbolTint("light_blink", blinkingCounter / framesPerBlink == 0 ? UnityEngine.Color.green : UnityEngine.Color.red);
+                    //bac.SetSymbolTint("light_blink", message[blinkingCounter / framesPerBlink] == '-' ? UnityEngine.Color.green : UnityEngine.Color.red);
+                    bac.SetSymbolTint("light_blink", messageSignals[blinkingCounter / framesPerBlink] ? UnityEngine.Color.green : UnityEngine.Color.red);
+                }
+                else
+                {
+                    component.RemoveTag(GameTags.Detecting);
+                    bac.SetSymbolTint("light_blink", UnityEngine.Color.white);
+                }
+            }
 
             LogicPorts ports = this.gameObject.GetComponent<LogicPorts>();
             if (ports != null)
@@ -41,10 +92,6 @@ namespace InterplanarAutomation
         public void Sim200ms(float dt)
         {
             RadioEther.Instance.CheckAndAddSender(this.gameObject);
-
-            bool exposed = CheckSunExposition();
-            this.gameObject.GetComponent<Operational>().SetFlag(visibleSkyFlag, exposed);
-
             ScanEther();
         }
     }
