@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicModUtils.cs" />
-    <Compile Include="DiseasesExpanded_Patches_Gas.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_Gas.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Frost.cs" />
     <Compile Include="Sicknesses\HungerSickness.cs" />
     <Compile Include="Sicknesses\GasSickness.cs" />

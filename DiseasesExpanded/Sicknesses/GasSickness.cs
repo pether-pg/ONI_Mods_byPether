@@ -38,19 +38,11 @@ namespace DiseasesExpanded
         {
             public override object OnInfect(GameObject go, SicknessInstance diseaseInstance)
             {
-                GasSickness.GasSicknessComponent.StatesInstance statesInstance = new GasSickness.GasSicknessComponent.StatesInstance(diseaseInstance);
-                statesInstance.StartSM();
-                return (object)statesInstance;
+                throw new NotImplementedException();
             }
 
-            public override void OnCure(GameObject go, object instance_data) => ((StateMachine.Instance)instance_data).StopSM("Cured");
-
-            public class StatesInstance : GameStateMachine<SlimeSickness.SlimeLungComponent.States, SlimeSickness.SlimeLungComponent.StatesInstance, SicknessInstance, object>.GameInstance
+            public override void OnCure(GameObject go, object instance_data)
             {
-                public StatesInstance(SicknessInstance master)
-                  : base(master)
-                {
-                }
             }
         }
     }
