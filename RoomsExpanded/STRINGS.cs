@@ -162,8 +162,8 @@ namespace RoomsExpanded
 
                 public class SEEDPLANTS
                 {
-                    public static LocString NAME = (LocString)"{0} Different Seed Plants";
-                    public static LocString DESCRIPTION = (LocString)"At least {0} Plants growing seeds of different types.";
+                    public static LocString NAME = (LocString)"{0} Different Non-Decorative Plants";
+                    public static LocString DESCRIPTION = (LocString)"At least {0} Non-Decorative Plants of different types.";
                 }
 
                 public class FISHFEEDER

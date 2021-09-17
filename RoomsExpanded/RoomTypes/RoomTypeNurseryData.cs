@@ -27,19 +27,15 @@ namespace RoomsExpanded
                                             new RoomConstraints.Constraint((Func<KPrefabID, bool>)null,
                                                             (Func<Room, bool>)(room =>
                                                             {
-                                                                List<string> seedIds = new List<string>();
+                                                                List<string> names = new List<string>();
                                                                 foreach (var plant in room.cavity.plants)
                                                                 {
                                                                     if(plant == null) continue;
-                                                                    SeedProducer seedProd = plant.GetComponent<SeedProducer>();
-                                                                    WiltCondition wiltCon = plant.GetComponent<WiltCondition>();
-                                                                    if(seedProd == null)
-                                                                        continue;
-                                                                    if(!seedIds.Contains(seedProd.seedInfo.seedId)
-                                                                        && seedProd.seedInfo.productionType == SeedProducer.ProductionType.Harvest)
-                                                                        seedIds.Add(seedProd.seedInfo.seedId);
+                                                                    if(RoomTypeBotanicalData.DecorativeNames.Contains(plant.name)) continue;
+                                                                    if(!names.Contains(plant.name))
+                                                                        names.Add(plant.name);
                                                                 }
-                                                                return seedIds.Count >= requiredNumberOfPlants;
+                                                                return names.Count >= requiredNumberOfPlants;
                                                             }),
                                                             name: string.Format(STRINGS.ROOMS.CRITERIA.SEEDPLANTS.NAME, requiredNumberOfPlants),
                                                             description: string.Format(STRINGS.ROOMS.CRITERIA.SEEDPLANTS.DESCRIPTION, requiredNumberOfPlants)),

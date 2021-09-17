@@ -65,9 +65,15 @@ namespace RoomsExpanded
                 Sleepable sleepable = Traverse.Create(__instance).Field("sleepable").GetValue<Sleepable>();
                 if (sleepable == null) return;
 
-                if (__instance.gameObject.name == "BedComplete")
+                if (__instance.gameObject.name == "BedComplete" // from base ONI
+                    || __instance.gameObject.name == "LadderBedComplete" // from ONI DLC
+                    || __instance.gameObject.name == "DoubleBedComplete" // from |ScientisT|RU|'s https://steamcommunity.com/sharedfiles/filedetails/?id=2584828134
+                    )
                     sleepable.worker.GetComponent<Effects>().Add(RoomTypePrivateRoomData.BasicEffectId, true);
-                else if (__instance.gameObject.name == "LuxuryBedComplete")
+                else if (__instance.gameObject.name == "LuxuryBedComplete" // from base ONI
+                    || __instance.gameObject.name == "CozyBedComplete" // from Ronivan's https://steamcommunity.com/sharedfiles/filedetails/?id=2051486552
+                    || __instance.gameObject.name == "WoodenBedComplete" // from Ronivan's https://steamcommunity.com/sharedfiles/filedetails/?id=2051486552
+                    )
                     sleepable.worker.GetComponent<Effects>().Add(RoomTypePrivateRoomData.LuxuryEffectId, true);
                 else
                     Debug.Log($"RoomsExpanded: invalid bed name in Private Bedroom: {__instance.gameObject.name}");
