@@ -22,7 +22,18 @@ namespace MultiplayerStorage
         public GameObject GO;
         public GameObject UnderConstruction;
 
-        public bool IsActive = false;
+        public bool IsActive
+        {
+            get
+            {
+                if (Instance.GO == null)
+                    return false;
+                Operational operational = Instance.GO.GetComponent<Operational>();
+                if (operational == null)
+                    return false;
+                return operational.IsActive;
+            }
+        }
 
         public static Storage GetStorage()
         {
@@ -61,8 +72,9 @@ namespace MultiplayerStorage
 
         public static void SetActive(bool active)
         {
-            Instance.IsActive = active;
-            Instance.GO.GetComponent<Operational>().SetActive(active);
+            Operational operational = Instance.GO.GetComponent<Operational>();
+            operational.SetFlag(new Operational.Flag("SharedStorageActive", Operational.Flag.Type.Functional), active);
+            operational.SetActive(active);
             if (active)
                 SetStorageCapacity(operationalCapacity);
             else

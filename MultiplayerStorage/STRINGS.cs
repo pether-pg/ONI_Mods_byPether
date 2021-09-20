@@ -8,6 +8,14 @@ namespace MultiplayerStorage
 {
     public class STRINGS
     {
+        public class TRANSLATION
+        {
+            public class AUTHOR
+            {
+                public static LocString NAME = (LocString)"pether.pg";
+            }
+        }
+
         public class UI
         {
             public class TOOLTIPS

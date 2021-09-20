@@ -57,7 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicModUtils.cs" />
-    <Compile Include="MultiplayerStorage_Patches_Setup.cs" />
+    <Compile Include="Patches\MultiplayerStorage_Patches_Translation.cs" />
+    <Compile Include="Patches\MultiplayerStorage_Patches_Setup.cs" />
     <Compile Include="Patches\MultiplayerStorage_Patches_Menu.cs" />
     <Compile Include="SharedStorage\SharedStorageController.cs" />
     <Compile Include="SharedStorage\StorageBinarySerializer.cs" />

@@ -32,7 +32,7 @@ namespace MultiplayerStorage
 
         public static string GetOwner()
         {
-            return SaveGame.Instance.BaseName;
+            return string.Format("{0} - {1}", SaveLoader.Instance.GameInfo.colonyGuid, SaveGame.Instance.BaseName); 
         }
 
         public static string GetCurrentTimeString()

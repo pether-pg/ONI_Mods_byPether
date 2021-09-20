@@ -15,7 +15,7 @@ namespace MultiplayerStorage
 
         public static string GetDefaultName()
         {
-            return string.Format("{0}.bin", typeof(Storage).ToString());
+            return "MultiplayerStorage.SharedStorage.bin";
         }
 
         public static string GetFullPath(string directory)
@@ -26,6 +26,9 @@ namespace MultiplayerStorage
 
         public static void Serialize(Storage data, string path = "")
         {
+            if (data == null)
+                return;
+
             if (string.IsNullOrEmpty(path))
                 path = GetDefaultPath();
 
@@ -42,7 +45,6 @@ namespace MultiplayerStorage
 
             try
             {
-
                 byte[] bytes1 = File.ReadAllBytes(path);
                 IReader reader = (IReader)new FastReader(bytes1);
                 deserialized.Deserialize(reader);
