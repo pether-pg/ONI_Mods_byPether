@@ -19,6 +19,7 @@ namespace MultiplayerStorage
             EffectorValues none = NOISE_POLLUTION.NONE;
             EffectorValues tieR1 = BUILDINGS.DECOR.PENALTY.TIER1;
             EffectorValues noise = none;
+            // multiverse_gate_kanim artwork is done by Ronivan, great thanks!
             BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(ID, 6, 5, "multiverse_gate_kanim", 1000, 480f, construction_mass, construction_materials, 1600f, BuildLocationRule.OnFloor, tieR1, noise);
             buildingDef.Floodable = false;
             buildingDef.AudioCategory = "Metal";
