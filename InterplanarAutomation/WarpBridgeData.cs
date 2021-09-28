@@ -14,9 +14,9 @@ namespace InterplanarAutomation
         private static readonly string RedSignal = (string)STRINGS.UI.FormatAsAutomationState("Red Signal", STRINGS.UI.AutomationState.Standby);
 
         public static readonly string OutId = "LogicRibbonWarpBridgePortOutput";
-        public static readonly string OutDescription = "Incomming Signal";
+        public static readonly string OutDescription = "Incoming Signal";
         public static readonly string OutActive = $"Sends a {GreenSignal} if such a signal was sent from another asteroid.";
-        public static readonly string OutInactive = $"If no signal was transmited, sends {RedSignal}.";
+        public static readonly string OutInactive = $"If no signal was transmitted, sends {RedSignal}.";
 
         public static readonly string InId = "LogicRibbonWarpBridgePortInput";
         public static readonly string InDescription = "Transmited Signal";
