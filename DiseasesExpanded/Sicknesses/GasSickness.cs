@@ -8,9 +8,6 @@ namespace DiseasesExpanded
 {
     public class GasSickness : Sickness
     {
-        private const float COUGH_FREQUENCY = 20f;
-        private const float COUGH_MASS = 0.1f;
-        private const int DISEASE_AMOUNT = 1000;
         public const string ID = "GasSickness";
         public const string RECOVERY_ID = "GasSicknessRecovery";
 
@@ -18,7 +15,7 @@ namespace DiseasesExpanded
             : base(nameof(GasSickness), Sickness.SicknessType.Pathogen, Sickness.Severity.Minor, 0.00025f, new List<Sickness.InfectionVector>()
             {
                 Sickness.InfectionVector.Inhalation
-            }, 2220f, "GasSicknessRecovery")
+            }, 2220f, RECOVERY_ID)
         {
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
             this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[1]
@@ -33,17 +30,24 @@ namespace DiseasesExpanded
             }, 50f));
             this.AddSicknessComponent((Sickness.SicknessComponent)new GasSickness.GasSicknessComponent());
         }
-
         public class GasSicknessComponent : Sickness.SicknessComponent
         {
             public override object OnInfect(GameObject go, SicknessInstance diseaseInstance)
             {
-                throw new NotImplementedException();
+                Flatulence statesInstance = go.FindOrAddUnityComponent<Flatulence>();
+                statesInstance.smi.StartSM();
+                return (object)statesInstance.smi;
             }
 
             public override void OnCure(GameObject go, object instance_data)
             {
+                ((StateMachine.Instance)instance_data).StopSM("Cured");
             }
+
+            public override List<Descriptor> GetSymptoms() => new List<Descriptor>()
+            {
+                new Descriptor((string) DUPLICANTS.DISEASES.SLIMESICKNESS.COUGH_SYMPTOM, (string) DUPLICANTS.DISEASES.SLIMESICKNESS.COUGH_SYMPTOM_TOOLTIP, Descriptor.DescriptorType.SymptomAidable)
+            };
         }
     }
 }

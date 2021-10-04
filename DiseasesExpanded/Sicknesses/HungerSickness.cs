@@ -8,22 +8,20 @@ namespace DiseasesExpanded
 {
     public class HungerSickness : Sickness
     {
-        private const float COUGH_FREQUENCY = 20f;
-        private const float COUGH_MASS = 0.1f;
-        private const int DISEASE_AMOUNT = 1000;
         public const string ID = "HungerSickness";
         public const string RECOVERY_ID = "HungerSicknessRecovery";
+        public const float caloriesPerDay = 1666.682f;
 
         public HungerSickness()
             : base(nameof(HungerSickness), Sickness.SicknessType.Pathogen, Sickness.Severity.Minor, 0.00025f, new List<Sickness.InfectionVector>()
             {
                 Sickness.InfectionVector.Inhalation
-            }, 2220f, "HungerSicknessRecovery")
+            }, 2220f, RECOVERY_ID)
         {
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
             this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[1]
             {
-                new AttributeModifier("CaloriesDelta", -1666.682f, (string) DUPLICANTS.DISEASES.SLIMESICKNESS.NAME)
+                new AttributeModifier("CaloriesDelta", -caloriesPerDay, (string) DUPLICANTS.DISEASES.SLIMESICKNESS.NAME)
             }));
             this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[1]
             {

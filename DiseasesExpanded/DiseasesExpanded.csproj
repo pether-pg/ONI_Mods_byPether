@@ -54,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicModUtils.cs" />
+    <Compile Include="Cures\MudMaskConfig.cs" />
+    <Compile Include="Kanims.cs" />
+    <Compile Include="Cures\MegaFeastConfig.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_Bog.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_Hunger.cs" />
+    <Compile Include="Cures\GasCureConfig.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Gas.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Frost.cs" />
     <Compile Include="Sicknesses\HungerSickness.cs" />
@@ -67,8 +73,9 @@
     <Compile Include="GermGrowthRules.cs" />
     <Compile Include="Germs\HungerGerms.cs" />
     <Compile Include="ModInfo.cs" />
-    <Compile Include="Patches\DiseasesExpanded_Patches_AllGermDefinitions.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_AllCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="STRINGS.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,11 +7,10 @@ namespace DiseasesExpanded
     class GassyGerms : Disease
     {
         public const string ID = nameof(GassyGerms);
-        public static string staticId = nameof(GassyGerms);
         public static Color32 colorValue = ColorPalette.GassyOrange;
 
         public GassyGerms(bool statsOnly)
-            : base(id: GassyGerms.staticId,
+            : base(id: GassyGerms.ID,
                   strength: (byte)50,
                   temperature_range: new Disease.RangeInfo(168.15f, 258.15f, 513.15f, 563.15f),
                   temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f),

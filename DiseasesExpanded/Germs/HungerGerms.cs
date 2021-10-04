@@ -7,11 +7,10 @@ namespace DiseasesExpanded
     class HungerGerms : Disease
     {
         public const string ID = nameof(HungerGerms);
-        public static string staticId = nameof(HungerGerms);
         public static Color32 colorValue = ColorPalette.HungryBrown;
 
         public HungerGerms(bool statsOnly)
-            : base(id: HungerGerms.staticId, 
+            : base(id: HungerGerms.ID, 
                   strength: (byte)50, 
                   temperature_range: new Disease.RangeInfo(168.15f, 258.15f, 513.15f, 563.15f), 
                   temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f), 

@@ -1,4 +1,6 @@
 ﻿using HarmonyLib;
+using KMod;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace DiseasesExpanded

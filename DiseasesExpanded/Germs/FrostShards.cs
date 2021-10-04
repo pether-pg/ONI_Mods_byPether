@@ -7,11 +7,10 @@ namespace DiseasesExpanded
     class FrostShards : Disease
     {
         public const string ID = nameof(FrostShards);
-        public static string staticId = nameof(FrostShards);
         public static Color32 colorValue = ColorPalette.IcyBlue;
 
         public FrostShards(bool statsOnly)
-            : base(id: FrostShards.staticId,
+            : base(id: FrostShards.ID,
                   strength: (byte)50,
                   temperature_range: new Disease.RangeInfo(168.15f, 258.15f, 513.15f, 563.15f),
                   temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f),

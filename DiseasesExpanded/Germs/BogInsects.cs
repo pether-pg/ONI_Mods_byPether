@@ -7,11 +7,10 @@ namespace DiseasesExpanded
     class BogInsects : Disease
     {
         public const string ID = nameof(BogInsects);
-        public static string staticId = nameof(BogInsects);
         public static Color32 colorValue = ColorPalette.BogViolet;
 
         public BogInsects(bool statsOnly)
-            : base(id: BogInsects.staticId,
+            : base(id: BogInsects.ID,
                   strength: (byte)50,
                   temperature_range: new Disease.RangeInfo(168.15f, 258.15f, 513.15f, 563.15f),
                   temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f),
