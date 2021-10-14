@@ -3,7 +3,7 @@ using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace FreeSkillpoints
+namespace DiseasesExpanded
 {
     class JsonSerializer<T>
     {

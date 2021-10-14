@@ -6,22 +6,6 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_Hunger
     {
-        public static ExposureType GetExposureType()
-        {
-            return new ExposureType()
-            {
-                germ_id = HungerGerms.ID,
-                sickness_id = HungerSickness.ID,
-                exposure_threshold = 1,
-                excluded_traits = new List<string>() { },
-                base_resistance = 2,
-                excluded_effects = new List<string>()
-                    {
-                      HungerSickness.RECOVERY_ID,
-                      MegaFeastConfig.EffectID
-                    }
-            };
-        }
 
         [HarmonyPatch(typeof(SapTreeConfig))]
         [HarmonyPatch("CreatePrefab")]
@@ -31,9 +15,9 @@ namespace DiseasesExpanded
             {
                 DiseaseDropper.Def def = __result.AddOrGetDef<DiseaseDropper.Def>();
                 def.diseaseIdx = Db.Get().Diseases.GetIndex((HashedString)HungerGerms.ID);
-                def.emitFrequency = 1f;
-                def.averageEmitPerSecond = 1000;
-                def.singleEmitQuantity = 100000;
+                def.emitFrequency = 10f;
+                def.averageEmitPerSecond = 100000;
+                def.singleEmitQuantity = 1000000;
                 __result.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = HungerGerms.ID;
             }
         }

@@ -21,7 +21,7 @@ namespace DiseasesExpanded
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
             this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[1]
             {
-                new AttributeModifier("CaloriesDelta", -caloriesPerDay, (string) DUPLICANTS.DISEASES.SLIMESICKNESS.NAME)
+                new AttributeModifier("CaloriesDelta", -caloriesPerDay * (Settings.Intance.RebalanceForDiseasesRestored ? 3 : 1), (string) DUPLICANTS.DISEASES.SLIMESICKNESS.NAME)
             }));
             this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[1]
             {

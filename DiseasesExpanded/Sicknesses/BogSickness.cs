@@ -49,7 +49,7 @@ namespace DiseasesExpanded
 
             public class StatesInstance : GameStateMachine<BogSickness.BogSicknessComponent.States, BogSickness.BogSicknessComponent.StatesInstance, SicknessInstance, object>.GameInstance
             {
-                public float lastCoughTime;
+                public float lastBiteTime;
 
                 public StatesInstance(SicknessInstance master)
                   : base(master)
@@ -67,9 +67,16 @@ namespace DiseasesExpanded
 
                 private void GetBitten(GameObject infected)
                 {
+                    if (MudMaskConfig.HasEffect(infected))
+                        return;
+
                     float damage = 1f;
+                    if (InsectAllergies.HasAffectingTrait(infected))
+                        damage *= InsectAllergies.BogSicknessDamageModifier;
+                    if (Settings.Intance.RebalanceForDiseasesRestored)
+                        damage *= 4;
                     infected.GetComponent<Health>()?.Damage(damage);
-                    PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Resource, STRINGS.EFFECTS.BOGBUGBITE, infected.transform);
+                    PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Negative, STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT, infected.transform);
                 }
 
                 private void FinishedBitting(GameObject cougher) => this.sm.coughFinished.Trigger(this);
@@ -87,12 +94,12 @@ namespace DiseasesExpanded
                     this.breathing.DefaultState(this.breathing.normal).TagTransition(GameTags.NoOxygen, this.notbreathing);
                     this.breathing.normal.Enter("SetBiteTime", (StateMachine<BogSickness.BogSicknessComponent.States, BogSickness.BogSicknessComponent.StatesInstance, SicknessInstance, object>.State.Callback)(smi =>
                     {
-                        if ((double)smi.lastCoughTime >= (double)Time.time)
+                        if ((double)smi.lastBiteTime >= (double)Time.time)
                             return;
-                        smi.lastCoughTime = Time.time;
+                        smi.lastBiteTime = Time.time;
                     })).Update("Bite", (System.Action<BogSickness.BogSicknessComponent.StatesInstance, float>)((smi, dt) =>
                     {
-                        if (smi.master.IsDoctored || (double)Time.time - (double)smi.lastCoughTime <= 14.0)
+                        if (smi.master.IsDoctored || (double)Time.time - (double)smi.lastBiteTime <= 14.0)
                             return;
                         smi.GoTo((StateMachine.BaseState)this.breathing.cough);
                     }), UpdateRate.SIM_4000ms);

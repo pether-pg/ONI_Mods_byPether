@@ -36,26 +36,31 @@ namespace DiseasesExpanded
         {
             public static void Prefix()
             {
-                BasicModUtils.MakeStrings(BogInsects.ID, STRINGS.GERMS.BOGINSECTS.NAME, STRINGS.GERMS.BOGINSECTS.DESCRIPTIVE_SYMPTOMS, STRINGS.GERMS.BOGINSECTS.DESCRIPTION, STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT);
-                BasicModUtils.MakeStrings(FrostShards.ID, STRINGS.GERMS.FROSTHARDS.NAME, STRINGS.GERMS.FROSTHARDS.DESCRIPTIVE_SYMPTOMS, STRINGS.GERMS.FROSTHARDS.DESCRIPTION, STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT);
-                BasicModUtils.MakeStrings(GassyGerms.ID, STRINGS.GERMS.GASSYGERMS.NAME, STRINGS.GERMS.GASSYGERMS.DESCRIPTIVE_SYMPTOMS, STRINGS.GERMS.GASSYGERMS.DESCRIPTION, STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT);
-                BasicModUtils.MakeStrings(HungerGerms.ID, STRINGS.GERMS.HUNGERGERMS.NAME, STRINGS.GERMS.HUNGERGERMS.DESCRIPTIVE_SYMPTOMS, STRINGS.GERMS.HUNGERGERMS.DESCRIPTION, STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeGermStrings(BogInsects.ID, STRINGS.GERMS.BOGINSECTS.NAME, STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeGermStrings(FrostShards.ID, STRINGS.GERMS.FROSTHARDS.NAME, STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeGermStrings(GassyGerms.ID, STRINGS.GERMS.GASSYGERMS.NAME, STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeGermStrings(HungerGerms.ID, STRINGS.GERMS.HUNGERGERMS.NAME, STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT);
 
-                BasicModUtils.MakeStrings(BogSickness.ID, STRINGS.DISEASES.BOGSICKNESS.NAME, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION, STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT);
-                BasicModUtils.MakeStrings(FrostSickness.ID, STRINGS.DISEASES.FROSTSICKNESS.NAME, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION, STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT);
-                BasicModUtils.MakeStrings(GasSickness.ID, STRINGS.DISEASES.GASSICKNESS.NAME, STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.GASSICKNESS.DESCRIPTION, STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT);
-                BasicModUtils.MakeStrings(HungerSickness.ID, STRINGS.DISEASES.HUNGERSICKNESS.NAME, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION, STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeDiseaseStrings(BogSickness.ID, STRINGS.DISEASES.BOGSICKNESS.NAME, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION, STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeDiseaseStrings(FrostSickness.ID, STRINGS.DISEASES.FROSTSICKNESS.NAME, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION, STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeDiseaseStrings(GasSickness.ID, STRINGS.DISEASES.GASSICKNESS.NAME, STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.GASSICKNESS.DESCRIPTION, STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeDiseaseStrings(HungerSickness.ID, STRINGS.DISEASES.HUNGERSICKNESS.NAME, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION, STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT);
+
+                BasicModUtils.MakeTraitStrings(InsectAllergies.ID, STRINGS.TRAITS.INSECTALLERGIES.NAME, STRINGS.TRAITS.INSECTALLERGIES.DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP);
 
                 ExpandExposureTable();
             }
 
             public static void Postfix()
             {
-                Db.Get().effects.Add(new Effect(FrostSickness.RECOVERY_ID, FrostSickness.RECOVERY_ID, FrostSickness.RECOVERY_ID, 1200, true, true, false));
-                Db.Get().effects.Add(new Effect(GasSickness.RECOVERY_ID, GasSickness.RECOVERY_ID, GasSickness.RECOVERY_ID, 1200, true, true, false));
-                Db.Get().effects.Add(new Effect(GasCureConfig.EffectID, GasCureConfig.EffectID, GasCureConfig.EffectID, 1200, true, true, false));
-                Db.Get().effects.Add(new Effect(MudMaskConfig.EffectID, MudMaskConfig.EffectID, MudMaskConfig.EffectID, 1200, true, true, false));
-                Db.Get().effects.Add(new Effect(MegaFeastConfig.EffectID, MegaFeastConfig.EffectID, MegaFeastConfig.EffectID, 3000, true, true, false));
+                Db.Get().effects.Add(new Effect(FrostSickness.RECOVERY_ID, STRINGS.EFFECTS.FROSTRECOVERY.NAME, STRINGS.EFFECTS.FROSTRECOVERY.DESC, 1200, true, true, false));
+                Db.Get().effects.Add(new Effect(GasSickness.RECOVERY_ID, STRINGS.EFFECTS.GASRECOVERY.NAME, STRINGS.EFFECTS.GASRECOVERY.DESC, 1200, true, true, false));
+                Db.Get().effects.Add(new Effect(HungerSickness.RECOVERY_ID, STRINGS.EFFECTS.HUNGERRECOVERY.NAME, STRINGS.EFFECTS.HUNGERRECOVERY.DESC, 1200, true, true, false));
+                Db.Get().effects.Add(new Effect(BogSickness.RECOVERY_ID, STRINGS.EFFECTS.BOGRECOVERY.NAME, STRINGS.EFFECTS.BOGRECOVERY.DESC, 1200, true, true, false));
+                
+                Db.Get().effects.Add(new Effect(GasCureConfig.EffectID, STRINGS.CURES.GASCURE.NAME, STRINGS.CURES.GASCURE.DESC, 1200, true, true, false));
+                Db.Get().effects.Add(new Effect(MudMaskConfig.EffectID, STRINGS.CURES.MUDMASK.NAME, STRINGS.CURES.MUDMASK.DESC, 1200, true, true, false));
+                Db.Get().effects.Add(new Effect(SapShotConfig.EffectID, STRINGS.CURES.SAPSHOT.NAME, STRINGS.CURES.SAPSHOT.DESC, 3000, true, true, false));
             }
 
             public static void ExpandExposureTable()
@@ -64,10 +69,10 @@ namespace DiseasesExpanded
                 foreach (ExposureType et in TUNING.GERM_EXPOSURE.TYPES)
                     exposureList.Add(et);
 
-                exposureList.Add(DiseasesExpanded_Patches_Frost.GetExposureType());
-                exposureList.Add(DiseasesExpanded_Patches_Gas.GetExposureType());
-                exposureList.Add(DiseasesExpanded_Patches_Bog.GetExposureType());
-                exposureList.Add(DiseasesExpanded_Patches_Hunger.GetExposureType());
+                exposureList.Add(BogInsects.GetExposureType());
+                exposureList.Add(FrostShards.GetExposureType());
+                exposureList.Add(GassyGerms.GetExposureType());
+                exposureList.Add(HungerGerms.GetExposureType());
 
                 TUNING.GERM_EXPOSURE.TYPES = exposureList.ToArray();
             }
@@ -105,6 +110,17 @@ namespace DiseasesExpanded
                 __instance.Add(new BogInsects(statsOnly));
                 __instance.Add(new FrostShards(statsOnly));
                 __instance.Add(new GassyGerms(statsOnly));
+            }
+        }
+
+        [HarmonyPatch(typeof(StandardCropPlant.States))]
+        [HarmonyPatch("InitializeStates")]
+        public static class StandardCropPlant_InitializeStates_Patch
+        {
+            public static void Postfix(StandardCropPlant.States __instance)
+            {
+                __instance.dead.ToggleTag(GameTags.PreventEmittingDisease);
+                __instance.alive.wilting.ToggleTag(GameTags.PreventEmittingDisease);
             }
         }
 

@@ -9,6 +9,12 @@ namespace DiseasesExpanded
         public const string EffectID = "MudMaskEffect";
         public static ComplexRecipe recipe;
 
+        public static bool HasEffect(GameObject duplicant)
+        {
+            Klei.AI.Effects effects = duplicant.GetComponent<Klei.AI.Effects>();
+            return (effects != null && effects.HasEffect(MudMaskConfig.EffectID));
+        }
+
         public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
         public void OnPrefabInit(GameObject inst)

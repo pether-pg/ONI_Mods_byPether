@@ -89,5 +89,60 @@ namespace DiseasesExpanded
 
             return elementGrowthRule;
         }
+
+        public static ElementGrowthRule DieInElement(SimHashes element, float scale = 1)
+        {
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.populationHalfLife = 10 * scale;
+            elementGrowthRule.overPopulationHalfLife = 10 * scale;
+            elementGrowthRule.minDiffusionCount = 100000;
+            elementGrowthRule.diffusionScale = 0.001f;
+
+            return elementGrowthRule;
+        }
+
+        public static ElementGrowthRule SurviveInElement(SimHashes element)
+        {
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.underPopulationDeathRate = new float?(0.0f);
+            elementGrowthRule.populationHalfLife = new float?(float.PositiveInfinity);
+            elementGrowthRule.overPopulationHalfLife = new float?(6000f);
+            return elementGrowthRule;
+        }
+
+        public static ElementGrowthRule SurviveAndSpreadInElement(SimHashes element)
+        {
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.underPopulationDeathRate = new float?(0.0f);
+            elementGrowthRule.populationHalfLife = new float?(float.PositiveInfinity);
+            elementGrowthRule.overPopulationHalfLife = new float?(3000f);
+            elementGrowthRule.maxCountPerKG = new float?(1000f);
+            elementGrowthRule.diffusionScale = new float?(0.005f);
+            return elementGrowthRule;
+        }
+
+        public static ElementGrowthRule ThriveInElement(SimHashes element, float scale = 1)
+        {
+            // For negative half-life, the smaller abslolute value, the faster growth
+            // Therefore, scaling up requires making the absolute value smaller
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.underPopulationDeathRate = 0;
+            elementGrowthRule.populationHalfLife = -3000f / scale;
+            elementGrowthRule.overPopulationHalfLife = 3000f * scale;
+            return elementGrowthRule;
+        }
+
+        public static ElementGrowthRule ThriveAndSpreadInElement(SimHashes element, float scale = 1)
+        {
+            // For negative half-life, the smaller abslolute value, the faster growth
+            // Therefore, scaling up requires making the absolute value smaller
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.underPopulationDeathRate = 0;
+            elementGrowthRule.populationHalfLife = -3000f / scale;
+            elementGrowthRule.overPopulationHalfLife = 3000f * scale;
+            elementGrowthRule.maxCountPerKG = 5000f * scale;
+            elementGrowthRule.diffusionScale = 0.05f;
+            return elementGrowthRule;
+        }
     }
 }

@@ -590,3 +590,5 @@ MultiplayerStorage/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.c
 MultiplayerStorage/obj/Release/MultiplayerStorage.csproj.CopyComplete
 MultiplayerStorage/obj/Release/MultiplayerStorage.csproj.FileListAbsolute.txt
 MultiplayerStorage/obj/Release/MultiplayerStorage.dll
+DiseasesExpanded/bin/Release/Newtonsoft.Json.dll
+DiseasesExpanded/bin/Release/Newtonsoft.Json.xml

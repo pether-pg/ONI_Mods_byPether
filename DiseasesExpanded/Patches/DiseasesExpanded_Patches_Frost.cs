@@ -9,22 +9,15 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_Frost
     {
-        public static ExposureType GetExposureType()
+        [HarmonyPatch(typeof(ColdBreather.States))]
+        [HarmonyPatch("InitializeStates")]
+        public static class ColdBreatherStates_InitializeStates_Patch
         {
-            return new ExposureType()
+            public static void Postfix(ColdBreather.States __instance)
             {
-                germ_id = FrostShards.ID,
-                sickness_id = FrostSickness.ID,
-                exposure_threshold = 1,
-                excluded_traits = new List<string>() { },
-                base_resistance = 2,
-                excluded_effects = new List<string>()
-                    {
-                      FrostSickness.RECOVERY_ID,
-                      "RecentlySauna", // See SaunaConfig.cs
-                      "RecentlyHotTub" // See HotTubConfig.cs
-                    }
-            };
+                __instance.dead.ToggleTag(GameTags.PreventEmittingDisease);
+                __instance.alive.wilting.ToggleTag(GameTags.PreventEmittingDisease);
+            }
         }
 
         [HarmonyPatch(typeof(ColdBreatherConfig))]

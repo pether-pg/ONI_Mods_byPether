@@ -1,27 +1,13 @@
 ﻿using System.Collections.Generic;
 using HarmonyLib;
 using UnityEngine;
+using Klei.AI;
+using TUNING;
 
 namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_Bog
     {
-        public static ExposureType GetExposureType()
-        {
-            return new ExposureType()
-            {
-                germ_id = BogInsects.ID,
-                sickness_id = BogSickness.ID,
-                exposure_threshold = 1,
-                excluded_traits = new List<string>() { },
-                base_resistance = 2,
-                excluded_effects = new List<string>()
-                    {
-                      BogSickness.RECOVERY_ID
-                    }
-            };
-        }
-
         [HarmonyPatch(typeof(SwampHarvestPlantConfig))]
         [HarmonyPatch("CreatePrefab")]
         public static class SwampHarvestPlantConfig_CreatePrefab_Patch
@@ -34,6 +20,32 @@ namespace DiseasesExpanded
                 def.averageEmitPerSecond = 1000;
                 def.singleEmitQuantity = 100000;
                 __result.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = BogInsects.ID;
+            }
+        }
+
+        [HarmonyPatch(typeof(ModifierSet))]
+        [HarmonyPatch("LoadTraits")]
+        public static class ModifierSet_LoadTraits_Patch
+        {
+            public static void Prefix()
+            {
+                TUNING.TRAITS.TRAIT_CREATORS.Add(TraitUtil.CreateNamedTrait(InsectAllergies.ID, (string)STRINGS.TRAITS.INSECTALLERGIES.NAME, (string)STRINGS.TRAITS.INSECTALLERGIES.NAME));
+            }
+        }
+
+        [HarmonyPatch(typeof(MinionStartingStats))]
+        [HarmonyPatch("GenerateTraits")]
+        public static class MinionStartingStats_GenerateTraits_Patch
+        {
+            private static bool TraitAdded = false;
+
+            public static void Prefix()
+            {
+                if(!TraitAdded)
+                {
+                    DUPLICANTSTATS.BADTRAITS.Add(InsectAllergies.GetTrait());
+                    TraitAdded = true;
+                }
             }
         }
     }
