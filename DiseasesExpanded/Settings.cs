@@ -10,7 +10,7 @@ namespace DiseasesExpanded
     {
         private static Settings _instance;
 
-        public static Settings Intance
+        public static Settings Instance
         {
             get
             {

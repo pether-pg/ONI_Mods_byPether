@@ -2,6 +2,7 @@
 using KMod;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace DiseasesExpanded
 {
@@ -23,17 +24,18 @@ namespace DiseasesExpanded
         {
             base.OnAllModsLoaded(harmony, mods);
 
-            if(Settings.Intance.AutoDetectRelatedMods)
+            if(Settings.Instance.AutoDetectRelatedMods)
             {
                 foreach (Mod mod in mods)
-                    if (mod.staticID == "1911357229.Steam")
+                    if (mod.staticID == "1911357229.Steam"
+                        || Type.GetType("DiseasesReimagined.DiseasesPatch, DiseasesReimagined", false) != null) // double check in case steam messes with the ID
                     {
-                        Settings.Intance.RebalanceForDiseasesRestored = mod.IsActive();
+                        Settings.Instance.RebalanceForDiseasesRestored = mod.IsActive();
                         string activeString = mod.IsActive() ? "Active" : "NOT Active";
                         Debug.Log($"{Namespace}: Mod Id = \"{mod.staticID}\", Title = \"{mod.title}\", detected to be {activeString}.");
                     }
 
-                JsonSerializer<Settings>.Serialize(Settings.Intance);
+                JsonSerializer<Settings>.Serialize(Settings.Instance);
             }
         }
     }

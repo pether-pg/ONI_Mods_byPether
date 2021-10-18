@@ -123,23 +123,5 @@ namespace DiseasesExpanded
                 __instance.alive.wilting.ToggleTag(GameTags.PreventEmittingDisease);
             }
         }
-
-        /*
-        [HarmonyPatch(typeof(OverlayModes.Rooms))]
-        [HarmonyPatch("GetCustomLegendData")]
-        public static class Rooms_GetCustomLegendData_Patch
-        {
-            public static void Postfix()
-            {
-                foreach (MinionIdentity identity in Components.MinionIdentities)
-                {
-                    Debug.Log($"{identity.name} :");
-                    MinionModifiers modifiers = identity.GetComponent<MinionModifiers>();
-                    if (modifiers == null) return;
-                    foreach (var v in modifiers.attributes.AttributeTable)
-                        Debug.Log($"{v.Attribute.Id} = {v.GetTotalValue()}");
-                }
-            }
-        }*/
     }
 }

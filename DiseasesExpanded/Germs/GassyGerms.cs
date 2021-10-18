@@ -13,7 +13,7 @@ namespace DiseasesExpanded
             {
                 germ_id = GassyGerms.ID,
                 sickness_id = GasSickness.ID,
-                exposure_threshold = (Settings.Intance.RebalanceForDiseasesRestored ? 10 : 100),
+                exposure_threshold = (Settings.Instance.RebalanceForDiseasesRestored ? 10 : 100),
                 excluded_traits = new List<string>() { "Flatulence" },
                 base_resistance = 2,
                 excluded_effects = new List<string>()

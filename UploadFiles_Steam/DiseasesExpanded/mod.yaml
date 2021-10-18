@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Diseases Expanded" 
+# currently unused, but may be someday
+description: "Adds more diseases to the game, along with related cure items, to enrich germy part of the game" 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.DiseasesExpanded" 
