@@ -592,3 +592,5 @@ MultiplayerStorage/obj/Release/MultiplayerStorage.csproj.FileListAbsolute.txt
 MultiplayerStorage/obj/Release/MultiplayerStorage.dll
 DiseasesExpanded/bin/Release/Newtonsoft.Json.dll
 DiseasesExpanded/bin/Release/Newtonsoft.Json.xml
+ConveyorRailDisplay/bin/Release/UnityEngine.InputLegacyModule.dll
+ConveyorRailDisplay/bin/Release/UnityEngine.UnityWebRequestModule.dll
