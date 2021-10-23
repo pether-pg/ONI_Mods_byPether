@@ -65,10 +65,10 @@ namespace RoomsExpanded
         [HarmonyPatch(typeof(ColonyAchievement), MethodType.Constructor, new Type[] { typeof(string), typeof(string), typeof(string), typeof(string), typeof(bool), typeof(List<ColonyAchievementRequirement>), typeof(string), typeof(string), typeof(string), typeof(string), typeof(System.Action<KMonoBehaviour>), typeof(string), typeof(string) })]
         public static class ColonyAchievement_Constructor_Patch
         {
-            public static void Prefix(string steamAchievementId, ref List<ColonyAchievementRequirement> requirementChecklist)
+            public static void Prefix(string platformAchievementId, ref List<ColonyAchievementRequirement> requirementChecklist)
             {
                 if (!Settings.Instance.Agricultural.IncludeRoom) return;
-                if (steamAchievementId != "VARIETY_OF_ROOMS") return;
+                if (platformAchievementId != "VARIETY_OF_ROOMS") return;
 
                 ColonyAchievementRequirement delete = null;
                 foreach(var req in requirementChecklist)

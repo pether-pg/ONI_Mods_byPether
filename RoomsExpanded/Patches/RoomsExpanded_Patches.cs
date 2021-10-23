@@ -56,6 +56,7 @@ namespace RoomsExpanded
         {
             public static void Prefix()
             {
+                LightConstraintPrefix();
                 RoomsExpanded_Patches_Agricultural.PrepareModifications();
             }
 
@@ -81,6 +82,25 @@ namespace RoomsExpanded
                 // Must be removed once "Room Size" is updated for DLC
                 // Original mod by trevis can be found here: https://steamcommunity.com/sharedfiles/filedetails/?id=1715802131
                 RoomConstraintTags.ResizeRooms(ref __instance);
+            }
+
+            private static void LightConstraintPrefix()
+            {
+                Func<Room, bool> OriginalCheck = RoomConstraints.LIGHT.room_criteria;
+                RoomConstraints.LIGHT = new RoomConstraints.Constraint(
+                    (Func<KPrefabID, bool>) null,
+                    (Func<Room, bool>) ( 
+                        room =>
+                        {
+                            foreach (KPrefabID plant in room.cavity.plants)
+                                if (plant != null && plant.GetComponent<Light2D>() != null && plant.GetComponent<Light2D>().isActiveAndEnabled)
+                                    return true;
+                            return OriginalCheck(room);
+                        }
+                    ),
+                    name: ((string)ROOMS.CRITERIA.LIGHT.NAME), 
+                    description: ((string)ROOMS.CRITERIA.LIGHT.DESCRIPTION)
+                    );
             }
         }
 

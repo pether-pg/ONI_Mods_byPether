@@ -1,6 +1,0 @@
-# recommended you make this the same as your mod name in Steam
-title: "[Vanilla + DLC] Rooms Expanded" 
-# currently unused, but may be someday
-description: "Adds more room types to the game, each with their own requirements and unique effects." 
-# a name for other mods to recognize you by, recommended to not change this once you set it
-staticID: "pether-pg.RoomsExpanded" 
