@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Combined Conduit Display" 
+# currently unused, but may be someday
+description: "Moves conduits to the front when related layer is selected to increase network visibility." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.CombinedConduitDisplay" 
