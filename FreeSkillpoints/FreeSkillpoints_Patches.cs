@@ -22,7 +22,7 @@ namespace FreeSkillpoints
 
             private static bool CanGrantBonus()
             {
-                return SaveGame.Instance.sandboxEnabled || Settings.Instance.UseWithoutSandbox;
+                return Game.Instance.SandboxModeActive || Settings.Instance.UseWithoutSandbox;
             }
 
             private static bool NeedGrantedBonus(MinionResume component)
