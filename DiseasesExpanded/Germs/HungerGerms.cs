@@ -38,7 +38,8 @@ namespace DiseasesExpanded
                   temperature_range: new Disease.RangeInfo(0, resinFreezingK - 25, resinTurningK - 25, resinTurningK), 
                   temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f), 
                   pressure_range: new Disease.RangeInfo(0.0f, 0.0f, 1000f, 1000f), 
-                  pressure_half_lives: Disease.RangeInfo.Idempotent(), 
+                  pressure_half_lives: Disease.RangeInfo.Idempotent(),
+                  1.0f,
                   statsOnly)
         {
         }

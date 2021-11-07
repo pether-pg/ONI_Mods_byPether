@@ -59,9 +59,11 @@
     <Compile Include="Cures\AntihistamineBoosterConfig.cs" />
     <Compile Include="BasicModUtils.cs" />
     <Compile Include="Cures\MudMaskConfig.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_TemporalTear.cs" />
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Beetas.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="NewDayTestBehaviour.cs" />
     <Compile Include="Traits\InsectAllergies.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Translation.cs" />
     <Compile Include="Kanims.cs" />
