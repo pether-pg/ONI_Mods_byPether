@@ -35,6 +35,14 @@ namespace MultiplayerStorage
             }
         }
 
+        public bool IsAlreadyBuilt
+        {
+            get
+            {
+                return Instance.GO != null || Instance.UnderConstruction != null;
+            }
+        }
+
         public static Storage GetStorage()
         {
             if (Instance.GO == null)

@@ -32,8 +32,10 @@ namespace MultiplayerStorage
             if (string.IsNullOrEmpty(path))
                 path = GetDefaultPath();
 
+            //PrepareKSerializationManager(data, path);
             using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create)))
             {
+                //KSerialization.Manager.SerializeDirectory(writer);
                 data.Serialize(writer);
             }
         }
@@ -43,19 +45,40 @@ namespace MultiplayerStorage
             if (string.IsNullOrEmpty(path))
                 path = GetDefaultPath();
 
+            if (!File.Exists(path))
+                return deserialized; // do not return null as it is reserved for invalid cases
+
+            if (!KSerialization.Manager.HasDeserializationMapping(typeof(KPrefabID)))
+                return null;
+
             try
             {
                 byte[] bytes1 = File.ReadAllBytes(path);
                 IReader reader = (IReader)new FastReader(bytes1);
+
+                Debug.Log("MultiplayerStorage: Deserialize Storage");
                 deserialized.Deserialize(reader);
+                Debug.Log("MultiplayerStorage: Storage deserialized!");
             }
             catch (Exception e)
             {
+                Debug.Log("MultiplayerStorage: Encountered exception during deserialization");
                 Debug.Log(e.Message);
-                deserialized = null;
+                return null;
             }
 
             return deserialized;
+        }
+
+        private static void PrepareKSerializationManager(Storage data, string path)
+        {
+            using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create)))
+            {
+                KSerialization.Manager.Clear();
+
+                // first serialization is to fill KSerialization.Manager's directory to be serialized in next step
+                data.Serialize(writer);
+            }
         }
     }
 }

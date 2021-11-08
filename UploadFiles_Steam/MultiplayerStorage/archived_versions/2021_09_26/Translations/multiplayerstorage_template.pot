@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included"
+"POT Version: 2.0"
+
+#. MultiplayerStorage.STRINGS.BUILDINGS.PREFABS.SHAREDSTORAGE.DESC
+msgctxt "MultiplayerStorage.STRINGS.BUILDINGS.PREFABS.SHAREDSTORAGE.DESC"
+msgid "Enables shared access to resources accross different realities."
+msgstr ""
+
+#. MultiplayerStorage.STRINGS.BUILDINGS.PREFABS.SHAREDSTORAGE.EFFECT
+msgctxt "MultiplayerStorage.STRINGS.BUILDINGS.PREFABS.SHAREDSTORAGE.EFFECT"
+msgid "Share your resources with colonies in different realities."
+msgstr ""
+
+#. MultiplayerStorage.STRINGS.BUILDINGS.PREFABS.SHAREDSTORAGE.NAME
+msgctxt "MultiplayerStorage.STRINGS.BUILDINGS.PREFABS.SHAREDSTORAGE.NAME"
+msgid "Multireality Storage"
+msgstr ""
+
+#. MultiplayerStorage.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "MultiplayerStorage.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr ""
+
+#. MultiplayerStorage.STRINGS.UI.TOOLTIPS.HELP_BUILDLOCATION_ONLY_ONE_STORAGE
+msgctxt "MultiplayerStorage.STRINGS.UI.TOOLTIPS.HELP_BUILDLOCATION_ONLY_ONE_STORAGE"
+msgid "You can have only one building of this kind."
+msgstr ""
+

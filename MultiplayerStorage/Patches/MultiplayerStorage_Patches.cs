@@ -34,42 +34,18 @@ namespace MultiplayerStorage
             }
         }
 
-        [HarmonyPatch]
-        public static class BuildingDef_IsValidBuildLocation_Patch
+        [HarmonyPatch(typeof(BuildingDef))]
+        [HarmonyPatch("IsValidPlaceLocation")]
+        [HarmonyPatch(new Type[] { typeof(GameObject), typeof(int), typeof(Orientation), typeof(bool), typeof(string) },
+            new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out })]
+        public static class CanBuildPatch
         {
-            internal static MethodBase TargetMethod()
+            public static void Postfix(BuildingDef __instance, ref bool __result, ref string fail_reason)
             {
-                return typeof(BuildingDef).GetMethod(
-                    nameof(BuildingDef.IsValidPlaceLocation),
-                    new Type[] { typeof(GameObject), typeof(int), typeof(Orientation), typeof(bool), typeof(string).MakeByRefType() });
-            }
-
-            private static string originalMessage = string.Empty;
-            private static bool messageModified = false;
-
-            public static void Prefix(GameObject source_go, ref int cell)
-            {
-                if (source_go != null && source_go.name.Contains(SharedStorageConfig.ID) 
-                    && (SharedStorageData.Instance.GO != null || SharedStorageData.Instance.UnderConstruction != null))
+                if (__instance.PrefabID == SharedStorageConfig.ID && SharedStorageData.Instance.IsAlreadyBuilt)
                 {
-                    // This is a workaround - I coulnt't access out string argument in a patch
-                    // To make this work, I change one of the working messages and fake error to trigger the text.
-                    // This code is bad and I feel bad, it should be improved, but hey - it works!
-
-                    cell = Grid.InvalidCell;
-                    if (string.IsNullOrEmpty(originalMessage))
-                        originalMessage = UI.TOOLTIPS.HELP_BUILDLOCATION_INVALID_CELL;
-                    UI.TOOLTIPS.HELP_BUILDLOCATION_INVALID_CELL = STRINGS.UI.TOOLTIPS.HELP_BUILDLOCATION_ONLY_ONE_STORAGE;
-                    messageModified = true;
-                }
-            }
-
-            public static void Postfix()
-            {
-                if(messageModified)
-                {
-                    UI.TOOLTIPS.HELP_BUILDLOCATION_INVALID_CELL = originalMessage;
-                    messageModified = false;
+                    __result = false;
+                    fail_reason = STRINGS.UI.TOOLTIPS.HELP_BUILDLOCATION_ONLY_ONE_STORAGE;
                 }
             }
         }

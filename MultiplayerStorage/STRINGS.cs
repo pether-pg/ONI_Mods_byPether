@@ -36,5 +36,14 @@ namespace MultiplayerStorage
                 }
             }
         }
+
+        public class STATUSITEMS
+        {
+            public class REBOOTREQUIRED
+            {
+                public static LocString NAME = (LocString)"Reload Required";
+                public static LocString TOOLTIP = (LocString)"Encountered error while loading the Storage. Please save and reload your game.";
+            }
+        }
     }
 }
