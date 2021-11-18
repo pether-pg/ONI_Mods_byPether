@@ -44,6 +44,12 @@ namespace MultiplayerStorage
                 public static LocString NAME = (LocString)"Reload Required";
                 public static LocString TOOLTIP = (LocString)"Encountered error while loading the Storage. Please save and reload your game.";
             }
+
+            public class STORAGEOCCUPIED
+            {
+                public static LocString NAME = (LocString)"Storage Occupied";
+                public static LocString TOOLTIP = (LocString)"It seems another base is currently using the Storage. Only one base can control Storage at the same time.";
+            }
         }
     }
 }

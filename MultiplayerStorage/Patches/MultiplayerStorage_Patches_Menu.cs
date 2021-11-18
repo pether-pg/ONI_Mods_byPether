@@ -20,6 +20,7 @@ namespace MultiplayerStorage
                 {
                     string path = StorageBinarySerializer.GetFullPath(Settings.Instance.StorageFilePath);
                     StorageBinarySerializer.Serialize(SharedStorageData.GetStorage(), path);
+                    StorageOwnershipInfo.UpdateModification();
                 }
             }
         }

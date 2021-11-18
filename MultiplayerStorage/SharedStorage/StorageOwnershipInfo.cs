@@ -40,6 +40,16 @@ namespace MultiplayerStorage
             return System.DateTime.Now.ToString("yyyy'-'MM'-'dd' 'HH':'mm':'ss");
         }
 
+        public static bool IsLastModification24hOrOlder()
+        {
+            System.DateTime lastDate;
+            if(!System.DateTime.TryParse(Instance.LastModification, out lastDate))  
+                return false;
+
+            TimeSpan timeElapsed = System.DateTime.Now - lastDate;
+            return timeElapsed.TotalHours >= 24;
+        }
+
         public static void SerializeInstance()
         {
             string dir = Settings.Instance.StorageFilePath;
@@ -65,6 +75,13 @@ namespace MultiplayerStorage
         public static void AssumeControl()
         {
             Instance.CurrentOwner = GetOwner();
+            Instance.LastModification = GetCurrentTimeString();
+            SerializeInstance();
+        }
+
+        public static void UpdateModification()
+        {
+            Instance.LastContributor = GetOwner();
             Instance.LastModification = GetCurrentTimeString();
             SerializeInstance();
         }

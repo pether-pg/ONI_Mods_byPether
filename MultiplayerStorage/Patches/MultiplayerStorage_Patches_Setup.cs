@@ -20,7 +20,8 @@ namespace MultiplayerStorage
                                         STRINGS.BUILDINGS.PREFABS.SHAREDSTORAGE.DESC,
                                         STRINGS.BUILDINGS.PREFABS.SHAREDSTORAGE.EFFECT);
 
-                BasicModUtils.MakeStatusItemStrings(SharedStorageConfig.statusItemId, STRINGS.STATUSITEMS.REBOOTREQUIRED.NAME, STRINGS.STATUSITEMS.REBOOTREQUIRED.TOOLTIP);
+                BasicModUtils.MakeStatusItemStrings(SharedStorageConfig.statusItemRebootId, STRINGS.STATUSITEMS.REBOOTREQUIRED.NAME, STRINGS.STATUSITEMS.REBOOTREQUIRED.TOOLTIP);
+                BasicModUtils.MakeStatusItemStrings(SharedStorageConfig.statusItemOccupiedId, STRINGS.STATUSITEMS.STORAGEOCCUPIED.NAME, STRINGS.STATUSITEMS.STORAGEOCCUPIED.TOOLTIP);
 
                 ModUtil.AddBuildingToPlanScreen("Base", SharedStorageConfig.ID);
             }

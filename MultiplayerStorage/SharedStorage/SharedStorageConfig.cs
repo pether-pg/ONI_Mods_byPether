@@ -6,7 +6,8 @@ namespace MultiplayerStorage
     class SharedStorageConfig : IBuildingConfig
     {
         public const string ID = nameof(SharedStorageConfig);
-        public const string statusItemId = "RebootRequired";
+        public const string statusItemRebootId = "RebootRequired";
+        public const string statusItemOccupiedId = "StorageOccupied";
 
         public override BuildingDef CreateBuildingDef()
         {
