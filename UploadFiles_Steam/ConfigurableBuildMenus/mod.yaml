@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Configurable Build Menus" 
+# currently unused, but may be someday
+description: "Allows to configure Build Menus - create new panels or move buildings between them" 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.ConfigurableBuildMenus" 
