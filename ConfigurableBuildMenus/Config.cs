@@ -20,7 +20,10 @@ namespace ConfigurableBuildMenus
                 {
                     _instance = new Config();
                     _instance.MakeDefaultLists();
-                    JsonSerializer<Config>.Serialize(_instance);
+                    if (JsonSerializer<Config>.Dirty == false)
+                        JsonSerializer<Config>.Serialize(_instance);
+                    else
+                        Debug.Log($"{ModInfo.Namespace}: Invalid config file - will use default configuration this game, but your file is unchanged");
                 }
                 return _instance;
             }

@@ -9,7 +9,10 @@ namespace ConfigurableBuildMenus
         public static void CreateNewMenu(Config.NewBuildMenu newMenu, Dictionary<HashedString, string> iconNameMap)
         {
             if (string.IsNullOrEmpty(newMenu.MenuId) || iconNameMap == null)
+            {
+                Debug.Log($"{ModInfo.Namespace}: Could not create new menu...");
                 return;
+            }
 
             Debug.Log($"{ModInfo.Namespace}: CreateNewMenu {newMenu.MenuId}");
 
@@ -61,20 +64,29 @@ namespace ConfigurableBuildMenus
         {
             int oldCategory = FindCategoryIdForBuilding(movedItem.BuildingId);
             if (oldCategory < 0)
+            {
+                Debug.Log($"{ModInfo.Namespace}: Could not find building {movedItem.BuildingId}");
                 return;
+            }
             BUILDINGS.PLANORDER[oldCategory].data.Remove(movedItem.BuildingId);
         }
 
         public static void Add(Config.MoveBuildingItem movedItem)
         {
             if (string.IsNullOrEmpty(movedItem.MoveToMenu))
+            {
+                Debug.Log($"{ModInfo.Namespace}: MoveToMenu empty, {movedItem.BuildingId} will be removed");
                 return;
+            }
 
             int newCategory = BUILDINGS.PLANORDER.FindIndex((x => x.category == (HashedString)movedItem.MoveToMenu));
             if (newCategory < 0)
+            {
+                Debug.Log($"{ModInfo.Namespace}: MoveToMenu = \"{movedItem.MoveToMenu}\" is invalid, {movedItem.BuildingId} will be removed");
                 return;
+            }
 
-            if(movedItem.OnListBeginning)
+            if (movedItem.OnListBeginning)
                 BUILDINGS.PLANORDER[newCategory].data.Insert(0, movedItem.BuildingId);
             else if (string.IsNullOrEmpty(movedItem.JustAfter))
                 BUILDINGS.PLANORDER[newCategory].data.Add(movedItem.BuildingId);
