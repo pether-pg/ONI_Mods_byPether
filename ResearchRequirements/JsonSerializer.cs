@@ -21,7 +21,7 @@ namespace ResearchRequirements
 
             using (StreamWriter writer = new StreamWriter(path))
             {
-                string json = JsonConvert.SerializeObject(data);
+                string json = JsonConvert.SerializeObject(data, Formatting.Indented);
                 writer.Write(json);
             }
         }

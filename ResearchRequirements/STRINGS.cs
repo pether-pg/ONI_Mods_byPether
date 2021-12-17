@@ -60,7 +60,7 @@ namespace ResearchRequirements
             public static LocString SUITS                       = (LocString)"Have Duplicants with \"Exosuit Training\" skill: {0}";
             public static LocString JOBS                        = (LocString)"Obtain new Duplicants: {0}";
             public static LocString ADVANCED_RESEARCH           = (LocString)"Research technologies: {0}";
-            public static LocString NOTIFICATION_SYSTEMS        = (LocString)"{0}";
+            public static LocString NOTIFICATION_SYSTEMS        = (LocString)"Duplicants with \"Loner\" trait: {0}";
             public static LocString ARTIFICIAL_FRIENDS          = (LocString)"Have Duplicant with \"Improved Tinkering I\" skill: {0}";
             public static LocString BASIC_REFINEMENT            = (LocString)"Have Duplicant with \"Hard Digging\" skill: {0}";
             public static LocString REFINED_OBJECTS             = (LocString)"Build Ladders: {0}";
@@ -84,23 +84,32 @@ namespace ResearchRequirements
             public static LocString JETPACKS                    = (LocString)"Control Slicksters: {0}";
 
             // DLC Techs:
-            public static LocString PORTABLE_GASES              = (LocString)"Have Duplicants suffering from Yucky Lungs: {0}";
-            public static LocString LIQUID_DISTRIBUTION         = (LocString)"Have Senior Pilot with Small Bladder trait: {0}";
-            public static LocString SPACE_POWER                 = (LocString)"Have Senior Pilot with Nyctophobic trait: {0}";
-            public static LocString HYDROCARBON_PROPULSION      = (LocString)"Store Liquid Oxygen: {0}";
-            public static LocString CRYO_FUEL_PROPULSION        = (LocString)"Store Liquid Hydrogen {0}";
-            public static LocString SPACE_PROGRAM               = (LocString)"Have Duplicant with \"Rocket Piloting\" skill: {0}";
-            public static LocString CRASH_PLAN                  = (LocString)"Build at least 1 bed different asteroids: {0}";
-            public static LocString DURABLE_LIFE_SUPPORT        = (LocString)"Have Duplicants with \"Rocket Piloting\" skill: {0}";
-            public static LocString ROBOTIC_TOOLS               = (LocString)"Have Duplicants with \"Super-Duperhard Digging\" skill: {0}";
-            public static LocString GAS_DISTRIBUTION            = (LocString)"Have Senior Pilot with Mouth Breather trait: {0}";
-            public static LocString ADVANCED_SCANNERS           = (LocString)"Scan deep space hexes (at least 3 tiles away from your asteroids): {0}";
-            public static LocString SOLID_DISTRIBUTION          = (LocString)"Have Senior Pilot with Bottomless Stomach trait: {0}";
-            public static LocString NUCLEAR_RESEARCH            = (LocString)"Research technologies: {0}";
-            public static LocString RADIATION_PROTECTION        = (LocString)"Have Duplicant suffering from Radiation Sickness: {0}";
-            public static LocString MONUMENTS                   = (LocString)"Have Duplicants with 16 morale: {0}";
-            public static LocString ADVANCED_SANITATION         = (LocString)"TBD: {0}";
-            public static LocString NUCLEAR_REFINEMENT          = (LocString)"Have Duplicants with Hazmat Digging skill: {0}";
+            public static LocString PORTABLE_GASES                  = (LocString)"Have Duplicants suffering from Yucky Lungs: {0}";
+            public static LocString LIQUID_DISTRIBUTION             = (LocString)"Have Senior Pilot with Small Bladder trait: {0}";
+            public static LocString SPACE_POWER                     = (LocString)"Have Senior Pilot with Nyctophobic trait: {0}";
+            public static LocString BETTER_HYDROCARBON_PROPULSION   = (LocString)"Store Liquid Oxygen: {0}";
+            public static LocString CRYO_FUEL_PROPULSION            = (LocString)"Store Liquid Hydrogen {0}";
+            public static LocString SPACE_PROGRAM                   = (LocString)"Have Duplicant with \"Rocket Piloting\" skill: {0}";
+            public static LocString CRASH_PLAN                      = (LocString)"Build at least 1 bed on different asteroids: {0}";
+            public static LocString DURABLE_LIFE_SUPPORT            = (LocString)"Have Duplicants with \"Rocket Piloting\" skill: {0}";
+            public static LocString ROBOTIC_TOOLS                   = (LocString)"Have Duplicants with \"Super-Duperhard Digging\" skill: {0}";
+            public static LocString GAS_DISTRIBUTION                = (LocString)"Have Senior Pilot with Mouth Breather trait: {0}";
+            public static LocString ADVANCED_SCANNERS               = (LocString)"Scan deep space hexes (at least 3 tiles away from your asteroids): {0}";
+            public static LocString SOLID_DISTRIBUTION              = (LocString)"Have Senior Pilot with Bottomless Stomach trait: {0}";
+            public static LocString NUCLEAR_RESEARCH                = (LocString)"Research technologies: {0}";
+            public static LocString RADIATION_PROTECTION            = (LocString)"Have Duplicant suffering from Radiation Sickness: {0}";
+            public static LocString MONUMENTS                       = (LocString)"Have Duplicants with 16 morale: {0}";
+            public static LocString ADVANCED_SANITATION             = (LocString)"TBD: {0}";
+            public static LocString NUCLEAR_REFINEMENT              = (LocString)"Have Duplicants with Hazmat Digging skill: {0}";
+            public static LocString SPACE_COMBUSTION                = (LocString)"Gather Sucrose: {0}";
+            public static LocString HIGH_PRESSURE_FORGING           = (LocString)"Gather Refined Carbon: {0}";
+            public static LocString NUCLEAR_PROPULSION              = (LocString)"Store Radbolts in Radbolt Batteries: {0}";
+            public static LocString HIGH_VELOCITY_TRANSPORT         = (LocString)"Spread your colonies on a distance: {0}";
+            public static LocString HIGH_VELOCITY_DESTRUCTION       = (LocString)"Gather Diamond: {0}";
+            public static LocString ADVANCED_NUCLEAR_RESEARCH       = (LocString)"Have Duplicants with \"Glow Stick\" trait: {0}";
+            public static LocString BIOENGINEERING                  = (LocString)"Obtain mutated seed: {0}";
+
+
         }
         public class TRANSLATION
         {

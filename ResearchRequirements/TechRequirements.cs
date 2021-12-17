@@ -23,6 +23,14 @@ namespace ResearchRequirements
         Dictionary<string, TechReq> ReqDict = null;
         Dictionary<string, Tech> TechDict = null;
 
+        public List<string> GetAllTechIds()
+        {
+            List<string> result = new List<string>();
+            foreach (string key in ReqDict.Keys)
+                result.Add(key);
+            return result;
+        }
+
         public TechReq GetTechReq(string id)
         {
             if (!ReqDict.ContainsKey(id))
@@ -121,7 +129,7 @@ namespace ResearchRequirements
             ReqDict.Add("Suits", new TechReq(STRINGS.REQUIREMENTS.SUITS, 3, () => RequirementFunctions.DuplicantsWithSkill("Suits1")));
             ReqDict.Add("Jobs", new TechReq(STRINGS.REQUIREMENTS.JOBS, 3, () => Components.MinionResumes.Count - 3));
             ReqDict.Add("AdvancedResearch", new TechReq(STRINGS.REQUIREMENTS.ADVANCED_RESEARCH, GVD.AdvancedResearchThreshold, () => Db.Get().Techs.resources.Where(p => p.IsComplete()).Count(), max: GVD.LowTierTechs - 1));
-            ReqDict.Add("NotificationSystems", new TechReq()); // no need to add anything here, unlocked buildings do not affect gameplay
+            
             ReqDict.Add("ArtificialFriends", new TechReq(STRINGS.REQUIREMENTS.ARTIFICIAL_FRIENDS, 1, () => RequirementFunctions.DuplicantsWithSkill("Technicals1")));
             ReqDict.Add("BasicRefinement", new TechReq(STRINGS.REQUIREMENTS.BASIC_REFINEMENT, 1, () => RequirementFunctions.DuplicantsWithSkill("Mining1")));
             ReqDict.Add("RefinedObjects", new TechReq(STRINGS.REQUIREMENTS.REFINED_OBJECTS, 200, () => Components.Ladders.Count));
@@ -143,27 +151,41 @@ namespace ResearchRequirements
             ReqDict.Add("SolidManagement", new TechReq());
             ReqDict.Add("BasicRocketry", new TechReq(STRINGS.REQUIREMENTS.BASIC_ROCKETRY, 4, () => RequirementFunctions.AnalysedPlanets(), max: 30));
             ReqDict.Add("Jetpacks", new TechReq(STRINGS.REQUIREMENTS.JETPACKS, 20, () => RequirementFunctions.NamedCritters("Oilfloater")));
+            ReqDict.Add("RoboticTools", new TechReq(STRINGS.REQUIREMENTS.ROBOTIC_TOOLS, 3, () => RequirementFunctions.DuplicantsWithSkill("Mining3")));
+            ReqDict.Add("Monuments", new TechReq(STRINGS.REQUIREMENTS.MONUMENTS, 12, () => RequirementFunctions.DuplicantsWithMorale(16)));
+
+            if (DlcManager.IsExpansion1Active())
+            {
+                ReqDict.Add("NotificationSystems", new TechReq(STRINGS.REQUIREMENTS.NOTIFICATION_SYSTEMS, 1, () => RequirementFunctions.DuplicantsWithTrait("Loner")));
+                ReqDict.Add("AdvancedNuclearResearch", new TechReq(STRINGS.REQUIREMENTS.ADVANCED_NUCLEAR_RESEARCH, 1, () => RequirementFunctions.DuplicantsWithTrait("GlowStick")));
+                ReqDict.Add("SpaceCombustion", new TechReq(STRINGS.REQUIREMENTS.SPACE_COMBUSTION, 5000, () => RequirementFunctions.Resources(SimHashes.Sucrose)));
+                ReqDict.Add("NuclearPropulsion", new TechReq(STRINGS.REQUIREMENTS.NUCLEAR_PROPULSION, 4000, () => RequirementFunctions.StoredHEPs()));
+                ReqDict.Add("NuclearRefinement", new TechReq(STRINGS.REQUIREMENTS.NUCLEAR_REFINEMENT, 2, () => RequirementFunctions.DuplicantsWithSkill("Mining4")));
+                ReqDict.Add("HighVelocityTransport", new TechReq(STRINGS.REQUIREMENTS.HIGH_VELOCITY_TRANSPORT, 10, () => RequirementFunctions.MaxColonyDistance()));
+                ReqDict.Add("Bioengineering", new TechReq(STRINGS.REQUIREMENTS.BIOENGINEERING, 1, () => RequirementFunctions.MutatedSeeds()));
+                ReqDict.Add("PortableGasses", new TechReq(STRINGS.REQUIREMENTS.PORTABLE_GASES, 4, () => RequirementFunctions.DuplicantsWithEffect("ContaminatedLungs")));
+                ReqDict.Add("LiquidDistribution", new TechReq(STRINGS.REQUIREMENTS.LIQUID_DISTRIBUTION, 1, () => RequirementFunctions.PilotWithTrait("SmallBladder")));
+                ReqDict.Add("SpacePower", new TechReq(STRINGS.REQUIREMENTS.SPACE_POWER, 1, () => RequirementFunctions.PilotWithTrait("NightLight")));
+                ReqDict.Add("BetterHydroCarbonPropulsion", new TechReq(STRINGS.REQUIREMENTS.BETTER_HYDROCARBON_PROPULSION, 5000, () => RequirementFunctions.StoredLiquid(SimHashes.LiquidOxygen)));
+                ReqDict.Add("CryoFuelPropulsion", new TechReq(STRINGS.REQUIREMENTS.CRYO_FUEL_PROPULSION, 5000, () => RequirementFunctions.StoredLiquid(SimHashes.LiquidHydrogen)));
+                ReqDict.Add("SpaceProgram", new TechReq(STRINGS.REQUIREMENTS.SPACE_PROGRAM, 1, () => RequirementFunctions.DuplicantsWithSkill("RocketPiloting1")));
+                ReqDict.Add("CrashPlan", new TechReq(STRINGS.REQUIREMENTS.CRASH_PLAN, 3, () => RequirementFunctions.WorldsWithBeds()));
+                ReqDict.Add("DurableLifeSupport", new TechReq(STRINGS.REQUIREMENTS.DURABLE_LIFE_SUPPORT, 10, () => RequirementFunctions.DuplicantsWithSkill("RocketPiloting1")));
+                ReqDict.Add("GasDistribution", new TechReq(STRINGS.REQUIREMENTS.GAS_DISTRIBUTION, 1, () => RequirementFunctions.PilotWithTrait("MouthBreather")));
+                ReqDict.Add("AdvancedScanners", new TechReq(STRINGS.REQUIREMENTS.ADVANCED_SCANNERS, 3, () => RequirementFunctions.RevealedSpaceHexes(3, 6)));
+                ReqDict.Add("SolidDistribution", new TechReq(STRINGS.REQUIREMENTS.SOLID_DISTRIBUTION, 1, () => RequirementFunctions.PilotWithTrait("CalorieBurner")));
+                ReqDict.Add("HighPressureForging", new TechReq(STRINGS.REQUIREMENTS.HIGH_PRESSURE_FORGING, 5000, () => RequirementFunctions.Resources(SimHashes.RefinedCarbon)));
+                ReqDict.Add("HighVelocityDestruction", new TechReq(STRINGS.REQUIREMENTS.HIGH_VELOCITY_DESTRUCTION, 5000, () => RequirementFunctions.Resources(SimHashes.Diamond)));
+                ReqDict.Add("NuclearResearch", new TechReq(STRINGS.REQUIREMENTS.NUCLEAR_RESEARCH, 50, () => Db.Get().Techs.resources.Where(p => p.IsComplete()).Count(), max: GVD.LowTierTechs + GVD.MidTierTechs - 1));
+                ReqDict.Add("RadiationProtection", new TechReq(STRINGS.REQUIREMENTS.RADIATION_PROTECTION, 1, () => RequirementFunctions.DuplicantsWithEffect("RadiationExposureMinor") + RequirementFunctions.DuplicantsWithEffect("RadiationExposureMajor") + RequirementFunctions.DuplicantsWithEffect("RadiationExposureExtreme")));
+                //ReqDict.Add("AdvancedSanitation", new TechReq(STRINGS.REQUIREMENTS.ADVANCED_SANITATION, 1, () => 0)); // no idea yet... :(
+            }
+            else
+            {
+                ReqDict.Add("NotificationSystems", new TechReq()); // no need to add anything here, unlocked buildings do not affect gameplay
+            }
 
             // DLC techs
-            ReqDict.Add("PortableGasses", new TechReq(STRINGS.REQUIREMENTS.PORTABLE_GASES, 4, () => RequirementFunctions.DuplicantsWithEffect("ContaminatedLungs")));
-            ReqDict.Add("LiquidDistribution", new TechReq(STRINGS.REQUIREMENTS.LIQUID_DISTRIBUTION, 1, () => RequirementFunctions.PilotWithTrait("SmallBladder")));
-            ReqDict.Add("SpacePower", new TechReq(STRINGS.REQUIREMENTS.SPACE_POWER, 1, () => RequirementFunctions.PilotWithTrait("NightLight")));
-            ReqDict.Add("HydrocarbonPropulsion", new TechReq(STRINGS.REQUIREMENTS.HYDROCARBON_PROPULSION, 5000, () => RequirementFunctions.StoredLiquid(SimHashes.LiquidOxygen)));
-            ReqDict.Add("CryoFuelPropulsion", new TechReq(STRINGS.REQUIREMENTS.CRYO_FUEL_PROPULSION, 5000, () => RequirementFunctions.StoredLiquid(SimHashes.LiquidHydrogen)));
-            ReqDict.Add("SpaceProgram", new TechReq(STRINGS.REQUIREMENTS.SPACE_PROGRAM, 1, () => RequirementFunctions.DuplicantsWithSkill("RocketPiloting1")));
-            ReqDict.Add("CrashPlan", new TechReq(STRINGS.REQUIREMENTS.CRASH_PLAN, 3, () => RequirementFunctions.WorldsWithBeds()));
-            ReqDict.Add("DurableLifeSupport", new TechReq(STRINGS.REQUIREMENTS.DURABLE_LIFE_SUPPORT, 10, () => RequirementFunctions.DuplicantsWithSkill("RocketPiloting1")));
-            ReqDict.Add("RoboticTools", new TechReq(STRINGS.REQUIREMENTS.ROBOTIC_TOOLS, 3, () => RequirementFunctions.DuplicantsWithSkill("Mining3")));
-            ReqDict.Add("GasDistribution", new TechReq(STRINGS.REQUIREMENTS.GAS_DISTRIBUTION, 1, () => RequirementFunctions.PilotWithTrait("MouthBreather")));
-            ReqDict.Add("AdvancedScanners", new TechReq(STRINGS.REQUIREMENTS.ADVANCED_SCANNERS, 3, () => RequirementFunctions.RevealedSpaceHexes(3, 6)));
-            ReqDict.Add("SolidDistribution", new TechReq(STRINGS.REQUIREMENTS.SOLID_DISTRIBUTION, 1, () => RequirementFunctions.PilotWithTrait("CalorieBurner")));
-
-            // DLC Nuclear
-            ReqDict.Add("NuclearResearch", new TechReq(STRINGS.REQUIREMENTS.NUCLEAR_RESEARCH, 50, () => Db.Get().Techs.resources.Where(p => p.IsComplete()).Count(), max: GVD.LowTierTechs + GVD.MidTierTechs - 1));
-            ReqDict.Add("RadiationProtection", new TechReq(STRINGS.REQUIREMENTS.RADIATION_PROTECTION, 1, () => RequirementFunctions.DuplicantsWithEffect("RadiationExposureMinor") + RequirementFunctions.DuplicantsWithEffect("RadiationExposureMajor") + RequirementFunctions.DuplicantsWithEffect("RadiationExposureExtreme")));
-            ReqDict.Add("Monuments", new TechReq(STRINGS.REQUIREMENTS.MONUMENTS, 12, () => RequirementFunctions.DuplicantsWithMorale(16)));
-            //ReqDict.Add("AdvancedSanitation", new TechReq(STRINGS.REQUIREMENTS.ADVANCED_SANITATION, 1, () => 0)); // no idea yet... :(
-            ReqDict.Add("NuclearRefinement", new TechReq(STRINGS.REQUIREMENTS.NUCLEAR_REFINEMENT, 2, () => RequirementFunctions.DuplicantsWithSkill("Mining4")));
         }
 
         public enum ReqUnlockedStatus

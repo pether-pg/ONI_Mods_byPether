@@ -58,14 +58,18 @@ namespace ResearchRequirements
                 else
                     exp = exp + GetElementExposition(Grid.PosToCell((KMonoBehaviour)sleepable), 4, 2);
 
+            if (exp.OtherMass + exp.OxygenMass <= 0)
+                return 0;
             return 100 * (exp.OtherMass / (exp.OtherMass + exp.OxygenMass));
         }
 
         private static Dictionary<Tag, float> StoredGases = new Dictionary<Tag, float>();
         private static Dictionary<Tag, float> StoredLiquids = new Dictionary<Tag, float>();
+        private static float TotalHEPs;
 
         public static void InitalizeDictionaries()
         {
+            TotalHEPs = 0;
             StoredGases = new Dictionary<Tag, float>();
             StoredLiquids = new Dictionary<Tag, float>();
 
@@ -107,6 +111,13 @@ namespace ResearchRequirements
             }
         }
 
+        private static void AddTotalHEPs(BuildingComplete building)
+        {
+            HighEnergyParticleStorage storage = building.gameObject.GetComponent<HighEnergyParticleStorage>();
+            if (storage != null)
+                TotalHEPs += storage.Particles;
+        }
+
         public static void CountResourcesInReservoirs()
         {
             InitalizeDictionaries();
@@ -117,6 +128,8 @@ namespace ResearchRequirements
                     PopulateDictionary(building, ref StoredGases);
                 else if (building.gameObject.name == "LiquidReservoirComplete" && StoredLiquids.Keys.Count > 0)
                     PopulateDictionary(building, ref StoredLiquids);
+                else if (building.gameObject.name == "HEPBatteryComplete")
+                    AddTotalHEPs(building);
             }
         }
 
@@ -372,6 +385,21 @@ namespace ResearchRequirements
             return 100.0f * nonManual / (Components.Generators.Count - gymGenerators);
         }
 
+        public static int DuplicantsWithTrait(string traitId)
+        {
+            int count = 0;
+            foreach (MinionResume resume in Components.MinionResumes)
+            {
+                Klei.AI.Traits traits = resume.gameObject.GetComponent<Klei.AI.Traits>();
+                if (traits != null)
+                {
+                    if (traits.HasTrait(traitId))
+                        count++;
+                }
+            }
+            return count;
+        }
+
         // DLC specific functions
 
         public static int PilotWithTrait(string traitId)
@@ -450,15 +478,25 @@ namespace ResearchRequirements
             return count;
         }
 
+        public static int MaxColonyDistance()
+        {
+            int max = 0;
+            foreach(Telepad telepad1 in Components.Telepads)
+                foreach(Telepad telepad2 in Components.Telepads)
+                {
+                    int distance = AxialUtil.GetDistance(telepad1.GetMyWorldLocation(), telepad2.GetMyWorldLocation());
+                    if (distance > max)
+                        max = distance;
+                }
+
+            return max;
+        }
+
         public static int DuplicantsWithMorale(int morale)
         {
             int count = 0;
             foreach (MinionIdentity identity in Components.MinionIdentities)
             {
-                //MinionModifiers modifiers = identity.GetComponent<MinionModifiers>();
-                //if (modifiers == null)
-                    //continue;
-
                 Klei.AI.AttributeInstance attributeInstance = Db.Get().Attributes.QualityOfLife.Lookup((Component)identity.gameObject.GetComponent<MinionModifiers>());
                 if (attributeInstance == null)
                     continue;
@@ -467,6 +505,25 @@ namespace ResearchRequirements
                 if (value >= morale)
                     count++;
             }
+            return count;
+        }
+
+        public static float StoredHEPs()
+        {
+            return TotalHEPs;
+        }
+
+        public static int MutatedSeeds()
+        {
+            int count = 0;
+
+            foreach(PlantableSeed seed in Components.PlantableSeeds)
+            {
+                MutantPlant mutant = seed.gameObject.GetComponent<MutantPlant>();
+                if (mutant != null && !mutant.IsOriginal)
+                    count++;
+            }
+
             return count;
         }
     }
