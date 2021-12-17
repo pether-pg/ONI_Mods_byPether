@@ -122,6 +122,8 @@
     <Compile Include="Patches\RoomsExpanded_Patches_Industrial.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Botanical.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Museum.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_NurseryGenetic.cs" />
+    <Compile Include="RoomTypes\RoomTypeNurseryGeneticData.cs" />
     <Compile Include="RoomTypes\RoomTypeMuseumData.cs" />
     <Compile Include="RoomTypes\RoomTypeBotanicalData.cs" />
     <Compile Include="RoomTypes\RoomTypeAquariumData.cs" />

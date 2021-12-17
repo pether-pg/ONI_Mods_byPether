@@ -102,6 +102,13 @@ namespace RoomsExpanded
                     public static LocString EFFECT = (LocString)" - Morale bonus";
                     public static LocString TOOLTIP = (LocString)"For duplicants who want to have some privacy.";
                 }
+
+                public class NURSERYGENETIC
+                {
+                    public static LocString NAME = (LocString)"Genetic Nursery";
+                    public static LocString EFFECT = (LocString)" - Increased chance for seed dropping or genetic mutation.";
+                    public static LocString TOOLTIP = (LocString)"Specialized laboratories improve harvests.";
+                }
             }
 
             public class CRITERIA
@@ -260,6 +267,18 @@ namespace RoomsExpanded
                 {
                     public static LocString NAME = (LocString)"No more than one bathroom set.";
                     public static LocString DESCRIPTION = (LocString)"The room cannot have more than one shower, sink or toilet.";
+                }
+
+                public class GENETICSTATION
+                {
+                    public static LocString NAME = (LocString)"Genetic Analysis Station.";
+                    public static LocString DESCRIPTION = (LocString)"The room must contain Genetic Analysis Station.";
+                }
+
+                public class RADIATIONSOURCE
+                {
+                    public static LocString NAME = (LocString)"Radiation Source.";
+                    public static LocString DESCRIPTION = (LocString)"At least one source of radiation.";
                 }
             }
 

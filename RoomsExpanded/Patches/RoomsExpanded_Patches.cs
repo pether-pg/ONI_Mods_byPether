@@ -68,6 +68,7 @@ namespace RoomsExpanded
                 RoomsExpanded_Patches_Bathroom.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Kitchen.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Nursery.AddRoom(ref __instance);
+                RoomsExpanded_Patches_NurseryGenetic.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Gym.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Agricultural.ModifyRoom(ref __instance);
                 RoomsExpanded_Patches_Aquarium.AddRoom(ref __instance);

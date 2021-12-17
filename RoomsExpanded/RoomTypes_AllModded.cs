@@ -122,6 +122,18 @@ namespace RoomsExpanded
             }
         }
 
+        private static RoomType prv_GeneticNursery = null;
+
+        public static RoomType GeneticNursery
+        {
+            get
+            {
+                if (prv_GeneticNursery == null)
+                    prv_GeneticNursery = new RoomTypeNurseryGeneticData().GetRoomType();
+                return prv_GeneticNursery;
+            }
+        }
+
         private static RoomType prv_Industrial = null;
         public static RoomType IndustrialRoom(RoomType[] upgrades)
         {

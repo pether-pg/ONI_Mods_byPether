@@ -85,12 +85,13 @@ namespace RoomsExpanded
             Graveyard = new RoomSettings(false, 96, 0.2f);
             Agricultural = new PlainRoomSettings(true, 96);
             Gym = new RoomSettings(true, 64, 0.1f);
-            Nursery = new RoomSettings(true, 64, 0.1f);
+            Nursery = new RoomSettings(!DlcManager.IsExpansion1Active(), 64, 0.1f);
             Aquarium = new RoomSettings(true, 96, 0.2f);
             Botanical = new PlainRoomSettings(true, 96);
             Museum = new RoomSettings(true, 96, 0.3f);
             HospitalUpdate = new PlainRoomSettings(true, 96);
             PrivateBedroom = new PlainRoomSettings(true, 32);
+            NurseryGenetic = new RoomSettings(true, 96, 0.2f);
 
             ResizeMaxRoomSize64 = 64;
             ResizeMaxRoomSize96 = 96;
@@ -158,6 +159,10 @@ namespace RoomsExpanded
         [JsonProperty]
         [Option("Private Bedroom", category: "New Room - Private Bedroom")]
         public PlainRoomSettings PrivateBedroom { get; set; }
+
+        [JsonProperty]
+        [Option("Genetic Nursery", category: "New Room - Genetic Nursery")]
+        public RoomSettings NurseryGenetic { get; set; }
 
         [JsonProperty]
         [Limit(12, 256)]

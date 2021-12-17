@@ -51,7 +51,7 @@ namespace RoomsExpanded
                             };
 
             Priority = 0;
-            Upgrades = null;
+            Upgrades = null;// new RoomType[] { RoomTypes_AllModded.GeneticNursery };
             SingleAssignee = false;
             PriorityUse = false;
             Effects = null;

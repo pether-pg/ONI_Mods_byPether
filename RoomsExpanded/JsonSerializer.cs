@@ -24,10 +24,9 @@ namespace RoomsExpanded
 
             using (StreamWriter writer = new StreamWriter(path))
             {
-                string json = JsonConvert.SerializeObject(data);
+                string json = JsonConvert.SerializeObject(data, Formatting.Indented);
                 writer.Write(json);
             }
-
         }
 
         public static T Deserialize(string path = "")
