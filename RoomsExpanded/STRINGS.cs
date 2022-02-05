@@ -109,6 +109,13 @@ namespace RoomsExpanded
                     public static LocString EFFECT = (LocString)" - Increased chance for seed dropping or genetic mutation.";
                     public static LocString TOOLTIP = (LocString)"Specialized laboratories improve harvests.";
                 }
+
+                public class MUSEUMHISTORY
+                {
+                    public static LocString NAME = (LocString)"History Museum";
+                    public static LocString EFFECT = (LocString)" - Morale bonus";
+                    public static LocString TOOLTIP = (LocString)"There used to be only rocks before somebody found bones in one of them.";
+                }
             }
 
             public class CRITERIA
@@ -280,6 +287,12 @@ namespace RoomsExpanded
                     public static LocString NAME = (LocString)"Radiation Source.";
                     public static LocString DESCRIPTION = (LocString)"At least one source of radiation.";
                 }
+
+                public class FOSSILS
+                {
+                    public static LocString NAME = (LocString)"{0} Fossils";
+                    public static LocString DESCRIPTION = (LocString)"At least {0} Fossils.";
+                }
             }
 
             public class EFFECTS
@@ -288,6 +301,11 @@ namespace RoomsExpanded
                 {
                     public static LocString NAME = (LocString)"Museum";
                     public static LocString DESCRIPTION = (LocString)"Visited Museum";
+                }
+                public class MUSEUMHISTORY
+                {
+                    public static LocString NAME = (LocString)"History Museum";
+                    public static LocString DESCRIPTION = (LocString)"Visited History Museum";
                 }
 
                 public class GRAVE_GOOD

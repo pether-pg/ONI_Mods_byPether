@@ -99,9 +99,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrossModManager.cs" />
     <Compile Include="EffectScripts\DecorProviderModifier.cs" />
     <Compile Include="EffectScripts\GraveyardEffectTrigger.cs" />
-    <Compile Include="GVD.cs" />
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="EffectScripts\MuseumEffectTrigger.cs" />
     <Compile Include="ModInfo.cs" />
@@ -123,6 +123,9 @@
     <Compile Include="Patches\RoomsExpanded_Patches_Botanical.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Museum.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_NurseryGenetic.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_MuseumHistory.cs" />
+    <Compile Include="RoomModdedConstraints.cs" />
+    <Compile Include="RoomTypes\RoomTypeMuseumHistoryData.cs" />
     <Compile Include="RoomTypes\RoomTypeNurseryGeneticData.cs" />
     <Compile Include="RoomTypes\RoomTypeMuseumData.cs" />
     <Compile Include="RoomTypes\RoomTypeBotanicalData.cs" />

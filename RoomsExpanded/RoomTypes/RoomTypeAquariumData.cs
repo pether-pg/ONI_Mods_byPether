@@ -16,16 +16,10 @@ namespace RoomsExpanded
             Tooltip = STRINGS.ROOMS.TYPES.AQUARIUM.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.AQUARIUM.EFFECT;
             Catergory = Db.Get().RoomTypeCategories.Bathroom;
-            ConstraintPrimary = new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraintTags.AquariumFeederTag)),
-                                                                (Func<Room, bool>)null,
-                                                                name: STRINGS.ROOMS.CRITERIA.FISHFEEDER.NAME,
-                                                                description: STRINGS.ROOMS.CRITERIA.FISHFEEDER.DESCRIPTION);
+            ConstraintPrimary = RoomModdedConstraints.FISH_FEEDER;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
-                                            new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraintTags.AquariumReleaseTag)),
-                                                                            (Func<Room, bool>)null,
-                                                                            name: STRINGS.ROOMS.CRITERIA.FISHRELEASE.NAME,
-                                                                            description: STRINGS.ROOMS.CRITERIA.FISHRELEASE.DESCRIPTION),
+                                            RoomModdedConstraints.FISH_RELEASE,
                                             RoomConstraints.DECORATIVE_ITEM,
                                             RoomConstraints.MINIMUM_SIZE_12,
                                             RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Aquarium.MaxSize)
@@ -35,7 +29,7 @@ namespace RoomsExpanded
                             {
                                 new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.SIZE.NAME, (object) room.cavity.numCells))),
                                 new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.CREATURE_COUNT.NAME, (object) (room.cavity.creatures.Count + room.cavity.eggs.Count))))
-        };
+                            };
 
             Priority = 0;
             Upgrades = null;

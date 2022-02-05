@@ -15,10 +15,7 @@ namespace RoomsExpanded
             Tooltip = STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT;
             Catergory = Db.Get().RoomTypeCategories.Park;
-            ConstraintPrimary = new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraintTags.GravestoneTag)), 
-                                                            (Func<Room, bool>)null, 
-                                                            name: STRINGS.ROOMS.CRITERIA.GRAVE.NAME, 
-                                                            description: STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION);
+            ConstraintPrimary = RoomModdedConstraints.GRAVESTONE;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
                                         RoomConstraints.WILDPLANT,

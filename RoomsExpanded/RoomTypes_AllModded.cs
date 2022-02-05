@@ -134,6 +134,18 @@ namespace RoomsExpanded
             }
         }
 
+        private static RoomType prv_HistoryMuseum = null;
+
+        public static RoomType HistoryMuseum
+        {
+            get
+            {
+                if (prv_HistoryMuseum == null)
+                    prv_HistoryMuseum = new RoomTypeMuseumHistoryData().GetRoomType();
+                return prv_HistoryMuseum;
+            }
+        }
+
         private static RoomType prv_Industrial = null;
         public static RoomType IndustrialRoom(RoomType[] upgrades)
         {

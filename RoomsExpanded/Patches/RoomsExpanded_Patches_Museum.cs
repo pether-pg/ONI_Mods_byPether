@@ -2,6 +2,8 @@
 using UnityEngine;
 using Klei.AI;
 using System;
+using System.Linq;
+using System.Collections.Generic;
 using Database;
 
 namespace RoomsExpanded
@@ -35,6 +37,25 @@ namespace RoomsExpanded
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.KitchenRoom, RoomTypes_AllModded.Museum);
             if(Settings.Instance.Laboratory.IncludeRoom)
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.LaboratoryRoom, RoomTypes_AllModded.Museum);
+        }
+
+        public static Effect CalculateEffectBonus(MinionModifiers modifiers)
+        {
+            AttributeInstance creativityAttrInstance = modifiers.attributes.AttributeTable.Where(p => p.Name == "Creativity").FirstOrDefault();
+            if (creativityAttrInstance == null)
+                return null;
+
+            if (!Settings.Instance.Museum.Bonus.HasValue)
+                return null;
+
+            float creativity = creativityAttrInstance.GetTotalValue();
+            float bonus = Settings.Instance.Museum.Bonus.Value;
+            int moraleBonus = Mathf.Clamp((int)Math.Ceiling(creativity * bonus), 1, 10);
+
+            Effect effect = new Effect(RoomTypeMuseumData.EffectId, STRINGS.ROOMS.EFFECTS.MUSEUM.NAME, STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION, 240, false, true, false);
+            effect.SelfModifiers = new List<AttributeModifier>();
+            effect.SelfModifiers.Add(new AttributeModifier("QualityOfLife", moraleBonus, description: STRINGS.ROOMS.EFFECTS.MUSEUM.NAME));
+            return effect;
         }
 
         [HarmonyPatch(typeof(ItemPedestalConfig))]

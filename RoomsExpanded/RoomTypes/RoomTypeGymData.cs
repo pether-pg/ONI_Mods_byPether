@@ -15,18 +15,10 @@ namespace RoomsExpanded
             Tooltip = STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.GYMROOM.EFFECT;
             Catergory = Db.Get().RoomTypeCategories.Recreation;
-            ConstraintPrimary = new RoomConstraints.Constraint((Func<KPrefabID, bool>) (bc => bc.HasTag(RoomConstraintTags.RunningWheelGeneratorTag)), 
-                                                            (Func<Room, bool>) null,
-                                                            name: STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME,
-                                                            description: STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION,
-                                                            stomp_in_conflict: new List<RoomConstraints.Constraint>()
-                                                                { RoomConstraints.REC_BUILDING });
+            ConstraintPrimary = RoomModdedConstraints.RUNNING_WHEEL;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
-                                            new RoomConstraints.Constraint((Func<KPrefabID, bool>) (bc => bc.HasTag(RoomConstraintTags.WaterCoolerTag)),
-                                                                                (Func<Room, bool>) null,
-                                                                                name: STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME,
-                                                                                description: STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION),
+                                            RoomModdedConstraints.WATER_COOLER,
                                             RoomConstraints.DECORATIVE_ITEM,
                                             RoomConstraints.MINIMUM_SIZE_12,
                                             RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Gym.MaxSize)

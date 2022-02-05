@@ -15,17 +15,10 @@ namespace RoomsExpanded
             Tooltip = STRINGS.ROOMS.TYPES.NURSERYGENETIC.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.NURSERYGENETIC.EFFECT;
             Catergory = Db.Get().RoomTypeCategories.Agricultural;
-
-            ConstraintPrimary = new RoomConstraints.Constraint(bc => bc.GetComponent<GeneticAnalysisStationWorkable>() != null,
-                                                            (Func<Room, bool>)null,
-                                                            name: STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME,
-                                                            description: STRINGS.ROOMS.CRITERIA.GENETICSTATION.DESCRIPTION);
-
-            ConstrantsAdditional = new RoomConstraints.Constraint[3] {
-                                            new RoomConstraints.Constraint(bc => bc.GetComponent<RadiationEmitter>() != null,
-                                                                (Func<Room, bool>)null,
-                                                                name: STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME,
-                                                                description: STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.DESCRIPTION),
+            ConstraintPrimary = RoomModdedConstraints.GENETIC_STATION;
+            ConstrantsAdditional = new RoomConstraints.Constraint[3] 
+                                        {
+                                            RoomModdedConstraints.RADIATION_EMMITER,
                                             RoomConstraints.MINIMUM_SIZE_12,
                                             RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.NurseryGenetic.MaxSize)
                                         };

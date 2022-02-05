@@ -8,8 +8,13 @@ namespace RoomsExpanded
     {
         public static void AddRoom(ref RoomTypes __instance)
         {
-            if (Settings.Instance.Aquarium.IncludeRoom)
-                __instance.Add(RoomTypes_AllModded.Aquarium);
+            if (!Settings.Instance.Aquarium.IncludeRoom)
+                return;
+
+            __instance.Add(RoomTypes_AllModded.Aquarium);
+
+            RoomConstraintTags.AddStompInConflict(__instance.Farm, RoomTypes_AllModded.Aquarium);
+            RoomConstraintTags.AddStompInConflict(__instance.CreaturePen, RoomTypes_AllModded.Aquarium);
         }
 
         [HarmonyPatch(typeof(FishFeederConfig))]

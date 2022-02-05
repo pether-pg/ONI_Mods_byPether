@@ -16,31 +16,10 @@ namespace RoomsExpanded
             Tooltip = STRINGS.ROOMS.TYPES.PRIVATEROOM.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT;
             Catergory = Db.Get().RoomTypeCategories.Sleep;
-            ConstraintPrimary = new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraints.ConstraintTags.Bed)
-                                                                                                || bc.HasTag(RoomConstraints.ConstraintTags.LuxuryBed)),
-                                                                                                (Func<Room, bool>)null,
-                                                                                                name: STRINGS.ROOMS.CRITERIA.ANYBED.NAME,
-                                                                                                description: STRINGS.ROOMS.CRITERIA.ANYBED.DESCRIPTION);
+            ConstraintPrimary = RoomModdedConstraints.ANY_BED;
             ConstrantsAdditional = new RoomConstraints.Constraint[6]
                                     {
-                                    new RoomConstraints.Constraint(
-                                        (Func<KPrefabID, bool>)null,
-                                        (Func<Room, bool>) (room =>
-                                                            {
-                                                                int count = 0;
-                                                                if(room != null)
-                                                                    foreach(KPrefabID building in room.buildings)
-                                                                        if(building != null)
-                                                                        {
-                                                                            Bed bed = building.GetComponent<Bed>();
-                                                                            if(bed != null)
-                                                                                count ++;
-                                                                        }
-                                                                return count == 1;
-                                                            }),
-                                        name: STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME,
-                                        description: STRINGS.ROOMS.CRITERIA.ONLYONEBED.DESCRIPTION),
-
+                                    RoomModdedConstraints.ONLY_ONE_BED,
                                     RoomConstraints.DECORATIVE_ITEM_20,
                                     RoomConstraints.NO_INDUSTRIAL_MACHINERY,
                                     RoomConstraints.CEILING_HEIGHT_4,

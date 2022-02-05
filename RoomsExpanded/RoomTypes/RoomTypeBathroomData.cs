@@ -16,11 +16,7 @@ namespace RoomsExpanded
             Tooltip = STRINGS.ROOMS.TYPES.SHOWERROOM.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT;
             Catergory = Db.Get().RoomTypeCategories.Bathroom;
-            ConstraintPrimary = new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraintTags.BathroomTag) 
-                                                                                                && !bc.HasTag(RoomConstraints.ConstraintTags.FlushToilet)), 
-                                                                                                (Func<Room, bool>)null, 
-                                                                                                name: STRINGS.ROOMS.CRITERIA.SHOWER.NAME, 
-                                                                                                description: STRINGS.ROOMS.CRITERIA.SHOWER.DESCRIPTION);
+            ConstraintPrimary = RoomModdedConstraints.BATHROOM;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                             {
                                             RoomConstraints.DECORATIVE_ITEM,

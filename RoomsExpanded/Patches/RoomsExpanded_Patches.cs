@@ -64,6 +64,7 @@ namespace RoomsExpanded
             {
                 SortingCounter.Init();
 
+                Debug.Log("RoomsExpanded: RoomTypes_Constructor_Patch Postfix");
                 RoomsExpanded_Patches_Laboratory.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Bathroom.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Kitchen.AddRoom(ref __instance);
@@ -77,6 +78,7 @@ namespace RoomsExpanded
                 RoomsExpanded_Patches_Hospital.UpdateRoom(ref __instance);
                 RoomsExpanded_Patches_Industrial.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Museum.AddRoom(ref __instance);
+                RoomsExpanded_Patches_MuseumHistory.AddRoom(ref __instance);
                 RoomsExpanded_Patches_PrivateRoom.AddRoom(ref __instance);
 
                 // Temporary "Room Size" mod functionality restored for DLC

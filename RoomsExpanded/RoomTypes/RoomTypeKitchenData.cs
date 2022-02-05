@@ -14,16 +14,10 @@ namespace RoomsExpanded
             Tooltip = STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.KITCHEN.EFFECT;
             Catergory = Db.Get().RoomTypeCategories.Agricultural;
-            ConstraintPrimary = new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraintTags.KitchenBuildingTag)), 
-                                                                                            (Func<Room, bool>)null, 
-                                                                                            name: STRINGS.ROOMS.CRITERIA.COOKING.NAME, 
-                                                                                            description: STRINGS.ROOMS.CRITERIA.COOKING.DESCRIPTION);
+            ConstraintPrimary = RoomModdedConstraints.COOKING_STATION;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
-                                        new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.GetComponent<Refrigerator>() != null),
-                                                                                            (Func<Room, bool>)null,
-                                                                                            name: STRINGS.ROOMS.CRITERIA.FRIDGE.NAME,
-                                                                                            description: STRINGS.ROOMS.CRITERIA.FRIDGE.DESCRIPTION),
+                                        RoomModdedConstraints.FRIDGE,
                                         RoomConstraints.DECORATIVE_ITEM,
                                         RoomConstraints.MINIMUM_SIZE_12,
                                         RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Kitchen.MaxSize)

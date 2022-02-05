@@ -14,10 +14,7 @@ namespace RoomsExpanded
             Tooltip = STRINGS.ROOMS.TYPES.INDUSTRIAL.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.INDUSTRIAL.EFFECT;
             Catergory = Db.Get().RoomTypeCategories.Industrial;
-            ConstraintPrimary = new RoomConstraints.Constraint((Func<KPrefabID, bool>)(bc => bc.HasTag(RoomConstraints.ConstraintTags.IndustrialMachinery)),
-                                                                                            (Func<Room, bool>)null,
-                                                                                            name: STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME,
-                                                                                            description: STRINGS.ROOMS.CRITERIA.INDUSTRIAL.DESCRIPTION);
+            ConstraintPrimary = RoomModdedConstraints.INDUSTRIAL;
             ConstrantsAdditional = new RoomConstraints.Constraint[2]
                                     {
                                     RoomConstraints.MINIMUM_SIZE_12,

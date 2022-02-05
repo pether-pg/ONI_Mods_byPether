@@ -89,6 +89,7 @@ namespace RoomsExpanded
             Aquarium = new RoomSettings(true, 96, 0.2f);
             Botanical = new PlainRoomSettings(true, 96);
             Museum = new RoomSettings(true, 96, 0.3f);
+            MuseumHistory = new RoomSettings(true, 96, 0.3f);
             HospitalUpdate = new PlainRoomSettings(true, 96);
             PrivateBedroom = new PlainRoomSettings(true, 32);
             NurseryGenetic = new RoomSettings(true, 96, 0.2f);
@@ -163,6 +164,10 @@ namespace RoomsExpanded
         [JsonProperty]
         [Option("Genetic Nursery", category: "New Room - Genetic Nursery")]
         public RoomSettings NurseryGenetic { get; set; }
+
+        [JsonProperty]
+        [Option("History Museum", category: "New Room - History Museum")]
+        public RoomSettings MuseumHistory { get; set; }
 
         [JsonProperty]
         [Limit(12, 256)]

@@ -13,6 +13,7 @@ namespace RoomsExpanded
         public static readonly int CreaturePenSortKey = 12;
         public static readonly int RecreationRoom = 14;
         public static readonly int ParkSortKey = 15;
+        public static readonly int MuseumSortKey = ParkSortKey + 2;
 
         private static int value = 0;
 

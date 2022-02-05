@@ -18,34 +18,28 @@ namespace RoomsExpanded
 
         private void TriggerRoomEffects(object data)
         {
-            if (!RoomTypes_AllModded.IsInTheRoom(this, RoomTypeMuseumData.RoomId))
+            if (!RoomTypes_AllModded.IsInTheRoom(this, RoomTypeMuseumData.RoomId) 
+                && !RoomTypes_AllModded.IsInTheRoom(this, RoomTypeMuseumHistoryData.RoomId))
                 return;
 
-            if (!Settings.Instance.Museum.Bonus.HasValue)
-                return;
+            bool isHistory = RoomTypes_AllModded.IsInTheRoom(this, RoomTypeMuseumHistoryData.RoomId);
 
             GameObject gameObject = (GameObject)data;
             MinionModifiers modifiers = gameObject.GetComponent<MinionModifiers>();
             if (modifiers == null)
                 return;
 
-            AttributeInstance attributeInstance = modifiers.attributes.AttributeTable.Where(p => p.Name == "Creativity").FirstOrDefault();
-            if (attributeInstance == null)
+            Effect effect = isHistory ? RoomsExpanded_Patches_MuseumHistory.CalculateEffectBonus(modifiers)
+                                        : RoomsExpanded_Patches_Museum.CalculateEffectBonus(modifiers);
+
+            if(effect == null)
+            {
+                Debug.Log($"{ModInfo.Namespace}: Error - could not create effect for {(isHistory ? "History " : "")}Museum");
                 return;
-
-            float creativity = attributeInstance.GetTotalValue();
-            int moraleBonus = (int)Math.Ceiling(creativity * Settings.Instance.Museum.Bonus.Value);
-            if (moraleBonus < 1)
-                moraleBonus = 1;
-            if (moraleBonus > 10)
-                moraleBonus = 10;
-
-            Effect effect = new Effect(RoomTypeMuseumData.EffectId, STRINGS.ROOMS.EFFECTS.MUSEUM.NAME, STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION, 240, false, true, false);
-            effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier("QualityOfLife", moraleBonus, description: STRINGS.ROOMS.EFFECTS.MUSEUM.NAME));
+            }
 
             Effects effects = gameObject.GetComponent<Effects>();
-            if(effects != null && !effects.HasEffect(RoomTypeMuseumData.EffectId))
+            if(effects != null && !effects.HasEffect(effect.Id))
                 effects.Add(effect, true);
         }
     }

@@ -3,27 +3,27 @@ using STRINGS;
 
 namespace RoomsExpanded
 {
-    class RoomTypeMuseumData : RoomTypeAbstractData
+    class RoomTypeMuseumHistoryData : RoomTypeAbstractData
     {
-        public static readonly string RoomId = "MuseumRoom";
-        public static readonly string EffectId = "MuseumEffectId";
+        public static readonly string RoomId = "HistoryMuseumRoom";
+        public static readonly string EffectId = "HistoryMuseumEffectId";
 
 
-        public RoomTypeMuseumData()
+        public RoomTypeMuseumHistoryData()
         {
             Id = RoomId;
-            Name = STRINGS.ROOMS.TYPES.MUSEUM.NAME;
-            Tooltip = STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP;
-            Effect = STRINGS.ROOMS.TYPES.MUSEUM.EFFECT;
+            Name = STRINGS.ROOMS.TYPES.MUSEUMHISTORY.NAME;
+            Tooltip = STRINGS.ROOMS.TYPES.MUSEUMHISTORY.TOOLTIP;
+            Effect = STRINGS.ROOMS.TYPES.MUSEUMHISTORY.EFFECT;
             Catergory = Db.Get().RoomTypeCategories.Hospital;
             ConstraintPrimary = RoomModdedConstraints.PEDESTAL;
             ConstrantsAdditional = new RoomConstraints.Constraint[5]
                                         {
-                                        RoomModdedConstraints.MASTERPIECES,
+                                        RoomModdedConstraints.FOSSILS,
                                         RoomConstraints.LIGHT,
                                         RoomConstraints.NO_INDUSTRIAL_MACHINERY,
                                         RoomConstraints.MINIMUM_SIZE_32,
-                                        RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Museum.MaxSize)
+                                        RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.MuseumHistory.MaxSize)
                                         };
 
             RoomDetails = new RoomDetails.Detail[2]
@@ -33,11 +33,11 @@ namespace RoomsExpanded
                                 };
 
             Priority = 1;
-            Upgrades = new RoomType[] { RoomTypes_AllModded.HistoryMuseum };
+            Upgrades = null;
             SingleAssignee = false;
             PriorityUse = false;
             Effects = null;
-            SortKey = SortingCounter.GetAndIncrement(SortingCounter.MuseumSortKey);
+            SortKey = SortingCounter.GetAndIncrement(SortingCounter.MuseumSortKey + 1);
         }
     }
 }
