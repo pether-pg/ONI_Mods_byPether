@@ -14,18 +14,30 @@ namespace DiseasesExpanded
         public int EfficiencyDivider = 500;
         private int percentProgress = -1;
 
-        private Dictionary<byte, string> SpawnedFlasks = new Dictionary<byte, string>()
-        {
-            { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
-            { GermIdx.PollenGermsIdx, PollenFlask.ID },
-            { GermIdx.SlimelungIdx, SlimelungFlask.ID },
-            { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
-            { GermIdx.RadiationPoisoningIdx, RadiationGermsFlask.ID },
-            { GermIdx.BogInsectsIdx, BogBugsFlask.ID },
-            { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
-            { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
-            { GermIdx.HungerGermsIdx, HungermsFlask.ID }
-        };
+        private Dictionary<byte, string> SpawnedFlasks = DlcManager.IsExpansion1Active() ?
+            new Dictionary<byte, string>()
+            {
+                { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
+                { GermIdx.PollenGermsIdx, PollenFlask.ID },
+                { GermIdx.SlimelungIdx, SlimelungFlask.ID },
+                { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
+                { GermIdx.RadiationPoisoningIdx, RadiationGermsFlask.ID },
+                { GermIdx.BogInsectsIdx, BogBugsFlask.ID },
+                { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
+                { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
+                { GermIdx.HungerGermsIdx, HungermsFlask.ID }
+            }
+            :
+            new Dictionary<byte, string>()
+            {
+                { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
+                { GermIdx.PollenGermsIdx, PollenFlask.ID },
+                { GermIdx.SlimelungIdx, SlimelungFlask.ID },
+                { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
+                { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
+                { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
+                { GermIdx.HungerGermsIdx, HungermsFlask.ID }
+            };
 
         public void Sim1000ms(float dt)
         {

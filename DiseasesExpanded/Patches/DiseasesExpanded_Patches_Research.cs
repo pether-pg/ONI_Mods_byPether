@@ -77,7 +77,7 @@ namespace DiseasesExpanded
             public const string SpriteName = "medical_research";
             public static void Postfix()
             {
-                string maindir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string maindir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 string path = Path.Combine(new string[] { maindir, "anim", "assets", "custom_research_icon", "custom_research_icon.png" });
                 byte[] data = File.ReadAllBytes(path);
                 Texture2D tex = new Texture2D(256, 256);

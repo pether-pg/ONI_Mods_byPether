@@ -56,7 +56,7 @@ namespace DiseasesExpanded
         {
             get
             {
-                if (_radPoisoning == Invalid)
+                if (_radPoisoning == Invalid && DlcManager.IsExpansion1Active())
                     _radPoisoning = Db.Get().Diseases.GetIndex(Db.Get().Diseases.RadiationPoisoning.id);
                 return _radPoisoning;
             }
@@ -78,7 +78,7 @@ namespace DiseasesExpanded
         {
             get
             {
-                if (_bogInsects == Invalid)
+                if (_bogInsects == Invalid && DlcManager.IsExpansion1Active())
                     _bogInsects = Db.Get().Diseases.GetIndex(BogInsects.ID);
                 return _bogInsects;
             }
