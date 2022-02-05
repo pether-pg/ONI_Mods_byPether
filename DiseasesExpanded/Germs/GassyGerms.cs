@@ -18,7 +18,8 @@ namespace DiseasesExpanded
                 base_resistance = 2,
                 excluded_effects = new List<string>()
                     {
-                      GasSickness.RECOVERY_ID
+                      GasSickness.RECOVERY_ID,
+                      GassyVaccineConfig.EffectID
                     }
             };
         }

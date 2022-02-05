@@ -19,7 +19,8 @@ namespace DiseasesExpanded
                 excluded_effects = new List<string>()
                     {
                       HungerSickness.RECOVERY_ID,
-                      SapShotConfig.EffectID
+                      SapShotConfig.EffectID,
+                      HungermsVaccineConfig.EffectID
                     }
             };
         }

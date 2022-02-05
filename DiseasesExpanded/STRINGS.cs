@@ -62,6 +62,14 @@ namespace DiseasesExpanded
                 public static LocString DESCRIPTION = (LocString)"The hunger of the Experiment 52B seem to be infectious...";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Everlasting Hunger.";
             }
+
+            public class TEMPORALDISPLACEMENT
+            {
+                public static LocString NAME = (LocString) UI.FormatAsLink("Temporal Displacement", nameof(TEMPORALDISPLACEMENT));
+                public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Sometimes displace duplicant to another location";
+                public static LocString DESCRIPTION = (LocString)"Sometimes displace duplicant to another location";
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Temporal Displacement.";
+            }
         }
 
         public class EFFECTS
@@ -115,6 +123,53 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Allergy Immuno Booster";
                 public static LocString DESC = (LocString)"Prevents allergic reactions in the future.";
             }
+
+            public class VACCINE
+            {
+                public static LocString NAME = (LocString)"{0} Vaccine";
+                public static LocString DESC = (LocString)"Grants immunity to {0} disease.";
+            }
+        }
+
+        public class GERMFLASK
+        {
+            public static LocString NAME = (LocString)"{0} Flask";
+            public static LocString DESC = (LocString)"Contains gathered {0} germs.";
+            public static LocString DESC_NOGERM = (LocString)"Contains gathered {0}.";
+        }
+
+        public class MEDICALRESEARCH
+        {
+            public static LocString NAME = (LocString)"Medical Research";
+            public static LocString DESC = (LocString)(UI.FormatAsLink("Medical Research", nameof(RESEARCH)) + " is required to unlock medical technologies.\nIt can be conducted at an " + UI.FormatAsLink("Apothecary", "APOTHECARY") + " or obtained by doctors while tending their patients.");
+            public static LocString RECIPEDESC = (LocString)"Unlocks medical technologies.";
+        }
+
+        public class BUILDINGS
+        {
+            public class GERMCATCHER
+            {
+                public static LocString NAME = (LocString)"Germcatcher";
+                public static LocString DESC = (LocString)"Gathers ambient germs and stores them in the flask for future research and vaccine production.";
+                public static LocString EFFECCT = (LocString)"Germcatchers collect germs for medical study and vaccine production.";
+            }
+
+            public class VACCINEAPOTHECARY
+            {
+                public static LocString NAME = (LocString)"Vaccine Apothecary";
+                public static LocString DESC = (LocString)"Vaccine Apothecary uses radiation to weaken germs stored in a flasks to produce life-saving vaccines. \n\nIt must be operated by highly-trained medical personel and it is suggested to use radiation protection for the time of vaccine preparation.";
+                public static LocString EFFECCT = (LocString)"Vaccines produced here can grant your duplicants immunity for various diseases.";
+            }
+        }
+
+        public class STATUSITEMS
+        {
+            public class GATHERING
+            {
+                public static LocString NAME = (LocString)"Gathering";
+                public static LocString TOOLTIP = (LocString)"This building is currently gathering ambient germs.";
+                public static LocString PROGRESS = (LocString)" {GERMS} - {PROGRESS}%";
+            }
         }
 
         public class TRAITS
@@ -122,9 +177,9 @@ namespace DiseasesExpanded
             public class INSECTALLERGIES
             {
                 public static LocString NAME = (LocString)"Insect Allergies";
-                public static LocString DESC = (LocString)("Insects bites will cause additional damage to this Duplicant.");
+                public static LocString DESC = (LocString)"Insects bites will cause additional damage to this Duplicant.";
                 public static LocString SHORT_DESC = (LocString)"Allergic reaction to insect bites";
-                public static LocString SHORT_DESC_TOOLTIP = "Insect Allergies make small bites more dangerous.";
+                public static LocString SHORT_DESC_TOOLTIP = (LocString)"Insect Allergies make small bites more dangerous.";
             }
         }
 

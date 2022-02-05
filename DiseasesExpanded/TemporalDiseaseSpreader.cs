@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using Klei.AI;
 
 namespace DiseasesExpanded
 {
@@ -20,7 +21,7 @@ namespace DiseasesExpanded
         public void OnNewDay(object data)
         {
             foreach(MinionIdentity minion in Components.MinionIdentities)
-                if (GetMinionInfectionChance(minion) > UnityEngine.Random.Range(0f, 100f))
+                if (true || GetMinionInfectionChance(minion) > UnityEngine.Random.Range(0f, 100f))
                     InfectMinion(minion);
         }
 
@@ -55,7 +56,22 @@ namespace DiseasesExpanded
 
         public void InfectMinion(MinionIdentity minion)
         {
-            Debug.Log($"{ModInfo.Namespace}: Duplicant {minion.name} infected");
+            if (minion == null) 
+                return;
+
+            Modifiers modifiers = minion.GetComponent<Modifiers>();
+            if (modifiers == null) 
+                return;
+
+            Sicknesses diseases = modifiers.GetSicknesses();
+            if (diseases == null) 
+                return;
+
+            //Vector3 initial = minion.gameObject.transform.position;
+            //minion.gameObject.transform.position = initial + new Vector3(-4, -5, 0);
+
+            //if (!diseases.Has(Db.Get().Sicknesses.Get(TemporalDisplacementSickness.ID)))
+            //    diseases.Infect(new SicknessExposureInfo(TemporalDisplacementSickness.ID, "Temporal Anomaly"));
         }
     }
 }

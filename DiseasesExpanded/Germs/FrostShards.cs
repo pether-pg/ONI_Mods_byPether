@@ -13,7 +13,7 @@ namespace DiseasesExpanded
             {
                 germ_id = FrostShards.ID,
                 sickness_id = FrostSickness.ID,
-                exposure_threshold = 10,
+                exposure_threshold = 1000,
                 infect_immediately = true,
                 excluded_traits = new List<string>() { },
                 base_resistance = 2,

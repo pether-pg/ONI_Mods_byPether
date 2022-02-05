@@ -35,7 +35,6 @@ namespace DiseasesExpanded
                 (HashedString) "idle_default",
                 (HashedString) "idle_pst"
             }, 15f));
-            this.AddSicknessComponent((Sickness.SicknessComponent)new BogSickness.BogSicknessComponent());
         }
     }
 }
