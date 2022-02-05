@@ -33,6 +33,25 @@ namespace ConfigurableBuildMenus
 
         private void MakeDefaultLists()
         {
+            Instruction = new InstructionHelper() {
+                NewBuildMenuInstruction = new InstructionHelper.NewBuildMenuHelper()
+                {
+                    MenuId = "required. Id for your new menu, pick any one you like.",
+                    JustAfter = "Id of a menu. Your menu will be placed just after the specified one. Optional.",
+                    OnListBeginning = "if set to true, your menu will be placed on the very beginning, ignoring JustAfter value. Optional.",
+                    Name = "Name of your new menu that will be displayed in your game. Can be anything you like.",
+                    Tooltip = "Tooltip text that will be displayed above your menu. Can be anything you like.",
+                    Icon = "icon name for your menu. You can use existing game icons or name of the file in the \"icons\" directory under mod path (without .png suffix here)"
+                },
+                MoveBuildingItemInstruction = new InstructionHelper.MoveBuildingItemHelper()
+                {
+                    BuildingId = "required. Must match Id of an existing building you want to customize",
+                    MoveToMenu = "Id of the menu you want to move your building to (by default on the end of the list). Optional - if not provided, the building will be removed",
+                    JustAfter = "Id of a building. Your building will be placed just after the specified one. Optional.",
+                    OnListBeginning = "if set to true, your building will be placed on the very beginning of the menu, ignoring JustAfter value. Optional. In case many buildings have this, all of them will end up on the beginning of the menu and the last building in the config will be first in the menu."
+                }
+            };
+
             NewBuildMenus = new List<NewBuildMenu>() {
                 new NewBuildMenu() { MenuId = "DecorMenu",
                                     JustAfter = "Furniture",
@@ -74,12 +93,7 @@ namespace ConfigurableBuildMenus
                 new MoveBuildingItem() { BuildingId = "ItemPedestal", MoveToMenu = "DecorMenu"},
                 new MoveBuildingItem() { BuildingId = "MonumentBottom", MoveToMenu = "DecorMenu"},
                 new MoveBuildingItem() { BuildingId = "MonumentMiddle", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "MonumentTop", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "ParkSign", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "OreScrubber"},
-                new MoveBuildingItem() { BuildingId = "CreatureTrap"},
-                new MoveBuildingItem() { BuildingId = "FishTrap"},
-                new MoveBuildingItem() { BuildingId = "FlyingCreatureBait"}
+                new MoveBuildingItem() { BuildingId = "MonumentTop", MoveToMenu = "DecorMenu"}
             };
         }
 
@@ -90,8 +104,33 @@ namespace ConfigurableBuildMenus
             return;
         }
 
+        public InstructionHelper Instruction;
         public List<NewBuildMenu> NewBuildMenus;
         public List<MoveBuildingItem> MoveBuildingItems;
+
+        public class InstructionHelper
+        {
+            public NewBuildMenuHelper NewBuildMenuInstruction;
+            public MoveBuildingItemHelper MoveBuildingItemInstruction;
+
+            public class NewBuildMenuHelper
+            {
+                public string MenuId;
+                public string JustAfter;
+                public string OnListBeginning;
+                public string Name;
+                public string Tooltip;
+                public string Icon;
+            }
+
+            public class MoveBuildingItemHelper
+            {
+                public string BuildingId;
+                public string MoveToMenu;
+                public string JustAfter;
+                public string OnListBeginning;
+            }
+        }
 
         public class NewBuildMenu
         {

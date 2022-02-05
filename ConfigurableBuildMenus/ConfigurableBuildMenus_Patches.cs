@@ -27,5 +27,16 @@ namespace ConfigurableBuildMenus
                     PlanorderHelper.Move(movedItem);
             }
         }
+
+        [HarmonyPatch(typeof(Assets))]
+        [HarmonyPatch("OnPrefabInit")]
+        public class Assets_OnPrefabInit_Patch
+        {
+            public static void Postfix()
+            {
+                foreach (Config.NewBuildMenu newBuildMenu in Config.Instance.NewBuildMenus)
+                    PlanorderHelper.LoadIcon(newBuildMenu);
+            }
+        }
     }
 }

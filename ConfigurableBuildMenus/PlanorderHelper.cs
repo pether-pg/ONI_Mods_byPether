@@ -1,6 +1,8 @@
-﻿using System;
+﻿using System.IO;
+using System.Reflection;
 using System.Collections.Generic;
 using TUNING;
+using UnityEngine;
 
 namespace ConfigurableBuildMenus
 {
@@ -104,6 +106,44 @@ namespace ConfigurableBuildMenus
                         break;
                     }
                 }
+        }
+
+        public static string GetIconDirectory()
+        {
+            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            string dir = Path.Combine(path, "icons");
+            return dir;
+        }
+
+        public static string GetPathForIcon(string iconName)
+        {
+            string iconFile = string.Format("{0}.png", iconName);
+            string path = Path.Combine(GetIconDirectory(), iconFile);
+            return path;
+        }
+
+        public static void LoadIcon(Config.NewBuildMenu newBuildMenu)
+        {
+            HashedString key = new HashedString(newBuildMenu.Icon);
+            string path = GetPathForIcon(newBuildMenu.Icon);
+            
+            if(!File.Exists(path))
+            {
+                Debug.Log($"{ModInfo.Namespace}: Could not find file {path}");
+                return;
+            }
+            if(Assets.Sprites.ContainsKey(key))
+            {
+                Debug.Log($"{ModInfo.Namespace}: Assets.Sprites already contains {newBuildMenu.Icon} icon. Your file will not be loaded.");
+                return;
+            }
+
+            byte[] data = File.ReadAllBytes(path);
+            Texture2D tex = new Texture2D(2, 2);
+            tex.LoadImage(data);
+            Sprite sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+            Assets.Sprites.Add(key, sprite);
+            Debug.Log($"{ModInfo.Namespace}: Loaded icon file {path}");
         }
     }
 }
