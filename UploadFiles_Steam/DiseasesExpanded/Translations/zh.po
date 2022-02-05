@@ -1,0 +1,256 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Ventulus\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC"
+msgid "Prevents allergic reactions in the future."
+msgstr "防止将来出现过敏反应。"
+
+#. DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.NAME"
+msgid "Allergy Immuno Booster"
+msgstr "过敏症免疫增强剂"
+
+#. DiseasesExpanded.STRINGS.CURES.GASCURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.GASCURE.DESC"
+msgid ""
+"If a berry sprouts in a duplicant's belly, their farts will smell like "
+"flowers"
+msgstr "如果复制人的肚子里长出了浆果，他们的屁就会有花香"
+
+#. DiseasesExpanded.STRINGS.CURES.GASCURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.GASCURE.NAME"
+msgid "Sprouting Tablet"
+msgstr "发芽药片"
+
+#. DiseasesExpanded.STRINGS.CURES.MUDMASK.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUDMASK.DESC"
+msgid "When covered in mud, duplicants are not so tasty for Bog Bugs."
+msgstr "当被泥土覆盖时，复制人对沼泽虫来说就不那么可口了。"
+
+#. DiseasesExpanded.STRINGS.CURES.MUDMASK.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUDMASK.NAME"
+msgid "Muddy Salve"
+msgstr "泥浆药膏"
+
+#. DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC"
+msgid ""
+"Thick and full of shugar, Sweet Sap Shot condenses many calories into one "
+"syringe to quickly remove overwhelming hunger."
+msgstr ""
+"甜树汁注射剂浓稠而充满糖分，将许多热量浓缩在一个注射器中，迅速消除压倒性的饥"
+"饿感。"
+
+#. DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME"
+msgid "Sweet Sap Shot"
+msgstr "甜树汁注射剂"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION"
+msgid ""
+"Bog Bugs are lured by Bog Bucket sweet scent, but they can also feed on "
+"duplicants..."
+msgstr "沼虫被沼浆笼的甜味所吸引，但它们也可以以复制人为食。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Annoying bites of small Bog Bugs"
+msgstr "恼人的小沼虫的叮咬"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area can result in Bog Bugs bites"
+msgstr "此地导致沼虫叮咬"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.NAME"
+msgid "<link=\"BOGSICKNESS\">Bog Bugs Infestation</link>"
+msgstr "<link=\"BOGSICKNESS\">沼虫叮咬</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT"
+msgid "Bog Bug Bite!"
+msgstr "沼虫叮咬！"
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION"
+msgid ""
+"Little shards of frost cover duplicant's skin in a pretty patterns, reducing "
+"their resistance for temperature and diseases."
+msgstr ""
+"小小的冰霜碎片以漂亮的图案覆盖在复制人的皮肤上，降低他们对温度和疾病的抵抗"
+"力。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Pretty, but pretty cold frost patterns on the skin."
+msgstr "漂亮，但在皮肤上有相当冷的冰霜图案。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area causes Frost-Covered Skin."
+msgstr "此地导致冰霜皮肤。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.NAME"
+msgid "<link=\"FROSTSICKNESS\">Frost-Covered Skin</link>"
+msgstr "<link=\"FROSTSICKNESS\">冰霜皮肤</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTION"
+msgid "Whatever it is in the Gas Grass, it makes everything around fart..."
+msgstr "不管释气草里是什么，它使周围的一切都在放屁..."
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Makes duplicant fart like a mad Moo."
+msgstr "使得复制人像一个疯狂的释气海牛一样放屁。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area causes Moomoza."
+msgstr "此地导致不停放屁。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.NAME"
+msgid "<link=\"GASSICKNESS\">Moomoza</link>"
+msgstr "<link=\"GASSICKNESS\">不停放屁</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION"
+msgid "The hunger of the Experiment 52B seem to be infectious..."
+msgstr "实验体52B的饥饿似乎是有传染性的……"
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Makes duplicant hungry all the time."
+msgstr "使得复制人一直处于饥饿状态。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area causes Everlasting Hunger."
+msgstr "此地导致永远饥饿。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.NAME"
+msgid "<link=\"HUNGERSICKNESS\">Everlasting Hunger</link>"
+msgstr "<link=\"HUNGERSICKNESS\">永远饥饿</link>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.DESC"
+msgid "This duplicant just recovered from Bog Bugs Infestation."
+msgstr "这个复制人刚从沼虫叮咬中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.NAME"
+msgid "Bog Bugs Infestation Recovery"
+msgstr "沼虫叮咬恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.DESC"
+msgid "This duplicant just recovered from Frost-Covered Skin."
+msgstr "这个复制人刚从冰霜皮肤中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.NAME"
+msgid "Frost-Covered Skin Recovery"
+msgstr "冰霜皮肤恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.DESC"
+msgid "This duplicant just recovered from Moomoza."
+msgstr "这个复制人刚从不停放屁中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.NAME"
+msgid "Moomoza Recovery"
+msgstr "不停放屁恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.DESC"
+msgid "This duplicant just recovered from Everlasting Hunger."
+msgstr "这个复制人刚从永远饥饿中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.NAME"
+msgid "Everlasting Hunger Recovery"
+msgstr "永远饥饿恢复"
+
+#. DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT"
+msgid "Bog Bugs present.\n"
+msgstr "沼虫存在\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.NAME"
+msgid "<link=\"BOGINSECTS\">Bog Bugs</link>"
+msgstr "<link=\"BOGINSECTS\">沼虫</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT"
+msgid "Frost Shards present.\n"
+msgstr "冰霜碎片存在\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.NAME"
+msgid "<link=\"FROSTHARDS\">Frost Shards</link>"
+msgstr "<link=\"FROSTHARDS\">冰霜碎片</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT"
+msgid "GassyGerms present\n"
+msgstr "放屁菌存在\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.NAME"
+msgid "<link=\"GASSYGERMS\">Gassy Germs</link>"
+msgstr "<link=\"GASSYGERMS\">放屁菌</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT"
+msgid "Gassy Germs present\n"
+msgstr "饥饿菌存在\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.NAME"
+msgid "<link=\"HUNGERGERMS\">Hungerms</link>"
+msgstr "<link=\"HUNGERGERMS\">饥饿菌</link>"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.DESC"
+msgid "Insects bites will cause additional damage to this Duplicant."
+msgstr "昆虫的叮咬会对这个复制人造成额外的伤害。"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.NAME
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.NAME"
+msgid "Insect Allergies"
+msgstr "昆虫过敏"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC"
+msgid "Allergic reaction to insect bites"
+msgstr "对昆虫叮咬的过敏反应"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP"
+msgid "Insect Allergies make small bites more dangerous."
+msgstr "昆虫过敏使小的叮咬更加危险。"
+
+#. DiseasesExpanded.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "DiseasesExpanded.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr "Ventulus"
