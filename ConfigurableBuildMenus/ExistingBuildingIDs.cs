@@ -13,7 +13,7 @@ namespace ConfigurableBuildMenus
         {
             public string Name;
             public string Icon;
-            public List<string> Buildings;
+            public List<KeyValuePair<string, string>> BuildingsAndCategories;
         }
 
         public ExistingBuildingIDs()
@@ -46,7 +46,7 @@ namespace ConfigurableBuildMenus
                 {
                     Name = index >= 0 ? buildingCategories[index] : "(unknown category)",
                     Icon = iconNameMap != null && iconNameMap.ContainsKey(BUILDINGS.PLANORDER[i].category) ? iconNameMap[BUILDINGS.PLANORDER[i].category] : "(unknown icon)",
-                    Buildings = new List<string>(BUILDINGS.PLANORDER[i].data)
+                    BuildingsAndCategories = new List<KeyValuePair<string, string>>(BUILDINGS.PLANORDER[i].buildingAndSubcategoryData)
                 });
             }
         }

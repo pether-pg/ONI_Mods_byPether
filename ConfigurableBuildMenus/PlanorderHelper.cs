@@ -70,7 +70,7 @@ namespace ConfigurableBuildMenus
                 Debug.Log($"{ModInfo.Namespace}: Could not find building {movedItem.BuildingId}");
                 return;
             }
-            BUILDINGS.PLANORDER[oldCategory].data.Remove(movedItem.BuildingId);
+            BUILDINGS.PLANORDER[oldCategory].buildingAndSubcategoryData.RemoveAll(x => x.Key == movedItem.BuildingId);
         }
 
         public static void Add(Config.MoveBuildingItem movedItem)
@@ -88,21 +88,26 @@ namespace ConfigurableBuildMenus
                 return;
             }
 
+            string category = "uncategorized"; 
+            if(BUILDINGS.PLANSUBCATEGORYSORTING.ContainsKey(movedItem.BuildingId))
+                category = BUILDINGS.PLANSUBCATEGORYSORTING[movedItem.BuildingId];
+            KeyValuePair<string, string> movedPair = new KeyValuePair<string, string>(movedItem.BuildingId, category);
+
             if (movedItem.OnListBeginning)
-                BUILDINGS.PLANORDER[newCategory].data.Insert(0, movedItem.BuildingId);
+                BUILDINGS.PLANORDER[newCategory].buildingAndSubcategoryData.Insert(0, movedPair);
             else if (string.IsNullOrEmpty(movedItem.JustAfter))
-                BUILDINGS.PLANORDER[newCategory].data.Add(movedItem.BuildingId);
+                BUILDINGS.PLANORDER[newCategory].buildingAndSubcategoryData.Add(movedPair);
             else
-                for (int i = 0; i < BUILDINGS.PLANORDER[newCategory].data.Count; i++)
+                for (int i = 0; i < BUILDINGS.PLANORDER[newCategory].buildingAndSubcategoryData.Count; i++)
                 {
-                    if (BUILDINGS.PLANORDER[newCategory].data[i] == movedItem.JustAfter)
+                    if (BUILDINGS.PLANORDER[newCategory].buildingAndSubcategoryData[i].Key == movedItem.JustAfter)
                     {
-                        BUILDINGS.PLANORDER[newCategory].data.Insert(i + 1, movedItem.BuildingId);
+                        BUILDINGS.PLANORDER[newCategory].buildingAndSubcategoryData.Insert(i + 1, movedPair);
                         break;
                     }
-                    else if (i == BUILDINGS.PLANORDER[newCategory].data.Count - 1)
+                    else if (i == BUILDINGS.PLANORDER[newCategory].buildingAndSubcategoryData.Count - 1)
                     {
-                        BUILDINGS.PLANORDER[newCategory].data.Add(movedItem.BuildingId);
+                        BUILDINGS.PLANORDER[newCategory].buildingAndSubcategoryData.Add(movedPair);
                         break;
                     }
                 }
