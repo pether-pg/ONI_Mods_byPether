@@ -42,11 +42,6 @@ namespace DiseasesExpanded
 
             public override void OnCure(GameObject go, object instance_data) => ((StateMachine.Instance)instance_data).StopSM("Cured");
 
-            public override List<Descriptor> GetSymptoms() => new List<Descriptor>()
-            {
-                new Descriptor((string) DUPLICANTS.DISEASES.SLIMESICKNESS.COUGH_SYMPTOM, (string) DUPLICANTS.DISEASES.SLIMESICKNESS.COUGH_SYMPTOM_TOOLTIP, Descriptor.DescriptorType.SymptomAidable)
-            };
-
             public class StatesInstance : GameStateMachine<BogSickness.BogSicknessComponent.States, BogSickness.BogSicknessComponent.StatesInstance, SicknessInstance, object>.GameInstance
             {
                 public float lastBiteTime;

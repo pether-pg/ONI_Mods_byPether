@@ -63,6 +63,15 @@ namespace DiseasesExpanded
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Everlasting Hunger.";
             }
 
+            public class SPINDLYCURSE
+            {
+                public static LocString NAME = (LocString) UI.FormatAsLink("Sleeping Curse", nameof(SPINDLYCURSE));
+                public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Periodically causes duplicant to fall asleep in random places.";
+                public static LocString DESCRIPTION = (LocString)"The tale says one duplicant slept 100 cycles after hurting herself on the Spindle, but it is possible she just faked it not to clean the toilets...";
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Sleeping Curse.";
+                public static LocString EXPOSURE_INFO = (LocString)"Got hurt by the Spindle...";
+            }
+
             public class TEMPORALDISPLACEMENT
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Temporal Displacement", nameof(TEMPORALDISPLACEMENT));

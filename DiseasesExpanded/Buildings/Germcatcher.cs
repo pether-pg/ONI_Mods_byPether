@@ -39,6 +39,16 @@ namespace DiseasesExpanded
                 { GermIdx.HungerGermsIdx, HungermsFlask.ID }
             };
 
+        protected override void OnPrefabInit()
+        {
+            base.OnPrefabInit();
+        
+            KBatchedAnimController kbac = this.gameObject.GetComponent<KBatchedAnimController>();
+            if (kbac == null)
+                return;
+            kbac.Play("working_pre", KAnim.PlayMode.Loop, 0.5f);
+        }
+
         public void Sim1000ms(float dt)
         {
             GatherGerms(dt);
@@ -102,7 +112,7 @@ namespace DiseasesExpanded
 
             if(!string.IsNullOrEmpty(id))
             {
-                GameObject gameObject = GameUtil.KInstantiate(Assets.GetPrefab(id), this.transform.GetPosition() + new Vector3(0, 1, 0), Grid.SceneLayer.Ore);
+                GameObject gameObject = GameUtil.KInstantiate(Assets.GetPrefab(id), this.transform.GetPosition() + new Vector3(0.5f, 1.0f, 0), Grid.SceneLayer.Ore);
                 if ((UnityEngine.Object)gameObject != (UnityEngine.Object)null)
                 {
                     PrimaryElement element = gameObject.GetComponent<PrimaryElement>();

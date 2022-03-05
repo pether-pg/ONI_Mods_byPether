@@ -17,7 +17,7 @@ namespace DiseasesExpanded
             EffectorValues none = NOISE_POLLUTION.NONE;
             EffectorValues tieR0_2 = BUILDINGS.DECOR.PENALTY.TIER0;
             EffectorValues noise = none;
-            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, 1, 2, "relocator_dropoff_kanim", 30, 30f, materialMass, materials, 1600f, BuildLocationRule.OnFloor, tieR0_2, noise);
+            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(id, 2, 1, "germcatcher_1_kanim", 30, 30f, materialMass, materials, 1600f, BuildLocationRule.OnFloor, tieR0_2, noise);
             buildingDef.Overheatable = false;
             buildingDef.Floodable = false;
             buildingDef.Entombable = false;

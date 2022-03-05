@@ -3,6 +3,36 @@ msgstr ""
 "Application: Oxygen Not Included"
 "POT Version: 2.0"
 
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.DESC"
+msgid "Gathers ambient germs and stores them in the flask for future research and vaccine production."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECCT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECCT"
+msgid "Germcatchers collect germs for medical study and vaccine production."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.NAME"
+msgid "Germcatcher"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC"
+msgid "Vaccine Apothecary uses radiation to weaken germs stored in a flasks to produce life-saving vaccines. \n\nIt must be operated by highly-trained medical personel and it is suggested to use radiation protection for the time of vaccine preparation."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECCT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECCT"
+msgid "Vaccines produced here can grant your duplicants immunity for various diseases."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME"
+msgid "Vaccine Apothecary"
+msgstr ""
+
 #. DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC
 msgctxt "DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC"
 msgid "Prevents allergic reactions in the future."
@@ -41,6 +71,16 @@ msgstr ""
 #. DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME
 msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME"
 msgid "Sweet Sap Shot"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.CURES.VACCINE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.VACCINE.DESC"
+msgid "Grants immunity to {0} disease."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.CURES.VACCINE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.VACCINE.NAME"
+msgid "{0} Vaccine"
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION
@@ -128,6 +168,51 @@ msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.NAME"
 msgid "<link=\"HUNGERSICKNESS\">Everlasting Hunger</link>"
 msgstr ""
 
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTION"
+msgid "The tale says one duplicant slept 100 cycles after hurting herself on the Spindle, but it is possible she just faked it not to clean the toilets..."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTIVE_SYMPTOMS"
+msgid "Periodically causes duplicant to fall asleep in random places."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO"
+msgid "Got hurt by the Spindle..."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.LEGEND_HOVERTEXT"
+msgid "Area affected by Sleeping Curse."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.NAME"
+msgid "<link=\"SPINDLYCURSE\">Sleeping Curse</link>"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTION"
+msgid "Sometimes displace duplicant to another location"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTIVE_SYMPTOMS"
+msgid "Sometimes displace duplicant to another location"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.LEGEND_HOVERTEXT"
+msgid "Area causes Temporal Displacement."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.NAME"
+msgid "<link=\"TEMPORALDISPLACEMENT\">Temporal Displacement</link>"
+msgstr ""
+
 #. DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.DESC
 msgctxt "DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.DESC"
 msgid "This duplicant just recovered from Bog Bugs Infestation."
@@ -168,6 +253,21 @@ msgctxt "DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.NAME"
 msgid "Everlasting Hunger Recovery"
 msgstr ""
 
+#. DiseasesExpanded.STRINGS.GERMFLASK.DESC
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.DESC"
+msgid "Contains gathered {0} germs."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.GERMFLASK.DESC_NOGERM
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.DESC_NOGERM"
+msgid "Contains gathered {0}."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.GERMFLASK.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.NAME"
+msgid "{0} Flask"
+msgstr ""
+
 #. DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT
 msgctxt "DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT"
 msgid "Bog Bugs present.\n"
@@ -206,6 +306,36 @@ msgstr ""
 #. DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.NAME
 msgctxt "DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.NAME"
 msgid "<link=\"HUNGERGERMS\">Hungerms</link>"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.MEDICALRESEARCH.DESC
+msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.DESC"
+msgid "<link=\"RESEARCH\">Medical Research</link> is required to unlock medical technologies.\nIt can be conducted at an <link=\"APOTHECARY\">Apothecary</link> or obtained by doctors while tending their patients."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.MEDICALRESEARCH.NAME
+msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.NAME"
+msgid "Medical Research"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.MEDICALRESEARCH.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.RECIPEDESC"
+msgid "Unlocks medical technologies."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.NAME
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.NAME"
+msgid "Gathering"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.PROGRESS
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.PROGRESS"
+msgid " {GERMS} - {PROGRESS}%"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.TOOLTIP"
+msgid "This building is currently gathering ambient germs."
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.DESC

@@ -43,11 +43,6 @@ namespace DiseasesExpanded
             {
                 ((StateMachine.Instance)instance_data).StopSM("Cured");
             }
-
-            public override List<Descriptor> GetSymptoms() => new List<Descriptor>()
-            {
-                new Descriptor((string) DUPLICANTS.DISEASES.SLIMESICKNESS.COUGH_SYMPTOM, (string) DUPLICANTS.DISEASES.SLIMESICKNESS.COUGH_SYMPTOM_TOOLTIP, Descriptor.DescriptorType.SymptomAidable)
-            };
         }
     }
 }

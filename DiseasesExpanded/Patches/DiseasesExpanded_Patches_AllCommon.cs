@@ -53,11 +53,14 @@ namespace DiseasesExpanded
                 BasicModUtils.MakeDiseaseStrings(FrostSickness.ID, STRINGS.DISEASES.FROSTSICKNESS.NAME, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION, STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeDiseaseStrings(GasSickness.ID, STRINGS.DISEASES.GASSICKNESS.NAME, STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.GASSICKNESS.DESCRIPTION, STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeDiseaseStrings(HungerSickness.ID, STRINGS.DISEASES.HUNGERSICKNESS.NAME, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION, STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeDiseaseStrings(SpindlySickness.ID, STRINGS.DISEASES.SPINDLYCURSE.NAME, STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTION, STRINGS.DISEASES.SPINDLYCURSE.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeDiseaseStrings(TemporalDisplacementSickness.ID, STRINGS.DISEASES.TEMPORALDISPLACEMENT.NAME, STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTION, STRINGS.DISEASES.TEMPORALDISPLACEMENT.LEGEND_HOVERTEXT);
 
                 BasicModUtils.MakeTraitStrings(InsectAllergies.ID, STRINGS.TRAITS.INSECTALLERGIES.NAME, STRINGS.TRAITS.INSECTALLERGIES.DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP);
 
                 ExpandExposureTable();
+
+                DiseasesExpanded_Patches_Spindly.UpdateNarcolepsyTimes();
             }
 
             public static void Postfix()
@@ -76,7 +79,7 @@ namespace DiseasesExpanded
                 Db.Get().effects.Add(new Effect(MudMaskConfig.EffectID, STRINGS.CURES.MUDMASK.NAME, STRINGS.CURES.MUDMASK.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(SapShotConfig.EffectID, STRINGS.CURES.SAPSHOT.NAME, STRINGS.CURES.SAPSHOT.DESC, cycle10, true, true, false));
 
-                Db.Get().effects.Add(new Effect(AllergyVaccineonfig.EffectID, AllergyVaccineonfig.Name, AllergyVaccineonfig.Desc, cycle50, true, true, false));
+                Db.Get().effects.Add(new Effect(AllergyVaccineConfig.EffectID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(SlimelungVaccineConfig.EffectID, SlimelungVaccineConfig.Name, SlimelungVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(ZombieSporesVaccineConfig.EffectID, ZombieSporesVaccineConfig.Name, ZombieSporesVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(HungermsVaccineConfig.EffectID, HungermsVaccineConfig.Name, HungermsVaccineConfig.Desc, cycle50, true, true, false));
@@ -92,7 +95,7 @@ namespace DiseasesExpanded
                     {
                         if (et.excluded_effects == null)
                             et.excluded_effects = new List<string>();
-                        et.excluded_effects.Add(AllergyVaccineonfig.EffectID);
+                        et.excluded_effects.Add(AllergyVaccineConfig.EffectID);
                     }
                     if (et.germ_id == "SlimeLung")
                     {
@@ -129,6 +132,7 @@ namespace DiseasesExpanded
                 __instance.Add(new BogSickness());
                 __instance.Add(new FrostSickness());
                 __instance.Add(new GasSickness());
+                __instance.Add(new SpindlySickness());
             }
         }
 

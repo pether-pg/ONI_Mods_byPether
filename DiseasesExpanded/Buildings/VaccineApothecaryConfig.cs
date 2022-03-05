@@ -7,6 +7,7 @@ namespace DiseasesExpanded
     {
         public const string ID = "VaccineApothecary";
         public const float RecipeTime = 100;
+        public const float UraniumOreCost = 20f;
 
         public override string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 

@@ -17,6 +17,9 @@ namespace DiseasesExpanded
 
         public void OnPrefabInit(GameObject inst)
         {
+            KAnimControllerBase kAnimBase = inst.GetComponent<KAnimControllerBase>();
+            if (kAnimBase != null)
+                kAnimBase.TintColour = ColorPalette.HungryBrown;
         }
 
         public void OnSpawn(GameObject inst)
@@ -29,7 +32,7 @@ namespace DiseasesExpanded
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 new ComplexRecipe.RecipeElement((Tag)HungermsFlask.ID, 1f),
-                new ComplexRecipe.RecipeElement(SimHashes.UraniumOre.CreateTag(), 200f)
+                new ComplexRecipe.RecipeElement(SimHashes.UraniumOre.CreateTag(), VaccineApothecaryConfig.UraniumOreCost)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
@@ -47,7 +50,7 @@ namespace DiseasesExpanded
 
             MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, null, null);
 
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.SapShotKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.VaccineCKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
         }
     }
