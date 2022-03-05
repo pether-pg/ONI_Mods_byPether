@@ -46,7 +46,7 @@ namespace DiseasesExpanded
         {
             public static void Postfix(Harvestable __instance, Worker worker)
             {
-                if (!__instance.gameObject.name.Contains(WormPlantConfig.ID) && false)
+                if (!__instance.gameObject.name.Contains(WormPlantConfig.ID))
                     return;
 
                 if (HasConflictingTraits(worker))
@@ -76,7 +76,7 @@ namespace DiseasesExpanded
             {
                 float skill = GetBotanicSkillValue(worker);
                 float scale = Settings.Instance.RebalanceForDiseasesRestored ? 2 : 4;
-                return ((100 / scale ) - skill) * scale;
+                return 100 - (skill * scale);
             }
 
             private static float GetBotanicSkillValue(Worker worker)
