@@ -62,7 +62,10 @@
   <ItemGroup>
     <Compile Include="CombinedConduitDisplay_Patches_GasConduit.cs" />
     <Compile Include="CombinedConduitDisplay_Patches_LiquidConduit.cs" />
+    <Compile Include="CombinedConduitDisplay_Patches_LogicWires.cs" />
     <Compile Include="CombinedConduitDisplay_Patches_SolidConduit.cs" />
+    <Compile Include="FollowParentsZ.cs" />
+    <Compile Include="KanimRefresh.cs" />
     <Compile Include="ModInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ZAxis.cs" />

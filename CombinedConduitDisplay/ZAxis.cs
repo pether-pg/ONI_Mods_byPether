@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using HarmonyLib;
 using System.Collections.Generic;
 
 namespace CombinedConduitDisplay
@@ -12,16 +13,6 @@ namespace CombinedConduitDisplay
             if (go.GetComponent<KPrefabID>().HasTag(GameTags.OverlayInFrontOfConduits))
                 go.GetComponent<KPrefabID>().RemoveTag(GameTags.OverlayInFrontOfConduits);
             go.GetComponent<KPrefabID>().AddTag(GameTags.OverlayBehindConduits);
-        }
-
-        public static void RefreshKbacForLayerTarget(SaveLoadRoot layerTarget)
-        {
-            KBatchedAnimController kbac = layerTarget.GetComponent<KBatchedAnimController>();
-            if ((UnityEngine.Object)kbac == (UnityEngine.Object)null)
-                return;
-
-            kbac.enabled = false;
-            kbac.enabled = true;
         }
 
         public static void ModifyVectorZAxis(SaveLoadRoot layerTarget)
@@ -43,7 +34,7 @@ namespace CombinedConduitDisplay
 
                 position.z = desired;
                 layerTarget.transform.SetPosition(position);
-                RefreshKbacForLayerTarget(layerTarget);
+                KanimRefresh.RefreshKbacForLayerTarget(layerTarget.gameObject);
             }
         }
 
@@ -59,7 +50,7 @@ namespace CombinedConduitDisplay
             position.z = InitialZValues[layerTarget];
 
             layerTarget.transform.SetPosition(position);
-            RefreshKbacForLayerTarget(layerTarget);
+            KanimRefresh.RefreshKbacForLayerTarget(layerTarget.gameObject);
         }
     }
 }
