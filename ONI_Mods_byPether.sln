@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinedConduitDisplay", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurableBuildMenus", "ConfigurableBuildMenus\ConfigurableBuildMenus.csproj", "{E4199AC3-96B9-460C-811E-CE5BDCE59C63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoticCuisine", "ExoticCuisine\ExoticCuisine.csproj", "{78D41BB6-38DF-428D-B0B4-7112266A1DE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{E4199AC3-96B9-460C-811E-CE5BDCE59C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4199AC3-96B9-460C-811E-CE5BDCE59C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4199AC3-96B9-460C-811E-CE5BDCE59C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D41BB6-38DF-428D-B0B4-7112266A1DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D41BB6-38DF-428D-B0B4-7112266A1DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D41BB6-38DF-428D-B0B4-7112266A1DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D41BB6-38DF-428D-B0B4-7112266A1DE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
