@@ -47,9 +47,19 @@ namespace ConfigurableBuildMenus
                 iconNameMap.Add(key, newMenu.Icon);
         }
 
+        public static bool Exists(string buildingId)
+        {
+            return FindCategoryIdForBuilding(buildingId) >= 0;
+        }
+
         public static int FindCategoryIdForBuilding(string buildingId)
         {
-            for(int i=0; i<BUILDINGS.PLANORDER.Count; i++)
+            for (int i = 0; i < BUILDINGS.PLANORDER.Count; i++)
+                foreach (KeyValuePair<string, string> pair in BUILDINGS.PLANORDER[i].buildingAndSubcategoryData)
+                    if (pair.Key == buildingId)
+                        return i;
+
+            for (int i = 0; i < BUILDINGS.PLANORDER.Count; i++)
                 foreach (string id in BUILDINGS.PLANORDER[i].data)
                     if (id == buildingId)
                         return i;
@@ -58,8 +68,13 @@ namespace ConfigurableBuildMenus
 
         public static void Move(Config.MoveBuildingItem movedItem)
         {
-            Remove(movedItem);
-            Add(movedItem);
+            if (Exists(movedItem.BuildingId))
+            {
+                Remove(movedItem);
+                Add(movedItem);
+            }
+            else
+                Debug.Log($"{ModInfo.Namespace}: Building {movedItem.BuildingId} not found in build menus, can't move it to {movedItem.MoveToMenu}");
         }
 
         public static void Remove(Config.MoveBuildingItem movedItem)
@@ -70,6 +85,7 @@ namespace ConfigurableBuildMenus
                 Debug.Log($"{ModInfo.Namespace}: Could not find building {movedItem.BuildingId}");
                 return;
             }
+            BUILDINGS.PLANORDER[oldCategory].data.RemoveAll(x => x == movedItem.BuildingId);
             BUILDINGS.PLANORDER[oldCategory].buildingAndSubcategoryData.RemoveAll(x => x.Key == movedItem.BuildingId);
         }
 
