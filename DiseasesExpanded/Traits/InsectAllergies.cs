@@ -23,6 +23,9 @@ namespace DiseasesExpanded
 
         public static bool HasAffectingTrait(GameObject duplicant)
         {
+            if (duplicant == null)
+                return false;
+
             Klei.AI.Traits traits = duplicant.GetComponent<Klei.AI.Traits>();
             bool hasTrait = (traits != null && traits.HasTrait(InsectAllergies.ID));
 

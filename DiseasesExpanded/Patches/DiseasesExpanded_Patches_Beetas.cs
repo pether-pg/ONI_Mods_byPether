@@ -13,6 +13,9 @@ namespace DiseasesExpanded
 
             public static void Prefix(Weapon __instance, GameObject target)
             {
+                if (__instance == null || target == null)
+                    return;
+
                 if(__instance.gameObject.name.Contains(BeeConfig.ID) && InsectAllergies.HasAffectingTrait(target))
                 {
                     __instance.properties.base_damage_max *= InsectAllergies.BeetaStingDamageModifier;
@@ -23,6 +26,8 @@ namespace DiseasesExpanded
 
             public static void Postfix(Weapon __instance)
             {
+                if (__instance == null)
+                    modified = false;
                 if(modified)
                 {
                     __instance.properties.base_damage_max /= InsectAllergies.BeetaStingDamageModifier;

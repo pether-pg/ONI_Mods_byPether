@@ -51,6 +51,7 @@ namespace DiseasesExpanded
         {
             Dictionary<string, float> FlaskEfficiency = new Dictionary<string, float>()
             {
+                { PollenFlask.ID, 1 },
                 { FoodGermsFlask.ID, 1 },
                 { SlimelungFlask.ID, 2 },
                 { ZombieSporesFlask.ID, 4 },

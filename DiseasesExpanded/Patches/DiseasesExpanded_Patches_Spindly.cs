@@ -23,9 +23,12 @@ namespace DiseasesExpanded
         {
             public static void Postfix(Narcolepsy.States __instance)
             {
+                if (__instance == null || __instance.sleepy == null)
+                    return;
+
                 __instance.sleepy.Enter("Espresso Check", (smi => 
                     {
-                        if (HasEsspressoEffect(smi.gameObject))
+                        if (smi != null && smi.gameObject != null && HasEsspressoEffect(smi.gameObject))
                             smi.GoTo(__instance.idle);
                     }
                 ));
@@ -33,6 +36,7 @@ namespace DiseasesExpanded
 
             private static bool HasEsspressoEffect(GameObject go)
             {
+                if (go == null) return false;
                 string EffectID = "RecentlyRecDrink"; // from EspressoMachine.cs
                 Klei.AI.Effects effects = go.GetComponent<Klei.AI.Effects>();
                 return (effects != null && effects.HasEffect(EffectID));
