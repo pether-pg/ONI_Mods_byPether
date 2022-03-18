@@ -53,7 +53,7 @@ namespace DiseasesExpanded
                 if (!__instance.gameObject.name.Contains(WormPlantConfig.ID))
                     return;
 
-                if (HasConflictingTraits(worker))
+                if (HasConflictingTraits(worker) || IsRecentlyRecovered(worker))
                     return;
 
                 if (SuitWearing.IsWearingAtmoSuit(worker.gameObject) || SuitWearing.IsWearingLeadSuit(worker.gameObject))
@@ -74,6 +74,15 @@ namespace DiseasesExpanded
                             return true;
 
                 return false;
+            }
+
+            private static bool IsRecentlyRecovered(Worker worker)
+            {
+                if (worker == null || worker.gameObject == null)
+                    return false;
+
+                Effects effects = worker.gameObject.GetComponent<Effects>();
+                return (effects != null && effects.HasEffect(SpindlySickness.RECOVERY_ID));
             }
 
             private static float GetInfectionChance(Worker worker)

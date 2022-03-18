@@ -27,7 +27,12 @@ namespace DiseasesExpanded
             {
                 Narcolepsy narcolepsy = go.FindOrAddUnityComponent<Narcolepsy>();
                 narcolepsy.smi.StartSM();
-                narcolepsy.smi.GoTo(narcolepsy.smi.sm.sleepy);
+
+                if (narcolepsy.smi.master.GetSMI<StaminaMonitor.Instance>() == null)
+                    Debug.Log($"{ModInfo.Namespace}: Null StaminaMonitor.Instance prevents from enforcing Narcolepsy.sleepy state in SpindlySicknessComponentOnInfect()");
+                else
+                    narcolepsy.smi.GoTo(narcolepsy.smi.sm.sleepy);
+
                 return (object)narcolepsy.smi;
             }
 

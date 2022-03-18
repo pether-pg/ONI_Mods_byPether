@@ -106,6 +106,12 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Everlasting Hunger Recovery";
                 public static LocString DESC = (LocString)"This duplicant just recovered from Everlasting Hunger.";
             }
+
+            public class SPINDLYRECOVERY
+            {
+                public static LocString NAME = (LocString)"Sleeping Curse Recovery";
+                public static LocString DESC = (LocString)"This duplicant just recovered from Sleeping Curse.";
+            }
         }
 
         public class CURES
