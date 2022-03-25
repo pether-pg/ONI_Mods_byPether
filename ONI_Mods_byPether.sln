@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurableBuildMenus", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoticCuisine", "ExoticCuisine\ExoticCuisine.csproj", "{78D41BB6-38DF-428D-B0B4-7112266A1DE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraGrubRubBoost", "UltraGrubRubBoost\UltraGrubRubBoost.csproj", "{37B80D59-B65E-4B1B-9291-FBCAED4A895D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{78D41BB6-38DF-428D-B0B4-7112266A1DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78D41BB6-38DF-428D-B0B4-7112266A1DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78D41BB6-38DF-428D-B0B4-7112266A1DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37B80D59-B65E-4B1B-9291-FBCAED4A895D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B80D59-B65E-4B1B-9291-FBCAED4A895D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B80D59-B65E-4B1B-9291-FBCAED4A895D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B80D59-B65E-4B1B-9291-FBCAED4A895D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
