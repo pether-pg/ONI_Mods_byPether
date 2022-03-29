@@ -41,10 +41,10 @@ namespace DiseasesExpanded
 
             public class FROSTSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Frost-Covered Skin", nameof(FROSTSICKNESS));
+                public static LocString NAME = (LocString) UI.FormatAsLink("Frost Pox", nameof(FROSTSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Pretty, but pretty cold frost patterns on the skin.";
                 public static LocString DESCRIPTION = (LocString)"Little shards of frost cover duplicant's skin in a pretty patterns, reducing their resistance for temperature and diseases.";
-                public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Frost-Covered Skin.";
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Frost Pox.";
             }
 
             public class GASSICKNESS
@@ -91,7 +91,7 @@ namespace DiseasesExpanded
 
             public class FROSTRECOVERY
             {
-                public static LocString NAME = (LocString)"Frost-Covered Skin Recovery";
+                public static LocString NAME = (LocString)"Frost Pox Recovery";
                 public static LocString DESC = (LocString)"This duplicant just recovered from Frost-Covered Skin.";
             }
 
