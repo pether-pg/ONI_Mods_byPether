@@ -58,6 +58,8 @@ namespace DiseasesExpanded
 
                 BasicModUtils.MakeTraitStrings(InsectAllergies.ID, STRINGS.TRAITS.INSECTALLERGIES.NAME, STRINGS.TRAITS.INSECTALLERGIES.DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP);
 
+                BasicModUtils.MakeStatusItemStrings(GermcatcherConfig.StatusItemID, STRINGS.STATUSITEMS.GATHERING.NAME, STRINGS.STATUSITEMS.GATHERING.TOOLTIP);
+
                 ExpandExposureTable();
 
                 DiseasesExpanded_Patches_Spindly.UpdateNarcolepsyTimes();
@@ -85,6 +87,10 @@ namespace DiseasesExpanded
                 Db.Get().effects.Add(new Effect(ZombieSporesVaccineConfig.EffectID, ZombieSporesVaccineConfig.Name, ZombieSporesVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(HungermsVaccineConfig.EffectID, HungermsVaccineConfig.Name, HungermsVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(GassyVaccineConfig.EffectID, GassyVaccineConfig.Name, GassyVaccineConfig.Desc, cycle50, true, true, false));
+
+                StatusItem statusItem = new StatusItem(GermcatcherConfig.StatusItemID, "BUILDINGS", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
+                statusItem.SetResolveStringCallback((str, data) => str += ((GermcatcherController.Instance)data).GetStatusItemProgress());
+                Db.Get().BuildingStatusItems.Add(statusItem);
             }
 
             public static void ExpandExposureTable()

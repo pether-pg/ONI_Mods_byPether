@@ -18,6 +18,10 @@ namespace DiseasesExpanded
             }, 10000f, RECOVERY_ID)
         {
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
+            this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[1]
+            {
+                new AttributeModifier("StaminaDelta", -0.016666666f, (string) STRINGS.DISEASES.SPINDLYCURSE.NAME)
+            }));
             this.AddSicknessComponent((Sickness.SicknessComponent)new SpindlySickness.SpindlySicknessComponent());
         }
 

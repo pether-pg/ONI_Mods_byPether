@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Database;
 using System.Collections.Generic;
 
 namespace DiseasesExpanded
@@ -10,10 +11,56 @@ namespace DiseasesExpanded
 
         public static void GrantResearchPoints(GameObject go, float amount = 1)
         {
-            if (!CheckTechRequireMedicalPoints())
+            TechInstance techToBoost = FindTechToBoost();
+            if (techToBoost == null)
                 return;
-            Research.Instance.AddResearchPoints(MedicalResearchTypeId, amount);
+            techToBoost.progressInventory.AddResearchPoints(MedicalResearchTypeId, amount);
             PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Research, STRINGS.MEDICALRESEARCH.NAME, go.transform);
+        }
+
+        private static TechInstance FindTechToBoost()
+        {
+            Techs techs = Db.Get().Techs;
+            for (int i = 0; i < techs.Count; i++)
+            {
+                Tech tech = techs[i];
+                if (!tech.costsByResearchTypeID.ContainsKey(MedicalResearchTypeId))
+                    continue;
+                if (tech.IsComplete())
+                    continue;
+
+                float techCost = tech.costsByResearchTypeID[MedicalResearchTypeId];
+                TechInstance techInstance = Research.Instance.GetTechInstance(tech.Id);
+
+                if (techInstance.progressInventory.PointsByTypeID[MedicalResearchTypeId] > 0
+                    && techInstance.progressInventory.PointsByTypeID[MedicalResearchTypeId] < techCost)
+                    return techInstance;
+
+                if (techInstance.progressInventory.PointsByTypeID[MedicalResearchTypeId] == 0)
+                {
+                    if(tech.ArePrerequisitesComplete())
+                        return techInstance;
+
+                    bool firstMedTech = true;
+                    bool previousMedTechCompleted = true;
+
+                    foreach(Tech previousTech in tech.requiredTech)
+                    {
+                        if (previousTech.costsByResearchTypeID.ContainsKey(MedicalResearchTypeId))
+                        {
+                            firstMedTech = false;
+                            float prevTechCost = previousTech.costsByResearchTypeID[MedicalResearchTypeId];
+                            TechInstance prevTechInstance = Research.Instance.GetTechInstance(previousTech.Id);
+                            if (prevTechInstance.progressInventory.PointsByTypeID[MedicalResearchTypeId] < prevTechCost)
+                                previousMedTechCompleted = false;
+                        }
+                    }
+
+                    if (firstMedTech || previousMedTechCompleted)
+                        return techInstance;
+                }
+            }
+            return null;
         }
 
         private static bool CheckTechRequireMedicalPoints()

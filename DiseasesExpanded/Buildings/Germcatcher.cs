@@ -6,113 +6,91 @@ using Database;
 namespace DiseasesExpanded
 {
     [SerializationConfig(MemberSerialization.OptIn)]
-    class Germcatcher : KMonoBehaviour, ISaveLoadable, ISim1000ms
+    class Germcatcher : KMonoBehaviour
     {
         [Serialize]
-        public Dictionary<byte, int> GatheredGerms;
+        public Dictionary<byte, int> GatheredGerms = new Dictionary<byte, int>();
+
         public int GatherThreshold = 100000;
         public int EfficiencyDivider = 500;
-        private int percentProgress = -1;
+        public Vector2Int GatherOffset = new Vector2Int(1, 1);
 
+        private byte lastGatheredIdx = byte.MaxValue;
         private Dictionary<byte, string> SpawnedFlasks = DlcManager.IsExpansion1Active() ?
             new Dictionary<byte, string>()
             {
-                { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
-                { GermIdx.PollenGermsIdx, PollenFlask.ID },
-                { GermIdx.SlimelungIdx, SlimelungFlask.ID },
-                { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
-                { GermIdx.RadiationPoisoningIdx, RadiationGermsFlask.ID },
-                { GermIdx.BogInsectsIdx, BogBugsFlask.ID },
-                { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
-                { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
-                { GermIdx.HungerGermsIdx, HungermsFlask.ID }
+                    { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
+                    { GermIdx.PollenGermsIdx, PollenFlask.ID },
+                    { GermIdx.SlimelungIdx, SlimelungFlask.ID },
+                    { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
+                    { GermIdx.RadiationPoisoningIdx, RadiationGermsFlask.ID },
+                    { GermIdx.BogInsectsIdx, BogBugsFlask.ID },
+                    { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
+                    { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
+                    { GermIdx.HungerGermsIdx, HungermsFlask.ID }
             }
             :
             new Dictionary<byte, string>()
             {
-                { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
-                { GermIdx.PollenGermsIdx, PollenFlask.ID },
-                { GermIdx.SlimelungIdx, SlimelungFlask.ID },
-                { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
-                { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
-                { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
-                { GermIdx.HungerGermsIdx, HungermsFlask.ID }
+                    { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
+                    { GermIdx.PollenGermsIdx, PollenFlask.ID },
+                    { GermIdx.SlimelungIdx, SlimelungFlask.ID },
+                    { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
+                    { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
+                    { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
+                    { GermIdx.HungerGermsIdx, HungermsFlask.ID }
             };
 
-        protected override void OnPrefabInit()
+        public void GatherGerms(float dt)
         {
-            base.OnPrefabInit();
-        
-            KBatchedAnimController kbac = this.gameObject.GetComponent<KBatchedAnimController>();
-            if (kbac == null)
-                return;
-            kbac.Play("working_pre", KAnim.PlayMode.Loop, 0.5f);
-        }
-
-        public void Sim1000ms(float dt)
-        {
-            GatherGerms(dt);
-            CompleteCheck();
-        }
-
-        private void GatherGerms(float dt)
-        {
-            if (GatheredGerms == null)
-                GatheredGerms = new Dictionary<byte, int>();
-
-            int cell = Grid.PosToCell(this.gameObject);
+            int cell = Grid.OffsetCell(Grid.PosToCell(this.gameObject), GatherOffset.x, GatherOffset.y);
             byte idx = Grid.DiseaseIdx[cell];
             if (idx == byte.MaxValue)
                 return;
+            lastGatheredIdx = idx;
 
             int count = (int)(dt * Grid.DiseaseCount[cell] / EfficiencyDivider);
 
+            AddGerms(idx, count);
+            TintWaterSymbol();
+        }
+
+        public void TintWaterSymbol()
+        {
+            if (this.gameObject == null)
+                return;
+
+            if (lastGatheredIdx == GermIdx.Invalid)
+                return;
+
+            Color32 color = GlobalAssets.Instance.colorSet.GetColorByName(Db.Get().Diseases[lastGatheredIdx].overlayColourName);
+
+            KBatchedAnimController kbac = this.gameObject.GetComponent<KBatchedAnimController>();
+            if (kbac != null)
+                kbac.SetSymbolTint("water", color);
+        }
+
+        public void AddGerms(byte idx, int count)
+        {
+            if (GatheredGerms == null)
+                GatheredGerms = new Dictionary<byte, int>();
             if (!GatheredGerms.ContainsKey(idx))
-                GatheredGerms.Add(idx, count);
-            else
-                GatheredGerms[idx] += count;
+                GatheredGerms.Add(idx, 0);
+            GatheredGerms[idx] += count;
+
+            if (GatheredGerms[idx] >= GatherThreshold)
+                SpawnFlask(idx);
         }
-
-        private void UpdateStatusItem()
-        {
-            if (GetHighestGermIdx() == GermIdx.Invalid)
-                return;
-
-            StatusItem statusItem = new StatusItem(GermcatcherConfig.ID, "BUILDINGS", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
-            string progress = STRINGS.STATUSITEMS.GATHERING.PROGRESS.Replace("{GERMS}", GetHighestGermName()).Replace("{PROGRESS}", percentProgress.ToString());
-            statusItem.Name = STRINGS.STATUSITEMS.GATHERING.NAME + progress;
-            statusItem.tooltipText = STRINGS.STATUSITEMS.GATHERING.TOOLTIP + progress;
-            this.gameObject.GetComponent<KSelectable>().SetStatusItem(Db.Get().StatusItemCategories.Yield, statusItem);
-        }
-
-        private void CompleteCheck()
-        {
-            if (GetHighestGermIdx() == GermIdx.Invalid)
-                return;
-
-            int percent = 100 * GetHighestGermCount() / GatherThreshold;
-
-            if (percent >= 100)
-            {
-                SpawnFlask(GetHighestGermIdx());
-                Util.KDestroyGameObject(this.gameObject);
-            }
-            else if(percent > percentProgress)
-            {
-                percentProgress = percent;
-                UpdateStatusItem();
-            }
-        }
-
         private void SpawnFlask(byte idx)
         {
             string id = string.Empty;
             if (SpawnedFlasks.ContainsKey(idx))
                 id = SpawnedFlasks[idx];
 
-            if(!string.IsNullOrEmpty(id))
+            if (!string.IsNullOrEmpty(id))
             {
-                GameObject gameObject = GameUtil.KInstantiate(Assets.GetPrefab(id), this.transform.GetPosition() + new Vector3(0.5f, 1.0f, 0), Grid.SceneLayer.Ore);
+                GatheredGerms[idx] = 0;
+                GameObject gameObject = GameUtil.KInstantiate(Assets.GetPrefab(id), this.transform.GetPosition() + new Vector3(-0.2f, 1.0f, 0), Grid.SceneLayer.Ore);
                 if ((UnityEngine.Object)gameObject != (UnityEngine.Object)null)
                 {
                     PrimaryElement element = gameObject.GetComponent<PrimaryElement>();
@@ -127,8 +105,10 @@ namespace DiseasesExpanded
         {
             int max = -1;
             byte maxIdx = GermIdx.Invalid;
+            if (GatheredGerms == null)
+                return maxIdx;
             foreach (byte idx in GatheredGerms.Keys)
-                if(GatheredGerms[idx] > max)
+                if (GatheredGerms[idx] > max)
                 {
                     max = GatheredGerms[idx];
                     maxIdx = idx;
@@ -138,8 +118,11 @@ namespace DiseasesExpanded
 
         public int GetHighestGermCount()
         {
+            if (GatheredGerms == null)
+                return 0;
+
             byte idx = GetHighestGermIdx();
-            if(GatheredGerms.ContainsKey(idx))
+            if (GatheredGerms.ContainsKey(idx))
                 return GatheredGerms[idx];
             return 0;
         }
@@ -147,6 +130,26 @@ namespace DiseasesExpanded
         public string GetHighestGermName()
         {
             return GermIdx.GetGermName(GetHighestGermIdx());
+        }
+
+        public byte GetCurrentGermIdx()
+        {
+            return lastGatheredIdx;
+        }
+
+        public int GetCurrentGermCount()
+        {
+            if (GatheredGerms == null)
+                return 0;
+
+            byte idx = GetCurrentGermIdx();
+            if (GatheredGerms.ContainsKey(idx))
+                return GatheredGerms[idx];
+            return 0;
+        }
+        public string GetCurrentGermName()
+        {
+            return GermIdx.GetGermName(GetCurrentGermIdx());
         }
     }
 }

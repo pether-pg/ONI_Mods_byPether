@@ -69,7 +69,7 @@ namespace DiseasesExpanded
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Periodically causes duplicant to fall asleep in random places.";
                 public static LocString DESCRIPTION = (LocString)"The tale says one duplicant slept 100 cycles after hurting herself on the Spindle, but it is possible she just faked it not to clean the toilets...";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Sleeping Curse.";
-                public static LocString EXPOSURE_INFO = (LocString)"Got hurt by the Spindle...";
+                public static LocString EXPOSURE_INFO = (LocString)"Got hurt by the Spindle of a Grubfruit.\n\nAs a result, this duplicant will fall asleep in random places.\nImprove Farming skill or wear protective equipment to prevent future infections.\nUse Espresso Machine to prevent Narcoleptic Naps.\n";
             }
 
             public class TEMPORALDISPLACEMENT
@@ -156,7 +156,7 @@ namespace DiseasesExpanded
         public class MEDICALRESEARCH
         {
             public static LocString NAME = (LocString)"Medical Research";
-            public static LocString DESC = (LocString)(UI.FormatAsLink("Medical Research", nameof(RESEARCH)) + " is required to unlock medical technologies.\nIt can be conducted at an " + UI.FormatAsLink("Apothecary", "APOTHECARY") + " or obtained by doctors while tending their patients.");
+            public static LocString DESC = (LocString)(UI.FormatAsLink("Medical Research", nameof(RESEARCH)) + " is required to unlock medical technologies.\nIt can be conducted by studying germ samples at an " + UI.FormatAsLink("Apothecary", "APOTHECARY") + " or obtained by doctors while tending their patients.");
             public static LocString RECIPEDESC = (LocString)"Unlocks medical technologies.";
         }
 
@@ -165,8 +165,8 @@ namespace DiseasesExpanded
             public class GERMCATCHER
             {
                 public static LocString NAME = (LocString)"Germcatcher";
-                public static LocString DESC = (LocString)"Gathers ambient germs and stores them in the flask for future research and vaccine production.";
-                public static LocString EFFECCT = (LocString)"Germcatchers collect germs for medical study and vaccine production.";
+                public static LocString DESC = (LocString)"Gathers ambient germs and stores them in the flask for future research at an Apothecary and vaccine production.";
+                public static LocString EFFECCT = (LocString)"Germcatchers collect germ samples for medical study and vaccine production.";
             }
 
             public class VACCINEAPOTHECARY

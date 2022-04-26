@@ -20,8 +20,8 @@ namespace DiseasesExpanded
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
             this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[2]
             {
-                new AttributeModifier("ThermalConductivityBarrier", -0.004f, (string) DUPLICANTS.DISEASES.SLIMESICKNESS.NAME),
-                new AttributeModifier("GermResistance", -3f, (string) DUPLICANTS.DISEASES.SLIMESICKNESS.NAME)
+                new AttributeModifier("ThermalConductivityBarrier", -0.004f, (string) STRINGS.DISEASES.FROSTSICKNESS.NAME),
+                new AttributeModifier("GermResistance", -3f, (string) STRINGS.DISEASES.FROSTSICKNESS.NAME)
             }));
             this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[3]
             {

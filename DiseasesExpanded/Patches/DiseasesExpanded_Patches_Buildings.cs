@@ -20,8 +20,6 @@ namespace DiseasesExpanded
 										STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC,
 										STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECCT);
 
-				BasicModUtils.MakeStatusItemStrings(GermcatcherConfig.StatusItemID, STRINGS.STATUSITEMS.GATHERING.NAME, STRINGS.STATUSITEMS.GATHERING.TOOLTIP);
-
 				ModUtil.AddBuildingToPlanScreen("Medical", GermcatcherConfig.ID);
 				ModUtil.AddBuildingToPlanScreen("Medical", VaccineApothecaryConfig.ID);
 			}
