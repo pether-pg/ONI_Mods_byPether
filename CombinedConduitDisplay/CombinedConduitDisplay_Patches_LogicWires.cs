@@ -169,7 +169,41 @@ namespace CombinedConduitDisplay
                 position.z = Grid.GetLayerZ(Grid.SceneLayer.LogicGates) - 0.1f;
                 meter.gameObject.transform.SetPosition(position);
 
-                __instance.FindOrAddComponent<FollowParentsZ>();
+                __instance.FindOrAddComponent<FollowParentsZ>().Target = FollowZTarget.LogicCounter;
+            }
+        }
+        
+        [HarmonyPatch(typeof(LogicGateBuffer))]
+        [HarmonyPatch("OnSpawn")]
+        public class LogicGateBuffer_OnSpawn_Patch
+        {
+            public static void Postfix(LogicGateBuffer __instance)
+            {
+                MeterController meter = Traverse.Create(__instance).Field("meter").GetValue<MeterController>();
+                if (meter == null)
+                    return;
+                Vector3 position = meter.gameObject.transform.position;
+                position.z = Grid.GetLayerZ(Grid.SceneLayer.LogicGates) - 0.1f;
+                meter.gameObject.transform.SetPosition(position);
+
+                __instance.FindOrAddComponent<FollowParentsZ>().Target = FollowZTarget.LogicBuffer;
+            }
+        }
+
+        [HarmonyPatch(typeof(LogicGateFilter))]
+        [HarmonyPatch("OnSpawn")]
+        public class LogicGateFilter_OnSpawn_Patch
+        {
+            public static void Postfix(LogicGateBuffer __instance)
+            {
+                MeterController meter = Traverse.Create(__instance).Field("meter").GetValue<MeterController>();
+                if (meter == null)
+                    return;
+                Vector3 position = meter.gameObject.transform.position;
+                position.z = Grid.GetLayerZ(Grid.SceneLayer.LogicGates) - 0.1f;
+                meter.gameObject.transform.SetPosition(position);
+
+                __instance.FindOrAddComponent<FollowParentsZ>().Target = FollowZTarget.LogicFilter;
             }
         }
 

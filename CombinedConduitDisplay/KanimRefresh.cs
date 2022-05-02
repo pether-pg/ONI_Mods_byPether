@@ -18,13 +18,13 @@ namespace CombinedConduitDisplay
             TryMeterRefresh_SolidConduitInbox(go);
         }
 
-        public static void TryMeterRefresh_LogicCounter(GameObject go)
+        public static void TryMeterRefresh<T>(GameObject go)
         {
-            LogicCounter counter = go.GetComponent<LogicCounter>();
-            if (counter == null)
+            T component = go.GetComponent<T>();
+            if (component == null)
                 return;
 
-            MeterController meter = Traverse.Create(counter).Field("meter").GetValue<MeterController>();
+            MeterController meter = Traverse.Create(component).Field("meter").GetValue<MeterController>();
             if (meter == null)
                 return;
 
@@ -34,8 +34,23 @@ namespace CombinedConduitDisplay
 
             kbac.enabled = false;
             kbac.enabled = true;
-
         }
+
+        public static void TryMeterRefresh_LogicCounter(GameObject go)
+        {
+            TryMeterRefresh<LogicCounter>(go);
+        }
+
+        public static void TryMeterRefresh_LogicFilter(GameObject go)
+        {
+            TryMeterRefresh<LogicGateFilter>(go);
+        }
+
+        public static void TryMeterRefresh_LogicBuffer(GameObject go)
+        {
+            TryMeterRefresh<LogicGateBuffer>(go);
+        }
+
         public static void TryMeterRefresh_SolidConduitOutbox(GameObject go)
         {
             SolidConduitOutbox outbox = go.GetComponent<SolidConduitOutbox>();
