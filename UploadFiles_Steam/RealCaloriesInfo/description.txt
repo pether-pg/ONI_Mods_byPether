@@ -1,0 +1,5 @@
+How it works?
+The mod changes how total calories amount is calculated and later displayed in the top-left corner of the screen. Now, if a food is not permitted for eating for at least one duplicant, its calories won't add up to the total sum. For example - calories of raw meat won't be included to the total amount if you are not allowing to eat it before making barbeque out of it.
+
+Special thanks
+To Peter Han and Asquared314 from modding community for helping me with advanced coding, correcting my mistakes and overall making the mod possible in its current form.

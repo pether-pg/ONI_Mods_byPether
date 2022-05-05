@@ -13,7 +13,7 @@ namespace RealCaloriesInfo
         {
             public static int WorldId = 0; 
             static MethodInfo getCaloriesMethodInfo = AccessTools.Property(typeof(Edible), nameof(Edible.Calories)).GetMethod;
-            static MethodInfo myExtraCodeMethodInfo = AccessTools.Method(typeof(RationTracker_CountRations_Patch), nameof(RationTracker_CountRations_Patch.CalculateCalories));
+            static MethodInfo myExtraCodeMethodInfo = AccessTools.Method(typeof(RationTracker_CountRations_Patch), nameof(RationTracker_CountRations_Patch.GetPermittedCalories));
 
             public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
             {
@@ -21,7 +21,11 @@ namespace RealCaloriesInfo
                 {
                     if (instruction.operand is MethodInfo m && m == getCaloriesMethodInfo)
                     {
+                        // Load on the stack 2nd argument of CountRations method - WorldInventory inventory
                         yield return new CodeInstruction(OpCodes.Ldarg_2);
+
+                        // Call GetPermittedCalories(Edible edible, WorldInventory inventory)
+                        // Edible object was already on the stack to call Edible.GetCalories - instead my method is called
                         yield return new CodeInstruction(OpCodes.Call, myExtraCodeMethodInfo);
                     }
                     else
@@ -29,7 +33,7 @@ namespace RealCaloriesInfo
                 }
             }
 
-            public static float CalculateCalories(Edible edible, WorldInventory inventory)
+            public static float GetPermittedCalories(Edible edible, WorldInventory inventory)
             {
                 if (IsAlwaysPermitted(edible, GetWorldId(inventory)))
                     return edible.Calories;
@@ -51,7 +55,7 @@ namespace RealCaloriesInfo
                     ConsumableConsumer consumer = mi.gameObject.GetComponent<ConsumableConsumer>();
                     if (consumer == null)
                     {
-                        Debug.Log($"RealCaloriesInfo: Could not get ConsumableConsumer for minion {mi.name}");
+                        Debug.Log($"{ModInfo.Namespace}: Could not get ConsumableConsumer for minion {mi.name}");
                         continue;
                     }
                     
