@@ -105,7 +105,9 @@ namespace DiseasesExpanded
                 { BogBugsFlask.ID, 1 },
                 { FrostShardsFlask.ID, 2 },
                 { HungermsFlask.ID, 4 },
-                { GassyGermFlask.ID, 4 }
+                { GassyGermFlask.ID, 4 },
+                { AlienGermFlask.ID, 8 },
+                { MutatingGermFlask.ID, 2 }
             };
 
             foreach(string flask in FlaskEfficiency.Keys)
@@ -118,7 +120,7 @@ namespace DiseasesExpanded
                 {
                 new ComplexRecipe.RecipeElement((Tag) ID, FlaskEfficiency[flask], ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
                 };
-                ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
+                ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, ingredients, results), ingredients, results)
                 {
                     time = 100f,
                     description = STRINGS.MEDICALRESEARCH.DESC,

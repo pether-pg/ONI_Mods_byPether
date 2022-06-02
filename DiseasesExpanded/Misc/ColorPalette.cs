@@ -11,6 +11,9 @@ namespace DiseasesExpanded
         public static Color32 SnowWhite = new Color32(255, 255, 255, 255);
         public static Color32 MidGray = new Color32(128, 128, 128, 255);
 
+        public static Color32 NavyBlue = new Color32(0, 0, 128, 255);
+        public static Color32 DeepPurple = new Color32(128, 0, 128, 255);
+
         public static Color32 HungryBrown = new Color32(110, 110, 65, 255);
         public static Color32 BogViolet = new Color32(126, 36, 76, 255);
         public static Color32 IcyBlue = new Color32(176, 230, 230, 255);

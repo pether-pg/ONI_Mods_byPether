@@ -24,7 +24,17 @@ namespace DiseasesExpanded
             public class HUNGERGERMS
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Hungerms", nameof(HUNGERGERMS));
-                public static LocString LEGEND_HOVERTEXT = (LocString)"Gassy Germs present\n";
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Hungerms present\n";
+            }
+            public class ALIENGERMS
+            {
+                public static LocString NAME = (LocString) UI.FormatAsLink("Alien Goo", nameof(ALIENGERMS));
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Alien Goo present\n";
+            }
+            public class MUTATINGGERMS
+            {
+                public static LocString NAME = (LocString) UI.FormatAsLink("Unstable Virus", nameof(MUTATINGGERMS));
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Unstable Virus present\n";
             }
         }
 
@@ -72,6 +82,25 @@ namespace DiseasesExpanded
                 public static LocString EXPOSURE_INFO = (LocString)"Got hurt by the Spindle of a Grubfruit.\n\nAs a result, this duplicant will fall asleep in random places.\nImprove Farming skill or wear protective equipment to prevent future infections.\nUse Espresso Machine to prevent Narcoleptic Naps.\n";
             }
 
+            public class ALIENSYMBIOT
+            {
+                public static LocString NAME = (LocString) UI.FormatAsLink("Alien Symbiot", nameof(ALIENSYMBIOT));
+                public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Enhances and stresses the duplicant.";
+                public static LocString DESCRIPTION = (LocString)"Alien microbes increase duplicant's skills. However, this feels unnatural and makes infected duplicant stressed out.";
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Alien Goo.";
+                public static LocString EXPOSURE_INFO = (LocString)"Got exposed to Alien Lifeform";
+            }
+
+            public class MUTATINGDISEASE
+            {
+                public static LocString NAME = (LocString) UI.FormatAsLink("Mutating Disease", nameof(MUTATINGDISEASE));
+                public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"May affect duplicants in many different ways";
+                public static LocString DESCRIPTION = (LocString)"Virus causing the disease is very unstable and often mutates. Results may be different each time.";
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Mutating Disease.";
+                public static LocString EXPOSURE_INFO = (LocString)"Got infected by Mutating Virus.";
+                public static LocString POPFXTEXT = (LocString)"Painful cough!";
+            }
+
             public class TEMPORALDISPLACEMENT
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Temporal Displacement", nameof(TEMPORALDISPLACEMENT));
@@ -112,6 +141,18 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Sleeping Curse Recovery";
                 public static LocString DESC = (LocString)"This duplicant just recovered from Sleeping Curse.";
             }
+
+            public class ALIENRECOVERY
+            {
+                public static LocString NAME = (LocString)"Alien Symbiot Recovery";
+                public static LocString DESC = (LocString)"Despite Alien Symbiot's influence recently waned, the horrifying menace of it still lives on... ";
+            }
+
+            public class MUTATEDRECOVERY
+            {
+                public static LocString NAME = (LocString)"Mutating Disease Recovery";
+                public static LocString DESC = (LocString)"This duplicant just recovered from Mutating Disease.";
+            }
         }
 
         public class CURES
@@ -144,6 +185,18 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"{0} Vaccine";
                 public static LocString DESC = (LocString)"Grants immunity to {0} disease.";
             }
+
+            public class SUPERSERUM
+            {
+                public static LocString NAME = (LocString)"Super Serum";
+                public static LocString DESC = (LocString)"Enhances duplicant's attributes.";
+            }
+
+            public class MUTATINGANTIVIRAL
+            {
+                public static LocString NAME = (LocString)"Unstable Antiviral";
+                public static LocString DESC = (LocString)"Cures from, and grants immunity to Mutating Disease for a short time.";
+            }
         }
 
         public class GERMFLASK
@@ -158,6 +211,29 @@ namespace DiseasesExpanded
             public static LocString NAME = (LocString)"Medical Research";
             public static LocString DESC = (LocString)(UI.FormatAsLink("Medical Research", nameof(RESEARCH)) + " is required to unlock medical technologies.\nIt can be conducted by studying germ samples at an " + UI.FormatAsLink("Apothecary", "APOTHECARY") + " or obtained by doctors while tending their patients.");
             public static LocString RECIPEDESC = (LocString)"Unlocks medical technologies.";
+        }
+
+        public class CONTROLLEDMUTATION
+        {
+            public class ATTACK
+            {
+                public static LocString NAME = (LocString)"Controlled Severity Mutation";
+                public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's severity genoms to a weaker form.";
+                public static LocString RECIPEDESC = (LocString)"Weakens Unstable Virus severity";
+            }
+            public class ENVIRONMENTAL
+            {
+                public static LocString NAME = (LocString)"Controlled Environmental Mutation";
+                public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's environmental genoms to a weaker form.";
+                public static LocString RECIPEDESC = (LocString)"Weakens Unstable Virus ability to live in various environments";
+            }
+            public class RESILIANCE
+            {
+                public static LocString NAME = (LocString)"Controlled Resiliance Mutation";
+                public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's resiliance genoms to a weaker form.";
+                public static LocString RECIPEDESC = (LocString)"Weakens Unstable Virus resiliance";
+            }
+
         }
 
         public class BUILDINGS

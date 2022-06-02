@@ -106,6 +106,28 @@ namespace DiseasesExpanded
             }
         }
 
+        private static byte _alienGerms = Invalid;
+        public static byte AlienGermsIdx
+        {
+            get
+            {
+                if (_alienGerms == Invalid)
+                    _alienGerms = Db.Get().Diseases.GetIndex(AlienGerms.ID);
+                return _alienGerms;
+            }
+        }
+
+        private static byte _mutatingGerms = Invalid;
+        public static byte MutatingGermsIdx
+        {
+            get
+            {
+                if (_mutatingGerms == Invalid)
+                    _mutatingGerms = Db.Get().Diseases.GetIndex(MutatingGerms.ID);
+                return _mutatingGerms;
+            }
+        }
+
         private static Dictionary<byte, string> GermNames = new Dictionary<byte, string>(); 
 
         public static string GetGermName(byte idx)

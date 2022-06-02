@@ -25,6 +25,8 @@ namespace DiseasesExpanded
                 namedLookup.Add(BogInsects.ID, BogInsects.colorValue);
                 namedLookup.Add(FrostShards.ID, FrostShards.colorValue);
                 namedLookup.Add(GassyGerms.ID, GassyGerms.colorValue);
+                namedLookup.Add(AlienGerms.ID, AlienGerms.colorValue);
+                namedLookup.Add(MutatingGerms.ID, MutatingGerms.colorValue);
 
                 initalized = true;
                 //LogColors(namedLookup);
@@ -48,12 +50,16 @@ namespace DiseasesExpanded
                 BasicModUtils.MakeGermStrings(FrostShards.ID, STRINGS.GERMS.FROSTHARDS.NAME, STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeGermStrings(GassyGerms.ID, STRINGS.GERMS.GASSYGERMS.NAME, STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeGermStrings(HungerGerms.ID, STRINGS.GERMS.HUNGERGERMS.NAME, STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeGermStrings(AlienGerms.ID, STRINGS.GERMS.ALIENGERMS.NAME, STRINGS.GERMS.ALIENGERMS.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeGermStrings(MutatingGerms.ID, STRINGS.GERMS.MUTATINGGERMS.NAME, STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT);
 
                 BasicModUtils.MakeDiseaseStrings(BogSickness.ID, STRINGS.DISEASES.BOGSICKNESS.NAME, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION, STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeDiseaseStrings(FrostSickness.ID, STRINGS.DISEASES.FROSTSICKNESS.NAME, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION, STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeDiseaseStrings(GasSickness.ID, STRINGS.DISEASES.GASSICKNESS.NAME, STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.GASSICKNESS.DESCRIPTION, STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeDiseaseStrings(HungerSickness.ID, STRINGS.DISEASES.HUNGERSICKNESS.NAME, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION, STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeDiseaseStrings(SpindlySickness.ID, STRINGS.DISEASES.SPINDLYCURSE.NAME, STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTION, STRINGS.DISEASES.SPINDLYCURSE.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeDiseaseStrings(AlienSickness.ID, STRINGS.DISEASES.ALIENSYMBIOT.NAME, STRINGS.DISEASES.ALIENSYMBIOT.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.ALIENSYMBIOT.DESCRIPTION, STRINGS.DISEASES.ALIENSYMBIOT.LEGEND_HOVERTEXT);
+                BasicModUtils.MakeDiseaseStrings(MutatingSickness.ID, STRINGS.DISEASES.MUTATINGDISEASE.NAME, STRINGS.DISEASES.MUTATINGDISEASE.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.MUTATINGDISEASE.DESCRIPTION, STRINGS.DISEASES.MUTATINGDISEASE.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeDiseaseStrings(TemporalDisplacementSickness.ID, STRINGS.DISEASES.TEMPORALDISPLACEMENT.NAME, STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTION, STRINGS.DISEASES.TEMPORALDISPLACEMENT.LEGEND_HOVERTEXT);
 
                 BasicModUtils.MakeTraitStrings(InsectAllergies.ID, STRINGS.TRAITS.INSECTALLERGIES.NAME, STRINGS.TRAITS.INSECTALLERGIES.DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP);
@@ -69,18 +75,27 @@ namespace DiseasesExpanded
             {
                 float cycle = 600;
                 float cycle2 = 2 * cycle;
+                float cycle5 = 5 * cycle;
                 float cycle10 = 10 * cycle;
                 float cycle50 = 50 * cycle;
+
+                Effect alienRecovery = new Effect(AlienSickness.RECOVERY_ID, STRINGS.EFFECTS.ALIENRECOVERY.NAME, STRINGS.EFFECTS.ALIENRECOVERY.DESC, cycle5, true, true, false);
+                alienRecovery.SelfModifiers = new List<AttributeModifier>();
+                alienRecovery.SelfModifiers.Add(new AttributeModifier("StressDelta", 2 * AlienSickness.stressPerSecond, (string)STRINGS.DISEASES.ALIENSYMBIOT.NAME));
 
                 Db.Get().effects.Add(new Effect(FrostSickness.RECOVERY_ID, STRINGS.EFFECTS.FROSTRECOVERY.NAME, STRINGS.EFFECTS.FROSTRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(GasSickness.RECOVERY_ID, STRINGS.EFFECTS.GASRECOVERY.NAME, STRINGS.EFFECTS.GASRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(HungerSickness.RECOVERY_ID, STRINGS.EFFECTS.HUNGERRECOVERY.NAME, STRINGS.EFFECTS.HUNGERRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(BogSickness.RECOVERY_ID, STRINGS.EFFECTS.BOGRECOVERY.NAME, STRINGS.EFFECTS.BOGRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(SpindlySickness.RECOVERY_ID, STRINGS.EFFECTS.SPINDLYRECOVERY.NAME, STRINGS.EFFECTS.SPINDLYRECOVERY.DESC, cycle2, true, true, false));
-                
+                Db.Get().effects.Add(new Effect(MutatingSickness.RECOVERY_ID, STRINGS.EFFECTS.MUTATEDRECOVERY.NAME, STRINGS.EFFECTS.MUTATEDRECOVERY.DESC, cycle2, true, true, false));
+                Db.Get().effects.Add(alienRecovery);
+
                 Db.Get().effects.Add(new Effect(GasCureConfig.EffectID, STRINGS.CURES.GASCURE.NAME, STRINGS.CURES.GASCURE.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(MudMaskConfig.EffectID, STRINGS.CURES.MUDMASK.NAME, STRINGS.CURES.MUDMASK.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(SapShotConfig.EffectID, STRINGS.CURES.SAPSHOT.NAME, STRINGS.CURES.SAPSHOT.DESC, cycle10, true, true, false));
+                Db.Get().effects.Add(new Effect(MutatingAntiviralConfig.EffectID, STRINGS.CURES.MUTATINGANTIVIRAL.NAME, STRINGS.CURES.MUTATINGANTIVIRAL.DESC, cycle5, true, true, false));
+                Db.Get().effects.Add(SuperSerumConfig.GetEffect());
 
                 Db.Get().effects.Add(new Effect(AllergyVaccineConfig.EffectID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(SlimelungVaccineConfig.EffectID, SlimelungVaccineConfig.Name, SlimelungVaccineConfig.Desc, cycle50, true, true, false));
@@ -123,6 +138,8 @@ namespace DiseasesExpanded
                 exposureList.Add(FrostShards.GetExposureType());
                 exposureList.Add(GassyGerms.GetExposureType());
                 exposureList.Add(HungerGerms.GetExposureType());
+                exposureList.Add(AlienGerms.GetExposureType());
+                exposureList.Add(MutatingGerms.GetExposureType());
 
                 TUNING.GERM_EXPOSURE.TYPES = exposureList.ToArray();
             }
@@ -140,6 +157,8 @@ namespace DiseasesExpanded
                 __instance.Add(new FrostSickness());
                 __instance.Add(new GasSickness());
                 __instance.Add(new SpindlySickness());
+                __instance.Add(new AlienSickness());
+                __instance.Add(new MutatingSickness());
             }
         }
 
@@ -154,6 +173,8 @@ namespace DiseasesExpanded
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = BogInsects.ID, overlayColourName = BogInsects.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = FrostShards.ID, overlayColourName = FrostShards.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = GassyGerms.ID, overlayColourName = GassyGerms.ID });
+                Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = AlienGerms.ID, overlayColourName = AlienGerms.ID });
+                Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = MutatingGerms.ID, overlayColourName = MutatingGerms.ID });
             }
 
             public static void Postfix(ref Diseases __instance, bool statsOnly)
@@ -162,6 +183,8 @@ namespace DiseasesExpanded
                 __instance.Add(new FrostShards(statsOnly));
                 __instance.Add(new GassyGerms(statsOnly));
                 __instance.Add(new HungerGerms(statsOnly));
+                __instance.Add(new AlienGerms(statsOnly));
+                __instance.Add(new MutatingGerms(statsOnly));
             }
         }
 

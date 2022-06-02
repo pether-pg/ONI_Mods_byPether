@@ -27,7 +27,9 @@ namespace DiseasesExpanded
                     { GermIdx.BogInsectsIdx, BogBugsFlask.ID },
                     { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
                     { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
-                    { GermIdx.HungerGermsIdx, HungermsFlask.ID }
+                    { GermIdx.HungerGermsIdx, HungermsFlask.ID },
+                    { GermIdx.AlienGermsIdx, AlienGermFlask.ID },
+                    { GermIdx.MutatingGermsIdx, MutatingGermFlask.ID }
             }
             :
             new Dictionary<byte, string>()
@@ -38,7 +40,9 @@ namespace DiseasesExpanded
                     { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
                     { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
                     { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
-                    { GermIdx.HungerGermsIdx, HungermsFlask.ID }
+                    { GermIdx.HungerGermsIdx, HungermsFlask.ID },
+                    { GermIdx.AlienGermsIdx, AlienGermFlask.ID },
+                    { GermIdx.MutatingGermsIdx, MutatingGermFlask.ID }
             };
 
         public void GatherGerms(float dt)

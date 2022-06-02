@@ -93,9 +93,9 @@ namespace DiseasesExpanded
         public static ElementGrowthRule DieInElement(SimHashes element, float scale = 1)
         {
             ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
-            elementGrowthRule.populationHalfLife = 10 * scale;
-            elementGrowthRule.overPopulationHalfLife = 10 * scale;
-            elementGrowthRule.minDiffusionCount = 100000;
+            elementGrowthRule.populationHalfLife = 10 / scale;
+            elementGrowthRule.overPopulationHalfLife = 10 / scale;
+            elementGrowthRule.minDiffusionCount = (int)(100000 * scale);
             elementGrowthRule.diffusionScale = 0.001f;
 
             return elementGrowthRule;
@@ -144,5 +144,75 @@ namespace DiseasesExpanded
             elementGrowthRule.diffusionScale = 0.05f;
             return elementGrowthRule;
         }
+
+        public static ElementExposureRule KillingExposure(SimHashes element, float scale = 1)
+        {
+            ElementExposureRule elementExposureRule = new ElementExposureRule(element);
+            elementExposureRule.populationHalfLife = new float?(10f / scale);
+            return elementExposureRule;
+        }
+
+        public static ElementGrowthRule GrowthLike_FoodPoison_PollutedOxygen(SimHashes element)
+        {
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.populationHalfLife = new float?(12000f);
+            elementGrowthRule.maxCountPerKG = new float?(10000f);
+            elementGrowthRule.overPopulationHalfLife = new float?(3000f);
+            elementGrowthRule.diffusionScale = new float?(0.05f);
+            return elementGrowthRule;
+        }
+
+        public static ElementGrowthRule GrowthLike_FoodPoison_PollutedWater(SimHashes element)
+        {
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.populationHalfLife = new float?(-12000f);
+            elementGrowthRule.overPopulationHalfLife = new float?(12000f);
+            return elementGrowthRule;
+        }
+
+        public static TagGrowthRule GrowthLike_FoodPoison_Edible(Tag tag)
+        {
+            TagGrowthRule tagGrowthRule = new TagGrowthRule(tag);
+            tagGrowthRule.populationHalfLife = new float?(-12000f);
+            tagGrowthRule.overPopulationHalfLife = new float?(float.PositiveInfinity);
+            return tagGrowthRule;
+        }
+
+        public static ElementGrowthRule GrowthLike_Slimelung_PollutedOxygen(SimHashes element)
+        {
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.underPopulationDeathRate = new float?(0.0f);
+            elementGrowthRule.populationHalfLife = new float?(-300f);
+            elementGrowthRule.overPopulationHalfLife = new float?(1200f);
+            return elementGrowthRule;
+        }
+
+        public static ElementExposureRule ExposureLike_Slimelung_PollutedOxygen(SimHashes element)
+        {
+            ElementExposureRule elementExposureRule = new ElementExposureRule(element);
+            elementExposureRule.populationHalfLife = new float?(-12000f);
+            return elementExposureRule;
+        }
+
+        public static ElementExposureRule ExposureLike_Anything_ChlorineGas(SimHashes element)
+        {
+            ElementExposureRule elementExposureRule = new ElementExposureRule(element);
+            elementExposureRule.populationHalfLife = new float?(10f);
+            return elementExposureRule;
+        }
+
+        public static StateGrowthRule StateLike_Slimelung_Gas(Element.State state)
+        {
+            StateGrowthRule stateGrowthRule = new StateGrowthRule(state);
+            stateGrowthRule.minCountPerKG = new float?(250f);
+            stateGrowthRule.populationHalfLife = new float?(12000f);
+            stateGrowthRule.overPopulationHalfLife = new float?(1200f);
+            stateGrowthRule.maxCountPerKG = new float?(10000f);
+            stateGrowthRule.minDiffusionCount = new int?(5100);
+            stateGrowthRule.diffusionScale = new float?(0.005f);
+            return stateGrowthRule;
+        }
+
+
     }
 }
