@@ -148,6 +148,12 @@ namespace DiseasesExpanded
                 public static LocString DESC = (LocString)"Despite Alien Symbiot's influence recently waned, the horrifying menace of it still lives on... ";
             }
 
+            public class MUTATEDSYMPTHOMS
+            {
+                public static LocString NAME = (LocString)"Mutating Disease Sympthoms";
+                public static LocString DESC = (LocString)"This duplicant is suffering from various sympthoms of mutating disease.";
+            }
+
             public class MUTATEDRECOVERY
             {
                 public static LocString NAME = (LocString)"Mutating Disease Recovery";

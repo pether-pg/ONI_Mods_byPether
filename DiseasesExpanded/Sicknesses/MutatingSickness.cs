@@ -17,13 +17,13 @@ namespace DiseasesExpanded
         private const float calPerDay = 1666.682f;
         private const float calPerLvl = -calPerDay / 10;
         private const float bladderPerLvl = 0.05f;
-        private const float breathPerLvl = -0.2f;
+        private const float breathPerLvl = -0.15f;
         private const float staminaPerLvl = -0.01f;
         private const float attrPerLvl = -1f;
 
         public static Effect CreateRelatedEffect(float time)
         {
-            Effect effect = new Effect(EFFECT_ID, ID, ID, time, true, false, true);
+            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.MUTATEDSYMPTHOMS.NAME, STRINGS.EFFECTS.MUTATEDSYMPTHOMS.DESC, time, true, false, true);
             effect.SelfModifiers = new List<AttributeModifier>();
 
             int strLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Stress);
@@ -88,7 +88,7 @@ namespace DiseasesExpanded
         {
             public override object OnInfect(GameObject go, SicknessInstance diseaseInstance)
             {
-                BogSickness.BogSicknessComponent.StatesInstance statesInstance = new BogSickness.BogSicknessComponent.StatesInstance(diseaseInstance);
+                MutatingSickness.MutatingSicknessComponent.StatesInstance statesInstance = new MutatingSickness.MutatingSicknessComponent.StatesInstance(diseaseInstance);
                 statesInstance.StartSM();
 
                 Debug.Log($"{ModInfo.Namespace}: {go.name} infected with Mutated Disease: {MutationData.Instance.GetMutationsCode()}");

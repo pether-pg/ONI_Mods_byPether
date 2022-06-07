@@ -108,6 +108,42 @@ namespace DiseasesExpanded
                             .Replace("{RESILIANCE}", resCode);
         }
 
+        public string GetMutationsCodeLegend()
+        {
+            string attackLegend = string.Format(
+                "Severity: Attributes (<color=#FF0000>{0}</color>), Breathing (<color=#FF0000>{1}</color>), Calories (<color=#FF0000>{2}</color>) " +
+                "- Damage (<color=#FF0000>{3}</color>), Exhaustion (<color=#FF0000>{4}</color>), Stress (<color=#FF0000>{5}</color>)",
+                GetMutationLevel(MutationVectors.Vectors.Att_Attributes),
+                GetMutationLevel(MutationVectors.Vectors.Att_Breathing),
+                GetMutationLevel(MutationVectors.Vectors.Att_Calories),
+                GetMutationLevel(MutationVectors.Vectors.Att_Damage),
+                GetMutationLevel(MutationVectors.Vectors.Att_Exhaustion),
+                GetMutationLevel(MutationVectors.Vectors.Att_Stress)
+                );
+            string enviroLegend = string.Format("Environment: Oxygen (<color=#FF0000>{0}</color>), CO2 (<color=#FF0000>{1}</color>), Pollutions (<color=#FF0000>{2}</color>) " +
+                "- Water (<color=#FF0000>{3}</color>), Gases (<color=#FF0000>{4}</color>), Liquids(<color=#FF0000>{5}</color>)",
+                GetMutationLevel(MutationVectors.Vectors.Env_Oxygen),
+                GetMutationLevel(MutationVectors.Vectors.Env_CarbonDioxide),
+                GetMutationLevel(MutationVectors.Vectors.Env_Pollutions),
+                GetMutationLevel(MutationVectors.Vectors.Env_Water),
+                GetMutationLevel(MutationVectors.Vectors.Env_Gas),
+                GetMutationLevel(MutationVectors.Vectors.Env_Liquid)
+                );
+            string resistLegend = string.Format("Resiliance: Infectibility (<color=#FF0000>{0}</color>), Chlorine (<color=#FF0000>{1}</color>), Germ Coughing (<color=#FF0000>{2}</color>) " +
+                "- Exposure Threshold (<color=#FF0000>{3}</color>), Radiation (<color=#FF0000>{4}</color>), Temperature (<color=#FF0000>{5}</color>)",
+                GetMutationLevel(MutationVectors.Vectors.Res_BaseInfectionResistance),
+                GetMutationLevel(MutationVectors.Vectors.Res_ChlorineResistance),
+                GetMutationLevel(MutationVectors.Vectors.Res_Coughing),
+                GetMutationLevel(MutationVectors.Vectors.Res_InfectionExposureThreshold),
+                GetMutationLevel(MutationVectors.Vectors.Res_RadiationResistance),
+                GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance)
+                );
+
+            string legend = $"{attackLegend}\n{enviroLegend}\n{resistLegend}";
+
+            return legend;
+        }
+
         public int GetTotalLevel()
         {
             int sum = 0;
@@ -120,6 +156,16 @@ namespace DiseasesExpanded
         {
             int mutationCount = Enum.GetValues(typeof(MutationVectors.Vectors)).Length;
             return mutationCount * maxMutationLevel;
+        }
+
+        public float GetCompletionPercent()
+        {
+            return 1.0f * GetTotalLevel() / GetMaxTotalLevel();
+        }
+
+        public float GetExpectedMutationPeriod()
+        {
+            return 1.0f * finalMutationCycleTarget / GetMaxTotalLevel();
         }
 
         public void IncreaseMutationProgress(GameObject infestedHost)
@@ -172,14 +218,20 @@ namespace DiseasesExpanded
 
         public float GetAccelerationParameter()
         {
-            float mutationProgress = (1.0f + GetTotalLevel()) / (1.0f + GetMaxTotalLevel());
-            float curentMutationCycleExpectancy = mutationProgress * finalMutationCycleTarget;
-            return GameClock.Instance.GetCycle() / curentMutationCycleExpectancy;
+            float mutationProgress = GetCompletionPercent();
+            float currentMutationCycleExpectancy = mutationProgress * finalMutationCycleTarget;
+
+            float delta = GameClock.Instance.GetCycle() - currentMutationCycleExpectancy;
+            float expectedMutationTime = GetExpectedMutationPeriod();
+            float relativeDelta = delta / expectedMutationTime;
+
+            float acceleration = relativeDelta < 0 ? -1.0f / relativeDelta : relativeDelta;
+            return acceleration;
         }
 
         public Color32 GetGermColor()
         {
-            float ratio = 1.0f * GetTotalLevel() / GetMaxTotalLevel();
+            float ratio = GetCompletionPercent();
             return Color32.Lerp(MutatingGerms.colorValue, ColorPalette.BloodyRed, ratio);
         }
 
@@ -229,10 +281,18 @@ namespace DiseasesExpanded
                 }    
         }
 
+        public string GetLegendString()
+        {
+            string baseStr = STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT.Replace("\n", "");
+            string hover = $"{baseStr} ({GetMutationsCode()}) \n\nGenoms' values:\n{GetMutationsCodeLegend()}" ;
+            return hover;
+        }
+
         public void UpdateAll()
         {
             if (!_isReady)
                 return;
+
             UpdateColor();
             UpdateGerms();
             UpdateExposureTable();
@@ -310,7 +370,7 @@ namespace DiseasesExpanded
 
         private void Notify()
         {
-            Debug.Log($"{ModInfo.Namespace}: {MutatingGerms.ID} mutated at cycle {lastMutationCycle}. Now it is {GetMutationsCode()}");
+            Debug.Log($"{ModInfo.Namespace}: {MutatingGerms.ID} mutated at cycle {lastMutationCycle}. Now it is {GetMutationsCode()} (level {GetTotalLevel()}/{GetMaxTotalLevel()})");
             
             NotificationType nt = NotificationType.Event;
             float progress = 1.0f * GetTotalLevel() / GetMaxTotalLevel();            
