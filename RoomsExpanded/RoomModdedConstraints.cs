@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +13,7 @@ namespace RoomsExpanded
         private readonly static int requiredUniquePlants = 4;
         private static int requiredDecorativePlants = 4;
         private static int requiredBotanicalPlants = 8;
+        private static Tag MorePlantsTag = new Tag("DecorMorePlants");
 
         public static List<string> DecorativeNames = new List<string>() {
             "PrickleGrass",     // from vanilla - Bristle Briar
@@ -79,7 +80,7 @@ namespace RoomsExpanded
                                                                 foreach (var plant in room.cavity.plants)
                                                                 {
                                                                     if (plant == null) continue;
-                                                                    if (DecorativeNames.Contains(plant.name)) continue;
+                                                                    if (IsDecorativePlant(plant)) continue;
                                                                     if (!names.Contains(plant.name))
                                                                         names.Add(plant.name);
                                                                 }
@@ -158,7 +159,7 @@ namespace RoomsExpanded
                                                                     foreach (var plant in room.cavity.plants)
                                                                     {
                                                                         if (plant == null) continue;
-                                                                        if (!DecorativeNames.Contains(plant.name)) continue;
+                                                                        if (!IsDecorativePlant(plant)) continue;
                                                                         if (!names.Contains(plant.name))
                                                                             names.Add(plant.name);
                                                                     }
@@ -234,5 +235,10 @@ namespace RoomsExpanded
                                                                 },
                                                                 name: string.Format(STRINGS.ROOMS.CRITERIA.FOSSILS.NAME, requiredFossils),
                                                                 description: string.Format(STRINGS.ROOMS.CRITERIA.FOSSILS.DESCRIPTION, requiredFossils));
+        
+        private static bool IsDecorativePlant(KPrefabID plant)
+        {
+            return DecorativeNames.Contains(plant.name) || plant.HasTag(MorePlantsTag);
+        }
     }
 }
