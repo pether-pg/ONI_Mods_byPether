@@ -13,8 +13,8 @@ namespace RoomsExpanded
 
             __instance.Add(RoomTypes_AllModded.Aquarium);
 
-            RoomConstraintTags.AddStompInConflict(__instance.Farm, RoomTypes_AllModded.Aquarium);
-            RoomConstraintTags.AddStompInConflict(__instance.CreaturePen, RoomTypes_AllModded.Aquarium);
+            RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.Aquarium, __instance.Farm);
+            RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.Aquarium, __instance.CreaturePen);
         }
 
         [HarmonyPatch(typeof(FishFeederConfig))]
