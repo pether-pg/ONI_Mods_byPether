@@ -10,8 +10,13 @@ namespace RoomsExpanded
     {
         public static void AddRoom(ref RoomTypes __instance)
         {
-            if (Settings.Instance.Laboratory.IncludeRoom)
-                __instance.Add(RoomTypes_AllModded.LaboratoryRoom);
+            if (!Settings.Instance.Laboratory.IncludeRoom)
+                return;
+
+            __instance.Add(RoomTypes_AllModded.LaboratoryRoom);
+
+            RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.LaboratoryRoom, __instance.Hospital);
+            RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.LaboratoryRoom, RoomTypes_AllModded.GeneticNursery);
         }
 
         // All 3 research station are using the same Research Center script
@@ -73,6 +78,18 @@ namespace RoomsExpanded
         [HarmonyPatch(typeof(CosmicResearchCenterConfig))]
         [HarmonyPatch("ConfigureBuildingTemplate")]
         public static class CosmicResearchCenterConfig_ConfigureBuildingTemplate_Patch
+        {
+            public static void Postfix(GameObject go)
+            {
+                if (!Settings.Instance.Laboratory.IncludeRoom) return;
+                go.GetComponent<KPrefabID>().AddTag(RoomConstraints.ConstraintTags.ResearchStation);
+            }
+        }
+
+        // Virtual Planetarium (DLC)
+        [HarmonyPatch(typeof(DLC1CosmicResearchCenterConfig))]
+        [HarmonyPatch("ConfigureBuildingTemplate")]
+        public static class DLC1CosmicResearchCenterConfig_ConfigureBuildingTemplate_Patch
         {
             public static void Postfix(GameObject go)
             {

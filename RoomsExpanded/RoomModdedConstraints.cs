@@ -173,7 +173,7 @@ namespace RoomsExpanded
                                                                 name: string.Format(STRINGS.ROOMS.CRITERIA.PLANTCOUNT.NAME, requiredBotanicalPlants),
                                                                 description: string.Format(STRINGS.ROOMS.CRITERIA.PLANTCOUNT.DESCRIPTION, requiredBotanicalPlants));
 
-        public static RoomConstraints.Constraint NO_WILTING = new RoomConstraints.Constraint(
+        public static RoomConstraints.Constraint NO_WILD = new RoomConstraints.Constraint(
                                                                 null,
                                                                 room =>
                                                                 {

@@ -23,7 +23,7 @@ namespace RoomsExpanded
                                 {
                                 RoomModdedConstraints.DECORATIVE_PLANTS,
                                 RoomModdedConstraints.BOTANICAL_PLANTS,
-                                RoomModdedConstraints.NO_WILTING,
+                                RoomModdedConstraints.NO_WILD,
                                 RoomConstraints.MINIMUM_SIZE_32,
                                 RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Botanical.MaxSize)
                                 };
