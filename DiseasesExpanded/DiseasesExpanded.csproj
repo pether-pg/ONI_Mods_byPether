@@ -75,7 +75,7 @@
     <Compile Include="MutatingDisease\ControlledAttackMutationConfig.cs" />
     <Compile Include="MutatingDisease\ControlledEnvironmentalMutationConfig.cs" />
     <Compile Include="MutatingDisease\ControlledResilianceMutationConfig.cs" />
-    <Compile Include="Patches\DiseasesExopanded_Patches_SpaceGoo.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_SpaceGoo.cs" />
     <Compile Include="Sicknesses\AlienSickness.cs" />
     <Compile Include="Sicknesses\MutatingSickness.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_MutatingDisease.cs" />
@@ -110,10 +110,6 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Sicknesses\SpindlySickness.cs" />
     <Compile Include="Misc\SuitWearing.cs" />
-    <Compile Include="TemporalDiseaseSpreader.cs" />
-    <Compile Include="Sicknesses\TemporalDisplacementSickness.cs" />
-    <Compile Include="Sicknesses\TemporalReversalSickness.cs" />
-    <Compile Include="TemporalSicknessComponent.cs" />
     <Compile Include="Traits\InsectAllergies.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Translation.cs" />
     <Compile Include="Misc\Kanims.cs" />

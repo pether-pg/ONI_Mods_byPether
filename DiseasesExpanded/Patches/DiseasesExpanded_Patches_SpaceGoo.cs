@@ -6,7 +6,7 @@ using System.Reflection.Emit;
 
 namespace DiseasesExpanded
 {
-    class DiseasesExopanded_Patches_SpaceGoo
+    class DiseasesExpanded_Patches_SpaceGoo
     {
         public static void EnhanceCometWithGerms(GameObject go, byte idx = byte.MaxValue, int count = 1000000)
         {
