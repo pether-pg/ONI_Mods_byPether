@@ -5,6 +5,7 @@ namespace RoomsExpanded
 {
     class DecorProviderModifier : KMonoBehaviour, ISim1000ms
     {
+        private bool wasInTheRoom = false;
         private DecorProvider provider = null;
         private EffectorValues initialEffector;
         private EffectorValues bonusEffector;
@@ -41,10 +42,18 @@ namespace RoomsExpanded
         {
             InitalizeEffectors();
 
-            if (RoomTypes_AllModded.IsInTheRoom(this, RoomTypeAquariumData.RoomId))
+            if (!wasInTheRoom && RoomTypes_AllModded.IsInTheRoom(this, RoomTypeAquariumData.RoomId))
+            {
                 provider.SetValues(bonusEffector);
-            else
+                provider.Refresh();
+                wasInTheRoom = true;
+            }
+            else if (wasInTheRoom && !RoomTypes_AllModded.IsInTheRoom(this, RoomTypeAquariumData.RoomId))
+            {
                 provider.SetValues(initialEffector);
+                provider.Refresh();
+                wasInTheRoom = false;
+            }
         }
     }
 }
