@@ -69,16 +69,6 @@ namespace DiseasesExpanded
                 this.growthRules = null;
             }
 
-
-            int chlLiveLvl = 10;
-            int o2ThriveLvl = 10;
-            float chlorineDeathScale = 10.0f / (1 + chlLvl * chlLvl * chlLvl * chlLvl);
-            float chlorineThriveScale = chlLvl - chlLiveLvl;
-            float oxygenThriveScale = 0.2f * (1 + o2Lvl - o2ThriveLvl);
-            float co2ThriveScale = 0.2f * (1 + co2Lvl);
-            float waterThriveScale = 0.2f * (1 + h2oLvl);
-            float pollutionThriveScale = 0.3f * (1 + polLvl);
-
             this.InitializeElemGrowthArray(ref this.elemGrowthInfo, Disease.DEFAULT_GROWTH_INFO);
             this.AddGrowthRule(GermGrowthRules.GrowthRule_Default());
 

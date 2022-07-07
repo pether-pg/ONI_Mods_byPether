@@ -81,7 +81,6 @@ namespace DiseasesExpanded
 
         public string GetMutationsCode()
         {
-            //string pattern = "Strain {ATTACK}/{ENVIRONMENTAL}/{RESILIANCE}";
             string pattern = STRINGS.GERMS.MUTATINGGERMS.STRAIN_PATTERN;
 
             string attackCode = string.Format("{0:x}{1:x}{2:x}-{3:x}{4:x}{5:x}", 
@@ -92,14 +91,6 @@ namespace DiseasesExpanded
                 GetMutationLevel(MutationVectors.Vectors.Att_Exhaustion),
                 GetMutationLevel(MutationVectors.Vectors.Att_Stress)
                 );
-            /*string envCode = string.Format("{0:x}{1:x}{2:x}-{3:x}{4:x}{5:x}",
-                GetMutationLevel(MutationVectors.Vectors.Env_Oxygen),
-                GetMutationLevel(MutationVectors.Vectors.Env_CarbonDioxide),
-                GetMutationLevel(MutationVectors.Vectors.Env_Pollutions),
-                GetMutationLevel(MutationVectors.Vectors.Env_Water),
-                GetMutationLevel(MutationVectors.Vectors.Env_Gas),
-                GetMutationLevel(MutationVectors.Vectors.Env_Liquid)
-                );*/
             string resCode = string.Format("{0:x}{1:x}{2:x}-{3:x}{4:x}{5:x}",
                 GetMutationLevel(MutationVectors.Vectors.Res_BaseInfectionResistance),
                 GetMutationLevel(MutationVectors.Vectors.Res_SicknessDuration),
@@ -110,7 +101,6 @@ namespace DiseasesExpanded
                 );
 
             return pattern.Replace("{ATTACK}", attackCode)
-                            //.Replace("{ENVIRONMENTAL}", envCode)
                             .Replace("{RESILIANCE}", resCode);
         }
 
@@ -124,17 +114,6 @@ namespace DiseasesExpanded
                 GetMutationLevel(MutationVectors.Vectors.Att_Exhaustion),
                 GetMutationLevel(MutationVectors.Vectors.Att_Stress)
                 );
-            /*
-             string enviroLegend = string.Format("Environment: Oxygen (<color=#FF0000>{0}</color>), CO2 (<color=#FF0000>{1}</color>), Pollutions (<color=#FF0000>{2}</color>) " +
-                "- Water (<color=#FF0000>{3}</color>), Gases (<color=#FF0000>{4}</color>), Liquids(<color=#FF0000>{5}</color>)",
-                GetMutationLevel(MutationVectors.Vectors.Env_Oxygen),
-                GetMutationLevel(MutationVectors.Vectors.Env_CarbonDioxide),
-                GetMutationLevel(MutationVectors.Vectors.Env_Pollutions),
-                GetMutationLevel(MutationVectors.Vectors.Env_Water),
-                GetMutationLevel(MutationVectors.Vectors.Env_Gas),
-                GetMutationLevel(MutationVectors.Vectors.Env_Liquid)
-                );
-            */
             string resistLegend = string.Format(STRINGS.GERMS.MUTATINGGERMS.STRAIN_RESILIANCE_PATTERN,
                 GetMutationLevel(MutationVectors.Vectors.Res_BaseInfectionResistance),
                 GetMutationLevel(MutationVectors.Vectors.Res_SicknessDuration),
@@ -147,7 +126,6 @@ namespace DiseasesExpanded
             string help = string.Format(STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN, STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME);
             int threatLvlPercent = (int)(100 * GetCompletionPercent());
             string threat = string.Format(STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN, threatLvlPercent);
-            //string legend = $"{attackLegend}\n{enviroLegend}\n{resistLegend}";
             string legend = $"{attackLegend}\n{resistLegend}\n\n{threat}\n{help}";
 
             return legend;
@@ -264,15 +242,6 @@ namespace DiseasesExpanded
             Disease dis = Db.Get().Diseases.Get((HashedString)MutatingGerms.ID);
             if (dis == null)
                 return;
-            /*
-            int o2Lvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Env_Oxygen);
-            int co2Lvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Env_CarbonDioxide);
-            int polLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Env_Pollutions);
-            int h2oLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Env_Water);
-            int chlLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_ChlorineResistance);
-            int gasLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Env_Gas);
-            int liqLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Env_Liquid);
-            ((MutatingGerms)dis).UpdateGrowthRules(true, o2Lvl, co2Lvl, polLvl, h2oLvl, chlLvl, gasLvl, liqLvl);*/
 
             ((MutatingGerms)dis).UpdateGermData();
         }
@@ -338,7 +307,6 @@ namespace DiseasesExpanded
         public void Mutate()
         {
             MutateAttack();
-            //MutateEnvironmental();
             MutateResiliance();
 
             UpdateAll();

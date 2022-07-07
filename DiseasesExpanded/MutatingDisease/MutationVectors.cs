@@ -17,20 +17,12 @@ namespace DiseasesExpanded
             Att_Exhaustion,
             Att_Attributes,
 
-            //Env_Oxygen,
-            //Env_Water,
-            //Env_CarbonDioxide,
-            //Env_Pollutions,
-            //Env_Gas,
-            //Env_Liquid,
-
             Res_Coughing,
             Res_TemperatureResistance,
             Res_RadiationResistance,
             Res_InfectionExposureThreshold,
             Res_BaseInfectionResistance,
             Res_SicknessDuration
-            //Res_ChlorineResistance
         }
 
         public static List<Vectors> GetAttackVectors()
@@ -46,13 +38,7 @@ namespace DiseasesExpanded
 
         public static List<Vectors> GetEnvironmentalVectors()
         {
-            return new List<Vectors>() { };/*
-                Vectors.Env_Oxygen,
-                Vectors.Env_Water,
-                Vectors.Env_CarbonDioxide,
-                Vectors.Env_Pollutions,
-                Vectors.Env_Gas,
-                Vectors.Env_Liquid};*/
+            return new List<Vectors>() { };
         }
 
         public static List<Vectors> GetResilianceVectors()
