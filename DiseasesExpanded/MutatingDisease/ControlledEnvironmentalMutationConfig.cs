@@ -31,14 +31,14 @@ namespace DiseasesExpanded
             {
                 new ComplexRecipe.RecipeElement((Tag) ID, 1, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
-            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(VaccineApothecaryConfig.ID, ingredients, results), ingredients, results)
+            /*(ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(VaccineApothecaryConfig.ID, ingredients, results), ingredients, results)
             {
                 time = VaccineApothecaryConfig.MutationRecipeTime,
                 description = STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.ID },
                 sortOrder = 15
-            };
+            };*/
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(
                 ID,

@@ -47,7 +47,7 @@ namespace DiseasesExpanded
 
             // Solid
 
-            GrowthRule inSolid = GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Solid, 1f, 30000f, 1200f, 100000, 1E-02f, 5000);
+            GrowthRule inSolid = GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Solid, 1f, 30000f, 10f, 100, 1E-02f, 5000);
             inSolid.underPopulationDeathRate = 1000;
             this.AddGrowthRule(inSolid);
 

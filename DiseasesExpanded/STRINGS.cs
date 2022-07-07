@@ -33,8 +33,26 @@ namespace DiseasesExpanded
             }
             public class MUTATINGGERMS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Unstable Virus", nameof(MUTATINGGERMS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Unstable Virus", nameof(MUTATINGGERMS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Unstable Virus present\n";
+
+                public static LocString STRAIN_PATTERN = (LocString)"Strain {ATTACK}/{RESILIANCE}";
+                public static LocString STRAIN_SEVERITY_PATTERN = (LocString)"Severity: " +
+                    "Attributes: <color=#FF0000>{0}</color>, " +
+                    "Breathing: <color=#FF0000>{1}</color>, " +
+                    "Calories: <color=#FF0000>{2}</color> " +
+                    "- Damage: <color=#FF0000>{3}</color>, " +
+                    "Exhaustion: <color=#FF0000>{4}</color>, " +
+                    "Stress: <color=#FF0000>{5}</color>";
+                public static LocString STRAIN_RESILIANCE_PATTERN = (LocString)"Resiliance: " +
+                    "Infectibility: <color=#FF0000>{0}</color>, " +
+                    "Duration: <color=#FF0000>{1}</color>, " +
+                    "Germ Coughing: <color=#FF0000>{2}</color> " +
+                    "- Exposure Threshold: <color=#FF0000>{3}</color>, " +
+                    "Radiation: <color=#FF0000>{4}</color>, " +
+                    "Temperature: <color=#FF0000>{5}</color>";
+                public static LocString MUTATION_HELP_PATTERN = (LocString)"Use {0} to mutate the germs in more safe direction.";
+                public static LocString TREAT_POTENTIAL_PATTERN = (LocString)"Threat potential: {0}%";
             }
         }
 
@@ -82,31 +100,23 @@ namespace DiseasesExpanded
                 public static LocString EXPOSURE_INFO = (LocString)"Got hurt by the Spindle of a Grubfruit.\n\nAs a result, this duplicant will fall asleep in random places.\nImprove Farming skill or wear protective equipment to prevent future infections.\nUse Espresso Machine to prevent Narcoleptic Naps.\n";
             }
 
-            public class ALIENSYMBIOT
+            public class ALIENSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Alien Symbiot", nameof(ALIENSYMBIOT));
+                public static LocString NAME = (LocString) UI.FormatAsLink("Alien Symbiot", nameof(ALIENSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Enhances and stresses the duplicant.";
                 public static LocString DESCRIPTION = (LocString)"Alien microbes increase duplicant's skills. However, this feels unnatural and makes infected duplicant stressed out.";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Alien Goo.";
-                public static LocString EXPOSURE_INFO = (LocString)"Got exposed to Alien Lifeform";
+                public static LocString EXPOSURE_INFO = (LocString)"Got exposed to Alien Goo";
             }
 
-            public class MUTATINGDISEASE
+            public class MUTATINGSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Mutating Disease", nameof(MUTATINGDISEASE));
+                public static LocString NAME = (LocString) UI.FormatAsLink("Mutating Disease", nameof(MUTATINGSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"May affect duplicants in many different ways";
                 public static LocString DESCRIPTION = (LocString)"Virus causing the disease is very unstable and often mutates. Results may be different each time.";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Mutating Disease.";
                 public static LocString EXPOSURE_INFO = (LocString)"Got infected by Mutating Virus.";
                 public static LocString POPFXTEXT = (LocString)"Painful cough!";
-            }
-
-            public class TEMPORALDISPLACEMENT
-            {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Temporal Displacement", nameof(TEMPORALDISPLACEMENT));
-                public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Sometimes displace duplicant to another location";
-                public static LocString DESCRIPTION = (LocString)"Sometimes displace duplicant to another location";
-                public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Temporal Displacement.";
             }
         }
 
@@ -121,7 +131,7 @@ namespace DiseasesExpanded
             public class FROSTRECOVERY
             {
                 public static LocString NAME = (LocString)"Frost Pox Recovery";
-                public static LocString DESC = (LocString)"This duplicant just recovered from Frost-Covered Skin.";
+                public static LocString DESC = (LocString)"This duplicant just recovered from Frost Pox.";
             }
 
             public class GASRECOVERY
@@ -277,6 +287,14 @@ namespace DiseasesExpanded
                 public static LocString DESC = (LocString)"Insects bites will cause additional damage to this Duplicant.";
                 public static LocString SHORT_DESC = (LocString)"Allergic reaction to insect bites";
                 public static LocString SHORT_DESC_TOOLTIP = (LocString)"Insect Allergies make small bites more dangerous.";
+            }
+        }
+
+        public class NOTIFICATIONS
+        {
+            public class VIRUSMUTATED
+            {
+                public static LocString PATTERN = (LocString)"New virus mutation observed: {0}";
             }
         }
 

@@ -50,7 +50,7 @@ namespace DiseasesExpanded
         {
             public static void Postfix(Harvestable __instance, Worker worker)
             {
-                if (!__instance.gameObject.name.Contains(WormPlantConfig.ID))
+                if (!__instance.gameObject.name.Contains(WormPlantConfig.ID) || __instance.gameObject.name.Contains(SuperWormPlantConfig.ID))
                     return;
 
                 if (HasConflictingTraits(worker) || IsRecentlyRecovered(worker))

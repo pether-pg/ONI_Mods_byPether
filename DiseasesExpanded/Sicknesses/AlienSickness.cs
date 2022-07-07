@@ -23,19 +23,19 @@ namespace DiseasesExpanded
 
             this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[12]
             {
-                new AttributeModifier("StressDelta", stressPerSecond, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
+                new AttributeModifier("StressDelta", stressPerSecond, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
 
-                new AttributeModifier(Db.Get().Attributes.Athletics.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Strength.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Digging.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Construction.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Art.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Caring.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Learning.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Machinery.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Cooking.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Botanist.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME),
-                new AttributeModifier(Db.Get().Attributes.Ranching.Id, 5f, (string) STRINGS.DISEASES.ALIENSYMBIOT.NAME)
+                new AttributeModifier(Db.Get().Attributes.Athletics.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Strength.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Digging.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Construction.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Art.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Caring.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Learning.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Machinery.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Cooking.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Botanist.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME),
+                new AttributeModifier(Db.Get().Attributes.Ranching.Id, 5f, (string) STRINGS.DISEASES.ALIENSICKNESS.NAME)
 
             }));
         }

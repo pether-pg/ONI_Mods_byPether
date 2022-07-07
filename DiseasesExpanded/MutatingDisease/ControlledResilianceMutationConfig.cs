@@ -35,7 +35,7 @@ namespace DiseasesExpanded.MutatingDisease
             {
                 time = VaccineApothecaryConfig.MutationRecipeTime,
                 description = STRINGS.CONTROLLEDMUTATION.RESILIANCE.DESC,
-                nameDisplay = ComplexRecipe.RecipeNameDisplay.IngredientToResult,
+                nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.ID },
                 sortOrder = 15
             };

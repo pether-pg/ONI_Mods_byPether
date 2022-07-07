@@ -30,9 +30,10 @@ namespace DiseasesExpanded
         [HarmonyPatch("Cure")]
         public class Sickness_Cure_Patch
         {
-            public static void Postfix(GameObject go)
+            public static void Postfix(Sickness __instance, GameObject go)
             {
-                MutationData.Instance.IncreaseMutationProgress(go);
+                if (__instance.Id != MutatingSickness.ID)
+                    MutationData.Instance.IncreaseMutationProgress(go);
             }
         }
 

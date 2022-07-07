@@ -14,7 +14,10 @@ namespace DiseasesExpanded
             // following tutorial by Aki:
             // https://forums.kleientertainment.com/forums/topic/123339-guide-for-creating-translatable-mods
 
-            public static void Postfix() => Translate(typeof(STRINGS));
+            public static void Postfix()
+            { 
+                Translate(typeof(STRINGS));
+            }
 
             public static void Translate(Type root)
             {

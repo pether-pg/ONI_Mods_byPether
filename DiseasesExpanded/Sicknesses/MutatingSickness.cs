@@ -33,31 +33,31 @@ namespace DiseasesExpanded
             int attLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Attributes);
 
             if (strLvl > 0)
-                effect.SelfModifiers.Add(new AttributeModifier("StressDelta", stressPerLvl * strLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("StressDelta", stressPerLvl * strLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
             if (brtLvl > 0)
-                effect.SelfModifiers.Add(new AttributeModifier("BreathDelta", breathPerLvl * brtLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("BreathDelta", breathPerLvl * brtLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
             if (exhLvl > 0)
-                effect.SelfModifiers.Add(new AttributeModifier("StaminaDelta", staminaPerLvl * exhLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("StaminaDelta", staminaPerLvl * exhLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
 
             if (calLvl > 0)
             {
-                effect.SelfModifiers.Add(new AttributeModifier("CaloriesDelta", calPerLvl * calLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier("BladderDelta", bladderPerLvl * calLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("CaloriesDelta", calPerLvl * calLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("BladderDelta", bladderPerLvl * calLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
             }
 
             if (attLvl > 0)
             {
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Athletics.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Strength.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Digging.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Construction.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Art.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Caring.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Learning.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Machinery.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Cooking.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Botanist.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Ranching.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGDISEASE.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Athletics.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Strength.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Digging.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Construction.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Art.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Caring.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Learning.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Machinery.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Cooking.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Botanist.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Ranching.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
             }
             return effect;
         }
@@ -102,7 +102,10 @@ namespace DiseasesExpanded
                 return (object)statesInstance;
             }
 
-            public override void OnCure(GameObject go, object instance_data) => ((StateMachine.Instance)instance_data).StopSM("Cured");
+            public override void OnCure(GameObject go, object instance_data)
+            {
+                ((StateMachine.Instance)instance_data).StopSM("Cured");
+            }
 
             public class StatesInstance : GameStateMachine<MutatingSickness.MutatingSicknessComponent.States, MutatingSickness.MutatingSicknessComponent.StatesInstance, SicknessInstance, object>.GameInstance
             {
@@ -125,19 +128,26 @@ namespace DiseasesExpanded
                 private void Coughing(GameObject infected)
                 {
                     int dmgLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Damage);
-                    if (dmgLvl == 0)
-                        return;
-
-                    float damage = 0.1f * dmgLvl * dmgLvl;
-                    if (Settings.Instance.RebalanceForDiseasesRestored)
-                        damage *= 2;
-                    infected.GetComponent<Health>()?.Damage(damage);
-                    PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Negative, STRINGS.DISEASES.MUTATINGDISEASE.POPFXTEXT, infected.transform);
+                    if(dmgLvl > 0)
+                    {
+                        float damage = 0.1f * dmgLvl * dmgLvl;
+                        if (Settings.Instance.RebalanceForDiseasesRestored)
+                            damage *= 2;
+                        infected.GetComponent<Health>()?.Damage(damage);
+                        PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Negative, STRINGS.DISEASES.MUTATINGSICKNESS.POPFXTEXT, infected.transform);
+                    }
 
                     byte idx = Db.Get().Diseases.GetIndex((HashedString)MutatingGerms.ID);
-                    int coughLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_Coughing);
-                    int count = 1000 * coughLvl * coughLvl * coughLvl;
-                    SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(infected.transform.position), idx, count);
+                    int coughLvl = 1 + MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_Coughing);
+                    int count = 1000 * coughLvl * coughLvl;
+                    Equippable equippable = this.master.gameObject.GetComponent<SuitEquipper>().IsWearingAirtightSuit();
+                    if (equippable != null)
+                    {
+                        AmountInstance amountInstance = Db.Get().Amounts.Temperature.Lookup(infected);
+                        equippable.GetComponent<Storage>().AddGasChunk(SimHashes.CarbonDioxide, 0.1f, amountInstance.value, idx, count, false);
+                    }
+                    else
+                        SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(infected.transform.position), idx, count);
                 }
 
                 private void FinishedCoughing(GameObject cougher) => this.sm.coughFinished.Trigger(this);

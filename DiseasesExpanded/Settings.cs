@@ -28,5 +28,8 @@ namespace DiseasesExpanded
 
         public bool RebalanceForDiseasesRestored = false;
         public bool AutoDetectRelatedMods = true;
+        public int UnstableVirusFinalMutationCycleEstimation = 1000;
+        public int UnstableVirusMinimalMutationInterval = 10;
+        public bool ClearVirusMutationsOnLoad = false;
     }
 }
