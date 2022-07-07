@@ -105,6 +105,12 @@ namespace DiseasesExpanded
             public override void OnCure(GameObject go, object instance_data)
             {
                 ((StateMachine.Instance)instance_data).StopSM("Cured");
+
+                if (go == null) 
+                    return;
+                Effects effects = go.GetComponent<Effects>();
+                if (effects != null && effects.HasEffect(EFFECT_ID))
+                    effects.Remove(EFFECT_ID);
             }
 
             public class StatesInstance : GameStateMachine<MutatingSickness.MutatingSicknessComponent.States, MutatingSickness.MutatingSicknessComponent.StatesInstance, SicknessInstance, object>.GameInstance
