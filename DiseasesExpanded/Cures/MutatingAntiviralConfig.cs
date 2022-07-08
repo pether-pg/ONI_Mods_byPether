@@ -15,7 +15,7 @@ namespace DiseasesExpanded
         {
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
-                new ComplexRecipe.RecipeElement((Tag)MutatingGermFlask.ID, 1f),
+                new ComplexRecipe.RecipeElement((Tag) BasicForagePlantConfig.ID, 1f),
                 new ComplexRecipe.RecipeElement((Tag) SwampLilyFlowerConfig.ID, 1f),
                 new ComplexRecipe.RecipeElement((Tag) SpiceNutConfig.ID, 1f)
             };

@@ -148,29 +148,29 @@ msgctxt "DiseasesExpanded.STRINGS.CURES.VACCINE.NAME"
 msgid "{0} Vaccine"
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.DESCRIPTION
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.DESCRIPTION"
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTION"
 msgid "Alien microbes increase duplicant's skills. However, this feels unnatural and makes infected duplicant stressed out."
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.DESCRIPTIVE_SYMPTOMS
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.DESCRIPTIVE_SYMPTOMS"
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTIVE_SYMPTOMS"
 msgid "Enhances and stresses the duplicant."
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.EXPOSURE_INFO
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.EXPOSURE_INFO"
-msgid "Got exposed to Alien Lifeform"
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.EXPOSURE_INFO"
+msgid "Got exposed to Alien Goo"
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.LEGEND_HOVERTEXT
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.LEGEND_HOVERTEXT"
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.LEGEND_HOVERTEXT"
 msgid "Area affected by Alien Goo."
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.NAME
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSYMBIOT.NAME"
-msgid "<link=\"ALIENSYMBIOT\">Alien Symbiot</link>"
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.NAME"
+msgid "<link=\"ALIENSICKNESS\">Alien Symbiot</link>"
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION
@@ -258,33 +258,33 @@ msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.NAME"
 msgid "<link=\"HUNGERSICKNESS\">Everlasting Hunger</link>"
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.DESCRIPTION
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.DESCRIPTION"
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTION"
 msgid "Virus causing the disease is very unstable and often mutates. Results may be different each time."
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.DESCRIPTIVE_SYMPTOMS
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.DESCRIPTIVE_SYMPTOMS"
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTIVE_SYMPTOMS"
 msgid "May affect duplicants in many different ways"
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.EXPOSURE_INFO
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.EXPOSURE_INFO"
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO"
 msgid "Got infected by Mutating Virus."
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.LEGEND_HOVERTEXT
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.LEGEND_HOVERTEXT"
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.LEGEND_HOVERTEXT"
 msgid "Area affected by Mutating Disease."
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.NAME
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.NAME"
-msgid "<link=\"MUTATINGDISEASE\">Mutating Disease</link>"
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.NAME"
+msgid "<link=\"MUTATINGSICKNESS\">Mutating Disease</link>"
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.POPFXTEXT
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGDISEASE.POPFXTEXT"
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.POPFXTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.POPFXTEXT"
 msgid "Painful cough!"
 msgstr ""
 
@@ -313,26 +313,6 @@ msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.NAME"
 msgid "<link=\"SPINDLYCURSE\">Sleeping Curse</link>"
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTION
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTION"
-msgid "Sometimes displace duplicant to another location"
-msgstr ""
-
-#. DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTIVE_SYMPTOMS
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.DESCRIPTIVE_SYMPTOMS"
-msgid "Sometimes displace duplicant to another location"
-msgstr ""
-
-#. DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.LEGEND_HOVERTEXT
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.LEGEND_HOVERTEXT"
-msgid "Area causes Temporal Displacement."
-msgstr ""
-
-#. DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.NAME
-msgctxt "DiseasesExpanded.STRINGS.DISEASES.TEMPORALDISPLACEMENT.NAME"
-msgid "<link=\"TEMPORALDISPLACEMENT\">Temporal Displacement</link>"
-msgstr ""
-
 #. DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.DESC
 msgctxt "DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.DESC"
 msgid "Despite Alien Symbiot's influence recently waned, the horrifying menace of it still lives on... "
@@ -355,7 +335,7 @@ msgstr ""
 
 #. DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.DESC
 msgctxt "DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.DESC"
-msgid "This duplicant just recovered from Frost-Covered Skin."
+msgid "This duplicant just recovered from Frost Pox."
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.NAME
@@ -391,6 +371,16 @@ msgstr ""
 #. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.NAME
 msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.NAME"
 msgid "Mutating Disease Recovery"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTHOMS.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTHOMS.DESC"
+msgid "This duplicant is suffering from various sympthoms of mutating disease."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTHOMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTHOMS.NAME"
+msgid "Mutating Disease Sympthoms"
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.DESC
@@ -473,9 +463,34 @@ msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT"
 msgid "Unstable Virus present\n"
 msgstr ""
 
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN"
+msgid "Use {0} to mutate the germs in more safe direction."
+msgstr ""
+
 #. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.NAME
 msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.NAME"
 msgid "<link=\"MUTATINGGERMS\">Unstable Virus</link>"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_PATTERN"
+msgid "Strain {ATTACK}/{RESILIANCE}"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_RESILIANCE_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_RESILIANCE_PATTERN"
+msgid "Resiliance: Infectibility: <color=#FF0000>{0}</color>, Duration: <color=#FF0000>{1}</color>, Germ Coughing: <color=#FF0000>{2}</color> - Exposure Threshold: <color=#FF0000>{3}</color>, Radiation: <color=#FF0000>{4}</color>, Temperature: <color=#FF0000>{5}</color>"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_SEVERITY_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_SEVERITY_PATTERN"
+msgid "Severity: Attributes: <color=#FF0000>{0}</color>, Breathing: <color=#FF0000>{1}</color>, Calories: <color=#FF0000>{2}</color> - Damage: <color=#FF0000>{3}</color>, Exhaustion: <color=#FF0000>{4}</color>, Stress: <color=#FF0000>{5}</color>"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN"
+msgid "Threat potential: {0}%"
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.MEDICALRESEARCH.DESC
@@ -491,6 +506,11 @@ msgstr ""
 #. DiseasesExpanded.STRINGS.MEDICALRESEARCH.RECIPEDESC
 msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.RECIPEDESC"
 msgid "Unlocks medical technologies."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN
+msgctxt "DiseasesExpanded.STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN"
+msgid "New virus mutation observed: {0}"
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.NAME
