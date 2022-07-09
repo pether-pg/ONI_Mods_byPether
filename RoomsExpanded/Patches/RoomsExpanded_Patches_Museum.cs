@@ -70,5 +70,18 @@ namespace RoomsExpanded
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.ItemPedestalTag);
             }
         }
+
+        [HarmonyPatch(typeof(GravitasPedestalConfig))]
+        [HarmonyPatch("ConfigureBuildingTemplate")]
+        public static class GravitasPedestalConfig_ConfigureBuildingTemplate_Patch
+        {
+            public static void Postfix(ref GameObject go)
+            {
+                if (!Settings.Instance.Museum.IncludeRoom) return;
+
+                go.AddOrGet<MuseumEffectTrigger>();
+                go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.ItemPedestalTag);
+            }
+        }
     }
 }

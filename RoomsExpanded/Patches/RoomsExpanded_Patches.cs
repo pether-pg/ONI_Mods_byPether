@@ -78,6 +78,7 @@ namespace RoomsExpanded
                 RoomsExpanded_Patches_Hospital.UpdateRoom(ref __instance);
                 RoomsExpanded_Patches_Industrial.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Museum.AddRoom(ref __instance);
+                RoomsExpanded_Patches_MuseumSpace.AddRoom(ref __instance);
                 RoomsExpanded_Patches_MuseumHistory.AddRoom(ref __instance);
                 RoomsExpanded_Patches_PrivateRoom.AddRoom(ref __instance);
 

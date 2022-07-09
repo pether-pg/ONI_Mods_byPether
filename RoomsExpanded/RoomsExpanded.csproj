@@ -125,6 +125,8 @@
     <Compile Include="Patches\RoomsExpanded_Patches_NurseryGenetic.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_MuseumHistory.cs" />
     <Compile Include="RoomModdedConstraints.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_MuseumSpace.cs" />
+    <Compile Include="RoomTypes\RoomTypeMuseumSpaceData.cs" />
     <Compile Include="RoomTypes\RoomTypeMuseumHistoryData.cs" />
     <Compile Include="RoomTypes\RoomTypeNurseryGeneticData.cs" />
     <Compile Include="RoomTypes\RoomTypeMuseumData.cs" />

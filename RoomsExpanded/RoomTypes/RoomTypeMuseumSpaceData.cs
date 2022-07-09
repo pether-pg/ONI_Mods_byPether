@@ -3,27 +3,27 @@ using STRINGS;
 
 namespace RoomsExpanded
 {
-    class RoomTypeMuseumData : RoomTypeAbstractData
+    class RoomTypeMuseumSpaceData : RoomTypeAbstractData
     {
-        public static readonly string RoomId = "MuseumRoom";
-        public static readonly string EffectId = "MuseumEffectId";
+        public static readonly string RoomId = "SpaceMuseumRoom";
+        public static readonly string EffectId = "SpaceMuseumEffectId";
 
 
-        public RoomTypeMuseumData()
+        public RoomTypeMuseumSpaceData()
         {
             Id = RoomId;
-            Name = STRINGS.ROOMS.TYPES.MUSEUM.NAME;
-            Tooltip = STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP;
-            Effect = STRINGS.ROOMS.TYPES.MUSEUM.EFFECT;
-            Catergory = Db.Get().RoomTypeCategories.Hospital;
+            Name = STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME;
+            Tooltip = STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP;
+            Effect = STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT;
+            Catergory = Db.Get().RoomTypeCategories.Recreation;
             ConstraintPrimary = RoomModdedConstraints.PEDESTAL;
             ConstrantsAdditional = new RoomConstraints.Constraint[5]
                                         {
-                                        RoomModdedConstraints.MASTERPIECES,
+                                        RoomModdedConstraints.ARTIFACTS,
                                         RoomConstraints.LIGHT,
                                         RoomConstraints.NO_INDUSTRIAL_MACHINERY,
                                         RoomConstraints.MINIMUM_SIZE_32,
-                                        RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Museum.MaxSize)
+                                        RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.MuseumSpace.MaxSize)
                                         };
 
             RoomDetails = new RoomDetails.Detail[2]
@@ -33,11 +33,11 @@ namespace RoomsExpanded
                                 };
 
             Priority = 1;
-            Upgrades = new RoomType[] { RoomTypes_AllModded.HistoryMuseum, RoomTypes_AllModded.MuseumSpace };
+            Upgrades = null;
             SingleAssignee = false;
             PriorityUse = false;
             Effects = null;
-            SortKey = SortingCounter.GetAndIncrement(SortingCounter.MuseumSortKey);
+            SortKey = SortingCounter.GetAndIncrement(SortingCounter.MuseumSortKey + 1);
         }
     }
 }

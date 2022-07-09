@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using HarmonyLib;
 
 namespace RoomsExpanded
 {
     class RoomModdedConstraints
     {
         private static readonly int requiredMasterpieces = 6;
+        private static readonly int requiredArtifacts = 6;
         private static readonly int requiredFossils = 4;
         private readonly static int requiredUniquePlants = 4;
         private static int requiredDecorativePlants = 4;
@@ -219,6 +218,15 @@ namespace RoomsExpanded
                                                                     },
                                                                     name: string.Format(STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME, requiredMasterpieces),
                                                                     description: string.Format(STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION, requiredMasterpieces));
+
+        public static RoomConstraints.Constraint ARTIFACTS = new RoomConstraints.Constraint(
+                                                                null,
+                                                                room =>
+                                                                {
+                                                                    return RoomsExpanded_Patches_MuseumSpace.CountUniqueArtifacts(room) >= requiredArtifacts;
+                                                                },
+                                                                name: string.Format(STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME, requiredArtifacts),
+                                                                description: string.Format(STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION, requiredArtifacts));
 
         public static RoomConstraints.Constraint FOSSILS = new RoomConstraints.Constraint(
                                                                 null,

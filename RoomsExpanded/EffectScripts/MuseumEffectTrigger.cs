@@ -19,9 +19,11 @@ namespace RoomsExpanded
         private void TriggerRoomEffects(object data)
         {
             if (!RoomTypes_AllModded.IsInTheRoom(this, RoomTypeMuseumData.RoomId) 
+                && !RoomTypes_AllModded.IsInTheRoom(this, RoomTypeMuseumSpaceData.RoomId)
                 && !RoomTypes_AllModded.IsInTheRoom(this, RoomTypeMuseumHistoryData.RoomId))
                 return;
 
+            bool isSpace = RoomTypes_AllModded.IsInTheRoom(this, RoomTypeMuseumSpaceData.RoomId);
             bool isHistory = RoomTypes_AllModded.IsInTheRoom(this, RoomTypeMuseumHistoryData.RoomId);
 
             GameObject gameObject = (GameObject)data;
@@ -29,12 +31,21 @@ namespace RoomsExpanded
             if (modifiers == null)
                 return;
 
-            Effect effect = isHistory ? RoomsExpanded_Patches_MuseumHistory.CalculateEffectBonus(modifiers)
-                                        : RoomsExpanded_Patches_Museum.CalculateEffectBonus(modifiers);
+            Effect effect;
+            if (isHistory)
+                effect = RoomsExpanded_Patches_MuseumHistory.CalculateEffectBonus(modifiers);
+            else if (isSpace)
+            {
+                Room room = Game.Instance.roomProber.GetRoomOfGameObject(this.gameObject);
+                int uniqueArtifacts = RoomsExpanded_Patches_MuseumSpace.CountUniqueArtifacts(room);
+                effect = RoomsExpanded_Patches_MuseumSpace.CalculateEffectBonus(modifiers, uniqueArtifacts);
+            }
+            else
+                effect = RoomsExpanded_Patches_Museum.CalculateEffectBonus(modifiers);
 
             if(effect == null)
             {
-                Debug.Log($"{ModInfo.Namespace}: Error - could not create effect for {(isHistory ? "History " : "")}Museum");
+                Debug.Log($"{ModInfo.Namespace}: Error - could not create effect for {(isHistory ? "History " : (isSpace ? "Space " : ""))}Museum");
                 return;
             }
 

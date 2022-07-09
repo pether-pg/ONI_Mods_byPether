@@ -110,6 +110,13 @@ namespace RoomsExpanded
                     public static LocString TOOLTIP = (LocString)"Specialized laboratories improve harvests.";
                 }
 
+                public class MUSEUMSPACE
+                {
+                    public static LocString NAME = (LocString)"Space Museum";
+                    public static LocString EFFECT = (LocString)" - Morale bonus";
+                    public static LocString TOOLTIP = (LocString)"Perfect for storing Ancient Knowledge on the pedestals.";
+                }
+
                 public class MUSEUMHISTORY
                 {
                     public static LocString NAME = (LocString)"History Museum";
@@ -288,9 +295,15 @@ namespace RoomsExpanded
                     public static LocString DESCRIPTION = (LocString)"At least one source of radiation.";
                 }
 
+                public class ARTIIFACTS
+                {
+                    public static LocString NAME = (LocString)"{0} Unique Artifacts";
+                    public static LocString DESCRIPTION = (LocString)"At least {0} unique Artifacts";
+                }
+
                 public class FOSSILS
                 {
-                    public static LocString NAME = (LocString)"{0} Fossils";
+                    public static LocString NAME = (LocString)"{0} Fossils.";
                     public static LocString DESCRIPTION = (LocString)"At least {0} Fossils.";
                 }
             }
@@ -302,6 +315,13 @@ namespace RoomsExpanded
                     public static LocString NAME = (LocString)"Museum";
                     public static LocString DESCRIPTION = (LocString)"Visited Museum";
                 }
+
+                public class MUSEUMSPACE
+                {
+                    public static LocString NAME = (LocString)"Space Museum";
+                    public static LocString DESCRIPTION = (LocString)"Visited Space Museum";
+                }
+
                 public class MUSEUMHISTORY
                 {
                     public static LocString NAME = (LocString)"History Museum";
