@@ -13,7 +13,7 @@ namespace RoomsExpanded
         private readonly static int requiredUniquePlants = 4;
         private static int requiredDecorativePlants = 4;
         private static int requiredBotanicalPlants = 8;
-        private static Tag MorePlantsTag = new Tag("DecorMorePlants");
+        private static Tag MorePlantsTag = new Tag("DecorMorePlants"); // from More Plants by stealthcold (https://steamcommunity.com/sharedfiles/filedetails/?id=2819853217)
 
         public static List<string> DecorativeNames = new List<string>() {
             "PrickleGrass",     // from vanilla - Bristle Briar
