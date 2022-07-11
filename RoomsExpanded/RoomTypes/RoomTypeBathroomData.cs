@@ -15,7 +15,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.SHOWERROOM.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.SHOWERROOM.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT;
-            Catergory = RoomTypeCategories_AllModded.GetCategory(RoomId);
+            Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.BATHROOM;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                             {

@@ -14,7 +14,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.GRAVEYARD.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT;
-            Catergory = RoomTypeCategories_AllModded.GetCategory(RoomId);
+            Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.GRAVESTONE;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {

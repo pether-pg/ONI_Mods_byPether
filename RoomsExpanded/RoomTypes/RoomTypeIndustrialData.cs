@@ -13,7 +13,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.INDUSTRIAL.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.INDUSTRIAL.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.INDUSTRIAL.EFFECT;
-            Catergory = RoomTypeCategories_AllModded.GetCategory(RoomId);
+            Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.INDUSTRIAL;
             ConstrantsAdditional = new RoomConstraints.Constraint[2]
                                     {

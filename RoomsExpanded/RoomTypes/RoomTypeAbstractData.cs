@@ -24,6 +24,12 @@ namespace RoomsExpanded
         public string[] Effects;
         public int SortKey;
 
+        protected RoomTypeCategory CreateCategory()
+        {
+            string categoryId = string.Format("{0}Category", Id);
+            return new RoomTypeCategory(categoryId, "", Id);
+        }
+
         public RoomType GetRoomType()
         {
             return new RoomType(this.Id,

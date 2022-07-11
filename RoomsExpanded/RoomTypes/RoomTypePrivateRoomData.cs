@@ -15,7 +15,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.PRIVATEROOM.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.PRIVATEROOM.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT;
-            Catergory = RoomTypeCategories_AllModded.GetCategory(RoomId);
+            Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.ANY_BED;
             ConstrantsAdditional = new RoomConstraints.Constraint[6]
                                     {

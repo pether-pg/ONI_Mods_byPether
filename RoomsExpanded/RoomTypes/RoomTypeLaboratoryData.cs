@@ -14,7 +14,7 @@ namespace RoomsExpanded
                 Name = STRINGS.ROOMS.TYPES.LABORATORY.NAME;
                 Tooltip = STRINGS.ROOMS.TYPES.LABORATORY.TOOLTIP;
                 Effect = STRINGS.ROOMS.TYPES.LABORATORY.EFFECT;
-                Catergory = RoomTypeCategories_AllModded.GetCategory(RoomId);
+                Catergory = CreateCategory();
                 ConstraintPrimary = RoomConstraints.RESEARCH_STATION;
                 ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                             {

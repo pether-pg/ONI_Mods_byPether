@@ -15,7 +15,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.MUSEUM.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.MUSEUM.EFFECT;
-            Catergory = RoomTypeCategories_AllModded.GetCategory(RoomId);
+            Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.PEDESTAL;
             ConstrantsAdditional = new RoomConstraints.Constraint[5]
                                         {

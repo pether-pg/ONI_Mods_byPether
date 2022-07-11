@@ -33,14 +33,6 @@ namespace RoomsExpanded
 
             public Color32 RoomColor { get; set; }
 
-            /*public RoomSettings(bool include, int max, float? bonus = null)
-            {
-                IncludeRoom = include;
-                MaxSize = max;
-                Bonus = bonus;
-                RoomColor = new Color32(255, 0, 0, 255);
-            }*/
-
             public RoomSettings(bool include, int max, Color32 color, float? bonus = null)
             {
                 IncludeRoom = include;
@@ -63,12 +55,6 @@ namespace RoomsExpanded
             public int MaxSize { get; set; }
 
             public Color32 RoomColor { get; set; }
-
-            /*public PlainRoomSettings(bool include, int max)
-            {
-                IncludeRoom = include;
-                MaxSize = max;
-            }*/
 
             public PlainRoomSettings(bool include, int max, Color32 color)
             {
@@ -107,7 +93,7 @@ namespace RoomsExpanded
             Agricultural = new PlainRoomSettings(true, 96, ColorPalette.RoomAgricultural);
             Gym = new RoomSettings(true, 64, ColorPalette.RoomRecreation, 0.1f);
             Nursery = new RoomSettings(!DlcManager.IsExpansion1Active(), 64, ColorPalette.RoomAgricultural, 0.1f);
-            Aquarium = new RoomSettings(true, 96, ColorPalette.RoomBathroom, 0.2f);
+            Aquarium = new RoomSettings(false, 96, ColorPalette.RoomBathroom, 0.2f);
             Botanical = new PlainRoomSettings(true, 96, ColorPalette.RoomPark);
             Museum = new RoomSettings(true, 96, ColorPalette.RoomHospital, 0.3f);
             MuseumSpace = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
@@ -191,8 +177,8 @@ namespace RoomsExpanded
         [Option("Space Museum", category: "New Room - Space Museum")]
         public RoomSettings MuseumSpace { get; set; }
 
-        [JsonProperty]
-        [Option("History Museum", category: "New Room - History Museum")]
+        //[JsonProperty]
+        //[Option("History Museum", category: "New Room - History Museum")]
         public RoomSettings MuseumHistory { get; set; }
 
         [JsonProperty]
