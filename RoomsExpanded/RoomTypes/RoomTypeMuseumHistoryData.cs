@@ -15,7 +15,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.MUSEUMHISTORY.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.MUSEUMHISTORY.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.MUSEUMHISTORY.EFFECT;
-            Catergory = Db.Get().RoomTypeCategories.Hospital;
+            Catergory = RoomTypeCategories_AllModded.GetCategory(RoomId);
             ConstraintPrimary = RoomModdedConstraints.PEDESTAL;
             ConstrantsAdditional = new RoomConstraints.Constraint[5]
                                         {

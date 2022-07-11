@@ -13,7 +13,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.KITCHEN.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.KITCHEN.EFFECT;
-            Catergory = Db.Get().RoomTypeCategories.Agricultural;
+            Catergory = RoomTypeCategories_AllModded.GetCategory(RoomId);
             ConstraintPrimary = RoomModdedConstraints.COOKING_STATION;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {

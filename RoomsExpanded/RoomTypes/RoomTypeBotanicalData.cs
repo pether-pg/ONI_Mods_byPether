@@ -16,7 +16,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.BOTANICAL.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.BOTANICAL.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.BOTANICAL.EFFECT;
-            Catergory = Db.Get().RoomTypeCategories.Park;
+            Catergory = RoomTypeCategories_AllModded.GetCategory(RoomId);
             ConstraintPrimary = RoomConstraints.PARK_BUILDING;
 
             ConstrantsAdditional = new RoomConstraints.Constraint[5]

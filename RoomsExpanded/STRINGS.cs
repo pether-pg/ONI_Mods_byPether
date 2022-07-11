@@ -91,7 +91,7 @@ namespace RoomsExpanded
 
                 public class MUSEUM
                 {
-                    public static LocString NAME = (LocString)"Museum";
+                    public static LocString NAME = (LocString)"Art Museum";
                     public static LocString EFFECT = (LocString)" - Morale bonus";
                     public static LocString TOOLTIP = (LocString)"It used to be a storehouse, before Meep confused Pedestal content with art.";
                 }

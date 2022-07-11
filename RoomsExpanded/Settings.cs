@@ -5,6 +5,7 @@ using System.Text;
 using Newtonsoft.Json;
 using PeterHan.PLib;
 using PeterHan.PLib.Options;
+using UnityEngine;
 
 namespace RoomsExpanded
 {
@@ -30,11 +31,22 @@ namespace RoomsExpanded
             [Option("Bonus", "How big bonus the room should provide?")]
             public float? Bonus { get; set; }
 
-            public RoomSettings(bool include, int max, float? bonus = null)
+            public Color32 RoomColor { get; set; }
+
+            /*public RoomSettings(bool include, int max, float? bonus = null)
             {
                 IncludeRoom = include;
                 MaxSize = max;
                 Bonus = bonus;
+                RoomColor = new Color32(255, 0, 0, 255);
+            }*/
+
+            public RoomSettings(bool include, int max, Color32 color, float? bonus = null)
+            {
+                IncludeRoom = include;
+                MaxSize = max;
+                Bonus = bonus;
+                RoomColor = color;
             }
         }
 
@@ -50,10 +62,19 @@ namespace RoomsExpanded
             [Option("MaxSize", "How big this room can be?")]
             public int MaxSize { get; set; }
 
-            public PlainRoomSettings(bool include, int max)
+            public Color32 RoomColor { get; set; }
+
+            /*public PlainRoomSettings(bool include, int max)
             {
                 IncludeRoom = include;
                 MaxSize = max;
+            }*/
+
+            public PlainRoomSettings(bool include, int max, Color32 color)
+            {
+                IncludeRoom = include;
+                MaxSize = max;
+                RoomColor = color;
             }
         }
             
@@ -78,22 +99,22 @@ namespace RoomsExpanded
             HideLegendEffect = true; 
             EnforcedLanguage = "";
 
-            Laboratory = new RoomSettings(true, 64, 0.1f);
-            Kitchen = new RoomSettings(true, 64, 0.1f);
-            Bathroom = new RoomSettings(true, 64, 0.2f);
-            Industrial = new PlainRoomSettings(false, 96);
-            Graveyard = new RoomSettings(false, 96, 0.2f);
-            Agricultural = new PlainRoomSettings(true, 96);
-            Gym = new RoomSettings(true, 64, 0.1f);
-            Nursery = new RoomSettings(!DlcManager.IsExpansion1Active(), 64, 0.1f);
-            Aquarium = new RoomSettings(true, 96, 0.2f);
-            Botanical = new PlainRoomSettings(true, 96);
-            Museum = new RoomSettings(true, 96, 0.3f);
-            MuseumSpace = new RoomSettings(true, 96, 0.3f);
-            MuseumHistory = new RoomSettings(true, 96, 0.3f);
-            HospitalUpdate = new PlainRoomSettings(true, 96);
-            PrivateBedroom = new PlainRoomSettings(true, 32);
-            NurseryGenetic = new RoomSettings(true, 96, 0.2f);
+            Laboratory = new RoomSettings(true, 64, ColorPalette.RoomRecreation, 0.1f);
+            Kitchen = new RoomSettings(true, 64, ColorPalette.RoomAgricultural, 0.1f);
+            Bathroom = new RoomSettings(true, 64, ColorPalette.RoomBathroom, 0.2f);
+            Industrial = new PlainRoomSettings(false, 96, ColorPalette.RoomIndustrial);
+            Graveyard = new RoomSettings(false, 96, ColorPalette.RoomPark, 0.2f);
+            Agricultural = new PlainRoomSettings(true, 96, ColorPalette.RoomAgricultural);
+            Gym = new RoomSettings(true, 64, ColorPalette.RoomRecreation, 0.1f);
+            Nursery = new RoomSettings(!DlcManager.IsExpansion1Active(), 64, ColorPalette.RoomAgricultural, 0.1f);
+            Aquarium = new RoomSettings(true, 96, ColorPalette.RoomBathroom, 0.2f);
+            Botanical = new PlainRoomSettings(true, 96, ColorPalette.RoomPark);
+            Museum = new RoomSettings(true, 96, ColorPalette.RoomHospital, 0.3f);
+            MuseumSpace = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
+            MuseumHistory = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
+            HospitalUpdate = new PlainRoomSettings(true, 96, ColorPalette.RoomHospital);
+            PrivateBedroom = new PlainRoomSettings(true, 32, ColorPalette.RoomSleep);
+            NurseryGenetic = new RoomSettings(true, 96, ColorPalette.RoomAgricultural, 0.2f);
 
             ResizeMaxRoomSize64 = 64;
             ResizeMaxRoomSize96 = 96;

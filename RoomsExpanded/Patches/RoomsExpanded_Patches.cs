@@ -153,6 +153,47 @@ namespace RoomsExpanded
                 }
             }
         }
+
+
+        [HarmonyPatch(typeof(ColorSet))]
+        [HarmonyPatch("Init")]
+        public static class ColorSet_Init_Patch
+        {
+            static bool initalized = false;
+
+            public static void Postfix(ColorSet __instance)
+            {
+                if (initalized)
+                    return;
+
+                Dictionary<string, Color32> namedLookup = Traverse.Create(__instance).Field("namedLookup").GetValue<Dictionary<string, Color32>>();
+                namedLookup.Add(RoomTypeAgriculturalData.RoomId, Settings.Instance.Agricultural.RoomColor);
+                namedLookup.Add(RoomTypeAquariumData.RoomId, Settings.Instance.Aquarium.RoomColor);
+                namedLookup.Add(RoomTypeBathroomData.RoomId, Settings.Instance.Bathroom.RoomColor);
+                namedLookup.Add(RoomTypeBotanicalData.RoomId, Settings.Instance.Botanical.RoomColor);
+                namedLookup.Add(RoomTypeGraveyardData.RoomId, Settings.Instance.Graveyard.RoomColor);
+                namedLookup.Add(RoomTypeGymData.RoomId, Settings.Instance.Gym.RoomColor);
+                namedLookup.Add(RoomTypeIndustrialData.RoomId, Settings.Instance.Industrial.RoomColor);
+                namedLookup.Add(RoomTypeKitchenData.RoomId, Settings.Instance.Kitchen.RoomColor);
+                namedLookup.Add(RoomTypeLaboratoryData.RoomId, Settings.Instance.Laboratory.RoomColor);
+                namedLookup.Add(RoomTypeMuseumData.RoomId, Settings.Instance.Museum.RoomColor);
+                namedLookup.Add(RoomTypeMuseumHistoryData.RoomId, Settings.Instance.MuseumHistory.RoomColor);
+                namedLookup.Add(RoomTypeMuseumSpaceData.RoomId, Settings.Instance.MuseumSpace.RoomColor);
+                namedLookup.Add(RoomTypeNurseryData.RoomId, Settings.Instance.Nursery.RoomColor);
+                namedLookup.Add(RoomTypeNurseryGeneticData.RoomId, Settings.Instance.NurseryGenetic.RoomColor);
+                namedLookup.Add(RoomTypePrivateRoomData.RoomId, Settings.Instance.PrivateBedroom.RoomColor);
+
+                initalized = true;
+                LogColors(namedLookup);
+            }
+
+            static void LogColors(Dictionary<string, Color32> namedLookup)
+            {
+                foreach (string key in namedLookup.Keys)
+                    if (namedLookup.ContainsKey(key))
+                        Debug.Log($"Color of {key}: R = {namedLookup[key].r}, G = {namedLookup[key].g}, B = {namedLookup[key].b}, A = {namedLookup[key].a}");
+            }
+        }
     }
 }
 
