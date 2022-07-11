@@ -184,7 +184,7 @@ namespace RoomsExpanded
                 namedLookup.Add(RoomTypePrivateRoomData.RoomId, Settings.Instance.PrivateBedroom.RoomColor);
 
                 initalized = true;
-                LogColors(namedLookup);
+                //LogColors(namedLookup);
             }
 
             static void LogColors(Dictionary<string, Color32> namedLookup)
