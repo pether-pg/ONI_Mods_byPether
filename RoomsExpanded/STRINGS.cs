@@ -113,7 +113,7 @@ namespace RoomsExpanded
                 public class MUSEUMSPACE
                 {
                     public static LocString NAME = (LocString)"Space Museum";
-                    public static LocString EFFECT = (LocString)" • <style=\"KKeyword\">Morale</style>: \n\t + {0} of duplicant's Piloting skill as morale (up to +10)\n    Upon \"Cosmic Archaeology\" completion: \n\t + up to 5 for each unique artifact \n\t + up to additional 5 for each 2 more unique artifacts \n\t + up to additional 5 for each 3 more unique artifacts";
+                    public static LocString EFFECT = (LocString)" • <style=\"KKeyword\">Morale</style>: \n\t + {0} of duplicant's Piloting skill as morale (up to +10)\n    After \"Cosmic Archaeology\" completion: \n\t additional +1 for each unique artifact (up to +5) \n\t additional +1 for each 2 more unique artifacts (up to +5)\n\t additional +1 for each 3 more unique artifacts (up to +5)";
                     public static LocString TOOLTIP = (LocString)"Perfect for storing Ancient Knowledge on the pedestals.";
                 }
 
