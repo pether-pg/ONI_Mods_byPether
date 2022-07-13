@@ -30,7 +30,6 @@ namespace RoomsExpanded
         {
             public static void Postfix(SeedProducer __instance, ref bool __result)
             {
-                if (!Settings.Instance.NurseryGenetic.Bonus.HasValue) return;
                 if (!RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeNurseryGeneticData.RoomId)) return;
 
                 AttributeInstance attributeInstance = Db.Get().PlantAttributes.MaxRadiationThreshold.Lookup((Component)__instance);
@@ -38,7 +37,7 @@ namespace RoomsExpanded
 
                 double roll = (double)UnityEngine.Random.value;
                 double chance = (double)Mathf.Clamp(Grid.IsValidCell(cell) ? Grid.Radiation[cell] : 0.0f, 0.0f, attributeInstance.GetTotalValue()) / (double)attributeInstance.GetTotalValue() * 0.800000011920929;
-                __result = roll < (1 + Settings.Instance.NurseryGenetic.Bonus.Value) * chance;
+                __result = roll < (1 + Settings.Instance.NurseryGenetic.Bonus) * chance;
             }
         }
     }

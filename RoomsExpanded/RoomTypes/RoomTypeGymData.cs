@@ -13,7 +13,7 @@ namespace RoomsExpanded
             Id = RoomId;
             Name = STRINGS.ROOMS.TYPES.GYMROOM.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP;
-            Effect = STRINGS.ROOMS.TYPES.GYMROOM.EFFECT;
+            Effect = string.Format(STRINGS.ROOMS.TYPES.GYMROOM.EFFECT, MiscUtils.Percent(Settings.Instance.Gym.Bonus));
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.RUNNING_WHEEL;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]

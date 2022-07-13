@@ -8,13 +8,12 @@ namespace RoomsExpanded
         public static readonly string RoomId = "SpaceMuseumRoom";
         public static readonly string EffectId = "SpaceMuseumEffectId";
 
-
         public RoomTypeMuseumSpaceData()
         {
             Id = RoomId;
             Name = STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP;
-            Effect = STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT;
+            Effect = string.Format(STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT, MiscUtils.Percent(Settings.Instance.MuseumSpace.Bonus));
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.PEDESTAL;
             ConstrantsAdditional = new RoomConstraints.Constraint[5]

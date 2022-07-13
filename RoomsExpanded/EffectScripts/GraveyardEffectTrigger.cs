@@ -20,11 +20,8 @@ namespace RoomsExpanded
             if (!RoomTypes_AllModded.IsInTheRoom(this, RoomTypeGraveyardData.RoomId))
                 return;
 
-            if (!Settings.Instance.Graveyard.Bonus.HasValue)
-                return;
-
             GameObject gameObject = (GameObject)data;
-            float duration = 600 * Settings.Instance.Graveyard.Bonus.Value;
+            float duration = 600 * Settings.Instance.Graveyard.Bonus;
             bool positive = false;
             if(!GameClock.Instance.IsNighttime())
                 positive = new System.Random().Next() % 2 == 0;

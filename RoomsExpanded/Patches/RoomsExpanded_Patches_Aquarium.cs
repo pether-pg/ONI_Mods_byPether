@@ -49,8 +49,7 @@ namespace RoomsExpanded
                 if (!Settings.Instance.Aquarium.IncludeRoom) return;
                 DecorProviderModifier decor = __result.AddOrGet<DecorProviderModifier>();
                 decor.RequiredRoomId = RoomTypeAquariumData.RoomId;
-                if(Settings.Instance.Aquarium.Bonus.HasValue)
-                    decor.BonusScale = Settings.Instance.Aquarium.Bonus.Value;
+                decor.BonusScale = Settings.Instance.Aquarium.Bonus;
             }
         }
 
@@ -62,8 +61,8 @@ namespace RoomsExpanded
             {
                 if (!Settings.Instance.Aquarium.IncludeRoom) return;
                 DecorProviderModifier decor = __result.AddOrGet<DecorProviderModifier>();
-                if (Settings.Instance.Aquarium.Bonus.HasValue)
-                    decor.BonusScale = Settings.Instance.Aquarium.Bonus.Value;
+                decor.RequiredRoomId = RoomTypeAquariumData.RoomId;
+                decor.BonusScale = Settings.Instance.Aquarium.Bonus;
             }
         }
 
@@ -75,8 +74,8 @@ namespace RoomsExpanded
             {
                 if (!Settings.Instance.Aquarium.IncludeRoom) return;
                 DecorProviderModifier decor = __result.AddOrGet<DecorProviderModifier>();
-                if (Settings.Instance.Aquarium.Bonus.HasValue)
-                    decor.BonusScale = Settings.Instance.Aquarium.Bonus.Value;
+                decor.RequiredRoomId = RoomTypeAquariumData.RoomId;
+                decor.BonusScale = Settings.Instance.Aquarium.Bonus;
             }
         }
     }

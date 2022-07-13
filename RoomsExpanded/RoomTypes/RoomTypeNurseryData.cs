@@ -15,7 +15,7 @@ namespace RoomsExpanded
             Id = RoomId;
             Name = STRINGS.ROOMS.TYPES.NURSERY.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.NURSERY.TOOLTIP;
-            Effect = STRINGS.ROOMS.TYPES.NURSERY.EFFECT;
+            Effect = string.Format(STRINGS.ROOMS.TYPES.NURSERY.EFFECT, MiscUtils.Percent(Settings.Instance.Nursery.Bonus));
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.PLANTER_BOX;
             ConstrantsAdditional = new RoomConstraints.Constraint[4] { 

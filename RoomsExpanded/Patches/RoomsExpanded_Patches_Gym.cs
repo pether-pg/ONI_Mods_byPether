@@ -61,9 +61,9 @@ namespace RoomsExpanded
                         AthleticsId = Db.Get().Attributes.Athletics.Id;
 
                     AttributeLevels component = worker.GetComponent<AttributeLevels>();
-                    if (component != null && Settings.Instance.Gym.Bonus.HasValue)
+                    if (component != null)
                         component.AddExperience(AthleticsId,
-                                                dt * Settings.Instance.Gym.Bonus.Value,
+                                                dt * Settings.Instance.Gym.Bonus,
                                                 DUPLICANTSTATS.ATTRIBUTE_LEVELING.ALL_DAY_EXPERIENCE);
                 }
 

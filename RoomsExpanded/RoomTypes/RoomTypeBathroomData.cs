@@ -14,7 +14,7 @@ namespace RoomsExpanded
             Id = RoomId;
             Name = STRINGS.ROOMS.TYPES.SHOWERROOM.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.SHOWERROOM.TOOLTIP;
-            Effect = STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT;
+            Effect = string.Format(STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT, MiscUtils.Percent(Settings.Instance.Bathroom.Bonus));
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.BATHROOM;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]

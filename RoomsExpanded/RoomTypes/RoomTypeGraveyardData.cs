@@ -13,7 +13,7 @@ namespace RoomsExpanded
             Id = RoomId;
             Name = STRINGS.ROOMS.TYPES.GRAVEYARD.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP;
-            Effect = STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT;
+            Effect = string.Format(STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT, Settings.Instance.Graveyard.Bonus);
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.GRAVESTONE;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]

@@ -29,11 +29,11 @@ namespace RoomsExpanded
             [JsonProperty]
             [Limit(0.0, 1.0)]
             [Option("Bonus", "How big bonus the room should provide?")]
-            public float? Bonus { get; set; }
+            public float Bonus { get; set; }
 
             public Color32 RoomColor { get; set; }
 
-            public RoomSettings(bool include, int max, Color32 color, float? bonus = null)
+            public RoomSettings(bool include, int max, Color32 color, float bonus)
             {
                 IncludeRoom = include;
                 MaxSize = max;

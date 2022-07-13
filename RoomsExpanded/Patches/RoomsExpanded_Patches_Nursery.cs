@@ -46,14 +46,12 @@ namespace RoomsExpanded
                     && !RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeNurseryGeneticData.RoomId)) 
                     return;
 
-                if (__instance.seedInfo.productionType != SeedProducer.ProductionType.Harvest
-                    || !Settings.Instance.Nursery.Bonus.HasValue
-                    || !Settings.Instance.NurseryGenetic.Bonus.HasValue)
+                if (__instance.seedInfo.productionType != SeedProducer.ProductionType.Harvest)
                     return;
 
                 double chance = RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeNurseryData.RoomId) ?
-                                Settings.Instance.Nursery.Bonus.Value
-                                : Settings.Instance.NurseryGenetic.Bonus.Value;
+                                Settings.Instance.Nursery.Bonus
+                                : Settings.Instance.NurseryGenetic.Bonus;
                 if ((double)UnityEngine.Random.Range(0.0f, 1f) <= chance)
                 {
                     Traverse.Create(__instance).Method("ProduceSeed", new object[] { __instance.seedInfo.seedId, 1, true}).GetValue<GameObject>();                    

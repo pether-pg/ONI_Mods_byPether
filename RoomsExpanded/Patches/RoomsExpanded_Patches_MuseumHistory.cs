@@ -24,11 +24,8 @@ namespace RoomsExpanded
             if (scienceAttrInstance == null)
                 return null;
 
-            if (!Settings.Instance.MuseumHistory.Bonus.HasValue)
-                return null;
-
             float science = scienceAttrInstance.GetTotalValue();
-            float bonus = Settings.Instance.MuseumHistory.Bonus.Value;
+            float bonus = Settings.Instance.MuseumHistory.Bonus;
             int moraleBonus = Mathf.Clamp((int)Math.Ceiling(science * bonus), 1, 10);
 
             Effect effect = new Effect(RoomTypeMuseumHistoryData.EffectId, STRINGS.ROOMS.EFFECTS.MUSEUMHISTORY.NAME, STRINGS.ROOMS.EFFECTS.MUSEUMHISTORY.DESCRIPTION, 240, false, true, false);

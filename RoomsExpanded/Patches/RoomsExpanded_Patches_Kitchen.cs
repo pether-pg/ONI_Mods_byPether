@@ -18,11 +18,10 @@ namespace RoomsExpanded
         {
             if (!Settings.Instance.Kitchen.IncludeRoom) return;
 
-            if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeKitchenData.RoomId)
-                && Settings.Instance.Kitchen.Bonus.HasValue)
+            if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeKitchenData.RoomId))
                 foreach (GameObject go in __result)
                 {
-                    go.GetComponent<PrimaryElement>().Units *= (1 + Settings.Instance.Kitchen.Bonus.Value);
+                    go.GetComponent<PrimaryElement>().Units *= (1 + Settings.Instance.Kitchen.Bonus);
                 }
         }
 

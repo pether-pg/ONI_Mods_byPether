@@ -45,11 +45,8 @@ namespace RoomsExpanded
             if (creativityAttrInstance == null)
                 return null;
 
-            if (!Settings.Instance.Museum.Bonus.HasValue)
-                return null;
-
             float creativity = creativityAttrInstance.GetTotalValue();
-            float bonus = Settings.Instance.Museum.Bonus.Value;
+            float bonus = Settings.Instance.Museum.Bonus;
             int moraleBonus = Mathf.Clamp((int)Math.Ceiling(creativity * bonus), 1, 10);
 
             Effect effect = new Effect(RoomTypeMuseumData.EffectId, STRINGS.ROOMS.EFFECTS.MUSEUM.NAME, STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION, 240, false, true, false);

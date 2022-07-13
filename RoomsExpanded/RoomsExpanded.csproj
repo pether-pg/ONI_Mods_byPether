@@ -105,6 +105,7 @@
     <Compile Include="EffectScripts\GraveyardEffectTrigger.cs" />
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="EffectScripts\MuseumEffectTrigger.cs" />
+    <Compile Include="MiscUtils.cs" />
     <Compile Include="ModInfo.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_PrivateRoom.cs" />
     <Compile Include="RoomConstraintTags.cs" />

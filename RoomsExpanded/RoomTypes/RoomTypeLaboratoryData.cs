@@ -13,7 +13,7 @@ namespace RoomsExpanded
                 Id = RoomId;
                 Name = STRINGS.ROOMS.TYPES.LABORATORY.NAME;
                 Tooltip = STRINGS.ROOMS.TYPES.LABORATORY.TOOLTIP;
-                Effect = STRINGS.ROOMS.TYPES.LABORATORY.EFFECT;
+                Effect = string.Format(STRINGS.ROOMS.TYPES.LABORATORY.EFFECT, MiscUtils.Percent(Settings.Instance.Laboratory.Bonus));
                 Catergory = CreateCategory();
                 ConstraintPrimary = RoomConstraints.RESEARCH_STATION;
                 ConstrantsAdditional = new RoomConstraints.Constraint[4]

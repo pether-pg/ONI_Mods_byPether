@@ -22,7 +22,7 @@ namespace RoomsExpanded
                 public class LABORATORY
                 {
                     public static LocString NAME = (LocString)"Laboratory";
-                    public static LocString EFFECT = (LocString)" - Faster research";
+                    public static LocString EFFECT = (LocString)" - Research faster by {0}";
                     public static LocString TOOLTIP = (LocString)"Conducting research in a designated room proves to be more efficient.";
                 }
 
@@ -36,28 +36,28 @@ namespace RoomsExpanded
                 public class KITCHEN
                 {
                     public static LocString NAME = (LocString)"Kitchen";
-                    public static LocString EFFECT = (LocString)" - More food produced";
+                    public static LocString EFFECT = (LocString)" - More food produced: +{0}";
                     public static LocString TOOLTIP = (LocString)"It appears that nobody dares to steal food from chef's kitchen.";
                 }
 
                 public class SHOWERROOM
                 {
                     public static LocString NAME = (LocString)"Shower Room";
-                    public static LocString EFFECT = (LocString)" - Shorter shower time";
+                    public static LocString EFFECT = (LocString)" - Shorter shower time by {0}";
                     public static LocString TOOLTIP = (LocString)"Just entering such a nice bathroom make duplicants feel cleaner.";
                 }
 
                 public class GRAVEYARD
                 {
                     public static LocString NAME = (LocString)"Graveyard";
-                    public static LocString EFFECT = (LocString)" - (no additional effect)";
+                    public static LocString EFFECT = (LocString)" - Stress: +10% or -10% for {0} cycle";
                     public static LocString TOOLTIP = (LocString)"It makes duplicants happy to think that they are still alive.";
                 }
 
                 public class GYMROOM
                 {
                     public static LocString NAME = (LocString)"Gym Room";
-                    public static LocString EFFECT = (LocString)" - Faster athletics increase";
+                    public static LocString EFFECT = (LocString)" - Faster athletics increase by {0}";
                     public static LocString TOOLTIP = (LocString)"Professional Gym Room allows duplicants to exercise more efficiently.";
                 }
 
@@ -71,14 +71,14 @@ namespace RoomsExpanded
                 public class NURSERY
                 {
                     public static LocString NAME = (LocString)"Plant Nursery";
-                    public static LocString EFFECT = (LocString)" - Chance for additional seeds";
+                    public static LocString EFFECT = (LocString)" - Chance for additional seeds: {0}";
                     public static LocString TOOLTIP = (LocString)"Enriched environment improves plant development.";
                 }
 
                 public class AQUARIUM
                 {
                     public static LocString NAME = (LocString)"Aquarium";
-                    public static LocString EFFECT = (LocString)" - Bonus decor for inhabitating fish";
+                    public static LocString EFFECT = (LocString)" - Bonus decor for inhabitating fish: +{0} of range and value.";
                     public static LocString TOOLTIP = (LocString)"Properly exposed critters seem to be much prettier.";
                 }
 
@@ -92,35 +92,35 @@ namespace RoomsExpanded
                 public class MUSEUM
                 {
                     public static LocString NAME = (LocString)"Art Museum";
-                    public static LocString EFFECT = (LocString)" - Morale bonus";
+                    public static LocString EFFECT = (LocString)" • <style=\"KKeyword\">Morale</style>: +{0} of duplicant's Creativity skill as morale (up to +10)";
                     public static LocString TOOLTIP = (LocString)"It used to be a storehouse, before Meep confused Pedestal content with art.";
                 }
 
                 public class PRIVATEROOM
                 {
                     public static LocString NAME = (LocString)"Private Bedroom";
-                    public static LocString EFFECT = (LocString)" - Morale bonus";
+                    public static LocString EFFECT = (LocString)" • <style=\"KKeyword\">Morale</style>: \n\t +2 when using basic bed \n\t +3 when using luxury bed";
                     public static LocString TOOLTIP = (LocString)"For duplicants who want to have some privacy.";
                 }
 
                 public class NURSERYGENETIC
                 {
                     public static LocString NAME = (LocString)"Genetic Nursery";
-                    public static LocString EFFECT = (LocString)" - Increased chance for seed dropping or genetic mutation.";
+                    public static LocString EFFECT = (LocString)" - Increased chance for seed dropping or genetic mutation: +{0}";
                     public static LocString TOOLTIP = (LocString)"Specialized laboratories improve harvests.";
                 }
 
                 public class MUSEUMSPACE
                 {
                     public static LocString NAME = (LocString)"Space Museum";
-                    public static LocString EFFECT = (LocString)" - Morale bonus";
+                    public static LocString EFFECT = (LocString)" • <style=\"KKeyword\">Morale</style>: \n\t + {0} of duplicant's Piloting skill as morale (up to +10)\n    Upon \"Cosmic Archaeology\" completion: \n\t + up to 5 for each unique artifact \n\t + up to additional 5 for each 2 more unique artifacts \n\t + up to additional 5 for each 3 more unique artifacts";
                     public static LocString TOOLTIP = (LocString)"Perfect for storing Ancient Knowledge on the pedestals.";
                 }
 
                 public class MUSEUMHISTORY
                 {
                     public static LocString NAME = (LocString)"History Museum";
-                    public static LocString EFFECT = (LocString)" - Morale bonus";
+                    public static LocString EFFECT = (LocString)" • <style=\"KKeyword\">Morale</style>: +{0} of duplicant's Science skill as morale (up to +10)";
                     public static LocString TOOLTIP = (LocString)"There used to be only rocks before somebody found bones in one of them.";
                 }
             }

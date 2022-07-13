@@ -13,7 +13,7 @@ namespace RoomsExpanded
             Id = RoomId;
             Name = STRINGS.ROOMS.TYPES.NURSERYGENETIC.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.NURSERYGENETIC.TOOLTIP;
-            Effect = STRINGS.ROOMS.TYPES.NURSERYGENETIC.EFFECT;
+            Effect = string.Format(STRINGS.ROOMS.TYPES.NURSERYGENETIC.EFFECT, MiscUtils.Percent(Settings.Instance.NurseryGenetic.Bonus));
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.GENETIC_STATION;
             ConstrantsAdditional = new RoomConstraints.Constraint[3] 

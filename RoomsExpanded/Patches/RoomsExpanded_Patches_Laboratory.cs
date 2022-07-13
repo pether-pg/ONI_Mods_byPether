@@ -30,9 +30,8 @@ namespace RoomsExpanded
                 if (!Settings.Instance.Laboratory.IncludeRoom) return;
                 if (__instance == null) return;
 
-                if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeLaboratoryData.RoomId)
-                    && Settings.Instance.Laboratory.Bonus.HasValue)
-                    mass_consumed *= (1 + Settings.Instance.Laboratory.Bonus.Value);
+                if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeLaboratoryData.RoomId))
+                    mass_consumed *= (1 + Settings.Instance.Laboratory.Bonus);
             }
         }
         
@@ -45,9 +44,8 @@ namespace RoomsExpanded
                 if (!Settings.Instance.Laboratory.IncludeRoom) return;
                 if (__instance == null) return;
 
-                if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeLaboratoryData.RoomId)
-                    && Settings.Instance.Laboratory.Bonus.HasValue)
-                    dt *= (1 + Settings.Instance.Laboratory.Bonus.Value);
+                if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeLaboratoryData.RoomId))
+                    dt *= (1 + Settings.Instance.Laboratory.Bonus);
             }
         }
 

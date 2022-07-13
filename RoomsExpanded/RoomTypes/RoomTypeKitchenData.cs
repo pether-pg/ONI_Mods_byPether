@@ -12,7 +12,7 @@ namespace RoomsExpanded
             Id = RoomId;
             Name = STRINGS.ROOMS.TYPES.KITCHEN.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP;
-            Effect = STRINGS.ROOMS.TYPES.KITCHEN.EFFECT;
+            Effect = string.Format(STRINGS.ROOMS.TYPES.KITCHEN.EFFECT, MiscUtils.Percent(Settings.Instance.Kitchen.Bonus));
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.COOKING_STATION;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]

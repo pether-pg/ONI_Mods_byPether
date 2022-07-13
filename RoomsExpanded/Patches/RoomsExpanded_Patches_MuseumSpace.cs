@@ -46,7 +46,7 @@ namespace RoomsExpanded
             return foundArtifacts.Count;
         }
 
-        private static bool CanGrantExtraBonus()
+        public static bool CanGrantExtraBonus()
         {
             ColonyAchievementTracker tracker = SaveGame.Instance.GetComponent<ColonyAchievementTracker>();
             if (tracker == null)
@@ -59,24 +59,35 @@ namespace RoomsExpanded
             return !DlcManager.IsExpansion1Active();
         }
 
-        public static Effect CalculateEffectBonus(MinionModifiers modifiers, int extraBonus = 0)
+        private static int CalculateExtraBonus(int artifactsToCalculate)
         {
-            foreach (AttributeInstance inst in modifiers.attributes.AttributeTable)
-                Debug.Log(inst.Name);
+            int total = 0;
+            int divider = 1;
+            int maxPerDivideLvl = 5;
 
+            while(artifactsToCalculate > 0)
+            {
+                int chunkAmount = Math.Min(artifactsToCalculate, divider * maxPerDivideLvl);
+                artifactsToCalculate -= chunkAmount;
+                total += chunkAmount / divider;
+                divider += 1;
+            }
+
+            return total;
+        }
+
+        public static Effect CalculateEffectBonus(MinionModifiers modifiers, int uniqueArtifacts = 0)
+        {
             AttributeInstance scienceAttrInstance = modifiers.attributes.AttributeTable.Where(p => p.Name == "Piloting").FirstOrDefault();
             if (scienceAttrInstance == null)
                 return null;
 
-            if (!Settings.Instance.MuseumSpace.Bonus.HasValue)
-                return null;
-
             float piloting = scienceAttrInstance.GetTotalValue();
-            float bonus = Settings.Instance.MuseumSpace.Bonus.Value;
+            float bonus = Settings.Instance.MuseumSpace.Bonus;
             int moraleBonus = Mathf.Clamp((int)Math.Ceiling(piloting * bonus), 1, 10);
             
             if(CanGrantExtraBonus())
-                moraleBonus += extraBonus;
+                moraleBonus += CalculateExtraBonus(uniqueArtifacts);
 
             Effect effect = new Effect(RoomTypeMuseumSpaceData.EffectId, STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.NAME, STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.DESCRIPTION, 240, false, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
