@@ -53,6 +53,7 @@ namespace DiseasesExpanded
                     "Temperature: <color=#FF0000>{5}</color>";
                 public static LocString MUTATION_HELP_PATTERN = (LocString)"Use {0} to mutate the germs in more safe direction.";
                 public static LocString TREAT_POTENTIAL_PATTERN = (LocString)"Threat potential: {0}%";
+                public static LocString MUTATION_SPEED_PATTERN = (LocString)"Estimated mutation speed: {0:F2}";
             }
         }
 

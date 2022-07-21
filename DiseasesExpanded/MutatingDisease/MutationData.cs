@@ -27,7 +27,7 @@ namespace DiseasesExpanded
         private Dictionary<MutationVectors.Vectors, int> MutationLevels = new Dictionary<MutationVectors.Vectors, int>();
 
         [Serialize]
-        private Dictionary<MutationVectors.Vectors, int> MutationReinforcement = new Dictionary<MutationVectors.Vectors, int>();
+        private Dictionary<MutationVectors.Vectors, float> MutationReinforcement = null;
 
         [Serialize]
         private float nextMutationProgress = 0;
@@ -54,11 +54,63 @@ namespace DiseasesExpanded
             base.OnSpawn();
             _isReady = true;
 
+            if (MutationReinforcement == null)
+                InitalizeReinforcements();
+
             if (Settings.Instance.ClearVirusMutationsOnLoad)
                 MutationLevels = new Dictionary<MutationVectors.Vectors, int>();
+            else if (Settings.Instance.FullyMutateOnLoad)
+                CompleteMutation();
 
             Debug.Log($"{ModInfo.Namespace}: MutationData Spawned. Current mutation: {GetMutationsCode()}");
             Instance.UpdateAll();
+        }
+
+        public void InitalizeReinforcements(float init = 1)
+        {
+            MutationReinforcement = new Dictionary<MutationVectors.Vectors, float>();
+            foreach (MutationVectors.Vectors v in MutationVectors.GetAttackVectors())
+                MutationReinforcement.Add(v, init);
+            foreach (MutationVectors.Vectors v in MutationVectors.GetResilianceVectors())
+                MutationReinforcement.Add(v, init);
+        }
+
+        public void Reinforce(MutationVectors.Vectors vector, float amount = 1)
+        {
+            if (MutationReinforcement == null || !MutationReinforcement.ContainsKey(vector))
+                InitalizeReinforcements();
+            MutationReinforcement[vector] += amount * GetAccelerationParameter();
+        }
+
+        public float MaximumRainforcementValue()
+        {
+            float max = 0;
+            foreach (float v in MutationReinforcement.Values)
+                if (v > max)
+                    max = v;
+            return max;
+        }
+
+        private void EqualizeReinforcements(float eqScale)
+        {
+            if (eqScale == 0)
+                return;
+            if (eqScale == 1)
+                InitalizeReinforcements();
+
+            float max = MaximumRainforcementValue();
+
+            List<MutationVectors.Vectors> vectors = new List<MutationVectors.Vectors>();
+            vectors.AddRange(MutationVectors.GetAttackVectors());
+            vectors.AddRange(MutationVectors.GetResilianceVectors());
+
+            for(int i=0; i<vectors.Count; i++)
+            {
+                float delta = max - MutationReinforcement[vectors[i]];
+                delta *= eqScale;
+                MutationReinforcement[vectors[i]] += delta;
+            }
+            LogReinforcements();
         }
 
         public int GetMutationLevel(MutationVectors.Vectors mutation)
@@ -126,7 +178,8 @@ namespace DiseasesExpanded
             string help = string.Format(STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN, STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME);
             int threatLvlPercent = (int)(100 * GetCompletionPercent());
             string threat = string.Format(STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN, threatLvlPercent);
-            string legend = $"{attackLegend}\n{resistLegend}\n\n{threat}\n{help}";
+            string speed = string.Format(STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN, GetAccelerationParameter());
+            string legend = $"{attackLegend}\n{resistLegend}\n\n{threat}\n{speed}\n{help}";
 
             return legend;
         }
@@ -218,7 +271,25 @@ namespace DiseasesExpanded
         public Color32 GetGermColor()
         {
             float ratio = GetCompletionPercent();
-            return Color32.Lerp(MutatingGerms.colorValue, ColorPalette.BloodyRed, ratio);
+
+            GradientColorKey[] colorKey = new GradientColorKey[Settings.Instance.MutationVirusStageColors.Count];
+            int i = 0;
+            foreach(float f in Settings.Instance.MutationVirusStageColors.Keys)
+            {
+                colorKey[i].time = f;
+                colorKey[i].color = Settings.Instance.MutationVirusStageColors[f];
+                i++;
+            }
+            GradientAlphaKey[] alphaKey = new GradientAlphaKey[2];
+            alphaKey[0].alpha = 1.0f;
+            alphaKey[0].time = 0.0f;
+            alphaKey[1].alpha = 1.0f;
+            alphaKey[1].time = 1.0f;
+
+            Gradient gradient = new Gradient();
+            gradient.SetKeys(colorKey, alphaKey);
+
+            return gradient.Evaluate(ratio);
         }
 
         public void UpdateColor()
@@ -298,14 +369,20 @@ namespace DiseasesExpanded
             if (GetTotalLevel() >= GetMaxTotalLevel())
                 return false;
 
-            if (GameClock.Instance.GetCycle() < lastMutationCycle + Settings.Instance.UnstableVirusMinimalMutationInterval)
+            if (CurrentCycle() < lastMutationCycle + Settings.Instance.UnstableVirusMinimalMutationInterval)
                 return false;
 
             return true;
         }
 
+        private int CurrentCycle()
+        {
+            return GameClock.Instance.GetCycle() + 1;
+        }
+
         public void Mutate()
         {
+            EqualizeReinforcements(Settings.Instance.UnstableVirusMutationFocusEqualizer);
             MutateAttack();
             MutateResiliance();
 
@@ -313,8 +390,9 @@ namespace DiseasesExpanded
 
             Notify();
 
-            lastMutationCycle = GameClock.Instance.GetCycle() + 1;
+            lastMutationCycle = CurrentCycle();
             nextMutationProgress = 0;
+            InitalizeReinforcements();
         }
 
         public void CompleteMutation()
@@ -331,14 +409,13 @@ namespace DiseasesExpanded
                 if (vectors == null || vectors.Count == 0)
                     break;
 
-                int vectorIndex = UnityEngine.Random.Range(0, vectors.Count);
-                MutationVectors.Vectors mutationVector = vectors[vectorIndex];
+                MutationVectors.Vectors mutationVector = RandomExtensions.WeightedRandom(MutationReinforcement, vectors);
                 if (!MutationLevels.ContainsKey(mutationVector))
                     MutationLevels.Add(mutationVector, 0);
                 
                 if(MutationLevels[mutationVector] >= maxMutationLevel)
                 {
-                    vectors.RemoveAt(vectorIndex);
+                    vectors.Remove(mutationVector);
                     continue;
                 }
 
@@ -376,6 +453,13 @@ namespace DiseasesExpanded
             Notifier notifier = this.gameObject.AddOrGet<Notifier>();
             if (notifier != null)
                 notifier.Add(new Notification(string.Format(STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN, GetMutationsCode()), notiType));
+        }
+
+        private void LogReinforcements()
+        {
+            Debug.Log($"{ModInfo.Namespace}: Current reinforcements' values:");
+            foreach (var v in MutationReinforcement)
+                Debug.Log($"{v.Key.ToString()} : {v.Value}");
         }
     }
 }

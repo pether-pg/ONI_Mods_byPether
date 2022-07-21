@@ -75,7 +75,9 @@
     <Compile Include="MutatingDisease\ControlledAttackMutationConfig.cs" />
     <Compile Include="MutatingDisease\ControlledEnvironmentalMutationConfig.cs" />
     <Compile Include="MutatingDisease\ControlledResilianceMutationConfig.cs" />
+    <Compile Include="MutatingDisease\EnforcedVirusMutationConfig.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_SpaceGoo.cs" />
+    <Compile Include="RandomExtensions.cs" />
     <Compile Include="Sicknesses\AlienSickness.cs" />
     <Compile Include="Sicknesses\MutatingSickness.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_MutatingDisease.cs" />
