@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltraGrubRubBoost", "UltraG
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealCaloriesInfo", "RealCaloriesInfo\RealCaloriesInfo.csproj", "{9891CCEB-E131-40DE-9983-76F9F8DB6E67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiationRebalanced", "RadiationRebalanced\RadiationRebalanced.csproj", "{BDA3ED53-4B98-4612-BD3D-C90902E208C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{9891CCEB-E131-40DE-9983-76F9F8DB6E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9891CCEB-E131-40DE-9983-76F9F8DB6E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9891CCEB-E131-40DE-9983-76F9F8DB6E67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDA3ED53-4B98-4612-BD3D-C90902E208C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDA3ED53-4B98-4612-BD3D-C90902E208C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDA3ED53-4B98-4612-BD3D-C90902E208C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDA3ED53-4B98-4612-BD3D-C90902E208C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
