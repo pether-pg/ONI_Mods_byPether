@@ -689,3 +689,8 @@ RadiationRebalanced/obj/Release/RadiationRebalance.dll
 RadiationRebalanced/obj/Release/RadiationRebalanced.csproj.CopyComplete
 RadiationRebalanced/obj/Release/RadiationRebalanced.csproj.FileListAbsolute.txt
 RadiationRebalanced/obj/Release/RadiationRebalanced.dll
+packages/PLib.4.9.0/.signature.p7s
+packages/PLib.4.9.0/icon.png
+packages/PLib.4.9.0/lib/net471/PLib.dll
+packages/PLib.4.9.0/lib/net471/PLib.xml
+packages/PLib.4.9.0/PLib.4.9.0.nupkg

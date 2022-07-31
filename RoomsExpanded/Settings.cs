@@ -31,6 +31,8 @@ namespace RoomsExpanded
             [Option("Bonus", "How big bonus the room should provide?")]
             public float Bonus { get; set; }
 
+            [JsonProperty]
+            [Option("RoomColor", "What color do you want to see in the Room Overlay?")]
             public Color32 RoomColor { get; set; }
 
             public RoomSettings(bool include, int max, Color32 color, float bonus)
@@ -54,6 +56,8 @@ namespace RoomsExpanded
             [Option("MaxSize", "How big this room can be?")]
             public int MaxSize { get; set; }
 
+            [JsonProperty]
+            [Option("RoomColor", "What color do you want to see in the Room Overlay?")]
             public Color32 RoomColor { get; set; }
 
             public PlainRoomSettings(bool include, int max, Color32 color)

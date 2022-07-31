@@ -48,15 +48,23 @@ namespace RoomsExpanded
 
         public static bool CanGrantExtraBonus()
         {
+            if (!DlcManager.IsExpansion1Active())
+                return true;
+
+            string key = Db.Get().ColonyAchievements.CollectedArtifacts.Id;
+
             ColonyAchievementTracker tracker = SaveGame.Instance.GetComponent<ColonyAchievementTracker>();
-            if (tracker == null)
+            if (tracker == null || tracker.achievements == null)
                 return false;
 
-            ColonyAchievementStatus status = tracker.achievements.Where(a => a.Key == Db.Get().ColonyAchievements.CollectedArtifacts.Id).First().Value;
+            if (!tracker.achievements.ContainsKey(key))
+                return false;
+
+            ColonyAchievementStatus status = tracker.achievements[key];
             if (status.success && !status.failed)
                 return true;
 
-            return !DlcManager.IsExpansion1Active();
+            return false;
         }
 
         private static int CalculateExtraBonus(int artifactsToCalculate)
