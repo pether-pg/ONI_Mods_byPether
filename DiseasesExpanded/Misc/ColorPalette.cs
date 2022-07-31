@@ -43,5 +43,27 @@ namespace DiseasesExpanded
                 color32.a / 255.0f
             );
         }
+
+        public static Color32 Gradient(SortedDictionary<float, Color32> stages, float t)
+        {
+            GradientColorKey[] colorKey = new GradientColorKey[stages.Count];
+            int i = 0;
+            foreach (float f in stages.Keys)
+            {
+                colorKey[i].time = f;
+                colorKey[i].color = stages[f];
+                i++;
+            }
+            GradientAlphaKey[] alphaKey = new GradientAlphaKey[2];
+            alphaKey[0].alpha = 1.0f;
+            alphaKey[0].time = 0.0f;
+            alphaKey[1].alpha = 1.0f;
+            alphaKey[1].time = 1.0f;
+
+            Gradient gradient = new Gradient();
+            gradient.SetKeys(colorKey, alphaKey);
+
+            return gradient.Evaluate(t);
+        }
     }
 }

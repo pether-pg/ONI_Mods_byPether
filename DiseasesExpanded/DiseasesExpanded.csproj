@@ -74,6 +74,7 @@
     <Compile Include="Germs\MutatingGerms.cs" />
     <Compile Include="MutatingDisease\ControlledAttackMutationConfig.cs" />
     <Compile Include="MutatingDisease\ControlledEnvironmentalMutationConfig.cs" />
+    <Compile Include="MutatingDisease\ControlledMutationRateReductionConfig.cs" />
     <Compile Include="MutatingDisease\ControlledResilianceMutationConfig.cs" />
     <Compile Include="MutatingDisease\EnforcedVirusMutationConfig.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_SpaceGoo.cs" />

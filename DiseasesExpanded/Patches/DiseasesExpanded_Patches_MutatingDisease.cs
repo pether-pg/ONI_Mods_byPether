@@ -26,16 +26,20 @@ namespace DiseasesExpanded
             }
         }
 
-        [HarmonyPatch(typeof(Sickness))]
+        [HarmonyPatch(typeof(SicknessInstance))]
         [HarmonyPatch("Cure")]
-        public class Sickness_Cure_Patch
+        public class SicknessInstance_Cure_Patch
         {
-            public static void Postfix(Sickness __instance, GameObject go)
+            public static void Prefix(SicknessInstance __instance)
             {
-                if (__instance.Id == MutatingSickness.ID) return;
+                if (__instance.Sickness.Id == MutatingSickness.ID) 
+                    return;
 
-                MutationData.Instance.IncreaseMutationProgress(go);
-                UpdateReinforcements(__instance.Id);
+                GameObject go = __instance.gameObject;
+                float percentCured = __instance.GetPercentCured();
+
+                MutationData.Instance.IncreaseMutationProgress(go, percentCured);
+                UpdateReinforcements(__instance.Sickness.Id);
             }
 
             private static void UpdateReinforcements(string id)

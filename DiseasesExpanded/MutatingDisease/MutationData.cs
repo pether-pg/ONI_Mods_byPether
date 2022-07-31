@@ -35,6 +35,9 @@ namespace DiseasesExpanded
         [Serialize]
         private int lastMutationCycle = 0;
 
+        [Serialize]
+        private int MutationRateReductionLvl = 0;
+
         private const int maxMutationLevel = 15;
 
         // called in Game_DestroyInstances_Patch
@@ -64,6 +67,11 @@ namespace DiseasesExpanded
 
             Debug.Log($"{ModInfo.Namespace}: MutationData Spawned. Current mutation: {GetMutationsCode()}");
             Instance.UpdateAll();
+        }
+
+        public void IncreaseMutationRateReductionLvl(int increment = 1)
+        {
+            MutationRateReductionLvl += increment;
         }
 
         public void InitalizeReinforcements(float init = 1)
@@ -110,7 +118,7 @@ namespace DiseasesExpanded
                 delta *= eqScale;
                 MutationReinforcement[vectors[i]] += delta;
             }
-            LogReinforcements();
+            //LogReinforcements();
         }
 
         public int GetMutationLevel(MutationVectors.Vectors mutation)
@@ -178,7 +186,7 @@ namespace DiseasesExpanded
             string help = string.Format(STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN, STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME);
             int threatLvlPercent = (int)(100 * GetCompletionPercent());
             string threat = string.Format(STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN, threatLvlPercent);
-            string speed = string.Format(STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN, GetAccelerationParameter());
+            string speed = string.Format(STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN, GetAccelerationParameter(), MutationRateReductionLvl);
             string legend = $"{attackLegend}\n{resistLegend}\n\n{threat}\n{speed}\n{help}";
 
             return legend;
@@ -208,7 +216,7 @@ namespace DiseasesExpanded
             return 1.0f * Settings.Instance.UnstableVirusFinalMutationCycleEstimation / GetMaxTotalLevel();
         }
 
-        public void IncreaseMutationProgress(GameObject infestedHost)
+        public void IncreaseMutationProgress(GameObject infestedHost, float progress = 1)
         {
             float radiation = 2;
             RadiationMonitor.Instance smi = infestedHost.GetSMI<RadiationMonitor.Instance>();
@@ -216,11 +224,11 @@ namespace DiseasesExpanded
                 radiation = smi.sm.radiationExposure.Get(smi) / 100;
 
             float acc = GetAccelerationParameter();
-            float mutationDelta = (1 + radiation) * acc;
+            float mutationDelta = (progress + radiation) * acc;
             nextMutationProgress += mutationDelta;
 
             Debug.Log($"{ModInfo.Namespace}: Germ mutation progress increased by: {mutationDelta:F2} " +
-                $"(includes rad factor = {radiation:F2} and acc = {acc:F2}). " +
+                $"(includes: duration = {progress:F2} rad factor = {radiation:F2} and acc = {acc:F2}). " +
                 $"Current progress: {nextMutationProgress:F2} / 100.00");
 
             if (nextMutationProgress >= 100 && CanMutate())
@@ -265,31 +273,13 @@ namespace DiseasesExpanded
             float relativeDelta = delta / expectedMutationTime;
 
             float acceleration = relativeDelta < 0 ? -1.0f / relativeDelta : relativeDelta;
-            return acceleration;
+            return acceleration / (1 + MutationRateReductionLvl);
         }
 
         public Color32 GetGermColor()
         {
             float ratio = GetCompletionPercent();
-
-            GradientColorKey[] colorKey = new GradientColorKey[Settings.Instance.MutationVirusStageColors.Count];
-            int i = 0;
-            foreach(float f in Settings.Instance.MutationVirusStageColors.Keys)
-            {
-                colorKey[i].time = f;
-                colorKey[i].color = Settings.Instance.MutationVirusStageColors[f];
-                i++;
-            }
-            GradientAlphaKey[] alphaKey = new GradientAlphaKey[2];
-            alphaKey[0].alpha = 1.0f;
-            alphaKey[0].time = 0.0f;
-            alphaKey[1].alpha = 1.0f;
-            alphaKey[1].time = 1.0f;
-
-            Gradient gradient = new Gradient();
-            gradient.SetKeys(colorKey, alphaKey);
-
-            return gradient.Evaluate(ratio);
+            return ColorPalette.Gradient(Settings.Instance.MutationVirusStageColors, ratio);
         }
 
         public void UpdateColor()
