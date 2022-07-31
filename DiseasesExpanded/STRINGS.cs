@@ -53,7 +53,7 @@ namespace DiseasesExpanded
                     "Temperature: <color=#FF0000>{5}</color>";
                 public static LocString MUTATION_HELP_PATTERN = (LocString)"Use {0} to mutate the germs in more safe direction.";
                 public static LocString TREAT_POTENTIAL_PATTERN = (LocString)"Threat potential: {0}%";
-                public static LocString MUTATION_SPEED_PATTERN = (LocString)"Estimated mutation speed: {0:F2}";
+                public static LocString MUTATION_SPEED_PATTERN = (LocString)"Estimated mutation speed: {0:F2} (mutation rate reduction Lvl: {1})";
             }
         }
 
@@ -249,6 +249,13 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Controlled Resiliance Mutation";
                 public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's resiliance genoms to a weaker form.";
                 public static LocString RECIPEDESC = (LocString)"Weakens Unstable Virus resiliance";
+            }
+
+            public class MUTATIONRATEREDUCTION
+            {
+                public static LocString NAME = (LocString)"Mutation Rate Reduction";
+                public static LocString DESC = (LocString)"Conducted in laboratory conditions, reduces ability of Unstable Virus to mutate.";
+                public static LocString RECIPEDESC = (LocString)"Slows down mutation rate of Unstable Virus.";
             }
 
         }
