@@ -4,8 +4,20 @@ using System;
 
 namespace RadiationRebalanced
 {
-    public class RadiationRebalance_Patches
+    public class RadiationRebalance_Patches_Emitters
     {
+		[HarmonyPatch(typeof(BaseBeeHiveConfig))]
+		[HarmonyPatch("OnSpawn")]
+		public class BaseBeeHiveConfig_OnSpawn_Patch
+		{
+			public static void Postfix(GameObject inst)
+			{
+				RadiationEmitter emitter = inst.GetComponent<RadiationEmitter>();
+				Settings.Instance.BeeHiveIdle.ApplySetting(emitter);
+				emitter.Refresh();
+			}
+		}
+
 		[HarmonyPatch(typeof(HiveEatingStates.Instance))]
 		[HarmonyPatch("TurnOn")]
 		public class HiveEatingStatesInstance_TurnOn_Patch
@@ -135,8 +147,13 @@ namespace RadiationRebalanced
 		{
 			public static void Prefix(ref float rads)
 			{
-				if (rads == 2400f && Settings.Instance.ResearchReactor.emitRads.HasValue)
+				if (!Settings.Instance.ResearchReactor.emitRads.HasValue)
+					return;
+
+				if (rads == 2400f) // normal mode
 					rads = Settings.Instance.ResearchReactor.emitRads.Value;
+				else if (rads == 4800f) // disaster
+					rads = 2 * Settings.Instance.ResearchReactor.emitRads.Value;
 			}
 		}
 	}

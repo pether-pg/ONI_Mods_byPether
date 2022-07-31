@@ -52,9 +52,9 @@ namespace RadiationRebalanced
         {
             float kCalsGranted = scale * DailyKCalConsumed * Settings.Instance.RadiationEater.DailyKCalFulfillment;
             bool showUi = Settings.Instance.RadiationEater.ShowInUI;
-            Effect effect = new Effect(EffectID, "ConsumedRads", "ConsumedRads - Desc", EffectTimeSeconds, showUi, false, false);
+            Effect effect = new Effect(EffectID, "Radiation Eating", "This duplicant just consumed some of absorbed radiation", EffectTimeSeconds, showUi, false, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier("CaloriesDelta", kCalsGranted, "ConsumedRads effect"));
+            effect.SelfModifiers.Add(new AttributeModifier("CaloriesDelta", kCalsGranted, "Radiation Eating"));
 
             return effect;
         }
@@ -75,7 +75,7 @@ namespace RadiationRebalanced
 
             Effects effects = eatingDuplicant.GetComponent<Effects>();
             float scale = consumedRads / RadsPerConsume();
-            if (scale < 0.01f)
+            if (scale < 0.01f || effects == null)
                 return;
 
             Effect effect = GetEffect(scale);

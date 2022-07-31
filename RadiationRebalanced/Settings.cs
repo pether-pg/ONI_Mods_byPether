@@ -14,8 +14,8 @@ namespace RadiationRebalanced
         {
             get
             {
-                //if (_instance == null)
-                //    _instance = JsonSerializer<Settings>.Deserialize();
+                if (_instance == null)
+                    _instance = JsonSerializer<Settings>.Deserialize();
                 if (_instance == null)
                 {
                     _instance = new Settings();
@@ -26,8 +26,8 @@ namespace RadiationRebalanced
             set { _instance = value; }
         }
 
-        public RadiationEaterSettings RadiationEater = new RadiationEaterSettings(true, 600, 0.5f, 1, true, true);
-        public GlowStickSettings GlowStick = new GlowStickSettings(new EmitterSettings(null, null, null, null, null, null, null), 1);
+        public RadiationEaterSettings RadiationEater = new RadiationEaterSettings(true, 600, 0.5f, 3, true, true);
+        public GlowStickSettings GlowStick = new GlowStickSettings(new EmitterSettings(null, null, null, null, null, null, null), 3);
         public MutationSettings PlantMutations = new MutationSettings(10, 100, true);
 
         public string EmitterNote = "For each setting, use null to keep the original value unchanged. For emitType use one of the numbers: null, 0 (Constant), 1 (Pulsing), 2 (PulsingAveraged), 3 (SimplePulse)";
