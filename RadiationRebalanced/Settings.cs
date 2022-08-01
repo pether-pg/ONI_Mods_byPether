@@ -31,8 +31,8 @@ namespace RadiationRebalanced
         public MutationSettings PlantMutations = new MutationSettings(10, 100, true);
 
         public string EmitterNote = "For each setting, use null to keep the original value unchanged. For emitType use one of the numbers: null, 0 (Constant), 1 (Pulsing), 2 (PulsingAveraged), 3 (SimplePulse)";
-        public EmitterSettings BeeHiveIdle = new EmitterSettings(null, null, null, 400, 1, null, RadiationEmitter.RadiationEmitterType.Constant);
-        public EmitterSettings BeeHiveEating = new EmitterSettings(null, null, null, 4000, 1, null, RadiationEmitter.RadiationEmitterType.Constant);
+        public EmitterSettings BeeHiveIdle = new EmitterSettings(null, 5, 5, 400, 1, null, RadiationEmitter.RadiationEmitterType.Constant);
+        public EmitterSettings BeeHiveEating = new EmitterSettings(null, 5, 5, 4000, 1, null, RadiationEmitter.RadiationEmitterType.Constant);
         public EmitterSettings Shinebug = new EmitterSettings(null, null, null, 400, null, null, RadiationEmitter.RadiationEmitterType.Constant);
         public EmitterSettings WheezewortGrowing = new EmitterSettings(null, null, null, null, null, null, null);
         public EmitterSettings Beeta = new EmitterSettings(null, null, null, null, null, null, null);
