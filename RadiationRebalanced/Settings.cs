@@ -26,12 +26,13 @@ namespace RadiationRebalanced
             set { _instance = value; }
         }
 
-        public RadiationEaterSettings RadiationEater = new RadiationEaterSettings(true, 600, 0.5f, 3, true, true);
+        public string TraitRarityNote = "Trait rarity accepts values from 1 (common) up to 5 (legendary)";
+        public RadiationEaterSettings RadiationEater = new RadiationEaterSettings(600, 500, 3);
         public GlowStickSettings GlowStick = new GlowStickSettings(new EmitterSettings(null, null, null, null, null, null, null), 3);
-        public MutationSettings PlantMutations = new MutationSettings(10, 100, true);
+        public MutationSettings PlantMutations = new MutationSettings(5, 100, true);
 
         public string EmitterNote = "For each setting, use null to keep the original value unchanged. For emitType use one of the numbers: null, 0 (Constant), 1 (Pulsing), 2 (PulsingAveraged), 3 (SimplePulse)";
-        public EmitterSettings BeeHiveIdle = new EmitterSettings(null, 5, 5, 400, 1, null, RadiationEmitter.RadiationEmitterType.Constant);
+        public EmitterSettings BeeHiveIdle = new EmitterSettings(null, null, null, 400, 1, null, RadiationEmitter.RadiationEmitterType.Constant);
         public EmitterSettings BeeHiveEating = new EmitterSettings(null, 5, 5, 4000, 1, null, RadiationEmitter.RadiationEmitterType.Constant);
         public EmitterSettings Shinebug = new EmitterSettings(null, null, null, 400, null, null, RadiationEmitter.RadiationEmitterType.Constant);
         public EmitterSettings WheezewortGrowing = new EmitterSettings(null, null, null, null, null, null, null);
@@ -39,7 +40,7 @@ namespace RadiationRebalanced
         public EmitterSettings Beetiny = new EmitterSettings(null, null, null, null, null, null, null);
         public EmitterSettings RadiationLamp = new EmitterSettings(null, null, null, null, null, null, null);
         public EmitterSettings NuclearRocketEngine = new EmitterSettings(null, null, null, null, null, null, null);
-        public EmitterSettings ResearchReactor = new EmitterSettings(null, null, null, 400, null, null, null);
+        public EmitterSettings ResearchReactor = new EmitterSettings(null, null, null, null, null, null, null);
 
         public class EmitterSettings
         {
@@ -104,22 +105,15 @@ namespace RadiationRebalanced
 
         public class RadiationEaterSettings
         {
-            public string RadiationEaterNote = "The game readjusts kCal value based on difficulty level. Trait rarity accepts values from 1 (common) up to 5 (legendary)";
-            public bool ApplyContinousEffect;
             public float ConsumedRadsPerCycle;
-            public float DailyKCalFulfillment;
+            public float KCalsGrantedPerCycle;
             public int TraitRarity;
-            public bool ShowInUI;
-            public bool TriggerFloatingText;
 
-            public RadiationEaterSettings(bool apply, float rads, float kcals, int rarity, bool ui, bool text)
+            public RadiationEaterSettings(float rads, float kcals, int rarity)
             {
-                ApplyContinousEffect = apply;
                 ConsumedRadsPerCycle = rads;
-                DailyKCalFulfillment = kcals;
+                KCalsGrantedPerCycle = kcals;
                 TraitRarity = rarity;
-                ShowInUI = ui;
-                TriggerFloatingText = text;
             }
         }
 

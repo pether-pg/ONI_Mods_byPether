@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[DLC] Radiation Rebalanced" 
+# currently unused, but may be someday
+description: "This mod tweaks radiation system a little to make it more engaging, fun and to open new possibilities for your base development" 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.RadiationRebalanced" 

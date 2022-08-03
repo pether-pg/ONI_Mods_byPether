@@ -63,7 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContinousRadiationConsumption.cs" />
+    <Compile Include="ModInfo.cs" />
     <Compile Include="RadiationRebalance_Patches_Emitters.cs" />
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

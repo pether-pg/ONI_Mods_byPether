@@ -1,0 +1,26 @@
+Introduction
+
+This mod tweaks radiation system a little to make it more engaging, fun and to open new possibilities for your base development.
+
+Beeta Hives
+
+When idle, Beeta Hives emit a little radiation - smaller amounts than Wheezeworts, but you can use it to collect radbolts if there is nothing else nearby. However, they really shine while eating Uranium Ore - emitted radiation is much higher, allowing you to scale up radbolt generation. Just make sure that beetas are out of the way.
+
+Mutating Plants
+
+Chance of plant mutation is now much higher, so you could use this game mechanic in some reasonable timeframe. On top of that, mutated plants require less radiation to grow and can drop seeds of their own kind (unless they mutate again).
+
+Traits
+
+Radiation Eater can now generate up to 500 kCal per cycle (up from 50). However, they require to consume more radiation to achieve this, allowing them to absorb 600 rads per cycle (up from 150). Calories won't be generated if duplicant isn't irradiated enough. Also, calories generated this way are now reported, so you can track them in the daily reports.
+
+On top of that, both Radiation Eater and Glow Stick traits should appear more often in the Printing Pod.
+
+Settings
+
+You don't like how I balanced things? You want to make Radiation Eater even more common and/or powerful? Or maybe there is something else you would like to adjust? The mod will generate .json file, so you could modify any aspect of radiation systems.
+
+Similar Mods
+
+I'm not the first one who modifies radiation systems. If you find my mod too big and overwhelming, or you are interested in different solutions, feel free to check mods below:
+
