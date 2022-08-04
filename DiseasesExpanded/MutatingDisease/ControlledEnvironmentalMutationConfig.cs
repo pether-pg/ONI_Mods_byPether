@@ -17,6 +17,7 @@ namespace DiseasesExpanded
         {
             MutationData.Instance.BulkModifyMutation(MutationVectors.GetEnvironmentalVectors(), -1);
             MutationData.Instance.Mutate();
+            PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
         }
 

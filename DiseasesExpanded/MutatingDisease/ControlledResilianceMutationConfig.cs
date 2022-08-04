@@ -17,6 +17,7 @@ namespace DiseasesExpanded.MutatingDisease
         {
             MutationData.Instance.BulkModifyMutation(MutationVectors.GetResilianceVectors(), -1);
             MutationData.Instance.Mutate();
+            PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.CONTROLLEDMUTATION.RESILIANCE.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
         }
 

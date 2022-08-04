@@ -33,7 +33,7 @@ namespace DiseasesExpanded
         public int UnstableVirusMinimalMutationInterval = 5;
         public float UnstableVirusMutationFocusEqualizer = 0.5f;
         public bool ClearVirusMutationsOnLoad = false;
-        public bool FullyMutateOnLoad = false;
+        //public bool FullyMutateOnLoad = false;
 
         public SortedDictionary<float, Color32> MutationVirusStageColors = new SortedDictionary<float, Color32>(){
                 { 0.00f, ColorPalette.PaleGreen },

@@ -62,8 +62,8 @@ namespace DiseasesExpanded
 
             if (Settings.Instance.ClearVirusMutationsOnLoad)
                 MutationLevels = new Dictionary<MutationVectors.Vectors, int>();
-            else if (Settings.Instance.FullyMutateOnLoad)
-                CompleteMutation();
+            //else if (Settings.Instance.FullyMutateOnLoad)
+            //    CompleteMutation();
 
             Debug.Log($"{ModInfo.Namespace}: MutationData Spawned. Current mutation: {GetMutationsCode()}");
             Instance.UpdateAll();
@@ -72,6 +72,7 @@ namespace DiseasesExpanded
         public void IncreaseMutationRateReductionLvl(int increment = 1)
         {
             MutationRateReductionLvl += increment;
+            UpdateGerms();
         }
 
         public void InitalizeReinforcements(float init = 1)
@@ -216,7 +217,7 @@ namespace DiseasesExpanded
             return 1.0f * Settings.Instance.UnstableVirusFinalMutationCycleEstimation / GetMaxTotalLevel();
         }
 
-        public void IncreaseMutationProgress(GameObject infestedHost, float progress = 1)
+        public void IncreaseMutationProgress(GameObject infestedHost, float durationScale = 1)
         {
             float radiation = 2;
             RadiationMonitor.Instance smi = infestedHost.GetSMI<RadiationMonitor.Instance>();
@@ -224,11 +225,11 @@ namespace DiseasesExpanded
                 radiation = smi.sm.radiationExposure.Get(smi) / 100;
 
             float acc = GetAccelerationParameter();
-            float mutationDelta = (progress + radiation) * acc;
+            float mutationDelta = (1 + radiation) * acc * durationScale;
             nextMutationProgress += mutationDelta;
 
             Debug.Log($"{ModInfo.Namespace}: Germ mutation progress increased by: {mutationDelta:F2} " +
-                $"(includes: duration = {progress:F2} rad factor = {radiation:F2} and acc = {acc:F2}). " +
+                $"(includes: duration = {durationScale:F2} rad factor = {radiation:F2} and acc = {acc:F2}). " +
                 $"Current progress: {nextMutationProgress:F2} / 100.00");
 
             if (nextMutationProgress >= 100 && CanMutate())

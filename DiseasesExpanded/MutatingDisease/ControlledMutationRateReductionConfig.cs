@@ -16,6 +16,7 @@ namespace DiseasesExpanded
         public void OnSpawn(GameObject inst)
         {
             MutationData.Instance.IncreaseMutationRateReductionLvl();
+            PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
         }
 
@@ -32,7 +33,7 @@ namespace DiseasesExpanded
             };
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(VaccineApothecaryConfig.ID, ingredients, results), ingredients, results)
             {
-                time = VaccineApothecaryConfig.MutationRecipeTime,
+                time = VaccineApothecaryConfig.MutationRecipeTime * 2,
                 description = STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.ID },
