@@ -159,14 +159,12 @@ namespace RoomsExpanded
         [HarmonyPatch("Init")]
         public static class ColorSet_Init_Patch
         {
-            static bool initalized = false;
-
             public static void Postfix(ColorSet __instance)
             {
-                if (initalized)
+                Dictionary<string, Color32> namedLookup = Traverse.Create(__instance).Field("namedLookup").GetValue<Dictionary<string, Color32>>();
+                if (namedLookup.ContainsKey(RoomTypeLaboratoryData.RoomId))
                     return;
 
-                Dictionary<string, Color32> namedLookup = Traverse.Create(__instance).Field("namedLookup").GetValue<Dictionary<string, Color32>>();
                 namedLookup.Add(RoomTypeAgriculturalData.RoomId, Settings.Instance.Agricultural.RoomColor);
                 namedLookup.Add(RoomTypeAquariumData.RoomId, Settings.Instance.Aquarium.RoomColor);
                 namedLookup.Add(RoomTypeBathroomData.RoomId, Settings.Instance.Bathroom.RoomColor);
@@ -183,7 +181,6 @@ namespace RoomsExpanded
                 namedLookup.Add(RoomTypeNurseryGeneticData.RoomId, Settings.Instance.NurseryGenetic.RoomColor);
                 namedLookup.Add(RoomTypePrivateRoomData.RoomId, Settings.Instance.PrivateBedroom.RoomColor);
 
-                initalized = true;
                 //LogColors(namedLookup);
             }
 

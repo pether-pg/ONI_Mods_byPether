@@ -4,18 +4,10 @@ namespace ResearchRequirements
 {
     class GVD // = Game Version Dependencies
     {
-        private static bool ExpansionActive = false;
+        public static int LowTierTechs => DlcManager.IsExpansion1Active() ? 19 : 18;
 
-        public static int LowTierTechs => ExpansionActive ? 19 : 18;
+        public static int MidTierTechs => DlcManager.IsExpansion1Active() ? 38 : 51;
 
-        public static int MidTierTechs => ExpansionActive ? 38 : 51;
-
-        public static int AdvancedResearchThreshold => ExpansionActive ? 15 : 16;
-
-        public static void VersionAlert(bool expectExpansion)
-        {
-            if (expectExpansion != ExpansionActive)
-                throw new NotSupportedException("Resolve Vanilla/DLC version differences");
-        }
+        public static int AdvancedResearchThreshold => DlcManager.IsExpansion1Active() ? 15 : 16;
     }
 }

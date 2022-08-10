@@ -24,9 +24,9 @@ namespace ResearchRequirements
             public static LocString GAS_PIPING                  = (LocString)"Daily Oxygen production: {0} kg";
             public static LocString IMPROVED_GAS_PIPING         = (LocString)"Have Duplicants suffering from Popped Ear Drums: {0} %";
             public static LocString PRESSURE_MANAGER            = (LocString)"{0}";
-            public static LocString DIRECTED_AIR_STREAMS        = (LocString)"Have your beds and toilets exposed to other gases than Oxygen: {0} %";
+            public static LocString DIRECTED_AIR_STREAMS        = (LocString)"Fall bellow maximum breathability: {0} %";
             public static LocString LIQUID_FILTERING            = (LocString)"Store Salt Water and/or Brine: {0} liters";
-            public static LocString MEDICINE_I                  = (LocString)"Have Duplicant suffering from Allergies or Food Poisoning: {0}";
+            public static LocString MEDICINE_I                  = (LocString)"Have Duplicants suffering from any sickness: {0}";
             public static LocString MEDICINE_II                 = (LocString)"Have Duplicant suffering from Slimelung: {0}";
             public static LocString MEDICINE_III                = (LocString)"Have Duplicant with \"Advanced Medical Care\" skill: {0}";
             public static LocString MEDICINE_IV                 = (LocString)"Have Duplicant suffering from Zombie Sickness: {0}";
@@ -68,7 +68,7 @@ namespace ResearchRequirements
             public static LocString HIGH_TEMP_FORGING           = (LocString)"Gather Steel: {0} kg";
             public static LocString TEMPERATURE_MODULATION      = (LocString)"Have Duplicants suffering from Chilly Surroundings: {0} %";
             public static LocString HVAC                        = (LocString)"Gather Ice: {0} kg";
-            public static LocString LIQUID_TEMPERATURE          = (LocString)"Have Duplicant suffering from Hypothermia or Heat Stroke: {0}";
+            public static LocString LIQUID_TEMPERATURE          = (LocString)"Analyze Geysers and/or Vents: {0}";
             public static LocString LOGIC_CONTROL               = (LocString)"Daily Energy wasted: {0} kW";
             public static LocString GENERIC_SENSORS             = (LocString)"Have Duplicant interested with Operating: {0}";
             public static LocString LOGIC_CIRCUITS              = (LocString)"Have Duplicant with \"Field Research\" skill: {0}";
@@ -107,6 +107,7 @@ namespace ResearchRequirements
             public static LocString HIGH_VELOCITY_TRANSPORT         = (LocString)"Spread your colonies on a distance: {0}";
             public static LocString HIGH_VELOCITY_DESTRUCTION       = (LocString)"Gather Diamond: {0}";
             public static LocString ADVANCED_NUCLEAR_RESEARCH       = (LocString)"Have Duplicants with \"Glow Stick\" trait: {0}";
+            public static LocString NUCLEAR_STORAGE                 = (LocString)"Achieve total radbolt travel distance: {0}";
             public static LocString BIOENGINEERING                  = (LocString)"Obtain mutated seed: {0}";
 
 

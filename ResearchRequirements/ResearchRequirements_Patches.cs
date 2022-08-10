@@ -30,27 +30,6 @@ namespace ResearchRequirements
         {
             public static void Postfix(ResearchCenter __instance)
             {
-                GVD.VersionAlert(false);
-                /*
-                 * Works vor vanilla
-                 * 
-                TechInstance activeResearch = Research.Instance.GetActiveResearch();
-                Tech tech = activeResearch.tech;
-                TechRequirements.TechReq req = TechRequirements.Instance.GetTechReq(tech.Id);
-
-                if (req.ContinuousCheck)
-                    if(!req.ReqUnlocked())
-                    {
-                        __instance.StopWork(__instance.worker, true);
-                        ResearchScreen researchScreen = (ResearchScreen)ManagementMenu.Instance.researchScreen;
-                        researchScreen.CancelResearch();
-                        Research.Instance.SetActiveResearch(null, true);
-                    }
-                */
-
-                /*
-                 * Works vor DLC
-                 * */
                 TechInstance activeResearch = Research.Instance.GetActiveResearch();
                 Tech tech = activeResearch.tech;
                 TechRequirements.TechReq req = TechRequirements.Instance.GetTechReq(tech.Id);
@@ -81,7 +60,7 @@ namespace ResearchRequirements
 
                 if (screenData.toggleInfo == researchInfo && activeScreen == screenData)
                 {
-                    RequirementFunctions.CountResourcesInReservoirs();
+                    ReqFunc_Storage.CountResourcesInReservoirs();
                     ResearchScreen researchScreen = Traverse.Create(ManagementMenu.Instance).Field("researchScreen").GetValue<ResearchScreen>();
                     if (researchScreen == null)
                         return;
