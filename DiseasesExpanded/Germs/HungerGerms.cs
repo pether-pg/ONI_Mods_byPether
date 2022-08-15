@@ -27,10 +27,12 @@ namespace DiseasesExpanded
 
         public const string ID = nameof(HungerGerms);
         public static Color32 colorValue = ColorPalette.HungryBrown;
-        
+
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
         private const float resinFreezingK = degC + 20;
         private const float resinTurningK = degC + 125;
+
+        public float UVKillRate { get; set; } // for Romen's UV Lamp mod
 
 
         public HungerGerms(bool statsOnly)
@@ -43,6 +45,7 @@ namespace DiseasesExpanded
                   1.0f,
                   statsOnly)
         {
+            UVKillRate = radiationKillRate / 2;
         }
 
         protected override void PopulateElemGrowthInfo()

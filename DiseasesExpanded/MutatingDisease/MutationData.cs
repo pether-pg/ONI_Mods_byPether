@@ -234,7 +234,7 @@ namespace DiseasesExpanded
 
             if (nextMutationProgress >= 100 && CanMutate())
             {
-                Mutate();
+                Mutate(infestedHost);
                 TryInfect(infestedHost);
             }
         }
@@ -371,7 +371,7 @@ namespace DiseasesExpanded
             return GameClock.Instance.GetCycle() + 1;
         }
 
-        public void Mutate()
+        public void Mutate(GameObject infestedHost = null)
         {
             EqualizeReinforcements(Settings.Instance.UnstableVirusMutationFocusEqualizer);
             MutateAttack();
@@ -379,7 +379,7 @@ namespace DiseasesExpanded
 
             UpdateAll();
 
-            Notify();
+            Notify(infestedHost);
 
             lastMutationCycle = CurrentCycle();
             nextMutationProgress = 0;
@@ -430,7 +430,7 @@ namespace DiseasesExpanded
             MutateOneOfVectors(MutationVectors.GetResilianceVectors());
         }
 
-        private void Notify()
+        private void Notify(GameObject infestedHost = null)
         {
             Debug.Log($"{ModInfo.Namespace}: {MutatingGerms.ID} mutated at cycle {lastMutationCycle}. Now it is {GetMutationsCode()} (level {GetTotalLevel()}/{GetMaxTotalLevel()})");
             
@@ -442,8 +442,10 @@ namespace DiseasesExpanded
                 notiType = NotificationType.DuplicantThreatening;
 
             Notifier notifier = this.gameObject.AddOrGet<Notifier>();
-            if (notifier != null)
-                notifier.Add(new Notification(string.Format(STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN, GetMutationsCode()), notiType));
+            if (notifier == null)
+                return;
+
+            notifier.Add(new Notification(string.Format(STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN, GetMutationsCode()), notiType, click_focus: infestedHost.transform));
         }
 
         private void LogReinforcements()

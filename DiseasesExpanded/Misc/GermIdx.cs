@@ -132,11 +132,12 @@ namespace DiseasesExpanded
 
         public static string GetGermName(byte idx)
         {
-            if (!GermNames.ContainsKey(idx))
+            if (!GermNames.ContainsKey(idx) && Db.Get().Diseases.Count >= idx)
                 GermNames.Add(idx, Db.Get().Diseases[idx].Name);
             
             if (GermNames.ContainsKey(idx))
                 return GermNames[idx];
+
             return string.Empty;
         }
     }

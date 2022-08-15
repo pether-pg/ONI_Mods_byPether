@@ -26,11 +26,13 @@ namespace DiseasesExpanded
 
         public const string ID = nameof(GassyGerms);
         public static Color32 colorValue = ColorPalette.GassyOrange;
-        
+
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
         private const float chlorineFreezingK = degC - 101;
         private const float grassTempHighWarningK = 348.15f; // see GasGrassConfig.cs
         private const float grassTempHighLethalK = 373.15f; // see GasGrassConfig.cs
+
+        public float UVKillRate { get; set; } // for Romen's UV Lamp mod
 
         public GassyGerms(bool statsOnly)
             : base(id: GassyGerms.ID,
@@ -42,6 +44,7 @@ namespace DiseasesExpanded
                   1.0f,
                   statsOnly)
         {
+            UVKillRate = radiationKillRate / 2;
         }
 
         protected override void PopulateElemGrowthInfo()

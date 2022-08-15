@@ -7,7 +7,7 @@ namespace DiseasesExpanded.MutatingDisease
     {
         public const string ID = "EnforcedVirusMutatio";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -15,7 +15,7 @@ namespace DiseasesExpanded.MutatingDisease
 
         public void OnSpawn(GameObject inst)
         {
-            MutationData.Instance.Mutate();
+            MutationData.Instance.Mutate(inst);
             Util.KDestroyGameObject(inst);
         }
 

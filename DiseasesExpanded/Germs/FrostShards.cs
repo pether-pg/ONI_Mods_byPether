@@ -27,7 +27,10 @@ namespace DiseasesExpanded
         }
         public const string ID = nameof(FrostShards);
         public static Color32 colorValue = ColorPalette.IcyBlue;
+
         private static float degC = 273.15f; // used to quickly convert temperature from *C to K
+
+        public float UVKillRate { get; set; } // for Romen's UV Lamp mod
 
         public FrostShards(bool statsOnly)
             : base(id: FrostShards.ID,
@@ -39,6 +42,7 @@ namespace DiseasesExpanded
                   0.0f,
                   statsOnly)
         {
+            UVKillRate = radiationKillRate / 2;
         }
 
         protected override void PopulateElemGrowthInfo()

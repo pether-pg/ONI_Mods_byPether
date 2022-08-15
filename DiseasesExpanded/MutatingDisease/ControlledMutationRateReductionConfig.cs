@@ -7,7 +7,7 @@ namespace DiseasesExpanded
     {
         public const string ID = "ControlledMutationRateReduction";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -25,19 +25,19 @@ namespace DiseasesExpanded
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 new ComplexRecipe.RecipeElement((Tag)MutatingGermFlask.ID, 1f),
-                new ComplexRecipe.RecipeElement(SimHashes.UraniumOre.CreateTag(), VaccineApothecaryConfig.UraniumOreCost)
+                VaccineApothecaryConfig.GetMainIngridient()
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
                 new ComplexRecipe.RecipeElement((Tag) ID, 1, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
-            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(VaccineApothecaryConfig.ID, ingredients, results), ingredients, results)
+            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(VaccineApothecaryConfig.GetAdvancedApothecaryId(), ingredients, results), ingredients, results)
             {
                 time = VaccineApothecaryConfig.MutationRecipeTime * 2,
                 description = STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
-                fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.ID },
-                sortOrder = 15
+                fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.GetAdvancedApothecaryId() },
+                sortOrder = 61
             };
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(

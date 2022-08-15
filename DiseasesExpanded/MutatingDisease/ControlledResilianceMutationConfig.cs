@@ -7,7 +7,7 @@ namespace DiseasesExpanded.MutatingDisease
     {
         public const string ID = "ControlledResilianceMutation";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -16,7 +16,7 @@ namespace DiseasesExpanded.MutatingDisease
         public void OnSpawn(GameObject inst)
         {
             MutationData.Instance.BulkModifyMutation(MutationVectors.GetResilianceVectors(), -1);
-            MutationData.Instance.Mutate();
+            MutationData.Instance.Mutate(inst);
             PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.CONTROLLEDMUTATION.RESILIANCE.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
         }
@@ -26,19 +26,19 @@ namespace DiseasesExpanded.MutatingDisease
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 new ComplexRecipe.RecipeElement((Tag)MutatingGermFlask.ID, 1f),
-                new ComplexRecipe.RecipeElement(SimHashes.UraniumOre.CreateTag(), VaccineApothecaryConfig.UraniumOreCost)
+                VaccineApothecaryConfig.GetMainIngridient()
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
                 new ComplexRecipe.RecipeElement((Tag) ID, 1, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
-            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(VaccineApothecaryConfig.ID, ingredients, results), ingredients, results)
+            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(VaccineApothecaryConfig.GetAdvancedApothecaryId(), ingredients, results), ingredients, results)
             {
                 time = VaccineApothecaryConfig.MutationRecipeTime,
                 description = STRINGS.CONTROLLEDMUTATION.RESILIANCE.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
-                fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.ID },
-                sortOrder = 15
+                fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.GetAdvancedApothecaryId() },
+                sortOrder = 53
             };
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(

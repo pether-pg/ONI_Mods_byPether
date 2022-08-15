@@ -9,6 +9,21 @@ namespace DiseasesExpanded
         public const float RecipeTime = 100;
         public const float MutationRecipeTime = 600;
         public const float UraniumOreCost = 20f;
+        public const float RefinedCarbonCost = 200f;
+
+        public static ComplexRecipe.RecipeElement GetMainIngridient()
+        {
+            if(DlcManager.IsExpansion1Active())
+                return new ComplexRecipe.RecipeElement(SimHashes.UraniumOre.CreateTag(), VaccineApothecaryConfig.UraniumOreCost);
+            return new ComplexRecipe.RecipeElement(SimHashes.RefinedCarbon.CreateTag(), VaccineApothecaryConfig.RefinedCarbonCost);
+        }
+
+        public static string GetAdvancedApothecaryId()
+        {
+            if (DlcManager.IsExpansion1Active())
+                return ID;
+            return ApothecaryConfig.ID;
+        }
 
         public override string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
@@ -40,16 +55,15 @@ namespace DiseasesExpanded
             go.AddOrGet<VaccineApothecaryWorkable>();
             go.AddOrGet<FabricatorIngredientStatusManager>();
             go.AddOrGet<CopyBuildingSettings>();
-
         }
 
         public override void DoPostConfigureComplete(GameObject go)
         {
+            go.AddOrGetDef<PoweredActiveStoppableController.Def>();
+
             float absorbtionTarget = 400; // how much rads you want to expose your doctor to
             float cycleTime = 600;
-            float emitRads =  absorbtionTarget * cycleTime / RecipeTime;
-
-            go.AddOrGetDef<PoweredActiveStoppableController.Def>();
+            float emitRads = absorbtionTarget * cycleTime / RecipeTime;
 
             RadiationEmitter radiationEmitter = go.AddComponent<RadiationEmitter>();
             radiationEmitter.emitType = RadiationEmitter.RadiationEmitterType.Constant;
@@ -58,7 +72,7 @@ namespace DiseasesExpanded
             radiationEmitter.radiusProportionalToRads = false;
             radiationEmitter.emissionOffset = new Vector3(0.0f, 1f, 0.0f);
             radiationEmitter.emitRads = emitRads;
-            radiationEmitter.SetEmitting(false);
+            radiationEmitter.SetEmitting(false);            
         }
     }
 }

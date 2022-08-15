@@ -178,12 +178,16 @@ namespace DiseasesExpanded
 
             public static void Postfix(ref Diseases __instance, bool statsOnly)
             {
-                __instance.Add(new BogInsects(statsOnly));
                 __instance.Add(new FrostShards(statsOnly));
                 __instance.Add(new GassyGerms(statsOnly));
-                __instance.Add(new HungerGerms(statsOnly));
                 __instance.Add(new AlienGerms(statsOnly));
                 __instance.Add(new MutatingGerms(statsOnly));
+
+                if(DlcManager.IsExpansion1Active())
+                    __instance.Add(new BogInsects(statsOnly));
+
+                if (DlcManager.IsExpansion1Active())
+                    __instance.Add(new HungerGerms(statsOnly));
             }
         }
 
