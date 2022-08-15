@@ -30,7 +30,7 @@ namespace DiseasesExpanded
 
         private static float degC = 273.15f; // used to quickly convert temperature from *C to K
 
-        public float UVKillRate { get; set; } // for Romen's UV Lamp mod
+        public float UVKillRate { get; private set; } // for Romen's UV Lamp mod
 
         public FrostShards(bool statsOnly)
             : base(id: FrostShards.ID,
@@ -42,7 +42,7 @@ namespace DiseasesExpanded
                   0.0f,
                   statsOnly)
         {
-            UVKillRate = radiationKillRate / 2;
+            UVKillRate = UVLampSupport.GetUVKillRate(radiationKillRate);
         }
 
         protected override void PopulateElemGrowthInfo()

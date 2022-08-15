@@ -34,7 +34,7 @@ namespace DiseasesExpanded
         private const float maxGrowthTemp = 30 + degC;
         private const float growthTempPerLvl = 5;
 
-        public float UVKillRate { get; set; } // for Romen's UV Lamp mod
+        public float UVKillRate { get; private set; } // for Romen's UV Lamp mod
 
         public MutatingGerms(bool statsOnly)
             : base(id: MutatingGerms.ID,
@@ -46,7 +46,7 @@ namespace DiseasesExpanded
                   1.0f,
                   statsOnly)
         {
-            UVKillRate = radiationKillRate / 2;
+            UVKillRate = UVLampSupport.GetUVKillRate(radiationKillRate);
         }
 
         public void UpdateGermData()

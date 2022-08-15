@@ -136,6 +136,7 @@
     <Compile Include="Patches\DiseasesExpanded_Patches_AllCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="STRINGS.cs" />
+    <Compile Include="Misc\UVLampSupport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
