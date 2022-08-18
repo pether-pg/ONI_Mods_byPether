@@ -62,7 +62,7 @@ namespace InterplanarInfrastructure
         public class StatesInstance : GameStateMachine<RadiationLaser.States, RadiationLaser.StatesInstance, RadiationLaser, object>.GameInstance
         {
             public const int INVALID_PATH_LENGTH = -1;
-            public const float LASER_TIME = 10; // 5s is a time of EffectPrefabs.Instance.OpenTemporalTearBeam
+            public const float LASER_TIME = 10; // 10s is a time of EffectPrefabs.Instance.OpenTemporalTearBeam
             public const float EFFICIENCY = 0.2f;
 
             public float TimeSinceFire = 0;
