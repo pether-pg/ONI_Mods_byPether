@@ -43,7 +43,7 @@ namespace DiseasesExpanded
             return CalculateRate(desiredDoubleTime, 2);
         }
 
-        public static float GetUVKillRate(float radiationKillRate)
+        public static float UVKillRate_GetFromRadKillRate(float radiationKillRate)
         {
             if (radiationKillRate > 0)
                 return CalculateKillRate(DefaultHalfLifeTime / radiationKillRate);

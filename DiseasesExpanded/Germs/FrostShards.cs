@@ -42,7 +42,7 @@ namespace DiseasesExpanded
                   0.0f,
                   statsOnly)
         {
-            UVKillRate = UVLampSupport.GetUVKillRate(radiationKillRate);
+            UVKillRate = UVLampSupport.UVKillRate_GetFromRadKillRate(radiationKillRate);
         }
 
         protected override void PopulateElemGrowthInfo()
