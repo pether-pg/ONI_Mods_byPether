@@ -23,7 +23,7 @@ namespace DiseasesExpanded
 
         public static Effect CreateRelatedEffect(float time)
         {
-            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.MUTATEDSYMPTHOMS.NAME, STRINGS.EFFECTS.MUTATEDSYMPTHOMS.DESC, time, true, false, true);
+            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.MUTATEDSYMPTOMS.NAME, STRINGS.EFFECTS.MUTATEDSYMPTOMS.DESC, time, true, false, true);
             effect.SelfModifiers = new List<AttributeModifier>();
 
             int strLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Stress);
