@@ -32,7 +32,7 @@ namespace DiseasesExpanded
         private const float grassTempHighWarningK = 348.15f; // see GasGrassConfig.cs
         private const float grassTempHighLethalK = 373.15f; // see GasGrassConfig.cs
 
-        public float UVKillRate { get; private set; } // for Romen's UV Lamp mod
+        public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod
 
         public GassyGerms(bool statsOnly)
             : base(id: GassyGerms.ID,
@@ -44,7 +44,7 @@ namespace DiseasesExpanded
                   1.0f,
                   statsOnly)
         {
-            UVKillRate = UVLampSupport.UVKillRate_GetFromRadKillRate(radiationKillRate);
+            UVHalfLife = UVLampSupport.UVHalfLife_GetFromRadKillRate(radiationKillRate);
         }
 
         protected override void PopulateElemGrowthInfo()

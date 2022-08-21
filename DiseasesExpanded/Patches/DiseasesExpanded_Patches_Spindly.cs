@@ -89,7 +89,7 @@ namespace DiseasesExpanded
             {
                 float skill = GetBotanicSkillValue(worker);
                 float scale = Settings.Instance.RebalanceForDiseasesRestored ? 2 : 4;
-                return 100 - (skill * scale);
+                return (100 - (skill * scale)) / 5.0f;
             }
 
             private static float GetBotanicSkillValue(Worker worker)

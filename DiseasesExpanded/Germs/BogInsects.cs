@@ -31,7 +31,7 @@ namespace DiseasesExpanded
         private const float plantTempWarnHigh = 303.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
         private const float plantTempLethalHigh = 398.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
 
-        public float UVKillRate { get; private set; } // for Romen's UV Lamp mod
+        public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod
 
         public BogInsects(bool statsOnly)
             : base(id: BogInsects.ID,
@@ -43,7 +43,7 @@ namespace DiseasesExpanded
                   1.0f,
                   statsOnly)
         {
-            UVKillRate = UVLampSupport.UVKillRate_GetFromRadKillRate(radiationKillRate);
+            UVHalfLife = UVLampSupport.UVHalfLife_GetFromRadKillRate(radiationKillRate);
         }
 
         protected override void PopulateElemGrowthInfo()

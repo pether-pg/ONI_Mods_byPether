@@ -8,7 +8,7 @@ namespace DiseasesExpanded
         // https://steamcommunity.com/sharedfiles/filedetails/?id=2229356245
 
         private const int CalculationsPerSecond = 5;
-        private const int DefaultHalfLifeTime = 3;
+        private const int DefaultHalfLifeTime = 3; // note: 10s is half life time in chlorine for most germs
 
         public static float CalculateRate(float desiredTime, float finalRatio)
         {
@@ -41,6 +41,13 @@ namespace DiseasesExpanded
         public static float CalculateGrowthRate(float desiredDoubleTime)
         {
             return CalculateRate(desiredDoubleTime, 2);
+        }
+
+        public static float UVHalfLife_GetFromRadKillRate(float radiationKillRate)
+        {
+            if (radiationKillRate == 0)
+                return float.PositiveInfinity; // 0 would be handled as extra case as well
+            return DefaultHalfLifeTime / radiationKillRate;
         }
 
         public static float UVKillRate_GetFromRadKillRate(float radiationKillRate)

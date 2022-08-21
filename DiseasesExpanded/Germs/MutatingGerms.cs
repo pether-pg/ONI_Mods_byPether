@@ -34,7 +34,7 @@ namespace DiseasesExpanded
         private const float maxGrowthTemp = 30 + degC;
         private const float growthTempPerLvl = 5;
 
-        public float UVKillRate { get; private set; } // for Romen's UV Lamp mod
+        public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod
 
         public MutatingGerms(bool statsOnly)
             : base(id: MutatingGerms.ID,
@@ -46,7 +46,7 @@ namespace DiseasesExpanded
                   1.0f,
                   statsOnly)
         {
-            UVKillRate = UVLampSupport.UVKillRate_GetFromRadKillRate(radiationKillRate);
+            UVHalfLife = UVLampSupport.UVHalfLife_GetFromRadKillRate(radiationKillRate);
         }
 
         public void UpdateGermData()
@@ -56,7 +56,7 @@ namespace DiseasesExpanded
 
             this.overlayLegendHovertext = MutationData.Instance.GetLegendString();
             this.radiationKillRate = 1.5f + radResPerLvl * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_RadiationResistance);
-            this.UVKillRate = this.radiationKillRate / 2;
+            this.UVHalfLife = this.radiationKillRate / 2;
             this.temperatureRange = new Disease.RangeInfo(
                 minGrowthTemp - growthTempPerLvl * (1 + 2 * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance)),
                 minGrowthTemp - growthTempPerLvl * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance),

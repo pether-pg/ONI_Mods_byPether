@@ -32,7 +32,7 @@ namespace DiseasesExpanded
         private const float resinFreezingK = degC + 20;
         private const float resinTurningK = degC + 125;
 
-        public float UVKillRate { get; private set; } // for Romen's UV Lamp mod
+        public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod
 
 
         public HungerGerms(bool statsOnly)
@@ -45,7 +45,7 @@ namespace DiseasesExpanded
                   1.0f,
                   statsOnly)
         {
-            UVKillRate = UVLampSupport.UVKillRate_GetFromRadKillRate(radiationKillRate);
+            UVHalfLife = UVLampSupport.UVHalfLife_GetFromRadKillRate(radiationKillRate);
         }
 
         protected override void PopulateElemGrowthInfo()
