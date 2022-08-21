@@ -162,24 +162,39 @@ namespace RoomsExpanded
             public static void Postfix(ColorSet __instance)
             {
                 Dictionary<string, Color32> namedLookup = Traverse.Create(__instance).Field("namedLookup").GetValue<Dictionary<string, Color32>>();
-                if (namedLookup.ContainsKey(RoomTypeLaboratoryData.RoomId))
+                if (namedLookup == null)
                     return;
-
-                namedLookup.Add(RoomTypeAgriculturalData.RoomId, Settings.Instance.Agricultural.RoomColor);
-                namedLookup.Add(RoomTypeAquariumData.RoomId, Settings.Instance.Aquarium.RoomColor);
-                namedLookup.Add(RoomTypeBathroomData.RoomId, Settings.Instance.Bathroom.RoomColor);
-                namedLookup.Add(RoomTypeBotanicalData.RoomId, Settings.Instance.Botanical.RoomColor);
-                namedLookup.Add(RoomTypeGraveyardData.RoomId, Settings.Instance.Graveyard.RoomColor);
-                namedLookup.Add(RoomTypeGymData.RoomId, Settings.Instance.Gym.RoomColor);
-                namedLookup.Add(RoomTypeIndustrialData.RoomId, Settings.Instance.Industrial.RoomColor);
-                namedLookup.Add(RoomTypeKitchenData.RoomId, Settings.Instance.Kitchen.RoomColor);
-                namedLookup.Add(RoomTypeLaboratoryData.RoomId, Settings.Instance.Laboratory.RoomColor);
-                namedLookup.Add(RoomTypeMuseumData.RoomId, Settings.Instance.Museum.RoomColor);
-                namedLookup.Add(RoomTypeMuseumHistoryData.RoomId, Settings.Instance.MuseumHistory.RoomColor);
-                namedLookup.Add(RoomTypeMuseumSpaceData.RoomId, Settings.Instance.MuseumSpace.RoomColor);
-                namedLookup.Add(RoomTypeNurseryData.RoomId, Settings.Instance.Nursery.RoomColor);
-                namedLookup.Add(RoomTypeNurseryGeneticData.RoomId, Settings.Instance.NurseryGenetic.RoomColor);
-                namedLookup.Add(RoomTypePrivateRoomData.RoomId, Settings.Instance.PrivateBedroom.RoomColor);
+                
+                if (!namedLookup.ContainsKey(RoomTypeAgriculturalData.RoomId))
+                    namedLookup.Add(RoomTypeAgriculturalData.RoomId, Settings.Instance.Agricultural.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeAquariumData.RoomId))
+                    namedLookup.Add(RoomTypeAquariumData.RoomId, Settings.Instance.Aquarium.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeBathroomData.RoomId))
+                    namedLookup.Add(RoomTypeBathroomData.RoomId, Settings.Instance.Bathroom.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeBotanicalData.RoomId))
+                    namedLookup.Add(RoomTypeBotanicalData.RoomId, Settings.Instance.Botanical.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeGraveyardData.RoomId))
+                    namedLookup.Add(RoomTypeGraveyardData.RoomId, Settings.Instance.Graveyard.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeGymData.RoomId))
+                    namedLookup.Add(RoomTypeGymData.RoomId, Settings.Instance.Gym.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeIndustrialData.RoomId))
+                    namedLookup.Add(RoomTypeIndustrialData.RoomId, Settings.Instance.Industrial.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeKitchenData.RoomId))
+                    namedLookup.Add(RoomTypeKitchenData.RoomId, Settings.Instance.Kitchen.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeLaboratoryData.RoomId))
+                    namedLookup.Add(RoomTypeLaboratoryData.RoomId, Settings.Instance.Laboratory.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeMuseumData.RoomId))
+                    namedLookup.Add(RoomTypeMuseumData.RoomId, Settings.Instance.Museum.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeMuseumHistoryData.RoomId))
+                    namedLookup.Add(RoomTypeMuseumHistoryData.RoomId, Settings.Instance.MuseumHistory.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeMuseumSpaceData.RoomId))
+                    namedLookup.Add(RoomTypeMuseumSpaceData.RoomId, Settings.Instance.MuseumSpace.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeNurseryData.RoomId))
+                    namedLookup.Add(RoomTypeNurseryData.RoomId, Settings.Instance.Nursery.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeNurseryGeneticData.RoomId))
+                    namedLookup.Add(RoomTypeNurseryGeneticData.RoomId, Settings.Instance.NurseryGenetic.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypePrivateRoomData.RoomId))
+                    namedLookup.Add(RoomTypePrivateRoomData.RoomId, Settings.Instance.PrivateBedroom.RoomColor);
 
                 //LogColors(namedLookup);
             }
