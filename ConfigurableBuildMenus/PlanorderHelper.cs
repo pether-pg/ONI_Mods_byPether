@@ -146,6 +146,7 @@ namespace ConfigurableBuildMenus
         public static void LoadIcon(Config.NewBuildMenu newBuildMenu)
         {
             HashedString key = new HashedString(newBuildMenu.Icon);
+            HashedString keyDisabled = new HashedString(newBuildMenu.Icon + "_disabled");
             string path = GetPathForIcon(newBuildMenu.Icon);
             
             if(!File.Exists(path))
@@ -163,8 +164,30 @@ namespace ConfigurableBuildMenus
             Texture2D tex = new Texture2D(2, 2);
             tex.LoadImage(data);
             Sprite sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+            sprite.name = newBuildMenu.Icon;
             Assets.Sprites.Add(key, sprite);
+
+            Sprite grayscale = Sprite.Create(Grayscale(tex), new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+            grayscale.name = newBuildMenu.Icon;
+            Assets.Sprites.Add(keyDisabled, grayscale);
+
             Debug.Log($"{ModInfo.Namespace}: Loaded icon file {path}");
+        }
+
+        private static Texture2D Grayscale(Texture2D source)
+        {
+            Texture2D result = new Texture2D(source.width, source.height);
+            for(int x=0; x<source.width; x++)
+                for(int y =0; y<source.height; y++)
+                {
+                    Color pixel = source.GetPixel(x, y);
+                    float gray = 0.2989f * pixel.r 
+                                + 0.5870f * pixel.g 
+                                + 0.1140f * pixel.b;
+                    result.SetPixel(x, y, new Color(gray, gray, gray, pixel.a));
+                }
+            result.Apply();
+            return result;
         }
     }
 }

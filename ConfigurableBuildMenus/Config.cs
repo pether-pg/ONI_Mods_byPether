@@ -15,13 +15,13 @@ namespace ConfigurableBuildMenus
             get
             {
                 if (_instance == null)
-                    _instance = JsonSerializer<Config>.Deserialize();
+                    _instance = JsonSerializer<Config>.Deserialize(FilePath());
                 if (_instance == null)
                 {
                     _instance = new Config();
                     _instance.MakeDefaultLists();
                     if (JsonSerializer<Config>.Dirty == false)
-                        JsonSerializer<Config>.Serialize(_instance);
+                        JsonSerializer<Config>.Serialize(_instance, FilePath());
                     else
                         Debug.Log($"{ModInfo.Namespace}: Invalid config file - will use default configuration this game, but your file is unchanged");
                 }
@@ -29,6 +29,12 @@ namespace ConfigurableBuildMenus
             }
             set
             { _instance = value; }
+        }
+
+        public static string FilePath()
+        {
+            string filename = JsonSerializer<Config>.GetDefaultFilename();
+            return ConfigPath.Intance.GetPathForFile(filename);
         }
 
         private void MakeDefaultLists()

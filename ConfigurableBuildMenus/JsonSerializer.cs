@@ -36,6 +36,7 @@ namespace ConfigurableBuildMenus
 
             using (StreamWriter writer = new StreamWriter(path))
             {
+                Debug.Log($"{ModInfo.Namespace}: Serialization of file: {path}");
                 string json = JsonConvert.SerializeObject(data, Formatting.Indented);
                 writer.Write(json);
             }
@@ -62,6 +63,7 @@ namespace ConfigurableBuildMenus
 
             try
             {
+                Debug.Log($"{ModInfo.Namespace}: Trying to deserialize file: {path}");
                 using (StreamReader reader = new StreamReader(path))
                 {
                     string json = reader.ReadToEnd();
