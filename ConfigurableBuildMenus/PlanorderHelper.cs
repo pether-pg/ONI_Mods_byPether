@@ -16,7 +16,7 @@ namespace ConfigurableBuildMenus
                 return;
             }
 
-            Debug.Log($"{ModInfo.Namespace}: CreateNewMenu {newMenu.MenuId}");
+            Debug.Log($"{ModInfo.Namespace}: Create new menu: {newMenu.MenuId}");
 
             PlanScreen.PlanInfo newPlanInfo = new PlanScreen.PlanInfo((HashedString)newMenu.MenuId, true, new List<string>());
 
@@ -68,13 +68,37 @@ namespace ConfigurableBuildMenus
 
         public static void Move(Config.MoveBuildingItem movedItem)
         {
-            if (Exists(movedItem.BuildingId))
+            if (Exists(movedItem.BuildingId) && RequiredDLCsActive(movedItem.BuildingId))
             {
                 Remove(movedItem);
                 Add(movedItem);
             }
             else
                 Debug.Log($"{ModInfo.Namespace}: Building {movedItem.BuildingId} not found in build menus, can't move it to {movedItem.MoveToMenu}");
+        }
+
+        public static bool RequiredDLCsActive(string buildingId)
+        {
+            BuildingDef def = Assets.GetBuildingDef(buildingId);
+            if (def == null)
+            {
+                Debug.Log($"{ModInfo.Namespace}: Could not find {buildingId} in Assets.GetBuildingDef");
+                return false;
+            }
+
+            // Note: RequiredDlcIds in fact means AviableInDlc
+            List<string> buildingAviability = new List<string>();
+            foreach (string dlc in def.RequiredDlcIds)
+                buildingAviability.Add(dlc);
+
+            if (buildingAviability.Contains(DlcManager.VANILLA_ID))
+                return true;
+
+            foreach (string actve in DlcManager.GetActiveDLCIds())
+                if (buildingAviability.Contains(actve))
+                    return true;
+
+            return false;
         }
 
         public static void Remove(Config.MoveBuildingItem movedItem)

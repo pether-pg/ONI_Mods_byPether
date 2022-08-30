@@ -13,8 +13,7 @@ namespace ConfigurableBuildMenus
         {
             public static void Postfix()
             {
-                if (!JsonSerializer<ExistingBuildingIDs>.FileExists())
-                    JsonSerializer<ExistingBuildingIDs>.Serialize(new ExistingBuildingIDs());
+                JsonSerializer<ExistingBuildingIDs>.Serialize(new ExistingBuildingIDs());
 
                 Dictionary<HashedString, string> iconNameMap = Traverse.Create(typeof(PlanScreen)).Field("iconNameMap").GetValue<Dictionary<HashedString, string>>();
                 if (iconNameMap == null)
