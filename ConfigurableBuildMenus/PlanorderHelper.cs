@@ -129,65 +129,6 @@ namespace ConfigurableBuildMenus
                 }
         }
 
-        public static string GetIconDirectory()
-        {
-            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string dir = Path.Combine(path, "icons");
-            return dir;
-        }
-
-        public static string GetPathForIcon(string iconName)
-        {
-            string iconFile = string.Format("{0}.png", iconName);
-            string path = Path.Combine(GetIconDirectory(), iconFile);
-            return path;
-        }
-
-        public static void LoadIcon(Config.NewBuildMenu newBuildMenu)
-        {
-            HashedString key = new HashedString(newBuildMenu.Icon);
-            HashedString keyDisabled = new HashedString(newBuildMenu.Icon + "_disabled");
-            string path = GetPathForIcon(newBuildMenu.Icon);
-            
-            if(!File.Exists(path))
-            {
-                Debug.Log($"{ModInfo.Namespace}: Could not find file {path}");
-                return;
-            }
-            if(Assets.Sprites.ContainsKey(key))
-            {
-                Debug.Log($"{ModInfo.Namespace}: Assets.Sprites already contains {newBuildMenu.Icon} icon. Your file will not be loaded.");
-                return;
-            }
-
-            byte[] data = File.ReadAllBytes(path);
-            Texture2D tex = new Texture2D(2, 2);
-            tex.LoadImage(data);
-            Sprite sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-            sprite.name = newBuildMenu.Icon;
-            Assets.Sprites.Add(key, sprite);
-
-            Sprite grayscale = Sprite.Create(Grayscale(tex), new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-            grayscale.name = newBuildMenu.Icon;
-            Assets.Sprites.Add(keyDisabled, grayscale);
-
-            Debug.Log($"{ModInfo.Namespace}: Loaded icon file {path}");
-        }
-
-        private static Texture2D Grayscale(Texture2D source)
-        {
-            Texture2D result = new Texture2D(source.width, source.height);
-            for(int x=0; x<source.width; x++)
-                for(int y =0; y<source.height; y++)
-                {
-                    Color pixel = source.GetPixel(x, y);
-                    float gray = 0.2989f * pixel.r 
-                                + 0.5870f * pixel.g 
-                                + 0.1140f * pixel.b;
-                    result.SetPixel(x, y, new Color(gray, gray, gray, pixel.a));
-                }
-            result.Apply();
-            return result;
-        }
+        
     }
 }
