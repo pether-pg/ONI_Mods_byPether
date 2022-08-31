@@ -24,8 +24,10 @@ namespace ConfigurableBuildMenus
             }
         }
 
+        public string Instruction = "When UseExternalDirectory = false, the mod will load config from mod's directory." +
+            " When UseExternalDirectory = true, the config will be loaded from ExternalDirectoryPath. Use it to preserve your config from being overwritten by Steam updates to the mod.";
         public bool UseExternalDirectory = false;
-        public string ExternalDirectoryPath = "../Preserved_Mods_Files/";
+        public string ExternalDirectoryPath = "../PreservedModsFiles/";
 
         public string GetPathForFile(string filename)
         {
