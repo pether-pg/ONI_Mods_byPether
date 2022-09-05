@@ -5,23 +5,15 @@ using System;
 namespace InterplanarInfrastructure
 {
     public class InterplanarInfrastructure_Patches_Buildings
-	{
-		[HarmonyPatch(typeof(ManualHighEnergyParticleSpawner))]
-		[HarmonyPatch("OnSpawn")]
-		public static class ManualHighEnergyParticleSpawner_OnSpawn_Patch
+	{		
+		[HarmonyPatch(typeof(TemporalTearConfig))]
+		[HarmonyPatch("CreatePrefab")]
+		public static class TemporalTearConfig_CreatePrefab_Patch
 		{
-			public static void Postfix(ManualHighEnergyParticleSpawner __instance)
+			public static void Postfix(GameObject __result)
 			{
-				// only for testing
-
-				if (__instance.gameObject == null)
-					return;
-
-				WorldContainer world = __instance.gameObject.GetMyWorld();
-				if (world == null)
-					return;
-
-				world.cosmicRadiation += 1000;
+				//__result.AddComponent<DysonSphere>();
+				//__result.AddComponent<ClusterDestinationSelector>();
 			}
 		}
 
@@ -33,7 +25,9 @@ namespace InterplanarInfrastructure
 			{
 				ModUtil.AddBuildingToPlanScreen("HEP", RadiationLaserConfig.ID);
 				ModUtil.AddBuildingToPlanScreen("HEP", RadiationLenseSateliteConfig.ID);
-				ModUtil.AddBuildingToPlanScreen("Rocketry", SolarLenseSateliteConfig.ID);
+
+				SelectModuleSideScreen.moduleButtonSortOrder.Add(RadiationSateliteModuleConfig.ID);
+				SelectModuleSideScreen.moduleButtonSortOrder.Add(SolarLenseModuleConfig.ID);
 			}
 		}
 
@@ -45,7 +39,9 @@ namespace InterplanarInfrastructure
 			{
 				__instance.Get("HighPressureForging").unlockedItemIDs.Add(SolarLenseSateliteConfig.ID);
 				__instance.Get("NuclearPropulsion").unlockedItemIDs.Add(RadiationLaserConfig.ID);
+				__instance.Get("NuclearPropulsion").unlockedItemIDs.Add(SolarLenseSateliteConfig.ID);
 				__instance.Get("NuclearPropulsion").unlockedItemIDs.Add(RadiationLenseSateliteConfig.ID);
+				__instance.Get("NuclearPropulsion").unlockedItemIDs.Add(RadiationSateliteModuleConfig.ID);
 			}
 		}
 
@@ -63,6 +59,14 @@ namespace InterplanarInfrastructure
 				Strings.Add($"STRINGS.BUILDINGS.STATUSITEMS.{SolarLenseSateliteConfig.StatusItemID.ToUpperInvariant()}.NAME", "Focusing current illumination: ");
 				Strings.Add($"STRINGS.BUILDINGS.STATUSITEMS.{SolarLenseSateliteConfig.StatusItemID.ToUpperInvariant()}.TOOLTIP", "Focusing current illumination: ");
 
+				Strings.Add($"STRINGS.BUILDINGS.PREFABS.{SolarLenseModuleConfig.ID.ToUpperInvariant()}.NAME", "Solar Lense Satelite Module");
+				Strings.Add($"STRINGS.BUILDINGS.PREFABS.{SolarLenseModuleConfig.ID.ToUpperInvariant()}.DESC", "Allows to deploy Solar Lense Satelite on the orbit");
+				Strings.Add($"STRINGS.BUILDINGS.PREFABS.{SolarLenseModuleConfig.ID.ToUpperInvariant()}.EFFECT", "Allows to deploy Solar Lense Satelite on the orbit");
+
+				Strings.Add($"STRINGS.BUILDINGS.PREFABS.{RadiationSateliteModuleConfig.ID.ToUpperInvariant()}.NAME", "Radiation Lense Satelite Module");
+				Strings.Add($"STRINGS.BUILDINGS.PREFABS.{RadiationSateliteModuleConfig.ID.ToUpperInvariant()}.DESC", "Allows to deploy Radiation Lense Satelite on the orbit");
+				Strings.Add($"STRINGS.BUILDINGS.PREFABS.{RadiationSateliteModuleConfig.ID.ToUpperInvariant()}.EFFECT", "Allows to deploy Radiation Lense Satelite on the orbit");
+				
 				Strings.Add($"STRINGS.BUILDINGS.PREFABS.{RadiationLenseSateliteConfig.ID.ToUpperInvariant()}.NAME", "Radiation Lense Satelite");
 				Strings.Add($"STRINGS.BUILDINGS.PREFABS.{RadiationLenseSateliteConfig.ID.ToUpperInvariant()}.DESC", "Converts Space Radiation to Radbolts");
 				Strings.Add($"STRINGS.BUILDINGS.PREFABS.{RadiationLenseSateliteConfig.ID.ToUpperInvariant()}.EFFECT", "Converts Space Radiation to Radbolts");

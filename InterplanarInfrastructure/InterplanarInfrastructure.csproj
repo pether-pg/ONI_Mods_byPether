@@ -60,12 +60,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DysonSphereConfig.cs" />
+    <Compile Include="LaserBeam.cs" />
+    <Compile Include="DysonSphere.cs" />
     <Compile Include="InterplanarInfrastructure_Patches_Buildings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RadiationLaser.cs" />
     <Compile Include="RadiationLaserConfig.cs" />
     <Compile Include="RadiationLenseSatelite.cs" />
     <Compile Include="RadiationLenseSateliteConfig.cs" />
+    <Compile Include="RadiationSateliteModuleConfig.cs" />
+    <Compile Include="SolarLenseModuleConfig.cs" />
     <Compile Include="SolarLenseSatelite.cs" />
     <Compile Include="SolarLenseSateliteConfig.cs" />
   </ItemGroup>

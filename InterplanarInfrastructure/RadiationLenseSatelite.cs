@@ -139,7 +139,7 @@ namespace InterplanarInfrastructure
             if ((double)this.launcherTimer < (double)this.minLaunchInterval || (double)this.particleStorage.Particles < (double)this.particleThreshold)
                 return;
             this.launcherTimer = 0.0f;
-            int particleOutputCell = this.GetComponent<Building>().GetHighEnergyParticleOutputCell();
+            int particleOutputCell = Grid.PosToCell(this.gameObject);
             GameObject gameObject = GameUtil.KInstantiate(Assets.GetPrefab((Tag)"HighEnergyParticle"), Grid.CellToPosCCC(particleOutputCell, Grid.SceneLayer.FXFront2), Grid.SceneLayer.FXFront2);
             gameObject.SetActive(true);
             if (!((UnityEngine.Object)gameObject != (UnityEngine.Object)null))

@@ -65,6 +65,7 @@ namespace InterplanarInfrastructure
             public const float LASER_TIME = 10; // 10s is a time of EffectPrefabs.Instance.OpenTemporalTearBeam
             public const float EFFICIENCY = 0.2f;
 
+            public LaserBeam laserBeam;
             public float TimeSinceFire = 0;
 
             private List<AxialI> m_cachedPath;
@@ -100,16 +101,19 @@ namespace InterplanarInfrastructure
             public void ClearAllRadiations()
             {
                 TimeSinceFire = 0;
-
+                if (laserBeam != null)
+                    laserBeam.ClearAllRadiations();
+                /*
                 if (ModifiedSpaceRadiations == null)
                     return;
 
                 List<WorldContainer> modifiedWorlds = ModifiedSpaceRadiations.Keys.ToList();
                 foreach (WorldContainer world in modifiedWorlds)
                     ClearRadiationIncrease(world);
+                */
             }
 
-            public void ClearRadiationIncrease(WorldContainer world)
+            /*public void ClearRadiationIncrease(WorldContainer world)
             {
                 if (ModifiedSpaceRadiations == null || !ModifiedSpaceRadiations.ContainsKey(world))
                     return;
@@ -154,7 +158,7 @@ namespace InterplanarInfrastructure
             {
                 foreach (AxialI axial in path)
                     ModifyRadiationAtAxialI(axial, radiation);
-            }
+            }*/
 
             public void FIRE()
             {
@@ -163,9 +167,12 @@ namespace InterplanarInfrastructure
                     return;
 
                 CreateBeamFX();
-                ModifyRadiationOfPath(m_cachedPath, RadiationDelta());
+                laserBeam = new LaserBeam(m_cachedPath, RadiationDelta());
+                laserBeam.ModifyRadiationOfPath();
+                //ModifyRadiationOfPath(m_cachedPath, RadiationDelta());
                 this.master.particleStorage.ConsumeAndGet(EnergyCost());
             }
+
             public int PathLength()
             {
                 if (this.m_cachedPath == null)
@@ -175,6 +182,7 @@ namespace InterplanarInfrastructure
                 int count = this.m_cachedPath.Count;
                 return count;
             }
+
             public bool IsDestinationReachable(bool forceRefresh = false)
             {
                 if (forceRefresh)
