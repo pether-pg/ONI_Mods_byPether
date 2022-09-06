@@ -1,0 +1,222 @@
+{
+  "Instruction": {
+    "NewBuildMenuInstruction": {
+      "MenuId": "required. Id for your new menu, pick any one you like.",
+      "JustAfter": "Id of a menu. Your menu will be placed just after the specified one. Optional.",
+      "OnListBeginning": "if set to true, your menu will be placed on the very beginning, ignoring JustAfter value. Optional.",
+      "Name": "Name of your new menu that will be displayed in your game. Can be anything you like.",
+      "Tooltip": "Tooltip text that will be displayed above your menu. Can be anything you like.",
+      "Icon": "icon name for your menu. You can use existing game icons or name of the file in the \"icons\" directory under mod path (without .png suffix here)"
+    },
+    "MoveBuildingItemInstruction": {
+      "BuildingId": "required. Must match Id of an existing building you want to customize.",
+      "MoveToMenu": "Id of the menu you want to move your building to (by default on the end of the list). Optional - if not provided, the building will be removed",
+      "JustAfter": "Id of a building. Your building will be placed just after the specified one. Optional.",
+      "OnListBeginning": "if set to true, your building will be placed on the very beginning of the menu, ignoring JustAfter value. Optional. In case many buildings have this, all of them will end up on the beginning of the menu and the last building in the config will be first in the menu."
+    }
+  },
+  "NewBuildMenus": [
+    {
+      "MenuId": "DecorMenu",
+      "JustAfter": "Furniture",
+      "OnListBeginning": false,
+      "Name": "Decoration",
+      "Tooltip": "Many pretty things for your base {Hotkey}",
+      "Icon": "icon_errand_art"
+    }
+  ],
+  "MoveBuildingItems": [
+    {
+      "BuildingId": "GasReservoir",
+      "MoveToMenu": "HVAC",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "LiquidReservoir",
+      "MoveToMenu": "Plumbing",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "StorageLocker",
+      "MoveToMenu": "Conveyance",
+      "JustAfter": null,
+      "OnListBeginning": true
+    },
+    {
+      "BuildingId": "StorageLockerSmart",
+      "MoveToMenu": "Conveyance",
+      "JustAfter": "StorageLocker",
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "ObjectDispenser",
+      "MoveToMenu": "Conveyance",
+      "JustAfter": "StorageLockerSmart",
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "WashSink",
+      "MoveToMenu": "Plumbing",
+      "JustAfter": "WallToilet",
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "WashBasin",
+      "MoveToMenu": "Plumbing",
+      "JustAfter": "WallToilet",
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "BunkerDoor",
+      "MoveToMenu": "Rocketry",
+      "JustAfter": "Gantry",
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "ModularLaunchpadPortLiquid",
+      "MoveToMenu": "Rocketry",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "ModularLaunchpadPortLiquidUnloader",
+      "MoveToMenu": "Rocketry",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "ModularLaunchpadPortGas",
+      "MoveToMenu": "Rocketry",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "ModularLaunchpadPortGasUnloader",
+      "MoveToMenu": "Rocketry",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "ModularLaunchpadPortSolid",
+      "MoveToMenu": "Rocketry",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "ModularLaunchpadPortSolidUnloader",
+      "MoveToMenu": "Rocketry",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "FlowerVase",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "FlowerVaseWall",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "FlowerVaseHanging",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "FlowerVaseHangingFancy",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "SmallSculpture",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "Sculpture",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "IceSculpture",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "MarbleSculpture",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "MetalSculpture",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "CrownMoulding",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "CornerMoulding",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "Canvas",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "CanvasWide",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "CanvasTall",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "ItemPedestal",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "MonumentBottom",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "MonumentMiddle",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    },
+    {
+      "BuildingId": "MonumentTop",
+      "MoveToMenu": "DecorMenu",
+      "JustAfter": null,
+      "OnListBeginning": false
+    }
+  ]
+}
