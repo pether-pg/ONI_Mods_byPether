@@ -19,6 +19,20 @@ namespace ResearchRequirements
             return count;
         }
 
+        public static bool HasEffect(GameObject duplicant, string effectName)
+        {
+            if (duplicant == null)
+                return false;
+
+            Klei.AI.Effects AIeffects = duplicant.GetComponent<Klei.AI.Effects>();
+            if (AIeffects == null)
+                return false;
+            if (AIeffects.HasEffect(effectName))
+                return true;
+
+            return false;
+        }
+
 
         public static int DuplicantsWithEffect(string effectName)
         {
@@ -26,12 +40,7 @@ namespace ResearchRequirements
             foreach (MinionIdentity identity in Components.MinionIdentities)
             {
                 GameObject go = identity.gameObject;
-                if (go == null)
-                    continue;
-                Klei.AI.Effects AIeffects = go.GetComponent<Klei.AI.Effects>();
-                if (AIeffects == null)
-                    continue;
-                if (AIeffects.HasEffect(effectName))
+                if (HasEffect(go, effectName))
                     count++;
             }
             return count;
@@ -55,10 +64,13 @@ namespace ResearchRequirements
                 foreach (Klei.AI.SicknessInstance sickness in modifiers.sicknesses.ModifierList)
                 {
                     if (sickness.Sickness.Id == diseaseId)
+                    {
                         count++;
+                        break;
+                    }
                 }
-
             }
+
             return count;
         }
 
@@ -70,6 +82,14 @@ namespace ResearchRequirements
                 MinionModifiers modifiers = identity.GetComponent<MinionModifiers>();
                 if (modifiers == null || modifiers.sicknesses == null)
                     continue;
+
+                if(HasEffect(identity.gameObject, "RadiationExposureMinor") 
+                    || HasEffect(identity.gameObject, "RadiationExposureMajor") 
+                    || HasEffect(identity.gameObject, "RadiationExposureExtreme"))
+                {
+                    count++;
+                    continue;
+                }
 
                 if (modifiers.sicknesses.Count > 0)
                     count++;

@@ -213,6 +213,8 @@ namespace ResearchRequirements
             if(ResearchRequirements_Patches_Geysers.Geyser_OnSpawn_Patch.Geysers != null)
                 foreach(Geyser g in ResearchRequirements_Patches_Geysers.Geyser_OnSpawn_Patch.Geysers)
                 {
+                    if (g == null || g.gameObject == null)
+                        continue;
                     Studyable study = g.gameObject.GetComponent<Studyable>();
                     if (study != null && study.Studied)
                         count++;

@@ -142,7 +142,7 @@ namespace ResearchRequirements
             ReqDict.Add("GenericSensors", new TechReq(STRINGS.REQUIREMENTS.GENERIC_SENSORS, 1, () => ReqFunc_Dupes.DuplicantsWithInterest("Technicals2")));
             ReqDict.Add("LogicCircuits", new TechReq(STRINGS.REQUIREMENTS.LOGIC_CIRCUITS, 1, () => ReqFunc_Dupes.DuplicantsWithSkill("Researching2")));
             ReqDict.Add("ParallelAutomation", new TechReq(STRINGS.REQUIREMENTS.PARALLEL_AUTOMATION, 4, () => Components.ResearchCenters.Count));
-            ReqDict.Add("DupeTrafficControl", new TechReq(STRINGS.REQUIREMENTS.DUPE_TRAFFIC_CONTROL, 1, () => ReqFunc_Dupes.DuplicantsWithSkill("Researching3")));
+            ReqDict.Add("DupeTrafficControl", new TechReq(STRINGS.REQUIREMENTS.DUPE_TRAFFIC_CONTROL, 1, () => ReqFunc_Dupes.DuplicantsWithSkill(DlcManager.IsExpansion1Active() ? "Astronomy" : "Researching3")));
             ReqDict.Add("Multiplexing", new TechReq());
             ReqDict.Add("SkyDetectors", new TechReq(STRINGS.REQUIREMENTS.SKY_DETECTORS, 1, () => ReqFunc_Misc.HomeSweetHome(), max: 1));
             ReqDict.Add("TravelTubes", new TechReq(STRINGS.REQUIREMENTS.TRAVEL_TUBES, 66, () => ReqFunc_Misc.DailyReport_Average(ReportManager.ReportType.TravelTime)));

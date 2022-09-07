@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using UnityEngine;
 using System.Collections.Generic;
 using STRINGS;
 using System.Reflection;
@@ -53,6 +54,8 @@ namespace ResearchRequirements
         [HarmonyPatch("ToggleScreen")]
         public class ManagementMenu_ToggleScreen_Patch
         {
+            public static Dictionary<string, GameObject> SideBarTechItems = new Dictionary<string, GameObject>();
+
             public static void Postfix(ManagementMenu.ScreenData screenData, ManagementMenu __instance)
             {
                 KIconToggleMenu.ToggleInfo researchInfo = Traverse.Create(__instance).Field("researchInfo").GetValue<KIconToggleMenu.ToggleInfo>();
@@ -61,19 +64,44 @@ namespace ResearchRequirements
                 if (screenData.toggleInfo == researchInfo && activeScreen == screenData)
                 {
                     ReqFunc_Storage.CountResourcesInReservoirs();
-                    ResearchScreen researchScreen = Traverse.Create(ManagementMenu.Instance).Field("researchScreen").GetValue<ResearchScreen>();
+                    ResearchScreen researchScreen = Traverse.Create(ManagementMenu.Instance).Field("researchScreen").GetValue<ResearchScreen>(); 
                     if (researchScreen == null)
                         return;
+                    
                     Dictionary<Tech, ResearchEntry> entryMap = Traverse.Create(researchScreen).Field("entryMap").GetValue<Dictionary<Tech, ResearchEntry>>();
+                    if (entryMap == null)
+                        return;
+
                     foreach (Tech tech in entryMap.Keys)
                     {
-                        if(!tech.IsComplete())
-                        {
-                            LocText researchName = Traverse.Create(entryMap[tech]).Field("researchName").GetValue<LocText>();
-                            researchName.GetComponent<ToolTip>().toolTip = CreateTechTooltipText(tech);
-                        }
+                        if (tech.IsComplete())
+                            continue;
+
+                        LocText researchName = Traverse.Create(entryMap[tech]).Field("researchName").GetValue<LocText>();
+                        researchName.GetComponent<ToolTip>().toolTip = CreateTechTooltipText(tech);
+
+                        GameObject go = GetTechFromSideScreen(tech.Id);
+                        ToolTip tooltip = null;
+                        if (go != null)
+                            tooltip = go.GetComponent<ToolTip>();
+                        if (tooltip != null)
+                            tooltip.SetSimpleTooltip(CreateTechTooltipText(tech));
+                        
                     }
                 }
+            }
+
+            public static GameObject GetTechFromSideScreen(string techId)
+            {
+                // GameObjects are spawned in ResearchScreenSideBar.PopualteProjects() loop
+
+                if (SideBarTechItems == null)
+                    SideBarTechItems = new Dictionary<string, GameObject>();
+
+                if (!SideBarTechItems.ContainsKey(techId))
+                    SideBarTechItems.Add(techId, GameObject.Find(Db.Get().Techs.Get(techId).Name));
+
+                return SideBarTechItems[techId];
             }
 
             public static string CreateTechTooltipText(Tech targetTech)
