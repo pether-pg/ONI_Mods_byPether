@@ -6,22 +6,26 @@ using System.Collections.Generic;
 
 namespace RoomsExpanded
 {
-    class RoomsExpanded_Patches_Kitchen
+    class RoomsExpanded_Patches_Kitchenette
     {
         public static void AddRoom(ref RoomTypes __instance)
         {
-            if (Settings.Instance.Kitchen.IncludeRoom)
-                __instance.Add(RoomTypes_AllModded.KitchenRoom);
+            if (!Settings.Instance.Kitchenette.IncludeRoom)
+                return;
+
+            __instance.Add(RoomTypes_AllModded.KitchenetteRoom);
+            RoomConstraintTags.AddStompInConflict(__instance.Kitchen, RoomTypes_AllModded.KitchenetteRoom);
         }
 
         private static void ModifyKitchenResultUnits(ref List<GameObject> __result, ref CookingStation __instance)
         {
-            if (!Settings.Instance.Kitchen.IncludeRoom) return;
+            if (!Settings.Instance.Kitchenette.IncludeRoom) return;
 
-            if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeKitchenData.RoomId))
+            if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeKitchenetteData.RoomId) || 
+                RoomTypes_AllModded.IsInTheRoom(__instance, Db.Get().RoomTypes.Kitchen.Id))
                 foreach (GameObject go in __result)
                 {
-                    go.GetComponent<PrimaryElement>().Units *= (1 + Settings.Instance.Kitchen.Bonus);
+                    go.GetComponent<PrimaryElement>().Units *= (1 + Settings.Instance.Kitchenette.Bonus);
                 }
         }
 
@@ -31,7 +35,7 @@ namespace RoomsExpanded
         {
             public static void Postfix(ref List<GameObject> __result, ref CookingStation __instance)
             {
-                if (!Settings.Instance.Kitchen.IncludeRoom) return;
+                if (!Settings.Instance.Kitchenette.IncludeRoom) return;
                 ModifyKitchenResultUnits(ref __result, ref __instance);
             }
         }
@@ -42,7 +46,7 @@ namespace RoomsExpanded
         {
             public static void Postfix(ref List<GameObject> __result, ref CookingStation __instance)
             {
-                if (!Settings.Instance.Kitchen.IncludeRoom) return;
+                if (!Settings.Instance.Kitchenette.IncludeRoom) return;
                 ModifyKitchenResultUnits(ref __result, ref __instance);
             }
         }
@@ -53,7 +57,7 @@ namespace RoomsExpanded
         {
             public static void Postfix(ref List<GameObject> __result, ref CookingStation __instance)
             {
-                if (!Settings.Instance.Kitchen.IncludeRoom) return;
+                if (!Settings.Instance.Kitchenette.IncludeRoom) return;
                 ModifyKitchenResultUnits(ref __result, ref __instance);
             }
         }
@@ -65,7 +69,7 @@ namespace RoomsExpanded
         {
             public static void Postfix(GameObject go)
             {
-                if (!Settings.Instance.Kitchen.IncludeRoom) return;
+                if (!Settings.Instance.Kitchenette.IncludeRoom) return;
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.KitchenBuildingTag);
             }
         }
@@ -76,7 +80,7 @@ namespace RoomsExpanded
         {
             public static void Postfix(GameObject go)
             {
-                if (!Settings.Instance.Kitchen.IncludeRoom) return;
+                if (!Settings.Instance.Kitchenette.IncludeRoom) return;
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.KitchenBuildingTag);
             }
         }
@@ -87,7 +91,7 @@ namespace RoomsExpanded
         {
             public static void Postfix(GameObject go)
             {
-                if (!Settings.Instance.Kitchen.IncludeRoom) return;
+                if (!Settings.Instance.Kitchenette.IncludeRoom) return;
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.KitchenBuildingTag);
             }
         }
@@ -98,7 +102,7 @@ namespace RoomsExpanded
         {
             public static void Postfix(GameObject go)
             {
-                if (!Settings.Instance.Kitchen.IncludeRoom) return;
+                if (!Settings.Instance.Kitchenette.IncludeRoom) return;
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.RefrigeratorTag);
             }
         }

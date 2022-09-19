@@ -33,11 +33,11 @@ namespace RoomsExpanded
                     public static LocString TOOLTIP = (LocString)"Area, where all critters and plants can happily live together in harmony.";
                 }
 
-                public class KITCHEN
+                public class KITCHENETTE
                 {
-                    public static LocString NAME = (LocString)"Kitchen";
+                    public static LocString NAME = (LocString)"Kitchenette";
                     public static LocString EFFECT = (LocString)" - More food produced: +{0}";
-                    public static LocString TOOLTIP = (LocString)"It appears that nobody dares to steal food from chef's kitchen.";
+                    public static LocString TOOLTIP = (LocString)"It appears that nobody dares to steal food from chef's kitchenette.";
                 }
 
                 public class SHOWERROOM

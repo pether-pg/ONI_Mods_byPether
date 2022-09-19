@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Database;
 using STRINGS;
 using System;
-using System.Linq;
+using FMODUnity;
 
 namespace RoomsExpanded
 {
@@ -64,7 +64,21 @@ namespace RoomsExpanded
 
         [HarmonyPatch(typeof(ColonyAchievement))]
         [HarmonyPatch(MethodType.Constructor)]
-        [HarmonyPatch(new Type[] { typeof(string), typeof(string), typeof(string), typeof(string), typeof(bool), typeof(List<ColonyAchievementRequirement>), typeof(string), typeof(string), typeof(string), typeof(string), typeof(System.Action<KMonoBehaviour>), typeof(string), typeof(string), typeof(string[]) })]
+        [HarmonyPatch(new Type[] { 
+            typeof(string), 
+            typeof(string), 
+            typeof(string), 
+            typeof(string), 
+            typeof(bool), 
+            typeof(List<ColonyAchievementRequirement>), 
+            typeof(string), 
+            typeof(string), 
+            typeof(string), 
+            typeof(string), 
+            typeof(System.Action<KMonoBehaviour>), 
+            typeof(EventReference), 
+            typeof(string), 
+            typeof(string[]) })]
         public static class ColonyAchievement_Constructor_Patch
         {
             public static void Prefix(string platformAchievementId, ref List<ColonyAchievementRequirement> requirementChecklist)

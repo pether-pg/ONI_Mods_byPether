@@ -57,6 +57,9 @@
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\lib\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
+    <Reference Include="FMODUnity">
+      <HintPath>..\lib\FMODUnity.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Build.Framework, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Build.Framework.15.9.20\lib\net46\Microsoft.Build.Framework.dll</HintPath>
     </Reference>
@@ -110,7 +113,7 @@
     <Compile Include="RoomConstraintTags.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Patches\RoomsExpanded_Patches_Kitchen.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_Kitchenette.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Bathroom.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Laboratory.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_Agricultural.cs" />
@@ -139,7 +142,7 @@
     <Compile Include="RoomTypes\RoomTypeBathroomData.cs" />
     <Compile Include="RoomTypes\RoomTypeAgriculturalData.cs" />
     <Compile Include="RoomTypes\RoomTypeGraveyardData.cs" />
-    <Compile Include="RoomTypes\RoomTypeKitchenData.cs" />
+    <Compile Include="RoomTypes\RoomTypeKitchenetteData.cs" />
     <Compile Include="RoomTypes\RoomTypeLaboratoryData.cs" />
     <Compile Include="RoomTypes\RoomTypeIndustrialData.cs" />
     <Compile Include="RoomTypes\RoomTypePrivateRoomData.cs" />

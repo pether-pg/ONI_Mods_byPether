@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using HarmonyLib;
+using STRINGS;
 
 namespace RoomsExpanded
 {
@@ -34,6 +35,13 @@ namespace RoomsExpanded
             "Fervine"           // from Fervine 
         };
 
+        public static RoomConstraints.Constraint RESEARCH_STATION = new RoomConstraints.Constraint(
+                                                                    bc => bc.HasTag(RoomConstraints.ConstraintTags.ResearchStation),
+                                                                        null,
+                                                                        name: ROOMS.CRITERIA.RESEARCH_STATION.NAME,
+                                                                        description: ROOMS.CRITERIA.RESEARCH_STATION.DESCRIPTION
+                                                                    );
+
         public static RoomConstraints.Constraint COOKING_STATION = new RoomConstraints.Constraint(
                                                                     bc => bc.HasTag(RoomConstraintTags.KitchenBuildingTag), 
                                                                     null, 
@@ -48,7 +56,7 @@ namespace RoomsExpanded
 
         public static RoomConstraints.Constraint BATHROOM = new RoomConstraints.Constraint(
                                                                 bc => bc.HasTag(RoomConstraintTags.BathroomTag) 
-                                                                    && !bc.HasTag(RoomConstraints.ConstraintTags.FlushToilet),
+                                                                    && !bc.HasTag(RoomConstraints.ConstraintTags.FlushToiletType),
                                                                 null,
                                                                 name: STRINGS.ROOMS.CRITERIA.SHOWER.NAME,
                                                                 description: STRINGS.ROOMS.CRITERIA.SHOWER.DESCRIPTION);
@@ -126,8 +134,8 @@ namespace RoomsExpanded
                                                                 description: STRINGS.ROOMS.CRITERIA.FISHRELEASE.DESCRIPTION);
 
         public static RoomConstraints.Constraint ANY_BED = new RoomConstraints.Constraint(
-                                                                bc => bc.HasTag(RoomConstraints.ConstraintTags.Bed)
-                                                                    || bc.HasTag(RoomConstraints.ConstraintTags.LuxuryBed),
+                                                                bc => bc.HasTag(RoomConstraints.ConstraintTags.BedType)
+                                                                    || bc.HasTag(RoomConstraints.ConstraintTags.LuxuryBedType),
                                                                 null,
                                                                 name: STRINGS.ROOMS.CRITERIA.ANYBED.NAME,
                                                                 description: STRINGS.ROOMS.CRITERIA.ANYBED.DESCRIPTION);
@@ -204,6 +212,8 @@ namespace RoomsExpanded
                                                                     null,
                                                                     room =>
                                                                     {
+                                                                        string great = Db.Get().ArtableStatuses.Great.Id;
+                                                                        Database.ArtableStages stages = Db.Get().ArtableStages;
                                                                         int count = 0;
                                                                         if (room != null)
                                                                             foreach (KPrefabID building in room.buildings)
@@ -212,7 +222,7 @@ namespace RoomsExpanded
                                                                                     Artable art = building.GetComponent<Artable>();
                                                                                     if (art == null)
                                                                                         continue;
-                                                                                    if (art.CurrentStatus == Artable.Status.Great)
+                                                                                    if (stages.Get((HashedString)art.CurrentStage).Id == great)
                                                                                         count++;
                                                                                 }
                                                                         return count >= requiredMasterpieces;

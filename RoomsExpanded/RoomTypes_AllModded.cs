@@ -19,15 +19,15 @@ namespace RoomsExpanded
             }
         }
 
-        private static RoomType prv_Kitchen = null;
+        private static RoomType prv_Kitchenette = null;
 
-        public static RoomType KitchenRoom
+        public static RoomType KitchenetteRoom
         {
             get
             {
-                if (prv_Kitchen == null)
-                    prv_Kitchen = new RoomTypeKitchenData().GetRoomType();
-                return prv_Kitchen;
+                if (prv_Kitchenette == null)
+                    prv_Kitchenette = new RoomTypeKitchenetteData().GetRoomType();
+                return prv_Kitchenette;
             }
         }
 

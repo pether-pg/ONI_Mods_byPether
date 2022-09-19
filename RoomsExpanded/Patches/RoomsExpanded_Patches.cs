@@ -57,6 +57,7 @@ namespace RoomsExpanded
             public static void Prefix()
             {
                 LightConstraintPrefix();
+                UpdateCrossRoomEffectEffects();
                 RoomsExpanded_Patches_Agricultural.PrepareModifications();
             }
 
@@ -67,7 +68,6 @@ namespace RoomsExpanded
                 Debug.Log("RoomsExpanded: RoomTypes_Constructor_Patch Postfix");
                 RoomsExpanded_Patches_Laboratory.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Bathroom.AddRoom(ref __instance);
-                RoomsExpanded_Patches_Kitchen.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Nursery.AddRoom(ref __instance);
                 RoomsExpanded_Patches_NurseryGenetic.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Gym.AddRoom(ref __instance);
@@ -77,6 +77,7 @@ namespace RoomsExpanded
                 RoomsExpanded_Patches_Graveyard.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Hospital.UpdateRoom(ref __instance);
                 RoomsExpanded_Patches_Industrial.AddRoom(ref __instance);
+                RoomsExpanded_Patches_Kitchenette.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Museum.AddRoom(ref __instance);
                 RoomsExpanded_Patches_MuseumSpace.AddRoom(ref __instance);
                 RoomsExpanded_Patches_MuseumHistory.AddRoom(ref __instance);
@@ -106,6 +107,30 @@ namespace RoomsExpanded
                     description: ((string)ROOMS.CRITERIA.LIGHT.DESCRIPTION)
                     );
             }
+
+            private static void UpdateCrossRoomEffectEffects()
+            {
+                if(Settings.Instance.Kitchenette.IncludeRoom)
+                    ROOMS.TYPES.KITCHEN.EFFECT += string.Format("\n   {0}", RoomTypes_AllModded.KitchenetteRoom.effect);
+
+                // overwritten by later RoomType.GetRoomEffectsString(), see patch below
+                if (Settings.Instance.Bathroom.IncludeRoom)
+                    ROOMS.TYPES.PLUMBEDBATHROOM.EFFECT = string.Format("\n   {0}", RoomTypes_AllModded.BathroomRoom.effect);
+
+                if (Settings.Instance.Bathroom.IncludeRoom)
+                    STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT += string.Format("\n   {0}", RoomTypes_AllModded.BathroomRoom.effect);
+            }
+        }
+
+        [HarmonyPatch(typeof(RoomType))]
+        [HarmonyPatch("GetRoomEffectsString")]
+        public static class RoomType_GetRoomEffectsString_Patch
+        {
+            public static void Postfix(RoomType __instance, ref string __result)
+            {
+                if (__instance.Id == Db.Get().RoomTypes.PlumbedBathroom.Id)
+                    __result += string.Format("\n   {0}", RoomTypes_AllModded.BathroomRoom.effect);
+            }
         }
 
         [HarmonyPatch(typeof(RoomProber), MethodType.Constructor)]
@@ -119,6 +144,7 @@ namespace RoomsExpanded
                 TuningData<RoomProber.Tuning>.Get().maxRoomSize = Settings.Instance.ResizeMaxRoomSize;
             }
         }
+
 
 
         [HarmonyPatch(typeof(OverlayModes.Rooms))]
@@ -137,7 +163,7 @@ namespace RoomsExpanded
                     if (roomType.effects == null && !string.IsNullOrEmpty(roomType.effect))
                     {
                         for (int i = 0; i < __result.Count; i++)
-                            if (__result[i].name.Contains(roomType.Name))
+                            if (__result[i].name == roomType.Name)
                             {
                                 string header = (string)ROOMS.EFFECTS.HEADER;
                                 __result[i].desc += $"\n\n{header}\n    {roomType.effect}";
@@ -179,8 +205,8 @@ namespace RoomsExpanded
                     namedLookup.Add(RoomTypeGymData.RoomId, Settings.Instance.Gym.RoomColor);
                 if (!namedLookup.ContainsKey(RoomTypeIndustrialData.RoomId))
                     namedLookup.Add(RoomTypeIndustrialData.RoomId, Settings.Instance.Industrial.RoomColor);
-                if (!namedLookup.ContainsKey(RoomTypeKitchenData.RoomId))
-                    namedLookup.Add(RoomTypeKitchenData.RoomId, Settings.Instance.Kitchen.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeKitchenetteData.RoomId))
+                    namedLookup.Add(RoomTypeKitchenetteData.RoomId, Settings.Instance.Kitchenette.RoomColor);
                 if (!namedLookup.ContainsKey(RoomTypeLaboratoryData.RoomId))
                     namedLookup.Add(RoomTypeLaboratoryData.RoomId, Settings.Instance.Laboratory.RoomColor);
                 if (!namedLookup.ContainsKey(RoomTypeMuseumData.RoomId))

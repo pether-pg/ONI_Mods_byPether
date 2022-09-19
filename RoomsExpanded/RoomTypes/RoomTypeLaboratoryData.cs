@@ -15,7 +15,7 @@ namespace RoomsExpanded
                 Tooltip = STRINGS.ROOMS.TYPES.LABORATORY.TOOLTIP;
                 Effect = string.Format(STRINGS.ROOMS.TYPES.LABORATORY.EFFECT, MiscUtils.Percent(Settings.Instance.Laboratory.Bonus));
                 Catergory = CreateCategory();
-                ConstraintPrimary = RoomConstraints.RESEARCH_STATION;
+                ConstraintPrimary = RoomModdedConstraints.RESEARCH_STATION;
                 ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                             {
                                             RoomConstraints.LIGHT,

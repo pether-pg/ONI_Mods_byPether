@@ -17,8 +17,8 @@ namespace RoomsExpanded
                 upgrades.Add(__instance.CreaturePen);
                 if (Settings.Instance.Laboratory.IncludeRoom)
                     upgrades.Add(RoomTypes_AllModded.LaboratoryRoom);
-                if (Settings.Instance.Kitchen.IncludeRoom)
-                    upgrades.Add(RoomTypes_AllModded.KitchenRoom);
+                if (Settings.Instance.Kitchenette.IncludeRoom)
+                    upgrades.Add(RoomTypes_AllModded.KitchenetteRoom);
                 if (Settings.Instance.Gym.IncludeRoom)
                     upgrades.Add(RoomTypes_AllModded.GymRoom);
 

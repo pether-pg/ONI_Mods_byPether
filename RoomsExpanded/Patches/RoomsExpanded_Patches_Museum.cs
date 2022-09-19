@@ -33,8 +33,8 @@ namespace RoomsExpanded
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.BathroomRoom, RoomTypes_AllModded.Museum);
             if(Settings.Instance.Gym.IncludeRoom)
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.GymRoom, RoomTypes_AllModded.Museum);
-            if(Settings.Instance.Kitchen.IncludeRoom)
-                RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.KitchenRoom, RoomTypes_AllModded.Museum);
+            if(Settings.Instance.Kitchenette.IncludeRoom)
+                RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.KitchenetteRoom, RoomTypes_AllModded.Museum);
             if(Settings.Instance.Laboratory.IncludeRoom)
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.LaboratoryRoom, RoomTypes_AllModded.Museum);
         }

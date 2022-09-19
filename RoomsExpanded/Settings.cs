@@ -90,7 +90,7 @@ namespace RoomsExpanded
             EnforcedLanguage = "";
 
             Laboratory = new RoomSettings(true, 64, ColorPalette.RoomRecreation, 0.1f);
-            Kitchen = new RoomSettings(true, 64, ColorPalette.RoomAgricultural, 0.1f);
+            Kitchenette = new RoomSettings(true, 64, ColorPalette.RoomFood, 0.1f);
             Bathroom = new RoomSettings(true, 64, ColorPalette.RoomBathroom, 0.2f);
             Industrial = new PlainRoomSettings(false, 96, ColorPalette.RoomIndustrial);
             Graveyard = new RoomSettings(false, 96, ColorPalette.RoomPark, 0.2f);
@@ -126,8 +126,8 @@ namespace RoomsExpanded
         public RoomSettings Laboratory { get; set; }
 
         [JsonProperty]
-        [Option("Kitchen", category: "New Room - Kitchen")]
-        public RoomSettings Kitchen { get; set; }
+        [Option("Kitchenette", category: "New Room - Kitchenette")]
+        public RoomSettings Kitchenette { get; set; }
 
         [JsonProperty]
         [Option("Bathroom", category: "New Room - Shower Room")]

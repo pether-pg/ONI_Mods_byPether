@@ -34,7 +34,7 @@ namespace RoomsExpanded
             SingleAssignee = false;
             PriorityUse = false;
             Effects = null;
-            SortKey = SortingCounter.GetAndIncrement(SortingCounter.FarmSortKey - 1);
+            SortKey = SortingCounter.GetAndIncrement(SortingCounter.FarmSortKey);
         }
     }
 }

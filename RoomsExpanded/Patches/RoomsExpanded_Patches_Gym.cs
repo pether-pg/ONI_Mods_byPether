@@ -20,11 +20,11 @@ namespace RoomsExpanded
                     RoomTypes_AllModded.LaboratoryRoom.primary_constraint.stomp_in_conflict.Add(RoomTypes_AllModded.GymRoom.primary_constraint);
                 }
 
-                if (Settings.Instance.Kitchen.IncludeRoom)
+                if (Settings.Instance.Kitchenette.IncludeRoom)
                 {
-                    if (RoomTypes_AllModded.KitchenRoom.primary_constraint.stomp_in_conflict == null)
-                        RoomTypes_AllModded.KitchenRoom.primary_constraint.stomp_in_conflict = new List<RoomConstraints.Constraint>();
-                    RoomTypes_AllModded.KitchenRoom.primary_constraint.stomp_in_conflict.Add(RoomTypes_AllModded.GymRoom.primary_constraint);
+                    if (RoomTypes_AllModded.KitchenetteRoom.primary_constraint.stomp_in_conflict == null)
+                        RoomTypes_AllModded.KitchenetteRoom.primary_constraint.stomp_in_conflict = new List<RoomConstraints.Constraint>();
+                    RoomTypes_AllModded.KitchenetteRoom.primary_constraint.stomp_in_conflict.Add(RoomTypes_AllModded.GymRoom.primary_constraint);
                 }
 
                 if (__instance.PowerPlant.primary_constraint.stomp_in_conflict == null)

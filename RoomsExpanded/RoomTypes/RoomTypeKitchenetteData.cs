@@ -3,24 +3,24 @@ using STRINGS;
 
 namespace RoomsExpanded
 {
-    public class RoomTypeKitchenData : RoomTypeAbstractData
+    public class RoomTypeKitchenetteData : RoomTypeAbstractData
     {
-        public static readonly string RoomId = "KitchenRoom";
+        public static readonly string RoomId = "KitchenetteRoom";
 
-        public RoomTypeKitchenData()
+        public RoomTypeKitchenetteData()
         {
             Id = RoomId;
-            Name = STRINGS.ROOMS.TYPES.KITCHEN.NAME;
-            Tooltip = STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP;
-            Effect = string.Format(STRINGS.ROOMS.TYPES.KITCHEN.EFFECT, MiscUtils.Percent(Settings.Instance.Kitchen.Bonus));
+            Name = STRINGS.ROOMS.TYPES.KITCHENETTE.NAME;
+            Tooltip = STRINGS.ROOMS.TYPES.KITCHENETTE.TOOLTIP;
+            Effect = string.Format(STRINGS.ROOMS.TYPES.KITCHENETTE.EFFECT, MiscUtils.Percent(Settings.Instance.Kitchenette.Bonus));
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.COOKING_STATION;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
-                                        RoomModdedConstraints.FRIDGE,
+                                        RoomConstraints.REFRIGERATOR,
                                         RoomConstraints.DECORATIVE_ITEM,
                                         RoomConstraints.MINIMUM_SIZE_12,
-                                        RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Kitchen.MaxSize)
+                                        RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Kitchenette.MaxSize)
                                         };
 
             RoomDetails = new RoomDetails.Detail[2]
@@ -34,7 +34,7 @@ namespace RoomsExpanded
             SingleAssignee = false;
             PriorityUse = false;
             Effects = null;
-            SortKey = SortingCounter.GetAndIncrement(SortingCounter.CreaturePenSortKey + 1);
+            SortKey = SortingCounter.GetAndIncrement(SortingCounter.KitchenSortKey - 1);
         }
     }
 }
