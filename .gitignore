@@ -711,3 +711,5 @@ InterplanarInfrastructure/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttri
 InterplanarInfrastructure/obj/Release/InterplanarInfrastructure.csproj.CopyComplete
 InterplanarInfrastructure/obj/Release/InterplanarInfrastructure.csproj.FileListAbsolute.txt
 InterplanarInfrastructure/obj/Release/InterplanarInfrastructure.dll
+DiseasesExpanded/bin/Release/FMODUnity.dll
+InterplanarInfrastructure/bin/Release/FMODUnity.dll

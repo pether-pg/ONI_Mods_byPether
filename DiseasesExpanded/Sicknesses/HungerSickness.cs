@@ -27,12 +27,7 @@ namespace DiseasesExpanded
             {
                 (HashedString) "anim_idle_sick_kanim"
             }, Db.Get().Expressions.Sick));
-            this.AddSicknessComponent((Sickness.SicknessComponent)new PeriodicEmoteSickness((HashedString)"anim_idle_sick_kanim", new HashedString[3]
-            {
-                (HashedString) "idle_pre",
-                (HashedString) "idle_default",
-                (HashedString) "idle_pst"
-            }, 50f));
+            this.AddSicknessComponent((Sickness.SicknessComponent)new PeriodicEmoteSickness(Db.Get().Emotes.Minion.Sick, 50f));
         }
     }
 }

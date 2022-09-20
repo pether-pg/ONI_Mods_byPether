@@ -22,12 +22,7 @@ namespace DiseasesExpanded
             {
                 (HashedString) "anim_idle_sick_kanim"
             }, Db.Get().Expressions.Sick));
-            this.AddSicknessComponent((Sickness.SicknessComponent)new PeriodicEmoteSickness((HashedString)"anim_idle_sick_kanim", new HashedString[3]
-            {
-                (HashedString) "idle_pre",
-                (HashedString) "idle_default",
-                (HashedString) "idle_pst"
-            }, 50f));
+            this.AddSicknessComponent((Sickness.SicknessComponent)new PeriodicEmoteSickness(Db.Get().Emotes.Minion.Sick, 50f));
             this.AddSicknessComponent((Sickness.SicknessComponent)new BogSickness.BogSicknessComponent());
         }
 
@@ -51,30 +46,29 @@ namespace DiseasesExpanded
                 {
                 }
 
-                public Reactable GetReactable() => (Reactable)new SelfEmoteReactable(this.master.gameObject, (HashedString)"BogBugBite", Db.Get().ChoreTypes.Cough, (HashedString)"anim_irritated_eyes_kanim", min_reactor_time: 0.0f).AddStep(new EmoteReactable.EmoteStep()
+                public Reactable GetReactable()
                 {
-                    anim = (HashedString)"irritated_eyes",
-                    finishcb = new System.Action<GameObject>(this.GetBitten)
-                }).AddStep(new EmoteReactable.EmoteStep()
-                {
-                    startcb = new System.Action<GameObject>(this.FinishedBitting)
-                });
+                    Emote cough = Db.Get().Emotes.Minion.IritatedEyes;
+                    SelfEmoteReactable selfEmoteReactable = new SelfEmoteReactable(this.master.gameObject, (HashedString)"IrritatedEyes", Db.Get().ChoreTypes.Cough, localCooldown: 0.0f);
+                    selfEmoteReactable.SetEmote(cough);
+                    selfEmoteReactable.RegisterEmoteStepCallbacks((HashedString)"irritated_eyes", (System.Action<GameObject>)null, new System.Action<GameObject>(this.GetBitten));
+                    return (Reactable)selfEmoteReactable;
+                }
 
                 private void GetBitten(GameObject infected)
                 {
-                    if (MudMaskConfig.HasEffect(infected))
-                        return;
-
-                    float damage = 1f;
-                    if (InsectAllergies.HasAffectingTrait(infected))
-                        damage *= InsectAllergies.BogSicknessDamageModifier;
-                    if (Settings.Instance.RebalanceForDiseasesRestored)
-                        damage *= 4;
-                    infected.GetComponent<Health>()?.Damage(damage);
-                    PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Negative, STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT, infected.transform);
+                    if (!MudMaskConfig.HasEffect(infected))
+                    {
+                        float damage = 1f;
+                        if (InsectAllergies.HasAffectingTrait(infected))
+                            damage *= InsectAllergies.BogSicknessDamageModifier;
+                        if (Settings.Instance.RebalanceForDiseasesRestored)
+                            damage *= 4;
+                        infected.GetComponent<Health>()?.Damage(damage);
+                        PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Negative, STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT, infected.transform);
+                    }
+                    this.sm.coughFinished.Trigger(this);
                 }
-
-                private void FinishedBitting(GameObject cougher) => this.sm.coughFinished.Trigger(this);
             }
 
             public class States : GameStateMachine<BogSickness.BogSicknessComponent.States, BogSickness.BogSicknessComponent.StatesInstance, SicknessInstance>

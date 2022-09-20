@@ -75,12 +75,7 @@ namespace DiseasesExpanded
             {
                 (HashedString) "anim_idle_sick_kanim"
             }, Db.Get().Expressions.Sick));
-            this.AddSicknessComponent((Sickness.SicknessComponent)new PeriodicEmoteSickness((HashedString)"anim_idle_sick_kanim", new HashedString[3]
-            {
-                (HashedString) "idle_pre",
-                (HashedString) "idle_default",
-                (HashedString) "idle_pst"
-            }, 50f));
+            this.AddSicknessComponent((Sickness.SicknessComponent)new PeriodicEmoteSickness(Db.Get().Emotes.Minion.Sick, 10f));
             this.AddSicknessComponent((Sickness.SicknessComponent)new MutatingSickness.MutatingSicknessComponent());
         }
 
@@ -122,14 +117,14 @@ namespace DiseasesExpanded
                 {
                 }
 
-                public Reactable GetReactable() => (Reactable)new SelfEmoteReactable(this.master.gameObject, (HashedString)"CoughingBlood", Db.Get().ChoreTypes.Cough, (HashedString)"anim_slimelungcough_kanim", min_reactor_time: 0.0f).AddStep(new EmoteReactable.EmoteStep()
+                public Reactable GetReactable() 
                 {
-                    anim = (HashedString)"react",
-                    finishcb = new System.Action<GameObject>(this.Coughing)
-                }).AddStep(new EmoteReactable.EmoteStep()
-                {
-                    startcb = new System.Action<GameObject>(this.FinishedCoughing)
-                });
+                    Emote cough = Db.Get().Emotes.Minion.Cough;
+                    SelfEmoteReactable selfEmoteReactable = new SelfEmoteReactable(this.master.gameObject, (HashedString)"SlimeLungCough", Db.Get().ChoreTypes.Cough, localCooldown: 0.0f);
+                    selfEmoteReactable.SetEmote(cough);
+                    selfEmoteReactable.RegisterEmoteStepCallbacks((HashedString)"react", (System.Action<GameObject>)null, new System.Action<GameObject>(this.Coughing));
+                    return (Reactable)selfEmoteReactable;
+                }
 
                 private void Coughing(GameObject infected)
                 {
@@ -154,9 +149,11 @@ namespace DiseasesExpanded
                     }
                     else
                         SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(infected.transform.position), idx, count);
+
+                    this.sm.coughFinished.Trigger(this);
                 }
 
-                private void FinishedCoughing(GameObject cougher) => this.sm.coughFinished.Trigger(this);
+                //private void FinishedCoughing(GameObject cougher) => this.sm.coughFinished.Trigger(this);
             }
 
             public class States : GameStateMachine<MutatingSickness.MutatingSicknessComponent.States, MutatingSickness.MutatingSicknessComponent.StatesInstance, SicknessInstance>
