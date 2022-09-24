@@ -34,7 +34,23 @@ namespace RoomsExpanded
 
         [HarmonyPatch(typeof(RoomType))]
         [HarmonyPatch(MethodType.Constructor)]
-        [HarmonyPatch(new Type[] { typeof(string), typeof(string), typeof(string), typeof(string), typeof(RoomTypeCategory), typeof(RoomConstraints.Constraint), typeof(RoomConstraints.Constraint[]), typeof(RoomDetails.Detail[]), typeof(int), typeof(RoomType[]), typeof(bool), typeof(bool), typeof(string[]), typeof(int) })]
+        [HarmonyPatch(new Type[] { 
+            typeof(string), 
+            typeof(string), 
+            typeof(string), 
+            typeof(string), 
+            typeof(string), 
+            typeof(RoomTypeCategory), 
+            typeof(RoomConstraints.Constraint), 
+            typeof(RoomConstraints.Constraint[]), 
+            typeof(RoomDetails.Detail[]), 
+            typeof(int), 
+            typeof(RoomType[]), 
+            typeof(bool), 
+            typeof(bool), 
+            typeof(string[]),
+            typeof(int) 
+        })]
         public static class RoomType_Constructor_Patch
         {
             public static void Prefix(string id, ref RoomType[] upgrade_paths)

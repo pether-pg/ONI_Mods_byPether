@@ -9,6 +9,7 @@ namespace RoomsExpanded
     {
         public string Id;
         public string Name;
+        public string Description;
         public string Tooltip;
         public string Effect;
         public RoomTypeCategory Catergory;
@@ -34,6 +35,7 @@ namespace RoomsExpanded
         {
             return new RoomType(this.Id,
                                 this.Name,
+                                this.Tooltip, // Description,
                                 this.Tooltip,
                                 this.Effect,
                                 this.Catergory,
