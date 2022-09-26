@@ -106,6 +106,8 @@ namespace RoomsExpanded
             PrivateBedroom = new PlainRoomSettings(true, 32, ColorPalette.RoomSleep);
             NurseryGenetic = new RoomSettings(true, 96, ColorPalette.RoomAgricultural, 0.2f);
 
+            ResizeMinRoomSize12 = 12;
+            ResizeMinRoomSize32 = 32;
             ResizeMaxRoomSize64 = 64;
             ResizeMaxRoomSize96 = 96;
             ResizeMaxRoomSize120 = 120;
@@ -184,6 +186,16 @@ namespace RoomsExpanded
         //[JsonProperty]
         //[Option("History Museum", category: "New Room - History Museum")]
         public RoomSettings MuseumHistory { get; set; }
+
+        [JsonProperty]
+        [Limit(1, 12)]
+        [Option("ResizeMinRoomSize12", "Change min room size from 12 tiles", category: "RoomSize")]
+        public int ResizeMinRoomSize12 { get; set; }
+
+        [JsonProperty]
+        [Limit(1, 32)]
+        [Option("ResizeMinRoomSize32", "Change min room size from 32 tiles", category: "RoomSize")]
+        public int ResizeMinRoomSize32 { get; set; }
 
         [JsonProperty]
         [Limit(12, 256)]

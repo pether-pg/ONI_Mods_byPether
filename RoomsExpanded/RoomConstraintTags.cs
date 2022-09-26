@@ -33,6 +33,18 @@ namespace RoomsExpanded
                 description: string.Format((string)ROOMS.CRITERIA.MAXIMUM_SIZE.DESCRIPTION, (object)maxSize.ToString()));
         }
 
+        public static RoomConstraints.Constraint GetMinSizeConstraint(int minSize)
+        {
+            if (minSize == 12)
+                return RoomConstraints.MINIMUM_SIZE_12;
+            if (minSize == 32)
+                return RoomConstraints.MINIMUM_SIZE_32;
+
+            return new RoomConstraints.Constraint((Func<KPrefabID, bool>)null, (Func<Room, bool>)(room => room.cavity.numCells >= minSize),
+                name: string.Format((string)ROOMS.CRITERIA.MINIMUM_SIZE.NAME, (object)minSize.ToString()),
+                description: string.Format((string)ROOMS.CRITERIA.MINIMUM_SIZE.DESCRIPTION, (object)minSize.ToString()));
+        }
+
         public static void AddStompInConflict(RoomConstraints.Constraint stomping, RoomConstraints.Constraint stomped)
         {
             if (stomping.stomp_in_conflict == null)
@@ -56,7 +68,20 @@ namespace RoomsExpanded
 
                 for (int add = 0; add < __instance[i].additional_constraints.Length; add++)
                 {
-                    if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_64)
+                    if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_96
+                           && __instance[i].Id == __instance.Hospital.Id
+                           && Settings.Instance.HospitalUpdate.IncludeRoom)
+                        __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.HospitalUpdate.MaxSize);
+                    else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_96
+                        && __instance[i].Id == __instance.CreaturePen.Id
+                        && Settings.Instance.Agricultural.IncludeRoom)
+                        __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Agricultural.MaxSize);
+
+                    if (__instance[i].additional_constraints[add] == RoomConstraints.MINIMUM_SIZE_12)
+                        __instance[i].additional_constraints[add] = RoomConstraintTags.GetMinSizeConstraint(Settings.Instance.ResizeMinRoomSize12);
+                    else if (__instance[i].additional_constraints[add] == RoomConstraints.MINIMUM_SIZE_32)
+                        __instance[i].additional_constraints[add] = RoomConstraintTags.GetMinSizeConstraint(Settings.Instance.ResizeMinRoomSize32);
+                    else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_64)
                         __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize64);
                     else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_96)
                         __instance[i].additional_constraints[add] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.ResizeMaxRoomSize96);

@@ -115,6 +115,10 @@ namespace RoomsExpanded
 
                 Db.Get().effects.Add(basicEffect);
                 Db.Get().effects.Add(luxuryEffect);
+
+                Dictionary<string, string> roomSleepingEffects = Traverse.Create(typeof(Bed)).Field("roomSleepingEffects").GetValue<Dictionary<string, string>>();
+                if (roomSleepingEffects != null)
+                    roomSleepingEffects.Add(RoomTypePrivateRoomData.RoomId, "BedroomStamina");
             }
         }
     }
