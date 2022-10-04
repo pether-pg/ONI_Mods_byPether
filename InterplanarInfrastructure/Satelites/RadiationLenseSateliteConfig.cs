@@ -9,6 +9,7 @@ namespace InterplanarInfrastructure
     {
         public const string ID = "RadiationLenseSatelite";
         public const string StatusItemID = "RadiationLenseSateliteStatusItem";
+        public const string PlacableKAnim = "solar_panel_kanim";
         public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
         public GameObject CreatePrefab()
@@ -21,24 +22,24 @@ namespace InterplanarInfrastructure
             EffectorValues decor = tieR0_1;
             EffectorValues noise = tieR0_2;
             GameObject placedEntity = EntityTemplates.CreatePlacedEntity(ID, name, desc, 400f, anim, "grounded", Grid.SceneLayer.Building, 7, 1, decor, noise);
-            placedEntity.AddOrGetDef<CargoLander.Def>().previewTag = "PioneerLander_Preview".ToTag();
+            placedEntity.AddOrGetDef<CargoLander.Def>().previewTag = PlacableKAnim.ToTag();// "PioneerLander_Preview".ToTag();
             CargoDropperMinion.Def def = placedEntity.AddOrGetDef<CargoDropperMinion.Def>();
-            def.kAnimName = "anim_interacts_pioneer_cargo_lander_kanim";
-            def.animName = "enter";
+            def.kAnimName = PlacableKAnim;// "anim_interacts_pioneer_cargo_lander_kanim";
+            def.animName = "place";//"enter";
             placedEntity.AddOrGet<Prioritizable>();
             Prioritizable.AddRef(placedEntity);
             placedEntity.AddOrGet<Operational>();
             placedEntity.AddOrGet<Deconstructable>().audioSize = "large";
             placedEntity.AddOrGet<Storable>();
             Placeable placeable = placedEntity.AddOrGet<Placeable>();
-            placeable.kAnimName = "rocket_pioneer_cargo_lander_kanim";
+            placeable.kAnimName = PlacableKAnim;
             placeable.animName = "place";
             placeable.placementRules = new List<Placeable.PlacementRules>()
             {
               Placeable.PlacementRules.VisibleToSpace,
               Placeable.PlacementRules.RestrictToWorld
             };
-            EntityTemplates.CreateAndRegisterPreview("PioneerLander_Preview", Assets.GetAnim((HashedString)"rocket_pioneer_cargo_lander_kanim"), "place", ObjectLayer.Building, 7, 1);
+            EntityTemplates.CreateAndRegisterPreview(PlacableKAnim, Assets.GetAnim((HashedString)PlacableKAnim), "place", ObjectLayer.Building, 7, 1);
 
 
             placedEntity.AddOrGet<HighEnergyParticleStorage>().capacity = 500f;

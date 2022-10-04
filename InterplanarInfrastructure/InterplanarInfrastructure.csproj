@@ -65,15 +65,17 @@
     <Compile Include="DysonSphere.cs" />
     <Compile Include="InterplanarInfrastructure_Patches_Buildings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RadiationLaser.cs" />
-    <Compile Include="RadiationLaserConfig.cs" />
-    <Compile Include="RadiationLenseSatelite.cs" />
-    <Compile Include="RadiationLenseSateliteConfig.cs" />
-    <Compile Include="RadiationSateliteModuleConfig.cs" />
-    <Compile Include="SolarLenseModuleConfig.cs" />
-    <Compile Include="SolarLenseSatelite.cs" />
-    <Compile Include="SolarLenseSateliteConfig.cs" />
+    <Compile Include="Buildings\RadiationLaser.cs" />
+    <Compile Include="Buildings\RadiationLaserConfig.cs" />
+    <Compile Include="Satelites\RadiationLenseSatelite.cs" />
+    <Compile Include="Satelites\RadiationLenseSateliteConfig.cs" />
+    <Compile Include="Buildings\RadiationSateliteModuleConfig.cs" />
+    <Compile Include="Buildings\SolarLenseModuleConfig.cs" />
+    <Compile Include="Satelites\SolarLenseSatelite.cs" />
+    <Compile Include="Satelites\SolarLenseSateliteConfig.cs" />
+    <Compile Include="WorldBorderChecker.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>IF exist "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" ( echo Mod Dir exists ) ELSE  ( mkdir "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" &amp;&amp; echo Mod Dir created)

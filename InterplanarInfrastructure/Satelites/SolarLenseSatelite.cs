@@ -143,13 +143,13 @@ namespace InterplanarInfrastructure
                 this.off
                     .PlayAnim("off")
                     .Enter(smi => smi.Log("enter off"))
-                    .UpdateTransition(this.on, (smi, dt) => smi.IsIlluminated());
+                    .Transition(this.on, (smi) => smi.IsIlluminated() && WorldBorderChecker.IsInTopOfTheWorld(Grid.PosToCell(smi.gameObject.transform.position)));
                 this.on
                     .ToggleStatusItem(Db.Get().BuildingStatusItems.Get(SolarLenseSateliteConfig.StatusItemID), (smi => smi))
                     .PlayAnim("working_loop", KAnim.PlayMode.Loop)
                     .Enter(smi => smi.Log("enter on"))
                     .Update((smi, dt) => smi.UpdateSatelite(dt))
-                    .UpdateTransition(this.off, (smi, dt) => !smi.IsIlluminated());
+                    .Transition(this.off, (smi) => !smi.IsIlluminated());
             }
         }
     }

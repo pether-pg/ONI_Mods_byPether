@@ -90,6 +90,28 @@ namespace InterplanarInfrastructure
         }
 
 
+		[HarmonyPatch(typeof(Placeable))]
+		[HarmonyPatch("IsValidPlaceLocation")]
+		[HarmonyPatch(new Type[] { typeof(int), typeof(string) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Out })]
+		public static class Placeable_IsValidPlaceLocation_Patch
+		{
+			public static void Postfix(Placeable __instance, int cell, ref string reason, ref bool __result)
+            {
+				if (__instance.kAnimName != SolarLenseSateliteConfig.PlacableKAnim
+					&& __instance.kAnimName != RadiationLenseSateliteConfig.PlacableKAnim)
+					return;
+
+				int tilesToTop = WorldBorderChecker.TilesToTheTop(cell, 1);
+
+				if (tilesToTop != 0)
+				{
+					__result = false;
+					reason = $"Place on the space border (move {tilesToTop} tiles up)";
+				}
+			}
+		}
+
+		/*
 		[HarmonyPatch(typeof(BuildingDef))]
 		[HarmonyPatch("IsValidPlaceLocation")]
 		[HarmonyPatch(new Type[] { typeof(GameObject), typeof(int), typeof(Orientation), typeof(bool), typeof(string) },
@@ -114,6 +136,6 @@ namespace InterplanarInfrastructure
 					fail_reason = $"Build on the space border (move {requiredY - currentY} tiles up)";
 				}
 			}
-		}
+		}*/
 	}
 }

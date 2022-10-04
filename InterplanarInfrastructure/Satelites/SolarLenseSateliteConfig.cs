@@ -8,6 +8,7 @@ namespace InterplanarInfrastructure
     {
         public const string ID = "SolarLenseSatelite";
         public const string StatusItemID = "SolarLenseSateliteStatusItem";
+        public const string PlacableKAnim = "rocket_pioneer_cargo_lander_kanim";
         
         public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
@@ -31,7 +32,7 @@ namespace InterplanarInfrastructure
             placedEntity.AddOrGet<Deconstructable>().audioSize = "large";
             placedEntity.AddOrGet<Storable>();
             Placeable placeable = placedEntity.AddOrGet<Placeable>();
-            placeable.kAnimName = "rocket_pioneer_cargo_lander_kanim";
+            placeable.kAnimName = PlacableKAnim;
             placeable.animName = "place";
             placeable.placementRules = new List<Placeable.PlacementRules>()
             {

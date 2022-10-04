@@ -96,12 +96,6 @@ namespace InterplanarInfrastructure
 
         public string GetProgressBarTooltip() => (string)UI.UISIDESCREENS.RADBOLTTHRESHOLDSIDESCREEN.PROGRESS_BAR_TOOLTIP;
 
-        /*public void DoConsumeParticlesWhileDisabled(float dt)
-        {
-            double num = (double)this.particleStorage.ConsumeAndGet(dt * 1f);
-            this.progressMeterController.SetPositionPercent(this.GetProgressBarFillPercentage());
-        }*/
-
         public void LauncherUpdate(float dt)
         {
             this.radiationSampleTimer += dt;
@@ -118,14 +112,12 @@ namespace InterplanarInfrastructure
 
                 if ((double)num1 != 0.0 && (double)this.particleStorage.RemainingCapacity() > 0.0)
                 {
-                    this.smi.sm.isAbsorbingRadiation.Set(true, this.smi);
                     this.recentPerSecondConsumptionRate = num1 / 600f;
                     double num2 = (double)this.particleStorage.Store((float)((double)this.recentPerSecondConsumptionRate * (double)this.radiationSampleRate));
                 }
                 else
                 {
                     this.recentPerSecondConsumptionRate = 0.0f;
-                    this.smi.sm.isAbsorbingRadiation.Set(false, this.smi);
                 }
             }
             this.progressMeterController.SetPositionPercent(this.GetProgressBarFillPercentage());
@@ -183,44 +175,30 @@ namespace InterplanarInfrastructure
               : base(smi)
             {
             }
+
+            public void Popup(string msg)
+            {
+                PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Negative, msg, this.transform);
+            }
         }
 
         public class States : GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite>
         {
-            public StateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite, object>.BoolParameter isAbsorbingRadiation;
-            public RadiationLenseSatelite.States.ReadyStates ready;
-            //public RadiationLenseSatelite.States.InoperationalStates inoperational;
+            public State idle;
+            public State absorbing;
 
             public override void InitializeStates(out StateMachine.BaseState default_state)
             {
-                default_state = (StateMachine.BaseState)this.ready;
-                //this.inoperational.PlayAnim("off")
-                //    .TagTransition(GameTags.Operational, this.ready)
-                //    .DefaultState(this.inoperational.empty);
-                //this.inoperational.empty
-                //    .EventTransition(GameHashes.OnParticleStorageChanged, this.inoperational.losing, smi => !smi.GetComponent<HighEnergyParticleStorage>().IsEmpty());
-                //this.inoperational.losing
-                //    .Update(((smi, dt) => smi.master.DoConsumeParticlesWhileDisabled(dt)), UpdateRate.SIM_1000ms)
-                //    .EventTransition(GameHashes.OnParticleStorageChanged, this.inoperational.empty, (smi => smi.GetComponent<HighEnergyParticleStorage>().IsEmpty()));
-                this.ready
-                    //.TagTransition(GameTags.Operational, this.inoperational, true)
-                    .DefaultState(this.ready.idle)
-                    .Update(((smi, dt) => smi.master.LauncherUpdate(dt)), UpdateRate.SIM_EVERY_TICK);
-                this.ready.idle
-                    .ParamTransition<bool>(this.isAbsorbingRadiation, this.ready.absorbing, IsTrue)
-                    .PlayAnim("on");
-                this.ready.absorbing
+                default_state = (StateMachine.BaseState)this.idle;
+                this.idle
+                    .PlayAnim("on")
+                    .Transition(this.absorbing, smi => WorldBorderChecker.IsInTopOfTheWorld(Grid.PosToCell(smi.gameObject.transform.position)));
+                this.absorbing
                     .Enter("SetActive(true)", (smi => smi.master.operational.SetActive(true)))
                     .Exit("SetActive(false)", (smi => smi.master.operational.SetActive(false)))
-                    .ParamTransition<bool>(this.isAbsorbingRadiation, this.ready.idle, IsFalse)
                     .ToggleStatusItem(Db.Get().BuildingStatusItems.Get(RadiationLenseSateliteConfig.StatusItemID), (smi => smi))
+                    .Update(((smi, dt) => smi.master.LauncherUpdate(dt)), UpdateRate.SIM_EVERY_TICK)
                     .PlayAnim("working_loop", KAnim.PlayMode.Loop);
-            }
-
-            public class InoperationalStates : GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite, object>.State
-            {
-                public GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite, object>.State empty;
-                public GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite, object>.State losing;
             }
 
             public class ReadyStates : GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite, object>.State
