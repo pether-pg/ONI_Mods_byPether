@@ -323,19 +323,19 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.TOOLTIP"
 msgid "This room contains some noisy, greasy machinery."
 msgstr "Esta sala contém algumas máquinas barulhentas e gordurosas."
 
-#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.EFFECT
-msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.EFFECT"
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.EFFECT"
 msgid " - More food produced"
 msgstr " - Mais comida produzida"
 
-#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.NAME
-msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.NAME"
-msgid "Kitchen"
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.NAME"
+msgid "Kitchenette"
 msgstr "Cozinha"
 
-#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP
-msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP"
-msgid "It appears that nobody dares to steal food from chef's kitchen."
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.TOOLTIP"
+msgid "It appears that nobody dares to steal food from chef's kitchenette."
 msgstr "Parece que ninguém se atreve a roubar comida da cozinha do chef."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.EFFECT

@@ -423,19 +423,19 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.TOOLTIP"
 msgid "This room contains some noisy, greasy machinery."
 msgstr "이 방은 시끄럽고, 기름때가 묻은 기계들이 있습니다."
 
-#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.EFFECT
-msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.EFFECT"
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.EFFECT"
 msgid " - More food produced"
 msgstr " - 식품 생산량 증가"
 
-#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.NAME
-msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.NAME"
-msgid "Kitchen"
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.NAME"
+msgid "Kitchenette"
 msgstr "주방"
 
-#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP
-msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHEN.TOOLTIP"
-msgid "It appears that nobody dares to steal food from chef's kitchen."
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.TOOLTIP"
+msgid "It appears that nobody dares to steal food from chef's kitchenette."
 msgstr "어느 누구도 주방장의 음식을 훔치지 못할 것 같습니다."
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.EFFECT
