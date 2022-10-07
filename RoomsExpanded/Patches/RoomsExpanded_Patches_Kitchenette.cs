@@ -95,16 +95,5 @@ namespace RoomsExpanded
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.KitchenBuildingTag);
             }
         }
-
-        [HarmonyPatch(typeof(RefrigeratorConfig))]
-        [HarmonyPatch("DoPostConfigureComplete")]
-        public static class RefrigeratorConfig_DoPostConfigureComplete_Patch
-        {
-            public static void Postfix(GameObject go)
-            {
-                if (!Settings.Instance.Kitchenette.IncludeRoom) return;
-                go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.RefrigeratorTag);
-            }
-        }
     }
 }

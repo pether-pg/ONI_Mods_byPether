@@ -28,7 +28,7 @@ namespace RoomsExpanded
         protected RoomTypeCategory CreateCategory()
         {
             string categoryId = string.Format("{0}Category", Id);
-            return new RoomTypeCategory(categoryId, "", Id);
+            return new RoomTypeCategory(categoryId, "", Id, "unknown");
         }
 
         public RoomType GetRoomType()

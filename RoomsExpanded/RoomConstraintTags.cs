@@ -8,7 +8,6 @@ namespace RoomsExpanded
     {
         //public static Tag ResearchStationTag = RoomConstraints.ConstraintTags.ResearchStation; // already present in game
         public static Tag KitchenBuildingTag = nameof(KitchenBuildingTag).ToString().ToTag();
-        public static Tag RefrigeratorTag = nameof(RefrigeratorTag).ToString().ToTag();
         public static Tag GravestoneTag = nameof(GravestoneTag).ToString().ToTag();
         public static Tag BathroomTag = nameof(BathroomTag).ToString().ToTag();
         public static Tag WaterCoolerTag = nameof(WaterCoolerTag).ToString().ToTag();

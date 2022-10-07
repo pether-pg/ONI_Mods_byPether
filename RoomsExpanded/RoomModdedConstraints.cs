@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using HarmonyLib;
+using Database;
 using STRINGS;
 
 namespace RoomsExpanded
@@ -213,7 +213,7 @@ namespace RoomsExpanded
                                                                     room =>
                                                                     {
                                                                         string great = Db.Get().ArtableStatuses.Great.Id;
-                                                                        Database.ArtableStages stages = Db.Get().ArtableStages;
+                                                                        ArtableStages stages = Db.GetArtableStages();
                                                                         int count = 0;
                                                                         if (room != null)
                                                                             foreach (KPrefabID building in room.buildings)
@@ -222,7 +222,8 @@ namespace RoomsExpanded
                                                                                     Artable art = building.GetComponent<Artable>();
                                                                                     if (art == null)
                                                                                         continue;
-                                                                                    if (stages.Get((HashedString)art.CurrentStage).Id == great)
+                                                                                    ArtableStage artableStage = stages.TryGet(art.CurrentStage);
+                                                                                    if (artableStage != null && artableStage.statusItem.Id == great)
                                                                                         count++;
                                                                                 }
                                                                         return count >= requiredMasterpieces;
