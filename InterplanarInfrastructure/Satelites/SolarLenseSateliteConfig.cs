@@ -8,8 +8,8 @@ namespace InterplanarInfrastructure
     {
         public const string ID = "SolarLenseSatelite";
         public const string StatusItemID = "SolarLenseSateliteStatusItem";
-        public const string PlacableKAnim = "rocket_pioneer_cargo_lander_kanim";
-        
+        public const string PlacableKAnim = "solar_panel_kanim";
+
         public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
         public GameObject CreatePrefab()
@@ -22,9 +22,9 @@ namespace InterplanarInfrastructure
             EffectorValues decor = tieR0_1;
             EffectorValues noise = tieR0_2;
             GameObject placedEntity = EntityTemplates.CreatePlacedEntity(ID, name, desc, 400f, anim, "grounded", Grid.SceneLayer.Building, 7, 1, decor, noise);
-            placedEntity.AddOrGetDef<CargoLander.Def>().previewTag = "PioneerLander_Preview".ToTag();
+            placedEntity.AddOrGetDef<CargoLander.Def>().previewTag = PlacableKAnim.ToTag();
             CargoDropperMinion.Def def = placedEntity.AddOrGetDef<CargoDropperMinion.Def>();
-            def.kAnimName = "anim_interacts_pioneer_cargo_lander_kanim";
+            def.kAnimName = PlacableKAnim;
             def.animName = "enter";
             placedEntity.AddOrGet<Prioritizable>();
             Prioritizable.AddRef(placedEntity);
@@ -39,7 +39,7 @@ namespace InterplanarInfrastructure
               Placeable.PlacementRules.VisibleToSpace,
               Placeable.PlacementRules.RestrictToWorld
             };
-            EntityTemplates.CreateAndRegisterPreview("PioneerLander_Preview", Assets.GetAnim((HashedString)"rocket_pioneer_cargo_lander_kanim"), "place", ObjectLayer.Building, 7, 1);
+            EntityTemplates.CreateAndRegisterPreview(PlacableKAnim, Assets.GetAnim((HashedString)PlacableKAnim), "place", ObjectLayer.Building, 7, 1);
 
             placedEntity.AddComponent<SolarLenseSatelite>();
 
@@ -58,6 +58,8 @@ namespace InterplanarInfrastructure
 
         public void OnSpawn(GameObject inst)
         {
+            inst.AddOrGet<LogicPorts>().outputPorts = new List<ILogicUIElement>();
+            inst.AddOrGet<LogicBroadcastReceiver>();
         }
 
         /*

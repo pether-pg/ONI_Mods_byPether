@@ -88,54 +88,5 @@ namespace InterplanarInfrastructure
 				Db.Get().BuildingStatusItems.Add(statusItem);
 			}
         }
-
-
-		[HarmonyPatch(typeof(Placeable))]
-		[HarmonyPatch("IsValidPlaceLocation")]
-		[HarmonyPatch(new Type[] { typeof(int), typeof(string) }, new ArgumentType[] { ArgumentType.Normal, ArgumentType.Out })]
-		public static class Placeable_IsValidPlaceLocation_Patch
-		{
-			public static void Postfix(Placeable __instance, int cell, ref string reason, ref bool __result)
-            {
-				if (__instance.kAnimName != SolarLenseSateliteConfig.PlacableKAnim
-					&& __instance.kAnimName != RadiationLenseSateliteConfig.PlacableKAnim)
-					return;
-
-				int tilesToTop = WorldBorderChecker.TilesToTheTop(cell, 1);
-
-				if (tilesToTop != 0)
-				{
-					__result = false;
-					reason = $"Place on the space border (move {tilesToTop} tiles up)";
-				}
-			}
-		}
-
-		/*
-		[HarmonyPatch(typeof(BuildingDef))]
-		[HarmonyPatch("IsValidPlaceLocation")]
-		[HarmonyPatch(new Type[] { typeof(GameObject), typeof(int), typeof(Orientation), typeof(bool), typeof(string) },
-			new ArgumentType[] { ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Normal, ArgumentType.Out })]
-		public static class CanBuildPatch
-		{
-			public static void Postfix(BuildingDef __instance, GameObject source_go, int cell, ref bool __result, ref string fail_reason)
-			{
-				if (__instance.PrefabID != RadiationLenseSateliteConfig.ID && __instance.PrefabID != SolarLenseSateliteConfig.ID)
-					return;
-
-				WorldContainer world = source_go.GetMyWorld();
-				if (world == null)
-					return;
-
-				int currentY = Grid.CellToXY(cell).y;
-				int requiredY = world.WorldOffset.y + world.WorldSize.y - __instance.HeightInCells - 2;
-
-				if (currentY != requiredY)
-				{
-					__result = false;
-					fail_reason = $"Build on the space border (move {requiredY - currentY} tiles up)";
-				}
-			}
-		}*/
 	}
 }

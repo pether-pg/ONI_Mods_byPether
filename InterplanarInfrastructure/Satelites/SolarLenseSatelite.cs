@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using HarmonyLib;
 
 namespace InterplanarInfrastructure
 {
@@ -77,6 +78,28 @@ namespace InterplanarInfrastructure
                 return world.currentSunlightIntensity > 0;
             }
 
+            public bool IsLogicEnabled()
+            {
+                LogicBroadcastReceiver lbr = this.gameObject.GetComponent<LogicBroadcastReceiver>();
+                if (lbr == null)
+                    return true;
+
+                Ref<LogicBroadcaster> channel = Traverse.Create(lbr).Field("channel").GetValue<Ref<LogicBroadcaster>>();
+                if (channel == null)
+                    return true;
+
+                LogicBroadcaster lb = channel.Get();
+                if (lb == null)
+                    return true;
+
+                return lb.GetCurrentValue() > 0;
+            }
+
+            public bool IsInTopOfTheWorld()
+            {
+                return WorldBorderChecker.IsInTopOfTheWorld(Grid.PosToCell(this.gameObject.transform.position));
+            }
+
             public float CalculateHeatEnergy(float dt)
             {
                 float currentLux = world.currentSunlightIntensity;
@@ -111,7 +134,7 @@ namespace InterplanarInfrastructure
                     sound.vol = 0;
             }
 
-            private void DestroyHitEffect()
+            public void DestroyHitEffect()
             {
                 if (this.hitEffectPrefab == null || !(this.hitEffect != null))
                     return;
@@ -143,13 +166,14 @@ namespace InterplanarInfrastructure
                 this.off
                     .PlayAnim("off")
                     .Enter(smi => smi.Log("enter off"))
-                    .Transition(this.on, (smi) => smi.IsIlluminated() && WorldBorderChecker.IsInTopOfTheWorld(Grid.PosToCell(smi.gameObject.transform.position)));
+                    .Transition(this.on, (smi) => smi.IsIlluminated() && smi.IsLogicEnabled() && smi.IsInTopOfTheWorld());
                 this.on
                     .ToggleStatusItem(Db.Get().BuildingStatusItems.Get(SolarLenseSateliteConfig.StatusItemID), (smi => smi))
                     .PlayAnim("working_loop", KAnim.PlayMode.Loop)
                     .Enter(smi => smi.Log("enter on"))
                     .Update((smi, dt) => smi.UpdateSatelite(dt))
-                    .Transition(this.off, (smi) => !smi.IsIlluminated());
+                    .Transition(this.off, (smi) => !(smi.IsIlluminated() && smi.IsLogicEnabled()))
+                    .Exit(smi => smi.DestroyHitEffect());
             }
         }
     }

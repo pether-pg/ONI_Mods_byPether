@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DysonSphereConfig.cs" />
+    <Compile Include="InterplanarInfrastructure_Patches_Deploy.cs" />
     <Compile Include="LaserBeam.cs" />
     <Compile Include="DysonSphere.cs" />
     <Compile Include="InterplanarInfrastructure_Patches_Buildings.cs" />
