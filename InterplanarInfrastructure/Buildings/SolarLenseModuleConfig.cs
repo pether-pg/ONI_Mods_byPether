@@ -1,6 +1,7 @@
 ﻿using TUNING;
 using System.Collections.Generic;
 using UnityEngine;
+using TodoList;
 
 namespace InterplanarInfrastructure
 {
@@ -12,6 +13,8 @@ namespace InterplanarInfrastructure
 
         public override BuildingDef CreateBuildingDef()
         {
+            Todo.Note("Adjust building materials and cost");
+            Todo.Note("Provide final kanim");
             float[] hollowTieR1 = BUILDINGS.ROCKETRY_MASS_KG.HOLLOW_TIER1;
             string[] refinedMetals = MATERIALS.REFINED_METALS;
             EffectorValues tieR2 = NOISE_POLLUTION.NOISY.TIER2;
@@ -50,7 +53,7 @@ namespace InterplanarInfrastructure
             JettisonableCargoModule.Def def2 = go.AddOrGetDef<JettisonableCargoModule.Def>();
             def2.landerPrefabID = SolarLenseSateliteConfig.ID.ToTag();
             def2.landerContainer = (DefComponent<Storage>)storage;
-            def2.clusterMapFXPrefabID = "DeployingPioneerLanderFX";
+            def2.clusterMapFXPrefabID = "";// "DeployingPioneerLanderFX";
             go.AddOrGet<BuildingAttachPoint>().points = new BuildingAttachPoint.HardPoint[1]
             {
                 new BuildingAttachPoint.HardPoint(new CellOffset(0, 3), GameTags.Rocket, (AttachableBuilding) null)

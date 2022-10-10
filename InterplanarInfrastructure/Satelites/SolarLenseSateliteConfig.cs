@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using TUNING;
+using TodoList;
 
 namespace InterplanarInfrastructure
 {
@@ -8,6 +8,8 @@ namespace InterplanarInfrastructure
     {
         public const string ID = "SolarLenseSatelite";
         public const string StatusItemID = "SolarLenseSateliteStatusItem";
+
+        private string note = Todo.Note("Use final kanim here");
         public const string PlacableKAnim = "solar_panel_kanim";
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
@@ -18,6 +20,8 @@ namespace InterplanarInfrastructure
             string desc = (string)"Uses space illumination to heat up tiles bellow.";
             EffectorValues tieR0_1 = TUNING.BUILDINGS.DECOR.BONUS.TIER0;
             EffectorValues tieR0_2 = TUNING.NOISE_POLLUTION.NOISY.TIER0;
+            Todo.Note("Needs new kanim. The kanim should have height 2 more than the building size (so 3 in case of 1) to make it appear above the end of asteroid.");
+            Todo.Note("I imagine the building as Stargazer-like glass dome on metal ring hovering in space. Additionally some solar beam would be nice to indicate how the building works");
             KAnimFile anim = Assets.GetAnim((HashedString)"solar_panel_kanim");
             EffectorValues decor = tieR0_1;
             EffectorValues noise = tieR0_2;
@@ -58,38 +62,10 @@ namespace InterplanarInfrastructure
 
         public void OnSpawn(GameObject inst)
         {
+            // LogicPorts with empty outputPorts list is required not to crash LogicBroadcastReceiver. 
+            // The building does not use ports, instead it is remotely enabled/disabled by signal available in LogicBroadcastReceiver
             inst.AddOrGet<LogicPorts>().outputPorts = new List<ILogicUIElement>();
             inst.AddOrGet<LogicBroadcastReceiver>();
         }
-
-        /*
-        public override BuildingDef CreateBuildingDef()
-        {
-            float[] tieR3 = BUILDINGS.CONSTRUCTION_MASS_KG.TIER3;
-            string[] glasses = MATERIALS.GLASSES;
-            EffectorValues tieR5 = NOISE_POLLUTION.NOISY.TIER5;
-            EffectorValues tieR2 = BUILDINGS.DECOR.PENALTY.TIER2;
-            EffectorValues noise = tieR5;
-            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(ID, 7, 1, "solar_panel_kanim", 100, 120f, tieR3, glasses, 2400f, BuildLocationRule.Anywhere, tieR2, noise);
-            buildingDef.BuildLocationRule = BuildLocationRule.Anywhere;
-            buildingDef.HitPoints = 10;
-            buildingDef.ViewMode = OverlayModes.Light.ID;
-            buildingDef.AudioCategory = "HollowMetal";
-            buildingDef.AudioSize = "large";
-            return buildingDef;
-        }
-
-        public override void ConfigureBuildingTemplate(GameObject go, Tag prefab_tag)
-        {
-            go.GetComponent<KPrefabID>().AddTag(RoomConstraints.ConstraintTags.IndustrialMachinery);
-            go.AddOrGet<LoopingSounds>();
-            Prioritizable.AddRef(go);
-            go.AddOrGet<SolarLenseSatelite>();
-        }
-
-        public override void DoPostConfigureComplete(GameObject go)
-        {
-        }
-        */
     }
 }

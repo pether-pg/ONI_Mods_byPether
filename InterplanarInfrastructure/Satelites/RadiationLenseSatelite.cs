@@ -2,6 +2,7 @@
 using STRINGS;
 using System;
 using UnityEngine;
+using TodoList;
 
 namespace InterplanarInfrastructure
 {
@@ -74,9 +75,16 @@ namespace InterplanarInfrastructure
             this.particleController.gameObject.AddOrGet<LoopingSounds>();
             this.progressMeterController = new MeterController((KAnimControllerBase)this.GetComponent<KBatchedAnimController>(), "meter_target", "meter", Meter.Offset.Infront, Grid.SceneLayer.NoLayer, (string[])Array.Empty<string>());
 
+            TodoList.Todo.Note("Remove tint when final kanim is provided.");
             KBatchedAnimController kbac = this.gameObject.GetComponent<KBatchedAnimController>();
             if (kbac != null)
                 kbac.TintColour = new Color32(0, 255, 0, 255);
+        }
+
+        public void OnDestroy()
+        {
+            smi.ClearSpaceGridSatelite();
+            base.OnDestroy();
         }
 
         public float GetProgressBarMaxValue() => this.particleThreshold;
@@ -98,6 +106,9 @@ namespace InterplanarInfrastructure
 
         public void LauncherUpdate(float dt)
         {
+            Todo.Note("It is a copy from radbolt collector with minimal changes to make it work for space radiation only.");
+            Todo.Note("It is possible it can be simplified, but I wanted to leave most code in place in case you needed it later.");
+
             this.radiationSampleTimer += dt;
             if ((double)this.radiationSampleTimer >= (double)this.radiationSampleRate)
             {
@@ -166,9 +177,26 @@ namespace InterplanarInfrastructure
 
         public class StatesInstance : GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite, object>.GameInstance
         {
+            AxialI DeployLocation = AxialI.ZERO;
+
             public string GetStatusItemProgress()
             {
                 return string.Format("{0}/cycle", this.master.PredictedPerCycleConsumptionRate.ToString());
+            }
+
+            public void SetDeployLocation(AxialI location)
+            {
+                DeployLocation = location;
+            }
+
+            public void ClearSpaceGridSatelite()
+            {
+                for (int i = 0; i < ClusterGrid.Instance.cellContents[DeployLocation].Count; i++)
+                {
+                    ClusterGridEntity clusterGridEntity = ClusterGrid.Instance.cellContents[DeployLocation][i];
+                    if (clusterGridEntity.HasTag(InterplanarInfrastructure_Patches_Deploy.SatelitePrefabId))
+                        GameObject.Destroy(clusterGridEntity);
+                }
             }
 
             public StatesInstance(RadiationLenseSatelite smi)
@@ -176,10 +204,6 @@ namespace InterplanarInfrastructure
             {
             }
 
-            public void Popup(string msg)
-            {
-                PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Negative, msg, this.transform);
-            }
         }
 
         public class States : GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite>
@@ -199,12 +223,6 @@ namespace InterplanarInfrastructure
                     .ToggleStatusItem(Db.Get().BuildingStatusItems.Get(RadiationLenseSateliteConfig.StatusItemID), (smi => smi))
                     .Update(((smi, dt) => smi.master.LauncherUpdate(dt)), UpdateRate.SIM_EVERY_TICK)
                     .PlayAnim("working_loop", KAnim.PlayMode.Loop);
-            }
-
-            public class ReadyStates : GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite, object>.State
-            {
-                public GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite, object>.State idle;
-                public GameStateMachine<RadiationLenseSatelite.States, RadiationLenseSatelite.StatesInstance, RadiationLenseSatelite, object>.State absorbing;
             }
         }
     }

@@ -13,6 +13,9 @@ namespace InterplanarInfrastructure
         private int IlluminationDelta = 0;
 
         private Dictionary<WorldContainer, int> ModifiedSpaceRadiations = null;
+        private Dictionary<WorldContainer, int> ModifiedSpaceIllumination = null;
+        private string note = TodoList.Todo.Note("Illumination was never used since I failed to make Dyson Sphere");
+        private string notf = TodoList.Todo.Note("If Dyson Sphere worked, WorldContainser.sunlight should be modified and later cleared to default");
 
         public LaserBeam(List<AxialI> axials, int radiation = 0, int illumination =0)
         {

@@ -1,6 +1,6 @@
 using HarmonyLib;
 using UnityEngine;
-using System;
+using TodoList;
 
 namespace InterplanarInfrastructure
 {
@@ -12,6 +12,8 @@ namespace InterplanarInfrastructure
 		{
 			public static void Postfix(GameObject __result)
 			{
+				Todo.Note("I couldn't add ClusterDestinationSelector to ClusterGridEntity to make Dyson Sphere work and select destination");
+				Todo.Note("As a result I had to abandon this idea. Feel free to revive it if you can make it work");
 				//__result.AddComponent<DysonSphere>();
 				//__result.AddComponent<ClusterDestinationSelector>();
 			}
@@ -24,7 +26,6 @@ namespace InterplanarInfrastructure
 			public static void Prefix()
 			{
 				ModUtil.AddBuildingToPlanScreen("HEP", RadiationLaserConfig.ID);
-				ModUtil.AddBuildingToPlanScreen("HEP", RadiationLenseSateliteConfig.ID);
 
 				SelectModuleSideScreen.moduleButtonSortOrder.Add(RadiationSateliteModuleConfig.ID);
 				SelectModuleSideScreen.moduleButtonSortOrder.Add(SolarLenseModuleConfig.ID);
@@ -37,6 +38,8 @@ namespace InterplanarInfrastructure
 		{
 			public static void Postfix(Database.Techs __instance)
 			{
+				Todo.Note("Final unlocking techs may be different");
+
 				__instance.Get("HighPressureForging").unlockedItemIDs.Add(SolarLenseSateliteConfig.ID);
 				__instance.Get("NuclearPropulsion").unlockedItemIDs.Add(RadiationLaserConfig.ID);
 				__instance.Get("NuclearPropulsion").unlockedItemIDs.Add(SolarLenseSateliteConfig.ID);
@@ -52,7 +55,9 @@ namespace InterplanarInfrastructure
 		public static class Db_Initialize_Patch
         {
 			public static void Postfix()
-            {
+			{
+				Todo.Note("I assume you have/use existing methods for adding strings.");
+
 				Strings.Add($"STRINGS.BUILDINGS.STATUSITEMS.{RadiationLenseSateliteConfig.StatusItemID.ToUpperInvariant()}.NAME", "Collecting Space Radiation: ");
 				Strings.Add($"STRINGS.BUILDINGS.STATUSITEMS.{RadiationLenseSateliteConfig.StatusItemID.ToUpperInvariant()}.TOOLTIP", "Collecting Space Radiation: ");
 

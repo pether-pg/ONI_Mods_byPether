@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TUNING;
+using TodoList;
 
 namespace InterplanarInfrastructure
 {
@@ -13,6 +14,8 @@ namespace InterplanarInfrastructure
 
         public override BuildingDef CreateBuildingDef()
         {
+            Todo.Note("Adjust building materials and cost");
+            Todo.Note("Provide final kanim");
             float[] tieR4 = TUNING.BUILDINGS.CONSTRUCTION_MASS_KG.TIER4;
             string[] allMetals = MATERIALS.ALL_METALS;
             EffectorValues tieR5 = TUNING.NOISE_POLLUTION.NOISY.TIER5;

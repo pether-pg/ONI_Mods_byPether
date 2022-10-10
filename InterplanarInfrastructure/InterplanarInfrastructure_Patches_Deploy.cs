@@ -1,12 +1,14 @@
 ﻿using HarmonyLib;
 using UnityEngine;
 using System;
+using TodoList;
 
 namespace InterplanarInfrastructure
 {
     class InterplanarInfrastructure_Patches_Deploy
 	{
-		private const string SatelitePrefabId = "ArtifactSpacePOI_GravitasSpaceStation1";
+		private static void Note() => Todo.Note("Use your own prefab for satelites in space.");
+		public const string SatelitePrefabId = "ArtifactSpacePOI_GravitasSpaceStation1";
 
 
 		[HarmonyPatch(typeof(Placeable))]
@@ -20,6 +22,8 @@ namespace InterplanarInfrastructure
 					&& __instance.kAnimName != RadiationLenseSateliteConfig.PlacableKAnim)
 					return;
 
+				Todo.Note("This condition is used to check in SMIs if satelites are deployed. If logic here is removed, SMI logic must be updated");
+				Todo.Note("The same is true for LogicBroadcastReceiver_IsSpaceVisible_Patch");
 				int tilesToTop = WorldBorderChecker.TilesToTheTop(cell, 1);
 
 				if (tilesToTop != 0)
@@ -36,14 +40,17 @@ namespace InterplanarInfrastructure
 		{
 			public static bool Prefix(LogicBroadcastReceiver __instance)
             {
-				SolarLenseSatelite sls = __instance.gameObject.GetComponent<SolarLenseSatelite>();
-				if (sls == null)
+				// IsSpaceVisible() crashes with Null exception when located on space hexmap during rocket flight.
+				// This is to make sure the method is called for solar satelite only after deployment
+
+				SolarLenseSatelite satelite = __instance.gameObject.GetComponent<SolarLenseSatelite>();
+				if (satelite == null)
 					return true;
 
-				if (sls.smi == null)
+				if (satelite.smi == null)
 					return true;
 
-				return sls.smi.IsInTopOfTheWorld();
+				return satelite.smi.IsInTopOfTheWorld();
             }
         }
 
@@ -53,6 +60,11 @@ namespace InterplanarInfrastructure
 		{
 			public static void Postfix(JettisonableCargoModule.StatesInstance __instance, ref bool __result)
 			{
+				Todo.Note("Instead of patching JettisonableCargoModule you can use custom behaviour");
+				if (__instance.def.landerPrefabID != SolarLenseSateliteConfig.ID
+					&& __instance.def.landerPrefabID != RadiationLenseSateliteConfig.ID)
+					return;
+
 				Clustercraft component = __instance.GetComponent<RocketModuleCluster>().CraftInterface.GetComponent<Clustercraft>();
 				if (component != null)
 					__result &= !IsThereSatelite(component.Location);
@@ -71,20 +83,40 @@ namespace InterplanarInfrastructure
 		[HarmonyPatch("FinalDeploy")]
 		public static class JettisonableCargoModule_FinalDeploy_Patch
 		{
-			public static void Postfix(JettisonableCargoModule.StatesInstance __instance)
+			public static void Prefix(JettisonableCargoModule.StatesInstance __instance, out GameObject __state)
 			{
+				__state = null;
+				Storage landerContainer = Traverse.Create(__instance).Field("landerContainer").GetValue<Storage>();
+				if (landerContainer == null)
+					return;
+
+				__state = landerContainer.FindFirst(__instance.def.landerPrefabID);
+			}
+
+			public static void Postfix(JettisonableCargoModule.StatesInstance __instance, GameObject __state)
+			{
+				Todo.Note("Instead of patching JettisonableCargoModule you can use custom behaviour");
+
 				if (__instance.def.landerPrefabID != SolarLenseSateliteConfig.ID
 					&& __instance.def.landerPrefabID != RadiationLenseSateliteConfig.ID)
 					return;
 
 				Clustercraft component = __instance.GetComponent<RocketModuleCluster>().CraftInterface.GetComponent<Clustercraft>();
 				if(component != null)
+				{
 					SpawnSatellite(component.Location);
+
+					if (__state == null)
+						return;
+
+					// connects deployed space satelite to the building. will allow to clear space satelite on building deconstruct
+					__state.GetComponent<SolarLenseSatelite>()?.smi.SetDeployLocation(component.Location);
+					__state.GetComponent<RadiationLenseSatelite>()?.smi.SetDeployLocation(component.Location);
+				}
 			}
 
 			private static void SpawnSatellite(AxialI location)
 			{
-				Debug.Log("Satelite spawned!!!");
 				Vector3 position = new Vector3(-1f, -1f, 0.0f);
 				GameObject sat = Util.KInstantiate(Assets.GetPrefab((Tag)SatelitePrefabId), position);
 				sat.GetComponent<ClusterGridEntity>().Location = location;

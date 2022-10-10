@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using HarmonyLib;
+using TodoList;
 
 namespace InterplanarInfrastructure
 {
@@ -11,6 +12,12 @@ namespace InterplanarInfrastructure
             this.smi.StartSM();
         }
 
+        public void OnDestroy()
+        {
+            smi.ClearSpaceGridSatelite();
+            base.OnDestroy();
+        }
+
         public class StatesInstance : GameStateMachine<SolarLenseSatelite.States, SolarLenseSatelite.StatesInstance, SolarLenseSatelite, object>.GameInstance
         {
             public StatesInstance(SolarLenseSatelite smi)
@@ -19,21 +26,23 @@ namespace InterplanarInfrastructure
                 this.world = this.gameObject.GetMyWorld();
                 this.hitEffectPrefab = Assets.GetPrefab((Tag)"fx_powertinker_splash");
 
+                TodoList.Todo.Note("Remove tint when final kanim is provided.");
                 KBatchedAnimController kbac = this.gameObject.GetComponent<KBatchedAnimController>();
                 if (kbac != null)
                     kbac.TintColour = new Color32(255, 255, 0, 255);
             }
 
             private int lastFocusedCell = Grid.InvalidCell;
+            private string KJ_PER_LUX_note = Todo.Note("Number below is randomly selected. Feel free to rebalance it");
             private const float KJ_PER_LUX = 0.005f;
 
             private GameObject hitEffect;
             private GameObject hitEffectPrefab;
             private WorldContainer world;
 
-
             public float MaxTemperature = Sim.MaxTemperature;
             public Vector2I SolarLanceOffset = new Vector2I(0, 0);
+            public AxialI DeployLocation = AxialI.ZERO;
 
             public void UpdateSatelite(float dt)
             {
@@ -142,6 +151,21 @@ namespace InterplanarInfrastructure
                 this.hitEffect = null;
             }
 
+            public void SetDeployLocation(AxialI location)
+            {
+                DeployLocation = location;
+            }
+
+            public void ClearSpaceGridSatelite()
+            {
+                for(int i=0; i< ClusterGrid.Instance.cellContents[DeployLocation].Count; i++)
+                {
+                    ClusterGridEntity clusterGridEntity = ClusterGrid.Instance.cellContents[DeployLocation][i];
+                    if(clusterGridEntity.HasTag(InterplanarInfrastructure_Patches_Deploy.SatelitePrefabId))
+                        GameObject.Destroy(clusterGridEntity);
+                }
+            }
+
             public string GetStatusItemProgress()
             {
                 if (world == null)
@@ -151,6 +175,7 @@ namespace InterplanarInfrastructure
 
             public void Log(string msg)
             {
+                TodoList.Todo.Note("Remove Log() when logic works fine.");
                 Debug.Log($"InterplanarInfrastructure: SolarLenseSatelite: {msg}");
                 PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, msg, this.gameObject.transform);
             }

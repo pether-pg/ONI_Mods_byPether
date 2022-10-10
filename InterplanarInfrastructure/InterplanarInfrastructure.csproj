@@ -74,6 +74,7 @@
     <Compile Include="Buildings\SolarLenseModuleConfig.cs" />
     <Compile Include="Satelites\SolarLenseSatelite.cs" />
     <Compile Include="Satelites\SolarLenseSateliteConfig.cs" />
+    <Compile Include="TodoList.cs" />
     <Compile Include="WorldBorderChecker.cs" />
   </ItemGroup>
   <ItemGroup />

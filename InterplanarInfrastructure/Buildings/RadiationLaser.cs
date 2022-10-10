@@ -103,62 +103,7 @@ namespace InterplanarInfrastructure
                 TimeSinceFire = 0;
                 if (laserBeam != null)
                     laserBeam.ClearAllRadiations();
-                /*
-                if (ModifiedSpaceRadiations == null)
-                    return;
-
-                List<WorldContainer> modifiedWorlds = ModifiedSpaceRadiations.Keys.ToList();
-                foreach (WorldContainer world in modifiedWorlds)
-                    ClearRadiationIncrease(world);
-                */
             }
-
-            /*public void ClearRadiationIncrease(WorldContainer world)
-            {
-                if (ModifiedSpaceRadiations == null || !ModifiedSpaceRadiations.ContainsKey(world))
-                    return;
-
-                if (world.cosmicRadiation > ModifiedSpaceRadiations[world])
-                    world.cosmicRadiation -= ModifiedSpaceRadiations[world];
-
-                ModifiedSpaceRadiations.Remove(world);
-            }
-
-            private void StoreModificationInfo(WorldContainer world, int radiation)
-            {
-                if (ModifiedSpaceRadiations == null)
-                    ModifiedSpaceRadiations = new Dictionary<WorldContainer, int>();
-                if (!ModifiedSpaceRadiations.ContainsKey(world))
-                    ModifiedSpaceRadiations.Add(world, 0);
-
-                Debug.Log($"InterplanarInfrastructure: StoreModificationInfo; world = {world.id}");
-                ModifiedSpaceRadiations[world] += radiation;
-            }
-
-            public void ModifyRadiationAtWorld(WorldContainer world, int radiation)
-            {
-                if (world != null)
-                {
-                    world.cosmicRadiation += radiation;
-                    StoreModificationInfo(world, radiation);
-                }
-            }
-
-            public void ModifyRadiationAtAxialI(AxialI location, int radiation)
-            {
-                foreach (ClusterGridEntity clusterGridEntity in ClusterGrid.Instance.cellContents[location])
-                {
-                    Debug.Log($"InterplanarInfrastructure: ModifyRadiationAtAxialI; clusterGridEntity = {clusterGridEntity.Name}");
-                    WorldContainer world = clusterGridEntity.GetComponent<WorldContainer>();
-                    ModifyRadiationAtWorld(world, radiation);
-                }
-            }
-
-            public void ModifyRadiationOfPath(List<AxialI> path, int radiation)
-            {
-                foreach (AxialI axial in path)
-                    ModifyRadiationAtAxialI(axial, radiation);
-            }*/
 
             public void FIRE()
             {
@@ -169,7 +114,6 @@ namespace InterplanarInfrastructure
                 CreateBeamFX();
                 laserBeam = new LaserBeam(m_cachedPath, RadiationDelta());
                 laserBeam.ModifyRadiationOfPath();
-                //ModifyRadiationOfPath(m_cachedPath, RadiationDelta());
                 this.master.particleStorage.ConsumeAndGet(EnergyCost());
             }
 
@@ -236,7 +180,6 @@ namespace InterplanarInfrastructure
                     .EventTransition(GameHashes.ClusterDestinationChanged, this.on.power_off, smi => !smi.IsDestinationReachable())
                     .EventTransition(GameHashes.OnParticleStorageChanged, this.on.power_off, (smi => !smi.MayTurnOn()))
                     .ParamTransition<bool>(this.allowedFromLogic, this.on.power_off, ((smi, p) => !p));
-                    //.ToggleMainStatusItem(Db.Get().BuildingStatusItems.Normal);
                 this.on.power_on
                     .Enter(smi => smi.Log("State: on.power_on"))
                     .PlayAnim("power_on")
