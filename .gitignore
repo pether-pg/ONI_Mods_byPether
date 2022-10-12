@@ -727,3 +727,9 @@ ExoticCuisine/obj/Release/ExoticCuisine.csproj.FileListAbsolute.txt
 ExoticCuisine/bin/Release/Assembly-CSharp.dll
 ExoticCuisine/bin/Release/ExoticCuisine.dll
 ExoticCuisine/obj/Release/ExoticCuisine.dll
+ExoticCuisine/bin/Release/0Harmony.dll
+ExoticCuisine/bin/Release/Assembly-CSharp-firstpass.dll
+ExoticCuisine/bin/Release/Unity.TextMeshPro.dll
+*.dll
+ExoticCuisine/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
+ExoticCuisine/obj/Release/ExoticCuisine.csproj.CopyComplete
