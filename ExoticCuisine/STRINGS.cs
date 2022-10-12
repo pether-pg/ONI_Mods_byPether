@@ -26,5 +26,14 @@ namespace ExoticCuisine
                 public static LocString DESC = (LocString)"Dragonplant Seed Desc";
             }
         }
+
+        public class FRUITS
+        {
+            public class DRAGONPLANT
+            {
+                public static LocString NAME = (LocString)"Dragonplant Fruit";
+                public static LocString DESC = (LocString)"Dragonplant Fruit Desc";
+            }
+        }
     }
 }

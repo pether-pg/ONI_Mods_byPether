@@ -8,14 +8,9 @@ namespace ExoticCuisine
         [HarmonyPatch("Initialize")]
         public class Db_Initialize_Patch
         {
-            public static void Prefix()
-            {
-                Debug.Log("I execute before Db.Initialize!");
-            }
-
             public static void Postfix()
             {
-                Debug.Log("I execute after Db.Initialize!");
+                TUNING.CROPS.CROP_TYPES.Add(new Crop.CropVal(DragonPlantFruitConfig.ID, DragonPlantConfig.CROP_DURATION));
             }
         }
     }
