@@ -1,14 +1,16 @@
-using System.Reflection;
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ExoticCuisine")]
+[assembly: AssemblyTitle("Dupes Aromatics")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ExoticCuisine")]
+[assembly: AssemblyProduct("Dupes Aromatics")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -18,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("78d41bb6-38df-428d-b0b4-7112266a1de4")]
+[assembly: Guid("0195eb08-3083-49ff-8f4f-29c071e83555")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -30,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2022.10.12.2114")]
-[assembly: AssemblyFileVersion("2022.10.12.2114")]
+[assembly: AssemblyVersion("2022.10.13.1836")]
+[assembly: AssemblyFileVersion("2022.10.13.1836")]

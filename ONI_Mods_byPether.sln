@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadiationRebalanced", "Radi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterplanarInfrastructure", "InterplanarInfrastructure\InterplanarInfrastructure.csproj", "{DD613AFE-9F4F-4DFB-8F73-5F7DBCD6BFC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dupes Aromatics", "Dupes Aromatics\Dupes Aromatics.csproj", "{0195EB08-3083-49FF-8F4F-29C071E83555}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{DD613AFE-9F4F-4DFB-8F73-5F7DBCD6BFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD613AFE-9F4F-4DFB-8F73-5F7DBCD6BFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD613AFE-9F4F-4DFB-8F73-5F7DBCD6BFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0195EB08-3083-49FF-8F4F-29C071E83555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0195EB08-3083-49FF-8F4F-29C071E83555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0195EB08-3083-49FF-8F4F-29C071E83555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0195EB08-3083-49FF-8F4F-29C071E83555}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

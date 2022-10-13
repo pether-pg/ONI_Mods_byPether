@@ -11,7 +11,7 @@ namespace ExoticCuisine
         public const string PLANT_KANIM = "drakesMouth_kanim";
         public const string SEED_KANIM = "drakesMouthSeed_kanim";
         public const string FRUIT_KANIM = "drakesMouthFruit_kanim";
-        public const float CROP_DURATION = 4500f;
+        public const float CROP_DURATION = 45f;
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
