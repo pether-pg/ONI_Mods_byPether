@@ -4,6 +4,7 @@ using UnityEngine;
 using STRINGS;
 using System.Collections.Generic;
 using Klei.AI;
+using Dupes_Aromatics.Germs;
 
 namespace Dupes_Aromatics.Plants
 {
@@ -173,8 +174,11 @@ namespace Dupes_Aromatics.Plants
 
             //===> DISEASE OR GERMS THIS CROP RELEASES <===========================================================================
             DiseaseDropper.Def def = gameObject.AddOrGetDef<DiseaseDropper.Def>();
-            def.diseaseIdx = Db.Get().Diseases.GetIndex(Db.Get().Diseases.PollenGerms.id);
+            def.diseaseIdx = Db.Get().Diseases.GetIndex(RoseScent.ID);
+            def.emitFrequency = 1f;
+            def.averageEmitPerSecond = 1000;
             def.singleEmitQuantity = 1000000;
+            gameObject.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = RoseScent.ID;
 
             //===> LIGHT REQUIREMENT <=============================================================================================
             Modifiers component = gameObject.GetComponent<Modifiers>();

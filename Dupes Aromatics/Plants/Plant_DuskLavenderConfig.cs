@@ -156,9 +156,12 @@ namespace Dupes_Aromatics.Plants
 
             //===> DISEASE OR GERMS THIS CROP RELEASES <===========================================================================
             DiseaseDropper.Def def = gameObject.AddOrGetDef<DiseaseDropper.Def>();
-            def.diseaseIdx = Db.Get().Diseases.GetIndex(Db.Get().Diseases.PollenGerms.id);
+            def.diseaseIdx = Db.Get().Diseases.GetIndex(Germs.LavenderScent.ID);
+            def.emitFrequency = 1f;
+            def.averageEmitPerSecond = 1000;
             def.singleEmitQuantity = 1000000;
-           
+            gameObject.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = Germs.LavenderScent.ID;
+
             return gameObject;
         }
 

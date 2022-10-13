@@ -80,6 +80,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Germs\LavenderScent.cs" />
+    <Compile Include="Germs\MallowScent.cs" />
+    <Compile Include="Germs\RoseScent.cs" />
+    <Compile Include="Misc\GermGrowthRules.cs" />
+    <Compile Include="Patches\DupesAromatics_Patches_AllCommon.cs" />
     <Compile Include="Plants\AromaticsPlants_Patches.cs" />
     <Compile Include="Plants\AromaticsPlants_Tuning.cs" />
     <Compile Include="Plants\Crop_CottonBollConfig.cs" />
@@ -93,7 +98,10 @@
     <Compile Include="Plants\Plant_SuperDuskLavenderConfig.cs" />
     <Compile Include="Plants\Plant_SuperSpinosaConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterStrings.cs" />
+    <Compile Include="STRINGS.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>IF exist "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" ( echo Mod Dir exists ) ELSE  ( mkdir "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" &amp;&amp; echo Mod Dir created)
