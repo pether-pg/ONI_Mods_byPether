@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AromaticsFabricator.cs" />
     <Compile Include="Germs\LavenderScent.cs" />
     <Compile Include="Germs\MallowScent.cs" />
     <Compile Include="Germs\RoseScent.cs" />
