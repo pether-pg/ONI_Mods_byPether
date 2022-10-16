@@ -15,6 +15,8 @@ namespace DiseasesExpanded
         public HungerSickness()
             : base(nameof(HungerSickness), Sickness.SicknessType.Pathogen, Sickness.Severity.Minor, 0.00025f, new List<Sickness.InfectionVector>()
             {
+                Sickness.InfectionVector.Contact,
+                Sickness.InfectionVector.Exposure,
                 Sickness.InfectionVector.Inhalation
             }, 2220f, RECOVERY_ID)
         {

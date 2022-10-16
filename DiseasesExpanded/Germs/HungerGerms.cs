@@ -38,7 +38,7 @@ namespace DiseasesExpanded
         public HungerGerms(bool statsOnly)
             : base(id: HungerGerms.ID, 
                   strength: (byte)50, 
-                  temperature_range: new Disease.RangeInfo(0, resinFreezingK - 25, resinTurningK - 25, resinTurningK), 
+                  temperature_range: new Disease.RangeInfo(-100 + degC, resinFreezingK - 25, resinTurningK - 25, resinTurningK), 
                   temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f), 
                   pressure_range: new Disease.RangeInfo(0.0f, 0.0f, 1000f, 1000f), 
                   pressure_half_lives: Disease.RangeInfo.Idempotent(),
@@ -64,6 +64,7 @@ namespace DiseasesExpanded
             this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, -60f, 1200f, 100000f, 0.005f, 5100));
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Oxygen));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Hydrogen));
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.CarbonDioxide));
             this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.ContaminatedOxygen));
 

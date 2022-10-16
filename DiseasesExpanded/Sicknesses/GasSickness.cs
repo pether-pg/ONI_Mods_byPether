@@ -14,7 +14,10 @@ namespace DiseasesExpanded
         public GasSickness()
             : base(nameof(GasSickness), Sickness.SicknessType.Pathogen, Sickness.Severity.Minor, 0.00025f, new List<Sickness.InfectionVector>()
             {
-                Sickness.InfectionVector.Inhalation
+                Sickness.InfectionVector.Inhalation,
+                Sickness.InfectionVector.Exposure,
+                Sickness.InfectionVector.Contact,
+                Sickness.InfectionVector.Digestion,
             }, 2220f, RECOVERY_ID)
         {
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
