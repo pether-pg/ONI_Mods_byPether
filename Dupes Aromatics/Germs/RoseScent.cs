@@ -72,43 +72,26 @@ namespace Dupes_Aromatics.Germs
         protected override void PopulateElemGrowthInfo()
         {
             this.InitializeElemGrowthArray(ref this.elemGrowthInfo, Disease.DEFAULT_GROWTH_INFO);
-            this.AddGrowthRule(GermGrowthRules.GrowthRule_Default());
+            this.AddGrowthRule(GermGrowthRules.DefaultLike_PollengGerms());
 
             // Solid
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_diffScale_minDiffCount(Element.State.Solid, 0.4f, 3000f, 1200f, 1E-06f, 1000000));
-
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.DieInElement(SimHashes.BleachStone));
+            this.AddGrowthRule(GermGrowthRules.StateLike_PollengGerms_Solid(Element.State.Solid));
 
             // Gas
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, 12000f, 1200f, 10000f, 0.005f, 5100));
-
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Oxygen));
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.CarbonDioxide));
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.ContaminatedOxygen));
-
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.DieInElement(SimHashes.ChlorineGas));
+            this.AddGrowthRule(GermGrowthRules.StateLike_PollengGerms_Gas(Element.State.Gas));
+            this.AddGrowthRule(GermGrowthRules.GrowthLike_PollenGerms_Oxygen(SimHashes.Oxygen));
 
             // Liquid
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_DiffScale(Element.State.Liquid, 0.4f, 1200f, 300f, 100f, 0.01f));
-
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.DieInElement(SimHashes.Chlorine));
+            this.AddGrowthRule(GermGrowthRules.StateLike_PollengGerms_Liquid(Element.State.Liquid));
 
             // Exposure
 
             this.InitializeElemExposureArray(ref this.elemExposureInfo, Disease.DEFAULT_EXPOSURE_INFO);
-            this.AddExposureRule(new ExposureRule()
-            {
-                populationHalfLife = new float?(float.PositiveInfinity)
-            });
-            ElementExposureRule elementExposureRule1 = new ElementExposureRule(SimHashes.Chlorine);
-            elementExposureRule1.populationHalfLife = new float?(10f);
-            this.AddExposureRule((ExposureRule)elementExposureRule1);
-            ElementExposureRule elementExposureRule2 = new ElementExposureRule(SimHashes.ChlorineGas);
-            elementExposureRule2.populationHalfLife = new float?(10f);
-            this.AddExposureRule((ExposureRule)elementExposureRule2);
+            this.AddExposureRule(GermGrowthRules.ExposureLike_PollenGerms_Default());
+            this.AddExposureRule(GermGrowthRules.ExposureLike_PollenGerms_Oxygen(SimHashes.Oxygen));
         }
     }
 }

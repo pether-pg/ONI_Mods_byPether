@@ -212,5 +212,82 @@ namespace Dupes_Aromatics.Misc
             stateGrowthRule.diffusionScale = new float?(0.005f);
             return stateGrowthRule;
         }
+
+        public static GrowthRule DefaultLike_PollengGerms()
+        {
+            return new GrowthRule()
+            {
+                underPopulationDeathRate = new float?(0.6666667f),
+                minCountPerKG = new float?(0.4f),
+                populationHalfLife = new float?(3000f),
+                maxCountPerKG = new float?(500f),
+                overPopulationHalfLife = new float?(10f),
+                minDiffusionCount = new int?(3000),
+                diffusionScale = new float?(1f / 1000f),
+                minDiffusionInfestationTickCount = new byte?((byte)1)
+            };
+        }
+
+        public static StateGrowthRule StateLike_PollengGerms_Solid(Element.State state)
+        {
+            StateGrowthRule stateGrowthRule = new StateGrowthRule(state);
+            stateGrowthRule.minCountPerKG = new float?(0.4f);
+            stateGrowthRule.populationHalfLife = new float?(10f);
+            stateGrowthRule.overPopulationHalfLife = new float?(10f);
+            stateGrowthRule.diffusionScale = new float?(1E-06f);
+            stateGrowthRule.minDiffusionCount = new int?(1000000);
+
+            return stateGrowthRule;
+        }
+
+        public static StateGrowthRule StateLike_PollengGerms_Gas(Element.State state)
+        {
+            StateGrowthRule stateGrowthRule = new StateGrowthRule(state);
+            stateGrowthRule.minCountPerKG = new float?(500f);
+            stateGrowthRule.underPopulationDeathRate = new float?(2.666667f);
+            stateGrowthRule.populationHalfLife = new float?(10f);
+            stateGrowthRule.overPopulationHalfLife = new float?(10f);
+            stateGrowthRule.maxCountPerKG = new float?(1000000f);
+            stateGrowthRule.minDiffusionCount = new int?(1000);
+            stateGrowthRule.diffusionScale = new float?(0.015f);
+
+            return stateGrowthRule;
+        }
+
+        public static StateGrowthRule StateLike_PollengGerms_Liquid(Element.State state)
+        {
+            StateGrowthRule stateGrowthRule = new StateGrowthRule(state);
+            stateGrowthRule.minCountPerKG = new float?(0.4f);
+            stateGrowthRule.populationHalfLife = new float?(10f);
+            stateGrowthRule.overPopulationHalfLife = new float?(10f);
+            stateGrowthRule.maxCountPerKG = new float?(100f);
+            stateGrowthRule.diffusionScale = new float?(0.01f);
+
+            return stateGrowthRule;
+        }
+
+        public static ElementGrowthRule GrowthLike_PollenGerms_Oxygen(SimHashes element)
+        {
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.populationHalfLife = new float?(200f);
+            elementGrowthRule.overPopulationHalfLife = new float?(10f);
+
+            return elementGrowthRule;
+        }
+
+        public static ExposureRule ExposureLike_PollenGerms_Default()
+        {
+            return new ExposureRule()
+            {
+                populationHalfLife = new float?(1200f)
+            };
+        }
+
+        public static ElementExposureRule ExposureLike_PollenGerms_Oxygen(SimHashes element)
+        {
+            ElementExposureRule elementExposureRule = new ElementExposureRule(element);
+            elementExposureRule.populationHalfLife = new float?(float.PositiveInfinity);
+            return elementExposureRule;
+        }
     }
 }
