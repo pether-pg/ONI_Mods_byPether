@@ -4,6 +4,30 @@ namespace Dupes_Aromatics
 {
     class RegisterStrings
     {
+        public static void MakePlantSpeciesStrings(string id, string name, string desc)
+        {
+            Strings.Add($"STRINGS.CREATURES.SPECIES.{id.ToUpperInvariant()}.NAME", name);
+            Strings.Add($"STRINGS.CREATURES.SPECIES.{id.ToUpperInvariant()}.DESC", desc);
+        }
+
+        public static void MakePlantProductStrings(string id, string name, string desc)
+        {
+            Strings.Add($"STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.{id.ToUpperInvariant()}.NAME", name);
+            Strings.Add($"STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.{id.ToUpperInvariant()}.DESC", desc);
+        }
+
+        public static void MakeFoodStrings(string id, string name, string desc)
+        {
+            Strings.Add($"STRINGS.ITEMS.FOOD.{id.ToUpperInvariant()}.NAME", name);
+            Strings.Add($"STRINGS.ITEMS.FOOD.{id.ToUpperInvariant()}.DESC", desc);
+        }
+
+        public static void MakeSeedStrings(string id, string name, string desc)
+        {
+            Strings.Add($"STRINGS.CREATURES.SPECIES.SEEDS.{id.ToUpperInvariant()}.NAME", name);
+            Strings.Add($"STRINGS.CREATURES.SPECIES.SEEDS.{id.ToUpperInvariant()}.DESC", desc);
+        }
+
         public static void MakeGermStrings(string id, string name, string hovertext, string desc)
         {
             Strings.Add($"STRINGS.DUPLICANTS.DISEASES.{id.ToUpperInvariant()}.NAME", UI.FormatAsLink(name, id));

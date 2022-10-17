@@ -87,7 +87,7 @@
     <Compile Include="Misc\GermGrowthRules.cs" />
     <Compile Include="Patches\DupesAromatics_Patches_AllCommon.cs" />
     <Compile Include="Patches\DupesAromatics_Patches_Fabricator.cs" />
-    <Compile Include="Plants\AromaticsPlants_Patches.cs" />
+    <Compile Include="Patches\AromaticsPlants_Patches.cs" />
     <Compile Include="Plants\AromaticsPlants_Tuning.cs" />
     <Compile Include="Plants\Crop_CottonBollConfig.cs" />
     <Compile Include="Plants\Crop_DuskberryConfig.cs" />

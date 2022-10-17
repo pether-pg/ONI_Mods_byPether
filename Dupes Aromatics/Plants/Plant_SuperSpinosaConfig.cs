@@ -16,9 +16,6 @@ namespace Dupes_Aromatics.Plants
 
         //===> BASE INFORMATION <=========================================
         public const string Id = "SuperSpinosaPlant";
-        public const string Name = "Fruiting Spinosa";
-        public static string Description = string.Concat(new string[] { "A rather thorny sten plant that produces an edible " + UI.FormatAsLink("Spinosa Hips", "SpinosaHips") + "." });
-        public static string DomesticatedDescription = string.Concat(new string[] { "/n/n This domesticated plant requires copious amounts of" + UI.FormatAsLink("Water", "WATER") + ", and" + UI.FormatAsLink("Dirt", "DIRT") + "as fertilizer. Also requires direct exposure to sunlight." });
 
         //= string.Concat(new string[] { });
 
@@ -45,27 +42,20 @@ namespace Dupes_Aromatics.Plants
         //public static AromaticsPlantsTuning.CropsTuning tuning;
         public ComplexRecipe Recipe;
 
-        static Plant_SuperSpinosaConfig()
-        {
-            string[] textArray1 = new string[] { Description, "/n/n This domesticated plant requires copious amounts of" + UI.FormatAsLink("Water", "WATER") + ", and" + UI.FormatAsLink("Dirt", "DIRT") + "as fertilizer. Also requires direct exposure to sunlight." };
-            DomesticatedDescription = string.Concat(textArray1);
-            //SeedDescription = "The black seed of a " + UI.FormatAsLink("Spinosa", "SpinosaPlant") + ".";
-            //tuning = CuisinePlantsTuning.OakTreeTuning;
-        }
 
         //===> DEFINE THE BASE TEMPLATE <=====================================================================
         public GameObject CreatePrefab()
         {
             GameObject gameObject = Plant_SuperSpinosaConfig.BaseWormPlant(
                 Id,
-                Name,
-                Description,
-                "plant_spinosa_kanim",  // Crop KAnim file.
-                TUNING.DECOR.BONUS.TIER1,  // Decor tier the crop produces around it.
-                "SpinosaHips");  // The produce ID of this crop. 
+                STRINGS.PLANTS.SUPERSPINOSA.NAME,
+                STRINGS.PLANTS.SUPERSPINOSA.DESC,
+                Plant_SpinosaConfig.PlantKanim,  // Crop KAnim file.
+                DECOR.BONUS.TIER1,  // Decor tier the crop produces around it.
+                Crop_SpinosaHipsConfig.Id);  // The produce ID of this crop. 
 
             gameObject.AddOrGet<SeedProducer>().Configure(
-                "SpinosaSeed",  // It takes the seed definitions from its standard counterpart.
+                Plant_SpinosaConfig.SeedId,  // It takes the seed definitions from its standard counterpart.
                  SeedProducer.ProductionType.Harvest, // Implies that this Crop will yeild its seed upon harvest.
                  1); // Number of seeds it will produce each time.
 
@@ -76,16 +66,16 @@ namespace Dupes_Aromatics.Plants
         public static GameObject BaseWormPlant(string id, string name, string desc, string animFile, EffectorValues decor, string cropID)
         {
             GameObject gameObject = EntityTemplates.CreatePlacedEntity(
-                Id,
-                Name,
-                Description,
+                id,
+                name,
+                desc,
                 1f, // Specify the entity mass in kg.
-                Assets.GetAnim("plant_spinosa_kanim"),
+                Assets.GetAnim(animFile),
                 "idle_empty",
                 Grid.SceneLayer.BuildingBack,  // The layer which this crop will be placed in game.
                 1, //Crop width.
                 2, //Crop height.
-                TUNING.DECOR.BONUS.TIER2,
+                decor,
                 default(EffectorValues),
                 SimHashes.Creature,
                 null,
@@ -111,7 +101,7 @@ namespace Dupes_Aromatics.Plants
                 true, // Implies that this Crop is sensible to Atmospheric Pressure
                 0f, // Pressure which this Crop will die
                 0.15f, // Pressure which this Crop will stop growing.
-                Crop_SpinosaHipsConfig.Id,
+                cropID,
                 true, // Implies this Crop can be drowned by liquids.
                 true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
                 true, // Implies this Crop requires a solid ground to grow.
@@ -146,7 +136,7 @@ namespace Dupes_Aromatics.Plants
 
             //===> LIGHT REQUIREMENT <=============================================================================================
             Modifiers component = gameObject.GetComponent<Modifiers>();
-            Db.Get().traits.Get(component.initialTraits[0]).Add(new AttributeModifier(Db.Get().PlantAttributes.MinLightLux.Id, 200f, Name, false, false, true));
+            Db.Get().traits.Get(component.initialTraits[0]).Add(new AttributeModifier(Db.Get().PlantAttributes.MinLightLux.Id, 200f, name, false, false, true));
 
             component.initialAttributes.Add(Db.Get().PlantAttributes.MinLightLux.Id);
             gameObject.AddOrGet<IlluminationVulnerable>().SetPrefersDarkness(false);
@@ -160,7 +150,7 @@ namespace Dupes_Aromatics.Plants
         {
             TransformingPlant transformingPlant = prefab.AddOrGet<TransformingPlant>();
             transformingPlant.SubscribeToTransformEvent(GameHashes.HarvestComplete);
-            transformingPlant.transformPlantId = "SpinosaPlant";
+            transformingPlant.transformPlantId = Plant_SpinosaConfig.Id;
             prefab.GetComponent<KAnimControllerBase>().SetSymbolVisiblity("flower", false);
             prefab.AddOrGet<StandardCropPlant>().anims = Plant_SuperSpinosaConfig.animSet;
         }

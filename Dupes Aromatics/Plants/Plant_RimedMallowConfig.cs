@@ -16,12 +16,9 @@ namespace Dupes_Aromatics.Plants
 
         //===> BASE INFORMATION <=========================================
         public const string Id = "RimedMallowPlant";
-        public const string Name = "Rimed Mallow";
-        public static string Description = string.Concat(new string[] { "An evergreen plant well adapt to thrive in very cold environments. Produces a fluffy " + UI.FormatAsLink("Rimed Cotton Boll", "RimedCotton") + "." });
-        public static string DomesticatedDescription = string.Concat(new string[] { "/n/n In domesticated environment this crop requires the use of pure water " + UI.FormatAsLink("Ice", "ICE") + " as fertilization." });
-        public const string SeedId = "IceMallowSeed";
-        public const string SeedName = "Iced Mallow Seed";
-        public static string SeedDescription;
+		public const string SeedId = "IceMallowSeed";
+		public const string PlantKanim = "plant_rimedmallow_kanim";
+        public const string SeedKanim = "seed_rimedmallow_kanim";
 
         //===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
         private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
@@ -53,10 +50,10 @@ namespace Dupes_Aromatics.Plants
 			EffectorValues tier = DECOR.BONUS.TIER1;
 			GameObject gameObject = EntityTemplates.CreatePlacedEntity(
 				Id, 
-				Name, 
-				Description, 
+				STRINGS.PLANTS.RIMEDMALLOW.NAME,
+				STRINGS.PLANTS.RIMEDMALLOW.DESC, 
 				mass, 
-				Assets.GetAnim("plant_rimedmallow_kanim"), 
+				Assets.GetAnim(PlantKanim), 
 				"idle_empty", 
 				Grid.SceneLayer.BuildingFront, 
 				1, 
@@ -110,9 +107,9 @@ namespace Dupes_Aromatics.Plants
 				gameObject, 
 				SeedProducer.ProductionType.Harvest, 
 				SeedId,
-				SeedName, 
-				SeedDescription, 
-				Assets.GetAnim("seed_rimedmallow_kanim"),
+				STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME,
+				STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC, 
+				Assets.GetAnim(SeedKanim),
 				"object",
 				1, 
 				new List<Tag>
@@ -121,7 +118,7 @@ namespace Dupes_Aromatics.Plants
 		}, SingleEntityReceptacle.ReceptacleDirection.Bottom, 
 				default(Tag), 
 				4,
-				DomesticatedDescription, 
+				STRINGS.PLANTS.RIMEDMALLOW.DOMESTICATED_DESC, 
 				EntityTemplates.CollisionShape.CIRCLE,
 				0.3f, 
 				0.3f, 
@@ -130,7 +127,7 @@ namespace Dupes_Aromatics.Plants
 				false
 				),
 				"RimedMallowPlant_preview", 
-				Assets.GetAnim("plant_rimedmallow_kanim"), 
+				Assets.GetAnim(PlantKanim), 
 				"place", 
 				1, 
 				3),

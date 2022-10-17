@@ -17,12 +17,9 @@ namespace Dupes_Aromatics.Plants
 
         //===> BASE INFORMATION <=========================================
         public const string Id = "SpinosaPlant";
-        public const string Name = "Blooming Spinosa";
-        public static string Description = string.Concat(new string[] { "A rather thorny sten plant that blooms with a beautiful " + UI.FormatAsLink("Spinosa Rose", "SpinosaRose") + "." });
-        public static string DomesticatedDescription;
         public const string SeedId = "SpinosaSeed";
-        public const string SeedName = "Spinosa Black Seed";
-        public static string SeedDescription;
+        public const string PlantKanim = "plant_spinosa_kanim";
+        public const string SeedKanim = "seed_spinosa_kanim";
 
         //===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
         private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
@@ -47,24 +44,17 @@ namespace Dupes_Aromatics.Plants
         //public static AromaticsPlantsTuning.CropsTuning tuning;
         public ComplexRecipe Recipe;
 
-        static Plant_SpinosaConfig()
-        {
-            string[] textArray1 = new string[] { Description, "/n/n In domesticated environment this crop requires copious amounts of" + UI.FormatAsLink("Water", "WATER") + ", and" + UI.FormatAsLink("Dirt", "DIRT") + "as fertilizer. Also requires direct exposure to sunlight." };
-            DomesticatedDescription = string.Concat(textArray1);
-            SeedDescription = "The black seed of a " + UI.FormatAsLink("Spinosa", "SpinosaPlant") + ".";
-            //tuning = CuisinePlantsTuning.OakTreeTuning;
-        }
 
         //===> DEFINE THE BASE TEMPLATE <=====================================================================
         public GameObject CreatePrefab()
         {
             GameObject gameObject = Plant_SpinosaConfig.BaseWormPlant(
                 Id,
-                Name,
-                Description,
-                "plant_spinosa_kanim",  // Crop KAnim file.
-                TUNING.DECOR.BONUS.TIER2,  // Decor tier the crop produces around it.
-                "SpinosaRose");  // The produce ID of this crop. 
+                STRINGS.PLANTS.SPINOSA.NAME,
+                STRINGS.PLANTS.SPINOSA.DESC,
+                PlantKanim,  // Crop KAnim file.
+                DECOR.BONUS.TIER2,  // Decor tier the crop produces around it.
+                Crop_SpinosaRoseConfig.Id);  // The produce ID of this crop. 
 
             //===> BASE SETTINGS FOR THE CROP SEED <=======================================================
             List<Tag> additionalTags = new List<Tag>();
@@ -75,16 +65,16 @@ namespace Dupes_Aromatics.Plants
                 gameObject,
                 SeedProducer.ProductionType.Harvest, //Implies the seed will be produced upon harvest.
                 SeedId,
-                SeedName,
-                SeedDescription,
-                Assets.GetAnim("seed_spinosa_kanim"), //The Crop seed KAnim
+                STRINGS.SEEDS.SPINOSA.SEED_NAME,
+                STRINGS.SEEDS.SPINOSA.SEED_DESC,
+                Assets.GetAnim(SeedKanim), //The Crop seed KAnim
                 "object",
                 1, //Number of seeds produced each time.
                 additionalTags,
                 SingleEntityReceptacle.ReceptacleDirection.Top, //The orientation which the seed requires the planter box to be pointing.
                 replantGroundTag,
                 2,
-                DomesticatedDescription,
+                STRINGS.PLANTS.SPINOSA.DOMESTICATED_DESC,
                 EntityTemplates.CollisionShape.CIRCLE,
                 0.2f,
                 0.2f,
@@ -92,7 +82,7 @@ namespace Dupes_Aromatics.Plants
                 "",
                 false),
                 "SpinosaPlant_preview",
-                Assets.GetAnim("plant_spinosa_kanim"),
+                Assets.GetAnim(PlantKanim),
                 "place",
                 1, // Preview Crop width
                 3); // Preview Crop Height
@@ -104,16 +94,16 @@ namespace Dupes_Aromatics.Plants
         public static GameObject BaseWormPlant(string id, string name, string desc, string animFile, EffectorValues decor, string cropID)
         {
             GameObject gameObject = EntityTemplates.CreatePlacedEntity(
-                Id,
-                Name,
-                Description,
+                id,
+                name,
+                desc,
                 1f, // Specify the entity mass in kg.
-                Assets.GetAnim("plant_spinosa_kanim"),
+                Assets.GetAnim(animFile),
                 "idle_empty",
                 Grid.SceneLayer.BuildingBack,  // The layer which this crop will be placed in game.
                 1, //Crop width.
                 3, //Crop height.
-                TUNING.DECOR.BONUS.TIER2,
+                decor,
                 default(EffectorValues),
                 SimHashes.Creature,
                 null,
@@ -139,7 +129,7 @@ namespace Dupes_Aromatics.Plants
                 true, // Implies that this Crop is sensible to Atmospheric Pressure
                 0f, // Pressure which this Crop will die
                 0.15f, // Pressure which this Crop will stop growing.
-                Crop_SpinosaRoseConfig.Id,
+                cropID,
                 true, // Implies this Crop can be drowned by liquids.
                 true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
                 true, // Implies this Crop requires a solid ground to grow.
@@ -182,7 +172,7 @@ namespace Dupes_Aromatics.Plants
 
             //===> LIGHT REQUIREMENT <=============================================================================================
             Modifiers component = gameObject.GetComponent<Modifiers>();
-            Db.Get().traits.Get(component.initialTraits[0]).Add(new AttributeModifier(Db.Get().PlantAttributes.MinLightLux.Id, 200f, Name, false, false, true));
+            Db.Get().traits.Get(component.initialTraits[0]).Add(new AttributeModifier(Db.Get().PlantAttributes.MinLightLux.Id, 200f, name, false, false, true));
 
             component.initialAttributes.Add(Db.Get().PlantAttributes.MinLightLux.Id);
             gameObject.AddOrGet<IlluminationVulnerable>().SetPrefersDarkness(false);
@@ -196,7 +186,7 @@ namespace Dupes_Aromatics.Plants
         public void OnPrefabInit(GameObject prefab)
         {
             TransformingPlant transformingPlant = prefab.AddOrGet<TransformingPlant>();
-            transformingPlant.transformPlantId = "SuperSpinosaPlant";
+            transformingPlant.transformPlantId = Plant_SuperSpinosaConfig.Id;
             transformingPlant.SubscribeToTransformEvent(GameHashes.CropTended);
             transformingPlant.useGrowthTimeRatio = true;
             transformingPlant.eventDataCondition = delegate (object data)

@@ -16,12 +16,6 @@ namespace Dupes_Aromatics.Plants
 
         //===> BASE INFORMATION <=========================================
         public const string Id = "DuskberryLavender";
-        public const string Name = "Duskberry Lavender";
-        public static string Description = string.Concat(new string[] { "A shrub-like plant sprouts with an edible " + UI.FormatAsLink("Duskberry", "Duskberry") + "." });
-        public static string DomesticatedDescription = string.Concat(new string[] { "/n/n In domesticated environment this crop requires the use of " + UI.FormatAsLink("Phosphorite", "PHOSPHORITE") + " as fertilization." });
-        public const string SeedId = "LavenderSeed";
-        public const string SeedName = "Dusk Seed";
-        public static string SeedDescription = "The tiny seed of a " + UI.FormatAsLink("Duskbloom Lavender", "DuskbloomLavender") + ".";
 
         //===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
         private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
@@ -50,16 +44,16 @@ namespace Dupes_Aromatics.Plants
         {
             GameObject gameObject = Plant_SuperDuskLavenderConfig.BaseWormPlant(
                 Id,
-                Name,
-                Description,
-                "plant_lavender_kanim",  // Crop KAnim file.
-                TUNING.DECOR.BONUS.TIER1,  // Decor tier the crop produces around it.
-                "Duskberry");  // The produce ID of this crop. 
+                STRINGS.PLANTS.SUPERDUSKLAVENDER.NAME,
+                STRINGS.PLANTS.SUPERDUSKLAVENDER.DESC,
+                Plant_DuskLavenderConfig.PlantKanim,  // Crop KAnim file.
+                DECOR.BONUS.TIER1,  // Decor tier the crop produces around it.
+                Crop_DuskberryConfig.Id);  // The produce ID of this crop. 
 
             gameObject.AddOrGet<SeedProducer>().Configure(
-                "LavenderSeed",  // It takes the seed definitions from its standard counterpart.
-                 SeedProducer.ProductionType.Harvest, // Implies that this Crop will yeild its seed upon harvest.
-                 1); // Number of seeds it will produce each time.
+                Plant_DuskLavenderConfig.SeedId,  // It takes the seed definitions from its standard counterpart.
+                SeedProducer.ProductionType.Harvest, // Implies that this Crop will yeild its seed upon harvest.
+                1); // Number of seeds it will produce each time.
 
             return gameObject;
         }
@@ -68,16 +62,16 @@ namespace Dupes_Aromatics.Plants
         public static GameObject BaseWormPlant(string id, string name, string desc, string animFile, EffectorValues decor, string cropID)
         {
             GameObject gameObject = EntityTemplates.CreatePlacedEntity(
-                Id,
-                Name,
-                Description,
+                id,
+                name,
+                desc,
                 1f, // Specify the entity mass in kg.
-                Assets.GetAnim("plant_lavender_kanim"),
+                Assets.GetAnim(animFile),
                 "idle_empty",
                 Grid.SceneLayer.BuildingBack,  // The layer which this crop will be placed in game.
                 1, //Crop width.
                 3, //Crop height.
-                TUNING.DECOR.BONUS.TIER2,
+                decor,
                 default(EffectorValues),
                 SimHashes.Creature,
                 null,
@@ -94,16 +88,16 @@ namespace Dupes_Aromatics.Plants
                 //===> SAFE ATMOSPHERE ELEMENTS <===================================================================================
                 // Plant will not grow in any element other than the ones here.
                 new SimHashes[]{
-                SimHashes.Oxygen,
-                SimHashes.ContaminatedOxygen,
-                SimHashes.CarbonDioxide
+                    SimHashes.Oxygen,
+                    SimHashes.ContaminatedOxygen,
+                    SimHashes.CarbonDioxide
                 },
 
                 //===> BASE SETTINGS <==============================================================================================
                 true, // Implies that this Crop is sensible to Atmospheric Pressure
                 0f, // Pressure which this Crop will die
                 0.15f, // Pressure which this Crop will stop growing.
-                Crop_DuskberryConfig.Id,
+                cropID,
                 true, // Implies this Crop can be drowned by liquids.
                 true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
                 true, // Implies this Crop requires a solid ground to grow.

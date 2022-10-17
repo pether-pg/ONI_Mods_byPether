@@ -16,12 +16,9 @@ namespace Dupes_Aromatics.Plants
 
         //===> BASE INFORMATION <=========================================
         public const string Id = "DuskbloomLavender";
-        public const string Name = "Duskbloom Lavender";
-        public static string Description = string.Concat(new string[] { "A shrub-like plant blooms with a beautiful " + UI.FormatAsLink("Duskbloom", "Duskbloom") + "." });
-        public static string DomesticatedDescription = string.Concat(new string[] { "/n/n In domesticated environment this crop requires the use of " + UI.FormatAsLink("Phosphorite", "PHOSPHORITE") + " as fertilization." });
         public const string SeedId = "LavenderSeed";
-        public const string SeedName = "Dusk Seed";
-        public static string SeedDescription = "The tiny seed of a " + UI.FormatAsLink("Duskbloom Lavender", "DuskbloomLavender") + ".";
+        public const string PlantKanim = "plant_lavender_kanim";
+        public const string SeedKanim = "seed_lavender_kanim";
 
         //===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
         private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
@@ -50,39 +47,40 @@ namespace Dupes_Aromatics.Plants
         {
             GameObject gameObject = Plant_DuskLavenderConfig.BaseWormPlant(
                 Id,
-                Name,
-                Description,
-                "plant_lavender_kanim",  // Crop KAnim file.
-                TUNING.DECOR.BONUS.TIER2,  // Decor tier the crop produces around it.
-                "Duskbloom");  // The produce ID of this crop. 
+                STRINGS.PLANTS.DUSKLAVENDER.NAME,
+                STRINGS.PLANTS.DUSKLAVENDER.DESC,
+                PlantKanim,  // Crop KAnim file.
+                DECOR.BONUS.TIER2,  // Decor tier the crop produces around it.
+                Crop_DuskbloomConfig.Id);  // The produce ID of this crop. 
 
             //===> BASE SETTINGS FOR THE CROP SEED <=======================================================
             List<Tag> additionalTags = new List<Tag>();
             additionalTags.Add(GameTags.CropSeed);
             Tag replantGroundTag = new Tag();
 
-            EntityTemplates.CreateAndRegisterPreviewForPlant(EntityTemplates.CreateAndRegisterSeedForPlant(
-                gameObject,
-                SeedProducer.ProductionType.Harvest, //Implies the seed will be produced upon harvest.
-                SeedId,
-                SeedName,
-                SeedDescription,
-                Assets.GetAnim("seed_lavender_kanim"), //The Crop seed KAnim
-                "object",
-                1, //Number of seeds produced each time.
-                additionalTags,
-                SingleEntityReceptacle.ReceptacleDirection.Top, //The orientation which the seed requires the planter box to be pointing.
-                replantGroundTag,
-                2,
-                DomesticatedDescription,
-                EntityTemplates.CollisionShape.CIRCLE,
-                0.2f,
-                0.2f,
-                null,
-                "",
-                false),
+            EntityTemplates.CreateAndRegisterPreviewForPlant(
+                EntityTemplates.CreateAndRegisterSeedForPlant(
+                    gameObject,
+                    SeedProducer.ProductionType.Harvest, //Implies the seed will be produced upon harvest.
+                    SeedId,
+                    STRINGS.SEEDS.DUSKLAVENDER.SEED_NAME,
+                    STRINGS.SEEDS.DUSKLAVENDER.SEED_DESC,
+                    Assets.GetAnim(SeedKanim), //The Crop seed KAnim
+                    "object",
+                    1, //Number of seeds produced each time.
+                    additionalTags,
+                    SingleEntityReceptacle.ReceptacleDirection.Top, //The orientation which the seed requires the planter box to be pointing.
+                    replantGroundTag,
+                    2,
+                    STRINGS.PLANTS.DUSKLAVENDER.DOMESTICATED_DESC,
+                    EntityTemplates.CollisionShape.CIRCLE,
+                    0.2f,
+                    0.2f,
+                    null,
+                    "",
+                    false),
                 "DuskbloomLavender_preview",
-                Assets.GetAnim("plant_lavender_kanim"),
+                Assets.GetAnim(PlantKanim),
                 "place",
                 1, // Preview Crop width
                 3); // Preview Crop Height
@@ -94,16 +92,16 @@ namespace Dupes_Aromatics.Plants
         public static GameObject BaseWormPlant(string id, string name, string desc, string animFile, EffectorValues decor, string cropID)
         {
             GameObject gameObject = EntityTemplates.CreatePlacedEntity(
-                Id,
-                Name,
-                Description,
+                id,
+                name,
+                desc,
                 1f, // Specify the entity mass in kg.
-                Assets.GetAnim("plant_lavender_kanim"),
+                Assets.GetAnim(animFile),
                 "idle_empty",
                 Grid.SceneLayer.BuildingBack,  // The layer which this crop will be placed in game.
                 1, //Crop width.
                 3, //Crop height.
-                TUNING.DECOR.BONUS.TIER2,
+                decor,
                 default(EffectorValues),
                 SimHashes.Creature,
                 null,
@@ -120,16 +118,16 @@ namespace Dupes_Aromatics.Plants
                 //===> SAFE ATMOSPHERE ELEMENTS <===================================================================================
                 // Plant will not grow in any element other than the ones here.
                 new SimHashes[]{
-                SimHashes.Oxygen,
-                SimHashes.ContaminatedOxygen,
-                SimHashes.CarbonDioxide
+                    SimHashes.Oxygen,
+                    SimHashes.ContaminatedOxygen,
+                    SimHashes.CarbonDioxide
                 },
 
                 //===> BASE SETTINGS <==============================================================================================
                 true, // Implies that this Crop is sensible to Atmospheric Pressure
                 0f, // Pressure which this Crop will die
                 0.15f, // Pressure which this Crop will stop growing.
-                Crop_DuskbloomConfig.Id,
+                cropID,
                 true, // Implies this Crop can be drowned by liquids.
                 true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
                 true, // Implies this Crop requires a solid ground to grow.
@@ -143,11 +141,11 @@ namespace Dupes_Aromatics.Plants
             //===> SOLID FERTILIZER THIS CROP REQUIRES <============================================================================
             EntityTemplates.ExtendPlantToFertilizable(gameObject, new PlantElementAbsorber.ConsumeInfo[]
             {
-            new PlantElementAbsorber.ConsumeInfo
-            {
-                tag = SimHashes.Phosphorite.CreateTag(),
-                massConsumptionRate = Fertilization
-            }
+                new PlantElementAbsorber.ConsumeInfo
+                {
+                    tag = SimHashes.Phosphorite.CreateTag(),
+                    massConsumptionRate = Fertilization
+                }
             });
 
             gameObject.AddOrGet<StandardCropPlant>();
