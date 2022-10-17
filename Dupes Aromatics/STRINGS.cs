@@ -28,6 +28,15 @@ namespace Dupes_Aromatics
             }
         }
 
+        public class DESCRIPTORS
+        {
+            public class SPAWNGERMS
+            {
+                public static LocString NAME = "{GERMS}";
+                public static LocString DESC = "While working, releases {GERMS} into the air.";
+            }
+        }
+
         public class EFFECTS
         {
             public class SMELLEDROSE

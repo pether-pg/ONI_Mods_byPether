@@ -8,7 +8,8 @@ namespace Dupes_Aromatics
     class AromaticsFabricator : ComplexFabricator, ISim200ms
     {
         public const string FabricatorId = AirFilterConfig.ID;
-        public const float RecipeTime = 600;
+        public const float RecipeTime = 60;
+        private string LastGermId = string.Empty;
 
         public static Dictionary<ComplexRecipe, string> RecipesScents = new Dictionary<ComplexRecipe, string>();
 
@@ -16,7 +17,7 @@ namespace Dupes_Aromatics
         {
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
-                new ComplexRecipe.RecipeElement(SimHashes.CarbonDioxide.CreateTag(), 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+                new ComplexRecipe.RecipeElement(SimHashes.Sand.CreateTag(), 0.0f)
             };
 
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(FabricatorId, ingredients, results), ingredients, results)
@@ -33,7 +34,7 @@ namespace Dupes_Aromatics
             RecipesScents.Add(recipe, germId);
         }
 
-        public static void SpawnGerms(GameObject go, string germId, float dt, int amountPerSecond = 1000)
+        public void SpawnGerms(GameObject go, string germId, float dt, int amountPerSecond = 1000)
         {
             Diseases diseases = Db.Get().Diseases;
             Disease germ = diseases.TryGet(germId);
@@ -44,14 +45,20 @@ namespace Dupes_Aromatics
             }
 
             SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(go.transform.position), diseases.GetIndex(germId), (int)(amountPerSecond * dt));
-            UpdateSourceVisibility(go, germId);
         }
 
-        public static void UpdateSourceVisibility(GameObject go, string germId)
+        public void UpdateSourceVisibility(GameObject go, string germId)
         {
             DiseaseSourceVisualizer source = go.AddOrGet<DiseaseSourceVisualizer>();
             source.alwaysShowDisease = germId;
             source.UpdateVisibility();
+        }
+
+        public string GetGermIdFromRecipe(ComplexRecipe recipe)
+        {
+            if (recipe != null && RecipesScents.ContainsKey(recipe))
+                return RecipesScents[recipe];
+            return string.Empty;
         }
 
         public void Sim200ms(float dt)
@@ -59,14 +66,41 @@ namespace Dupes_Aromatics
             base.Sim200ms(dt);
 
             ComplexRecipe recipe = CurrentWorkingOrder;
+
             if (recipe == null || !operational.IsOperational)
             {
                 UpdateSourceVisibility(gameObject, string.Empty);
                 return;
             }
 
-            if (RecipesScents.ContainsKey(recipe))
-                SpawnGerms(gameObject, RecipesScents[recipe], dt);
+            string currentGermId = GetGermIdFromRecipe(recipe);
+            SpawnGerms(gameObject, currentGermId, dt);
+
+            if (LastGermId == currentGermId)
+                return;
+
+            LastGermId = currentGermId;
+            if (!string.IsNullOrEmpty(currentGermId))
+                UpdateSourceVisibility(gameObject, currentGermId);
+        }
+
+        protected override List<GameObject> SpawnOrderProduct(ComplexRecipe recipe)
+        {
+            return new List<GameObject>();
+        }
+
+        public override List<Descriptor> AdditionalEffectsForRecipe(ComplexRecipe recipe)
+        {
+            List<Descriptor> result = new List<Descriptor>();
+            string germId = GetGermIdFromRecipe(recipe);
+            if (string.IsNullOrEmpty(germId))
+                return result;
+
+            string germName = Db.Get().Diseases.Get(germId).Name; 
+            
+            result.Add(new Descriptor(STRINGS.DESCRIPTORS.SPAWNGERMS.NAME.Replace("{GERMS}", germName), 
+                                        STRINGS.DESCRIPTORS.SPAWNGERMS.DESC.Replace("{GERMS}", germName)));
+            return result;
         }
     }
 }
