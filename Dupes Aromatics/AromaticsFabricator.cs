@@ -61,6 +61,11 @@ namespace Dupes_Aromatics
             return string.Empty;
         }
 
+        private float Delta(ComplexRecipe recipe, float dt)
+        {
+            return dt / recipe.time;
+        }
+
         public void Sim200ms(float dt)
         {
             base.Sim200ms(dt);
@@ -72,6 +77,9 @@ namespace Dupes_Aromatics
                 UpdateSourceVisibility(gameObject, string.Empty);
                 return;
             }
+
+            foreach (var ingridient in recipe.ingredients)
+                buildStorage.ConsumeIgnoringDisease(ingridient.material, ingridient.amount * Delta(recipe, dt));
 
             string currentGermId = GetGermIdFromRecipe(recipe);
             SpawnGerms(gameObject, currentGermId, dt);
