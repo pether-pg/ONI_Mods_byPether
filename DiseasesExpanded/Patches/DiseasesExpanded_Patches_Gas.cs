@@ -38,7 +38,7 @@ namespace DiseasesExpanded
                 {
                     int cell = Grid.PosToCell(gameObject.transform.GetPosition());
                     if (disease_idx == 0)
-                        disease_idx = Db.Get().Diseases.GetIndex((HashedString)"PollenGerms");
+                        disease_idx = Db.Get().Diseases.GetIndex((HashedString)PollenGerms.ID);
                     SimMessages.ModifyDiseaseOnCell(cell, disease_idx, GasCureConfig.FlowerGermsSpawned);
 
                     return false;
