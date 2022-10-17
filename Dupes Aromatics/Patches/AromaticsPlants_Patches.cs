@@ -22,49 +22,49 @@ namespace Dupes_Aromatics.Patches
             {
                 //=========================================================================> SPINOSA <===============================
                 //====[ SPINOSA ROSE ]===================
-                RegisterStrings.MakePlantProductStrings(Crop_SpinosaRoseConfig.Id, Crop_SpinosaRoseConfig.Name, Crop_SpinosaRoseConfig.Description);
+                RegisterStrings.MakePlantProductStrings(Crop_SpinosaRoseConfig.ID, STRINGS.CROPS.SPINOSAROSE.NAME, STRINGS.CROPS.SPINOSAROSE.DESC);
 
                 //====[ SPINOSA HIPS ]===================
-                RegisterStrings.MakeFoodStrings(Crop_SpinosaHipsConfig.Id, Crop_SpinosaHipsConfig.Name, Crop_SpinosaHipsConfig.Description);
+                RegisterStrings.MakeFoodStrings(Crop_SpinosaHipsConfig.ID, STRINGS.CROPS.SPINOSAHIPS.NAME, STRINGS.CROPS.SPINOSAHIPS.DESC);
 
                 //====[ SPINOSA SEED ]===================
-                RegisterStrings.MakeSeedStrings(Plant_SpinosaConfig.SeedId, STRINGS.SEEDS.SPINOSA.SEED_NAME, STRINGS.SEEDS.SPINOSA.SEED_DESC);
+                RegisterStrings.MakeSeedStrings(Plant_SpinosaConfig.SEED_ID, STRINGS.SEEDS.SPINOSA.SEED_NAME, STRINGS.SEEDS.SPINOSA.SEED_DESC);
 
                 //====[ BLOOMING SPINOSA ]===============
-                RegisterStrings.MakePlantSpeciesStrings(Plant_SpinosaConfig.Id, STRINGS.PLANTS.SPINOSA.NAME, STRINGS.PLANTS.SPINOSA.DESC);
-                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_SpinosaRoseConfig.Id, 100f, 1, true));
+                RegisterStrings.MakePlantSpeciesStrings(Plant_SpinosaConfig.ID, STRINGS.PLANTS.SPINOSA.NAME, STRINGS.PLANTS.SPINOSA.DESC);
+                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_SpinosaRoseConfig.ID, 100f, 1, true));
 
                 //====[ FRUITING SPINOSA ]===============
-                RegisterStrings.MakePlantSpeciesStrings(Plant_SuperSpinosaConfig.Id, STRINGS.PLANTS.SUPERSPINOSA.NAME, STRINGS.PLANTS.SUPERSPINOSA.DESC);
-                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_SpinosaHipsConfig.Id, 100f, 1, true));
+                RegisterStrings.MakePlantSpeciesStrings(Plant_SuperSpinosaConfig.ID, STRINGS.PLANTS.SUPERSPINOSA.NAME, STRINGS.PLANTS.SUPERSPINOSA.DESC);
+                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_SpinosaHipsConfig.ID, 100f, 1, true));
 
                 //=========================================================================> DUSK LAVENDER <========================
                 //====[ DUSKBLOOM ]===================
-                RegisterStrings.MakePlantProductStrings(Crop_DuskbloomConfig.Id, Crop_DuskbloomConfig.Name, Crop_DuskbloomConfig.Description);
+                RegisterStrings.MakePlantProductStrings(Crop_DuskbloomConfig.ID, STRINGS.CROPS.DUSKBLOOM.NAME, STRINGS.CROPS.DUSKBLOOM.DESC);
 
                 //====[ DUSKBERRY ]===================
-                RegisterStrings.MakeFoodStrings(Crop_DuskberryConfig.Id, Crop_DuskberryConfig.Name, Crop_DuskberryConfig.Description);
+                RegisterStrings.MakeFoodStrings(Crop_DuskberryConfig.ID, STRINGS.CROPS.DUSKBERRY.NAME, STRINGS.CROPS.DUSKBERRY.DESC);
 
                 //====[ DUSK SEED ]===================
-                RegisterStrings.MakeSeedStrings(Plant_DuskLavenderConfig.SeedId, STRINGS.SEEDS.DUSKLAVENDER.SEED_NAME, STRINGS.SEEDS.DUSKLAVENDER.SEED_DESC);
+                RegisterStrings.MakeSeedStrings(Plant_DuskLavenderConfig.SEED_ID, STRINGS.SEEDS.DUSKLAVENDER.SEED_NAME, STRINGS.SEEDS.DUSKLAVENDER.SEED_DESC);
 
                 //====[ DUSKBLOOM LAVENDER ]==========
-                RegisterStrings.MakePlantSpeciesStrings(Plant_DuskLavenderConfig.Id, STRINGS.PLANTS.DUSKLAVENDER.NAME, STRINGS.PLANTS.DUSKLAVENDER.DESC);
-                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_DuskbloomConfig.Id, 100f, 1, true));
+                RegisterStrings.MakePlantSpeciesStrings(Plant_DuskLavenderConfig.ID, STRINGS.PLANTS.DUSKLAVENDER.NAME, STRINGS.PLANTS.DUSKLAVENDER.DESC);
+                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_DuskbloomConfig.ID, 100f, 1, true));
 
                 //====[ DUSKBERRY LAVENDER ]==========
-                RegisterStrings.MakePlantSpeciesStrings(Plant_SuperDuskLavenderConfig.Id, STRINGS.PLANTS.SUPERDUSKLAVENDER.NAME, STRINGS.PLANTS.SUPERDUSKLAVENDER.DESC);
-                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_DuskberryConfig.Id, 100f, 1, true));
+                RegisterStrings.MakePlantSpeciesStrings(Plant_SuperDuskLavenderConfig.ID, STRINGS.PLANTS.SUPERDUSKLAVENDER.NAME, STRINGS.PLANTS.SUPERDUSKLAVENDER.DESC);
+                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_DuskberryConfig.ID, 100f, 1, true));
 
                 //=========================================================================> RIMED MALLOW <========================
                 //====[ RIMED COTTON BOLL ]===========
-                RegisterStrings.MakePlantProductStrings(Crop_CottonBollConfig.ID, Crop_CottonBollConfig.Name, Crop_CottonBollConfig.Description);
+                RegisterStrings.MakePlantProductStrings(Crop_CottonBollConfig.ID, STRINGS.CROPS.COTTONBOLL.NAME, STRINGS.CROPS.COTTONBOLL.DESC);
 
                 //====[ ICED MALLOW SEED ]============
-                RegisterStrings.MakeSeedStrings(Plant_RimedMallowConfig.SeedId, STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME, STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC);
+                RegisterStrings.MakeSeedStrings(Plant_RimedMallowConfig.SEED_ID, STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME, STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC);
 
                 //====[ RIMED MALLOW ]================
-                RegisterStrings.MakePlantSpeciesStrings(Plant_RimedMallowConfig.Id, STRINGS.PLANTS.RIMEDMALLOW.NAME, STRINGS.PLANTS.RIMEDMALLOW.DESC);
+                RegisterStrings.MakePlantSpeciesStrings(Plant_RimedMallowConfig.ID, STRINGS.PLANTS.RIMEDMALLOW.NAME, STRINGS.PLANTS.RIMEDMALLOW.DESC);
                 CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_CottonBollConfig.ID, 100f, 1, true));
             }
         }

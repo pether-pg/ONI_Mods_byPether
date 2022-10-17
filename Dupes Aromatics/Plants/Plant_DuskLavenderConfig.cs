@@ -15,8 +15,8 @@ namespace Dupes_Aromatics.Plants
         }
 
         //===> BASE INFORMATION <=========================================
-        public const string Id = "DuskbloomLavender";
-        public const string SeedId = "LavenderSeed";
+        public const string ID = "DuskbloomLavender";
+        public const string SEED_ID = "LavenderSeed";
         public const string PlantKanim = "plant_lavender_kanim";
         public const string SeedKanim = "seed_lavender_kanim";
 
@@ -46,12 +46,12 @@ namespace Dupes_Aromatics.Plants
         public GameObject CreatePrefab()
         {
             GameObject gameObject = Plant_DuskLavenderConfig.BaseWormPlant(
-                Id,
+                ID,
                 STRINGS.PLANTS.DUSKLAVENDER.NAME,
                 STRINGS.PLANTS.DUSKLAVENDER.DESC,
                 PlantKanim,  // Crop KAnim file.
                 DECOR.BONUS.TIER2,  // Decor tier the crop produces around it.
-                Crop_DuskbloomConfig.Id);  // The produce ID of this crop. 
+                Crop_DuskbloomConfig.ID);  // The produce ID of this crop. 
 
             //===> BASE SETTINGS FOR THE CROP SEED <=======================================================
             List<Tag> additionalTags = new List<Tag>();
@@ -62,7 +62,7 @@ namespace Dupes_Aromatics.Plants
                 EntityTemplates.CreateAndRegisterSeedForPlant(
                     gameObject,
                     SeedProducer.ProductionType.Harvest, //Implies the seed will be produced upon harvest.
-                    SeedId,
+                    SEED_ID,
                     STRINGS.SEEDS.DUSKLAVENDER.SEED_NAME,
                     STRINGS.SEEDS.DUSKLAVENDER.SEED_DESC,
                     Assets.GetAnim(SeedKanim), //The Crop seed KAnim
@@ -167,7 +167,7 @@ namespace Dupes_Aromatics.Plants
         public void OnPrefabInit(GameObject prefab)
         {
             TransformingPlant transformingPlant = prefab.AddOrGet<TransformingPlant>();
-            transformingPlant.transformPlantId = Plant_SuperDuskLavenderConfig.Id;
+            transformingPlant.transformPlantId = Plant_SuperDuskLavenderConfig.ID;
             transformingPlant.SubscribeToTransformEvent(GameHashes.CropTended);
             transformingPlant.useGrowthTimeRatio = true;
             transformingPlant.eventDataCondition = delegate (object data)

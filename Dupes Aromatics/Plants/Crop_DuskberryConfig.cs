@@ -14,17 +14,15 @@ namespace Dupes_Aromatics.Plants
             return DlcManager.AVAILABLE_EXPANSION1_ONLY;
         }
 
-        public const string Id = "Duskberry";
-        public static string Name = UI.FormatAsLink("Duskberry", "Duskberry".ToUpper());
-        public static string Description = ("A small, soft, jelly filled fruiting body of a " + UI.FormatAsLink("Duskberry Lavender", Plant_SuperDuskLavenderConfig.Id) + ". They taste delightful and have a slightly sweet tart flavor that is mixed with a little bit of acidic.");
+        public const string ID = "Duskberry";
 
 
         public GameObject CreatePrefab()
         {
             GameObject template = EntityTemplates.CreateLooseEntity(
-                Id,
-                Name,
-                Description,
+                ID,
+                STRINGS.CROPS.DUSKBERRY.NAME,
+                STRINGS.CROPS.DUSKBERRY.DESC,
                 1f,
                 false,
                 Assets.GetAnim("fruit_duskberry_kanim"),
@@ -39,7 +37,7 @@ namespace Dupes_Aromatics.Plants
                 null);
 
             EdiblesManager.FoodInfo foodInfo = new EdiblesManager.FoodInfo(
-                Id,
+                ID,
                 "",
                 1200000f,
                 -1,

@@ -15,7 +15,7 @@ namespace Dupes_Aromatics.Plants
         }
 
         //===> BASE INFORMATION <=========================================
-        public const string Id = "DuskberryLavender";
+        public const string ID = "DuskberryLavender";
 
         //===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
         private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
@@ -43,15 +43,15 @@ namespace Dupes_Aromatics.Plants
         public GameObject CreatePrefab()
         {
             GameObject gameObject = Plant_SuperDuskLavenderConfig.BaseWormPlant(
-                Id,
+                ID,
                 STRINGS.PLANTS.SUPERDUSKLAVENDER.NAME,
                 STRINGS.PLANTS.SUPERDUSKLAVENDER.DESC,
                 Plant_DuskLavenderConfig.PlantKanim,  // Crop KAnim file.
                 DECOR.BONUS.TIER1,  // Decor tier the crop produces around it.
-                Crop_DuskberryConfig.Id);  // The produce ID of this crop. 
+                Crop_DuskberryConfig.ID);  // The produce ID of this crop. 
 
             gameObject.AddOrGet<SeedProducer>().Configure(
-                Plant_DuskLavenderConfig.SeedId,  // It takes the seed definitions from its standard counterpart.
+                Plant_DuskLavenderConfig.SEED_ID,  // It takes the seed definitions from its standard counterpart.
                 SeedProducer.ProductionType.Harvest, // Implies that this Crop will yeild its seed upon harvest.
                 1); // Number of seeds it will produce each time.
 
@@ -134,7 +134,7 @@ namespace Dupes_Aromatics.Plants
         {
             TransformingPlant transformingPlant = prefab.AddOrGet<TransformingPlant>();
             transformingPlant.SubscribeToTransformEvent(GameHashes.HarvestComplete);
-            transformingPlant.transformPlantId = Plant_DuskLavenderConfig.Id;
+            transformingPlant.transformPlantId = Plant_DuskLavenderConfig.ID;
             prefab.GetComponent<KAnimControllerBase>().SetSymbolVisiblity("flower", false);
             prefab.AddOrGet<StandardCropPlant>().anims = Plant_SuperDuskLavenderConfig.animSet;
         }

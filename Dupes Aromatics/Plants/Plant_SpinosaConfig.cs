@@ -16,8 +16,8 @@ namespace Dupes_Aromatics.Plants
         }
 
         //===> BASE INFORMATION <=========================================
-        public const string Id = "SpinosaPlant";
-        public const string SeedId = "SpinosaSeed";
+        public const string ID = "SpinosaPlant";
+        public const string SEED_ID = "SpinosaSeed";
         public const string PlantKanim = "plant_spinosa_kanim";
         public const string SeedKanim = "seed_spinosa_kanim";
 
@@ -49,12 +49,12 @@ namespace Dupes_Aromatics.Plants
         public GameObject CreatePrefab()
         {
             GameObject gameObject = Plant_SpinosaConfig.BaseWormPlant(
-                Id,
+                ID,
                 STRINGS.PLANTS.SPINOSA.NAME,
                 STRINGS.PLANTS.SPINOSA.DESC,
                 PlantKanim,  // Crop KAnim file.
                 DECOR.BONUS.TIER2,  // Decor tier the crop produces around it.
-                Crop_SpinosaRoseConfig.Id);  // The produce ID of this crop. 
+                Crop_SpinosaRoseConfig.ID);  // The produce ID of this crop. 
 
             //===> BASE SETTINGS FOR THE CROP SEED <=======================================================
             List<Tag> additionalTags = new List<Tag>();
@@ -64,7 +64,7 @@ namespace Dupes_Aromatics.Plants
             EntityTemplates.CreateAndRegisterPreviewForPlant(EntityTemplates.CreateAndRegisterSeedForPlant(
                 gameObject,
                 SeedProducer.ProductionType.Harvest, //Implies the seed will be produced upon harvest.
-                SeedId,
+                SEED_ID,
                 STRINGS.SEEDS.SPINOSA.SEED_NAME,
                 STRINGS.SEEDS.SPINOSA.SEED_DESC,
                 Assets.GetAnim(SeedKanim), //The Crop seed KAnim
@@ -186,7 +186,7 @@ namespace Dupes_Aromatics.Plants
         public void OnPrefabInit(GameObject prefab)
         {
             TransformingPlant transformingPlant = prefab.AddOrGet<TransformingPlant>();
-            transformingPlant.transformPlantId = Plant_SuperSpinosaConfig.Id;
+            transformingPlant.transformPlantId = Plant_SuperSpinosaConfig.ID;
             transformingPlant.SubscribeToTransformEvent(GameHashes.CropTended);
             transformingPlant.useGrowthTimeRatio = true;
             transformingPlant.eventDataCondition = delegate (object data)

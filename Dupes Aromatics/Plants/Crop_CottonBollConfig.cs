@@ -16,20 +16,14 @@ namespace Dupes_Aromatics.Plants
         }
 
         public const string ID = "RimedCotton";
-        public static readonly Tag TAG = TagManager.Create("CottonBoll");
-        private AttributeModifier decorModifier = new AttributeModifier("Decor", 0.1f, Name, true, false, true);
-
-        public static string Name = UI.FormatAsLink("Rimed Cotton Boll", ID.ToUpper());
-        public static string Description = $"A soft, fluffy staple fiber that grows in a boll encased in ice crystals.  The fiber of the boll is almost pure cellulose, but also contains high concentration of aromatic oils that gives it a smooth and pleasing scent.";
+        public static readonly Tag TAG = TagManager.Create(ID);
 
         public GameObject CreatePrefab()
         {
-            List<Tag> additionalTags = new List<Tag>();
-            additionalTags.Add(GameTags.IndustrialIngredient);
             GameObject go = EntityTemplates.CreateLooseEntity(
-                "RimedCotton", 
-                Name, 
-                Description, 
+                ID,
+                STRINGS.CROPS.COTTONBOLL.NAME,
+                STRINGS.CROPS.COTTONBOLL.DESC,
                 1f, 
                 false, 
                 Assets.GetAnim("item_cottonboll_kanim"), 
@@ -42,10 +36,10 @@ namespace Dupes_Aromatics.Plants
                 0, 
                 SimHashes.Creature, 
                 new List<Tag>
-        {
-            GameTags.IndustrialIngredient,
-            GameTags.BuildingFiber
-        });
+                {
+                    GameTags.IndustrialIngredient,
+                    GameTags.BuildingFiber
+                });
             go.AddOrGet<EntitySplitter>();
             go.AddOrGet<SimpleMassStatusItem>();
             return go;

@@ -14,19 +14,15 @@ namespace Dupes_Aromatics.Plants
             return DlcManager.AVAILABLE_EXPANSION1_ONLY;
         }
 
-        public const string Id = "SpinosaRose";
-        public static string Name = UI.FormatAsLink("Spinosa Rose", "SpinosaRose".ToUpper());
-        public static string Description = ("The beautiful blossom of a " + UI.FormatAsLink("Spinosa", Plant_SpinosaConfig.Id) + ". It has a simultaneously sweet and spicy smell, giving ode to meadows, honey, and fruit notes.");
-        public static readonly Tag TAG = TagManager.Create("SpinosaRose");
+        public const string ID = "SpinosaRose";
+        public static readonly Tag TAG = TagManager.Create(ID);
 
         public GameObject CreatePrefab()
         {
-            List<Tag> additionalTags = new List<Tag>();
-            additionalTags.Add(GameTags.IndustrialIngredient);
             GameObject ingredient = EntityTemplates.CreateLooseEntity(
-                Id, 
-                Name, 
-                Description, 
+                ID, 
+                STRINGS.CROPS.SPINOSAROSE.NAME,
+                STRINGS.CROPS.SPINOSAROSE.DESC, 
                 1f, 
                 false, 
                 Assets.GetAnim("item_spinosarose_kanim"), 

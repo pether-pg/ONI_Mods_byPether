@@ -15,8 +15,8 @@ namespace Dupes_Aromatics.Plants
         }
 
         //===> BASE INFORMATION <=========================================
-        public const string Id = "RimedMallowPlant";
-		public const string SeedId = "IceMallowSeed";
+        public const string ID = "RimedMallowPlant";
+		public const string SEED_ID = "IceMallowSeed";
 		public const string PlantKanim = "plant_rimedmallow_kanim";
         public const string SeedKanim = "seed_rimedmallow_kanim";
 
@@ -49,7 +49,7 @@ namespace Dupes_Aromatics.Plants
 			float mass = 2f;
 			EffectorValues tier = DECOR.BONUS.TIER1;
 			GameObject gameObject = EntityTemplates.CreatePlacedEntity(
-				Id, 
+				ID, 
 				STRINGS.PLANTS.RIMEDMALLOW.NAME,
 				STRINGS.PLANTS.RIMEDMALLOW.DESC, 
 				mass, 
@@ -106,7 +106,7 @@ namespace Dupes_Aromatics.Plants
 			EntityTemplates.MakeHangingOffsets(EntityTemplates.CreateAndRegisterPreviewForPlant(EntityTemplates.CreateAndRegisterSeedForPlant(
 				gameObject, 
 				SeedProducer.ProductionType.Harvest, 
-				SeedId,
+				SEED_ID,
 				STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME,
 				STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC, 
 				Assets.GetAnim(SeedKanim),

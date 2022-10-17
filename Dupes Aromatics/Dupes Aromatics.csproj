@@ -85,6 +85,8 @@
     <Compile Include="Germs\MallowScent.cs" />
     <Compile Include="Germs\RoseScent.cs" />
     <Compile Include="Misc\GermGrowthRules.cs" />
+    <Compile Include="ModInfo.cs" />
+    <Compile Include="Patches\Aromatics_Patches_Translation.cs" />
     <Compile Include="Patches\DupesAromatics_Patches_AllCommon.cs" />
     <Compile Include="Patches\DupesAromatics_Patches_Fabricator.cs" />
     <Compile Include="Patches\AromaticsPlants_Patches.cs" />

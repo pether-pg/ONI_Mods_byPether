@@ -15,7 +15,7 @@ namespace Dupes_Aromatics.Plants
         }
 
         //===> BASE INFORMATION <=========================================
-        public const string Id = "SuperSpinosaPlant";
+        public const string ID = "SuperSpinosaPlant";
 
         //= string.Concat(new string[] { });
 
@@ -47,15 +47,15 @@ namespace Dupes_Aromatics.Plants
         public GameObject CreatePrefab()
         {
             GameObject gameObject = Plant_SuperSpinosaConfig.BaseWormPlant(
-                Id,
+                ID,
                 STRINGS.PLANTS.SUPERSPINOSA.NAME,
                 STRINGS.PLANTS.SUPERSPINOSA.DESC,
                 Plant_SpinosaConfig.PlantKanim,  // Crop KAnim file.
                 DECOR.BONUS.TIER1,  // Decor tier the crop produces around it.
-                Crop_SpinosaHipsConfig.Id);  // The produce ID of this crop. 
+                Crop_SpinosaHipsConfig.ID);  // The produce ID of this crop. 
 
             gameObject.AddOrGet<SeedProducer>().Configure(
-                Plant_SpinosaConfig.SeedId,  // It takes the seed definitions from its standard counterpart.
+                Plant_SpinosaConfig.SEED_ID,  // It takes the seed definitions from its standard counterpart.
                  SeedProducer.ProductionType.Harvest, // Implies that this Crop will yeild its seed upon harvest.
                  1); // Number of seeds it will produce each time.
 
@@ -150,7 +150,7 @@ namespace Dupes_Aromatics.Plants
         {
             TransformingPlant transformingPlant = prefab.AddOrGet<TransformingPlant>();
             transformingPlant.SubscribeToTransformEvent(GameHashes.HarvestComplete);
-            transformingPlant.transformPlantId = Plant_SpinosaConfig.Id;
+            transformingPlant.transformPlantId = Plant_SpinosaConfig.ID;
             prefab.GetComponent<KAnimControllerBase>().SetSymbolVisiblity("flower", false);
             prefab.AddOrGet<StandardCropPlant>().anims = Plant_SuperSpinosaConfig.animSet;
         }

@@ -14,17 +14,14 @@ namespace Dupes_Aromatics.Plants
             return DlcManager.AVAILABLE_EXPANSION1_ONLY;
         }
 
-        public const string Id = "SpinosaHips";
-        public static string Name = UI.FormatAsLink("Spinosa Hips", "SpinosaHips".ToUpper());
-        public static string Description = ("A small, berry-sized, reddish fruiting body of a " + UI.FormatAsLink("Fruiting Spinosa", Plant_SuperSpinosaConfig.Id) + ". These have a floral, slightly sweet flavor with a touch of tartness, rich in Vitamin C.");
-
+        public const string ID = "SpinosaHips";
 
         public GameObject CreatePrefab()
         {
             GameObject template = EntityTemplates.CreateLooseEntity(
-                Id, 
-                Name, 
-                Description, 
+                ID, 
+                STRINGS.CROPS.SPINOSAHIPS.NAME,
+                STRINGS.CROPS.SPINOSAHIPS.DESC,
                 1f, 
                 false, 
                 Assets.GetAnim("fruit_spinosahips_kanim"), 
@@ -39,7 +36,7 @@ namespace Dupes_Aromatics.Plants
                 null);
 
             EdiblesManager.FoodInfo foodInfo = new EdiblesManager.FoodInfo(
-                Id, 
+                ID, 
                 "", 
                 1200000f,
                 -1, 

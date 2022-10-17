@@ -15,19 +15,15 @@ namespace Dupes_Aromatics.Plants
             return DlcManager.AVAILABLE_EXPANSION1_ONLY;
         }
 
-        public const string Id = "Duskbloom";
-        public static string Name = UI.FormatAsLink("Duskbloom", "Duskbloom".ToUpper());
-        public static string Description = ("The gentle blossom of a " + UI.FormatAsLink("Duskbloom Lavender", Plant_DuskLavenderConfig.Id) + ". It has a delicate, sweet smell that is floral, herbal, and evergreen woodsy at the same time.");
-        public static readonly Tag TAG = TagManager.Create("LavenderBloom");
+        public const string ID = "Duskbloom";
+        public static readonly Tag TAG = TagManager.Create(ID);
 
         public GameObject CreatePrefab()
         {
-            List<Tag> additionalTags = new List<Tag>();
-            additionalTags.Add(GameTags.IndustrialIngredient);
             GameObject ingredient = EntityTemplates.CreateLooseEntity(
-                Id,
-                Name,
-                Description,
+                ID,
+                STRINGS.CROPS.DUSKBLOOM.NAME,
+                STRINGS.CROPS.DUSKBLOOM.DESC,
                 1f,
                 false,
                 Assets.GetAnim("item_duskbloom_kanim"),
