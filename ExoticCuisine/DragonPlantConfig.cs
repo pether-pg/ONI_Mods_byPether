@@ -12,6 +12,8 @@ namespace ExoticCuisine
         public const string SEED_KANIM = "drakesMouthSeed_kanim";
         public const string FRUIT_KANIM = "drakesMouthFruit_kanim";
         public const float CROP_DURATION = 45f; //in seconds
+        public const int WIDTH = 1;
+        public const int HEIGHT = 2;
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
@@ -22,7 +24,7 @@ namespace ExoticCuisine
             KAnimFile anim1 = Assets.GetAnim(PLANT_KANIM);
             EffectorValues decor = TUNING.DECOR.BONUS.TIER1;
             EffectorValues noise = new EffectorValues();
-            GameObject placedEntity = EntityTemplates.CreatePlacedEntity(ID, name1, desc1, 1f, anim1, "idle_empty", Grid.SceneLayer.BuildingFront, 1, 2, decor, noise);
+            GameObject placedEntity = EntityTemplates.CreatePlacedEntity(ID, name1, desc1, 1f, anim1, "idle_empty", Grid.SceneLayer.BuildingFront, WIDTH, HEIGHT, decor, noise);
 
             SimHashes[] safeElements = new SimHashes[2]
             {
@@ -47,7 +49,7 @@ namespace ExoticCuisine
             List<Tag> additionalTags = new List<Tag>() { GameTags.CropSeed };
             Tag replantGroundTag = new Tag();
             string domesticateddesc = (string)STRINGS.PLANTS.DRAGONPLANT.DOMESTICATEDDESC;
-            EntityTemplates.CreateAndRegisterPreviewForPlant(EntityTemplates.CreateAndRegisterSeedForPlant(plant, SeedProducer.ProductionType.Harvest, SEED_ID, name2, desc2, anim2, numberOfSeeds: 0, additionalTags: additionalTags, replantGroundTag: replantGroundTag, sortOrder: 3, domesticatedDescription: domesticateddesc, width: 0.33f, height: 0.33f), "MushroomPlant_preview", Assets.GetAnim(PLANT_KANIM), "place", 1, 2);
+            EntityTemplates.CreateAndRegisterPreviewForPlant(EntityTemplates.CreateAndRegisterSeedForPlant(plant, SeedProducer.ProductionType.Harvest, SEED_ID, name2, desc2, anim2, numberOfSeeds: 0, additionalTags: additionalTags, replantGroundTag: replantGroundTag, sortOrder: 3, domesticatedDescription: domesticateddesc, width: 0.33f, height: 0.33f), "MushroomPlant_preview", Assets.GetAnim(PLANT_KANIM), "place", WIDTH, HEIGHT);
             SoundEventVolumeCache.instance.AddVolume("bristleblossom_kanim", "PrickleFlower_harvest", TUNING.NOISE_POLLUTION.CREATURES.TIER3);
             SoundEventVolumeCache.instance.AddVolume("bristleblossom_kanim", "PrickleFlower_harvest", TUNING.NOISE_POLLUTION.CREATURES.TIER3);
             return placedEntity;
