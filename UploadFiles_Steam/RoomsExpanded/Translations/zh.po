@@ -1,17 +1,17 @@
 msgid ""
 msgstr ""
-"Application: Oxygen Not IncludedPOT Version: 2.0\n"
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
+"Last-Translator: Ventulus\n"
 "Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Language: zh\n"
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.DESCRIPTION"
@@ -22,6 +22,26 @@ msgstr "需要一个照料站或农业站"
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME"
 msgid "Grooming or Farm Station"
 msgstr "照料站或农业站"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.DESCRIPTION"
+msgid "One Cott or Luxury Bed."
+msgstr "一张床铺或者舒适的床。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME"
+msgid "Any bed"
+msgstr "任何床"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION"
+msgid "At least {0} unique Artifacts"
+msgstr "至少{0}件独特工艺品"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME"
+msgid "{0} Unique Artifacts"
+msgstr "{0}件独特工艺品"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.DESCRIPTION"
@@ -40,8 +60,8 @@ msgstr "至少{0}株不同类型的装饰性植物。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECORPLANTS.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECORPLANTS.NAME"
-msgid "{0} Decorative Plants"
-msgstr "{0}株装饰性植物"
+msgid "{0} different Decorative Plants"
+msgstr "{0}株不同装饰性植物"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DIFFERENTFISH.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DIFFERENTFISH.DESCRIPTION"
@@ -83,6 +103,16 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FLOWERPOT.NAME"
 msgid "Flower Pot of any kind"
 msgstr "任意种花盆"
 
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FOSSILS.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FOSSILS.DESCRIPTION"
+msgid "At least {0} Fossils."
+msgstr "至少{0}块化石。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FOSSILS.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FOSSILS.NAME"
+msgid "{0} Fossils."
+msgstr "{0}化石。"
+
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.DESCRIPTION"
 msgid "At least one Refrigerator."
@@ -92,6 +122,16 @@ msgstr "至少一个冰箱。"
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.NAME"
 msgid "Refrigerator"
 msgstr "冰箱"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.DESCRIPTION"
+msgid "The room must contain Genetic Analysis Station."
+msgstr "这个房间必须包含植物分析仪。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME"
+msgid "Genetic Analysis Station."
+msgstr "遗传分析站。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION"
@@ -133,6 +173,16 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME"
 msgid "{0} Masterpieces"
 msgstr "{0}幅杰作"
 
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.DESCRIPTION"
+msgid "All plants must be domesticated."
+msgstr "所有植物都必须被培育。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILDPLANTS.NAME"
+msgid "No wild plants"
+msgstr "无野生植物"
+
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILTING.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILTING.DESCRIPTION"
 msgid "Room conditions must allow all plants to thrive."
@@ -142,6 +192,26 @@ msgstr "房间条件必须让所有植物生长。"
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.NOWILTING.NAME"
 msgid "No Wilting Plants"
 msgstr "无枯萎植物"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.DESCRIPTION"
+msgid "The room cannot have more than one shower, sink or toilet."
+msgstr "这个房间不能多于一座淋浴、洗手池或厕所。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME"
+msgid "No more than one bathroom set."
+msgstr "不能多于一套浴室设施。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.DESCRIPTION"
+msgid "The room cannot have more than one bed."
+msgstr "这个房间不能多于一张床。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME"
+msgid "No more than one bed."
+msgstr "不多于一张床。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION"
@@ -183,6 +253,16 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.NAME"
 msgid "Planter Box"
 msgstr "种植箱"
 
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.DESCRIPTION"
+msgid "At least one source of radiation."
+msgstr "至少一个辐射源。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME"
+msgid "Radiation Source."
+msgstr "辐射源。"
+
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.DESCRIPTION"
 msgid "At least {0} Sculptures of different type."
@@ -195,18 +275,18 @@ msgstr "{0}座不同雕像"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.DESCRIPTION"
-msgid "At least {0} Plants growing seeds of different types."
-msgstr "至少{0}种长出不同种子的植物。"
+msgid "At least {0} Non-Decorative Plants of different types."
+msgstr "至少{0}种不同类型的非装饰性植物。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.NAME"
-msgid "{0} Different Seed Plants"
-msgstr "{0}种不同种子植物"
+msgid "{0} Different Non-Decorative Plants"
+msgstr "{0}种不同的非装饰植物"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.DESCRIPTION"
 msgid "At least one Shower"
-msgstr "至少一个淋浴间"
+msgstr "至少一座淋浴"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME"
@@ -233,10 +313,91 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME"
 msgid "Water Cooler"
 msgstr "饮水机"
 
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION"
+msgid "This Duplicant feels cold claws of Death crawling up their spine."
+msgstr "这个复制人感觉到死亡的冰冷爪子在他们的脊柱上爬行。"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME"
+msgid "Graveyard Dread"
+msgstr "墓地的恐怖"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION"
+msgid ""
+"This Duplicant has accepted their inevitable fate and is ready to embrace it."
+msgstr "这个复制人已经接受了他们不可避免的命运，并准备接受它。"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME"
+msgid "Graveyard Serenity"
+msgstr "墓地的安宁"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.LUXURYPRIVATEROOM.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.LUXURYPRIVATEROOM.DESCRIPTION"
+msgid "This Duplicant slept in their Luxury Private Bedroom."
+msgstr "这个复制人睡在他的豪华私人卧室里。"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.LUXURYPRIVATEROOM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.LUXURYPRIVATEROOM.NAME"
+msgid "Luxury Private Bedroom"
+msgstr "豪华私人卧室"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION"
+msgid "Visited Museum"
+msgstr "参观艺术博物馆"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME"
+msgid "Museum"
+msgstr "艺术博物馆"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMHISTORY.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMHISTORY.DESCRIPTION"
+msgid "Visited History Museum"
+msgstr "参观历史博物馆"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMHISTORY.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMHISTORY.NAME"
+msgid "History Museum"
+msgstr "历史博物馆"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.DESCRIPTION"
+msgid "Visited Space Museum"
+msgstr "参观太空博物馆"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.NAME"
+msgid "Space Museum"
+msgstr "太空博物馆"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.DESCRIPTION"
+msgid "This Duplicant visited their Private Bathroom."
+msgstr "这个复制人专享他的私人浴室。"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.NAME"
+msgid "Private Bathroom"
+msgstr "私人浴室"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEROOM.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEROOM.DESCRIPTION"
+msgid "This Duplicant slept in their Private Bedroom."
+msgstr "这个复制人睡在他的私人卧室里。"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEROOM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.PRIVATEROOM.NAME"
+msgid "Private Bedroom"
+msgstr "私人卧室"
+
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT"
 msgid " - Enables Farm and Grooming Stations"
-msgstr "启用照料站或农业站"
+msgstr " - 启用照料站或农业站"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.NAME"
@@ -245,13 +406,14 @@ msgstr "农场"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.TOOLTIP"
-msgid "Area, where all critters and plants can happily live together in harmony."
+msgid ""
+"Area, where all critters and plants can happily live together in harmony."
 msgstr "所有小动物和植物都可以快乐和谐地生活在一起。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.EFFECT"
-msgid " - Bonus decor for inhabitating fish"
-msgstr "养鱼的装饰度加成"
+msgid " - Bonus decor for inhabitating fish: +{0} of range and value."
+msgstr " - 养鱼的加成: +{0}点范围和值。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.NAME"
@@ -266,7 +428,7 @@ msgstr "适当展出的小动物看起来更漂亮。"
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.EFFECT"
 msgid " - Morale bonus"
-msgstr "士气加成"
+msgstr " - 士气加成"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.NAME"
@@ -275,13 +437,14 @@ msgstr "植物园"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.TOOLTIP"
-msgid "Serene harmony of exotic plants amazes everyone who enters Botanical Garden."
+msgid ""
+"Serene harmony of exotic plants amazes everyone who enters Botanical Garden."
 msgstr "不同风情的植物宁静和谐相处，让每一个参观植物园的人惊叹。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT"
-msgid " - (no additional effect)"
-msgstr "无额外效果"
+msgid " - Stress: +10% or -10% for {0} cycle"
+msgstr " - 压力: +10% 或 -10% 每{0}周期"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME"
@@ -295,8 +458,8 @@ msgstr "让复制人感到活着真好。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT"
-msgid " - Faster athletics increase"
-msgstr "更快的运动增长"
+msgid " - Faster athletics increase by {0}"
+msgstr " - 更快的运动增长{0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.NAME"
@@ -311,7 +474,7 @@ msgstr "专业健身房让复制人更有效地锻炼。"
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.EFFECT"
 msgid " - (no additional effect)"
-msgstr "无额外效果"
+msgstr " - 无额外效果"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.INDUSTRIAL.NAME"
@@ -325,13 +488,13 @@ msgstr "这个房间里有一些嘈杂、油腻的机器。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.EFFECT"
-msgid " - More food produced"
-msgstr "生产更多食物"
+msgid " - More food produced: +{0}"
+msgstr " - 生产食物增加: +{0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.NAME"
 msgid "Kitchenette"
-msgstr "厨房"
+msgstr "小厨房"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.KITCHENETTE.TOOLTIP"
@@ -340,8 +503,8 @@ msgstr "没人敢在大厨的眼皮底下偷吃。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.EFFECT"
-msgid " - Faster research"
-msgstr "更快地研究"
+msgid " - Research faster by {0}"
+msgstr " - 研究速度增加{0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.NAME"
@@ -355,23 +518,72 @@ msgstr "在专门的房间内进行研究会更有效率。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT"
-msgid " - Morale bonus"
-msgstr "士气加成"
+msgid ""
+" • <style=\"KKeyword\">Morale</style>: +{0} of duplicant's Creativity skill "
+"as morale (up to +10)"
+msgstr ""
+" • <style=\"KKeyword\">士气</style>: +{0}点复制人的创作技能作为士气(最多+10)"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.NAME"
-msgid "Museum"
-msgstr "博物馆"
+msgid "Art Museum"
+msgstr "艺术博物馆"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP"
-msgid "It used to be a storehouse, before Meep confused Pedestal content with art."
+msgid ""
+"It used to be a storehouse, before Meep confused Pedestal content with art."
 msgstr "曾经不过是个仓库，直到米珀把基座上的东西认作艺术品。"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMHISTORY.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMHISTORY.EFFECT"
+msgid ""
+" • <style=\"KKeyword\">Morale</style>: +{0} of duplicant's Science skill as "
+"morale (up to +10)"
+msgstr ""
+" • <style=\"KKeyword\">士气</style>: +{0}点复制人的科学技能作为士气(最多+10)"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMHISTORY.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMHISTORY.NAME"
+msgid "History Museum"
+msgstr "历史博物馆"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMHISTORY.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMHISTORY.TOOLTIP"
+msgid "There used to be only rocks before somebody found bones in one of them."
+msgstr "以前只有岩石，直到后来有人在其中发现了骨头。"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT"
+msgid ""
+" • <style=\"KKeyword\">Morale</style>: \n"
+"\t + {0} of duplicant's Piloting skill as morale (up to +10)\n"
+"    After \"Cosmic Archaeology\" completion: \n"
+"\t additional +1 for each unique artifact (up to +5) \n"
+"\t additional +1 for each 2 more unique artifacts (up to +5)\n"
+"\t additional +1 for each 3 more unique artifacts (up to +5)"
+msgstr ""
+" • <style=\"KKeyword\">士气</style>: \n"
+"\t + {0}点复制人的驾驶技能作为士气(最多+10)\n"
+"    “宇宙古迹”完成后： \n"
+"\t 额外+1 每件独特的工艺品 (最多+5) \n"
+"\t 额外+1 每两件独特的工艺品 (最多+5)\n"
+"\t 额外+1 每三件独特的工艺品 (最多+5)"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME"
+msgid "Space Museum"
+msgstr "太空博物馆"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP"
+msgid "Perfect for storing Ancient Knowledge on the pedestals."
+msgstr "非常适合在基座上展示远古学识。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.EFFECT"
-msgid " - Chance for additional seeds"
-msgstr "收获额外种子的机会"
+msgid " - Chance for additional seeds: {0}"
+msgstr " - 收获额外种子的机会：{0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.NAME"
@@ -383,10 +595,46 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERY.TOOLTIP"
 msgid "Enriched environment improves plant development."
 msgstr "丰富的环境有助于培育植物。"
 
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERYGENETIC.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERYGENETIC.EFFECT"
+msgid " - Increased chance for seed dropping or genetic mutation: +{0}"
+msgstr " - 增加掉落种子或遗传变异的机会：+{0}"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERYGENETIC.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERYGENETIC.NAME"
+msgid "Genetic Nursery"
+msgstr "遗传育种室"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERYGENETIC.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.NURSERYGENETIC.TOOLTIP"
+msgid "Specialized laboratories improve harvests."
+msgstr "专业化的实验室提高了收成。"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT"
+msgid ""
+" • <style=\"KKeyword\">Morale</style>: \n"
+"\t +2 when using basic bed \n"
+"\t +3 when using luxury bed"
+msgstr ""
+" • <style=\"KKeyword\">士气</style>: \n"
+"\t +2 使用基础床铺 \n"
+"\t +3 使用舒适的床"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.NAME"
+msgid "Private Bedroom"
+msgstr "私人卧室"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.PRIVATEROOM.TOOLTIP"
+msgid "For duplicants who want to have some privacy."
+msgstr "给想要一些私人空间的复制人。"
+
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT"
-msgid " - Shorter shower time"
-msgstr "淋浴时间更短"
+msgid " - Shorter shower time by {0}"
+msgstr " - 减少淋浴时间{0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.NAME"
@@ -402,3 +650,19 @@ msgstr "一进入这样漂亮的浴室，复制人感到仿佛重新打印了一
 msgctxt "RoomsExpanded.STRINGS.TRANSLATION.AUTHOR.NAME"
 msgid "pether.pg"
 msgstr "Ventulus"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.DESCRIPTION"
+#~ msgid "At least {0} Plants growing seeds of different types."
+#~ msgstr "至少{0}种长出不同种子的植物。"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT"
+#~ msgid " - (no additional effect)"
+#~ msgstr "无额外效果"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.EFFECT"
+#~ msgid " - Faster research"
+#~ msgstr "更快地研究"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT"
+#~ msgid " - Morale bonus"
+#~ msgstr "士气加成"
