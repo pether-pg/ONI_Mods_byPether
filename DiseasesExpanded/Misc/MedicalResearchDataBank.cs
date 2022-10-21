@@ -11,6 +11,9 @@ namespace DiseasesExpanded
 
         public static void GrantResearchPoints(GameObject go, float amount = 1)
         {
+            if (!Settings.Instance.EnableMedicalResearchPoints)
+                return;
+
             TechInstance techToBoost = FindTechToBoost();
             if (techToBoost == null)
                 return;
@@ -94,10 +97,11 @@ namespace DiseasesExpanded
             Util.KDestroyGameObject(inst);
         }
 
-        public GameObject CreatePrefab()
+        private void DefineRecipes()
         {
             Dictionary<string, float> FlaskEfficiency = new Dictionary<string, float>()
             {
+                { UnspecifiedFlask.ID, 1 },
                 { PollenFlask.ID, 1 },
                 { FoodGermsFlask.ID, 1 },
                 { SlimelungFlask.ID, 2 },
@@ -110,7 +114,7 @@ namespace DiseasesExpanded
                 { MutatingGermFlask.ID, 2 }
             };
 
-            foreach(string flask in FlaskEfficiency.Keys)
+            foreach (string flask in FlaskEfficiency.Keys)
             {
                 ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[1]
                 {
@@ -129,6 +133,12 @@ namespace DiseasesExpanded
                     sortOrder = 15
                 };
             }
+        }
+
+        public GameObject CreatePrefab()
+        {
+            if(Settings.Instance.EnableMedicalResearchPoints)
+                DefineRecipes();
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(
                 ID,

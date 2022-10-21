@@ -40,7 +40,6 @@ namespace DiseasesExpanded
                     { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
                     { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
                     { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
-                    { GermIdx.HungerGermsIdx, HungermsFlask.ID },
                     { GermIdx.AlienGermsIdx, AlienGermFlask.ID },
                     { GermIdx.MutatingGermsIdx, MutatingGermFlask.ID }
             };
@@ -87,15 +86,18 @@ namespace DiseasesExpanded
         }
         private void SpawnFlask(byte idx)
         {
+            GatheredGerms[idx] = 0;
+
             string id = string.Empty;
             if (SpawnedFlasks.ContainsKey(idx))
                 id = SpawnedFlasks[idx];
+            else
+                id = UnspecifiedFlask.ID;
 
             if (!string.IsNullOrEmpty(id))
             {
-                GatheredGerms[idx] = 0;
                 GameObject gameObject = GameUtil.KInstantiate(Assets.GetPrefab(id), this.transform.GetPosition() + new Vector3(-0.2f, 1.0f, 0), Grid.SceneLayer.Ore);
-                if ((UnityEngine.Object)gameObject != (UnityEngine.Object)null)
+                if (gameObject != null)
                 {
                     PrimaryElement element = gameObject.GetComponent<PrimaryElement>();
                     if (element != null)

@@ -92,8 +92,11 @@ namespace DiseasesExpanded
         [HarmonyPatch("GetTier")]
         public class Techs_GetTier_Patch
         {
-            public static void Postfix(Techs __instance, Tech tech, ref int __result)
+            public static void Postfix(Tech tech, ref int __result)
             {
+                if (!Settings.Instance.EnableMedicalResearchPoints)
+                    return;
+
                 if (Techs_Constructor_Patch.FirstExtraTier == 0)
                     return;
                 if (tech.Id == "MedicineII") // Medicine III and IV will advance as well due to GetTier()'s recursion
@@ -110,6 +113,9 @@ namespace DiseasesExpanded
         {
             public static void Prefix(DoctorStation __instance)
             {
+                if (!Settings.Instance.EnableMedicalResearchPoints)
+                    return;
+
                 if (__instance.requiredSkillPerk == Db.Get().SkillPerks.CanAdvancedMedicine.Id)
                     MedicalResearchDataBank.GrantResearchPoints(__instance.gameObject, 4);
                 else
@@ -123,6 +129,9 @@ namespace DiseasesExpanded
         {
             public static void Postfix(Clinic.ClinicSM.Instance __instance)
             {
+                if (!Settings.Instance.EnableMedicalResearchPoints)
+                    return;
+
                 WorkChore<DoctorChoreWorkable> doctorChore = Traverse.Create(__instance).Field("doctorChore").GetValue<WorkChore<DoctorChoreWorkable>>();
                 if (doctorChore != null)
                     doctorChore.onComplete = doctorChore.onComplete + (System.Action<Chore>)(chore => MedicalResearchDataBank.GrantResearchPoints(__instance.gameObject, 1));

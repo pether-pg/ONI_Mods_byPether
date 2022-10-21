@@ -64,12 +64,14 @@
     <Compile Include="Buildings\VaccineApothecary.cs" />
     <Compile Include="Buildings\VaccineApothecaryConfig.cs" />
     <Compile Include="Buildings\VaccineApothecaryWorkable.cs" />
+    <Compile Include="CritterSicknessMonitor.cs" />
     <Compile Include="Cures\AllergyVaccineConfig.cs" />
     <Compile Include="Cures\AntihistamineBoosterConfig.cs" />
     <Compile Include="Cures\SuperSerumConfig.cs" />
     <Compile Include="Cures\MutatingAntiviralConfig.cs" />
     <Compile Include="GermFlasks\AlienGermFlask.cs" />
     <Compile Include="GermFlasks\MutatingGermFlask.cs" />
+    <Compile Include="GermFlasks\UnspecifiedFlask.cs" />
     <Compile Include="Germs\AlienGerms.cs" />
     <Compile Include="Germs\MutatingGerms.cs" />
     <Compile Include="MutatingDisease\ControlledAttackMutationConfig.cs" />

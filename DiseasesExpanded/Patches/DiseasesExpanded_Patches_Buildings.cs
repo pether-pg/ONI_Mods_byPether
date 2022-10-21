@@ -35,7 +35,9 @@ namespace DiseasesExpanded
 				if (tech1 != null)
 				{
 					tech1.unlockedItemIDs.Add(GermcatcherConfig.ID);
-					tech1.unlockedItemIDs.Add(MedicalResearchDataBank.ID);
+					
+					if (Settings.Instance.EnableMedicalResearchPoints)
+						tech1.unlockedItemIDs.Add(MedicalResearchDataBank.ID);
 				}
 				Tech tech2 = __instance.TryGet("MedicineIV");
 				if (tech2 != null)

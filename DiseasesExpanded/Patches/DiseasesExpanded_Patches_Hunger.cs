@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using HarmonyLib;
 using UnityEngine;
+using Klei.AI;
 
 namespace DiseasesExpanded
 {
@@ -33,6 +34,40 @@ namespace DiseasesExpanded
                 def.averageEmitPerSecond = 1000;
                 def.singleEmitQuantity = 100000;
                 __result.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = HungerGerms.ID;
+            }
+        }
+
+        [HarmonyPatch(typeof(EntityTemplates))]
+        [HarmonyPatch("ExtendEntityToWildCreature")]
+        public static class EntityTemplates_ExtendEntityToWildCreature_Patch
+        {
+            public static void Postfix(ref GameObject __result)
+            {
+                __result.AddOrGet<CritterSicknessMonitor>();
+            }
+        }
+
+        [HarmonyPatch(typeof(RanchStation.Instance))]
+        [HarmonyPatch(nameof(RanchStation.Instance.RanchCreature))]
+        public static class RanchStationInstance_DoPostConfigureComplete_Patch
+        {
+            public static void Prefix(RanchStation.Instance __instance)
+            {
+                RanchedStates.Instance activeRanchable = Traverse.Create(__instance).Field("activeRanchable").GetValue<RanchedStates.Instance>() ;
+                if (activeRanchable == null)
+                    return;
+
+                GameObject creature_go = activeRanchable.gameObject;
+                Effects effects = creature_go.GetComponent<Effects>();
+                if (effects == null || !effects.HasEffect(HungerSickness.CRITTER_EFFECT_ID))
+                    return;
+
+                RanchStation.Instance targetRanchStation = creature_go.GetSMI<RanchableMonitor.Instance>().TargetRanchStation;
+                RancherChore.RancherChoreStates.Instance smi = targetRanchStation.GetSMI<RancherChore.RancherChoreStates.Instance>();
+                float medicineLvl = targetRanchStation.GetSMI<RancherChore.RancherChoreStates.Instance>().sm.rancher.Get(smi).GetAttributes().Get(Db.Get().Attributes.Caring.Id).GetTotalValue();
+                float reductionScale = 1.0f + medicineLvl * 0.1f;
+
+                effects.Get(HungerSickness.CRITTER_EFFECT_ID).timeRemaining -= 600 * reductionScale;
             }
         }
     }

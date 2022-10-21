@@ -13,7 +13,7 @@ namespace DiseasesExpanded
             {
                 germ_id = HungerGerms.ID,
                 sickness_id = HungerSickness.ID,
-                exposure_threshold = 1,
+                exposure_threshold = 100,
                 excluded_traits = new List<string>() { },
                 base_resistance = 2,
                 excluded_effects = new List<string>()
@@ -38,7 +38,7 @@ namespace DiseasesExpanded
         public HungerGerms(bool statsOnly)
             : base(id: HungerGerms.ID, 
                   strength: (byte)50, 
-                  temperature_range: new Disease.RangeInfo(-100 + degC, resinFreezingK - 25, resinTurningK - 25, resinTurningK), 
+                  temperature_range: new Disease.RangeInfo(-30 + degC, resinFreezingK - 25, resinTurningK - 25, resinTurningK), 
                   temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f), 
                   pressure_range: new Disease.RangeInfo(0.0f, 0.0f, 1000f, 1000f), 
                   pressure_half_lives: Disease.RangeInfo.Idempotent(),

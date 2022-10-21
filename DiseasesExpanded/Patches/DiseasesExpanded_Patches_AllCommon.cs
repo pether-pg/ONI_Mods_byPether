@@ -82,6 +82,8 @@ namespace DiseasesExpanded
                 alienRecovery.SelfModifiers = new List<AttributeModifier>();
                 alienRecovery.SelfModifiers.Add(new AttributeModifier("StressDelta", 2 * AlienSickness.stressPerSecond, (string)STRINGS.DISEASES.ALIENSICKNESS.NAME));
 
+                Db.Get().effects.Add(HungerSickness.GetCritterSicknessEffect());
+
                 Db.Get().effects.Add(new Effect(FrostSickness.RECOVERY_ID, STRINGS.EFFECTS.FROSTRECOVERY.NAME, STRINGS.EFFECTS.FROSTRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(GasSickness.RECOVERY_ID, STRINGS.EFFECTS.GASRECOVERY.NAME, STRINGS.EFFECTS.GASRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(HungerSickness.RECOVERY_ID, STRINGS.EFFECTS.HUNGERRECOVERY.NAME, STRINGS.EFFECTS.HUNGERRECOVERY.DESC, cycle2, true, true, false));
