@@ -29,7 +29,7 @@ namespace SymbioticGerms
             float temperature = goPrimary.Temperature;
             Element element = ElementLoader.FindElementByHash(gasHash);
             if (amount > 0)
-                SimMessages.AddRemoveSubstance(Grid.PosToCell(go), (int)element.idx, CellEventLogger.Instance.ElementConsumerSimUpdate, amount, temperature, germIdx, higherGerms);
+                SimMessages.AddRemoveSubstance(Grid.PosToCell(go), element.id, CellEventLogger.Instance.ElementConsumerSimUpdate, amount, temperature, germIdx, higherGerms);
         }
 
         public static void SpawnAdditionalFood(GameObject go, byte germIdx, float maxBonus, Crop crop)

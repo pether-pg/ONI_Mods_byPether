@@ -19,18 +19,17 @@ namespace SymbioticGerms
 
                 if (go.name.Contains("Oilfloater")) // include modded ones
                     BonusFunctions.AdditionalLiquidPoop(go, __instance, Numbers.IndexZombieSpores, Settings.Instance.MaxSlicksterBonus);
-                if (go.name == "PacuAlgae")
+                if (go.HasTag("PacuAlgae"))
                     BonusFunctions.AdditionalSolidPoop(go, __instance, Numbers.IndexFoodPoisoning, Settings.Instance.MaxPacuBonus);
-                if (go.name == "DreckoOpulent")
+                if (go.HasTag("DreckoOpulent"))
                     BonusFunctions.AdditionalSolidPoop(go, __instance, Numbers.IndexSlimeLung, Settings.Instance.MaxDreckoBonus);
-                if (go.name == "PuftCO2")
+                if (go.HasTag("PuftCO2"))
                     BonusFunctions.AdditionalSolidPoop(go, __instance, Numbers.IndexZombieSpores, Settings.Instance.MaxPuftBonus);
             }
         }
 
         [HarmonyPatch(typeof(Crop))]
-        //[HarmonyPatch("SpawnFruit")] // vanilla
-        [HarmonyPatch("SpawnSomeFruit")] // dlc
+        [HarmonyPatch("SpawnSomeFruit")]
         public class Crop_SpawnFruit_Patch
         {
 
@@ -41,17 +40,17 @@ namespace SymbioticGerms
                 if (go == null)
                     return;
 
-                if (go.name == "MushroomPlant")
+                if (go.HasTag("MushroomPlant"))
                     BonusFunctions.SpawnGas(go, Numbers.IndexSlimeLung, Settings.Instance.MaxDuskCupBonus, SimHashes.ContaminatedOxygen);
-                if (go.name == "BasicSingleHarvestPlant")
+                if (go.HasTag("BasicSingleHarvestPlant"))
                     BonusFunctions.SpawnAdditionalFood(go, Numbers.IndexFoodPoisoning, Settings.Instance.MaxMealLiceBonus, __instance);
-                if (go.name == "SwampHarvestPlant")
+                if (go.HasTag("SwampHarvestPlant"))
                     BonusFunctions.SpawnAdditionalFood(go, Numbers.IndexFoodPoisoning, Settings.Instance.MaxBogBucketBonus, __instance);
-                if (go.name == "ColdWheat")
+                if (go.HasTag("ColdWheat"))
                     BonusFunctions.ChanceForDoubleHarvest(go, Numbers.IndexZombieSpores, Settings.Instance.MaxWheatChance, __instance);
-                if (go.name == "BeanPlant")
+                if (go.HasTag("BeanPlant"))
                     BonusFunctions.ChanceForDoubleHarvest(go, Numbers.IndexZombieSpores, Settings.Instance.MaxBeansChance, __instance);
-                if (go.name == "SpiceVine")
+                if (go.HasTag("SpiceVine"))
                 {
                     __state = Numbers.GetGermKillTempDelta(go) * Settings.Instance.MaxPepperTempScale;
                     BonusFunctions.ModifyTemperature(go, __state);
