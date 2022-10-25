@@ -15,7 +15,7 @@ namespace DiseasesExpanded
                 sickness_id = GasSickness.ID,
                 exposure_threshold = (Settings.Instance.RebalanceForDiseasesRestored ? 10 : 100),
                 excluded_traits = new List<string>() { "Flatulence" },
-                base_resistance = 2,
+                base_resistance = 1,
                 infect_immediately = true,
                 excluded_effects = new List<string>()
                     {
@@ -59,7 +59,7 @@ namespace DiseasesExpanded
 
             // Gas
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, 12000f, 1200f, 10000f, 0.005f, 5100));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, 12000f, 1200f, 10000f, 0.001f, 1000));
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveInElement(SimHashes.Oxygen));
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveInElement(SimHashes.ChlorineGas));
@@ -80,6 +80,7 @@ namespace DiseasesExpanded
             {
                 populationHalfLife = new float?(float.PositiveInfinity)
             });
+            this.AddExposureRule((ExposureRule)GermGrowthRules.ExposureLike_Slimelung_PollutedOxygen(SimHashes.Methane));
         }
     }
 }
