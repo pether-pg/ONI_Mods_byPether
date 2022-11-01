@@ -8,7 +8,7 @@ namespace DiseasesExpanded
 {
     class ModInfo : KMod.UserMod2
     {
-        public static string Namespace = "";
+        public static string Namespace { get; private set; }
 
         public override void OnLoad(Harmony harmony)
         {

@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Signs Tags and Ribbons" 
+# currently unused, but may be someday
+description: "Adds various signs for your base." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.SignsTagsAndRibbons" 
