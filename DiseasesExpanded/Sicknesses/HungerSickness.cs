@@ -13,12 +13,11 @@ namespace DiseasesExpanded
         public const string CRITTER_EFFECT_ID = "CritterHungerSickness";
         public const string RECOVERY_ID = "HungerSicknessRecovery";
         public const float caloriesPerDay = 1666.682f;
-
         public static Effect GetCritterSicknessEffect()
         {
             Effect effect = new Effect(CRITTER_EFFECT_ID, STRINGS.DISEASES.HUNGERSICKNESS.NAME, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION, DURATION, true, true, true);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().CritterAttributes.Metabolism.Id, -100));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().CritterAttributes.Metabolism.Id, 100 * (Settings.Instance.RebalanceForDiseasesRestored ? 3 : 1)));
             return effect;
         }
 

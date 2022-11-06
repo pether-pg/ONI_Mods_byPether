@@ -71,6 +71,7 @@
     <Compile Include="Cures\MutatingAntiviralConfig.cs" />
     <Compile Include="GermFlasks\AlienGermFlask.cs" />
     <Compile Include="GermFlasks\MutatingGermFlask.cs" />
+    <Compile Include="GermFlasks\TestSampleConfig.cs" />
     <Compile Include="GermFlasks\UnspecifiedFlask.cs" />
     <Compile Include="Germs\AlienGerms.cs" />
     <Compile Include="Germs\MutatingGerms.cs" />

@@ -70,7 +70,7 @@ namespace DiseasesExpanded
                 if (catcher.GetCurrentGermIdx() == GermIdx.Invalid)
                     return string.Empty;
 
-                int percentProgress = 100 * catcher.GetCurrentGermCount() / catcher.GatherThreshold;
+                int percentProgress = 100 * catcher.GetCurrentGermCount() / Germcatcher.GatherThreshold;
 
                 return STRINGS.STATUSITEMS.GATHERING.PROGRESS
                     .Replace("{GERMS}", catcher.GetCurrentGermName())

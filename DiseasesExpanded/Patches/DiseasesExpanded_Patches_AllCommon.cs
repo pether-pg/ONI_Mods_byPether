@@ -104,6 +104,8 @@ namespace DiseasesExpanded
                 Db.Get().effects.Add(new Effect(HungermsVaccineConfig.EffectID, HungermsVaccineConfig.Name, HungermsVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(GassyVaccineConfig.EffectID, GassyVaccineConfig.Name, GassyVaccineConfig.Desc, cycle50, true, true, false));
 
+                Db.Get().effects.Add(new Effect(TestSampleConfig.EFFECT_ID, STRINGS.EFFECTS.JUSTGOTTESTED.NAME, STRINGS.EFFECTS.JUSTGOTTESTED.DESC, cycle2, true, true, false));
+
                 StatusItem statusItem = new StatusItem(GermcatcherConfig.StatusItemID, "BUILDINGS", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
                 statusItem.SetResolveStringCallback((str, data) => str += ((GermcatcherController.Instance)data).GetStatusItemProgress());
                 Db.Get().BuildingStatusItems.Add(statusItem);

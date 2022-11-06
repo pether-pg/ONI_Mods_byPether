@@ -170,6 +170,12 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Mutating Disease Recovery";
                 public static LocString DESC = (LocString)"This duplicant just recovered from Mutating Disease.";
             }
+
+            public class JUSTGOTTESTED
+            {
+                public static LocString NAME = (LocString)"Just Got Tested";
+                public static LocString DESC = (LocString)"This Duplicant just delivered germ sample for futher testing.";
+            }
         }
 
         public class CURES
@@ -221,6 +227,12 @@ namespace DiseasesExpanded
             public static LocString NAME = (LocString)"{0} Flask";
             public static LocString DESC = (LocString)"Contains gathered {0} germs.";
             public static LocString DESC_NOGERM = (LocString)"Contains gathered {0}.";
+        }
+
+        public class GERMFLASKSAMPLE
+        {
+            public static LocString NAME = (LocString)"Test Sample Flask";
+            public static LocString DESC = (LocString)"Can gather germ sample from infected duplicant";
         }
 
         public class MEDICALRESEARCH

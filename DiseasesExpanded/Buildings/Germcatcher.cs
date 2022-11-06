@@ -11,12 +11,12 @@ namespace DiseasesExpanded
         [Serialize]
         public Dictionary<byte, int> GatheredGerms = new Dictionary<byte, int>();
 
-        public int GatherThreshold = 100000;
+        public const int GatherThreshold = 100000;
         public int EfficiencyDivider = 500;
         public Vector2Int GatherOffset = new Vector2Int(1, 1);
 
         private byte lastGatheredIdx = byte.MaxValue;
-        private Dictionary<byte, string> SpawnedFlasks = DlcManager.IsExpansion1Active() ?
+        public static Dictionary<byte, string> SpawnedFlasks = DlcManager.IsExpansion1Active() ?
             new Dictionary<byte, string>()
             {
                     { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
