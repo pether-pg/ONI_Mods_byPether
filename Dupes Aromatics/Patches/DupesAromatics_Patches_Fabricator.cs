@@ -4,7 +4,6 @@ using System;
 using UnityEngine;
 using Klei.AI;
 using System.Collections.Generic;
-using Dupes_Aromatics.Germs;
 
 namespace Dupes_Aromatics.Patches
 {
@@ -21,9 +20,9 @@ namespace Dupes_Aromatics.Patches
                 cf.duplicantOperated = false;
                 BuildingTemplates.CreateComplexFabricatorStorage(go, cf);
 
-                AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(SimHashes.Dirt.CreateTag(), 1f) }, RoseScent.ID, "RoseScent recipe");
-                AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(SimHashes.Sand.CreateTag(), 1f) }, LavenderScent.ID, "LavenderScent recipe");
-                AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(SimHashes.SlimeMold.CreateTag(), 1f) }, SlimeGerms.ID, "SlimeGerms recipe");
+                //AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(SimHashes.Dirt.CreateTag(), 1f) }, RoseScent.ID, "RoseScent recipe");
+                //AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(SimHashes.Sand.CreateTag(), 1f) }, LavenderScent.ID, "LavenderScent recipe");
+                //AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(SimHashes.SlimeMold.CreateTag(), 1f) }, SlimeGerms.ID, "SlimeGerms recipe");
             }
         }
     }

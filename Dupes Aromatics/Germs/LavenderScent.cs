@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Dupes_Aromatics.Misc;
 
-namespace Dupes_Aromatics.Germs
+namespace Dupes_Aromatics
 {
     class LavenderScent : Disease
     {
@@ -28,16 +28,37 @@ namespace Dupes_Aromatics.Germs
         {
             return new ExposureType()
             {
-                germ_id = LavenderScent.ID,
-                infection_effect = "SmelledFlowers",
+                germ_id = ID,
+                infection_effect = EFFECT_ID,
                 exposure_threshold = 2,
                 infect_immediately = true,
                 excluded_traits = new List<string>() { "Allergies" }
             };
         }
 
+        public static Effect GetSmellEffect()
+        {
+            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME, STRINGS.EFFECTS.SMELLEDLAVENDER.DESC, EFFECT_TIME, true, true, false);
+            effect.SelfModifiers = new List<AttributeModifier>();
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Botanist.Name, EFFECT_STR, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Ranching.Name, EFFECT_STR, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Cooking.Name, EFFECT_STR, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            return effect;
+        }
+
+        public static Effect GetCritterEffect()
+        {
+            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME, STRINGS.EFFECTS.SMELLEDLAVENDER.DESC, EFFECT_TIME, true, true, false);
+            effect.SelfModifiers = new List<AttributeModifier>();
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().CritterAttributes.Happiness.Id, 1, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.Wildness.deltaAttribute.Id, -5 / 600.0f, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            return effect;
+        }
+
         public const string ID = nameof(LavenderScent);
         public const string EFFECT_ID = "SmelledLavender";
+        public const float EFFECT_TIME = 300;
+        public const float EFFECT_STR = 1;
         public static Color32 colorValue = new Color32(255, 0, 255, 255);
 
         private const float plantTempLethalLow = 218.15f; // from EntityTemplates.ExtendEntityToBasicPlant()

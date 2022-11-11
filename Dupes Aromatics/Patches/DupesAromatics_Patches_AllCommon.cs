@@ -4,7 +4,6 @@ using System;
 using UnityEngine;
 using Klei.AI;
 using System.Collections.Generic;
-using Dupes_Aromatics.Germs;
 
 namespace Dupes_Aromatics.Patches
 {
@@ -107,6 +106,16 @@ namespace Dupes_Aromatics.Patches
             {
                 __instance.dead.ToggleTag(GameTags.PreventEmittingDisease);
                 __instance.alive.wilting.ToggleTag(GameTags.PreventEmittingDisease);
+            }
+        }
+
+        [HarmonyPatch(typeof(EntityTemplates))]
+        [HarmonyPatch("ExtendEntityToWildCreature")]
+        public static class EntityTemplates_ExtendEntityToWildCreature_Patch
+        {
+            public static void Postfix(ref GameObject __result)
+            {
+                __result.AddOrGet<LavenderSmelling>();
             }
         }
     }

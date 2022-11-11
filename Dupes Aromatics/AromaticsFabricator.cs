@@ -7,7 +7,7 @@ namespace Dupes_Aromatics
 {
     class AromaticsFabricator : ComplexFabricator, ISim200ms
     {
-        public const string FabricatorId = AirFilterConfig.ID;
+        public const string FabricatorId = VaporizerConfig.ID;
         public const float RecipeTime = 60;
         private string LastGermId = string.Empty;
 

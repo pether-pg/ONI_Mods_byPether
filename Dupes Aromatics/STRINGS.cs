@@ -28,6 +28,69 @@ namespace Dupes_Aromatics
             }
         }
 
+        public class BUILDINGS
+        {
+            public class VAPORIZER
+            {
+                public static LocString NAME = "Vaporizer";
+                public static LocString DESC = "While working, releases various scents into the air.";
+                public static LocString EFFECT = "While working, releases various scents into the air.";
+            }
+        }
+
+        public class AROMATICCANS
+        {
+            public class FLORAL
+            {
+                public static LocString NAME = "Floral Scent Can";
+                public static LocString DESC = "Can full of Floral Scent, ready for Vaporizer.";
+            }
+
+            public class ROSE
+            {
+                public static LocString NAME = "Rose Scent Can";
+                public static LocString DESC = "Can full of Rose Scent, ready for Vaporizer.";
+            }
+
+            public class LAVENDER
+            {
+                public static LocString NAME = "Lavender Scent Can";
+                public static LocString DESC = "Can full of Lavender Scent, ready for Vaporizer.";
+            }
+
+            public class MALLOW
+            {
+                public static LocString NAME = "Mallow Scent Can";
+                public static LocString DESC = "Can full of Rose Scent, ready for Vaporizer.";
+            }
+        }
+
+        public class FOOD
+        {
+            public class DUSKJAM
+            {
+                public static LocString NAME = "Duskjam";
+                public static LocString DESC = "A long lasting " + UI.FormatAsLink(CROPS.DUSKBERRY.NAME, Crop_DuskberryConfig.ID) + " jam preserved in " + UI.FormatAsLink("Sucrose", "SUCROSE") + ".";
+            }
+
+            public class SPINOSASYRUP
+            {
+                public static LocString NAME = "Spinosa Syrup";
+                public static LocString DESC = "A long lasting " + UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Crop_SpinosaHipsConfig.ID) + " syrup preserved in " + UI.FormatAsLink("Sucrose", "SUCROSE") + ".";
+            }
+            public class DUSKBUN
+            {
+                public static LocString NAME = "Duskbun";
+                public static LocString DESC = "A bun filled with " + UI.FormatAsLink(FOOD.DUSKJAM.NAME, DuskjamConfig.ID) + ".";
+            }
+
+            public class SPINOSACAKE
+            {
+                public static LocString NAME = "Spinosa Cake";
+                public static LocString DESC = "A delicious cake with " + UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Plants.Crop_SpinosaHipsConfig.ID) + " on top.";
+            }
+        }
+
         public class DESCRIPTORS
         {
             public class SPAWNGERMS
@@ -43,6 +106,16 @@ namespace Dupes_Aromatics
             {
                 public static LocString NAME = (LocString)"Smelled Roses";
                 public static LocString DESC = (LocString)"This duplicant just smelled some Roses.";
+            }
+            public class SMELLEDLAVENDER
+            {
+                public static LocString NAME = (LocString)"Smelled Lavender";
+                public static LocString DESC = (LocString)"This one just smelled some Lavender.";
+            }
+            public class SMELLEDMALLOW
+            {
+                public static LocString NAME = (LocString)"Smelled Mallow";
+                public static LocString DESC = (LocString)"This duplicant just smelled some Mallow.";
             }
         }
 

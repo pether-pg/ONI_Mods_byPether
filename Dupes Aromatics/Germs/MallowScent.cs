@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Dupes_Aromatics.Misc;
 
-namespace Dupes_Aromatics.Germs
+namespace Dupes_Aromatics
 {
     class MallowScent : Disease
     {
@@ -36,8 +36,20 @@ namespace Dupes_Aromatics.Germs
             };
         }
 
+        public static Effect GetSmellEffect()
+        {
+            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDMALLOW.NAME, STRINGS.EFFECTS.SMELLEDMALLOW.DESC, EFFECT_TIME, true, true, false);
+            effect.SelfModifiers = new List<AttributeModifier>();
+            effect.SelfModifiers.Add(new AttributeModifier("Athletics", EFFECT_STR, STRINGS.EFFECTS.SMELLEDMALLOW.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Strength", EFFECT_STR, STRINGS.EFFECTS.SMELLEDMALLOW.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Machinery", EFFECT_STR, STRINGS.EFFECTS.SMELLEDMALLOW.NAME));
+            return effect;
+        }
+
         public const string ID = nameof(MallowScent);
         public const string EFFECT_ID = "SmelledMallow";
+        public const float EFFECT_TIME = 300;
+        public const float EFFECT_STR = 1;
         public static Color32 colorValue = new Color32(255, 255, 255, 255);
 
         private const float plantTempLethalLow = 218.15f; // from EntityTemplates.ExtendEntityToBasicPlant()

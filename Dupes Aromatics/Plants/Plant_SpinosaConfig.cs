@@ -4,7 +4,6 @@ using UnityEngine;
 using STRINGS;
 using System.Collections.Generic;
 using Klei.AI;
-using Dupes_Aromatics.Germs;
 
 namespace Dupes_Aromatics.Plants
 {

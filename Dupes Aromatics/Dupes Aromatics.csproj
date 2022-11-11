@@ -80,7 +80,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AromaticCans\FloralAromaticCanConfig.cs" />
+    <Compile Include="AromaticCans\LavenderAromaticCanConfig.cs" />
+    <Compile Include="AromaticCans\MallowAromaticCanConfig.cs" />
     <Compile Include="AromaticsFabricator.cs" />
+    <Compile Include="Food\DuskbunConfig.cs" />
+    <Compile Include="Food\DuskjamConfig.cs" />
+    <Compile Include="Food\SpinosaCakeConfig.cs" />
+    <Compile Include="LavenderSmelling.cs" />
+    <Compile Include="Patches\Aromatics_Patches_Buildings.cs" />
+    <Compile Include="Misc\BasicModUtils.cs" />
     <Compile Include="Germs\LavenderScent.cs" />
     <Compile Include="Germs\MallowScent.cs" />
     <Compile Include="Germs\RoseScent.cs" />
@@ -103,7 +112,10 @@
     <Compile Include="Plants\Plant_SuperSpinosaConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterStrings.cs" />
+    <Compile Include="AromaticCans\RoseAromaticCanConfig.cs" />
+    <Compile Include="Food\SpinosaSyrupConfig.cs" />
     <Compile Include="STRINGS.cs" />
+    <Compile Include="VaporizerConfig.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

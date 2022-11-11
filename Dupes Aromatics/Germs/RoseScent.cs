@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Dupes_Aromatics.Misc;
 
-namespace Dupes_Aromatics.Germs
+namespace Dupes_Aromatics
 {
     class RoseScent : Disease
     {
@@ -40,13 +40,16 @@ namespace Dupes_Aromatics.Germs
         {
             Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDROSE.NAME, STRINGS.EFFECTS.SMELLEDROSE.DESC, EFFECT_TIME, true, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier("StressDelta", -5.0f / 600.0f, STRINGS.EFFECTS.SMELLEDROSE.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Art", EFFECT_STR, STRINGS.EFFECTS.SMELLEDROSE.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Learning", EFFECT_STR, STRINGS.EFFECTS.SMELLEDROSE.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Caring", EFFECT_STR, STRINGS.EFFECTS.SMELLEDROSE.NAME));
             return effect;
         }
 
         public const string ID = nameof(RoseScent);
         public const string EFFECT_ID = "SmelledRose";
         public const float EFFECT_TIME = 300;
+        public const float EFFECT_STR = 1;
         public static Color32 colorValue = new Color32(255, 0, 0, 255);
 
         private const float plantTempLethalLow = 218.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
