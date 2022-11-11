@@ -109,10 +109,9 @@
     <Compile Include="Buildings\Germcatcher.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Research.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Spindly.cs" />
-    <Compile Include="Patches\DiseasesExpanded_Patches_TemporalTear.cs" />
     <Compile Include="JsonSerializer.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Beetas.cs" />
-    <Compile Include="Patches\DiseasesExpanded_Patches_Vaccines.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_Medicine.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Sicknesses\SpindlySickness.cs" />
     <Compile Include="Misc\SuitWearing.cs" />

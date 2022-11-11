@@ -9,7 +9,6 @@ namespace DiseasesExpanded
         public const string ID = "TestSample";
         public const string EFFECT_ID = "JustGotTested";
         public static ComplexRecipe recipe;
-        private static readonly EventSystem.IntraObjectHandler<Edible> OnEatCompleteDelegate = new EventSystem.IntraObjectHandler<Edible>((System.Action<Edible, object>)((component, data) => TestSampleConfig.OnEatComplete(data)));
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
@@ -19,7 +18,6 @@ namespace DiseasesExpanded
 
         public void OnSpawn(GameObject inst)
         {
-            inst.Subscribe<Edible>(-10536414, TestSampleConfig.OnEatCompleteDelegate);
         }
 
         public void DefineRecipe()
@@ -27,7 +25,7 @@ namespace DiseasesExpanded
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(SimHashes.DirtyWater.CreateTag(), 100f),
+                new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 100f),
                 new ComplexRecipe.RecipeElement(SimHashes.Dirt.CreateTag(), 100f),
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
@@ -64,12 +62,11 @@ namespace DiseasesExpanded
             DefineRecipe();
 
             MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
-            looseEntity.AddTag(GameTags.MedicalSupplies);
             GameObject medical = EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
-            return EntityTemplates.ExtendEntityToFood(medical, new EdiblesManager.FoodInfo(ID, "", 10, 0, 0, 0, 0, false));
+            return medical;
         }
 
-        private static void OnEatComplete(object data)
+        public static void OnEatComplete(object data)
         {
             Debug.Log("TestSampleConfig.OnEatComplete()");
             GameObject worker = (GameObject)data;

@@ -10,6 +10,7 @@ namespace DiseasesExpanded
     {
         public const string ID = "GasSickness";
         public const string RECOVERY_ID = "GasSicknessRecovery";
+        public const int GERMS_PER_FART = 2000;
 
         public GasSickness()
             : base(nameof(GasSickness), Sickness.SicknessType.Pathogen, Sickness.Severity.Minor, 0.00025f, new List<Sickness.InfectionVector>()

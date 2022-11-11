@@ -232,7 +232,7 @@ namespace DiseasesExpanded
         public class GERMFLASKSAMPLE
         {
             public static LocString NAME = (LocString)"Test Sample Flask";
-            public static LocString DESC = (LocString)"Can gather germ sample from infected duplicant";
+            public static LocString DESC = (LocString)"Used to gather germ sample from infected duplicant into a flask for futher testing.";
         }
 
         public class MEDICALRESEARCH

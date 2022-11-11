@@ -11,26 +11,33 @@ namespace DiseasesExpanded
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
-        public GameObject CreatePrefab()
+        private void DefineRecipe(Tag mainIngridient, float amount = 1)
         {
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
-                new ComplexRecipe.RecipeElement((Tag) BasicForagePlantConfig.ID, 1f),
-                new ComplexRecipe.RecipeElement((Tag) SwampLilyFlowerConfig.ID, 1f),
-                new ComplexRecipe.RecipeElement((Tag) SpiceNutConfig.ID, 1f)
+                new ComplexRecipe.RecipeElement(mainIngridient, amount),
+                new ComplexRecipe.RecipeElement(SwampLilyFlowerConfig.ID, 1f),
+                new ComplexRecipe.RecipeElement(SpiceNutConfig.ID, 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
-                new ComplexRecipe.RecipeElement((Tag) ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+                new ComplexRecipe.RecipeElement(ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
             SapShotConfig.recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, ingredients, results), ingredients, results)
             {
                 time = VaccineApothecaryConfig.RecipeTime,
                 description = STRINGS.CURES.MUTATINGANTIVIRAL.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
-                fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
+                fabricators = new List<Tag>() { ApothecaryConfig.ID },
                 sortOrder = 13
             };
+        }
+
+        public GameObject CreatePrefab()
+        {
+            DefineRecipe(BasicForagePlantConfig.ID, 2);
+            DefineRecipe(ForestForagePlantConfig.ID, 0.25f);
+            DefineRecipe(SwampForagePlantConfig.ID, 2 / 3.0f);
 
             MedicineInfo medInfo = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.CureSpecific, null, new string[] { MutatingSickness.ID });
 

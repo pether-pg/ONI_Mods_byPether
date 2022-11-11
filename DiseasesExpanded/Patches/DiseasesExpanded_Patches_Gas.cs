@@ -28,21 +28,26 @@ namespace DiseasesExpanded
         [HarmonyPatch("Emit")]
         public static class Flatulence_Emit_Patch
         {
-            static byte disease_idx = 0;
-
             public static bool Prefix(object data)
             {
                 GameObject gameObject = (GameObject)data;
                 Equippable equippable = gameObject.GetComponent<SuitEquipper>().IsWearingAirtightSuit();
+                int cell = Grid.PosToCell(gameObject.transform.GetPosition());
                 if (equippable == null && gameObject.GetComponent<Effects>().HasEffect(GasCureConfig.EffectID))
                 {
-                    int cell = Grid.PosToCell(gameObject.transform.GetPosition());
-                    if (disease_idx == 0)
-                        disease_idx = Db.Get().Diseases.GetIndex((HashedString)PollenGerms.ID);
-                    SimMessages.ModifyDiseaseOnCell(cell, disease_idx, GasCureConfig.FlowerGermsSpawned);
-
+                    SimMessages.ModifyDiseaseOnCell(cell, GermIdx.PollenGermsIdx, GasCureConfig.FlowerGermsSpawned);
                     return false;
                 }
+
+                Sicknesses sicknesses = gameObject.GetSicknesses();
+                if(sicknesses != null)
+                    foreach (SicknessInstance sicknessInstance in sicknesses)
+                        if (sicknessInstance.modifier.Id == GasSickness.ID)
+                        {
+                            SimMessages.ModifyDiseaseOnCell(cell, GermIdx.GassyGermsIdx, GasSickness.GERMS_PER_FART);
+                            break;
+                        }
+
                 return true;
             }
         }

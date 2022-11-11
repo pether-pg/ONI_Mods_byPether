@@ -16,7 +16,7 @@ namespace DiseasesExpanded
                 exposure_threshold = (Settings.Instance.RebalanceForDiseasesRestored ? 10 : 100),
                 excluded_traits = new List<string>() { "Flatulence" },
                 base_resistance = 1,
-                infect_immediately = true,
+                infect_immediately = false,
                 excluded_effects = new List<string>()
                     {
                       GasSickness.RECOVERY_ID,

@@ -6,8 +6,21 @@ using Klei.AI;
 
 namespace DiseasesExpanded
 {
-    class DiseasesExpanded_Patches_Vaccines
+    class DiseasesExpanded_Patches_Medicine
     {
+        [HarmonyPatch(typeof(MedicinalPillWorkable))]
+        [HarmonyPatch("OnCompleteWork")]
+        public static class MedicinalPillWorkable_OnCompleteWork_Patch
+        {
+            public static void Postfix(MedicinalPillWorkable __instance, Worker worker)
+            {
+                if (__instance.pill.info.effect != TestSampleConfig.EFFECT_ID)
+                    return;
+
+                TestSampleConfig.OnEatComplete(worker.gameObject);
+            }
+        }
+
         /*
          * Not satisfied with final effect, but leaving the code in case I changed my mind later
          *          
