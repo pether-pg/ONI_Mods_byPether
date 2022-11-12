@@ -11,6 +11,7 @@ namespace ExoticCuisine
             public static void Postfix()
             {
                 TUNING.CROPS.CROP_TYPES.Add(new Crop.CropVal(DragonPlantFruitConfig.ID, DragonPlantConfig.CROP_DURATION));
+                TUNING.CROPS.CROP_TYPES.Add(new Crop.CropVal(MantleerPlntFruitConfig.ID, MantleerPlntConfig.CROP_DURATION));
             }
         }
     }
