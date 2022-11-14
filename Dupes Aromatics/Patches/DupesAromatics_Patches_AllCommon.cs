@@ -46,6 +46,10 @@ namespace Dupes_Aromatics.Patches
             public static void Postfix()
             {
                 Db.Get().effects.Add(RoseScent.GetSmellEffect());
+                Db.Get().effects.Add(MallowScent.GetSmellEffect());
+                Db.Get().effects.Add(LavenderScent.GetSmellEffect());
+                Plants.Crop_DuskbloomConfig.CreateSpice(Db.Get().Spices);
+                //Db.Get().Spices.Add();
             }
 
             public static void ExpandExposureTable()

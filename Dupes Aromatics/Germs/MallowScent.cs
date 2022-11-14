@@ -29,8 +29,8 @@ namespace Dupes_Aromatics
             return new ExposureType()
             {
                 germ_id = MallowScent.ID,
-                infection_effect = "SmelledFlowers",
-                exposure_threshold = 2,
+                infection_effect = EFFECT_ID,
+                exposure_threshold = 100,
                 infect_immediately = true,
                 excluded_traits = new List<string>() { "Allergies" }
             };
@@ -49,20 +49,21 @@ namespace Dupes_Aromatics
         public const string ID = nameof(MallowScent);
         public const string EFFECT_ID = "SmelledMallow";
         public const float EFFECT_TIME = 300;
-        public const float EFFECT_STR = 1;
-        public static Color32 colorValue = new Color32(255, 255, 255, 255);
+        public const float EFFECT_STR = 3;
+        public static Color32 colorValue = new Color32(221, 229, 221, 255);
 
-        private const float plantTempLethalLow = 218.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
-        private const float plantTempWarnLow = 283.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
-        private const float plantTempWarnHigh = 303.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
-        private const float plantTempLethalHigh = 398.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
+        private const float degC = 273.15f; // used to quickly convert temperature from *C to K
+        private const float tempLethalLow = -50 + degC; 
+        private const float tempWarnLow = -30 + degC;
+        private const float tempWarnHigh = -5 + degC;
+        private const float tempLethalHigh = 0 + degC;
 
         public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod, do not rename from UVHalfLife
 
         public MallowScent(bool statsOnly)
         : base(id: MallowScent.ID,
               strength: (byte)50,
-              temperature_range: new Disease.RangeInfo(plantTempLethalLow, plantTempWarnLow, plantTempWarnHigh, plantTempLethalHigh),
+              temperature_range: new Disease.RangeInfo(tempLethalLow, tempWarnLow, tempWarnHigh, tempLethalHigh),
               temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f),
               pressure_range: new Disease.RangeInfo(0.0f, 0.0f, 1000f, 1000f),
               pressure_half_lives: Disease.RangeInfo.Idempotent(),

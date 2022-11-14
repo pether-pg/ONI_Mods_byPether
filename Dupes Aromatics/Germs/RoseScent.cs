@@ -30,7 +30,7 @@ namespace Dupes_Aromatics
             {
                 germ_id = RoseScent.ID,
                 infection_effect = RoseScent.EFFECT_ID,
-                exposure_threshold = 2,
+                exposure_threshold = 100,
                 infect_immediately = true,
                 excluded_traits = new List<string>() { "Allergies" }
             };
@@ -49,8 +49,8 @@ namespace Dupes_Aromatics
         public const string ID = nameof(RoseScent);
         public const string EFFECT_ID = "SmelledRose";
         public const float EFFECT_TIME = 300;
-        public const float EFFECT_STR = 1;
-        public static Color32 colorValue = new Color32(255, 0, 0, 255);
+        public const float EFFECT_STR = 3;
+        public static Color32 colorValue = new Color32(235, 29, 35, 255);
 
         private const float plantTempLethalLow = 218.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
         private const float plantTempWarnLow = 283.15f; // from EntityTemplates.ExtendEntityToBasicPlant()

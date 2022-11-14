@@ -15,6 +15,7 @@ namespace Dupes_Aromatics.Plants
         }
 
         public const string ID = "SpinosaRose";
+        public const float GROW_TIME = 3600f;
         public static readonly Tag TAG = TagManager.Create(ID);
 
         public GameObject CreatePrefab()
@@ -38,6 +39,9 @@ namespace Dupes_Aromatics.Plants
                 );
             ingredient.AddOrGet<EntitySplitter>();
             ingredient.AddOrGet<SimpleMassStatusItem>();
+
+            DefineRecipe();
+
             return ingredient;
         }
 
@@ -47,6 +51,27 @@ namespace Dupes_Aromatics.Plants
 
         public void OnSpawn(GameObject inst)
         {
+        }
+
+        public static void DefineRecipe()
+        {
+            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
+            {
+                new ComplexRecipe.RecipeElement(SimHashes.Phosphorite.CreateTag(), 100f),
+                new ComplexRecipe.RecipeElement(ID, 1f)
+            };
+            ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
+            {
+                new ComplexRecipe.RecipeElement(IntermediateCureConfig.ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+            };
+            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
+            {
+                time = 100f,
+                description = ITEMS.PILLS.INTERMEDIATECURE.RECIPEDESC,
+                nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
+                fabricators = new List<Tag>() { ApothecaryConfig.ID },
+                sortOrder = 10
+            };
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Dupes_Aromatics.AromaticCans
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(SimHashes.Ethanol.CreateTag(), 100f),
+                new ComplexRecipe.RecipeElement(AromaticsFabricator.BasicCanIngridientTag, AromaticsFabricator.BasicCanIngridientMass),
                 new ComplexRecipe.RecipeElement(Plants.Crop_DuskbloomConfig.ID, 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]

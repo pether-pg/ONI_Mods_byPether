@@ -14,6 +14,12 @@ namespace Dupes_Aromatics
         {
             base.OnLoad(harmony);
 
+            Dictionary<string, AromaticsPlantsTuning.CropsTuning> dictionary1 = new Dictionary<string, AromaticsPlantsTuning.CropsTuning>();
+            dictionary1.Add(Plants.Plant_SpinosaConfig.ID, AromaticsPlantsTuning.SpinrosaTuning);
+            dictionary1.Add(Plants.Plant_DuskLavenderConfig.ID, AromaticsPlantsTuning.DuskbloomTuning);
+            dictionary1.Add(Plants.Plant_RimedMallowConfig.ID, AromaticsPlantsTuning.MallowTuning);
+            DupesAromatics_Patches_Worldgen.CropsDictionary = dictionary1;
+
             Namespace = GetType().Namespace;
             Debug.Log($"{Namespace}: Loaded from: {this.mod.ContentPath}");
             Debug.Log($"{Namespace}: DLL version: {GetType().Assembly.GetName().Version} " +

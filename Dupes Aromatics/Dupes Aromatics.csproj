@@ -84,6 +84,8 @@
     <Compile Include="AromaticCans\LavenderAromaticCanConfig.cs" />
     <Compile Include="AromaticCans\MallowAromaticCanConfig.cs" />
     <Compile Include="AromaticsFabricator.cs" />
+    <Compile Include="AromaticsPlantsTuning.cs" />
+    <Compile Include="Patches\DupesAromatics_Patches_Worldgen.cs" />
     <Compile Include="Food\DuskbunConfig.cs" />
     <Compile Include="Food\DuskjamConfig.cs" />
     <Compile Include="Food\SpinosaCakeConfig.cs" />
@@ -97,9 +99,7 @@
     <Compile Include="ModInfo.cs" />
     <Compile Include="Patches\Aromatics_Patches_Translation.cs" />
     <Compile Include="Patches\DupesAromatics_Patches_AllCommon.cs" />
-    <Compile Include="Patches\DupesAromatics_Patches_Fabricator.cs" />
     <Compile Include="Patches\AromaticsPlants_Patches.cs" />
-    <Compile Include="Plants\AromaticsPlants_Tuning.cs" />
     <Compile Include="Plants\Crop_CottonBollConfig.cs" />
     <Compile Include="Plants\Crop_DuskberryConfig.cs" />
     <Compile Include="Plants\Crop_DuskbloomConfig.cs" />

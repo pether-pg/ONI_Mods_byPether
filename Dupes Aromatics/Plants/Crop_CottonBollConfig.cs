@@ -16,7 +16,10 @@ namespace Dupes_Aromatics.Plants
         }
 
         public const string ID = "RimedCotton";
+        public const float GROW_TIME = 3600f;
         public static readonly Tag TAG = TagManager.Create(ID);
+
+        public static ComplexRecipe recipe;
 
         public GameObject CreatePrefab()
         {
@@ -42,6 +45,9 @@ namespace Dupes_Aromatics.Plants
                 });
             go.AddOrGet<EntitySplitter>();
             go.AddOrGet<SimpleMassStatusItem>();
+
+            RegisterRecipe();
+
             return go;
         }
 
@@ -51,6 +57,27 @@ namespace Dupes_Aromatics.Plants
 
         public void OnSpawn(GameObject inst)
         {
+        }
+
+        private void RegisterRecipe()
+        {
+
+            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[1]
+            {
+                new ComplexRecipe.RecipeElement(ID, 4f)
+            };
+            ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
+            {
+                new ComplexRecipe.RecipeElement(BasicFabricConfig.ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+            };
+            recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(RockCrusherConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
+            {
+                time = 100f,
+                description = ITEMS.INDUSTRIAL_PRODUCTS.BASIC_FABRIC.DESC,
+                nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
+                fabricators = new List<Tag>() { RockCrusherConfig.ID },
+                sortOrder = 11
+            };
         }
     }
 }

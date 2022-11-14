@@ -33,6 +33,8 @@ namespace Dupes_Aromatics.Plants
         public const float TemperatureWarningLow = 288.15f;    //  15°C: Plant will stop growing (Lowest Temp)
         public const float TemperatureWarningHigh = 313.15f;   //  40°C: Plant will stop growing (Highest Temp)
         public const float TemperatureLethalHigh = 333.15f;    //  60°C: Plant will die (Highest Temp)
+        public const int WIDTH = 1;
+        public const int HEIGHT = 2;
 
         public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
 

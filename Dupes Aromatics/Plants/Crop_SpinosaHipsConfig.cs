@@ -15,6 +15,7 @@ namespace Dupes_Aromatics.Plants
         }
 
         public const string ID = "SpinosaHips";
+        public const float GROW_TIME = 3600f;
 
         public GameObject CreatePrefab()
         {

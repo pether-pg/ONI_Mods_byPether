@@ -32,11 +32,11 @@ namespace Dupes_Aromatics.Patches
 
                 //====[ BLOOMING SPINOSA ]===============
                 RegisterStrings.MakePlantSpeciesStrings(Plant_SpinosaConfig.ID, STRINGS.PLANTS.SPINOSA.NAME, STRINGS.PLANTS.SPINOSA.DESC);
-                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_SpinosaRoseConfig.ID, 100f, 1, true));
+                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_SpinosaRoseConfig.ID, Crop_SpinosaRoseConfig.GROW_TIME, 1, true));
 
                 //====[ FRUITING SPINOSA ]===============
                 RegisterStrings.MakePlantSpeciesStrings(Plant_SuperSpinosaConfig.ID, STRINGS.PLANTS.SUPERSPINOSA.NAME, STRINGS.PLANTS.SUPERSPINOSA.DESC);
-                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_SpinosaHipsConfig.ID, 100f, 1, true));
+                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_SpinosaHipsConfig.ID, Crop_SpinosaHipsConfig.GROW_TIME, 1, true));
 
                 //=========================================================================> DUSK LAVENDER <========================
                 //====[ DUSKBLOOM ]===================
@@ -50,11 +50,11 @@ namespace Dupes_Aromatics.Patches
 
                 //====[ DUSKBLOOM LAVENDER ]==========
                 RegisterStrings.MakePlantSpeciesStrings(Plant_DuskLavenderConfig.ID, STRINGS.PLANTS.DUSKLAVENDER.NAME, STRINGS.PLANTS.DUSKLAVENDER.DESC);
-                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_DuskbloomConfig.ID, 100f, 1, true));
+                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_DuskbloomConfig.ID, Crop_DuskbloomConfig.GROW_TIME, 1, true));
 
                 //====[ DUSKBERRY LAVENDER ]==========
                 RegisterStrings.MakePlantSpeciesStrings(Plant_SuperDuskLavenderConfig.ID, STRINGS.PLANTS.SUPERDUSKLAVENDER.NAME, STRINGS.PLANTS.SUPERDUSKLAVENDER.DESC);
-                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_DuskberryConfig.ID, 100f, 1, true));
+                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_DuskberryConfig.ID, Crop_DuskberryConfig.GROW_TIME, 1, true));
 
                 //=========================================================================> RIMED MALLOW <========================
                 //====[ RIMED COTTON BOLL ]===========
@@ -65,7 +65,7 @@ namespace Dupes_Aromatics.Patches
 
                 //====[ RIMED MALLOW ]================
                 RegisterStrings.MakePlantSpeciesStrings(Plant_RimedMallowConfig.ID, STRINGS.PLANTS.RIMEDMALLOW.NAME, STRINGS.PLANTS.RIMEDMALLOW.DESC);
-                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_CottonBollConfig.ID, 100f, 1, true));
+                CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_CottonBollConfig.ID, Crop_CottonBollConfig.GROW_TIME, 1, true));
             }
         }
     }

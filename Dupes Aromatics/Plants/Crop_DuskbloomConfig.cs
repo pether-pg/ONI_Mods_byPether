@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Database;
 using TUNING;
 using UnityEngine;
 using STRINGS;
@@ -16,6 +16,8 @@ namespace Dupes_Aromatics.Plants
         }
 
         public const string ID = "Duskbloom";
+        public const string SPICE_ID = "DuskbloomSpice";
+        public const float GROW_TIME = 3600f;
         public static readonly Tag TAG = TagManager.Create(ID);
 
         public GameObject CreatePrefab()
@@ -39,6 +41,9 @@ namespace Dupes_Aromatics.Plants
                 );
             ingredient.AddOrGet<EntitySplitter>();
             ingredient.AddOrGet<SimpleMassStatusItem>();
+
+            DefineRecipe();
+
             return ingredient;
         }
 
@@ -48,6 +53,46 @@ namespace Dupes_Aromatics.Plants
 
         public void OnSpawn(GameObject inst)
         {
+        }
+
+        public static void DefineRecipe()
+        {
+            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
+            {
+                new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 100f),
+                new ComplexRecipe.RecipeElement(ID, 1f)
+            };
+            ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
+            {
+                new ComplexRecipe.RecipeElement(BasicCureConfig.ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+            };
+            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
+            {
+                time = 100f,
+                description = ITEMS.PILLS.BASICCURE.RECIPEDESC,
+                nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
+                fabricators = new List<Tag>() { ApothecaryConfig.ID },
+                sortOrder = 10
+            };
+        }
+
+        public static Spice CreateSpice(Spices parent)
+        {
+            Spice spice = new Spice(
+                parent,
+                SPICE_ID,
+                new Spice.Ingredient[2] {
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { ID }, AmountKG = 0.1f },
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Iron.CreateTag() }, AmountKG = 3f }
+                },
+                LavenderScent.colorValue,
+                Color.white,
+                statBonus: new AttributeModifier(Db.Get().Attributes.Learning.Id, 3, nameof(Spices)),
+                imageName: "unknown",
+                dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
+            );
+
+            return spice;
         }
     }
 }

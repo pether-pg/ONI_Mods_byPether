@@ -8,16 +8,18 @@ namespace Dupes_Aromatics
     class AromaticsFabricator : ComplexFabricator, ISim200ms
     {
         public const string FabricatorId = VaporizerConfig.ID;
-        public const float RecipeTime = 60;
+        public const float RecipeTime = 600;
         private string LastGermId = string.Empty;
 
+        public static readonly Tag BasicCanIngridientTag = SimHashes.Ethanol.CreateTag();
+        public static readonly float BasicCanIngridientMass = 100;
         public static Dictionary<ComplexRecipe, string> RecipesScents = new Dictionary<ComplexRecipe, string>();
 
         public static void RegisterAromaticsRecipe(ComplexRecipe.RecipeElement[] ingredients, string germId, string Description)
         {
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
-                new ComplexRecipe.RecipeElement(SimHashes.Sand.CreateTag(), 0.0f)
+                new ComplexRecipe.RecipeElement(SimHashes.CarbonDioxide.CreateTag(), 0.0f)
             };
 
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(FabricatorId, ingredients, results), ingredients, results)

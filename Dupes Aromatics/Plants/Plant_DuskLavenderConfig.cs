@@ -19,6 +19,8 @@ namespace Dupes_Aromatics.Plants
         public const string SEED_ID = "LavenderSeed";
         public const string PlantKanim = "plant_lavender_kanim";
         public const string SeedKanim = "seed_lavender_kanim";
+        public const int WIDTH = 1;
+        public const int HEIGHT = 2;
 
         //===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
         private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
@@ -82,8 +84,8 @@ namespace Dupes_Aromatics.Plants
                 "DuskbloomLavender_preview",
                 Assets.GetAnim(PlantKanim),
                 "place",
-                1, // Preview Crop width
-                3); // Preview Crop Height
+                WIDTH, // Preview Crop width
+                HEIGHT); // Preview Crop Height
 
             return gameObject;
         }
@@ -99,8 +101,8 @@ namespace Dupes_Aromatics.Plants
                 Assets.GetAnim(animFile),
                 "idle_empty",
                 Grid.SceneLayer.BuildingBack,  // The layer which this crop will be placed in game.
-                1, //Crop width.
-                3, //Crop height.
+                WIDTH, //Crop width.
+                HEIGHT, //Crop height.
                 decor,
                 default(EffectorValues),
                 SimHashes.Creature,
@@ -155,9 +157,9 @@ namespace Dupes_Aromatics.Plants
             //===> DISEASE OR GERMS THIS CROP RELEASES <===========================================================================
             DiseaseDropper.Def def = gameObject.AddOrGetDef<DiseaseDropper.Def>();
             def.diseaseIdx = Db.Get().Diseases.GetIndex(LavenderScent.ID);
-            def.emitFrequency = 1f;
+            def.emitFrequency = 10f;
             def.averageEmitPerSecond = 1000;
-            def.singleEmitQuantity = 1000000;
+            def.singleEmitQuantity = 100000;
             gameObject.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = LavenderScent.ID;
 
             return gameObject;

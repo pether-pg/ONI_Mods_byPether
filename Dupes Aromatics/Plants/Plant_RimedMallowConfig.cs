@@ -19,9 +19,11 @@ namespace Dupes_Aromatics.Plants
 		public const string SEED_ID = "IceMallowSeed";
 		public const string PlantKanim = "plant_rimedmallow_kanim";
         public const string SeedKanim = "seed_rimedmallow_kanim";
+		public const int WIDTH = 1;
+		public const int HEIGHT = 3;
 
-        //===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
-        private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
+		//===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
+		private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
         {
             grow = "basic_grow",
             grow_pst = "basic_grow_pst",
@@ -55,9 +57,9 @@ namespace Dupes_Aromatics.Plants
 				mass, 
 				Assets.GetAnim(PlantKanim), 
 				"idle_empty", 
-				Grid.SceneLayer.BuildingFront, 
-				1, 
-				3, 
+				Grid.SceneLayer.BuildingFront,
+				WIDTH,
+				HEIGHT, 
 				tier, 
 				default(EffectorValues), 
 				SimHashes.Creature, 
@@ -92,47 +94,53 @@ namespace Dupes_Aromatics.Plants
 
 			EntityTemplates.ExtendPlantToFertilizable(gameObject, new PlantElementAbsorber.ConsumeInfo[]
 			{
-			new PlantElementAbsorber.ConsumeInfo
-			{
-				tag = SimHashes.Ice.CreateTag(),
-				massConsumptionRate = Fertilization
-			}
+				new PlantElementAbsorber.ConsumeInfo
+				{
+					tag = SimHashes.Ice.CreateTag(),
+					massConsumptionRate = Fertilization
+				}
 			});
-			gameObject.GetComponent<UprootedMonitor>().monitorCells = new CellOffset[]
-			{
-			new CellOffset(0, 1)
-			};
+			gameObject.GetComponent<UprootedMonitor>().monitorCells = new CellOffset[] {new CellOffset(0, 1)};
 			gameObject.AddOrGet<StandardCropPlant>();
-			EntityTemplates.MakeHangingOffsets(EntityTemplates.CreateAndRegisterPreviewForPlant(EntityTemplates.CreateAndRegisterSeedForPlant(
-				gameObject, 
-				SeedProducer.ProductionType.Harvest, 
-				SEED_ID,
-				STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME,
-				STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC, 
-				Assets.GetAnim(SeedKanim),
-				"object",
-				1, 
-				new List<Tag>
-		{
-			GameTags.CropSeed
-		}, SingleEntityReceptacle.ReceptacleDirection.Bottom, 
-				default(Tag), 
-				4,
-				STRINGS.PLANTS.RIMEDMALLOW.DOMESTICATED_DESC, 
-				EntityTemplates.CollisionShape.CIRCLE,
-				0.3f, 
-				0.3f, 
-				null, 
-				"", 
-				false
-				),
-				"RimedMallowPlant_preview", 
-				Assets.GetAnim(PlantKanim), 
-				"place", 
-				1, 
-				3),
-				1,
-				3);
+			
+			EntityTemplates.MakeHangingOffsets(EntityTemplates.CreateAndRegisterPreviewForPlant(
+				EntityTemplates.CreateAndRegisterSeedForPlant(
+					gameObject, 
+					SeedProducer.ProductionType.Harvest, 
+					SEED_ID,
+					STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME,
+					STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC, 
+					Assets.GetAnim(SeedKanim),
+					"object",
+					1, 
+					new List<Tag> { GameTags.CropSeed }, 
+					SingleEntityReceptacle.ReceptacleDirection.Bottom, 
+					default(Tag), 
+					4,
+					STRINGS.PLANTS.RIMEDMALLOW.DOMESTICATED_DESC, 
+					EntityTemplates.CollisionShape.CIRCLE,
+					0.3f, 
+					0.3f, 
+					null, 
+					"", 
+					false
+					),
+					"RimedMallowPlant_preview", 
+					Assets.GetAnim(PlantKanim), 
+					"place",
+					WIDTH, 
+					HEIGHT),
+				WIDTH,
+				HEIGHT);
+
+			//===> DISEASE OR GERMS THIS CROP RELEASES <===========================================================================
+			DiseaseDropper.Def def = gameObject.AddOrGetDef<DiseaseDropper.Def>();
+			def.diseaseIdx = Db.Get().Diseases.GetIndex(MallowScent.ID);
+			def.emitFrequency = 10f;
+			def.averageEmitPerSecond = 1000;
+			def.singleEmitQuantity = 100000;
+			gameObject.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = MallowScent.ID;
+
 			return gameObject;
 		}
 
