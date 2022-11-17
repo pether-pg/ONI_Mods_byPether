@@ -195,7 +195,13 @@ namespace DiseasesExpanded
             public class SAPSHOT
             {
                 public static LocString NAME = (LocString)"Sweet Sap Shot";
-                public static LocString DESC = (LocString)"Thick and full of shugar, Sweet Sap Shot condenses many calories into one syringe to quickly remove overwhelming hunger.";
+                public static LocString DESC = (LocString)"Thick and full of shugar, Sweet Sap Shot condenses many calories into one syringe to quickly satisfy even the most overwhelming hunger.";
+            }
+
+            public class RADSHOT
+            {
+                public static LocString NAME = (LocString)"Sweet Rad Shot";
+                public static LocString DESC = (LocString)"Uranium contains about 18 million kCal per gram - enough to quickly satisfy even the most overwhelming hunger.";
             }
             public class ANTIHISTAMINEBOOSTER
             {

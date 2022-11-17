@@ -34,7 +34,7 @@ namespace DiseasesExpanded
         public float UnstableVirusMutationFocusEqualizer = 0.5f;
         public bool ClearVirusMutationsOnLoad = false;
         //public bool FullyMutateOnLoad = false;
-        public bool EnableMedicalResearchPoints = false;
+        public bool EnableMedicalResearchPoints = true;
 
         public SortedDictionary<float, Color32> MutationVirusStageColors = new SortedDictionary<float, Color32>(){
                 { 0.00f, ColorPalette.PaleGreen },

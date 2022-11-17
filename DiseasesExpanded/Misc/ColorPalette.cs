@@ -17,7 +17,7 @@ namespace DiseasesExpanded
         public static Color32 QuaterRed = new Color32(64, 0, 0, 255);
         public static Color32 ReddyPurple = new Color32(255, 0, 128, 255);
 
-        public static Color32 NavyBlue = new Color32(0, 0, 128, 255);
+        public static Color32 NavyBlue = new Color32(0, 0, 191, 255);
         public static Color32 DeepPurple = new Color32(128, 0, 128, 255);
 
         public static Color32 HungryBrown = new Color32(110, 110, 65, 255);

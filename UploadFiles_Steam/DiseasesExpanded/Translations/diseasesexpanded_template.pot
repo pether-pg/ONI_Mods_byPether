@@ -63,6 +63,21 @@ msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.RECIPEDESC"
 msgid "Weakens Unstable Virus ability to live in various environments"
 msgstr ""
 
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC"
+msgid "Conducted in laboratory conditions, reduces ability of Unstable Virus to mutate."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.NAME
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.NAME"
+msgid "Mutation Rate Reduction"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.RECIPEDESC"
+msgid "Slows down mutation rate of Unstable Virus."
+msgstr ""
+
 #. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.DESC
 msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.DESC"
 msgid "Conducted in laboratory conditions, forces Unstable Virus to mutate back it's resiliance genoms to a weaker form."
@@ -118,9 +133,19 @@ msgctxt "DiseasesExpanded.STRINGS.CURES.MUTATINGANTIVIRAL.NAME"
 msgid "Unstable Antiviral"
 msgstr ""
 
+#. DiseasesExpanded.STRINGS.CURES.RADSHOT.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.RADSHOT.DESC"
+msgid "Uranium contains about 18 million kCal per gram - enough to quickly satisfy even the most overwhelming hunger."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.CURES.RADSHOT.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.RADSHOT.NAME"
+msgid "Sweet Rad Shot"
+msgstr ""
+
 #. DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC
 msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC"
-msgid "Thick and full of shugar, Sweet Sap Shot condenses many calories into one syringe to quickly remove overwhelming hunger."
+msgid "Thick and full of shugar, Sweet Sap Shot condenses many calories into one syringe to quickly satisfy even the most overwhelming hunger."
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME
@@ -363,6 +388,16 @@ msgctxt "DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.NAME"
 msgid "Everlasting Hunger Recovery"
 msgstr ""
 
+#. DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.DESC"
+msgid "This Duplicant just delivered germ sample for futher testing."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.NAME"
+msgid "Just Got Tested"
+msgstr ""
+
 #. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.DESC
 msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.DESC"
 msgid "This duplicant just recovered from Mutating Disease."
@@ -373,14 +408,14 @@ msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.NAME"
 msgid "Mutating Disease Recovery"
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTHOMS.DESC
-msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTHOMS.DESC"
-msgid "This duplicant is suffering from various sympthoms of mutating disease."
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.DESC"
+msgid "This duplicant is suffering from various symptoms of mutating disease."
 msgstr ""
 
-#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTHOMS.NAME
-msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTHOMS.NAME"
-msgid "Mutating Disease Sympthoms"
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.NAME"
+msgid "Mutating Disease Symptoms"
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.DESC
@@ -406,6 +441,16 @@ msgstr ""
 #. DiseasesExpanded.STRINGS.GERMFLASK.NAME
 msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.NAME"
 msgid "{0} Flask"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.DESC
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.DESC"
+msgid "Used to gather germ sample from infected duplicant into a flask for futher testing."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.NAME"
+msgid "Test Sample Flask"
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.GERMS.ALIENGERMS.LEGEND_HOVERTEXT
@@ -466,6 +511,11 @@ msgstr ""
 #. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN
 msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN"
 msgid "Use {0} to mutate the germs in more safe direction."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN"
+msgid "Estimated mutation speed: {0:F2} (mutation rate reduction Lvl: {1})"
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.NAME
