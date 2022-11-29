@@ -48,8 +48,11 @@ namespace Dupes_Aromatics.Patches
                 Db.Get().effects.Add(RoseScent.GetSmellEffect());
                 Db.Get().effects.Add(MallowScent.GetSmellEffect());
                 Db.Get().effects.Add(LavenderScent.GetSmellEffect());
+                
+                Spices spices = Db.Get().Spices;
                 Plants.Crop_DuskbloomConfig.CreateSpice(Db.Get().Spices);
-                //Db.Get().Spices.Add();
+                Plants.Crop_CottonBollConfig.CreateSpice(Db.Get().Spices);
+                Plants.Crop_SpinosaRoseConfig.CreateSpice(Db.Get().Spices);
             }
 
             public static void ExpandExposureTable()

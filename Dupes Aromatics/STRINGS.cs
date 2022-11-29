@@ -210,6 +210,27 @@ namespace Dupes_Aromatics
             }
         }
 
+        public class SPICES
+        {
+            public class ROSE
+            {
+                public static LocString NAME = "Inspiring Spice";
+                public static LocString DESC = "Made with delicate Spinosa petals, this spice inspires duplicants to achieve great things.";
+            }
+
+            public class LAVENDER
+            {
+                public static LocString NAME = "Duskwhisper Spice";
+                public static LocString DESC = "With faint Duskbloom aroma, this spice develops deep bond with the nature in duplicants.";
+            }
+
+            public class MALLOW
+            {
+                public static LocString NAME = "Invigorating Spice";
+                public static LocString DESC = "Fresh like an icicle in the morning, this spice fills duplicants with some invigorating energy.";
+            }
+        }
+
         public class TRANSLATION
         {
             public class AUTHOR

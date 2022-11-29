@@ -18,5 +18,19 @@ namespace Dupes_Aromatics
 				ModUtil.AddBuildingToPlanScreen("Medical", VaporizerConfig.ID);
 			}
 		}
+
+		[HarmonyPatch(typeof(Database.Techs))]
+		[HarmonyPatch("Init")]
+		public static class Techs_Init_Patch
+		{
+			public static void Postfix(Database.Techs __instance)
+			{
+				Tech tech1 = __instance.TryGet("MedicineII");
+				if (tech1 != null)
+				{
+					tech1.unlockedItemIDs.Add(VaporizerConfig.ID);
+				}
+			}
+		}
 	}
 }

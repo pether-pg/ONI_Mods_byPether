@@ -17,7 +17,7 @@ namespace Dupes_Aromatics.Plants
 
         public const string ID = "Duskbloom";
         public const string SPICE_ID = "DuskbloomSpice";
-        public const float GROW_TIME = 3600f;
+        public const float GROW_TIME = 4500f;
         public static readonly Tag TAG = TagManager.Create(ID);
 
         public GameObject CreatePrefab()
@@ -78,16 +78,18 @@ namespace Dupes_Aromatics.Plants
 
         public static Spice CreateSpice(Spices parent)
         {
+            BasicModUtils.MakeSpiceStrings(SPICE_ID, STRINGS.SPICES.LAVENDER.NAME, STRINGS.SPICES.LAVENDER.DESC);
+
             Spice spice = new Spice(
                 parent,
                 SPICE_ID,
                 new Spice.Ingredient[2] {
                     new Spice.Ingredient() { IngredientSet = new Tag[1] { ID }, AmountKG = 0.1f },
-                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Iron.CreateTag() }, AmountKG = 3f }
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Aluminum.CreateTag() }, AmountKG = 3f }
                 },
                 LavenderScent.colorValue,
                 Color.white,
-                statBonus: new AttributeModifier(Db.Get().Attributes.Learning.Id, 3, nameof(Spices)),
+                statBonus: new AttributeModifier(Db.Get().Attributes.Ranching.Id, 3, nameof(Spices)),
                 imageName: "unknown",
                 dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
             );

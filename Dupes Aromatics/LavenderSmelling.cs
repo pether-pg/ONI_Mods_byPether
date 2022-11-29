@@ -16,7 +16,7 @@ namespace Dupes_Aromatics
 
         public bool HasEffect()
         {
-            return effects.HasEffect(LavenderScent.EFFECT_ID);
+            return effects.HasEffect(LavenderScent.EFFECT_ID_CRITTER);
         }
 
         public void CheckExposure()

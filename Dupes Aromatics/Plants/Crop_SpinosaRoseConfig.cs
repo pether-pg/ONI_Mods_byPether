@@ -4,6 +4,7 @@ using UnityEngine;
 using STRINGS;
 using System.Collections.Generic;
 using Klei.AI;
+using Database;
 
 namespace Dupes_Aromatics.Plants
 {
@@ -15,7 +16,8 @@ namespace Dupes_Aromatics.Plants
         }
 
         public const string ID = "SpinosaRose";
-        public const float GROW_TIME = 3600f;
+        public const string SPICE_ID = "SpinosaRoseSpice";
+        public const float GROW_TIME = 4500f;
         public static readonly Tag TAG = TagManager.Create(ID);
 
         public GameObject CreatePrefab()
@@ -72,6 +74,27 @@ namespace Dupes_Aromatics.Plants
                 fabricators = new List<Tag>() { ApothecaryConfig.ID },
                 sortOrder = 10
             };
+        }
+
+        public static Spice CreateSpice(Spices parent)
+        {
+            BasicModUtils.MakeSpiceStrings(SPICE_ID, STRINGS.SPICES.ROSE.NAME, STRINGS.SPICES.ROSE.DESC);
+
+            Spice spice = new Spice(
+                parent,
+                SPICE_ID,
+                new Spice.Ingredient[2] {
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { ID }, AmountKG = 0.1f },
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Copper.CreateTag() }, AmountKG = 3f }
+                },
+                RoseScent.colorValue,
+                Color.white,
+                statBonus: new AttributeModifier(Db.Get().Attributes.Learning.Id, 3, nameof(Spices)),
+                imageName: "unknown",
+                dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
+            );
+
+            return spice;
         }
     }
 }
