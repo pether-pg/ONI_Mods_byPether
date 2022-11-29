@@ -27,9 +27,7 @@ namespace Dupes_Aromatics
 			{
 				Tech tech1 = __instance.TryGet("MedicineII");
 				if (tech1 != null)
-				{
 					tech1.unlockedItemIDs.Add(VaporizerConfig.ID);
-				}
 			}
 		}
 	}
