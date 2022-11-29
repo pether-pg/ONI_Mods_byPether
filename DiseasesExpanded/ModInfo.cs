@@ -3,6 +3,7 @@ using KMod;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using ONITwitchLib;
 
 namespace DiseasesExpanded
 {
@@ -37,6 +38,20 @@ namespace DiseasesExpanded
 
                 JsonSerializer<Settings>.Serialize(Settings.Instance);
             }
+
+            DoTwitchThing();
+        }
+
+        public void DoTwitchThing()
+        {
+            if (!TwitchModInfo.TwitchIsPresent)
+            {
+                Debug.LogWarning("Twitch not enabled");
+                return;
+            }
+
+            RandomEvents.AllEvents.RegisterAll();
         }
     }
 }
+//internal record struct ExtData(bool Thing);

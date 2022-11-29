@@ -786,3 +786,8 @@ SignsTagsAndRibbons/obj/Release/SignsTagsAndLabels.csproj.CopyComplete
 SignsTagsAndRibbons/obj/Release/SignsTagsAndLabels.csproj.FileListAbsolute.txt
 SignsTagsAndRibbons/obj/Release/SignsTagsAndRibbons.csproj.CopyComplete
 SignsTagsAndRibbons/obj/Release/SignsTagsAndRibbons.csproj.FileListAbsolute.txt
+DiseasesExpanded/bin/Release/Microsoft.Build.Framework.xml
+DiseasesExpanded/bin/Release/Microsoft.Build.Utilities.Core.xml
+DiseasesExpanded/bin/Release/ONITwitchLib.xml
+DiseasesExpanded/bin/Release/System.Collections.Immutable.xml
+lib/ONITwitchLib.xml
