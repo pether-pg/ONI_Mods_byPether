@@ -35,7 +35,7 @@ namespace DiseasesExpanded
         public FrostShards(bool statsOnly)
             : base(id: FrostShards.ID,
                   strength: (byte)50,
-                  temperature_range: new Disease.RangeInfo(0f, 0.15f, degC + 0, degC + 25),
+                  temperature_range: new Disease.RangeInfo(0f, 0.15f, degC + 0, degC + 5),
                   temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f),
                   pressure_range: new Disease.RangeInfo(0.0f, 0.0f, 1000f, 1000f),
                   pressure_half_lives: Disease.RangeInfo.Idempotent(),

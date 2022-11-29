@@ -20,6 +20,8 @@ namespace DiseasesExpanded
         public static HashedString VaccineCKanim = (HashedString)"vaccine_jelly_c_kanim";
         public static HashedString VaccineDKanim = (HashedString)"vaccine_jelly_d_kanim";
         public static HashedString ControlledMutation = (HashedString)"germ_modicon_b_kanim";
+        public static HashedString MedicalNanobots = (HashedString)"germ_modicon_b_kanim";
+        public static HashedString MedicalNanobotsUpgrade = (HashedString)"germ_modicon_b_kanim";
         public static HashedString SuperSerum = (HashedString)"pill_blue_kanim";
         
         public static HashedString MedicalResearch = (HashedString)"custom_research_icon_kanim";

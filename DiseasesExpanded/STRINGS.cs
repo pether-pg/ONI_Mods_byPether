@@ -11,26 +11,56 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString) UI.FormatAsLink("Bog Bugs", nameof(BOGINSECTS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Bog Bugs present.\n";
             }
+
             public class FROSTHARDS
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Frost Shards", nameof(FROSTHARDS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Frost Shards present.\n";
             }
+
             public class GASSYGERMS
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Gassy Germs", nameof(GASSYGERMS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"GassyGerms present\n";
             }
+
             public class HUNGERGERMS
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Hungerms", nameof(HUNGERGERMS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Hungerms present\n";
             }
+
             public class ALIENGERMS
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Alien Goo", nameof(ALIENGERMS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Alien Goo present\n";
             }
+
+            public class MEDICALNANOBOTS
+            {
+                public static LocString NAME = (LocString) UI.FormatAsLink("Medical Nanobots", nameof(MEDICALNANOBOTS));
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Medical Nanobots present\n";
+                public static LocString DESCRIPTION = (LocString)"Medical Nanobots are engineeded with sole purpose of fighting malicious germs and improving duplicants' health.";
+
+                public static LocString VERSION_PATTERN = (LocString)"Version {ATTACK}/{RESILIANCE}"; 
+                public static LocString VERION_EFFICIENCY_PATTERN = (LocString)"Efficiency: " +
+                     "Attributes: <color=#FF0000>{0}</color>, " +
+                     "Breathing: <color=#FF0000>{1}</color>, " +
+                     "Calories: <color=#FF0000>{2}</color> " +
+                     "- Healing: <color=#FF0000>{3}</color>, " +
+                     "Energy: <color=#FF0000>{4}</color>, " +
+                     "Stress reduction: <color=#FF0000>{5}</color>";
+                public static LocString VERSION_RESILIANCE_PATTERN = (LocString)"Resiliance: " +
+                    "Germ Resistance: <color=#FF0000>{0}</color>, " +
+                    "Duration: <color=#FF0000>{1}</color>, " +
+                    "Perpetum Mobile: <color=#FF0000>{2}</color> " +
+                    "- Exposure Threshold: <color=#FF0000>{3}</color>, " +
+                    "Radiation: <color=#FF0000>{4}</color>, " +
+                    "Temperature: <color=#FF0000>{5}</color>";
+                public static LocString UPGRADE_HELP_PATTERN = (LocString)"Use {0} to develop nanobots.";
+                public static LocString LEGEND_HEADER = (LocString)"Included features:\n";
+            }
+
             public class MUTATINGGERMS
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Unstable Virus", nameof(MUTATINGGERMS));
@@ -54,6 +84,7 @@ namespace DiseasesExpanded
                 public static LocString MUTATION_HELP_PATTERN = (LocString)"Use {0} to mutate the germs in more safe direction.";
                 public static LocString TREAT_POTENTIAL_PATTERN = (LocString)"Threat potential: {0}%";
                 public static LocString MUTATION_SPEED_PATTERN = (LocString)"Estimated mutation speed: {0:F2} (mutation rate reduction Lvl: {1})";
+                public static LocString LEGEND_HEADER = (LocString)"Genoms' values:\n";
             }
         }
 
@@ -176,6 +207,12 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Just Got Tested";
                 public static LocString DESC = (LocString)"This Duplicant just delivered germ sample for futher testing.";
             }
+
+            public class NANOBOTENHANCEMENT
+            {
+                public static LocString NAME = (LocString)"Nanobot Enhancement";
+                public static LocString DESC = (LocString)"This Duplicant is getting health boost from friendly Nanobot enhancement.";
+            }
         }
 
         public class CURES
@@ -278,6 +315,87 @@ namespace DiseasesExpanded
 
         }
 
+        public class NANOBOTDEVELOPMENT
+        {
+            public class MORENANOBOTS
+            {
+                public static LocString NAME = (LocString)"Medical Nanobot Swarm";
+                public static LocString DESC = (LocString)"Construct and release more Medical Nanobots.";
+            }
+
+            public class STRESS
+            {
+                public static LocString NAME = (LocString)"Nanobot Stress Relief Module";
+                public static LocString DESC = (LocString)"Medical Nanobots will by more efficient while calming down stressed duplicants.";
+            }
+
+            public class HEALTH
+            {
+                public static LocString NAME = (LocString)"Nanobot BioRepair Module";
+                public static LocString DESC = (LocString)"Makes Medical Nanobots better at repairing damaged tissues.";
+            }
+
+            public class CALORIES
+            {
+                public static LocString NAME = (LocString)"Nanobot Metabolism++ Module";
+                public static LocString DESC = (LocString)"Medical Nanobots will stimulate duplicants' metabolism better to reduce amount of calories required for survival.";
+            }
+
+            public class BREATHING
+            {
+                public static LocString NAME = (LocString)"Nanobot Oxygen Recycle Module";
+                public static LocString DESC = (LocString)"Medical Nanobots will recycle some of exhaled CO2 to redirect Oxygen back to duplicant's bloodstream.";
+            }
+
+            public class EXHAUSTION
+            {
+                public static LocString NAME = (LocString)"Nanobot Invigorating Module";
+                public static LocString DESC = (LocString)"Medical Nanobots stimulate duplicant's exhaustion levels to make them more rested and invigorated.";
+            }
+
+            public class ATTRIBUTES
+            {
+                public static LocString NAME = (LocString)"Nanobot BioEnhancement Module";
+                public static LocString DESC = (LocString)"Medical Nanobots will enhance duplicant's skils and attributes, making them better at all errands.";
+            }
+
+            public class SPAWNING
+            {
+                public static LocString NAME = (LocString)"Nanobot Perpetum Mobile Protocol";
+                public static LocString DESC = (LocString)"Medical Nanobots loss rate will be reduced, allowing them to survive longer in the hostile atmosphere.";
+            }
+
+            public class TEMPERATURE
+            {
+                public static LocString NAME = (LocString)"Nanobot Insulation Coating";
+                public static LocString DESC = (LocString)"Coats Nanobots with additional insulation layer, allowing them to survive more extreme temperatures.";
+            }
+
+            public class RADIATION
+            {
+                public static LocString NAME = (LocString)"Nanobot Leaden Coating";
+                public static LocString DESC = (LocString)"Coats Nanobots with additional lead layer, allowing them to survive more extreme radiation levels.";
+            }
+
+            public class THRESHOLD
+            {
+                public static LocString NAME = (LocString)"Nanobot Integration Protocol";
+                public static LocString DESC = (LocString)"Medical Nanobots will enter duplicant's system more easily.";
+            }
+
+            public class RESISTANCE
+            {
+                public static LocString NAME = (LocString)"Nanobot ImmunoBoost Protocol";
+                public static LocString DESC = (LocString)"Improves Nanobots' fighting algorithms, increasing germ resistance of affected duplicants.";
+            }
+
+            public class DURATION
+            {
+                public static LocString NAME = (LocString)"Nanobot Operative Optimization";
+                public static LocString DESC = (LocString)"Optimizes efficiency with which Nanobots operate in duplicant's system, making thier effects last longer.";
+            }
+        }
+
         public class BUILDINGS
         {
             public class GERMCATCHER
@@ -321,6 +439,11 @@ namespace DiseasesExpanded
             public class VIRUSMUTATED
             {
                 public static LocString PATTERN = (LocString)"New virus mutation observed: {0}";
+            }
+
+            public class NANOBOTUPGRADE
+            {
+                public static LocString PATTERN = (LocString)"New nanobot update is ready: {0}";
             }
         }
 

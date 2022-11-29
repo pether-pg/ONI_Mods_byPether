@@ -27,6 +27,7 @@ namespace DiseasesExpanded
                 namedLookup.Add(GassyGerms.ID, GassyGerms.colorValue);
                 namedLookup.Add(AlienGerms.ID, AlienGerms.colorValue);
                 namedLookup.Add(MutatingGerms.ID, MutatingGerms.colorValue);
+                namedLookup.Add(MedicalNanobots.ID, MedicalNanobots.colorValue);
 
                 initalized = true;
                 //LogColors(namedLookup);
@@ -52,6 +53,7 @@ namespace DiseasesExpanded
                 BasicModUtils.MakeGermStrings(HungerGerms.ID, STRINGS.GERMS.HUNGERGERMS.NAME, STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(AlienGerms.ID, STRINGS.GERMS.ALIENGERMS.NAME, STRINGS.GERMS.ALIENGERMS.LEGEND_HOVERTEXT, STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(MutatingGerms.ID, STRINGS.GERMS.MUTATINGGERMS.NAME, STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT, STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTION);
+                BasicModUtils.MakeGermStrings(MedicalNanobots.ID, STRINGS.GERMS.MEDICALNANOBOTS.NAME, STRINGS.GERMS.MEDICALNANOBOTS.LEGEND_HOVERTEXT, STRINGS.GERMS.MEDICALNANOBOTS.DESCRIPTION);
 
                 BasicModUtils.MakeDiseaseStrings(BogSickness.ID, STRINGS.DISEASES.BOGSICKNESS.NAME, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION, STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT);
                 BasicModUtils.MakeDiseaseStrings(FrostSickness.ID, STRINGS.DISEASES.FROSTSICKNESS.NAME, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION, STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT);
@@ -98,6 +100,7 @@ namespace DiseasesExpanded
                 Db.Get().effects.Add(new Effect(RadShotConfig.EFFECT_ID, STRINGS.CURES.RADSHOT.NAME, STRINGS.CURES.RADSHOT.DESC, cycle10, true, true, false));
                 Db.Get().effects.Add(new Effect(MutatingAntiviralConfig.EffectID, STRINGS.CURES.MUTATINGANTIVIRAL.NAME, STRINGS.CURES.MUTATINGANTIVIRAL.DESC, cycle5, true, true, false));
                 Db.Get().effects.Add(SuperSerumConfig.GetEffect());
+                Db.Get().effects.Add(MedicalNanobots.GetEffect());
 
                 Db.Get().effects.Add(new Effect(AllergyVaccineConfig.EffectID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(SlimelungVaccineConfig.EffectID, SlimelungVaccineConfig.Name, SlimelungVaccineConfig.Desc, cycle50, true, true, false));
@@ -144,6 +147,7 @@ namespace DiseasesExpanded
                 exposureList.Add(HungerGerms.GetExposureType());
                 exposureList.Add(AlienGerms.GetExposureType());
                 exposureList.Add(MutatingGerms.GetExposureType());
+                exposureList.Add(MedicalNanobots.GetExposureType());
 
                 TUNING.GERM_EXPOSURE.TYPES = exposureList.ToArray();
             }
@@ -179,6 +183,7 @@ namespace DiseasesExpanded
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = GassyGerms.ID, overlayColourName = GassyGerms.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = AlienGerms.ID, overlayColourName = AlienGerms.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = MutatingGerms.ID, overlayColourName = MutatingGerms.ID });
+                Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = MedicalNanobots.ID, overlayColourName = MedicalNanobots.ID });
             }
 
             public static void Postfix(ref Diseases __instance, bool statsOnly)
@@ -187,6 +192,7 @@ namespace DiseasesExpanded
                 __instance.Add(new GassyGerms(statsOnly));
                 __instance.Add(new AlienGerms(statsOnly));
                 __instance.Add(new MutatingGerms(statsOnly));
+                __instance.Add(new MedicalNanobots(statsOnly));
 
                 if(DlcManager.IsExpansion1Active())
                     __instance.Add(new BogInsects(statsOnly));

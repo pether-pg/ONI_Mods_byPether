@@ -149,14 +149,14 @@ namespace DiseasesExpanded
                 GetMutationLevel(MutationVectors.Vectors.Att_Breathing),
                 GetMutationLevel(MutationVectors.Vectors.Att_Calories),
                 GetMutationLevel(MutationVectors.Vectors.Att_Damage),
-                GetMutationLevel(MutationVectors.Vectors.Att_Exhaustion),
+                GetMutationLevel(MutationVectors.Vectors.Att_Stamina),
                 GetMutationLevel(MutationVectors.Vectors.Att_Stress)
                 );
             string resCode = string.Format("{0:x}{1:x}{2:x}-{3:x}{4:x}{5:x}",
                 GetMutationLevel(MutationVectors.Vectors.Res_BaseInfectionResistance),
-                GetMutationLevel(MutationVectors.Vectors.Res_SicknessDuration),
-                GetMutationLevel(MutationVectors.Vectors.Res_Coughing),
-                GetMutationLevel(MutationVectors.Vectors.Res_InfectionExposureThreshold),
+                GetMutationLevel(MutationVectors.Vectors.Res_EffectDuration),
+                GetMutationLevel(MutationVectors.Vectors.Res_Replication),
+                GetMutationLevel(MutationVectors.Vectors.Res_ExposureThreshold),
                 GetMutationLevel(MutationVectors.Vectors.Res_RadiationResistance),
                 GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance)
                 );
@@ -167,19 +167,20 @@ namespace DiseasesExpanded
 
         public string GetMutationsCodeLegend()
         {
+            string header = STRINGS.GERMS.MUTATINGGERMS.LEGEND_HEADER;
             string attackLegend = string.Format(STRINGS.GERMS.MUTATINGGERMS.STRAIN_SEVERITY_PATTERN,
                 GetMutationLevel(MutationVectors.Vectors.Att_Attributes),
                 GetMutationLevel(MutationVectors.Vectors.Att_Breathing),
                 GetMutationLevel(MutationVectors.Vectors.Att_Calories),
                 GetMutationLevel(MutationVectors.Vectors.Att_Damage),
-                GetMutationLevel(MutationVectors.Vectors.Att_Exhaustion),
+                GetMutationLevel(MutationVectors.Vectors.Att_Stamina),
                 GetMutationLevel(MutationVectors.Vectors.Att_Stress)
                 );
             string resistLegend = string.Format(STRINGS.GERMS.MUTATINGGERMS.STRAIN_RESILIANCE_PATTERN,
                 GetMutationLevel(MutationVectors.Vectors.Res_BaseInfectionResistance),
-                GetMutationLevel(MutationVectors.Vectors.Res_SicknessDuration),
-                GetMutationLevel(MutationVectors.Vectors.Res_Coughing),
-                GetMutationLevel(MutationVectors.Vectors.Res_InfectionExposureThreshold),
+                GetMutationLevel(MutationVectors.Vectors.Res_EffectDuration),
+                GetMutationLevel(MutationVectors.Vectors.Res_Replication),
+                GetMutationLevel(MutationVectors.Vectors.Res_ExposureThreshold),
                 GetMutationLevel(MutationVectors.Vectors.Res_RadiationResistance),
                 GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance)
                 );
@@ -188,7 +189,7 @@ namespace DiseasesExpanded
             int threatLvlPercent = (int)(100 * GetCompletionPercent());
             string threat = string.Format(STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN, threatLvlPercent);
             string speed = string.Format(STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN, GetAccelerationParameter(), MutationRateReductionLvl);
-            string legend = $"{attackLegend}\n{resistLegend}\n\n{threat}\n{speed}\n{help}";
+            string legend = $"{header}\n{attackLegend}\n{resistLegend}\n\n{threat}\n{speed}\n{help}";
 
             return legend;
         }
@@ -314,7 +315,7 @@ namespace DiseasesExpanded
                 if(TUNING.GERM_EXPOSURE.TYPES[i].germ_id == MutatingGerms.ID)
                 {
                     TUNING.GERM_EXPOSURE.TYPES[i] = MutatingGerms.GetExposureType(
-                        exposureThresholdLevel: GetMutationLevel(MutationVectors.Vectors.Res_InfectionExposureThreshold),
+                        exposureThresholdLevel: GetMutationLevel(MutationVectors.Vectors.Res_ExposureThreshold),
                         resistanceLevel: GetMutationLevel(MutationVectors.Vectors.Res_BaseInfectionResistance)
                         );
                 }
@@ -326,7 +327,7 @@ namespace DiseasesExpanded
             if (sick == null)
                 return;
 
-            int durLvl = GetMutationLevel(MutationVectors.Vectors.Res_SicknessDuration);
+            int durLvl = GetMutationLevel(MutationVectors.Vectors.Res_EffectDuration);
             if (durLvl <= 0)
                 durLvl = 0;
 
@@ -340,7 +341,7 @@ namespace DiseasesExpanded
         public string GetLegendString()
         {
             string baseStr = STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT.Replace("\n", "");
-            string hover = $"{baseStr} ({GetMutationsCode()}) \n\nGenoms' values:\n{GetMutationsCodeLegend()}" ;
+            string hover = $"{baseStr} ({GetMutationsCode()}) \n\n{GetMutationsCodeLegend()}" ;
             return hover;
         }
 

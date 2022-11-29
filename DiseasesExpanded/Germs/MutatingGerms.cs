@@ -56,7 +56,7 @@ namespace DiseasesExpanded
 
             this.overlayLegendHovertext = MutationData.Instance.GetLegendString();
             this.radiationKillRate = 1.5f + radResPerLvl * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_RadiationResistance);
-            this.UVHalfLife = this.radiationKillRate / 2;
+            this.UVHalfLife = UVLampSupport.UVHalfLife_GetFromRadKillRate(radiationKillRate);
             this.temperatureRange = new Disease.RangeInfo(
                 minGrowthTemp - growthTempPerLvl * (1 + 2 * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance)),
                 minGrowthTemp - growthTempPerLvl * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance),

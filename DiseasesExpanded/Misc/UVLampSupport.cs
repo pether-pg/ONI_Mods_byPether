@@ -8,7 +8,7 @@ namespace DiseasesExpanded
         // https://steamcommunity.com/sharedfiles/filedetails/?id=2229356245
 
         private const int CalculationsPerSecond = 5;
-        private const int DefaultHalfLifeTime = 3; // note: 10s is half life time in chlorine for most germs
+        private const int DefaultHalfLifeTime = 10; // note: 10s is half life time in chlorine for most germs
 
         public static float CalculateRate(float desiredTime, float finalRatio)
         {

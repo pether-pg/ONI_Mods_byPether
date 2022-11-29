@@ -14,15 +14,15 @@ namespace DiseasesExpanded
             Att_Damage,
             Att_Calories,
             Att_Breathing,
-            Att_Exhaustion,
+            Att_Stamina,
             Att_Attributes,
 
-            Res_Coughing,
+            Res_Replication,
             Res_TemperatureResistance,
             Res_RadiationResistance,
-            Res_InfectionExposureThreshold,
+            Res_ExposureThreshold,
             Res_BaseInfectionResistance,
-            Res_SicknessDuration
+            Res_EffectDuration
         }
 
         public static List<Vectors> GetAttackVectors()
@@ -32,7 +32,7 @@ namespace DiseasesExpanded
                 Vectors.Att_Damage,
                 Vectors.Att_Calories,
                 Vectors.Att_Breathing,
-                Vectors.Att_Exhaustion,
+                Vectors.Att_Stamina,
                 Vectors.Att_Attributes };
         }
 
@@ -44,12 +44,12 @@ namespace DiseasesExpanded
         public static List<Vectors> GetResilianceVectors()
         {
             return new List<Vectors>() {
-                Vectors.Res_Coughing,
+                Vectors.Res_Replication,
                 Vectors.Res_TemperatureResistance,
                 Vectors.Res_RadiationResistance,
-                Vectors.Res_InfectionExposureThreshold,
+                Vectors.Res_ExposureThreshold,
                 Vectors.Res_BaseInfectionResistance,
-                Vectors.Res_SicknessDuration};
+                Vectors.Res_EffectDuration};
         }
     }
 }

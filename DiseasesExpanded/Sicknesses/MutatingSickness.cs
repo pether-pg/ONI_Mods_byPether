@@ -29,7 +29,7 @@ namespace DiseasesExpanded
             int strLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Stress);
             int calLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Calories);
             int brtLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Breathing);
-            int exhLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Exhaustion);
+            int exhLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Stamina);
             int attLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Attributes);
 
             if (strLvl > 0)
@@ -139,7 +139,7 @@ namespace DiseasesExpanded
                     }
 
                     byte idx = Db.Get().Diseases.GetIndex((HashedString)MutatingGerms.ID);
-                    int coughLvl = 1 + MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_Coughing);
+                    int coughLvl = 1 + MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_Replication);
                     int count = 1000 * coughLvl * coughLvl;
                     Equippable equippable = this.master.gameObject.GetComponent<SuitEquipper>().IsWearingAirtightSuit();
                     if (equippable != null)
@@ -173,7 +173,7 @@ namespace DiseasesExpanded
                         smi.lastCoughTime = Time.time;
                     })).Update("Cough", ((smi, dt) =>
                     {
-                        float coughInterval = 25 - MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_Coughing);
+                        float coughInterval = 25 - MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_Replication);
                         if (smi.master.IsDoctored || Time.time - smi.lastCoughTime <= coughInterval)
                             return;
                         smi.GoTo(this.breathing.cough);

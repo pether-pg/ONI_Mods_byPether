@@ -128,6 +128,17 @@ namespace DiseasesExpanded
             }
         }
 
+        private static byte _medNanobots = Invalid;
+        public static byte MedicalNanobotsIdx
+        {
+            get
+            {
+                if (_medNanobots == Invalid)
+                    _medNanobots = Db.Get().Diseases.GetIndex(MedicalNanobots.ID);
+                return _medNanobots;
+            }
+        }
+
         private static Dictionary<byte, string> GermNames = new Dictionary<byte, string>(); 
 
         public static string GetGermName(byte idx)
