@@ -68,22 +68,18 @@ namespace DiseasesExpanded
 
         public static void OnEatComplete(object data)
         {
-            Debug.Log("TestSampleConfig.OnEatComplete()");
             GameObject worker = (GameObject)data;
             if (worker == null)
                 return;
 
-            Debug.Log("TestSampleConfig.OnEatComplete() worker non-null");
             Modifiers modifiers = worker.GetComponent<Modifiers>();
             if (modifiers == null)
                 return;
 
-            Debug.Log("TestSampleConfig.OnEatComplete() modifiers non-null");
             Sicknesses sicknesses = modifiers.GetSicknesses();
             if (sicknesses == null)
                 return;
 
-            Debug.Log("TestSampleConfig.OnEatComplete() sicknesses non-null");
             List<string> infectingGerms = new List<string>();
 
             foreach(var s in sicknesses)
@@ -96,7 +92,6 @@ namespace DiseasesExpanded
             if (infectingGerms.Count == 0)
                 return;
 
-            Debug.Log("TestSampleConfig.OnEatComplete() infectingGerms non-0");
             infectingGerms.Shuffle();
             string spawnedGermId = infectingGerms[0];
             SpawnFlask(Db.Get().Diseases.GetIndex(spawnedGermId), worker);

@@ -38,19 +38,6 @@ namespace DiseasesExpanded
 
                 JsonSerializer<Settings>.Serialize(Settings.Instance);
             }
-
-            DoTwitchThing();
-        }
-
-        public void DoTwitchThing()
-        {
-            if (!TwitchModInfo.TwitchIsPresent)
-            {
-                Debug.LogWarning("Twitch not enabled");
-                return;
-            }
-
-            RandomEvents.AllEvents.RegisterAll();
         }
     }
 }

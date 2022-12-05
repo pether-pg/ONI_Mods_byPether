@@ -78,6 +78,7 @@ namespace DiseasesExpanded
 
             this.AddGrowthRule(GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Water));
 
+            this.AddGrowthRule(GermGrowthRules.DieInElement(SimHashes.DirtyWater));
             this.AddGrowthRule(GermGrowthRules.DieInElement(SimHashes.Chlorine));
 
             // Other

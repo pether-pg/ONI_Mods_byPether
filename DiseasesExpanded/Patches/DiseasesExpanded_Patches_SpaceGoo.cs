@@ -8,7 +8,7 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_SpaceGoo
     {
-        public static void EnhanceCometWithGerms(GameObject go, byte idx = byte.MaxValue, int count = 1000000)
+        public static void EnhanceCometWithGerms(GameObject go, byte idx = byte.MaxValue, int impactCount = 1000000)
         {
             if (idx == byte.MaxValue)
                 idx = Db.Get().Diseases.GetIndex((HashedString)AlienGerms.ID);
@@ -19,7 +19,7 @@ namespace DiseasesExpanded
                 comet.diseaseIdx = idx;
                 comet.addDiseaseCount = 1000000;
                 comet.OnImpact += () => {
-                    SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(comet.gameObject.transform.position), idx, count);
+                    SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(comet.gameObject.transform.position), idx, impactCount);
                 };
             }
 

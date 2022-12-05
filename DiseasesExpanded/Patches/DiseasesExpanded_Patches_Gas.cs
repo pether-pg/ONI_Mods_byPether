@@ -125,5 +125,16 @@ namespace DiseasesExpanded
                 }
             }
         }
+
+
+        [HarmonyPatch(typeof(GassyMooCometConfig))]
+        [HarmonyPatch("OnPrefabInit")]
+        public class RockCometConfig_OnPrefabInit_Patch
+        {
+            public static void Postfix(GameObject go)
+            {
+                DiseasesExpanded_Patches_SpaceGoo.EnhanceCometWithGerms(go, GermIdx.GassyGermsIdx, 0);
+            }
+        }
     }
 }

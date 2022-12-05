@@ -431,22 +431,28 @@ namespace DiseasesExpanded
             MutateOneOfVectors(MutationVectors.GetResilianceVectors());
         }
 
-        private void Notify(GameObject infestedHost = null)
+        public void Notify(GameObject infestedHost = null, bool log = true)
         {
-            Debug.Log($"{ModInfo.Namespace}: {MutatingGerms.ID} mutated at cycle {lastMutationCycle}. Now it is {GetMutationsCode()} (level {GetTotalLevel()}/{GetMaxTotalLevel()})");
+            if(log)
+                Debug.Log($"{ModInfo.Namespace}: {MutatingGerms.ID} mutated at cycle {lastMutationCycle}. Now it is {GetMutationsCode()} (level {GetTotalLevel()}/{GetMaxTotalLevel()})");
             
+            Notifier notifier = this.gameObject.AddOrGet<Notifier>();
+            if (notifier == null)
+                return;
+
+            notifier.Add(GetNotification(infestedHost));
+        }
+
+        public Notification GetNotification(GameObject infestedHost = null)
+        {
             NotificationType notiType = NotificationType.Event;
-            float progress = 1.0f * GetTotalLevel() / GetMaxTotalLevel();            
+            float progress = 1.0f * GetTotalLevel() / GetMaxTotalLevel();
             if (progress > 0.3f)
                 notiType = NotificationType.Bad;
             if (progress > 0.6f)
                 notiType = NotificationType.DuplicantThreatening;
 
-            Notifier notifier = this.gameObject.AddOrGet<Notifier>();
-            if (notifier == null)
-                return;
-
-            notifier.Add(new Notification(string.Format(STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN, GetMutationsCode()), notiType, click_focus: infestedHost.transform));
+            return new Notification(string.Format(STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN, GetMutationsCode()), notiType, click_focus: infestedHost?.transform);
         }
 
         private void LogReinforcements()

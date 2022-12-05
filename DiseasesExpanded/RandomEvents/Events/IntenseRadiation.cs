@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DiseasesExpanded.RandomEvents.Events
+{
+    class IntenseRadiation :RandomDiseaseEvent
+    {
+        List<RadiationEmitter> ModifiedEmitters = new List<RadiationEmitter>();
+
+        public IntenseRadiation(int weight = 1)
+        {
+            ID = nameof(IntenseRadiation);
+            GeneralName = "Intense Radiation";
+            AppearanceWeight = weight;
+            DangerLevel = ONITwitchLib.Danger.Medium;
+
+            Condition = new Func<object, bool>(data => GameClock.Instance.GetCycle() > 100);
+
+            Event = new Action<object>(
+                data => 
+                {
+                    foreach (RadiationEmitter re in DiseasesExpanded_Patches_Twitch.RadiationEmitter_OnSpawn_Patch.RadiationEmitters)
+                        if (re != null)
+                        {
+                            ModifyRadiation(re, 2, 20);
+                            ModifiedEmitters.Add(re);
+                        }
+
+                    SaveGame.Instance.StartCoroutine(WaitToRestore());
+                });
+        }
+
+        private IEnumerator WaitToRestore()
+        {
+            yield return new WaitForSeconds(600);
+            foreach (RadiationEmitter re in ModifiedEmitters)
+                ModifyRadiation(re, 0.5f, 0.05f);
+        }
+
+        private void ModifyRadiation(RadiationEmitter emitter, float radiusScale = 1, float radiationScale = 1)
+        {
+            if (radiusScale == 1 && radiationScale == 1)
+                return;
+
+            emitter.emitRadiusX = (short)(emitter.emitRadiusX * radiusScale);
+            emitter.emitRadiusY = (short)(emitter.emitRadiusY * radiusScale);
+            emitter.emitRads *= radiationScale;
+            emitter.Refresh();
+        }
+    }
+}
