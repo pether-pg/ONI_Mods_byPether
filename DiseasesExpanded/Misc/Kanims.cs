@@ -13,7 +13,9 @@ namespace DiseasesExpanded
         public static HashedString SapShotKanim = (HashedString)"custom_serum_1_kanim";
         public static HashedString RadShotKanim = (HashedString)"vial_radiation_kanim"; // from DLC ONI
         public static HashedString UnstableAntiviralKanim = (HashedString)"pill_1_kanim"; // from vanilla ONI
+        public static HashedString HappyPill = (HashedString)"pill_2_kanim"; // from vanilla ONI
         public static HashedString AntihistamineBoosterKanim = (HashedString)"pill_allergies_kanim"; // from vanilla ONI
+        public static HashedString SunburnCure = (HashedString)"iv_sunburn_kanim"; // from vanilla ONI
         public static HashedString GermFlaskKanim = (HashedString)"germ_bottle_1_kanim";
         public static HashedString VaccineAKanim = (HashedString)"vaccine_jelly_a_kanim";
         public static HashedString VaccineBKanim = (HashedString)"vaccine_jelly_b_kanim";

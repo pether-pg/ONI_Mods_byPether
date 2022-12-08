@@ -19,7 +19,9 @@ namespace DiseasesExpanded
                 base_resistance = -1,
                 excluded_effects = new List<string>()
                     {
-                      AlienSickness.RECOVERY_ID
+                      AlienSickness.RECOVERY_ID,
+                      AlienSickness.ASSIMILATION_ID,
+                      AlienSicknessCureConfig.EFFECT_ID
                     }
             };
         }
@@ -61,6 +63,8 @@ namespace DiseasesExpanded
 
             this.AddGrowthRule(GermGrowthRules.DieInElement(SimHashes.BleachStone));
             this.AddGrowthRule(GermGrowthRules.DieInElement(SimHashes.Steel));
+            this.AddGrowthRule(GermGrowthRules.DieInElement(SimHashes.Polypropylene));
+            this.AddGrowthRule(GermGrowthRules.DieInElement(SimHashes.Lead));
 
             // Gas
 
@@ -68,7 +72,7 @@ namespace DiseasesExpanded
 
             this.AddGrowthRule(GermGrowthRules.GrowthLike_Slimelung_PollutedOxygen(SimHashes.CarbonDioxide));
             this.AddGrowthRule(GermGrowthRules.GrowthLike_Slimelung_PollutedOxygen(SimHashes.Steam));
-            this.AddGrowthRule(GermGrowthRules.SurviveInElement(SimHashes.Oxygen));
+            this.AddGrowthRule(GermGrowthRules.GrowthLike_Slimelung_Oxygen(SimHashes.Oxygen));
 
             this.AddGrowthRule(GermGrowthRules.DieInElement(SimHashes.ChlorineGas));
 

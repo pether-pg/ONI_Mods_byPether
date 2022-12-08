@@ -28,6 +28,20 @@ namespace DiseasesExpanded
                 element.AddDisease(idx, 100000, "Space Origin");
         }
 
+        /*[HarmonyPatch(typeof(GermExposureMonitor.Instance))]
+        [HarmonyPatch("InfectImmediately")]
+        public class GermExposureMonitorInstance_InfectImmediately_Patch
+        {
+            public static bool Prefix(GermExposureMonitor.Instance __instance, ExposureType exposure_type)
+            {
+                if (exposure_type.sickness_id != AlienSickness.ID)
+                    return true;
+                if (SuitWearing.IsWearingAtmoSuit(__instance.gameObject) || SuitWearing.IsWearingLeadSuit(__instance.gameObject))
+                    return false;
+                return true;
+            }
+        }*/
+
         [HarmonyPatch(typeof(RockCometConfig))]
         [HarmonyPatch("OnPrefabInit")]
         public class RockCometConfig_OnPrefabInit_Patch

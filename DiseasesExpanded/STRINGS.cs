@@ -187,7 +187,13 @@ namespace DiseasesExpanded
             public class ALIENRECOVERY
             {
                 public static LocString NAME = (LocString)"Alien Symbiot Recovery";
-                public static LocString DESC = (LocString)"Despite Alien Symbiot's influence recently waned, the horrifying menace of it still lives on... ";
+                public static LocString DESC = (LocString)"This duplicant was cured from Alien Symbiot.";
+            }
+
+            public class ALIENASSIMILATION
+            {
+                public static LocString NAME = (LocString)"Assimilation Successful";
+                public static LocString DESC = (LocString)"Alien Symbiot completed assimilation and no longer provides benefits to the host.";
             }
 
             public class MUTATEDSYMPTOMS
@@ -240,6 +246,7 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Sweet Rad Shot";
                 public static LocString DESC = (LocString)"Uranium contains about 18 million kCal per gram - enough to quickly satisfy even the most overwhelming hunger.";
             }
+
             public class ANTIHISTAMINEBOOSTER
             {
                 public static LocString NAME = (LocString)"Allergy Immuno Booster";
@@ -262,6 +269,24 @@ namespace DiseasesExpanded
             {
                 public static LocString NAME = (LocString)"Unstable Antiviral";
                 public static LocString DESC = (LocString)"Cures from, and grants immunity to Mutating Disease for a short time.";
+            }
+
+            public class ALIENCURE
+            {
+                public static LocString NAME = "Alien Cure";
+                public static LocString DESC = "Discourages Alien Goo from inhabiting the body of affected duplicant.";
+            }
+
+            public class HAPPYPILL
+            {
+                public static LocString NAME = "Happy Pill";
+                public static LocString DESC = "Improves overall happines of affectected duplicant but reduces their motivation to perform even most basic tasks.";
+            }
+
+            public class SUNBURNCURE
+            {
+                public static LocString NAME = "Sun Lotion";
+                public static LocString DESC = "Cures duplicant from severe Sunburn.";
             }
         }
 

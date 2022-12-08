@@ -80,9 +80,6 @@ namespace DiseasesExpanded
                 float cycle10 = 10 * cycle;
                 float cycle50 = 50 * cycle;
 
-                Effect alienRecovery = new Effect(AlienSickness.RECOVERY_ID, STRINGS.EFFECTS.ALIENRECOVERY.NAME, STRINGS.EFFECTS.ALIENRECOVERY.DESC, cycle5, true, true, false);
-                alienRecovery.SelfModifiers = new List<AttributeModifier>();
-                alienRecovery.SelfModifiers.Add(new AttributeModifier("StressDelta", 2 * AlienSickness.stressPerSecond, (string)STRINGS.DISEASES.ALIENSICKNESS.NAME));
 
                 Db.Get().effects.Add(HungerSickness.GetCritterSicknessEffect());
 
@@ -92,14 +89,17 @@ namespace DiseasesExpanded
                 Db.Get().effects.Add(new Effect(BogSickness.RECOVERY_ID, STRINGS.EFFECTS.BOGRECOVERY.NAME, STRINGS.EFFECTS.BOGRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(SpindlySickness.RECOVERY_ID, STRINGS.EFFECTS.SPINDLYRECOVERY.NAME, STRINGS.EFFECTS.SPINDLYRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(MutatingSickness.RECOVERY_ID, STRINGS.EFFECTS.MUTATEDRECOVERY.NAME, STRINGS.EFFECTS.MUTATEDRECOVERY.DESC, cycle2, true, true, false));
-                Db.Get().effects.Add(alienRecovery);
+                Db.Get().effects.Add(AlienSickness.GetRecoveryEffect());
+                Db.Get().effects.Add(AlienSickness.GetAssimilationEffect());
 
                 Db.Get().effects.Add(new Effect(GasCureConfig.EffectID, STRINGS.CURES.GASCURE.NAME, STRINGS.CURES.GASCURE.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(MudMaskConfig.EffectID, STRINGS.CURES.MUDMASK.NAME, STRINGS.CURES.MUDMASK.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(SapShotConfig.EFFECT_ID, STRINGS.CURES.SAPSHOT.NAME, STRINGS.CURES.SAPSHOT.DESC, cycle10, true, true, false));
                 Db.Get().effects.Add(new Effect(RadShotConfig.EFFECT_ID, STRINGS.CURES.RADSHOT.NAME, STRINGS.CURES.RADSHOT.DESC, cycle10, true, true, false));
                 Db.Get().effects.Add(new Effect(MutatingAntiviralConfig.EffectID, STRINGS.CURES.MUTATINGANTIVIRAL.NAME, STRINGS.CURES.MUTATINGANTIVIRAL.DESC, cycle5, true, true, false));
+                Db.Get().effects.Add(HappyPillConfig.GetEffect());
                 Db.Get().effects.Add(SuperSerumConfig.GetEffect());
+                Db.Get().effects.Add(AlienSicknessCureConfig.GetEffect());
                 Db.Get().effects.Add(MedicalNanobots.GetEffect());
 
                 Db.Get().effects.Add(new Effect(AllergyVaccineConfig.EffectID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, cycle50, true, true, false));

@@ -42,6 +42,9 @@ namespace DiseasesExpanded
 
                 MutationData.Instance.IncreaseMutationProgress(go, percentCured);
                 UpdateReinforcements(__instance.Sickness.Id, percentCured);
+
+                if (__instance.Sickness.Id == AlienSickness.ID)
+                    AlienSickness.ApplyFinishEffect(go, percentCured);
             }
 
             private static void UpdateReinforcements(string id, float scale = 1)

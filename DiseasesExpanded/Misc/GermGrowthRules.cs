@@ -187,6 +187,14 @@ namespace DiseasesExpanded
             return elementGrowthRule;
         }
 
+        public static ElementGrowthRule GrowthLike_Slimelung_Oxygen(SimHashes element)
+        {
+            ElementGrowthRule elementGrowthRule4 = new ElementGrowthRule(element);
+            elementGrowthRule4.populationHalfLife = new float?(1200f);
+            elementGrowthRule4.overPopulationHalfLife = new float?(10f);
+            return elementGrowthRule4;
+        }
+
         public static ElementExposureRule ExposureLike_Slimelung_PollutedOxygen(SimHashes element)
         {
             ElementExposureRule elementExposureRule = new ElementExposureRule(element);

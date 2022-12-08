@@ -92,8 +92,11 @@
     <Compile Include="Buildings\VaccineApothecaryConfig.cs" />
     <Compile Include="Buildings\VaccineApothecaryWorkable.cs" />
     <Compile Include="CritterSicknessMonitor.cs" />
+    <Compile Include="Cures\AlienSicknessCureConfig.cs" />
     <Compile Include="Cures\AllergyVaccineConfig.cs" />
     <Compile Include="Cures\AntihistamineBoosterConfig.cs" />
+    <Compile Include="Cures\HappyPillConfig.cs" />
+    <Compile Include="Cures\SunburnCureConfig.cs" />
     <Compile Include="Cures\SuperSerumConfig.cs" />
     <Compile Include="Cures\MutatingAntiviralConfig.cs" />
     <Compile Include="GermFlasks\AlienGermFlask.cs" />
