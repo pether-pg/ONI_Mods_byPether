@@ -14,8 +14,9 @@ namespace DiseasesExpanded
                 germ_id = HungerGerms.ID,
                 sickness_id = HungerSickness.ID,
                 exposure_threshold = 100,
+                infect_immediately = true,
                 excluded_traits = new List<string>() { },
-                base_resistance = 2,
+                base_resistance = 0,
                 excluded_effects = new List<string>()
                     {
                       HungerSickness.RECOVERY_ID,
