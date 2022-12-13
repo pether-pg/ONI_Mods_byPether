@@ -17,6 +17,7 @@ namespace Dupes_Aromatics.Plants
 
         public const string ID = "SpinosaRose";
         public const string SPICE_ID = "SpinosaRoseSpice";
+        public const string SPICE_SPRITE = "roseSpice_125";
         public const float GROW_TIME = 4500f;
         public static readonly Tag TAG = TagManager.Create(ID);
 
@@ -90,7 +91,7 @@ namespace Dupes_Aromatics.Plants
                 RoseScent.colorValue,
                 Color.white,
                 statBonus: new AttributeModifier(Db.Get().Attributes.Learning.Id, 3, nameof(Spices)),
-                imageName: "unknown",
+                imageName: SPICE_SPRITE,
                 dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
             );
 

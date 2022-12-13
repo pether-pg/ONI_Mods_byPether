@@ -4,6 +4,8 @@ using System;
 using UnityEngine;
 using Klei.AI;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 
 namespace Dupes_Aromatics.Patches
 {
@@ -123,6 +125,30 @@ namespace Dupes_Aromatics.Patches
             public static void Postfix(ref GameObject __result)
             {
                 __result.AddOrGet<LavenderSmelling>();
+            }
+        }
+
+        [HarmonyPatch(typeof(Assets))]
+        [HarmonyPatch("OnPrefabInit")]
+        public class Assets_OnPrefabInit_Patch
+        {
+            public static void Postfix()
+            {
+                LoadAndAddSprite(Plants.Crop_SpinosaRoseConfig.SPICE_SPRITE);
+                LoadAndAddSprite(Plants.Crop_DuskbloomConfig.SPICE_SPRITE);
+                LoadAndAddSprite(Plants.Crop_CottonBollConfig.SPICE_SPRITE);
+            }
+
+            public static void LoadAndAddSprite(string spriteName)
+            {
+                string maindir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+                string path = Path.Combine(new string[] { maindir, "Sprites", string.Format("{0}.png", spriteName) });
+                byte[] data = File.ReadAllBytes(path);
+                Texture2D tex = new Texture2D(2, 2);
+                tex.LoadImage(data);
+                Sprite sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                HashedString key = new HashedString(spriteName);
+                Assets.Sprites.Add(key, sprite);
             }
         }
     }

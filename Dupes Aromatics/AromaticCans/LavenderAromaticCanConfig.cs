@@ -41,7 +41,7 @@ namespace Dupes_Aromatics.AromaticCans
 
             AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(ID, 1f) }, LavenderScent.ID, "LavenderScent recipe");
 
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.AROMATICCANS.LAVENDER.NAME, STRINGS.AROMATICCANS.LAVENDER.DESC, 1f, true, Assets.GetAnim("aromatic_rosescent_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.AROMATICCANS.LAVENDER.NAME, STRINGS.AROMATICCANS.LAVENDER.DESC, 1f, true, Assets.GetAnim("aromatic_lavenderscent_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             looseEntity.AddTag(GameTags.IndustrialIngredient);
             return looseEntity;
         }

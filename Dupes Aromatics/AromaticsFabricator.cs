@@ -36,7 +36,7 @@ namespace Dupes_Aromatics
             RecipesScents.Add(recipe, germId);
         }
 
-        public void SpawnGerms(GameObject go, string germId, float dt, int amountPerSecond = 1000)
+        public void SpawnGerms(GameObject go, string germId, float dt, int amountPerSecond = 5000)
         {
             Diseases diseases = Db.Get().Diseases;
             Disease germ = diseases.TryGet(germId);

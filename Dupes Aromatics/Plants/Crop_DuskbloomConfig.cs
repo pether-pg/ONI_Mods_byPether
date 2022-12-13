@@ -17,6 +17,7 @@ namespace Dupes_Aromatics.Plants
 
         public const string ID = "Duskbloom";
         public const string SPICE_ID = "DuskbloomSpice";
+        public const string SPICE_SPRITE = "lavenderSpice_125";
         public const float GROW_TIME = 4500f;
         public static readonly Tag TAG = TagManager.Create(ID);
 
@@ -85,12 +86,12 @@ namespace Dupes_Aromatics.Plants
                 SPICE_ID,
                 new Spice.Ingredient[2] {
                     new Spice.Ingredient() { IngredientSet = new Tag[1] { ID }, AmountKG = 0.1f },
-                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Aluminum.CreateTag() }, AmountKG = 3f }
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Dirt.CreateTag() }, AmountKG = 3f }
                 },
                 LavenderScent.colorValue,
                 Color.white,
                 statBonus: new AttributeModifier(Db.Get().Attributes.Ranching.Id, 3, nameof(Spices)),
-                imageName: "unknown",
+                imageName: SPICE_SPRITE,
                 dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
             );
 

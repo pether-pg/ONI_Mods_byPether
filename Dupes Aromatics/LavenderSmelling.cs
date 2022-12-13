@@ -21,9 +21,14 @@ namespace Dupes_Aromatics
 
         public void CheckExposure()
         {
+            int min = 0;
+            foreach (var exp in TUNING.GERM_EXPOSURE.TYPES)
+                if (exp.germ_id == LavenderScent.ID && !string.IsNullOrEmpty(exp.infection_effect))
+                    min = exp.exposure_threshold;
+
             int cell = Grid.PosToCell(this.gameObject);
             int count = Grid.DiseaseIdx[cell] == Db.Get().Diseases.GetIndex(LavenderScent.ID) ? Grid.DiseaseCount[cell] : 0;
-            if (count > 0)
+            if (count > min)
                 ApplyEffect();
         }
 
