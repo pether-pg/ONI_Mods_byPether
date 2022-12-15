@@ -23,7 +23,7 @@ namespace Dupes_Aromatics
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
-                new ComplexRecipe.RecipeElement(Plants.Crop_SpinosaHipsConfig.ID, 2f),
+                new ComplexRecipe.RecipeElement(Crop_SpinosaHipsConfig.ID, 2f),
                 new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 100f),
                 new ComplexRecipe.RecipeElement(SimHashes.Sucrose.CreateTag(), 2f)
             };

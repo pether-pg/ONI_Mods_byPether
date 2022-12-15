@@ -23,7 +23,7 @@ namespace Dupes_Aromatics
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(Plants.Crop_DuskberryConfig.ID, 2f),
+                new ComplexRecipe.RecipeElement(Crop_DuskberryConfig.ID, 2f),
                 new ComplexRecipe.RecipeElement(SimHashes.Sucrose.CreateTag(), 4f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]

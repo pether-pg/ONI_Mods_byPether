@@ -8,7 +8,7 @@ namespace Dupes_Aromatics
     class AromaticsFabricator : ComplexFabricator, ISim200ms
     {
         public const string FabricatorId = VaporizerConfig.ID;
-        public const float RecipeTime = 600;
+        public const float WORKING_TIME = 600;
         private string LastGermId = string.Empty;
 
         public static readonly Tag BasicCanIngridientTag = SimHashes.Ethanol.CreateTag();
@@ -24,7 +24,7 @@ namespace Dupes_Aromatics
 
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(FabricatorId, ingredients, results), ingredients, results)
             {
-                time = RecipeTime,
+                time = 60,
                 description = Description,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Ingredient,
                 fabricators = new List<Tag>() { (Tag)FabricatorId },
@@ -65,7 +65,7 @@ namespace Dupes_Aromatics
 
         private float Delta(ComplexRecipe recipe, float dt)
         {
-            return dt / recipe.time;
+            return dt / WORKING_TIME;
         }
 
         public void Sim200ms(float dt)
