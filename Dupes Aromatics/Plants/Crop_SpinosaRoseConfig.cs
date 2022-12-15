@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Klei.AI;
 using Database;
 
-namespace Dupes_Aromatics.Plants
+namespace Dupes_Aromatics
 {
     public class Crop_SpinosaRoseConfig : IEntityConfig
     {
@@ -23,7 +23,7 @@ namespace Dupes_Aromatics.Plants
 
         public GameObject CreatePrefab()
         {
-            GameObject ingredient = EntityTemplates.CreateLooseEntity(
+            GameObject go = EntityTemplates.CreateLooseEntity(
                 ID, 
                 STRINGS.CROPS.SPINOSAROSE.NAME,
                 STRINGS.CROPS.SPINOSAROSE.DESC, 
@@ -40,12 +40,18 @@ namespace Dupes_Aromatics.Plants
                 SimHashes.Creature, 
                 new List<Tag>{GameTags.IndustrialIngredient}
                 );
-            ingredient.AddOrGet<EntitySplitter>();
-            ingredient.AddOrGet<SimpleMassStatusItem>();
+            go.AddOrGet<EntitySplitter>();
+            go.AddOrGet<SimpleMassStatusItem>();
+
+            Rottable.Def def = go.AddOrGetDef<Rottable.Def>();
+            def.preserveTemperature = 255.15f;
+            def.rotTemperature = 277.15f;
+            def.spoilTime = 4800f;
+            def.staleTime = def.spoilTime / 2;
 
             DefineRecipe();
 
-            return ingredient;
+            return go;
         }
 
         public void OnPrefabInit(GameObject inst)
@@ -86,7 +92,7 @@ namespace Dupes_Aromatics.Plants
                 SPICE_ID,
                 new Spice.Ingredient[2] {
                     new Spice.Ingredient() { IngredientSet = new Tag[1] { ID }, AmountKG = 0.1f },
-                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Copper.CreateTag() }, AmountKG = 3f }
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.SandStone.CreateTag() }, AmountKG = 3f }
                 },
                 RoseScent.colorValue,
                 Color.white,

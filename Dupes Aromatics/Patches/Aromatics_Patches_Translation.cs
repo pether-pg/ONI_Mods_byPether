@@ -4,7 +4,7 @@ using System.IO;
 using static Localization;
 using System.Reflection;
 
-namespace Dupes_Aromatics.Patches
+namespace Dupes_Aromatics
 {
     class Aromatics_Patches_Translation
     {

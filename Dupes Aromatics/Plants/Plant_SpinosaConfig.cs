@@ -5,7 +5,7 @@ using STRINGS;
 using System.Collections.Generic;
 using Klei.AI;
 
-namespace Dupes_Aromatics.Plants
+namespace Dupes_Aromatics
 {
     public class Plant_SpinosaConfig : IEntityConfig
     {

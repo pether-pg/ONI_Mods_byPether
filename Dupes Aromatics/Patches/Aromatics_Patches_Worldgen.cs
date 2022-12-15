@@ -8,7 +8,7 @@ using TUNING;
 
 namespace Dupes_Aromatics
 {
-    class DupesAromatics_Patches_Worldgen
+    class Aromatics_Patches_Worldgen
     {
         public static Dictionary<string, AromaticsPlantsTuning.CropsTuning> CropsDictionary;
 
@@ -19,9 +19,9 @@ namespace Dupes_Aromatics
             {
                 Traverse traverse = Traverse.Create(__instance).Field("carePackages");
                 List<CarePackageInfo> list = traverse.GetValue<CarePackageInfo[]>().ToList<CarePackageInfo>();
-                list.Add(new CarePackageInfo(Plants.Plant_SpinosaConfig.SEED_ID , 3f, null));
-                list.Add(new CarePackageInfo(Plants.Plant_DuskLavenderConfig.SEED_ID, 3f, null));
-                list.Add(new CarePackageInfo(Plants.Plant_RimedMallowConfig.SEED_ID, 3f, null));
+                list.Add(new CarePackageInfo(Plant_SpinosaConfig.SEED_ID , 3f, null));
+                list.Add(new CarePackageInfo(Plant_DuskLavenderConfig.SEED_ID, 3f, null));
+                list.Add(new CarePackageInfo(Plant_RimedMallowConfig.SEED_ID, 3f, null));
                 traverse.SetValue(list.ToArray());
             }
         }
@@ -32,11 +32,11 @@ namespace Dupes_Aromatics
             public static void Postfix()
             {
                 ComposableDictionary<string, Mob> mobLookupTable = SettingsCache.mobs.MobLookupTable;
-                foreach (string str in DupesAromatics_Patches_Worldgen.CropsDictionary.Keys)
+                foreach (string str in Aromatics_Patches_Worldgen.CropsDictionary.Keys)
                 {
                     if (!mobLookupTable.ContainsKey(str))
                     {
-                        AromaticsPlantsTuning.CropsTuning tuning = DupesAromatics_Patches_Worldgen.CropsDictionary[str];
+                        AromaticsPlantsTuning.CropsTuning tuning = Aromatics_Patches_Worldgen.CropsDictionary[str];
                         Mob mob1 = new Mob(tuning.spawnLocation);
                         mob1.name = str;
                         Mob root = mob1;
@@ -56,12 +56,10 @@ namespace Dupes_Aromatics
             public static void Postfix()
             {
                 foreach (SubWorld world in SettingsCache.subworlds.Values)
-                {
                     foreach (WeightedBiome biome in world.biomes)
-                    {
-                        foreach (string str in DupesAromatics_Patches_Worldgen.CropsDictionary.Keys)
+                        foreach (string str in Aromatics_Patches_Worldgen.CropsDictionary.Keys)
                         {
-                            AromaticsPlantsTuning.CropsTuning tuning = DupesAromatics_Patches_Worldgen.CropsDictionary[str];
+                            AromaticsPlantsTuning.CropsTuning tuning = Aromatics_Patches_Worldgen.CropsDictionary[str];
                             if (tuning.ValidBiome(world, biome.name))
                             {
                                 if (ReferenceEquals(biome.tags, null))
@@ -71,8 +69,6 @@ namespace Dupes_Aromatics
                                 biome.tags.Add(str);
                             }
                         }
-                    }
-                }
             }
         }
     }

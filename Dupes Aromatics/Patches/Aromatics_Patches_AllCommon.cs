@@ -7,9 +7,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 
-namespace Dupes_Aromatics.Patches
+namespace Dupes_Aromatics
 {
-    class DupesAromatics_Patches_AllCommon
+    class Aromatics_Patches_AllCommon
     {
         [HarmonyPatch(typeof(ColorSet))]
         [HarmonyPatch("Init")]
@@ -52,9 +52,9 @@ namespace Dupes_Aromatics.Patches
                 Db.Get().effects.Add(LavenderScent.GetSmellEffect());
                 
                 Spices spices = Db.Get().Spices;
-                Plants.Crop_DuskbloomConfig.CreateSpice(spices);
-                Plants.Crop_CottonBollConfig.CreateSpice(spices);
-                Plants.Crop_SpinosaRoseConfig.CreateSpice(spices);
+                Crop_DuskbloomConfig.CreateSpice(spices);
+                Crop_CottonBollConfig.CreateSpice(spices);
+                Crop_SpinosaRoseConfig.CreateSpice(spices);
             }
 
             public static void ExpandExposureTable()
@@ -134,9 +134,9 @@ namespace Dupes_Aromatics.Patches
         {
             public static void Postfix()
             {
-                LoadAndAddSprite(Plants.Crop_SpinosaRoseConfig.SPICE_SPRITE);
-                LoadAndAddSprite(Plants.Crop_DuskbloomConfig.SPICE_SPRITE);
-                LoadAndAddSprite(Plants.Crop_CottonBollConfig.SPICE_SPRITE);
+                LoadAndAddSprite(Crop_SpinosaRoseConfig.SPICE_SPRITE);
+                LoadAndAddSprite(Crop_DuskbloomConfig.SPICE_SPRITE);
+                LoadAndAddSprite(Crop_CottonBollConfig.SPICE_SPRITE);
             }
 
             public static void LoadAndAddSprite(string spriteName)

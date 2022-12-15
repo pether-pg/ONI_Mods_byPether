@@ -7,7 +7,7 @@ using UnityEngine;
 using Database;
 
 
-namespace Dupes_Aromatics.Plants
+namespace Dupes_Aromatics
 {
     public class Crop_CottonBollConfig : IEntityConfig
     {
@@ -48,6 +48,12 @@ namespace Dupes_Aromatics.Plants
                 });
             go.AddOrGet<EntitySplitter>();
             go.AddOrGet<SimpleMassStatusItem>();
+
+            Rottable.Def def = go.AddOrGetDef<Rottable.Def>();
+            def.preserveTemperature = 255.15f;
+            def.rotTemperature = 277.15f;
+            def.spoilTime = 4800f;
+            def.staleTime = def.spoilTime / 2;
 
             RegisterRecipe();
 

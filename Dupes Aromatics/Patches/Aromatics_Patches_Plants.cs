@@ -5,11 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using TUNING;
-using Dupes_Aromatics.Plants;
+using Dupes_Aromatics;
 
-namespace Dupes_Aromatics.Patches
+namespace Dupes_Aromatics
 {
-    public class AromaticsPlants_Patches
+    public class Aromatics_Patches_Plants
     {
         //public static Dictionary<string, CuisinePlantsTuning.CropsTuning> CropsDictionary;
         public const float CyclesForGrowth = 4f;

@@ -1,5 +1,5 @@
 ﻿using STRINGS;
-using Dupes_Aromatics.Plants;
+using Dupes_Aromatics;
 
 namespace Dupes_Aromatics
 {
@@ -87,7 +87,7 @@ namespace Dupes_Aromatics
             public class SPINOSACAKE
             {
                 public static LocString NAME = "Spinosa Cake";
-                public static LocString DESC = "A delicious cake with " + UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Plants.Crop_SpinosaHipsConfig.ID) + " on top.";
+                public static LocString DESC = "A delicious cake with " + UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Crop_SpinosaHipsConfig.ID) + " on top.";
             }
         }
 
@@ -220,14 +220,14 @@ namespace Dupes_Aromatics
 
             public class LAVENDER
             {
-                public static LocString NAME = "Duskwhisper Spice";
+                public static LocString NAME = "Wild Spice";
                 public static LocString DESC = "With faint Duskbloom aroma, this spice develops deep bond with the nature in duplicants.";
             }
 
             public class MALLOW
             {
-                public static LocString NAME = "Invigorating Spice";
-                public static LocString DESC = "Fresh like an icicle in the morning, this spice fills duplicants with some invigorating energy.";
+                public static LocString NAME = "Rimed Spice";
+                public static LocString DESC = "Fresh like an icicle in the morning, this spice invigorates duplicants with icy energy.";
             }
         }
 
