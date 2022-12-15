@@ -109,6 +109,7 @@
     <Compile Include="EffectScripts\MuseumEffectTrigger.cs" />
     <Compile Include="MiscUtils.cs" />
     <Compile Include="ModInfo.cs" />
+    <Compile Include="Patches\RoomsExpanded_Patches_MissionControl.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_PrivateRoom.cs" />
     <Compile Include="RoomConstraintTags.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches.cs" />
@@ -130,6 +131,7 @@
     <Compile Include="Patches\RoomsExpanded_Patches_MuseumHistory.cs" />
     <Compile Include="RoomModdedConstraints.cs" />
     <Compile Include="Patches\RoomsExpanded_Patches_MuseumSpace.cs" />
+    <Compile Include="RoomTypes\RoomTypeMissionControlRoomData.cs" />
     <Compile Include="RoomTypes\RoomTypeMuseumSpaceData.cs" />
     <Compile Include="RoomTypes\RoomTypeMuseumHistoryData.cs" />
     <Compile Include="RoomTypes\RoomTypeNurseryGeneticData.cs" />
@@ -143,11 +145,12 @@
     <Compile Include="RoomTypes\RoomTypeAgriculturalData.cs" />
     <Compile Include="RoomTypes\RoomTypeGraveyardData.cs" />
     <Compile Include="RoomTypes\RoomTypeKitchenetteData.cs" />
-    <Compile Include="RoomTypes\RoomTypeLaboratoryData.cs" />
+    <Compile Include="RoomTypes\RoomTypeLaboratoryData_Obsolete.cs" />
     <Compile Include="RoomTypes\RoomTypeIndustrialData.cs" />
-    <Compile Include="RoomTypes\RoomTypePrivateRoomData.cs" />
+    <Compile Include="RoomTypes\RoomTypePrivateRoomData_Obsolete.cs" />
     <Compile Include="RoomTypes_AllModded.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="SettingsPath.cs" />
     <Compile Include="SortingCounter.cs" />
     <Compile Include="STRINGS.cs" />
   </ItemGroup>

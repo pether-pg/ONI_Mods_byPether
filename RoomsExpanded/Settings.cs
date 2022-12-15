@@ -74,7 +74,7 @@ namespace RoomsExpanded
             get 
             {
                 if (_instance == null)
-                    _instance =  JsonSerializer<Settings>.Deserialize();
+                    _instance = JsonSerializer<Settings>.Deserialize();
                 if (_instance == null)
                 {
                     _instance = new Settings();
@@ -84,12 +84,19 @@ namespace RoomsExpanded
             }
         }
 
+        public static string FilePath()
+        {
+            string filename = JsonSerializer<Settings>.GetDefaultFilename();
+            return filename;
+            //return SettingsPath.Instance.GetPathForFile(filename);
+        }
+
         public Settings()
         {
             HideLegendEffect = true; 
             EnforcedLanguage = "";
 
-            Laboratory = new RoomSettings(true, 64, ColorPalette.RoomRecreation, 0.1f);
+            //Laboratory = new RoomSettings(true, 64, ColorPalette.RoomRecreation, 0.1f);
             Kitchenette = new RoomSettings(true, 64, ColorPalette.RoomFood, 0.1f);
             Bathroom = new RoomSettings(true, 64, ColorPalette.RoomBathroom, 0.2f);
             Industrial = new PlainRoomSettings(false, 96, ColorPalette.RoomIndustrial);
@@ -103,10 +110,12 @@ namespace RoomsExpanded
             MuseumSpace = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
             MuseumHistory = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
             HospitalUpdate = new PlainRoomSettings(true, 96, ColorPalette.RoomHospital);
-            PrivateBedroom = new PlainRoomSettings(true, 32, ColorPalette.RoomSleep);
+            //PrivateBedroom = new PlainRoomSettings(true, 32, ColorPalette.RoomSleep);
             NurseryGenetic = new RoomSettings(true, 96, ColorPalette.RoomAgricultural, 0.2f);
+            MissionControl = new PlainRoomSettings(true, 96, ColorPalette.RoomScience);
 
             ResizeMinRoomSize12 = 12;
+            ResizeMinRoomSize24 = 24;
             ResizeMinRoomSize32 = 32;
             ResizeMaxRoomSize64 = 64;
             ResizeMaxRoomSize96 = 96;
@@ -123,9 +132,9 @@ namespace RoomsExpanded
         [Option("Enforced Language", "EnforcedLanguage", category: "RoomsExpanded: Additional")]
         public string EnforcedLanguage { get; set; }
 
-        [JsonProperty]
-        [Option("Laboratory", category: "New Room - Laboratory")]
-        public RoomSettings Laboratory { get; set; }
+        //[JsonProperty]
+        //[Option("Laboratory", category: "New Room - Laboratory")]
+        //public RoomSettings Laboratory { get; set; }
 
         [JsonProperty]
         [Option("Kitchenette", category: "New Room - Kitchenette")]
@@ -171,9 +180,9 @@ namespace RoomsExpanded
         [Option("Hospital Update", category: "Room Modification - Hospital")]
         public PlainRoomSettings HospitalUpdate { get; set; }
 
-        [JsonProperty]
-        [Option("Private Bedroom", category: "New Room - Private Bedroom")]
-        public PlainRoomSettings PrivateBedroom { get; set; }
+        //[JsonProperty]
+        //[Option("Private Bedroom", category: "New Room - Private Bedroom")]
+        //public PlainRoomSettings PrivateBedroom { get; set; }
 
         [JsonProperty]
         [Option("Genetic Nursery", category: "New Room - Genetic Nursery")]
@@ -183,6 +192,10 @@ namespace RoomsExpanded
         [Option("Space Museum", category: "New Room - Space Museum")]
         public RoomSettings MuseumSpace { get; set; }
 
+        [JsonProperty]
+        [Option("Mission Control", category: "New Room - Mission Control")]
+        public PlainRoomSettings MissionControl { get; set; }
+
         //[JsonProperty]
         //[Option("History Museum", category: "New Room - History Museum")]
         public RoomSettings MuseumHistory { get; set; }
@@ -191,6 +204,11 @@ namespace RoomsExpanded
         [Limit(1, 12)]
         [Option("ResizeMinRoomSize12", "Change min room size from 12 tiles", category: "RoomSize")]
         public int ResizeMinRoomSize12 { get; set; }
+
+        [JsonProperty]
+        [Limit(1, 24)]
+        [Option("ResizeMinRoomSize24", "Change min room size from 24 tiles", category: "RoomSize")]
+        public int ResizeMinRoomSize24 { get; set; }
 
         [JsonProperty]
         [Limit(1, 32)]

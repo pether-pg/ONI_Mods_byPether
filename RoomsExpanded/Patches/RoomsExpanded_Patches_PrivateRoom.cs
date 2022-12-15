@@ -10,7 +10,7 @@ using UnityEngine;
 namespace RoomsExpanded
 {
     class RoomsExpanded_Patches_PrivateRoom
-    {
+    {/*
         public static void AddRoom(ref RoomTypes __instance)
         {
             if (Settings.Instance.PrivateBedroom.IncludeRoom)
@@ -120,6 +120,6 @@ namespace RoomsExpanded
                 if (roomSleepingEffects != null)
                     roomSleepingEffects.Add(RoomTypePrivateRoomData.RoomId, "BedroomStamina");
             }
-        }
+        }*/
     }
 }

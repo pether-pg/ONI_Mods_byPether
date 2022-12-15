@@ -12,5 +12,6 @@ namespace RoomsExpanded
         public static Color32 RoomIndustrial = new Color32(244, 197, 66, 255);
         public static Color32 RoomAgricultural = new Color32(205, 242, 72, 255);
         public static Color32 RoomPark = new Color32(172, 255, 189, 255);
+        public static Color32 RoomScience = new Color32(189, 89, 202, 255);
     }
 }

@@ -1,7 +1,5 @@
 ﻿using HarmonyLib;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using UnityEngine;
 using Database;
 
 namespace RoomsExpanded
@@ -21,6 +19,17 @@ namespace RoomsExpanded
                     if (__instance.Hospital.additional_constraints[i] == RoomConstraints.MAXIMUM_SIZE_96)
                         __instance.Hospital.additional_constraints[i] = RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.HospitalUpdate.MaxSize);
                 }
+            }
+        }
+
+
+        [HarmonyPatch(typeof(FlushToiletConfig))]
+        [HarmonyPatch("DoPostConfigureComplete")]
+        public static class FlushToiletConfig_DoPostConfigureComplete_Patch
+        {
+            public static void Postfix(GameObject go)
+            {
+                go.GetComponent<KPrefabID>().AddTag(GameTags.NotRoomAssignable);
             }
         }
     }

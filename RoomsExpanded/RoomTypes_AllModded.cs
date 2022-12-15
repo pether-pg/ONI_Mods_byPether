@@ -7,17 +7,18 @@ namespace RoomsExpanded
 {
     class RoomTypes_AllModded
     {
-        private static RoomType prv_Lab = null;
+        
+        /*private static RoomType prv_Lab = null;
 
         public static RoomType LaboratoryRoom
         {
             get
             {
                 if (prv_Lab == null)
-                    prv_Lab = new RoomTypeLaboratoryData().GetRoomType();
+                    prv_Lab = new RoomTypeLaboratoryData_Obsolete().GetRoomType();
                 return prv_Lab;
             }
-        }
+        }*/
 
         private static RoomType prv_Kitchenette = null;
 
@@ -109,18 +110,18 @@ namespace RoomsExpanded
                 return prv_Museum;
             }
         }
-
-        private static RoomType prv_Private = null;
+        
+        /*private static RoomType prv_Private = null;
 
         public static RoomType PrivateRoom
         {
             get
             {
                 if (prv_Private == null)
-                    prv_Private = new RoomTypePrivateRoomData().GetRoomType();
+                    prv_Private = new RoomTypePrivateRoomData_Obsolete().GetRoomType();
                 return prv_Private;
             }
-        }
+        }*/
 
         private static RoomType prv_GeneticNursery = null;
 
@@ -155,6 +156,18 @@ namespace RoomsExpanded
                 if (prv_HistoryMuseum == null)
                     prv_HistoryMuseum = new RoomTypeMuseumHistoryData().GetRoomType();
                 return prv_HistoryMuseum;
+            }
+        }
+
+        private static RoomType prv_MissionControlRoom = null;
+
+        public static RoomType MissionControlRoom
+        {
+            get
+            {
+                if (prv_MissionControlRoom == null)
+                    prv_MissionControlRoom = new RoomTypeMissionControlRoomData().GetRoomType();
+                return prv_MissionControlRoom;
             }
         }
 

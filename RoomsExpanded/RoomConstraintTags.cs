@@ -16,7 +16,9 @@ namespace RoomsExpanded
         public static Tag AquariumFeederTag = nameof(AquariumFeederTag).ToString().ToTag();
         public static Tag AquariumReleaseTag = nameof(AquariumReleaseTag).ToString().ToTag();
         public static Tag ItemPedestalTag = nameof(ItemPedestalTag).ToString().ToTag();
+        public static Tag SpaceBuildingTag = nameof(SpaceBuildingTag).ToString().ToTag();
         public static Tag FossilBuilding = nameof(FossilBuilding).ToString().ToTag();
+        public static Tag CarouselCentrifuge = nameof(CarouselCentrifuge).ToString().ToTag();
 
         public static RoomConstraints.Constraint GetMaxSizeConstraint(int maxSize)
         {
@@ -78,6 +80,8 @@ namespace RoomsExpanded
 
                     if (__instance[i].additional_constraints[add] == RoomConstraints.MINIMUM_SIZE_12)
                         __instance[i].additional_constraints[add] = RoomConstraintTags.GetMinSizeConstraint(Settings.Instance.ResizeMinRoomSize12);
+                    else if (__instance[i].additional_constraints[add] == RoomConstraints.MINIMUM_SIZE_24)
+                        __instance[i].additional_constraints[add] = RoomConstraintTags.GetMinSizeConstraint(Settings.Instance.ResizeMinRoomSize24);
                     else if (__instance[i].additional_constraints[add] == RoomConstraints.MINIMUM_SIZE_32)
                         __instance[i].additional_constraints[add] = RoomConstraintTags.GetMinSizeConstraint(Settings.Instance.ResizeMinRoomSize32);
                     else if (__instance[i].additional_constraints[add] == RoomConstraints.MAXIMUM_SIZE_64)

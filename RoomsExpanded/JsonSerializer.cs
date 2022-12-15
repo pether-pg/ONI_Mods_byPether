@@ -10,11 +10,16 @@ namespace RoomsExpanded
 {
     class JsonSerializer<T>
     {
+        public static string GetDefaultFilename()
+        {
+            return string.Format("{0}.json", typeof(T).ToString());
+        }
+
         public static string GetDefaultPath()
         {
-            string path = System.IO.Path.GetDirectoryName(Assembly.GetAssembly(typeof(T)).Location);
-            string name = string.Format("{0}.json", typeof(T).ToString());
-            return System.IO.Path.Combine(path, name);
+            string path = Path.GetDirectoryName(Assembly.GetAssembly(typeof(T)).Location);
+            string name = GetDefaultFilename();
+            return Path.Combine(path, name);
         }
 
         public static void Serialize(T data, string path = "")

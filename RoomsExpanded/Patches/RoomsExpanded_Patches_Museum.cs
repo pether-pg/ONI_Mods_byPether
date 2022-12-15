@@ -35,8 +35,8 @@ namespace RoomsExpanded
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.GymRoom, RoomTypes_AllModded.Museum);
             if(Settings.Instance.Kitchenette.IncludeRoom)
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.KitchenetteRoom, RoomTypes_AllModded.Museum);
-            if(Settings.Instance.Laboratory.IncludeRoom)
-                RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.LaboratoryRoom, RoomTypes_AllModded.Museum);
+            //if(Settings.Instance.Laboratory.IncludeRoom)
+            //    RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.LaboratoryRoom, RoomTypes_AllModded.Museum);
         }
 
         public static Effect CalculateEffectBonus(MinionModifiers modifiers)

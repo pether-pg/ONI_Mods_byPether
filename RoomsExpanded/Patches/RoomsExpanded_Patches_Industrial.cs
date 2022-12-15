@@ -15,8 +15,8 @@ namespace RoomsExpanded
                 upgrades.Add(__instance.PowerPlant);
                 upgrades.Add(__instance.Farm);
                 upgrades.Add(__instance.CreaturePen);
-                if (Settings.Instance.Laboratory.IncludeRoom)
-                    upgrades.Add(RoomTypes_AllModded.LaboratoryRoom);
+                //if (Settings.Instance.Laboratory.IncludeRoom)
+                //    upgrades.Add(RoomTypes_AllModded.LaboratoryRoom);
                 if (Settings.Instance.Kitchenette.IncludeRoom)
                     upgrades.Add(RoomTypes_AllModded.KitchenetteRoom);
                 if (Settings.Instance.Gym.IncludeRoom)

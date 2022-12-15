@@ -13,12 +13,12 @@ namespace RoomsExpanded
         {
             if (Settings.Instance.Gym.IncludeRoom)
             {
-                if (Settings.Instance.Laboratory.IncludeRoom)
+                /*if (Settings.Instance.Laboratory.IncludeRoom)
                 {
                     if (RoomTypes_AllModded.LaboratoryRoom.primary_constraint.stomp_in_conflict == null)
                         RoomTypes_AllModded.LaboratoryRoom.primary_constraint.stomp_in_conflict = new List<RoomConstraints.Constraint>();
                     RoomTypes_AllModded.LaboratoryRoom.primary_constraint.stomp_in_conflict.Add(RoomTypes_AllModded.GymRoom.primary_constraint);
-                }
+                }*/
 
                 if (Settings.Instance.Kitchenette.IncludeRoom)
                 {

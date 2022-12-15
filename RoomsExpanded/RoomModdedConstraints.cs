@@ -35,12 +35,13 @@ namespace RoomsExpanded
             "Fervine"           // from Fervine 
         };
 
-        public static RoomConstraints.Constraint RESEARCH_STATION = new RoomConstraints.Constraint(
+        /*public static RoomConstraints.Constraint RESEARCH_STATION = new RoomConstraints.Constraint(
                                                                     bc => bc.HasTag(RoomConstraints.ConstraintTags.ResearchStation),
                                                                         null,
                                                                         name: ROOMS.CRITERIA.RESEARCH_STATION.NAME,
                                                                         description: ROOMS.CRITERIA.RESEARCH_STATION.DESCRIPTION
                                                                     );
+        */
 
         public static RoomConstraints.Constraint COOKING_STATION = new RoomConstraints.Constraint(
                                                                     bc => bc.HasTag(RoomConstraintTags.KitchenBuildingTag), 
@@ -212,7 +213,7 @@ namespace RoomsExpanded
                                                                     null,
                                                                     room =>
                                                                     {
-                                                                        string great = Db.Get().ArtableStatuses.Great.Id;
+                                                                        string great = Db.Get().ArtableStatuses.LookingGreat.Id;
                                                                         ArtableStages stages = Db.GetArtableStages();
                                                                         int count = 0;
                                                                         if (room != null)
@@ -254,7 +255,36 @@ namespace RoomsExpanded
                                                                 },
                                                                 name: string.Format(STRINGS.ROOMS.CRITERIA.FOSSILS.NAME, requiredFossils),
                                                                 description: string.Format(STRINGS.ROOMS.CRITERIA.FOSSILS.DESCRIPTION, requiredFossils));
-        
+
+
+        public static RoomConstraints.Constraint SPACE_BUILDING = new RoomConstraints.Constraint(
+                                                                bc => bc.HasTag(RoomConstraintTags.SpaceBuildingTag),
+                                                                null,
+                                                                name: STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.NAME,
+                                                                description: STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.DESCRIPTION);
+
+
+        public static RoomConstraints.Constraint TRANSPARENT_CEILING = new RoomConstraints.Constraint(
+                                                                null,
+                                                                room =>
+                                                                {
+                                                                    if (room == null)
+                                                                        return false;
+
+                                                                    for(int x = room.cavity.minX; x <= room.cavity.maxX; x++)
+                                                                        for(int y = room.cavity.minY; y <= room.cavity.maxY; y++)
+                                                                        {
+                                                                            int cell = Grid.XYToCell(x, y);
+                                                                            int above = Grid.CellAbove(cell);
+                                                                            if (Grid.IsSolidCell(above) && !Grid.Transparent[above])
+                                                                                return false;
+                                                                        }
+
+                                                                    return true;
+                                                                },
+                                                                name: STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME,
+                                                                description: STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME);
+
         private static bool IsDecorativePlant(KPrefabID plant)
         {
             return DecorativeNames.Contains(plant.name) || plant.HasTag(MorePlantsTag);

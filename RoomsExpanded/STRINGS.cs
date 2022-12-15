@@ -123,6 +123,13 @@ namespace RoomsExpanded
                     public static LocString EFFECT = (LocString)" • <style=\"KKeyword\">Morale</style>: +{0} of duplicant's Science skill as morale (up to +10)";
                     public static LocString TOOLTIP = (LocString)"There used to be only rocks before somebody found bones in one of them.";
                 }
+
+                public class MISSIONCONTROL
+                {
+                    public static LocString NAME = (LocString)"Pilot Help Center";
+                    public static LocString EFFECT = (LocString)" - Provides support for Pilots";
+                    public static LocString TOOLTIP = (LocString)"So many duplicants work together just to get a new mug.";
+                }
             }
 
             public class CRITERIA
@@ -273,38 +280,50 @@ namespace RoomsExpanded
 
                 public class ONLYONEBED
                 {
-                    public static LocString NAME = (LocString)"No more than one bed.";
+                    public static LocString NAME = (LocString)"No more than one bed";
                     public static LocString DESCRIPTION = (LocString)"The room cannot have more than one bed.";
                 }
 
                 public class ONLYONEBATHROOMSET
                 {
-                    public static LocString NAME = (LocString)"No more than one bathroom set.";
+                    public static LocString NAME = (LocString)"No more than one bathroom set";
                     public static LocString DESCRIPTION = (LocString)"The room cannot have more than one shower, sink or toilet.";
                 }
 
                 public class GENETICSTATION
                 {
-                    public static LocString NAME = (LocString)"Genetic Analysis Station.";
+                    public static LocString NAME = (LocString)"Genetic Analysis Station";
                     public static LocString DESCRIPTION = (LocString)"The room must contain Genetic Analysis Station.";
                 }
 
                 public class RADIATIONSOURCE
                 {
-                    public static LocString NAME = (LocString)"Radiation Source.";
+                    public static LocString NAME = (LocString)"Radiation Source";
                     public static LocString DESCRIPTION = (LocString)"At least one source of radiation.";
                 }
 
                 public class ARTIIFACTS
                 {
                     public static LocString NAME = (LocString)"{0} Unique Artifacts";
-                    public static LocString DESCRIPTION = (LocString)"At least {0} unique Artifacts";
+                    public static LocString DESCRIPTION = (LocString)"At least {0} unique Artifacts.";
                 }
 
                 public class FOSSILS
                 {
-                    public static LocString NAME = (LocString)"{0} Fossils.";
+                    public static LocString NAME = (LocString)"{0} Fossils";
                     public static LocString DESCRIPTION = (LocString)"At least {0} Fossils.";
+                }
+
+                public class SPACE_BUILDING
+                {
+                    public static LocString NAME = (LocString)"Pilot Support Building";
+                    public static LocString DESCRIPTION = (LocString)"Contains Mission Control Station.";
+                }
+
+                public class TRANSPARENT_CEILING
+                {
+                    public static LocString NAME = (LocString)"Transparent Ceiling";
+                    public static LocString DESCRIPTION = (LocString)"Top tiles of the room are transparent.";
                 }
             }
 

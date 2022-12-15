@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 namespace RoomsExpanded
 {
+    /*
     class RoomsExpanded_Patches_Laboratory
     {
         public static void AddRoom(ref RoomTypes __instance)
@@ -118,4 +119,5 @@ namespace RoomsExpanded
             }
         }
     }
+    */
 }
