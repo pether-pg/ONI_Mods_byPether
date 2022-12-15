@@ -21,6 +21,34 @@ namespace DiseasesExpanded
             }
         }
 
+        [HarmonyPatch(typeof(MedicinalPillWorkable))]
+        [HarmonyPatch("CanBeTakenBy")]
+        public static class MedicinalPillWorkable_CanBeTakenBy_Patch
+        {
+            public static void Postfix(MedicinalPillWorkable __instance, GameObject consumer, ref bool __result)
+            {
+                if (__instance.pill.info.effect != TestSampleConfig.EFFECT_ID)
+                    return;
+
+                if (!HasGermInfection(consumer))
+                    __result = false;
+            }
+
+            public static bool HasGermInfection(GameObject worker)
+            {
+                Sicknesses sicknesses = worker.gameObject.GetSicknesses();
+                if (sicknesses == null)
+                    return false;
+
+                foreach (SicknessInstance si in sicknesses)
+                    foreach (ExposureType et in TUNING.GERM_EXPOSURE.TYPES)
+                        if (et.sickness_id == si.Sickness.id && !string.IsNullOrEmpty(et.germ_id))
+                            return true;
+
+                return false;
+            }
+        }
+
         /*
          * Not satisfied with final effect, but leaving the code in case I changed my mind later
          *          

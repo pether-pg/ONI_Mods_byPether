@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using UnityEngine;
 
 namespace DiseasesExpanded
 {
@@ -42,6 +43,26 @@ namespace DiseasesExpanded
 				Tech tech2 = __instance.TryGet("MedicineIV");
 				if (tech2 != null)
 					tech2.unlockedItemIDs.Add(VaccineApothecaryConfig.ID);
+			}
+		}
+
+		[HarmonyPatch(typeof(FlushToiletConfig))]
+		[HarmonyPatch("ConfigureBuildingTemplate")]
+		public static class FlushToiletConfig_ConfigureBuildingTemplate_Patch
+		{
+			public static void Postfix(GameObject go)
+			{
+				go.GetComponent<KPrefabID>().AddTag(GameTags.NotRoomAssignable);
+			}
+		}
+
+		[HarmonyPatch(typeof(OuthouseConfig))]
+		[HarmonyPatch("ConfigureBuildingTemplate")]
+		public static class OuthouseConfig_ConfigureBuildingTemplate_Patch
+		{
+			public static void Postfix(GameObject go)
+			{
+				go.GetComponent<KPrefabID>().AddTag(GameTags.NotRoomAssignable);
 			}
 		}
 	}

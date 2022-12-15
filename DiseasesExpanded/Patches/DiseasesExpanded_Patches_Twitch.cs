@@ -9,7 +9,7 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_Twitch
     {
-
+        /*
         [HarmonyPatch(typeof(Db))]
         [HarmonyPatch("Initialize")]
         [HarmonyAfter(new string[] { "asquared31415.TwitchIntegration" })]
@@ -20,6 +20,7 @@ namespace DiseasesExpanded
                 RandomEvents.AllEvents.RegisterAll();
             }
         }
+        */
 
         [HarmonyPatch(typeof(RadiationEmitter))]
         [HarmonyPatch("OnSpawn")]
@@ -29,6 +30,7 @@ namespace DiseasesExpanded
 
             public static void Postfix(RadiationEmitter __instance)
             {
+                return;
                 if(__instance != null)
                     RadiationEmitters.Add(__instance);
             }
@@ -40,6 +42,7 @@ namespace DiseasesExpanded
         {
             public static void Postfix(RadiationEmitter __instance)
             {
+                return;
                 if (__instance != null)
                     RadiationEmitter_OnSpawn_Patch.RadiationEmitters.Remove(__instance);
             }
@@ -54,6 +57,7 @@ namespace DiseasesExpanded
 
             public static void Postfix(DiseaseDropper.Instance __instance)
             {
+                return;
                 UpdateList(__instance);
             }
 

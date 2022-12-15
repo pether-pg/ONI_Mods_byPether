@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ONITwitchLib;
+﻿using ONITwitchLib;
+using ONITwitchLib.Utils;
 using DiseasesExpanded.RandomEvents.Events;
 
 namespace DiseasesExpanded.RandomEvents
@@ -18,6 +14,10 @@ namespace DiseasesExpanded.RandomEvents
         static DangerManager dangerInst;
 
         public const int WEIGHT = 10000;
+        public const int WEIGHT_ALMOST_NEVER = 1;
+        public const int WEIGHT_RARE = 3;
+        public const int WEIGHT_NORMAL = 10;
+        public const int WEIGHT_COMMON = 30;
 
         public static void Init()
         {
@@ -42,7 +42,7 @@ namespace DiseasesExpanded.RandomEvents
             if (diseaseEvent.Condition != null)
                 conditionsInst.AddCondition(info, diseaseEvent.Condition);
 
-            deckInst.AddToDeck(DeckUtils.RepeatList(info, diseaseEvent.AppearanceWeight * WEIGHT));
+            //deckInst.AddToDeck(DeckUtils.RepeatList(info, diseaseEvent.AppearanceWeight * WEIGHT));
             dangerInst.SetDanger(info, diseaseEvent.DangerLevel);
         }
 
@@ -61,6 +61,7 @@ namespace DiseasesExpanded.RandomEvents
             //RegisterEvent(new PanicMode());
             //RegisterEvent(new IntensePollination());
             //RegisterEvent(new GreatSanishellMigration());
+            RegisterEvent(new EradicateGerms());
 
             // Mutating Virus
             for (int danger = (int)Danger.None; danger <= (int)Danger.Deadly; danger++)

@@ -44,19 +44,19 @@ namespace DiseasesExpanded
 
                 public static LocString VERSION_PATTERN = (LocString)"Version {ATTACK}/{RESILIANCE}"; 
                 public static LocString VERION_EFFICIENCY_PATTERN = (LocString)"Efficiency: " +
-                     "Attributes: <color=#FF0000>{0}</color>, " +
-                     "Breathing: <color=#FF0000>{1}</color>, " +
-                     "Calories: <color=#FF0000>{2}</color> " +
-                     "- Healing: <color=#FF0000>{3}</color>, " +
-                     "Energy: <color=#FF0000>{4}</color>, " +
-                     "Stress reduction: <color=#FF0000>{5}</color>";
+                     "Attributes: <color=#00FF00>{0}</color>, " +
+                     "Breathing: <color=#00FF00>{1}</color>, " +
+                     "Calories: <color=#00FF00>{2}</color> " +
+                     "- Healing: <color=#00FF00>{3}</color>, " +
+                     "Energy: <color=#00FF00>{4}</color>, " +
+                     "Stress reduction: <color=#00FF00>{5}</color>";
                 public static LocString VERSION_RESILIANCE_PATTERN = (LocString)"Resiliance: " +
-                    "Germ Resistance: <color=#FF0000>{0}</color>, " +
-                    "Duration: <color=#FF0000>{1}</color>, " +
-                    "Perpetum Mobile: <color=#FF0000>{2}</color> " +
-                    "- Exposure Threshold: <color=#FF0000>{3}</color>, " +
-                    "Radiation: <color=#FF0000>{4}</color>, " +
-                    "Temperature: <color=#FF0000>{5}</color>";
+                    "Germ Resistance: <color=#00FF00>{0}</color>, " +
+                    "Duration: <color=#00FF00>{1}</color>, " +
+                    "Perpetum Mobile: <color=#00FF00>{2}</color> " +
+                    "- Exposure Threshold: <color=#00FF00>{3}</color>, " +
+                    "Radiation: <color=#00FF00>{4}</color>, " +
+                    "Temperature: <color=#00FF00>{5}</color>";
                 public static LocString UPGRADE_HELP_PATTERN = (LocString)"Use {0} to develop nanobots.";
                 public static LocString LEGEND_HEADER = (LocString)"Included features:\n";
             }

@@ -43,6 +43,7 @@ namespace DiseasesExpanded
 
             public static void Postfix(Techs __instance)
             {
+                bool hard = Settings.Instance.RebalanceForDiseasesRestored;
                 List<List<Tuple<string, float>>> TECH_TIERS = Traverse.Create(__instance).Field("TECH_TIERS").GetValue<List<List<Tuple<string, float>>>>();
                 if (TECH_TIERS == null)
                 {
@@ -53,19 +54,19 @@ namespace DiseasesExpanded
                 TECH_TIERS.Add(new List<Tuple<string, float>>()
                 {
                     new Tuple<string, float>("basic", 20f),
-                    new Tuple<string, float>(MedicalResearchDataBank.MedicalResearchTypeId, 20f)
+                    new Tuple<string, float>(MedicalResearchDataBank.MedicalResearchTypeId, 15f)
                 });
                 TECH_TIERS.Add(new List<Tuple<string, float>>()
                 {
                     new Tuple<string, float>("basic", 30f),
                     new Tuple<string, float>("advanced", 20f),
-                    new Tuple<string, float>(MedicalResearchDataBank.MedicalResearchTypeId, 60f)
+                    new Tuple<string, float>(MedicalResearchDataBank.MedicalResearchTypeId, 20f * (hard ? 2 : 1))
                 });
                 TECH_TIERS.Add(new List<Tuple<string, float>>()
                 {
                     new Tuple<string, float>("basic", 35f),
                     new Tuple<string, float>("advanced", 30f),
-                    new Tuple<string, float>(MedicalResearchDataBank.MedicalResearchTypeId, 140f)
+                    new Tuple<string, float>(MedicalResearchDataBank.MedicalResearchTypeId, 30f* (hard ? 4 : 1))
                 });
             }
         }

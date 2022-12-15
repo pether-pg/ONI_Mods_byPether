@@ -6,6 +6,7 @@ namespace DiseasesExpanded
     {
         [MyCmpGet]
         Effects effects;
+
         float lastRollTime = 0;
         const int SPAWNED_GERMS = 1000;
         const float MIN_ROLL_INTERVAL = 600;
@@ -56,6 +57,7 @@ namespace DiseasesExpanded
         {
             hadSickness = true;
             effects.Add(HungerSickness.CRITTER_EFFECT_ID, true);
+            //SourceVisibility(HungerGerms.ID);
             this.gameObject.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = HungerGerms.ID;
 
             PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Negative, STRINGS.DISEASES.HUNGERSICKNESS.NAME, this.gameObject.transform);
@@ -75,7 +77,7 @@ namespace DiseasesExpanded
 
         public void SourceVisibility(string germId)
         {
-            DiseaseSourceVisualizer source = this.gameObject.AddOrGet<DiseaseSourceVisualizer>(); ;
+            DiseaseSourceVisualizer source = this.gameObject.AddOrGet<DiseaseSourceVisualizer>();
             source.alwaysShowDisease = germId;
             source.UpdateVisibility();
         }

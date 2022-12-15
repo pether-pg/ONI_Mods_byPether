@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using System.Threading.Tasks;
+using ONITwitchLib.Utils;
 
 namespace DiseasesExpanded.RandomEvents.Events
 {
@@ -36,7 +37,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             Event = new Action<object>(
                 data =>
                 {
-                    List<int> cells = ONITwitchLib.GridUtil.ActiveSimCells().ToList();
+                    List<int> cells = GridUtil.ActiveSimCells().ToList();
                     int numberOfSpawns = 1;
                     int possibleRetries = 100;
 
@@ -44,7 +45,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     {
                         int cellIdx = UnityEngine.Random.Range(0, cells.Count);
                         int randomCell = cells[cellIdx];
-                        int cell = ONITwitchLib.GridUtil.NearestEmptyCell(randomCell);
+                        int cell = GridUtil.NearestEmptyCell(randomCell);
                         int worldId = Grid.WorldIdx[cell];
                         while (!Grid.IsSolidCell(Grid.CellBelow(cell)))
                             cell = Grid.CellBelow(cell);

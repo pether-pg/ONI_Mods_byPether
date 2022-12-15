@@ -12,7 +12,7 @@ namespace DiseasesExpanded
         public Dictionary<byte, int> GatheredGerms = new Dictionary<byte, int>();
 
         public const int GatherThreshold = 100000;
-        public int EfficiencyDivider = 500;
+        public int EfficiencyDivider = 100;
         public Vector2Int GatherOffset = new Vector2Int(1, 1);
 
         private byte lastGatheredIdx = byte.MaxValue;

@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-using ONITwitchLib;
+using ONITwitchLib.Utils;
 
 namespace DiseasesExpanded.RandomEvents.Events
 {

@@ -30,8 +30,8 @@ namespace DiseasesExpanded
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
 
         private const float radResPerLvl = -0.15f;
-        private const float minGrowthTemp = 10 + degC;
-        private const float maxGrowthTemp = 30 + degC;
+        private const float minGrowthTemp = 15 + degC;
+        private const float maxGrowthTemp = 20 + degC;
         private const float growthTempPerLvl = 5;
 
         public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod

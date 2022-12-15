@@ -135,10 +135,7 @@ namespace DiseasesExpanded
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_diffScale_minDiffCount(Element.State.Solid, 0.4f, 3000f, 1200f, 1E-06f, 1000000));
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.Ice));
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.DirtyIce));
-
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.DieInElement(SimHashes.BleachStone));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.Steel));
 
             // Gas
 
@@ -148,17 +145,9 @@ namespace DiseasesExpanded
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Hydrogen));
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.CarbonDioxide));
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.DieInElement(SimHashes.ChlorineGas));
-
             // Liquid
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_DiffScale(Element.State.Liquid, 0.4f, 1200f, 300f, 100f, 0.01f));
-
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.LiquidOxygen));
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.LiquidHydrogen));
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.LiquidCarbonDioxide));
-
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.DieInElement(SimHashes.Chlorine));
 
             // Exposure
 
@@ -167,12 +156,6 @@ namespace DiseasesExpanded
             {
                 populationHalfLife = new float?(float.PositiveInfinity)
             });
-            ElementExposureRule elementExposureRule1 = new ElementExposureRule(SimHashes.Chlorine);
-            elementExposureRule1.populationHalfLife = new float?(10f);
-            this.AddExposureRule((ExposureRule)elementExposureRule1);
-            ElementExposureRule elementExposureRule2 = new ElementExposureRule(SimHashes.ChlorineGas);
-            elementExposureRule2.populationHalfLife = new float?(10f);
-            this.AddExposureRule((ExposureRule)elementExposureRule2);
         }
     }
 }

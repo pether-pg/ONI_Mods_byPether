@@ -21,7 +21,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                 data =>
                 {
                     int germsToAdd = 100000;
-                    foreach (int cell in ONITwitchLib.GridUtil.ActiveSimCells())
+                    foreach (int cell in ONITwitchLib.Utils.GridUtil.ActiveSimCells())
                         if (Grid.Element[cell].id == SimHashes.ContaminatedOxygen)
                             SimMessages.ModifyDiseaseOnCell(cell, GermIdx.SlimelungIdx, germsToAdd);
                 });

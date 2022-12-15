@@ -17,7 +17,7 @@ namespace DiseasesExpanded
         private const int maxDevelopmentLevel = 15;
 
         public const string FABRICATOR_ID = SupermaterialRefineryConfig.ID;
-        public const float RECIPE_TIME = 60;
+        public const float RECIPE_TIME = 600;
         public const float RECIPE_MASS_LARGE = 10000;
         public const float RECIPE_MASS_NORMAL = 1000;
 

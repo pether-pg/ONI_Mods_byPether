@@ -99,6 +99,7 @@
     <Compile Include="Cures\SunburnCureConfig.cs" />
     <Compile Include="Cures\SuperSerumConfig.cs" />
     <Compile Include="Cures\MutatingAntiviralConfig.cs" />
+    <Compile Include="DiseasesExpanded_Patches_DiseaseDroppers.cs" />
     <Compile Include="GermFlasks\AlienGermFlask.cs" />
     <Compile Include="GermFlasks\MutatingGermFlask.cs" />
     <Compile Include="GermFlasks\TestSampleConfig.cs" />
@@ -129,6 +130,7 @@
     <Compile Include="Cures\RadShotConfig.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Twitch.cs" />
     <Compile Include="RandomEvents\AllEvents.cs" />
+    <Compile Include="RandomEvents\Events\EradicateGerms.cs" />
     <Compile Include="RandomEvents\Events\FilthyFood.cs" />
     <Compile Include="RandomEvents\Events\GreatBogBugMigration.cs" />
     <Compile Include="RandomEvents\Events\GreatSanishellMigration.cs" />
@@ -220,9 +222,9 @@
   <PropertyGroup>
     <PostBuildEvent>IF exist "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" ( echo Mod Dir exists ) ELSE  ( mkdir "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" &amp;&amp; echo Mod Dir created)
 
-"$(ILMergeConsolePath)" /ndebug /out:"$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)_TwitchEvents.dll" "$(SolutionDir)$(TargetName)\bin\Release\$(TargetName).dll" "$(SolutionDir)$(TargetName)\bin\Release\ONITwitchLib.dll"  /targetplatform:v4,C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+"$(ILMergeConsolePath)" /ndebug /out:"$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)Merged.dll" "$(SolutionDir)$(TargetName)\bin\Release\$(TargetName).dll" "$(SolutionDir)$(TargetName)\bin\Release\ONITwitchLib.dll"  /targetplatform:v4,C:\Windows\Microsoft.NET\Framework64\v4.0.30319
 
-xcopy /Y /R  /I /Q  /E "$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)_TwitchEvents.dll" "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)"</PostBuildEvent>
+xcopy /Y /R  /I /Q  /E "$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)Merged.dll" "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)"</PostBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
