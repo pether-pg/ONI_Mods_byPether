@@ -142,7 +142,7 @@ namespace RoomsExpanded
                 // Temporary "Room Size" mod functionality restored for DLC
                 // Must be removed once "Room Size" is updated for DLC
                 // Original mod by trevis can be found here: https://steamcommunity.com/sharedfiles/filedetails/?id=1715802131
-                TuningData<RoomProber.Tuning>.Get().maxRoomSize = Settings.Instance.ResizeMaxRoomSize;
+                TuningData<RoomProber.Tuning>.Get().maxRoomSize = Settings.Instance.GetMaxRoomSize();
             }
         }
 

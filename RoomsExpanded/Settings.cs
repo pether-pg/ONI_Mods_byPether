@@ -90,6 +90,10 @@ namespace RoomsExpanded
             return filename;
             //return SettingsPath.Instance.GetPathForFile(filename);
         }
+        public static void PLib_Initalize()
+        {
+            _instance = POptions.ReadSettings<Settings>();
+        }
 
         public Settings()
         {
@@ -120,7 +124,7 @@ namespace RoomsExpanded
             ResizeMaxRoomSize64 = 64;
             ResizeMaxRoomSize96 = 96;
             ResizeMaxRoomSize120 = 120;
-            ResizeMaxRoomSize = 128;
+            //ResizeMaxRoomSize = 128;
         }
 
         [JsonProperty]
@@ -230,14 +234,35 @@ namespace RoomsExpanded
         [Option("ResizeMaxRoomSize120", "Change max room size from 120 tiles - temporal DLC support for \"Room Size\" mod id=1715802131", category: "RoomSize")]
         public int ResizeMaxRoomSize120 { get; set; }
 
-        [JsonProperty]
-        [Limit(128, 256)]
-        [Option("ResizeMaxRoomSize", "Change max room size - temporal DLC support for \"Room Size\" mod id=1715802131", category: "RoomSize")]
-        public int ResizeMaxRoomSize { get; set; }
+        //[JsonProperty]
+        //[Limit(128, 256)]
+        //[Option("ResizeMaxRoomSize", "Change max room size - temporal DLC support for \"Room Size\" mod id=1715802131", category: "RoomSize")]
+        //public int ResizeMaxRoomSize { get; set; }
 
-        public static void PLib_Initalize()
+        public int GetMaxRoomSize()
         {
-            _instance = POptions.ReadSettings<Settings>();
+            int max = 128;
+            max = Math.Max(max, ResizeMaxRoomSize64);
+            max = Math.Max(max, ResizeMaxRoomSize96);
+            max = Math.Max(max, ResizeMaxRoomSize120);
+            max = Math.Max(max, Kitchenette.MaxSize);
+            max = Math.Max(max, Bathroom.MaxSize);
+            max = Math.Max(max, Industrial.MaxSize);
+            max = Math.Max(max, Graveyard.MaxSize);
+            max = Math.Max(max, Agricultural.MaxSize);
+            max = Math.Max(max, Gym.MaxSize);
+            max = Math.Max(max, Nursery.MaxSize);
+            max = Math.Max(max, Aquarium.MaxSize);
+            max = Math.Max(max, Botanical.MaxSize);
+            max = Math.Max(max, Museum.MaxSize);
+            max = Math.Max(max, MuseumHistory.MaxSize);
+            max = Math.Max(max, MuseumSpace.MaxSize);
+            max = Math.Max(max, HospitalUpdate.MaxSize);
+            max = Math.Max(max, MissionControl.MaxSize);
+            max = Math.Max(max, NurseryGenetic.MaxSize);
+
+            return max;
         }
+
     }
 }
