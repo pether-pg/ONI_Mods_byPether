@@ -11,6 +11,7 @@ namespace MultiplayerStorage
     {
         [HarmonyPatch(typeof(BuildingDef))]
         [HarmonyPatch("TryPlace")]
+        [HarmonyPatch(new Type[] { typeof(GameObject), typeof(Vector3), typeof(Orientation), typeof(IList<Tag>), typeof(int)})]
         public class BuildingDef_TryPlace_Patch
         {
             public static void Postfix(GameObject __result)
