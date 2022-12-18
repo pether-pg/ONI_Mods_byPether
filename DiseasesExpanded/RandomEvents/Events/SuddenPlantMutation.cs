@@ -43,6 +43,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         }
                     }
 
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Some of our plants mutated to have bigger leaves, richer fruits and... is that a tentacle?!?!");
                 });
         }
     }

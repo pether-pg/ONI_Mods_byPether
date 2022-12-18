@@ -37,10 +37,6 @@ namespace DiseasesExpanded
 
         public void OnPrefabInit(GameObject inst)
         {
-            /*KAnimControllerBase kAnimBase = inst.GetComponent<KAnimControllerBase>();
-            if (kAnimBase != null)
-                kAnimBase.TintColour = ColorPalette.NavyBlue;
-            */
         }
 
         public void OnSpawn(GameObject inst)

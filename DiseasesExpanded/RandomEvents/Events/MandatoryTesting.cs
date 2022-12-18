@@ -32,6 +32,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                 {
                     foreach (MinionIdentity mi in Components.MinionIdentities)
                         TestSampleConfig.OnEatComplete(mi.gameObject);
+
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "All duplicants got encouraged to perform mandatory health tests. If one is infected with germs, our tests will detect them.");
                 });
         }
     }

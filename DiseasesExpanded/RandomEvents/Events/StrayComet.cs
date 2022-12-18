@@ -44,7 +44,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                         cometId = possibles[0];
                     }
 
-                    SpawnBombard(worldId, cometId);
+                    GameObject go = SpawnBombard(worldId, cometId);
+                    ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, "Hey, look! A shooting star!", go);
                 });
         }
 

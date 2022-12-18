@@ -29,7 +29,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     if (flowerId == GasGrassConfig.ID)
                         minCycle = 500;
                     else
-                        minCycle = (int)DangerLevel * 50;
+                        minCycle = (int)DangerLevel * 100;
 
                     return GameClock.Instance.GetCycle() > minCycle;
                 });

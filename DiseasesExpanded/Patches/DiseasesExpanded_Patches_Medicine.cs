@@ -1,7 +1,8 @@
 ﻿using HarmonyLib;
 using UnityEngine;
-using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Klei.AI;
 
 namespace DiseasesExpanded
@@ -46,6 +47,33 @@ namespace DiseasesExpanded
                             return true;
 
                 return false;
+            }
+        }
+
+        [HarmonyPatch(typeof(Immigration), "ConfigureCarePackages")]
+        public static class Immigration_ConfigureCarePackages_Patch
+        {
+            public static Dictionary<string, float> Printables = new Dictionary<string, float>()
+            {
+                { MudMaskConfig.ID, 5 },
+                { HappyPillConfig.ID, 5 },
+                { TestSampleConfig.ID, 5 },
+                { AntihistamineBoosterConfig.ID, 3 },
+                { SunburnCureConfig.ID, 3 },
+                { GasCureConfig.ID, 3 },
+                { AlienSicknessCureConfig.ID, 1 },
+                { SuperSerumConfig.ID, 1 },
+                { RadShotConfig.ID, 1 },
+                { SapShotConfig.ID, 1 }
+            };
+
+            public static void Postfix(ref Immigration __instance)
+            {
+                Traverse traverse = Traverse.Create(__instance).Field("carePackages");
+                List<CarePackageInfo> list = traverse.GetValue<CarePackageInfo[]>().ToList<CarePackageInfo>();
+                foreach (string id in Printables.Keys)
+                    list.Add(new CarePackageInfo(id, Printables[id], () => DiscoveredResources.Instance.IsDiscovered(id)));
+                traverse.SetValue(list.ToArray());
             }
         }
 

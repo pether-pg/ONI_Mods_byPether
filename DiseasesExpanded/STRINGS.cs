@@ -214,6 +214,12 @@ namespace DiseasesExpanded
                 public static LocString DESC = (LocString)"This Duplicant just delivered germ sample for futher testing.";
             }
 
+            public class SPINDLYTHORNS
+            {
+                public static LocString NAME = (LocString)"Spindly Thorns";
+                public static LocString DESC = (LocString)"This Plant developed protective thorns, similar to Grub Fruit spindles. Touching it may cause Sleeping Curse...";
+            }
+
             public class NANOBOTENHANCEMENT
             {
                 public static LocString NAME = (LocString)"Nanobot Enhancement";
@@ -238,7 +244,7 @@ namespace DiseasesExpanded
             public class SAPSHOT
             {
                 public static LocString NAME = (LocString)"Sweet Sap Shot";
-                public static LocString DESC = (LocString)"Thick and full of shugar, Sweet Sap Shot condenses many calories into one syringe to quickly satisfy even the most overwhelming hunger.";
+                public static LocString DESC = (LocString)"Thick and full of sugar, Sweet Sap Shot condenses many calories into one syringe to quickly satisfy even the most overwhelming hunger.";
             }
 
             public class RADSHOT

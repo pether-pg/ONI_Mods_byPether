@@ -48,6 +48,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         egg.SetActive(true);
                     }
 
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Researchers proclaim cycle of the Sanishell. All dwellings increase population.");
                 });
         }
     }

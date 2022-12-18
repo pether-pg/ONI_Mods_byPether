@@ -31,6 +31,8 @@ namespace DiseasesExpanded.RandomEvents.Events
 
                         sicknesses.Infect(new SicknessExposureInfo(AlienSickness.ID, GeneralName));
                     }
+
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "We received strange distress signal from our rocket...");
                 });
         }
 

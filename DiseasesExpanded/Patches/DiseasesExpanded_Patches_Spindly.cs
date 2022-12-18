@@ -8,6 +8,8 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_Spindly
     {
+        public const string SPINDLY_PLANTS_EFFECT_ID = "SpindlyPlantEffect";
+
         public static void UpdateNarcolepsyTimes()
         {
             TUNING.TRAITS.NARCOLEPSY_INTERVAL_MIN /= 2;
@@ -38,7 +40,7 @@ namespace DiseasesExpanded
             {
                 if (go == null) return false;
                 string EffectID = "RecentlyRecDrink"; // from EspressoMachine.cs
-                Klei.AI.Effects effects = go.GetComponent<Klei.AI.Effects>();
+                Effects effects = go.GetComponent<Effects>();
                 return (effects != null && effects.HasEffect(EffectID));
             }
         }
@@ -50,7 +52,7 @@ namespace DiseasesExpanded
         {
             public static void Postfix(Harvestable __instance, Worker worker)
             {
-                if (!__instance.gameObject.name.Contains(WormPlantConfig.ID) || __instance.gameObject.name.Contains(SuperWormPlantConfig.ID))
+                if (!CausesCurse(__instance))
                     return;
 
                 if (HasConflictingTraits(worker) || IsRecentlyRecovered(worker))
@@ -62,6 +64,24 @@ namespace DiseasesExpanded
                 float randomRoll = UnityEngine.Random.Range(0.0f, 100.0f);
                 if (GetInfectionChance(worker) > randomRoll)
                     TryInfect(worker);
+            }
+
+            private static bool CausesCurse(Harvestable harvestable)
+            {
+                if (harvestable == null || harvestable.gameObject == null)
+                    return false;
+
+                if (harvestable.gameObject.name.Contains(WormPlantConfig.ID) && !harvestable.gameObject.name.Contains(SuperWormPlantConfig.ID))
+                    return true;
+
+                Effects effects = harvestable.gameObject.GetComponent<Effects>();
+                if (effects == null)
+                    return false;
+
+                if (effects.HasEffect(SPINDLY_PLANTS_EFFECT_ID))
+                    return true;
+
+                return false;
             }
 
             private static bool HasConflictingTraits(Worker worker)

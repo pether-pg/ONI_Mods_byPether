@@ -24,6 +24,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                     foreach (int cell in ONITwitchLib.Utils.GridUtil.ActiveSimCells())
                         if (Grid.Element[cell].id == SimHashes.ContaminatedOxygen)
                             SimMessages.ModifyDiseaseOnCell(cell, GermIdx.SlimelungIdx, germsToAdd);
+
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "All Polluted Oxygen is now even more yucky");
                 });
         }
     }

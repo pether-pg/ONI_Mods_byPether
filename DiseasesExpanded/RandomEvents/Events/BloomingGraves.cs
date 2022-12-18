@@ -33,6 +33,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                             GameObject go = GameUtil.KInstantiate(Assets.GetPrefab(EvilFlowerConfig.ID), grave.transform.position, Grid.SceneLayer.Creatures);
                             go.SetActive(true);
                         }
+
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Death cannot be healed. But it can bloom!");
                 }
             );
 

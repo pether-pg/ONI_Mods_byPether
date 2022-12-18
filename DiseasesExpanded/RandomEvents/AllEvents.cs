@@ -13,7 +13,7 @@ namespace DiseasesExpanded.RandomEvents
         static TwitchDeckManager deckInst;
         static DangerManager dangerInst;
 
-        public const int WEIGHT = 10000;
+        public const int WEIGHT = 1;
         public const int WEIGHT_ALMOST_NEVER = 1;
         public const int WEIGHT_RARE = 3;
         public const int WEIGHT_NORMAL = 10;
@@ -42,7 +42,7 @@ namespace DiseasesExpanded.RandomEvents
             if (diseaseEvent.Condition != null)
                 conditionsInst.AddCondition(info, diseaseEvent.Condition);
 
-            //deckInst.AddToDeck(DeckUtils.RepeatList(info, diseaseEvent.AppearanceWeight * WEIGHT));
+            deckInst.AddToDeck(info, diseaseEvent.AppearanceWeight * WEIGHT);
             dangerInst.SetDanger(info, diseaseEvent.DangerLevel);
         }
 
@@ -57,67 +57,72 @@ namespace DiseasesExpanded.RandomEvents
             Init();
 
             // General
-            RegisterEvent(new MandatoryTesting());
-            //RegisterEvent(new PanicMode());
-            //RegisterEvent(new IntensePollination());
-            //RegisterEvent(new GreatSanishellMigration());
-            RegisterEvent(new EradicateGerms());
+            RegisterEvent(new MandatoryTesting(WEIGHT_COMMON));
+            RegisterEvent(new PanicMode(WEIGHT_NORMAL));
+            RegisterEvent(new IntensePollination(WEIGHT_NORMAL));
+            RegisterEvent(new GreatSanishellMigration(WEIGHT_NORMAL));
+            RegisterEvent(new EradicateGerms(WEIGHT_RARE));
+
+            // All
+            for(byte idx = 0; idx < Db.Get().Diseases.Count; idx++)
+            {
+                RegisterEvent(new PrintSomeGerms(idx, WEIGHT_RARE));
+                RegisterEvent(new SpawnInfectedElement(idx, WEIGHT_NORMAL));
+
+                if (!string.IsNullOrEmpty(AdoptStrayPet.GetPetId(idx)))
+                    RegisterEvent(new AdoptStrayPet(idx, WEIGHT_RARE));
+            }
+            foreach (string flowerId in SproutFlowers.SupportedFlowers())
+                RegisterEvent(new SproutFlowers(flowerId, WEIGHT_NORMAL));
 
             // Mutating Virus
             for (int danger = (int)Danger.None; danger <= (int)Danger.Deadly; danger++)
-                RegisterEvent(new SuddenVirusMutation(danger));
-            //RegisterEvent(new RegressiveVirusMutation());
-
-            // All
-            //for(byte idx = 0; idx < Db.Get().Diseases.Count; idx++)
-            //    RegisterEvent(new PrintSomeGerms(idx));
-            //foreach (string flowerId in SproutFlowers.SupportedFlowers())
-            //    RegisterEvent(new SproutFlowers(flowerId));
+                RegisterEvent(new SuddenVirusMutation(danger, WEIGHT_NORMAL));
+            RegisterEvent(new RegressiveVirusMutation(WEIGHT_NORMAL));
 
             // Food Poisoning
-            //RegisterEvent(new FilthyFood());
-            //RegisterEvent(new HurtingTummy(gas: false));
+            RegisterEvent(new FilthyFood(WEIGHT_NORMAL));
+            RegisterEvent(new HurtingTummy(gas: false, WEIGHT_NORMAL));
 
             // Slimelung
-            RegisterEvent(new SlimyPollutedOxygen());
+            RegisterEvent(new SlimyPollutedOxygen(WEIGHT_NORMAL));
 
             // Bog Bugs
-            //RegisterEvent(new GreatBogBugMigration());
+            RegisterEvent(new GreatBogBugMigration(WEIGHT_NORMAL));
 
             // Frost Shards
 
+            // Spindly Curse
+            RegisterEvent(new SpindlyPlants(WEIGHT_NORMAL));
+
             // Hunger Germs
-            RegisterEvent(new HungryPet());
-            RegisterEvent(new PlagueOfHunger());
+            RegisterEvent(new HungryPet(WEIGHT_NORMAL));
+            RegisterEvent(new PlagueOfHunger(WEIGHT_RARE));
 
             // Gassy Germs
-            //RegisterEvent(new HurtingTummy(gas: true));
-            //RegisterEvent(new StrayComet(isMoo: true));
+            RegisterEvent(new HurtingTummy(gas: true, WEIGHT_NORMAL));
+            RegisterEvent(new StrayComet(isMoo: true, WEIGHT_NORMAL));
 
             // Medical Nanobots
-            //RegisterEvent(new NanobotUpdate(false));
-            RegisterEvent(new NanobotUpdate(true));
+            RegisterEvent(new NanobotUpdate(false, WEIGHT_NORMAL));
+            RegisterEvent(new NanobotUpdate(true, WEIGHT_RARE));
 
             // Radiation
-            //RegisterEvent(new SuddenPlantMutation());
-            RegisterEvent(new IntenseRadiation());
+            RegisterEvent(new SuddenPlantMutation(WEIGHT_NORMAL));
+            RegisterEvent(new IntenseRadiation(WEIGHT_NORMAL));
 
             // Alien Goo
-            RegisterEvent(new StrayComet(isMoo: false));
-            RegisterEvent(new SpaceScream());
+            RegisterEvent(new StrayComet(isMoo: false, WEIGHT_NORMAL));
+            RegisterEvent(new SpaceScream(WEIGHT_RARE));
 
             // Zombie Spores
-            RegisterEvent(new BloomingGraves());
-            RegisterEvent(new NightOfTheLivingDead());
+            RegisterEvent(new BloomingGraves(WEIGHT_RARE));
+            RegisterEvent(new NightOfTheLivingDead(WEIGHT_ALMOST_NEVER));
         }
 
         // TODO idea list:
-        // Alien Pet
-        // Spawn Infected Element
         // Ice Garden
-        // Spindly Crops
         // Get Vaccinated
-        // Call of the Wild
         // Pollination
         // Nuclear Pee
         // Med Prints

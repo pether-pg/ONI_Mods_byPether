@@ -25,6 +25,7 @@ namespace DiseasesExpanded.RandomEvents.Events
 
                         sicknesses.Infect(new SicknessExposureInfo(ZombieSickness.ID, GeneralName));
                     }
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "The end is nigh!");
                 });
         }
     }

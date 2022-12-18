@@ -22,6 +22,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                 {
                     foreach (Crop crop in Components.Crops)
                         SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(crop.gameObject), GermIdx.BogInsectsIdx, 1000000);
+
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Researchers proclaim cycle of the Bog Bugs. All dwellings increase population.");
                 });
         }
     }

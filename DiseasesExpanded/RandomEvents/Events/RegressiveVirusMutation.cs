@@ -22,6 +22,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                     MutationData.Instance.BulkModifyMutation(MutationVectors.GetAttackVectors(), -1);
                     MutationData.Instance.BulkModifyMutation(MutationVectors.GetResilianceVectors(), -1);
                     MutationData.Instance.Mutate();
+
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "We observed slightly less dangerous variant of the Virus.");
                 });
         }
     }

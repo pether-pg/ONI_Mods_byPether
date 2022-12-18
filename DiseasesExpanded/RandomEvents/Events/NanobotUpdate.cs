@@ -39,6 +39,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         SaveGame.Instance.StartCoroutine(WaitToRestore());
                     }
 
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "New update to Nanobot software got rushed for release! " + (malicious ? "Sadly, it may contain some bugs..." : ""));
                 });
         }
 
@@ -47,6 +48,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             float time = Mathf.Max(60, GameClock.Instance.GetCycle() / 5);
             yield return new WaitForSeconds(time);
             MedicalNanobots.MaliciousOverride = false;
+            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Hotfix released: Malicious issues of Nanobot software got fixed.");
         }
     }
 }

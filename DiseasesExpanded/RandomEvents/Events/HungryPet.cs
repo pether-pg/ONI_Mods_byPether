@@ -33,9 +33,9 @@ namespace DiseasesExpanded.RandomEvents.Events
                             continue;
 
                         monitor.Infect();
+                        ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, "One of your critters is more hungry than usually.", monitor.gameObject);
                         break;
                     }
-
                 });
         }
 

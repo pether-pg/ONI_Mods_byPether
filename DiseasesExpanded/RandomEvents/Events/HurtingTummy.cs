@@ -32,6 +32,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                         return;
 
                     sicknesses.Infect(new SicknessExposureInfo(gas ? GasSickness.ID : FoodSickness.ID, GeneralName));
+
+                    ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, "One of your duplicants got hurting tummy. It's nothing good for sure...", mi.gameObject);
                 });
         }
     }

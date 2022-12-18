@@ -22,6 +22,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                 data => 
                 {
                     SaveGame.Instance.StartCoroutine(SpamWarnings());
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "AAAAAAAAAAAAAAAAAAAAAA!!!!!");
                 });
         }
 

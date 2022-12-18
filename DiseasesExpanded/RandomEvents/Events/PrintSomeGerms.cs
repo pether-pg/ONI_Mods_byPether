@@ -25,6 +25,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     foreach (Telepad pod in Components.Telepads)
                         SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(pod.gameObject), germIdx, 10000000);
 
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Additional germs were printed from all Printing Pods.");
                 }
             );
         }

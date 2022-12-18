@@ -30,6 +30,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                             ModifiedEmitters.Add(re);
                         }
 
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "We noticed increased readings on our radiation-measuring aparature.");
                     SaveGame.Instance.StartCoroutine(WaitToRestore());
                 });
         }
@@ -39,6 +40,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             yield return new WaitForSeconds(600);
             foreach (RadiationEmitter re in ModifiedEmitters)
                 ModifyRadiation(re, 0.5f, 0.05f);
+            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Radiation levels seem to be back to normal.");
         }
 
         private void ModifyRadiation(RadiationEmitter emitter, float radiusScale = 1, float radiationScale = 1)

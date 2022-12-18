@@ -31,6 +31,8 @@ namespace DiseasesExpanded.RandomEvents.Events
 
                         sicknesses.Infect(new SicknessExposureInfo(HungerSickness.ID, GeneralName));
                     }
+
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "A kilogram of Wheat for a Diamond, and three kilograms of Meal Lice for a Diamond, but do not harm Burgers and Pie!");
                 });
         }
     }

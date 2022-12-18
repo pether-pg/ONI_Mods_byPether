@@ -89,6 +89,7 @@ namespace DiseasesExpanded
                 Db.Get().effects.Add(new Effect(BogSickness.RECOVERY_ID, STRINGS.EFFECTS.BOGRECOVERY.NAME, STRINGS.EFFECTS.BOGRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(SpindlySickness.RECOVERY_ID, STRINGS.EFFECTS.SPINDLYRECOVERY.NAME, STRINGS.EFFECTS.SPINDLYRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(MutatingSickness.RECOVERY_ID, STRINGS.EFFECTS.MUTATEDRECOVERY.NAME, STRINGS.EFFECTS.MUTATEDRECOVERY.DESC, cycle2, true, true, false));
+                Db.Get().effects.Add(new Effect(DiseasesExpanded_Patches_Spindly.SPINDLY_PLANTS_EFFECT_ID, STRINGS.EFFECTS.SPINDLYTHORNS.NAME, STRINGS.EFFECTS.SPINDLYTHORNS.DESC, cycle5, true, false, true));
                 Db.Get().effects.Add(AlienSickness.GetRecoveryEffect());
                 Db.Get().effects.Add(AlienSickness.GetAssimilationEffect());
 

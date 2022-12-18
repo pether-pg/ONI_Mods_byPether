@@ -29,6 +29,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                             SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(inst.gameObject), inst.def.diseaseIdx, count);
                         }
 
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "All of the plants released increased amount of pollen.");
                 });
         }
     }

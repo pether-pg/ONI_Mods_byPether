@@ -2,7 +2,7 @@
 using Klei.AI;
 using System.Collections.Generic;
 
-namespace DiseasesExpanded.Cures
+namespace DiseasesExpanded
 {
     class SunburnCureConfig : IEntityConfig
     {

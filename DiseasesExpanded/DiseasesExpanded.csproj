@@ -99,7 +99,7 @@
     <Compile Include="Cures\SunburnCureConfig.cs" />
     <Compile Include="Cures\SuperSerumConfig.cs" />
     <Compile Include="Cures\MutatingAntiviralConfig.cs" />
-    <Compile Include="DiseasesExpanded_Patches_DiseaseDroppers.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_DiseaseDroppers.cs" />
     <Compile Include="GermFlasks\AlienGermFlask.cs" />
     <Compile Include="GermFlasks\MutatingGermFlask.cs" />
     <Compile Include="GermFlasks\TestSampleConfig.cs" />
@@ -130,6 +130,7 @@
     <Compile Include="Cures\RadShotConfig.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Twitch.cs" />
     <Compile Include="RandomEvents\AllEvents.cs" />
+    <Compile Include="RandomEvents\Events\AdoptStrayPet.cs" />
     <Compile Include="RandomEvents\Events\EradicateGerms.cs" />
     <Compile Include="RandomEvents\Events\FilthyFood.cs" />
     <Compile Include="RandomEvents\Events\GreatBogBugMigration.cs" />
@@ -145,11 +146,15 @@
     <Compile Include="RandomEvents\Events\RegressiveVirusMutation.cs" />
     <Compile Include="RandomEvents\Events\SlimyPollutedOxygen.cs" />
     <Compile Include="RandomEvents\Events\SpaceScream.cs" />
+    <Compile Include="RandomEvents\Events\SpawnInfectedElement.cs" />
+    <Compile Include="RandomEvents\Events\SpindlyPlants.cs" />
     <Compile Include="RandomEvents\Events\SproutFlowers.cs" />
     <Compile Include="RandomEvents\Events\StrayComet.cs" />
     <Compile Include="RandomEvents\Events\SuddenPlantMutation.cs" />
     <Compile Include="RandomEvents\Events\SuddenVirusMutation.cs" />
+    <Compile Include="RandomEvents\GermCarrier.cs" />
     <Compile Include="RandomEvents\Helpers.cs" />
+    <Compile Include="RandomEvents\Configs\MorbAlienConfig.cs" />
     <Compile Include="RandomEvents\RandomDiseaseEvent.cs" />
     <Compile Include="RandomEvents\Events\BloomingGraves.cs" />
     <Compile Include="RandomEvents\Events\NightOfTheLivingDead.cs" />

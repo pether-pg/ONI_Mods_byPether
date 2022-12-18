@@ -23,6 +23,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                     foreach (int cell in ONITwitchLib.Utils.GridUtil.ActiveSimCells())
                         if (Grid.DiseaseCount[cell] > 0)
                             SimMessages.ModifyDiseaseOnCell(cell, Grid.DiseaseIdx[cell], -Grid.DiseaseCount[cell]);
+
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Most of the germs were eradicated from the atmosphere.");
                 });
         }
     }
