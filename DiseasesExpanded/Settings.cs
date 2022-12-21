@@ -43,5 +43,14 @@ namespace DiseasesExpanded
                 { 0.60f, ColorPalette.BloodyRed },
                 { 1.00f, ColorPalette.ReddyPurple }
             };
+
+        public RandomEventsSettings RandomEvents = new RandomEventsSettings();
+
+        public class RandomEventsSettings
+        {
+            public bool EnableTwitchEvents = true;
+            public bool ShowDetailedEventNames = false;
+            public float RelativeEventsWeight = 1;
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace DiseasesExpanded.RandomEvents
             return string.Format("{0}_{1}", baseId, details.ToString());
         }
 
-        public string GetFriednlyName(bool friendly = true)
+        public string GetFriendlyName(bool friendly = true)
         {
             if(!friendly)
                 return GeneralName;

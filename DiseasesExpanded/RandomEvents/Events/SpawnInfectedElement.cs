@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using STRINGS;
 using ONITwitchLib.Utils;
 
 namespace DiseasesExpanded.RandomEvents.Events
@@ -33,7 +33,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     foreach (int gameCell in intSet)
                         SimMessages.ReplaceAndDisplaceElement(gameCell, spawnedElementHash, SpawnEvent, mass, temp, germIdx, 100000);
 
-                    ONITwitchLib.ToastManager.InstantiateToastWithPosTarget(GeneralName, $"Spawned some {element.name} filled with germs.", Grid.CellToPos(withCavityClearance));
+                    ONITwitchLib.ToastManager.InstantiateToastWithPosTarget(GeneralName, $"Spawned some {Util.StripTextFormatting(element.name)} filled with germs.", Grid.CellToPos(withCavityClearance));
                 });
         }
 

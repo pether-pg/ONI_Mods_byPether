@@ -15,7 +15,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;
 
-            Condition = new Func<object, bool>(data => true);
+            Condition = new Func<object, bool>(data => DiseasesExpanded_Patches_Twitch.DiseaseDropperInstance_Initialize_Patch.DiseaseDroppers != null);
 
             Event = new Action<object>(
                 data =>

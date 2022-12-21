@@ -26,7 +26,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     foreach (RadiationEmitter re in DiseasesExpanded_Patches_Twitch.RadiationEmitter_OnSpawn_Patch.RadiationEmitters)
                         if (re != null)
                         {
-                            ModifyRadiation(re, 2, 20);
+                            ModifyRadiation(re, 2, 5);
                             ModifiedEmitters.Add(re);
                         }
 
@@ -39,7 +39,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         {
             yield return new WaitForSeconds(600);
             foreach (RadiationEmitter re in ModifiedEmitters)
-                ModifyRadiation(re, 0.5f, 0.05f);
+                ModifyRadiation(re, 0.5f, 0.2f);
             ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Radiation levels seem to be back to normal.");
         }
 

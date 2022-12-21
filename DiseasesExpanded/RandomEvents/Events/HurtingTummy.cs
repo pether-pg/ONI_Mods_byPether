@@ -17,7 +17,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             AppearanceWeight = weight;
             DangerLevel = Helpers.EstimateGermDanger(germIdx);
 
-            Condition = new Func<object, bool>(data => GameClock.Instance.GetCycle() > 10);
+            Condition = new Func<object, bool>(data => GameClock.Instance.GetCycle() > 25);
 
             Event = new Action<object>(
                 data =>

@@ -13,7 +13,6 @@ namespace DiseasesExpanded.RandomEvents
         static TwitchDeckManager deckInst;
         static DangerManager dangerInst;
 
-        public const int WEIGHT = 1;
         public const int WEIGHT_ALMOST_NEVER = 1;
         public const int WEIGHT_RARE = 3;
         public const int WEIGHT_NORMAL = 10;
@@ -36,13 +35,17 @@ namespace DiseasesExpanded.RandomEvents
 
         public static void RegisterEvent(RandomDiseaseEvent diseaseEvent)
         {
-            EventInfo info = eventInst.RegisterEvent(diseaseEvent.ID, diseaseEvent.GetFriednlyName());
+            EventInfo info = eventInst.RegisterEvent(diseaseEvent.ID, diseaseEvent.GetFriendlyName(Settings.Instance.RandomEvents.ShowDetailedEventNames));
             eventInst.AddListenerForEvent(info, diseaseEvent.Event);
 
             if (diseaseEvent.Condition != null)
                 conditionsInst.AddCondition(info, diseaseEvent.Condition);
 
-            deckInst.AddToDeck(info, diseaseEvent.AppearanceWeight * WEIGHT);
+            int weight = (int)(diseaseEvent.AppearanceWeight * Settings.Instance.RandomEvents.RelativeEventsWeight);
+            if (weight < 1)
+                weight = 1;
+
+            deckInst.AddToDeck(info, weight);
             dangerInst.SetDanger(info, diseaseEvent.DangerLevel);
         }
 
@@ -66,8 +69,8 @@ namespace DiseasesExpanded.RandomEvents
             // All
             for(byte idx = 0; idx < Db.Get().Diseases.Count; idx++)
             {
-                RegisterEvent(new PrintSomeGerms(idx, WEIGHT_RARE));
-                RegisterEvent(new SpawnInfectedElement(idx, WEIGHT_NORMAL));
+                RegisterEvent(new PrintSomeGerms(idx, WEIGHT_ALMOST_NEVER));
+                RegisterEvent(new SpawnInfectedElement(idx, WEIGHT_RARE));
 
                 if (!string.IsNullOrEmpty(AdoptStrayPet.GetPetId(idx)))
                     RegisterEvent(new AdoptStrayPet(idx, WEIGHT_RARE));

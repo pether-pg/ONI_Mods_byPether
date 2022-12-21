@@ -28,16 +28,17 @@ namespace DiseasesExpanded.RandomEvents.Events
                     possibles.Shuffle();
                     MutationVectors.Vectors vector = possibles[0];
 
+                    if (malicious)
+                    {
+                        MedicalNanobots.MaliciousOverride = true;
+                        SaveGame.Instance.StartCoroutine(WaitToRestore());
+                    }
+
                     MedicalNanobotsData.Instance.IncreaseDevelopment(vector);
 
                     foreach (Telepad pad in Components.Telepads)
                         SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(pad.gameObject), GermIdx.MedicalNanobotsIdx, (int)MedicalNanobotsData.RECIPE_MASS_LARGE);
 
-                    if(malicious)
-                    {
-                        MedicalNanobots.MaliciousOverride = true;
-                        SaveGame.Instance.StartCoroutine(WaitToRestore());
-                    }
 
                     ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "New update to Nanobot software got rushed for release! " + (malicious ? "Sadly, it may contain some bugs..." : ""));
                 });
@@ -48,6 +49,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             float time = Mathf.Max(60, GameClock.Instance.GetCycle() / 5);
             yield return new WaitForSeconds(time);
             MedicalNanobots.MaliciousOverride = false;
+            MedicalNanobotsData.Instance.UpdateAll();
             ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Hotfix released: Malicious issues of Nanobot software got fixed.");
         }
     }
