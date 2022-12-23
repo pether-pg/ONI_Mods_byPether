@@ -25,7 +25,8 @@ namespace DiseasesExpanded
         public static HashedString MedicalNanobots = (HashedString)"germ_modicon_b_kanim";
         public static HashedString MedicalNanobotsUpgrade = (HashedString)"germ_modicon_b_kanim";
         public static HashedString SuperSerum = (HashedString)"pill_blue_kanim";
-        
+        public static HashedString AlienCureKanim = (HashedString)"vial_blue_serum_kanim";
+
         public static HashedString MedicalResearch = (HashedString)"custom_research_icon_kanim";
     }
 }

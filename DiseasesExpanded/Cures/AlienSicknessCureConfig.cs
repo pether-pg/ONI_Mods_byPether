@@ -52,7 +52,7 @@ namespace DiseasesExpanded
 
             MedicineInfo info = new MedicineInfo(ID, null, MedicineInfo.MedicineType.CureSpecific, AdvancedDoctorStationConfig.ID, new string[] { AlienSickness.ID });
 
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.CURES.ALIENCURE.NAME, STRINGS.CURES.ALIENCURE.DESC, 1f, true, Assets.GetAnim(Kanims.RadShotKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.CURES.ALIENCURE.NAME, STRINGS.CURES.ALIENCURE.DESC, 1f, true, Assets.GetAnim(Kanims.AlienCureKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
         }
     }
