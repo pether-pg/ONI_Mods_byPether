@@ -66,6 +66,12 @@ namespace Dupes_Aromatics
                 //====[ RIMED MALLOW ]================
                 RegisterStrings.MakePlantSpeciesStrings(Plant_RimedMallowConfig.ID, STRINGS.PLANTS.RIMEDMALLOW.NAME, STRINGS.PLANTS.RIMEDMALLOW.DESC);
                 CROPS.CROP_TYPES.Add(new Crop.CropVal(Crop_CottonBollConfig.ID, Crop_CottonBollConfig.GROW_TIME, 1, true));
+
+
+                RegisterStrings.MakeFoodStrings(DuskbunConfig.ID, STRINGS.FOOD.DUSKBUN.NAME, STRINGS.FOOD.DUSKBUN.DESC);
+                RegisterStrings.MakeFoodStrings(DuskjamConfig.ID, STRINGS.FOOD.DUSKJAM.NAME, STRINGS.FOOD.DUSKJAM.DESC);
+                RegisterStrings.MakeFoodStrings(SpinosaSyrupConfig.ID, STRINGS.FOOD.SPINOSASYRUP.NAME, STRINGS.FOOD.SPINOSASYRUP.DESC);
+                RegisterStrings.MakeFoodStrings(SpinosaCakeConfig.ID, STRINGS.FOOD.SPINOSACAKE.NAME, STRINGS.FOOD.SPINOSACAKE.DESC);
             }
         }
     }

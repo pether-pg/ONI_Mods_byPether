@@ -69,24 +69,24 @@ namespace Dupes_Aromatics
         {
             public class DUSKJAM
             {
-                public static LocString NAME = "Duskjam";
+                public static LocString NAME = UI.FormatAsLink("Duskjam", DuskjamConfig.ID);
                 public static LocString DESC = "A long lasting " + UI.FormatAsLink(CROPS.DUSKBERRY.NAME, Crop_DuskberryConfig.ID) + " jam preserved in " + UI.FormatAsLink("Sucrose", "SUCROSE") + ".";
             }
 
             public class SPINOSASYRUP
             {
-                public static LocString NAME = "Spinosa Syrup";
+                public static LocString NAME = UI.FormatAsLink("Spinosa Syrup", SpinosaSyrupConfig.ID);
                 public static LocString DESC = "A long lasting " + UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Crop_SpinosaHipsConfig.ID) + " syrup preserved in " + UI.FormatAsLink("Sucrose", "SUCROSE") + ".";
             }
             public class DUSKBUN
             {
-                public static LocString NAME = "Duskbun";
+                public static LocString NAME = UI.FormatAsLink("Duskbun", DuskbunConfig.ID);
                 public static LocString DESC = "A bun filled with " + UI.FormatAsLink(FOOD.DUSKJAM.NAME, DuskjamConfig.ID) + ".";
             }
 
             public class SPINOSACAKE
             {
-                public static LocString NAME = "Spinosa Cake";
+                public static LocString NAME = UI.FormatAsLink("Spinosa Cake", SpinosaCakeConfig.ID);
                 public static LocString DESC = "A delicious cake with " + UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Crop_SpinosaHipsConfig.ID) + " on top.";
             }
         }
