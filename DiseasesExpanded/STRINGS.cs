@@ -109,10 +109,10 @@ namespace DiseasesExpanded
 
             public class GASSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Moomoza", nameof(GASSICKNESS));
+                public static LocString NAME = (LocString) UI.FormatAsLink("Moo Flu", nameof(GASSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Makes duplicant fart like a mad Moo.";
                 public static LocString DESCRIPTION = (LocString)"Whatever it is in the Gas Grass, it makes everything around fart...";
-                public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Moomoza.";
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Moo Flu.";
             }
 
             public class HUNGERSICKNESS
@@ -168,8 +168,8 @@ namespace DiseasesExpanded
 
             public class GASRECOVERY
             {
-                public static LocString NAME = (LocString)"Moomoza Recovery";
-                public static LocString DESC = (LocString)"This duplicant just recovered from Moomoza.";
+                public static LocString NAME = (LocString)"Moo Flu Recovery";
+                public static LocString DESC = (LocString)"This duplicant just recovered from Moo Flu.";
             }
 
             public class HUNGERRECOVERY

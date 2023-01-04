@@ -10,12 +10,14 @@ namespace DiseasesExpanded.RandomEvents.Events
     class SproutFlowers : RandomDiseaseEvent
     {
         public static Dictionary<string, byte> GermyFlowers;
+        private const int MAX_RETRIES = 500;
 
         public SproutFlowers(string flowerId, int weight = 1)
         {
             GeneralName = "Sprout Flowers";
             NameDetails = flowerId;
             ID = GenerateId(nameof(SproutFlowers), NameDetails);
+            Group = nameof(SproutFlowers);
             AppearanceWeight = weight;
             DangerLevel = SupportedFlowers().Contains(flowerId) ? Helpers.EstimateGermDanger(GermyFlowers[flowerId]) : ONITwitchLib.Danger.None;
 
@@ -37,32 +39,20 @@ namespace DiseasesExpanded.RandomEvents.Events
             Event = new Action<object>(
                 data =>
                 {
-                    List<int> cells = GridUtil.ActiveSimCells().ToList();
+                    List<int> cells = GridUtil.ActiveSimCells().Where(i => Grid.IsVisible(i)).ToList();
                     int numberOfSpawns = 1;
-                    int possibleRetries = 100;
 
                     for(int i = 0; i<numberOfSpawns; i++)
                     {
-                        int cellIdx = UnityEngine.Random.Range(0, cells.Count);
-                        int randomCell = cells[cellIdx];
-                        int cell = GridUtil.NearestEmptyCell(randomCell);
-                        int worldId = Grid.WorldIdx[cell];
-                        while (!Grid.IsSolidCell(Grid.CellBelow(cell)))
-                            cell = Grid.CellBelow(cell);
-
-                        if((Grid.IsSolidCell(Grid.CellAbove(cell)) || !Grid.IsValidCell(cell) || worldId != Grid.WorldIdx[cell])
-                            && possibleRetries > 0)
+                        int cell = FindCell(cells, flowerId, MAX_RETRIES);
+                        if(cell == Grid.InvalidCell)
                         {
-                            i--;
-                            possibleRetries--;
-                            if (possibleRetries < 0)
-                                break;
-
+                            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "New flower tried to sprout... but it failed... maybe next time...?");
                             continue;
                         }
 
                         Vector3 pos = (Grid.CellToPos(cell) + Grid.CellToPos(Grid.CellRight(cell))) / 2;
-                        GameObject go = GameUtil.KInstantiate(Assets.GetPrefab(flowerId), pos, Grid.SceneLayer.Creatures);
+                        GameObject go = GameUtil.KInstantiate(Assets.GetPrefab(flowerId), pos, Grid.SceneLayer.BuildingFront);
                         go.SetActive(true);
 
                         ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, "New flower just sprouted!", go);
@@ -99,6 +89,99 @@ namespace DiseasesExpanded.RandomEvents.Events
             GermyFlowers.Add(SwampHarvestPlantConfig.ID, GermIdx.BogInsectsIdx);
             GermyFlowers.Add(CritterTrapPlantConfig.ID, GermIdx.HungerGermsIdx);
 
+        }
+
+        private int FindCell(List<int> cells, string flowerId, int retries)
+        {
+            //Debug.Log($"FindCell: flowerId = {flowerId}, retries = {retries}");
+            if (retries <= 0 && !string.IsNullOrEmpty(flowerId))
+                return FindCell(cells, string.Empty, MAX_RETRIES);
+            else if (retries <= 0)
+                return Grid.InvalidCell;
+
+            int cellIdx = UnityEngine.Random.Range(0, cells.Count);
+            int randomCell = cells[cellIdx];
+            int cell = GridUtil.NearestEmptyCell(randomCell);
+
+            if (!Grid.IsValidCell(cell))
+                return FindCell(cells, flowerId, retries - 1);
+
+            int worldId = Grid.WorldIdx[cell];
+            while (!Grid.IsSolidCell(Grid.CellBelow(cell)))
+                cell = Grid.CellBelow(cell);
+
+            if (!TestCell(cell, worldId))
+                return FindCell(cells, flowerId, retries - 1);
+
+            if (!string.IsNullOrEmpty(flowerId) && !TestCellForFlower(flowerId, cell))
+                return FindCell(cells, flowerId, retries - 1);
+
+            return cell;
+        }
+
+        private bool TestCellForFlower(string flowerId, int cell)
+        {
+            string seedId = string.Empty;
+            switch(flowerId)
+            {
+                case PrickleFlowerConfig.ID:
+                    seedId = PrickleFlowerConfig.SEED_ID;
+                    break;
+                case BulbPlantConfig.ID:
+                    seedId = BulbPlantConfig.SEED_ID;
+                    break;
+                case EvilFlowerConfig.ID:
+                    seedId = EvilFlowerConfig.SEED_ID;
+                    break;
+                case ColdBreatherConfig.ID:
+                    seedId = ColdBreatherConfig.SEED_ID;
+                    break;
+                case GasGrassConfig.ID:
+                    seedId = GasGrassConfig.SEED_ID;
+                    break;
+                case SwampHarvestPlantConfig.ID:
+                    seedId = SwampHarvestPlantConfig.SEED_ID;
+                    break;
+                case CritterTrapPlantConfig.ID:
+                    seedId = "CritterTrapPlantSeed";
+                    break;
+            }
+            //Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCellForFlower - string.IsNullOrEmpty(seedId)");
+            if (string.IsNullOrEmpty(seedId))
+                return false;
+
+            //Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCellForFlower - PlantableSeed == null");
+            PlantableSeed seed = Assets.GetPrefab(seedId)?.GetComponent<PlantableSeed>();
+            if (seed == null)
+                return false;
+
+            bool result = seed.TestSuitableGround(cell);
+            //Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCellForFlower - seed.TestSuitableGround(cell) = {result}");
+            return result;
+        }
+
+        private bool TestCell(int cell, int worldId)
+        {
+            /*Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCell - cell = {cell}");
+            Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCell - Grid.IsValidCell(cell) = {Grid.IsValidCell(cell)}");
+            Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCell - Grid.Revealed[cell] = {Grid.Revealed[cell]}");
+            Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCell - Grid.IsVisible(cell) = {Grid.IsVisible(cell)}");
+            Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCell - Grid.WorldIdx[cell] = {Grid.WorldIdx[cell]} ?= {worldId}");
+            Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCell - Grid.WorldIdx[Grid.CellRight(cell)] = {Grid.WorldIdx[Grid.CellRight(cell)]} ?= {worldId}");
+            Debug.Log($"{ModInfo.Namespace}: SproutFlowers: TestCell - Grid.IsSolidCell(Grid.CellAbove(cell)) = {Grid.IsSolidCell(Grid.CellAbove(cell))}");*/
+
+            if (!Grid.IsValidCell(cell))
+                return false;
+            if (!Grid.IsVisible(cell))
+                return false;
+            if (worldId != Grid.WorldIdx[cell])
+                return false;
+            if (worldId != Grid.WorldIdx[Grid.CellRight(cell)])
+                return false;
+            if (Grid.IsSolidCell(Grid.CellAbove(cell)))
+                return false;
+
+            return true;
         }
     }
 }

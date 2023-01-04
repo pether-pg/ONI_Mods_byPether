@@ -18,8 +18,7 @@ namespace DiseasesExpanded
         {
             public static void Postfix()
             {
-                if(false)
-                //if(Settings.Instance.RandomEvents.EnableTwitchEvents)
+                if (Settings.Instance.RandomEvents.EnableTwitchEvents)
                     RandomEvents.AllEvents.RegisterAll();
             }
         }

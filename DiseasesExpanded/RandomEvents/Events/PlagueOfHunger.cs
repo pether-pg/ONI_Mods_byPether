@@ -11,6 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public PlagueOfHunger(int weight = 1)
         {
             ID = nameof(PlagueOfHunger);
+            Group = Helpers.DIRECT_INFECT_GROUP;
             GeneralName = "Plague of Hunger";
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Extreme;

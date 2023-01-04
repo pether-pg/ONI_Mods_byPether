@@ -8,9 +8,10 @@ namespace DiseasesExpanded.RandomEvents.Events
         public NightOfTheLivingDead(int weight = 1)
         {
             ID = nameof(NightOfTheLivingDead);
+            Group = Helpers.DIRECT_INFECT_GROUP;
             GeneralName = "Night of the Living Dead";
             AppearanceWeight = weight;
-            DangerLevel = ONITwitchLib.Danger.Extreme;
+            DangerLevel = ONITwitchLib.Danger.Deadly;
 
             Condition = new Func<object, bool>(data => GameClock.Instance.GetCycle() > 500);
 

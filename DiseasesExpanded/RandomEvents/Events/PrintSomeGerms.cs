@@ -14,6 +14,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             GeneralName = "Print Some Germs";
             NameDetails = Db.Get().Diseases[germIdx].Id;
             ID = GenerateId(nameof(PrintSomeGerms), NameDetails);
+            Group = nameof(PrintSomeGerms);
             AppearanceWeight = weight;
             DangerLevel = Helpers.EstimateGermDanger(germIdx);
 

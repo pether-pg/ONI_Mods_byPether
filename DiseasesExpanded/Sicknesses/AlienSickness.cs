@@ -43,8 +43,7 @@ namespace DiseasesExpanded
             : base(ID, Sickness.SicknessType.Pathogen, Sickness.Severity.Minor, 0.00025f, new List<Sickness.InfectionVector>()
             {
                 Sickness.InfectionVector.Inhalation,
-                Sickness.InfectionVector.Contact,
-                Sickness.InfectionVector.Exposure,
+                Sickness.InfectionVector.Contact
             }, 3000f, recovery_effect: null)
         {
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());

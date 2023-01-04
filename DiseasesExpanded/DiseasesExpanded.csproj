@@ -130,6 +130,12 @@
     <Compile Include="Cures\RadShotConfig.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Twitch.cs" />
     <Compile Include="RandomEvents\AllEvents.cs" />
+    <Compile Include="RandomEvents\Configs\RandomFirstAidKitConfig.cs" />
+    <Compile Include="RandomEvents\Configs\FluffyPuffyConfig.cs" />
+    <Compile Include="RandomEvents\Configs\HarmlessBeeConfig.cs" />
+    <Compile Include="RandomEvents\Configs\LittleSunshineConfig.cs" />
+    <Compile Include="RandomEvents\Configs\PlagueSlugConfig.cs" />
+    <Compile Include="RandomEvents\EntityScripts\FirstAidKitOpener.cs" />
     <Compile Include="RandomEvents\Events\AdoptStrayPet.cs" />
     <Compile Include="RandomEvents\Events\EradicateGerms.cs" />
     <Compile Include="RandomEvents\Events\FilthyFood.cs" />
@@ -144,6 +150,7 @@
     <Compile Include="RandomEvents\Events\PanicMode.cs" />
     <Compile Include="RandomEvents\Events\PlagueOfHunger.cs" />
     <Compile Include="RandomEvents\Events\RegressiveVirusMutation.cs" />
+    <Compile Include="RandomEvents\Events\ResupplyFirstAidKits.cs" />
     <Compile Include="RandomEvents\Events\SlimyPollutedOxygen.cs" />
     <Compile Include="RandomEvents\Events\SpaceScream.cs" />
     <Compile Include="RandomEvents\Events\SpawnInfectedElement.cs" />

@@ -11,6 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public SpindlyPlants(int weight = 1)
         {
             ID = nameof(SpindlyPlants);
+            Group = Helpers.MAKE_THINGS_GERMY_GROUP;
             GeneralName = "Spindly Plants";
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;

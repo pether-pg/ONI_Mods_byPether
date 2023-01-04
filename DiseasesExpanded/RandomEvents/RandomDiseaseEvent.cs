@@ -9,6 +9,7 @@ namespace DiseasesExpanded.RandomEvents
     class RandomDiseaseEvent
     {
         public string ID;
+        public string Group = null;
         public string GeneralName;
         public string NameDetails;
         public int AppearanceWeight;

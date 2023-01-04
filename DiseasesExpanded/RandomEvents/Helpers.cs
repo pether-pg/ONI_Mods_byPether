@@ -8,6 +8,9 @@ namespace DiseasesExpanded.RandomEvents
 {
     class Helpers
     {
+        public const string DIRECT_INFECT_GROUP = "DirectInfect";
+        public const string MAKE_THINGS_GERMY_GROUP = "MakeThingsGermy";
+
         public static ONITwitchLib.Danger EstimateGermDanger(byte idx)
         {
             if (idx == GermIdx.PollenGermsIdx)

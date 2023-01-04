@@ -13,6 +13,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             GeneralName = "Adopt Stray Pet";
             NameDetails = Db.Get().Diseases[germIdx].Id;
             ID = GenerateId(nameof(AdoptStrayPet), NameDetails);
+            Group = nameof(AdoptStrayPet);
             AppearanceWeight = weight;
             DangerLevel = Helpers.EstimateGermDanger(germIdx);
 
@@ -37,21 +38,21 @@ namespace DiseasesExpanded.RandomEvents.Events
 
         public static string GetPetId(byte germIdx)
         {
-            //if (germIdx == GermIdx.PollenGermsIdx)
-            //    return Configs.LittleSunshineConfig.ID;
+            if (germIdx == GermIdx.PollenGermsIdx)
+                return Configs.LittleSunshineConfig.ID;
             //if (germIdx == GermIdx.FoodPoisoningIdx)
             //    return HatchVeggieConfig.ID;
-            //if (germIdx == GermIdx.SlimelungIdx)
-            //    return Configs.FluffyPuffyConfig.ID;
+            if (germIdx == GermIdx.SlimelungIdx)
+                return Configs.FluffyPuffyConfig.ID;
             //if (germIdx == GermIdx.ZombieSporesIdx)
             //    return OilFloaterDecorConfig.ID;
-            //if (germIdx == GermIdx.RadiationPoisoningIdx)
-            //    return LightBugBlackConfig.ID;
+            if (germIdx == GermIdx.RadiationPoisoningIdx)
+                return Configs.HarmlessBeeConfig.ID;
 
             //if (germIdx == GermIdx.FrostShardsIdx)
             //    return LightBugBlueConfig.ID;
-            //if (germIdx == GermIdx.BogInsectsIdx)
-            //    return Configs.PlagueSlugConfig.ID;
+            if (germIdx == GermIdx.BogInsectsIdx)
+                return Configs.PlagueSlugConfig.ID;
             if (germIdx == GermIdx.AlienGermsIdx)
                 return Configs.MorbAlienConfig.ID;
             //if (germIdx == GermIdx.GassyGermsIdx)

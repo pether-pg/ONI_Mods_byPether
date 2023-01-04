@@ -11,6 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public FilthyFood(int weight = 1)
         {
             ID = nameof(FilthyFood);
+            Group = Helpers.MAKE_THINGS_GERMY_GROUP;
             GeneralName = "Filthy Food";
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;

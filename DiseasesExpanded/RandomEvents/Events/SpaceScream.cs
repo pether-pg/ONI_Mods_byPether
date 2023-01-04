@@ -11,6 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public SpaceScream(int weight = 1)
         {
             ID = nameof(SpaceScream);
+            Group = Helpers.DIRECT_INFECT_GROUP;
             GeneralName = "In Space No One Can Hear You Scream";
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Deadly;

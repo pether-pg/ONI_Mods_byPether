@@ -14,6 +14,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             GeneralName = "Hurting Tummy";
             NameDetails = Db.Get().Diseases[germIdx].Id;
             ID = GenerateId(nameof(HurtingTummy), NameDetails);
+            Group = Helpers.DIRECT_INFECT_GROUP;
             AppearanceWeight = weight;
             DangerLevel = Helpers.EstimateGermDanger(germIdx);
 

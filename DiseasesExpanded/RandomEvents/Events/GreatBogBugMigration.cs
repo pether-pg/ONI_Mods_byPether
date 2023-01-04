@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using UnityEngine;
 using System.Threading.Tasks;
 
 namespace DiseasesExpanded.RandomEvents.Events
@@ -11,7 +11,9 @@ namespace DiseasesExpanded.RandomEvents.Events
         public GreatBogBugMigration(int weight = 1)
         {
             ID = nameof(GreatBogBugMigration);
-            GeneralName = "Great Bog Bug Migration";
+            Group = Helpers.MAKE_THINGS_GERMY_GROUP;
+            GeneralName = "Great Migration";
+            NameDetails = "Bog Bug";
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Medium;
 
@@ -23,8 +25,20 @@ namespace DiseasesExpanded.RandomEvents.Events
                     foreach (Crop crop in Components.Crops)
                         SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(crop.gameObject), GermIdx.BogInsectsIdx, 1000000);
 
+                    Game.Instance.StartCoroutine(MigrateAway());
+
                     ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Researchers proclaim cycle of the Bog Bugs. All dwellings increase population.");
                 });
+        }
+
+        private IEnumerator MigrateAway()
+        {
+            yield return new WaitForSeconds(1800);
+            foreach (int cell in ONITwitchLib.Utils.GridUtil.ActiveSimCells())
+                if (Grid.DiseaseIdx[cell] == GermIdx.BogInsectsIdx)
+                    SimMessages.ModifyDiseaseOnCell(cell, GermIdx.BogInsectsIdx, -Grid.DiseaseCount[cell]);
+
+            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Swarms of Bog Bugs migrated away.");
         }
     }
 }

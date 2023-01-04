@@ -11,6 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public HungryPet(int weight = 1)
         {
             ID = nameof(HungryPet);
+            Group = Helpers.MAKE_THINGS_GERMY_GROUP;
             GeneralName = "Hungry Pet";
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Medium;

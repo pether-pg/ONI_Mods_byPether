@@ -13,6 +13,7 @@ namespace DiseasesExpanded.RandomEvents
         static TwitchDeckManager deckInst;
         static DangerManager dangerInst;
 
+        public const int WEIGHT_NEVER = 0;
         public const int WEIGHT_ALMOST_NEVER = 1;
         public const int WEIGHT_RARE = 3;
         public const int WEIGHT_NORMAL = 10;
@@ -35,6 +36,9 @@ namespace DiseasesExpanded.RandomEvents
 
         public static void RegisterEvent(RandomDiseaseEvent diseaseEvent)
         {
+            if (diseaseEvent.AppearanceWeight == WEIGHT_NEVER)
+                return;
+
             EventInfo info = eventInst.RegisterEvent(diseaseEvent.ID, diseaseEvent.GetFriendlyName(Settings.Instance.RandomEvents.ShowDetailedEventNames));
             eventInst.AddListenerForEvent(info, diseaseEvent.Event);
 
@@ -44,8 +48,8 @@ namespace DiseasesExpanded.RandomEvents
             int weight = (int)(diseaseEvent.AppearanceWeight * Settings.Instance.RandomEvents.RelativeEventsWeight);
             if (weight < 1)
                 weight = 1;
-
-            deckInst.AddToDeck(info, weight);
+            
+            deckInst.AddToDeck(info, weight, diseaseEvent.Group);
             dangerInst.SetDanger(info, diseaseEvent.DangerLevel);
         }
 
@@ -61,6 +65,7 @@ namespace DiseasesExpanded.RandomEvents
 
             // General
             RegisterEvent(new MandatoryTesting(WEIGHT_COMMON));
+            RegisterEvent(new ResupplyFirstAidKits(WEIGHT_COMMON));
             RegisterEvent(new PanicMode(WEIGHT_NORMAL));
             RegisterEvent(new IntensePollination(WEIGHT_NORMAL));
             RegisterEvent(new GreatSanishellMigration(WEIGHT_NORMAL));
@@ -69,7 +74,7 @@ namespace DiseasesExpanded.RandomEvents
             // All
             for(byte idx = 0; idx < Db.Get().Diseases.Count; idx++)
             {
-                RegisterEvent(new PrintSomeGerms(idx, WEIGHT_ALMOST_NEVER));
+                RegisterEvent(new PrintSomeGerms(idx, WEIGHT_NEVER));
                 RegisterEvent(new SpawnInfectedElement(idx, WEIGHT_RARE));
 
                 if (!string.IsNullOrEmpty(AdoptStrayPet.GetPetId(idx)))

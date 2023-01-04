@@ -21,13 +21,24 @@ namespace DiseasesExpanded.RandomEvents.Events
                 data =>
                 {
                     int scale = 100;
-                    
                     foreach (DiseaseDropper.Instance inst in DiseasesExpanded_Patches_Twitch.DiseaseDropperInstance_Initialize_Patch.DiseaseDroppers)
-                        if (inst != null && inst.gameObject != null && inst.gameObject.HasTag(GameTags.Plant))
-                        {
-                            int count = inst.def.singleEmitQuantity * scale;
-                            SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(inst.gameObject), inst.def.diseaseIdx, count);
-                        }
+                    {
+                        if (inst == null)
+                            continue;
+                        if (inst.IsNullOrDestroyed())
+                            continue;
+                        if (inst.GetMaster() == null)
+                            continue;
+                        if (inst.GetMaster().IsNullOrDestroyed())
+                            continue;
+                        if (inst.gameObject == null)
+                            continue;
+                        if (!inst.gameObject.HasTag(GameTags.Plant))
+                            continue;
+                            
+                        int count = inst.def.singleEmitQuantity * scale;
+                        SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(inst.gameObject), inst.def.diseaseIdx, count);
+                    }
 
                     ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "All of the plants released increased amount of pollen.");
                 });

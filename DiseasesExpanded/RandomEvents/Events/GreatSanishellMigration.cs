@@ -9,7 +9,8 @@ namespace DiseasesExpanded.RandomEvents.Events
         public GreatSanishellMigration(int weight = 1)
         {
             ID = nameof(GreatSanishellMigration);
-            GeneralName = "Great Sanishell Migration";
+            GeneralName = "Great Migration";
+            NameDetails = "Sanishell";
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;
 

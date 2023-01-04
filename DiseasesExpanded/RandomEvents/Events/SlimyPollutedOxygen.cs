@@ -11,6 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public SlimyPollutedOxygen(int weight = 1)
         {
             ID = nameof(SlimyPollutedOxygen);
+            Group = Helpers.MAKE_THINGS_GERMY_GROUP;
             GeneralName = "Slimy Polluted Oxygen";
             AppearanceWeight = weight;
             DangerLevel = Helpers.EstimateGermDanger(GermIdx.SlimelungIdx);
