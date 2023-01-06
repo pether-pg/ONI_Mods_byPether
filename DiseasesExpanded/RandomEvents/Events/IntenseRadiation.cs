@@ -48,6 +48,9 @@ namespace DiseasesExpanded.RandomEvents.Events
             if (radiusScale == 1 && radiationScale == 1)
                 return;
 
+            if (emitter == null || emitter.gameObject == null) 
+                return;
+
             emitter.emitRadiusX = (short)(emitter.emitRadiusX * radiusScale);
             emitter.emitRadiusY = (short)(emitter.emitRadiusY * radiusScale);
             emitter.emitRads *= radiationScale;
