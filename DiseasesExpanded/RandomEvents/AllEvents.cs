@@ -1,5 +1,5 @@
 ﻿using ONITwitchLib;
-using ONITwitchLib.Utils;
+using ONITwitchLib.Core;
 using DiseasesExpanded.RandomEvents.Events;
 
 namespace DiseasesExpanded.RandomEvents
@@ -9,9 +9,7 @@ namespace DiseasesExpanded.RandomEvents
         static bool initalized = false;
         static EventManager eventInst;
         static DataManager dataInst;
-        static ConditionsManager conditionsInst;
         static TwitchDeckManager deckInst;
-        static DangerManager dangerInst;
 
         public const int WEIGHT_NEVER = 0;
         public const int WEIGHT_ALMOST_NEVER = 1;
@@ -24,12 +22,10 @@ namespace DiseasesExpanded.RandomEvents
             if (initalized)
                 return;
 
-            eventInst = EventInterface.GetEventManagerInstance();
-            dataInst = EventInterface.GetDataManagerInstance();
-            conditionsInst = EventInterface.GetConditionsManager();
-            deckInst = EventInterface.GetDeckManager();
-            dangerInst = EventInterface.GetDangerManager();
-
+            eventInst = EventManager.Instance;
+            dataInst = DataManager.Instance;
+            deckInst = TwitchDeckManager.Instance;
+            
             initalized = true;
             Debug.Log($"{ModInfo.Namespace}: Initalized Twitch integration");
         }
@@ -39,18 +35,36 @@ namespace DiseasesExpanded.RandomEvents
             if (diseaseEvent.AppearanceWeight == WEIGHT_NEVER)
                 return;
 
-            EventInfo info = eventInst.RegisterEvent(diseaseEvent.ID, diseaseEvent.GetFriendlyName(Settings.Instance.RandomEvents.ShowDetailedEventNames));
-            eventInst.AddListenerForEvent(info, diseaseEvent.Event);
-
-            if (diseaseEvent.Condition != null)
-                conditionsInst.AddCondition(info, diseaseEvent.Condition);
-
             int weight = (int)(diseaseEvent.AppearanceWeight * Settings.Instance.RandomEvents.RelativeEventsWeight);
             if (weight < 1)
                 weight = 1;
-            
-            deckInst.AddToDeck(info, weight, diseaseEvent.Group);
-            dangerInst.SetDanger(info, diseaseEvent.DangerLevel);
+
+            bool showDetails = Settings.Instance.RandomEvents.ShowDetailedEventNames;
+
+            EventInfo info;
+            if (diseaseEvent.Group != null)
+            {
+                var group = deckInst.GetGroup(diseaseEvent.Group);
+                if (group == null)
+                {
+                    group = new EventGroup(diseaseEvent.Group);
+                    deckInst.AddGroup(group);
+                }
+
+                info = group.AddEvent(diseaseEvent.ID, weight, diseaseEvent.GetFriendlyName(showDetails));
+            }
+            else
+            {
+                var (newInfo, group) = EventGroup.DefaultSingleEventGroup(diseaseEvent.ID, weight, diseaseEvent.GetFriendlyName(showDetails));
+                info = newInfo;
+                deckInst.AddGroup(group);
+            }
+
+            info.AddListener(diseaseEvent.Event);
+            if (diseaseEvent.Condition != null)
+                info.AddCondition(diseaseEvent.Condition);
+
+            info.Danger = diseaseEvent.DangerLevel;
         }
 
         public static void RegisterAll()
