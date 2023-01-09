@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace CombinedConduitDisplay
 {
     class CombinedConduitDisplay_Patches_GasConduit
-    {        
+    {
         [HarmonyPatch(typeof(GasVentConfig))]
         [HarmonyPatch("DoPostConfigureComplete")]
         public class GasVentConfig_ConfigureBuildingTemplate_Patch
