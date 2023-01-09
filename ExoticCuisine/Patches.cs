@@ -12,6 +12,8 @@ namespace ExoticCuisine
             {
                 TUNING.CROPS.CROP_TYPES.Add(new Crop.CropVal(DragonPlantFruitConfig.ID, DragonPlantConfig.CROP_DURATION));
                 TUNING.CROPS.CROP_TYPES.Add(new Crop.CropVal(MantleerPlntFruitConfig.ID, MantleerPlntConfig.CROP_DURATION));
+                TUNING.CROPS.CROP_TYPES.Add(new Crop.CropVal(RockonionFruitConfig.ID, RockonionPlantConfig.CROP_DURATION));
+                TUNING.CROPS.CROP_TYPES.Add(new Crop.CropVal(SpiralcicleFruitConfig.ID, SpiralciclePlantConfig.CROP_DURATION));
             }
         }
     }

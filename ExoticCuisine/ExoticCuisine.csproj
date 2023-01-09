@@ -67,6 +67,10 @@
     <Compile Include="MantleerPlntFruitConfig.cs" />
     <Compile Include="Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RockonionFruitConfig.cs" />
+    <Compile Include="RockonionPlantConfig.cs" />
+    <Compile Include="SpiralcicleFruitConfig.cs" />
+    <Compile Include="SpiralciclePlantConfig.cs" />
     <Compile Include="STRINGS.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

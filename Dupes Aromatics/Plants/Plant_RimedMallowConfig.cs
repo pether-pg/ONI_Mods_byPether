@@ -63,13 +63,11 @@ namespace Dupes_Aromatics
 				tier, 
 				default(EffectorValues), 
 				SimHashes.Creature, 
-				new List<Tag>
-				{
-				GameTags.Hanging},
+				new List<Tag> { GameTags.Hanging },
 				253.15f
 				);
 
-			EntityTemplates.MakeHangingOffsets(gameObject, 1, 3);
+			EntityTemplates.MakeHangingOffsets(gameObject, WIDTH, HEIGHT);
 			EntityTemplates.ExtendEntityToBasicPlant(
 				gameObject,
 				TemperatureLethalLow,
