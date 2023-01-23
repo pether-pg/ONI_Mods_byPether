@@ -271,11 +271,15 @@ namespace DiseasesExpanded
             float currentMutationCycleExpectancy = mutationProgress * Settings.Instance.UnstableVirusFinalMutationCycleEstimation;
 
             float delta = GameClock.Instance.GetCycle() - currentMutationCycleExpectancy;
+            // delta:
+            // positive when virus is behind the schedule and must speed up
+            // negative when virus is ahead of the schedule and must slow down
+
             float expectedMutationTime = GetExpectedMutationPeriod();
             float relativeDelta = delta / expectedMutationTime;
 
             float acceleration = relativeDelta < 0 ? -1.0f / relativeDelta : relativeDelta;
-            return acceleration / (1 + MutationRateReductionLvl);
+            return acceleration / ((float)Math.Pow(2, MutationRateReductionLvl));
         }
 
         public Color32 GetGermColor()
