@@ -164,6 +164,13 @@ namespace SignsTagsAndRibbons
                     "\n - Nuclear Fallout";
             }
 
+            public class GEYSER
+            {
+                public static LocString NAME = "Geyser Tag";
+                public static LocString DESC = "A wall tag for geysers, vents and volcanos.";
+                public static LocString EFFECT = "This tag is a visual representation of geological formations.";
+            }
+
             public class NUMBER
             {
                 public static LocString NAME = "Number Tag";

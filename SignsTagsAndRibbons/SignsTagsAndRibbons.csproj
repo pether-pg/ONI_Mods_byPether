@@ -66,6 +66,7 @@
     <Compile Include="Buildings\DangerRibbonCornerConfig.cs" />
     <Compile Include="Buildings\GasTagConfig.cs" />
     <Compile Include="Buildings\InfoTagConfig.cs" />
+    <Compile Include="Buildings\GeyserTagConfig.cs" />
     <Compile Include="FUI_SideScreen.cs" />
     <Compile Include="STRINGS.cs" />
     <Compile Include="Buildings\LetterTagConfig.cs" />
