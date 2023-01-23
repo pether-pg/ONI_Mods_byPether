@@ -1,8 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UnityEngine;
 
 namespace DiseasesExpanded.RandomEvents.Events
 {
@@ -20,12 +19,29 @@ namespace DiseasesExpanded.RandomEvents.Events
             Event = new Action<object>(
                 data =>
                 {
-                    foreach (int cell in ONITwitchLib.Utils.GridUtil.ActiveSimCells())
-                        if (Grid.DiseaseCount[cell] > 0)
-                            SimMessages.ModifyDiseaseOnCell(cell, Grid.DiseaseIdx[cell], -Grid.DiseaseCount[cell]);
+                    Game.Instance.StartCoroutine(Eradicate());
 
                     ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Most of the germs were eradicated from the atmosphere.");
                 });
+        }
+
+        private IEnumerator Eradicate()
+        {
+            int repeat = 5;
+            for(int i = 0; i < repeat; i++)
+            {
+                ClearAllCells();
+                yield return new WaitForSeconds(1);
+            }
+        }
+
+
+        private void ClearAllCells()
+        {
+            int overkill = 5;
+            foreach (int cell in ONITwitchLib.Utils.GridUtil.ActiveSimCells())
+                if (Grid.DiseaseCount[cell] > 0)
+                    SimMessages.ModifyDiseaseOnCell(cell, Grid.DiseaseIdx[cell], -1 * overkill * Grid.DiseaseCount[cell]);
         }
     }
 }

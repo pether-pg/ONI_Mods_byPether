@@ -79,6 +79,7 @@ namespace DiseasesExpanded.RandomEvents
 
             // General
             RegisterEvent(new MandatoryTesting(WEIGHT_COMMON));
+            RegisterEvent(new MiraculousRecovery(WEIGHT_RARE));
             RegisterEvent(new ResupplyFirstAidKits(WEIGHT_COMMON));
             RegisterEvent(new PanicMode(WEIGHT_NORMAL));
             RegisterEvent(new IntensePollination(WEIGHT_NORMAL));

@@ -34,11 +34,21 @@ namespace DiseasesExpanded.RandomEvents.Events
         private IEnumerator MigrateAway()
         {
             yield return new WaitForSeconds(1800);
-            foreach (int cell in ONITwitchLib.Utils.GridUtil.ActiveSimCells())
-                if (Grid.DiseaseIdx[cell] == GermIdx.BogInsectsIdx)
-                    SimMessages.ModifyDiseaseOnCell(cell, GermIdx.BogInsectsIdx, -Grid.DiseaseCount[cell]);
+            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Swarms of Bog Bugs started migrating away.");
 
-            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Swarms of Bog Bugs migrated away.");
+            for(int i=0; i<5; i++)
+            {
+                ClearAllCells();
+                yield return new WaitForSeconds(1);
+            }
+        }
+
+        private void ClearAllCells()
+        {
+            int overkill = 5;
+            foreach (int cell in ONITwitchLib.Utils.GridUtil.ActiveSimCells())
+                if (Grid.DiseaseIdx[cell] == GermIdx.BogInsectsIdx && Grid.DiseaseCount[cell] > 0)
+                    SimMessages.ModifyDiseaseOnCell(cell, GermIdx.BogInsectsIdx, -1 * overkill * Grid.DiseaseCount[cell]);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace DiseasesExpanded
             AntihistamineBoosterConfig.recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
                 time = 100f,
-                description = STRINGS.CURES.GASCURE.DESC,
+                description = STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
                 sortOrder = 11

@@ -7,7 +7,7 @@ namespace DiseasesExpanded
     class SuperSerumConfig : IEntityConfig
     {
         public const string ID = "SuperSerum";
-        public const string EffectID = "SuperSerumEffect";
+        public const string EFFECT_ID = "SuperSerumEffect";
         public static ComplexRecipe recipe;
 
         public static string Name { get => STRINGS.CURES.SUPERSERUM.NAME; }
@@ -16,7 +16,7 @@ namespace DiseasesExpanded
         public static Effect GetEffect()
         {
             int attributeChange = 5;
-            Effect serumEffect = new Effect(EffectID, STRINGS.CURES.SUPERSERUM.NAME, STRINGS.CURES.SUPERSERUM.DESC, 5 * 600, true, false, false);
+            Effect serumEffect = new Effect(EFFECT_ID, STRINGS.CURES.SUPERSERUM.NAME, STRINGS.CURES.SUPERSERUM.DESC, 10 * 600, true, false, false);
             serumEffect.SelfModifiers = new List<AttributeModifier>();
             serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Athletics.Id, attributeChange, STRINGS.CURES.SUPERSERUM.NAME));
             serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Strength.Id, attributeChange, STRINGS.CURES.SUPERSERUM.NAME));
@@ -64,7 +64,7 @@ namespace DiseasesExpanded
                 sortOrder = 1
             };
 
-            MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, null, null);
+            MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.SuperSerum), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);

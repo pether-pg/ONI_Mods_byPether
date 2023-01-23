@@ -136,7 +136,7 @@ namespace DiseasesExpanded
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Alien Symbiot", nameof(ALIENSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Enhances and stresses the duplicant.";
-                public static LocString DESCRIPTION = (LocString)"Alien microbes increase duplicant's skills. However, this feels unnatural and makes infected duplicant stressed out.";
+                public static LocString DESCRIPTION = (LocString)"Alien microbes increase duplicant's skills. However, this feels unnatural and makes infected duplicant stressed out. The goo is perfectly adapted for space travels and it will rapidly grow wherever radiation is present.";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Alien Goo.";
                 public static LocString EXPOSURE_INFO = (LocString)"Got exposed to Alien Goo";
             }
@@ -268,7 +268,7 @@ namespace DiseasesExpanded
             public class SUPERSERUM
             {
                 public static LocString NAME = (LocString)"Super Serum";
-                public static LocString DESC = (LocString)"Enhances duplicant's attributes.";
+                public static LocString DESC = (LocString)"Enhances duplicant's attributes and makes them immune to most dangerous pathogens.";
             }
 
             public class MUTATINGANTIVIRAL

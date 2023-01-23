@@ -7,7 +7,7 @@ namespace DiseasesExpanded
     class AllergyVaccineConfig : IEntityConfig
     {
         public const string ID = "AllergyVaccine";
-        public const string EffectID = "AllergyVaccineEffect";
+        public const string EFFECT_ID = "AllergyVaccineEffect";
         public static ComplexRecipe recipe;
 
         public static string Name { get => string.Format(STRINGS.CURES.VACCINE.NAME, GermIdx.GetGermName(GermIdx.PollenGermsIdx)); }
@@ -46,7 +46,7 @@ namespace DiseasesExpanded
                 sortOrder = 41
             };
 
-            MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, null, null);
+            MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.VaccineCKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);

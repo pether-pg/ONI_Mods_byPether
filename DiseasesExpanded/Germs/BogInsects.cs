@@ -14,7 +14,7 @@ namespace DiseasesExpanded
                 germ_id = BogInsects.ID,
                 sickness_id = BogSickness.ID,
                 exposure_threshold = 100,
-                infect_immediately = true,
+                infect_immediately = false,
                 excluded_traits = new List<string>() { },
                 base_resistance = 2,
                 excluded_effects = new List<string>()

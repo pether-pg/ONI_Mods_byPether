@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace DiseasesExpanded.RandomEvents
 {
@@ -24,9 +26,18 @@ namespace DiseasesExpanded.RandomEvents
         public void OnDestroy()
         {
             DiseaseDropper.Def def = this.gameObject.GetDef<DiseaseDropper.Def>();
-            if (def != null)
-                SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(this.gameObject), def.diseaseIdx, def.singleEmitQuantity);
+            if (def != null) 
+                Game.Instance.StartCoroutine(SpawnPostDeathGerms(Grid.PosToCell(this.gameObject), def.diseaseIdx, def.singleEmitQuantity));
+        }
 
+        private IEnumerator SpawnPostDeathGerms(int cell, byte idx, int totalCount)
+        {
+            int chunks = 5;
+            for(int i=0; i<chunks; i++)
+            {
+                SimMessages.ModifyDiseaseOnCell(cell, idx, totalCount / chunks);
+                yield return new WaitForSeconds(1);
+            }
         }
     }
 }

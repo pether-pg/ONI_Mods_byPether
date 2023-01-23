@@ -103,9 +103,9 @@ namespace DiseasesExpanded
                 Db.Get().effects.Add(AlienSicknessCureConfig.GetEffect());
                 Db.Get().effects.Add(MedicalNanobots.GetEffect());
 
-                Db.Get().effects.Add(new Effect(AllergyVaccineConfig.EffectID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, cycle50, true, true, false));
-                Db.Get().effects.Add(new Effect(SlimelungVaccineConfig.EffectID, SlimelungVaccineConfig.Name, SlimelungVaccineConfig.Desc, cycle50, true, true, false));
-                Db.Get().effects.Add(new Effect(ZombieSporesVaccineConfig.EffectID, ZombieSporesVaccineConfig.Name, ZombieSporesVaccineConfig.Desc, cycle50, true, true, false));
+                Db.Get().effects.Add(new Effect(AllergyVaccineConfig.EFFECT_ID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, cycle50, true, true, false));
+                Db.Get().effects.Add(new Effect(SlimelungVaccineConfig.EFFECT_ID, SlimelungVaccineConfig.Name, SlimelungVaccineConfig.Desc, cycle50, true, true, false));
+                Db.Get().effects.Add(new Effect(ZombieSporesVaccineConfig.EFFECT_ID, ZombieSporesVaccineConfig.Name, ZombieSporesVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(HungermsVaccineConfig.EffectID, HungermsVaccineConfig.Name, HungermsVaccineConfig.Desc, cycle50, true, true, false));
                 Db.Get().effects.Add(new Effect(GassyVaccineConfig.EffectID, GassyVaccineConfig.Name, GassyVaccineConfig.Desc, cycle50, true, true, false));
 
@@ -125,19 +125,20 @@ namespace DiseasesExpanded
                     {
                         if (et.excluded_effects == null)
                             et.excluded_effects = new List<string>();
-                        et.excluded_effects.Add(AllergyVaccineConfig.EffectID);
+                        et.excluded_effects.Add(AllergyVaccineConfig.EFFECT_ID);
                     }
                     if (et.germ_id == "SlimeLung")
                     {
                         if (et.excluded_effects == null)
                             et.excluded_effects = new List<string>();
-                        et.excluded_effects.Add(SlimelungVaccineConfig.EffectID);
+                        et.excluded_effects.Add(SlimelungVaccineConfig.EFFECT_ID);
                     }
                     if (et.germ_id == "ZombieSpores")
                     {
                         if (et.excluded_effects == null)
                             et.excluded_effects = new List<string>();
-                        et.excluded_effects.Add(ZombieSporesVaccineConfig.EffectID);
+                        et.excluded_effects.Add(ZombieSporesVaccineConfig.EFFECT_ID);
+                        et.excluded_effects.Add(SuperSerumConfig.EFFECT_ID);
                     }
                     exposureList.Add(et);
                 }

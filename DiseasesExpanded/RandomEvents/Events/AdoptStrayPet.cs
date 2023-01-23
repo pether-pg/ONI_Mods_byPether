@@ -17,7 +17,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             AppearanceWeight = weight;
             DangerLevel = Helpers.EstimateGermDanger(germIdx);
 
-            Condition = new Func<object, bool>(data => !string.IsNullOrEmpty(GetPetId(germIdx)) && GameClock.Instance.GetCycle() > (int)DangerLevel * 100);
+            Condition = new Func<object, bool>(data => !string.IsNullOrEmpty(GetPetId(germIdx)) && DlcManager.IsExpansion1Active() && GameClock.Instance.GetCycle() > (int)DangerLevel * 100);
 
             Event = new Action<object>(
                 data =>
@@ -44,8 +44,8 @@ namespace DiseasesExpanded.RandomEvents.Events
             //    return HatchVeggieConfig.ID;
             if (germIdx == GermIdx.SlimelungIdx)
                 return Configs.FluffyPuffyConfig.ID;
-            //if (germIdx == GermIdx.ZombieSporesIdx)
-            //    return OilFloaterDecorConfig.ID;
+            if (germIdx == GermIdx.ZombieSporesIdx)
+                return Configs.PaleSlicksterConfig.ID;
             if (germIdx == GermIdx.RadiationPoisoningIdx)
                 return Configs.HarmlessBeeConfig.ID;
 
@@ -60,11 +60,6 @@ namespace DiseasesExpanded.RandomEvents.Events
             //if (germIdx == GermIdx.MedicalNanobotsIdx)
             //    return CrabFreshWaterConfig.ID;
 
-            // TODO:
-            // Fluffy Puffy
-            // Little Sunshine
-            // Plague Slug
-            // others?
             return string.Empty;
         }
     }

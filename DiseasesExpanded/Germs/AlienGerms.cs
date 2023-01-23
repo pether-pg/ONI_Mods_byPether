@@ -13,15 +13,16 @@ namespace DiseasesExpanded
             {
                 germ_id = AlienGerms.ID,
                 sickness_id = AlienSickness.ID,
-                exposure_threshold = 1,
-                infect_immediately = true,
+                exposure_threshold = 100,
+                infect_immediately = false,
                 excluded_traits = new List<string>() { },
                 base_resistance = -1,
                 excluded_effects = new List<string>()
                     {
                       AlienSickness.RECOVERY_ID,
-                      AlienSickness.ASSIMILATION_ID,
-                      AlienSicknessCureConfig.EFFECT_ID
+                      AlienSickness.ASSIMILATION_EFFECT_ID,
+                      AlienSicknessCureConfig.EFFECT_ID,
+                      SuperSerumConfig.EFFECT_ID
                     }
             };
         }

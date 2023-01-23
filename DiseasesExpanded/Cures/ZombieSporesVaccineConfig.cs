@@ -7,7 +7,7 @@ namespace DiseasesExpanded
     class ZombieSporesVaccineConfig : IEntityConfig
     {
         public const string ID = "ZombieSporesVaccine";
-        public const string EffectID = "ZombieSporesVaccineEffect";
+        public const string EFFECT_ID = "ZombieSporesVaccineEffect";
         public static ComplexRecipe recipe;
 
         public static string Name { get => string.Format(STRINGS.CURES.VACCINE.NAME, GermIdx.GetGermName(GermIdx.ZombieSporesIdx)); }
@@ -46,7 +46,7 @@ namespace DiseasesExpanded
                 sortOrder = 43
             };
 
-            MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, null, null);
+            MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.VaccineDKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);

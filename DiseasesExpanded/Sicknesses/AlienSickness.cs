@@ -8,7 +8,7 @@ namespace DiseasesExpanded
     {
         public const string ID = nameof(AlienSickness);
         public const string RECOVERY_ID = "AlienSicknessRecovery";
-        public const string ASSIMILATION_ID = "AlienSicknessAssimilation";
+        public const string ASSIMILATION_EFFECT_ID = "AlienSicknessAssimilation";
 
         public static readonly float stressPerSecond = (25 / 600.0f) * (Settings.Instance.RebalanceForDiseasesRestored ? 2 : 1);
 
@@ -21,7 +21,7 @@ namespace DiseasesExpanded
         }
         public static Effect GetAssimilationEffect()
         {
-            Effect alienRecovery = new Effect(AlienSickness.ASSIMILATION_ID, STRINGS.EFFECTS.ALIENASSIMILATION.NAME, STRINGS.EFFECTS.ALIENASSIMILATION.DESC, 5 * 600, true, true, true);
+            Effect alienRecovery = new Effect(AlienSickness.ASSIMILATION_EFFECT_ID, STRINGS.EFFECTS.ALIENASSIMILATION.NAME, STRINGS.EFFECTS.ALIENASSIMILATION.DESC, 5 * 600, true, true, true);
             alienRecovery.SelfModifiers = new List<AttributeModifier>();
             alienRecovery.SelfModifiers.Add(new AttributeModifier("StressDelta", 2 * stressPerSecond, STRINGS.EFFECTS.ALIENASSIMILATION.NAME));
             return alienRecovery;
@@ -33,7 +33,7 @@ namespace DiseasesExpanded
             if (effects == null)
                 return;
 
-            if (assimilationPercent >= 1 && !effects.HasEffect(ASSIMILATION_ID))
+            if (assimilationPercent >= 1 && !effects.HasEffect(ASSIMILATION_EFFECT_ID))
                 effects.Add(GetAssimilationEffect(), true);
             else if(!effects.HasEffect(RECOVERY_ID))
                 effects.Add(GetRecoveryEffect(), true);

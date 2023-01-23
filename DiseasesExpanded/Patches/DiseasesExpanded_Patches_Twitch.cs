@@ -9,8 +9,6 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_Twitch
     {
-        /*
-        */
         [HarmonyPatch(typeof(Db))]
         [HarmonyPatch("Initialize")]
         [HarmonyAfter(new string[] { "asquared31415.TwitchIntegration" })]
@@ -66,5 +64,40 @@ namespace DiseasesExpanded
                 DiseaseDroppers.Add(inst);
             }
         }
+
+        [HarmonyPatch(typeof(KSelectable), "ApplyHighlight")]
+        public class KSelectable_ApplyHighlight_Patch
+        {
+            public static void Postfix(KSelectable __instance, float highlight)
+            {
+                if (__instance == null || __instance.name != RandomEvents.Configs.PaleSlicksterConfig.ID || __instance.gameObject == null)
+                    return;
+
+                ApplyHighlight(__instance.gameObject, highlight);
+            }
+
+            public static void ApplyHighlight(GameObject go, float value)
+            {
+                Color paleColor = RandomEvents.Configs.PaleSlicksterConfig.PaleHighlight;
+                value *= 0.3f;
+
+                KBatchedAnimController kbac = go.GetComponent<KBatchedAnimController>();
+                if (kbac != null)
+                    kbac.HighlightColour = new Color(paleColor.r + value, paleColor.g + value, paleColor.b + value);
+            }
+        }
+
+        [HarmonyPatch(typeof(KSelectable), "ClearHighlight")]
+        public class KSelectable_ClearHighlight_Patch
+        {
+            public static void Postfix(KSelectable __instance)
+            {
+                if (__instance == null || __instance.name != RandomEvents.Configs.PaleSlicksterConfig.ID || __instance.gameObject == null)
+                    return;
+
+                KSelectable_ApplyHighlight_Patch.ApplyHighlight(__instance.gameObject, 0);
+            }
+        }
+
     }
 }
