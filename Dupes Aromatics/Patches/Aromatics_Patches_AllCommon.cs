@@ -118,16 +118,6 @@ namespace Dupes_Aromatics
             }
         }
 
-        [HarmonyPatch(typeof(EntityTemplates))]
-        [HarmonyPatch("ExtendEntityToWildCreature")]
-        public static class EntityTemplates_ExtendEntityToWildCreature_Patch
-        {
-            public static void Postfix(ref GameObject __result)
-            {
-                __result.AddOrGet<LavenderSmelling>();
-            }
-        }
-
         [HarmonyPatch(typeof(Assets))]
         [HarmonyPatch("OnPrefabInit")]
         public class Assets_OnPrefabInit_Patch

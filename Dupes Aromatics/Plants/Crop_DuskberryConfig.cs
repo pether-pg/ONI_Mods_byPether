@@ -47,6 +47,8 @@ namespace Dupes_Aromatics
                 3200f,
                 true);
 
+            ExpandBerrySludgeRecipe();
+
             return EntityTemplates.ExtendEntityToFood(template, foodInfo);
         }
 
@@ -56,6 +58,28 @@ namespace Dupes_Aromatics
 
         public void OnSpawn(GameObject inst)
         {
+        }
+
+        private void ExpandBerrySludgeRecipe()
+        {
+
+            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
+            {
+                new ComplexRecipe.RecipeElement((Tag) ColdWheatConfig.SEED_ID, 5f),
+                new ComplexRecipe.RecipeElement((Tag) ID, 1.333f)
+            };
+            ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
+            {
+                new ComplexRecipe.RecipeElement(FruitCakeConfig.ID.ToTag(), 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+            };
+            FruitCakeConfig.recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(MicrobeMusherConfig.ID, ingredients, results), ingredients, results)
+            {
+                time = TUNING.FOOD.RECIPES.STANDARD_COOK_TIME,
+                description = ITEMS.FOOD.FRUITCAKE.RECIPEDESC,
+                nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
+                fabricators = new List<Tag>() { MicrobeMusherConfig.ID },
+                sortOrder = 3
+            };
         }
     }
 }

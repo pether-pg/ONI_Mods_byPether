@@ -83,7 +83,8 @@
     <Compile Include="AromaticCans\FloralAromaticCanConfig.cs" />
     <Compile Include="AromaticCans\LavenderAromaticCanConfig.cs" />
     <Compile Include="AromaticCans\MallowAromaticCanConfig.cs" />
-    <Compile Include="AromaticsFabricator.cs" />
+    <Compile Include="Aromatics_Patches_Effects.cs" />
+    <Compile Include="Buildings\AromaticsFabricator.cs" />
     <Compile Include="AromaticsPlantsTuning.cs" />
     <Compile Include="Patches\Aromatics_Patches_Worldgen.cs" />
     <Compile Include="Food\DuskbunConfig.cs" />
@@ -115,7 +116,8 @@
     <Compile Include="AromaticCans\RoseAromaticCanConfig.cs" />
     <Compile Include="Food\SpinosaSyrupConfig.cs" />
     <Compile Include="STRINGS.cs" />
-    <Compile Include="VaporizerConfig.cs" />
+    <Compile Include="Buildings\VaporizerConfig.cs" />
+    <Compile Include="Buildings\VaporizerController.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

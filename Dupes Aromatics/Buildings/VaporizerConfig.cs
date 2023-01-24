@@ -30,6 +30,7 @@ namespace Dupes_Aromatics
             go.AddOrGet<Operational>();
             go.AddOrGet<LogicOperationalController>();
             go.AddOrGet<ComplexFabricatorWorkable>();
+            go.AddOrGetDef<VaporizerController.Def>();
             AromaticsFabricator af = go.AddOrGet<AromaticsFabricator>();
             BuildingTemplates.CreateComplexFabricatorStorage(go, af);
         }
