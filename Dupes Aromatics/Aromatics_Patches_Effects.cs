@@ -46,14 +46,22 @@ namespace Dupes_Aromatics
 
                 foreach (CodeInstruction instruction in instructions)
                 {
+                    // each original instruction should be left untouched
                     yield return instruction;
 
+                    // in case there is some issue with required infos, custom logic would break. avoid it by continue command
                     if (myExtraCodeMethodInfo == null || lookingUglyFieldInfo == null || lookingOkayFieldInfo == null)
                         continue;
 
+                    // if last instruction put ArtableStatusItem on the stack, my logic kicks in to improve it
                     if(instruction.operand is FieldInfo fi && (fi == lookingOkayFieldInfo || fi == lookingUglyFieldInfo))
                     {
+                        // put argument1 (Worker worker) on the stack
                         yield return new CodeInstruction(OpCodes.Ldarg_1);
+
+                        // call UpliftArtistSkill(ArtableStatusItem current, Worker worker)
+                        // ArtableStatusItem was already on the stack, Worker was added in the previous line
+                        // the method will return ArtableStatusItem, so original code won't notice anything happened
                         yield return new CodeInstruction(OpCodes.Call, myExtraCodeMethodInfo);
                     }
 
