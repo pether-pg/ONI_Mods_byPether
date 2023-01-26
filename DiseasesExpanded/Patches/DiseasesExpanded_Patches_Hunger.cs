@@ -43,7 +43,8 @@ namespace DiseasesExpanded
         {
             public static void Postfix(ref GameObject __result)
             {
-                __result.AddOrGet<CritterSicknessMonitor>();
+                if(!__result.HasTag(GameTags.Creatures.Swimmer))
+                    __result.AddOrGet<CritterSicknessMonitor>();
             }
         }
 
