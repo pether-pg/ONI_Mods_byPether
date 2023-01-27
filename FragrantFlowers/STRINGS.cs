@@ -38,7 +38,7 @@ namespace FragrantFlowers
             }
         }
 
-        public class AROMATICCANS
+        public class AROMACANS
         {
             public class FLORAL
             {
@@ -105,17 +105,17 @@ namespace FragrantFlowers
             public class SMELLEDROSE
             {
                 public static LocString NAME = (LocString)"Smelled Roses";
-                public static LocString DESC = (LocString)"This duplicant just smelled some Roses.";
+                public static LocString DESC = (LocString)"This duplicant just smelled some Roses and is now inspired to create great things.";
             }
             public class SMELLEDLAVENDER
             {
                 public static LocString NAME = (LocString)"Smelled Lavender";
-                public static LocString DESC = (LocString)"This one just smelled some Lavender.";
+                public static LocString DESC = (LocString)"This one just smelled some Lavender, feeling much closer to the nature as a result.";
             }
             public class SMELLEDMALLOW
             {
                 public static LocString NAME = (LocString)"Smelled Mallow";
-                public static LocString DESC = (LocString)"This duplicant just smelled some Mallow.";
+                public static LocString DESC = (LocString)"This duplicant just smelled some Mallow and is invigorted to work faster.";
             }
         }
 

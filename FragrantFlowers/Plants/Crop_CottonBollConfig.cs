@@ -73,7 +73,7 @@ namespace FragrantFlowers
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[1]
             {
-                new ComplexRecipe.RecipeElement(ID, 4f)
+                new ComplexRecipe.RecipeElement(ID, 2f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {

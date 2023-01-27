@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace FragrantFlowers.AromaticCans
+namespace FragrantFlowers
 {
     class LavenderAromaCanConfig : IEntityConfig
     {
@@ -33,7 +33,7 @@ namespace FragrantFlowers.AromaticCans
             recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(CraftingTableConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
                 time = 100f,
-                description = STRINGS.AROMATICCANS.LAVENDER.DESC,
+                description = STRINGS.AROMACANS.LAVENDER.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)CraftingTableConfig.ID },
                 sortOrder = 11
@@ -41,7 +41,7 @@ namespace FragrantFlowers.AromaticCans
 
             AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(ID, 1f) }, LavenderScent.ID, "LavenderScent recipe");
 
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.AROMATICCANS.LAVENDER.NAME, STRINGS.AROMATICCANS.LAVENDER.DESC, 1f, true, Assets.GetAnim("aromatic_lavenderscent_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.AROMACANS.LAVENDER.NAME, STRINGS.AROMACANS.LAVENDER.DESC, 1f, true, Assets.GetAnim("aromatic_lavenderscent_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             looseEntity.AddTag(GameTags.IndustrialIngredient);
             return looseEntity;
         }

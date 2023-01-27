@@ -41,7 +41,6 @@ namespace FragrantFlowers
 
         public const float Fertilization = 0.0016666667f;         // Ice Fertilization Needed
 
-        //public static AromaticsPlantsTuning.CropsTuning tuning;
         public ComplexRecipe Recipe;
 
 		//===> DEFINE THE BASE TEMPLATE <=====================================================================

@@ -33,7 +33,7 @@ namespace FragrantFlowers
             recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(CraftingTableConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
                 time = 100f,
-                description = STRINGS.AROMATICCANS.ROSE.DESC,
+                description = STRINGS.AROMACANS.ROSE.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)CraftingTableConfig.ID },
                 sortOrder = 11
@@ -41,7 +41,7 @@ namespace FragrantFlowers
 
             AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(ID, 1f) }, RoseScent.ID, "RoseScent recipe");
 
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.AROMATICCANS.ROSE.NAME, STRINGS.AROMATICCANS.ROSE.DESC, 1f, true, Assets.GetAnim("aromatic_rosescent_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.AROMACANS.ROSE.NAME, STRINGS.AROMACANS.ROSE.DESC, 1f, true, Assets.GetAnim("aromatic_rosescent_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             looseEntity.AddTag(GameTags.IndustrialIngredient);
             return looseEntity;
         }

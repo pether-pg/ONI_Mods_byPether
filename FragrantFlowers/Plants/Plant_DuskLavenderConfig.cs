@@ -41,7 +41,6 @@ namespace FragrantFlowers
 
         public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
 
-        //public static AromaticsPlantsTuning.CropsTuning tuning;
         public ComplexRecipe Recipe;
 
         //===> DEFINE THE BASE TEMPLATE <=====================================================================

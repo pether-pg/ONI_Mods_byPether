@@ -1,0 +1,25 @@
+This mod adds new flowers to your game: Spinosa Rose, Duskbloom Lavender and Rimed Mallow. Each of them produces unique, delicate scent that affects duplicants in different ways. You can also pollinate the flowers to get food from them instead.
+
+Spinosa
+
+Red roses of Spinosa produce inspiring scent that boosts your duplicants' Science, Medicine and Creativity skills. Artists affected by it can produce art of higher level than usual. Spinosa petals can be also used in medicine and as a spice.
+
+You can pollinate Spinosa flowers with Sweetles to make them produce Spinosa Hips fruits. You can make syrup out of them, bake them into a cake, or add them to usual Berry Sludge.
+
+Lavender
+
+Duskbloom Lavender scent improves your duplicants' Farming, Ranching and Cooking skills. Also, Lavender scent can affect critters, making them more happy, easier to domesticate and faster to reproduce. Lavender petals can be also used in medicine and as a spice.
+
+You can pollintate Lavender flower with Sweetles to make them produce Duskberries. They can be turned to jam or used to cook duskbuns. Also, they can be added to the Berry Sludge.
+
+Rimed Mallow
+
+Fresh and invigorating scent of mallows boosts duplicants' Athletics, Strenght and Machinery. Mallows cannot be pollinated, but fully grown they produce cotton balls that can be used as an alternative to Reed Fibers.
+
+Vaporizer
+
+All above flowers produce their unique scent in small amounts when growing in nature. But you can also use collected flowers to prepare cans of intense floral aroma to be sublimed in new Vaporizer building. You can use this way to precisely control time and place of the scent to appear, or even to send it to another asteroid.
+
+Special Thanks
+
+To Ronivan - the mod was his idea, and he provided all of the arts along with initial code. I just added scent logic and some final balance.

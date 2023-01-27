@@ -39,7 +39,6 @@ namespace FragrantFlowers
         public const float Irrigation = 0.03f;             // Water Irrigation Needed
         public const float Fertilization = 0.012f;         // Dirty Fertilization Needed
 
-        //public static AromaticsPlantsTuning.CropsTuning tuning;
         public ComplexRecipe Recipe;
 
 

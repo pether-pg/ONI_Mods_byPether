@@ -55,8 +55,8 @@ namespace FragrantFlowers
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
         private const float tempLethalLow = -50 + degC; 
         private const float tempWarnLow = -30 + degC;
-        private const float tempWarnHigh = -5 + degC;
-        private const float tempLethalHigh = 0 + degC;
+        private const float tempWarnHigh = 5 + degC;
+        private const float tempLethalHigh = 20 + degC;
 
         public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod, do not rename from UVHalfLife
 
