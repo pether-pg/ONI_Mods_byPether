@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "Fragrant Flowers" 
+# currently unused, but may be someday
+description: "Adds flowers spreading new aromas into the air." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.FragrantFlowers" 
