@@ -1,0 +1,8 @@
+# either or both of VANILLA_ID, EXPANSION1_ID, ALL
+supportedContent: VANILLA_ID, EXPANSION1_ID
+# The build number of the last version of the game you tested your mod with
+minimumSupportedBuild: 537329
+# An arbitrary string that will be displayed to users on the mod screen. is prepended with a "v" in the UI
+version: "2023.2.1.2143"
+# Required if your mod includes DLLs to let the game know you've updated to Harmony2.0
+APIVersion: 2 

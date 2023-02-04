@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Checkpoint Automation" 
+# currently unused, but may be someday
+description: "Allows to disable suit checkpoints using automation." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.CheckpointAutomation" 
