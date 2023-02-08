@@ -33,6 +33,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                 ClearAllCells();
                 yield return new WaitForSeconds(1);
             }
+            ClearAllBuildings();
         }
 
 
@@ -42,6 +43,21 @@ namespace DiseasesExpanded.RandomEvents.Events
             foreach (int cell in ONITwitchLib.Utils.GridUtil.ActiveSimCells())
                 if (Grid.DiseaseCount[cell] > 0)
                     SimMessages.ModifyDiseaseOnCell(cell, Grid.DiseaseIdx[cell], -1 * overkill * Grid.DiseaseCount[cell]);
+        }
+
+        private void ClearAllBuildings()
+        {
+            foreach(BuildingComplete building in Components.BuildingCompletes)
+            {
+                if (building == null)
+                    continue;
+
+                PrimaryElement prime = building.primaryElement;
+                if (prime.DiseaseIdx == GermIdx.Invalid || prime.DiseaseCount <= 0)
+                    continue;
+
+                prime.AddDisease(prime.DiseaseIdx, -prime.DiseaseCount, GeneralName);
+            }
         }
     }
 }

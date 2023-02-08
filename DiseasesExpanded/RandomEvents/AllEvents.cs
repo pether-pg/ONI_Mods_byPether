@@ -44,13 +44,8 @@ namespace DiseasesExpanded.RandomEvents
             EventInfo info;
             if (diseaseEvent.Group != null)
             {
-                var group = deckInst.GetGroup(diseaseEvent.Group);
-                if (group == null)
-                {
-                    group = new EventGroup(diseaseEvent.Group);
-                    deckInst.AddGroup(group);
-                }
-
+                var group = EventGroup.GetOrCreateGroup(diseaseEvent.Group);                
+                deckInst.AddGroup(group);
                 info = group.AddEvent(diseaseEvent.ID, weight, diseaseEvent.GetFriendlyName(showDetails));
             }
             else

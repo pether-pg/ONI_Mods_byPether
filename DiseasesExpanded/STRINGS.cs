@@ -442,6 +442,12 @@ namespace DiseasesExpanded
                 public static LocString DESC = (LocString)"Vaccine Apothecary uses radiation to weaken germs stored in a flasks to produce life-saving vaccines. \n\nIt must be operated by highly-trained medical personel and it is suggested to use radiation protection for the time of vaccine preparation.";
                 public static LocString EFFECCT = (LocString)"Vaccines produced here can grant your duplicants immunity for various diseases.";
             }
+            public class SHIELDGENERATOR
+            {
+                public static LocString NAME = (LocString)"Shield Generator";
+                public static LocString DESC = (LocString)"Shields the asteroid from cosmic radiation.";
+                public static LocString EFFECCT = (LocString)"When powered, generates shield around the asteroid to protect the surface from cosmic radiation.";
+            }
         }
 
         public class STATUSITEMS
@@ -451,6 +457,13 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Gathering";
                 public static LocString TOOLTIP = (LocString)"This building is currently gathering ambient germs.";
                 public static LocString PROGRESS = (LocString)" {GERMS} - {PROGRESS}%";
+            }
+
+            public class SHIELDPOWERUP
+            {
+                public static LocString NAME = (LocString)"Shield Status";
+                public static LocString TOOLTIP = (LocString)"This building generates protective shield: ";
+                public static LocString PROGRESS = (LocString)": {PROGRESS}%";
             }
         }
 

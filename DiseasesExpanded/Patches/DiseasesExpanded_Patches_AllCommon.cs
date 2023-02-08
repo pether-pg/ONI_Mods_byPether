@@ -66,6 +66,7 @@ namespace DiseasesExpanded
                 BasicModUtils.MakeTraitStrings(InsectAllergies.ID, STRINGS.TRAITS.INSECTALLERGIES.NAME, STRINGS.TRAITS.INSECTALLERGIES.DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC, STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP);
 
                 BasicModUtils.MakeStatusItemStrings(GermcatcherConfig.StatusItemID, STRINGS.STATUSITEMS.GATHERING.NAME, STRINGS.STATUSITEMS.GATHERING.TOOLTIP);
+                BasicModUtils.MakeStatusItemStrings(ShieldGeneratorConfig.StatusItemID, STRINGS.STATUSITEMS.SHIELDPOWERUP.NAME, STRINGS.STATUSITEMS.SHIELDPOWERUP.TOOLTIP);
 
                 ExpandExposureTable();
 
@@ -114,6 +115,10 @@ namespace DiseasesExpanded
                 StatusItem statusItem = new StatusItem(GermcatcherConfig.StatusItemID, "BUILDINGS", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
                 statusItem.SetResolveStringCallback((str, data) => str += ((GermcatcherController.Instance)data).GetStatusItemProgress());
                 Db.Get().BuildingStatusItems.Add(statusItem);
+
+                StatusItem shieldStatus = new StatusItem(ShieldGeneratorConfig.StatusItemID, "BUILDINGS", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
+                shieldStatus.SetResolveStringCallback((str, data) => str += ((ShieldGenerator.SMInstance)data).GetStatusItemProgress());
+                Db.Get().BuildingStatusItems.Add(shieldStatus);
             }
 
             public static void ExpandExposureTable()

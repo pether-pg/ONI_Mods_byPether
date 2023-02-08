@@ -21,8 +21,14 @@ namespace DiseasesExpanded
 										STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC,
 										STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECCT);
 
+				BasicModUtils.MakeBuildingStrings(ShieldGeneratorConfig.ID,
+										STRINGS.BUILDINGS.SHIELDGENERATOR.NAME,
+										STRINGS.BUILDINGS.SHIELDGENERATOR.DESC,
+										STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECCT);
+
 				ModUtil.AddBuildingToPlanScreen("Medical", GermcatcherConfig.ID);
 				ModUtil.AddBuildingToPlanScreen("Medical", VaccineApothecaryConfig.ID);
+				ModUtil.AddBuildingToPlanScreen("Rocketry", ShieldGeneratorConfig.ID);
 			}
 		}
 
@@ -42,7 +48,10 @@ namespace DiseasesExpanded
 				}
 				Tech tech2 = __instance.TryGet("MedicineIV");
 				if (tech2 != null)
+				{
 					tech2.unlockedItemIDs.Add(VaccineApothecaryConfig.ID);
+					tech2.unlockedItemIDs.Add(ShieldGeneratorConfig.ID);
+				}
 			}
 		}
 

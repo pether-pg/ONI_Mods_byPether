@@ -88,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buildings\GermcatcherController.cs" />
+    <Compile Include="Buildings\ShieldGenerator.cs" />
+    <Compile Include="Buildings\ShieldGeneratorConfig.cs" />
     <Compile Include="Buildings\VaccineApothecary.cs" />
     <Compile Include="Buildings\VaccineApothecaryConfig.cs" />
     <Compile Include="Buildings\VaccineApothecaryWorkable.cs" />

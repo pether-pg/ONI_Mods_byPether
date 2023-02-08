@@ -4,23 +4,24 @@ using TUNING;
 
 namespace DiseasesExpanded
 {
-    class GermcatcherConfig : IBuildingConfig
+    class ShieldGeneratorConfig : IBuildingConfig
     {
-        public const string ID = "Germcatcher";
-        public const string StatusItemID = "GermcatcherStatusItem";
+        public const string ID = "ShieldGenerator";
+        public const string StatusItemID = "ShieldGeneratorStatusItem";
+        public override string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
         public override BuildingDef CreateBuildingDef()
         {
-            float[] materialMass = BUILDINGS.CONSTRUCTION_MASS_KG.TIER2;
-            string[] materials = MATERIALS.RAW_MINERALS;
+            float[] materialMass = BUILDINGS.CONSTRUCTION_MASS_KG.TIER7;
+            string[] materials = new string[1] { SimHashes.Steel.ToString() };
             EffectorValues none = NOISE_POLLUTION.NONE;
             EffectorValues tieR0_2 = BUILDINGS.DECOR.PENALTY.TIER0;
             EffectorValues noise = none;
-            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(ID, 2, 3, "germcatcher_1_kanim", 30, 30f, materialMass, materials, 1600f, BuildLocationRule.OnFloor, tieR0_2, noise);
+            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(ID, 2, 4, "meteor_detector_kanim", 30, 30f, materialMass, materials, 1600f, BuildLocationRule.OnFloor, tieR0_2, noise);
             buildingDef.RequiresPowerInput = true;
-            buildingDef.EnergyConsumptionWhenActive = 120f;
+            buildingDef.EnergyConsumptionWhenActive = 1200f;
             buildingDef.Overheatable = false;
-            buildingDef.Floodable = false;
+            buildingDef.Floodable = true;
             buildingDef.Entombable = true;
             buildingDef.ViewMode = OverlayModes.Disease.ID;
             buildingDef.AudioCategory = "HollowMetal";
@@ -30,9 +31,8 @@ namespace DiseasesExpanded
 
         public override void DoPostConfigureComplete(GameObject go)
         {
-            go.AddOrGet<Germcatcher>();
             go.AddOrGet<LogicOperationalController>();
-            go.AddOrGetDef<GermcatcherController.Def>();
+            go.AddComponent<ShieldGenerator>();
         }
     }
 }
