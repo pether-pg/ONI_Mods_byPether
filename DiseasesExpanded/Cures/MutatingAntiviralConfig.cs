@@ -16,8 +16,8 @@ namespace DiseasesExpanded
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
                 new ComplexRecipe.RecipeElement(mainIngridient, amount),
-                new ComplexRecipe.RecipeElement(SwampLilyFlowerConfig.ID, 1f),
-                new ComplexRecipe.RecipeElement(SpiceNutConfig.ID, 1f)
+                new ComplexRecipe.RecipeElement(SimHashes.Sand.CreateTag(), 100f),
+                new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 100f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
