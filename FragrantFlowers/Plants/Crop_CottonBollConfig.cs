@@ -43,6 +43,7 @@ namespace FragrantFlowers
                 SimHashes.Creature, 
                 new List<Tag>
                 {
+                    GameTags.CookingIngredient, 
                     GameTags.IndustrialIngredient,
                     GameTags.BuildingFiber
                 });

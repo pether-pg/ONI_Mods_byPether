@@ -146,34 +146,34 @@ namespace FragrantFlowers
             {
                 public static LocString NAME = "Blooming Spinosa";
                 public static LocString DESC = string.Concat(new string[] { "A rather thorny sten plant that blooms with a beautiful " + UI.FormatAsLink("Spinosa Rose", Crop_SpinosaRoseConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = DESC + "/n/n In domesticated environment this crop requires copious amounts of" + UI.FormatAsLink("Water", "WATER") + ", and" + UI.FormatAsLink("Dirt", "DIRT") + "as fertilizer. Also requires direct exposure to sunlight.";
+                public static LocString DOMESTICATED_DESC = DESC + "/nIn domesticated environment this crop requires copious amounts of" + UI.FormatAsLink("Water", "WATER") + ", and" + UI.FormatAsLink("Dirt", "DIRT") + "as fertilizer. Also requires direct exposure to sunlight.";
             }
 
             public class SUPERSPINOSA
             {
                 public static LocString NAME = "Fruiting Spinosa";
                 public static LocString DESC = string.Concat(new string[] { "A rather thorny sten plant that produces an edible " + UI.FormatAsLink("Spinosa Hips", Crop_SpinosaHipsConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/n/n This domesticated plant requires copious amounts of" + UI.FormatAsLink("Water", "WATER") + ", and" + UI.FormatAsLink("Dirt", "DIRT") + "as fertilizer. Also requires direct exposure to sunlight." });
+                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/nThis domesticated plant requires copious amounts of" + UI.FormatAsLink("Water", "WATER") + ", and" + UI.FormatAsLink("Dirt", "DIRT") + "as fertilizer. Also requires direct exposure to sunlight." });
             }
 
             public class DUSKLAVENDER
             {
                 public static LocString NAME = "Duskbloom Lavender";
                 public static LocString DESC = string.Concat(new string[] { "A shrub-like plant blooms with a beautiful " + UI.FormatAsLink("Duskbloom", Crop_DuskbloomConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/n/n In domesticated environment this crop requires the use of " + UI.FormatAsLink("Phosphorite", "PHOSPHORITE") + " as fertilization." });
+                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/nIn domesticated environment this crop requires the use of " + UI.FormatAsLink("Phosphorite", "PHOSPHORITE") + " as fertilization." });
             }
 
             public class SUPERDUSKLAVENDER
             {
                 public static LocString NAME = "Duskberry Lavender";
                 public static LocString DESC = string.Concat(new string[] { "A shrub-like plant sprouts with an edible " + UI.FormatAsLink("Duskberry", Crop_DuskberryConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/n/n In domesticated environment this crop requires the use of " + UI.FormatAsLink("Phosphorite", "PHOSPHORITE") + " as fertilization." });
+                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/nIn domesticated environment this crop requires the use of " + UI.FormatAsLink("Phosphorite", "PHOSPHORITE") + " as fertilization." });
             }
             public class RIMEDMALLOW
             {
                 public static LocString NAME = "Rimed Mallow";
                 public static LocString DESC = string.Concat(new string[] { "An evergreen plant well adapt to thrive in very cold environments. Produces a fluffy " + UI.FormatAsLink("Rimed Cotton Boll", Crop_CottonBollConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/n/n In domesticated environment this crop requires the use of pure water " + UI.FormatAsLink("Ice", "ICE") + " as fertilization." });
+                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/nIn domesticated environment this crop requires the use of pure water " + UI.FormatAsLink("Ice", "ICE") + " as fertilization." });
             }
         }
 
@@ -206,7 +206,7 @@ namespace FragrantFlowers
             public class COTTONBOLL
             {
                 public static LocString NAME = UI.FormatAsLink("Rimed Cotton Boll", Crop_CottonBollConfig.ID.ToUpper());
-                public static LocString DESC = $"A soft, fluffy staple fiber that grows in a boll encased in ice crystals.  The fiber of the boll is almost pure cellulose, but also contains high concentration of aromatic oils that gives it a smooth and pleasing scent.";
+                public static LocString DESC = $"A soft, fluffy staple fiber that grows in a boll encased in ice crystals. The fiber of the boll is almost pure cellulose, but also contains high concentration of aromatic oils that gives it a smooth and pleasing scent.";
             }
         }
 
