@@ -38,8 +38,10 @@ namespace FragrantFlowers
                 true, 
                 0, 
                 SimHashes.Creature, 
-                new List<Tag>{GameTags.IndustrialIngredient}
-                );
+                new List<Tag>{ 
+                    GameTags.CookingIngredient, 
+                    GameTags.IndustrialIngredient 
+                });
             go.AddOrGet<EntitySplitter>();
             go.AddOrGet<SimpleMassStatusItem>();
 

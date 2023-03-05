@@ -24,7 +24,7 @@ namespace FragrantFlowers
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
               new ComplexRecipe.RecipeElement(SpinosaSyrupConfig.ID, 1f),
-              new ComplexRecipe.RecipeElement(ColdWheatConfig.ID, 3f),
+              new ComplexRecipe.RecipeElement(ColdWheatConfig.SEED_ID, 3f),
               new ComplexRecipe.RecipeElement(RawEggConfig.ID, 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
