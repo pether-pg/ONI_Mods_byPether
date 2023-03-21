@@ -32,6 +32,8 @@ namespace DiseasesExpanded
 
         public void SpawnGerms()
         {
+            if (!Settings.Instance.HungerGerms.IncludeDisease)
+                return;
             SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(this.gameObject), GermIdx.HungerGermsIdx, SPAWNED_GERMS);
         }
 

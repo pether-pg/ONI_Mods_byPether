@@ -16,33 +16,36 @@ namespace DiseasesExpanded
         public Vector2Int GatherOffset = new Vector2Int(1, 1);
 
         private byte lastGatheredIdx = byte.MaxValue;
-        public static Dictionary<byte, string> SpawnedFlasks = DlcManager.IsExpansion1Active() ?
-            new Dictionary<byte, string>()
-            {
-                    { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
-                    { GermIdx.PollenGermsIdx, PollenFlask.ID },
-                    { GermIdx.SlimelungIdx, SlimelungFlask.ID },
-                    { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
-                    { GermIdx.RadiationPoisoningIdx, RadiationGermsFlask.ID },
-                    { GermIdx.BogInsectsIdx, BogBugsFlask.ID },
-                    { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
-                    { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
-                    { GermIdx.HungerGermsIdx, HungermsFlask.ID },
-                    { GermIdx.AlienGermsIdx, AlienGermFlask.ID },
-                    { GermIdx.MutatingGermsIdx, MutatingGermFlask.ID }
-            }
-            :
-            new Dictionary<byte, string>()
-            {
-                    { GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID },
-                    { GermIdx.PollenGermsIdx, PollenFlask.ID },
-                    { GermIdx.SlimelungIdx, SlimelungFlask.ID },
-                    { GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID },
-                    { GermIdx.FrostShardsIdx, FrostShardsFlask.ID },
-                    { GermIdx.GassyGermsIdx, GassyGermFlask.ID },
-                    { GermIdx.AlienGermsIdx, AlienGermFlask.ID },
-                    { GermIdx.MutatingGermsIdx, MutatingGermFlask.ID }
-            };
+        public static Dictionary<byte, string> SpawnedFlasks;
+
+        public static void InitalizeFlaskDict()
+        {
+            if (SpawnedFlasks != null)
+                return;
+
+            SpawnedFlasks = new Dictionary<byte, string>();
+
+            SpawnedFlasks.Add(GermIdx.FoodPoisoningIdx, FoodGermsFlask.ID);
+            SpawnedFlasks.Add(GermIdx.PollenGermsIdx, PollenFlask.ID);
+            SpawnedFlasks.Add(GermIdx.SlimelungIdx, SlimelungFlask.ID);
+            SpawnedFlasks.Add(GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID);
+
+            if(DlcManager.IsExpansion1Active())
+                SpawnedFlasks.Add(GermIdx.RadiationPoisoningIdx, RadiationGermsFlask.ID);
+
+            if (Settings.Instance.FrostPox.IncludeDisease)
+                SpawnedFlasks.Add(GermIdx.FrostShardsIdx, FrostShardsFlask.ID);
+            if (Settings.Instance.MooFlu.IncludeDisease)
+                SpawnedFlasks.Add(GermIdx.GassyGermsIdx, FrostShardsFlask.ID);
+            if (Settings.Instance.AlienGoo.IncludeDisease)
+                SpawnedFlasks.Add(GermIdx.AlienGermsIdx, AlienGermFlask.ID);
+            if (Settings.Instance.MutatingVirus.IncludeDisease)
+                SpawnedFlasks.Add(GermIdx.MutatingGermsIdx, MutatingGermFlask.ID);
+            if (DlcManager.IsExpansion1Active() && Settings.Instance.BogInsects.IncludeDisease)
+                SpawnedFlasks.Add(GermIdx.BogInsectsIdx, BogBugsFlask.ID);
+            if (DlcManager.IsExpansion1Active() && Settings.Instance.HungerGerms.IncludeDisease)
+                SpawnedFlasks.Add(GermIdx.HungerGermsIdx, HungermsFlask.ID);
+        }
 
         public void GatherGerms(float dt)
         {

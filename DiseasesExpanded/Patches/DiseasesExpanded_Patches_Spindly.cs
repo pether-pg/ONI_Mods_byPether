@@ -52,6 +52,9 @@ namespace DiseasesExpanded
         {
             public static void Postfix(Harvestable __instance, Worker worker)
             {
+                if (!Settings.Instance.SleepingCurse.IncludeDisease)
+                    return;
+
                 if (!CausesCurse(__instance))
                     return;
 

@@ -20,13 +20,14 @@ namespace DiseasesExpanded
                 excluded_effects = new List<string>()
                     {
                       FrostSickness.RECOVERY_ID,
+                      SerumDeepBreathConfig.EFFECT_ID,
                       "RecentlySauna", // See SaunaConfig.cs
                       "RecentlyHotTub" // See HotTubConfig.cs
                     }
             };
         }
         public const string ID = nameof(FrostShards);
-        public static Color32 colorValue = ColorPalette.IcyBlue;
+        public static Color32 ColorValue = Settings.Instance.FrostPox.GermColor;
 
         private static float degC = 273.15f; // used to quickly convert temperature from *C to K
 

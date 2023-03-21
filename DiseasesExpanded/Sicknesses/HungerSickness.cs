@@ -15,9 +15,10 @@ namespace DiseasesExpanded
         public const float caloriesPerDay = 1666.682f;
         public static Effect GetCritterSicknessEffect()
         {
+            float scale = Settings.Instance.HungerGerms.SeverityScale;
             Effect effect = new Effect(CRITTER_EFFECT_ID, STRINGS.DISEASES.HUNGERSICKNESS.NAME, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION, DURATION, true, true, true);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().CritterAttributes.Metabolism.Id, 100 * (Settings.Instance.RebalanceForDiseasesRestored ? 3 : 1)));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().CritterAttributes.Metabolism.Id, 100 * scale * (Settings.Instance.RebalanceForDiseasesRestored ? 3 : 1)));
             return effect;
         }
 
@@ -29,10 +30,11 @@ namespace DiseasesExpanded
                 Sickness.InfectionVector.Inhalation
             }, DURATION, RECOVERY_ID)
         {
+            float scale = Settings.Instance.HungerGerms.SeverityScale;
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
             this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[1]
             {
-                new AttributeModifier("CaloriesDelta", -caloriesPerDay * (Settings.Instance.RebalanceForDiseasesRestored ? 3 : 1), (string) STRINGS.DISEASES.HUNGERSICKNESS.NAME)
+                new AttributeModifier("CaloriesDelta", -caloriesPerDay * scale *(Settings.Instance.RebalanceForDiseasesRestored ? 3 : 1), (string) STRINGS.DISEASES.HUNGERSICKNESS.NAME)
             }));
             this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[1]
             {

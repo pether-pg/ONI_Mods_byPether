@@ -57,10 +57,13 @@ namespace DiseasesExpanded
             base.OnSpawn();
             _isReady = true;
 
+            if (!Settings.Instance.MutatingVirus.IncludeDisease)
+                return;
+
             if (MutationReinforcement == null)
                 InitalizeReinforcements();
 
-            if (Settings.Instance.ClearVirusMutationsOnLoad)
+            if (Settings.Instance.MutatingVirus.ClearVirusMutationsOnLoad)
                 MutationLevels = new Dictionary<MutationVectors.Vectors, int>();
             //else if (Settings.Instance.FullyMutateOnLoad)
             //    CompleteMutation();
@@ -215,7 +218,7 @@ namespace DiseasesExpanded
 
         public float GetExpectedMutationPeriod()
         {
-            return 1.0f * Settings.Instance.UnstableVirusFinalMutationCycleEstimation / GetMaxTotalLevel();
+            return 1.0f * Settings.Instance.MutatingVirus.FinalMutationCycleEstimation / GetMaxTotalLevel();
         }
 
         public void IncreaseMutationProgress(GameObject infestedHost, float durationScale = 1)
@@ -268,7 +271,7 @@ namespace DiseasesExpanded
         public float GetAccelerationParameter()
         {
             float mutationProgress = GetCompletionPercent();
-            float currentMutationCycleExpectancy = mutationProgress * Settings.Instance.UnstableVirusFinalMutationCycleEstimation;
+            float currentMutationCycleExpectancy = mutationProgress * Settings.Instance.MutatingVirus.FinalMutationCycleEstimation;
 
             float delta = GameClock.Instance.GetCycle() - currentMutationCycleExpectancy;
             // delta:
@@ -285,7 +288,7 @@ namespace DiseasesExpanded
         public Color32 GetGermColor()
         {
             float ratio = GetCompletionPercent();
-            return ColorPalette.Gradient(Settings.Instance.MutationVirusStageColors, ratio);
+            return ColorPalette.Gradient(Settings.Instance.MutatingVirus.MutationVirusStageColors, ratio);
         }
 
         public void UpdateColor()
@@ -365,7 +368,7 @@ namespace DiseasesExpanded
             if (GetTotalLevel() >= GetMaxTotalLevel())
                 return false;
 
-            if (CurrentCycle() < lastMutationCycle + Settings.Instance.UnstableVirusMinimalMutationInterval)
+            if (CurrentCycle() < lastMutationCycle + Settings.Instance.MutatingVirus.MinimalMutationInterval)
                 return false;
 
             return true;
@@ -378,7 +381,7 @@ namespace DiseasesExpanded
 
         public void Mutate(GameObject infestedHost = null)
         {
-            EqualizeReinforcements(Settings.Instance.UnstableVirusMutationFocusEqualizer);
+            EqualizeReinforcements(Settings.Instance.MutatingVirus.MutationFocusEqualizer);
             MutateAttack();
             MutateResiliance();
 

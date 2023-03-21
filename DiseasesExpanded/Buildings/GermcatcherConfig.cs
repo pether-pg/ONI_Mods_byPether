@@ -30,6 +30,7 @@ namespace DiseasesExpanded
 
         public override void DoPostConfigureComplete(GameObject go)
         {
+            Germcatcher.InitalizeFlaskDict();
             go.AddOrGet<Germcatcher>();
             go.AddOrGet<LogicOperationalController>();
             go.AddOrGetDef<GermcatcherController.Def>();

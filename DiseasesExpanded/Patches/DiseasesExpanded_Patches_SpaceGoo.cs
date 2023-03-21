@@ -48,7 +48,8 @@ namespace DiseasesExpanded
         {
             public static void Postfix(GameObject go)
             {
-                EnhanceCometWithGerms(go);
+                if(Settings.Instance.AlienGoo.IncludeDisease)
+                    EnhanceCometWithGerms(go);
             }
         }
 
@@ -58,7 +59,8 @@ namespace DiseasesExpanded
         {
             public static void Postfix(GameObject go)
             {
-                EnhanceCometWithGerms(go);
+                if (Settings.Instance.AlienGoo.IncludeDisease)
+                    EnhanceCometWithGerms(go);
             }
         }
 
@@ -68,7 +70,8 @@ namespace DiseasesExpanded
         {
             public static void Postfix(GameObject go)
             {
-                EnhanceCometWithGerms(go);
+                if (Settings.Instance.AlienGoo.IncludeDisease)
+                    EnhanceCometWithGerms(go);
             }
         }
 
@@ -78,7 +81,8 @@ namespace DiseasesExpanded
         {
             public static void Postfix(GameObject go)
             {
-                EnhanceCometWithGerms(go);
+                if (Settings.Instance.AlienGoo.IncludeDisease)
+                    EnhanceCometWithGerms(go);
             }
         }
 
@@ -88,7 +92,8 @@ namespace DiseasesExpanded
         {
             public static void Postfix(GameObject go)
             {
-                EnhanceCometWithGerms(go);
+                if (Settings.Instance.AlienGoo.IncludeDisease)
+                    EnhanceCometWithGerms(go);
             }
         }
 
@@ -98,7 +103,8 @@ namespace DiseasesExpanded
         {
             public static void Postfix(GameObject go)
             {
-                EnhanceCometWithGerms(go);
+                if (Settings.Instance.AlienGoo.IncludeDisease)
+                    EnhanceCometWithGerms(go);
             }
         }
 

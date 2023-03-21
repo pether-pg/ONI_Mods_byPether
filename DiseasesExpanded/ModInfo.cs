@@ -19,6 +19,8 @@ namespace DiseasesExpanded
             Debug.Log($"{Namespace}: Loaded from: {this.mod.ContentPath}");
             Debug.Log($"{Namespace}: DLL version: {GetType().Assembly.GetName().Version} " +
                         $"supporting game build {this.mod.packagedModInfo.minimumSupportedBuild} ({this.mod.packagedModInfo.supportedContent})");
+
+            SettingsBackup.Instance.RestoreBackup(JsonSerializer<Settings>.GetDefaultName());
         }
 
         public override void OnAllModsLoaded(Harmony harmony, IReadOnlyList<Mod> mods)
@@ -41,4 +43,3 @@ namespace DiseasesExpanded
         }
     }
 }
-//internal record struct ExtData(bool Thing);

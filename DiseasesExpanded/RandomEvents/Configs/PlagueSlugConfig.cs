@@ -38,8 +38,11 @@ namespace DiseasesExpanded.RandomEvents.Configs
             EntityTemplates.CreateAndRegisterBaggedCreature(placedEntity, true, false);
             EntityTemplates.AddCreatureBrain(placedEntity, new ChoreTable.Builder().Add((StateMachine.BaseDef)new DeathStates.Def()).Add((StateMachine.BaseDef)new TrappedStates.Def()).Add((StateMachine.BaseDef)new BaggedStates.Def()).Add((StateMachine.BaseDef)new FallStates.Def()).Add((StateMachine.BaseDef)new StunnedStates.Def()).Add((StateMachine.BaseDef)new DrowningStates.Def()).Add((StateMachine.BaseDef)new DebugGoToStates.Def()).Add((StateMachine.BaseDef)new FleeStates.Def()).Add((StateMachine.BaseDef)new DropElementStates.Def()).Add((StateMachine.BaseDef)new IdleStates.Def()), GameTags.Creatures.Species.GlomSpecies, (string)null);
 
-            GermCarrier carrier = placedEntity.AddComponent<GermCarrier>();
-            carrier.germId = BogInsects.ID;
+            if(Settings.Instance.BogInsects.IncludeDisease)
+            {
+                GermCarrier carrier = placedEntity.AddComponent<GermCarrier>();
+                carrier.germId = BogInsects.ID;
+            }
 
             return placedEntity;
         }

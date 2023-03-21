@@ -17,11 +17,12 @@ namespace DiseasesExpanded
                 Sickness.InfectionVector.Inhalation
             }, 2220f, RECOVERY_ID)
         {
+            float scale = Settings.Instance.FrostPox.SeverityScale;
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
             this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[2]
             {
-                new AttributeModifier("ThermalConductivityBarrier", -0.004f, (string) STRINGS.DISEASES.FROSTSICKNESS.NAME),
-                new AttributeModifier("GermResistance", -3f, (string) STRINGS.DISEASES.FROSTSICKNESS.NAME)
+                new AttributeModifier("ThermalConductivityBarrier", -0.004f * scale, (string) STRINGS.DISEASES.FROSTSICKNESS.NAME),
+                new AttributeModifier("GermResistance", -3f * scale, (string) STRINGS.DISEASES.FROSTSICKNESS.NAME)
             }));
             this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[3]
             {

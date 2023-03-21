@@ -20,13 +20,14 @@ namespace DiseasesExpanded
                 excluded_effects = new List<string>()
                     {
                       GasSickness.RECOVERY_ID,
-                      GassyVaccineConfig.EffectID
+                      GassyVaccineConfig.EffectID,
+                      SerumTummyConfig.EFFECT_ID
                     }
             };
         }
 
         public const string ID = nameof(GassyGerms);
-        public static Color32 colorValue = ColorPalette.GassyOrange;
+        public static Color32 ColorValue = Settings.Instance.MooFlu.GermColor;
 
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
         private const float chlorineFreezingK = degC - 101;

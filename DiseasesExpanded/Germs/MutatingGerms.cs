@@ -25,7 +25,7 @@ namespace DiseasesExpanded
         }
 
         public const string ID = nameof(MutatingGerms);
-        public static Color32 colorValue = ColorPalette.FreshGreen;
+        public static Color32 ColorValue = Settings.Instance.MutatingVirus.MutationVirusStageColors[0];
 
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
 

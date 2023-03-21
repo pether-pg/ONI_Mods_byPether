@@ -7,10 +7,15 @@ namespace DiseasesExpanded
 {
     class JsonSerializer<T>
     {
+        public static string GetDefaultName()
+        {
+            return string.Format("{0}.json", typeof(T).ToString());
+        }
+
         public static string GetDefaultPath()
         {
             string path = System.IO.Path.GetDirectoryName(Assembly.GetAssembly(typeof(T)).Location);
-            string name = string.Format("{0}.json", typeof(T).ToString());
+            string name = GetDefaultName();
             return System.IO.Path.Combine(path, name);
         }
 

@@ -37,6 +37,9 @@ namespace DiseasesExpanded
                 if (__instance.Sickness.Id == MutatingSickness.ID) 
                     return;
 
+                if (!Settings.Instance.MutatingVirus.IncludeDisease)
+                    return;
+
                 GameObject go = __instance.gameObject;
                 float percentCured = __instance.GetPercentCured();
 

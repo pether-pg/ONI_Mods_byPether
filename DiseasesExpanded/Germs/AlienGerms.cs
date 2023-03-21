@@ -22,12 +22,12 @@ namespace DiseasesExpanded
                       AlienSickness.RECOVERY_ID,
                       AlienSickness.ASSIMILATION_EFFECT_ID,
                       AlienSicknessCureConfig.EFFECT_ID,
-                      SuperSerumConfig.EFFECT_ID
+                      SerumSuperConfig.EFFECT_ID
                     }
             };
         }
         public const string ID = nameof(AlienGerms);
-        public static Color32 colorValue = ColorPalette.NavyBlue;
+        public static Color32 ColorValue = Settings.Instance.AlienGoo.GermColor;
 
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
 

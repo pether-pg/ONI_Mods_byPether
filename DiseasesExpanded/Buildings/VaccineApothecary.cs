@@ -25,7 +25,6 @@ namespace DiseasesExpanded
             {
                 Assets.GetAnim((HashedString) "anim_interacts_metalrefinery_kanim")
             };
-            this.workable.AnimOffset = new Vector3(-1f, 0.0f, 0.0f);
         }
     }
 

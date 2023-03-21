@@ -17,10 +17,11 @@ namespace DiseasesExpanded
                 Sickness.InfectionVector.Contact
             }, 10000f, RECOVERY_ID)
         {
+            float scale = Settings.Instance.SleepingCurse.SeverityScale;
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
             this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[1]
             {
-                new AttributeModifier("StaminaDelta", -0.016666666f, (string) STRINGS.DISEASES.SPINDLYCURSE.NAME)
+                new AttributeModifier("StaminaDelta", -0.016666666f * scale, (string) STRINGS.DISEASES.SPINDLYCURSE.NAME)
             }));
             this.AddSicknessComponent((Sickness.SicknessComponent)new SpindlySickness.SpindlySicknessComponent());
         }

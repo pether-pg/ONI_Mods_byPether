@@ -87,6 +87,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SettingsBackup.cs" />
     <Compile Include="Buildings\GermcatcherController.cs" />
     <Compile Include="Buildings\ShieldGenerator.cs" />
     <Compile Include="Buildings\ShieldGeneratorConfig.cs" />
@@ -98,9 +99,13 @@
     <Compile Include="Cures\AllergyVaccineConfig.cs" />
     <Compile Include="Cures\AntihistamineBoosterConfig.cs" />
     <Compile Include="Cures\HappyPillConfig.cs" />
+    <Compile Include="Cures\SerumDeepBreathConfig.cs" />
+    <Compile Include="Cures\SerumTummyConfig.cs" />
+    <Compile Include="Cures\SerumYummyConfig.cs" />
     <Compile Include="Cures\SunburnCureConfig.cs" />
-    <Compile Include="Cures\SuperSerumConfig.cs" />
+    <Compile Include="Cures\SerumSuperConfig.cs" />
     <Compile Include="Cures\MutatingAntiviralConfig.cs" />
+    <Compile Include="Germs\SpindlyGerms.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_DiseaseDroppers.cs" />
     <Compile Include="GermFlasks\AlienGermFlask.cs" />
     <Compile Include="GermFlasks\MutatingGermFlask.cs" />

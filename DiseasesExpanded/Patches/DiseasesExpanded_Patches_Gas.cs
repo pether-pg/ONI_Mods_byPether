@@ -15,6 +15,9 @@ namespace DiseasesExpanded
         {
             public static void Postfix(ref GameObject __result)
             {
+                if (!Settings.Instance.MooFlu.IncludeDisease)
+                    return;
+
                 DiseaseDropper.Def def = __result.AddOrGetDef<DiseaseDropper.Def>();
                 def.diseaseIdx = Db.Get().Diseases.GetIndex((HashedString)GassyGerms.ID);
                 def.emitFrequency = 1f;
@@ -97,6 +100,10 @@ namespace DiseasesExpanded
                 Database.Diseases diseases = Db.Get().Diseases;
                 string germId = (butherable.gameObject.name == MooConfig.ID) ? GassyGerms.ID : FoodGerms.ID;
 
+
+                if (germId == GassyGerms.ID && !Settings.Instance.MooFlu.IncludeDisease)
+                    return go;
+
                 PrimaryElement prime = go.GetComponent<PrimaryElement>();
                 if (prime != null && !string.IsNullOrEmpty(germId))
                     prime.AddDisease(diseases.GetIndex(germId), 100000, "Infected meat");
@@ -111,6 +118,9 @@ namespace DiseasesExpanded
         {
             public static void Postfix(ref List<GeyserGenericConfig.GeyserPrefabParams> __result)
             {
+                if (!Settings.Instance.MooFlu.IncludeDisease)
+                    return;
+
                 foreach(GeyserGenericConfig.GeyserPrefabParams param in __result)
                 {
                     if (param.anim == "geyser_gas_methane_kanim")
@@ -133,6 +143,8 @@ namespace DiseasesExpanded
         {
             public static void Postfix(GameObject go)
             {
+                if (!Settings.Instance.MooFlu.IncludeDisease)
+                    return;
                 DiseasesExpanded_Patches_SpaceGoo.EnhanceCometWithGerms(go, GermIdx.GassyGermsIdx, 0);
             }
         }

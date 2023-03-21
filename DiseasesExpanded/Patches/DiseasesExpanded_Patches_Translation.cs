@@ -15,7 +15,8 @@ namespace DiseasesExpanded
             // https://forums.kleientertainment.com/forums/topic/123339-guide-for-creating-translatable-mods
 
             public static void Postfix()
-            { 
+            {
+                return;
                 Translate(typeof(STRINGS));
             }
 

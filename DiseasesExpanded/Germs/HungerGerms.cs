@@ -28,7 +28,7 @@ namespace DiseasesExpanded
         }
 
         public const string ID = nameof(HungerGerms);
-        public static Color32 colorValue = ColorPalette.HungryBrown;
+        public static Color32 ColorValue = Settings.Instance.HungerGerms.GermColor;
 
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
         private const float resinFreezingK = degC + 20;

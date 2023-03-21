@@ -19,7 +19,7 @@ namespace DiseasesExpanded
                 Sickness.InfectionVector.Exposure,
                 Sickness.InfectionVector.Contact,
                 Sickness.InfectionVector.Digestion,
-            }, 2220f, RECOVERY_ID)
+            }, 2220f * Settings.Instance.MooFlu.SeverityScale, RECOVERY_ID)
         {
             this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
             this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[1]

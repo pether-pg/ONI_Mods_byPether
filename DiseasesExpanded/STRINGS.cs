@@ -265,10 +265,28 @@ namespace DiseasesExpanded
                 public static LocString DESC = (LocString)"Grants immunity to {0} disease.";
             }
 
+            public class DEEPBREATH
+            {
+                public static LocString NAME = (LocString)"Deep Breath Serum";
+                public static LocString DESC = (LocString)"Slightly improves duplicant's breath and germ resistance.";
+            }
+
             public class SUPERSERUM
             {
                 public static LocString NAME = (LocString)"Super Serum";
                 public static LocString DESC = (LocString)"Enhances duplicant's attributes and makes them immune to most dangerous pathogens.";
+            }
+
+            public class TUMMYSERUM
+            {
+                public static LocString NAME = (LocString)"Tummy Serum";
+                public static LocString DESC = (LocString)"Calms even most angry tummy and makes it immune to subsequent infections.";
+            }
+
+            public class YUMMYSERUM
+            {
+                public static LocString NAME = (LocString)"Yummy Serum";
+                public static LocString DESC = (LocString)"Stimulates duplicant's digestive system and makes them immune to most ravenous pathogens.";
             }
 
             public class MUTATINGANTIVIRAL

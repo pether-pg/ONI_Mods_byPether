@@ -13,7 +13,7 @@ namespace DiseasesExpanded
         public static HashedString SapShotKanim = (HashedString)"custom_serum_1_kanim";
         public static HashedString RadShotKanim = (HashedString)"vial_radiation_kanim"; // from DLC ONI
         public static HashedString UnstableAntiviralKanim = (HashedString)"pill_1_kanim"; // from vanilla ONI
-        public static HashedString HappyPill = (HashedString)"pill_2_kanim"; // from vanilla ONI
+        public static HashedString HappyPill = (HashedString)"pill_happy_kanim";
         public static HashedString AntihistamineBoosterKanim = (HashedString)"pill_allergies_kanim"; // from vanilla ONI
         public static HashedString SunburnCure = (HashedString)"iv_sunburn_kanim"; // from vanilla ONI
         public static HashedString GermFlaskKanim = (HashedString)"germ_bottle_1_kanim";
@@ -24,8 +24,13 @@ namespace DiseasesExpanded
         public static HashedString ControlledMutation = (HashedString)"germ_modicon_b_kanim";
         public static HashedString MedicalNanobots = (HashedString)"germ_modicon_b_kanim";
         public static HashedString MedicalNanobotsUpgrade = (HashedString)"germ_modicon_b_kanim";
+        public static HashedString DeepBreathSerum = (HashedString)"pill_green_kanim";
         public static HashedString SuperSerum = (HashedString)"pill_blue_kanim";
+        public static HashedString YummySerum = (HashedString)"pill_purple_kanim";
+        public static HashedString TummySerum = (HashedString)"pill_orange_kanim";
         public static HashedString AlienCureKanim = (HashedString)"vial_blue_serum_kanim";
+
+        public static HashedString PaleSlickster = (HashedString)"oilfloater_pale_75_kanim";
 
         public static HashedString MedicalResearch = (HashedString)"custom_research_icon_kanim";
     }

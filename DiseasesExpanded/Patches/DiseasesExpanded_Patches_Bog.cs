@@ -14,6 +14,9 @@ namespace DiseasesExpanded
         {
             public static void Postfix(ref GameObject __result)
             {
+                if (!Settings.Instance.BogInsects.IncludeDisease)
+                    return;
+
                 DiseaseDropper.Def def = __result.AddOrGetDef<DiseaseDropper.Def>();
                 def.diseaseIdx = Db.Get().Diseases.GetIndex((HashedString)BogInsects.ID);
                 def.emitFrequency = 1f;

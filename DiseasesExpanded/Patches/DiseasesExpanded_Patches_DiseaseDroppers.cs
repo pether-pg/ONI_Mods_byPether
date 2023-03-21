@@ -54,18 +54,25 @@ namespace DiseasesExpanded
                   Db.Get().Diseases.FoodGerms,
                   Db.Get().Diseases.PollenGerms,
                   Db.Get().Diseases.SlimeGerms,
-                  Db.Get().Diseases.ZombieSpores,
-                  Db.Get().Diseases.Get(FrostShards.ID),
-                  Db.Get().Diseases.Get(GassyGerms.ID),
-                  Db.Get().Diseases.Get(AlienGerms.ID),
-                  Db.Get().Diseases.Get(MutatingGerms.ID),
+                  Db.Get().Diseases.ZombieSpores
                 };
+
+                if (Settings.Instance.FrostPox.IncludeDisease)
+                    diseases.Add(Db.Get().Diseases.Get(FrostShards.ID));
+                if (Settings.Instance.MooFlu.IncludeDisease)
+                    diseases.Add(Db.Get().Diseases.Get(GassyGerms.ID));
+                if (Settings.Instance.AlienGoo.IncludeDisease)
+                    diseases.Add(Db.Get().Diseases.Get(AlienGerms.ID));
+                if (Settings.Instance.MutatingVirus.IncludeDisease)
+                    diseases.Add(Db.Get().Diseases.Get(MutatingGerms.ID));
+
                 if (DlcManager.IsExpansion1Active())
-                {
                     diseases.Add(Db.Get().Diseases.RadiationPoisoning);
+                if (DlcManager.IsExpansion1Active() && Settings.Instance.BogInsects.IncludeDisease)
                     diseases.Add(Db.Get().Diseases.Get(BogInsects.ID));
+                if (DlcManager.IsExpansion1Active() && Settings.Instance.HungerGerms.IncludeDisease)
                     diseases.Add(Db.Get().Diseases.Get(HungerGerms.ID));
-                }
+
                 diseaseEmitter.SetDiseases(diseases);
             }
         }

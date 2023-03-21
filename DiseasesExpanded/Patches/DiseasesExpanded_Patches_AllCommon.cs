@@ -21,13 +21,14 @@ namespace DiseasesExpanded
                     return;
 
                 Dictionary<string, Color32> namedLookup = Traverse.Create(__instance).Field("namedLookup").GetValue<Dictionary<string, Color32>>();
-                namedLookup.Add(HungerGerms.ID, HungerGerms.colorValue);
-                namedLookup.Add(BogInsects.ID, BogInsects.colorValue);
-                namedLookup.Add(FrostShards.ID, FrostShards.colorValue);
-                namedLookup.Add(GassyGerms.ID, GassyGerms.colorValue);
-                namedLookup.Add(AlienGerms.ID, AlienGerms.colorValue);
-                namedLookup.Add(MutatingGerms.ID, MutatingGerms.colorValue);
-                namedLookup.Add(MedicalNanobots.ID, MedicalNanobots.colorValue);
+                namedLookup.Add(HungerGerms.ID, HungerGerms.ColorValue);
+                namedLookup.Add(BogInsects.ID, BogInsects.ColorValue);
+                namedLookup.Add(FrostShards.ID, FrostShards.ColorValue);
+                namedLookup.Add(SpindlyGerms.ID, SpindlyGerms.ColorValue);
+                namedLookup.Add(GassyGerms.ID, GassyGerms.ColorValue);
+                namedLookup.Add(AlienGerms.ID, AlienGerms.ColorValue);
+                namedLookup.Add(MutatingGerms.ID, MutatingGerms.ColorValue);
+                namedLookup.Add(MedicalNanobots.ID, MedicalNanobots.ColorValue);
 
                 initalized = true;
                 //LogColors(namedLookup);
@@ -50,6 +51,7 @@ namespace DiseasesExpanded
                 BasicModUtils.MakeGermStrings(BogInsects.ID, STRINGS.GERMS.BOGINSECTS.NAME, STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(FrostShards.ID, STRINGS.GERMS.FROSTHARDS.NAME, STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(GassyGerms.ID, STRINGS.GERMS.GASSYGERMS.NAME, STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT, STRINGS.DISEASES.GASSICKNESS.DESCRIPTION);
+                BasicModUtils.MakeGermStrings(SpindlyGerms.ID, STRINGS.DISEASES.SPINDLYCURSE.NAME, STRINGS.DISEASES.SPINDLYCURSE.LEGEND_HOVERTEXT, STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(HungerGerms.ID, STRINGS.GERMS.HUNGERGERMS.NAME, STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(AlienGerms.ID, STRINGS.GERMS.ALIENGERMS.NAME, STRINGS.GERMS.ALIENGERMS.LEGEND_HOVERTEXT, STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(MutatingGerms.ID, STRINGS.GERMS.MUTATINGGERMS.NAME, STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT, STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTION);
@@ -100,7 +102,10 @@ namespace DiseasesExpanded
                 Db.Get().effects.Add(new Effect(RadShotConfig.EFFECT_ID, STRINGS.CURES.RADSHOT.NAME, STRINGS.CURES.RADSHOT.DESC, cycle10, true, true, false));
                 Db.Get().effects.Add(new Effect(MutatingAntiviralConfig.EffectID, STRINGS.CURES.MUTATINGANTIVIRAL.NAME, STRINGS.CURES.MUTATINGANTIVIRAL.DESC, cycle5, true, true, false));
                 Db.Get().effects.Add(HappyPillConfig.GetEffect());
-                Db.Get().effects.Add(SuperSerumConfig.GetEffect());
+                Db.Get().effects.Add(SerumSuperConfig.GetEffect());
+                Db.Get().effects.Add(SerumTummyConfig.GetEffect());
+                Db.Get().effects.Add(SerumYummyConfig.GetEffect());
+                Db.Get().effects.Add(SerumDeepBreathConfig.GetEffect());
                 Db.Get().effects.Add(AlienSicknessCureConfig.GetEffect());
                 Db.Get().effects.Add(MedicalNanobots.GetEffect());
 
@@ -126,24 +131,31 @@ namespace DiseasesExpanded
                 List<ExposureType> exposureList = new List<ExposureType>();
                 foreach (ExposureType et in TUNING.GERM_EXPOSURE.TYPES)
                 {
-                    if (et.sickness_id == "Allergies")
+                    if (et.sickness_id == Allergies.ID)
                     {
                         if (et.excluded_effects == null)
                             et.excluded_effects = new List<string>();
                         et.excluded_effects.Add(AllergyVaccineConfig.EFFECT_ID);
                     }
-                    if (et.germ_id == "SlimeLung")
+                    if (et.germ_id == FoodGerms.ID)
+                    {
+                        if (et.excluded_effects == null)
+                            et.excluded_effects = new List<string>();
+                        et.excluded_effects.Add(SerumTummyConfig.EFFECT_ID);
+                    }
+                    if (et.germ_id == SlimeGerms.ID)
                     {
                         if (et.excluded_effects == null)
                             et.excluded_effects = new List<string>();
                         et.excluded_effects.Add(SlimelungVaccineConfig.EFFECT_ID);
+                        et.excluded_effects.Add(SerumDeepBreathConfig.EFFECT_ID);
                     }
-                    if (et.germ_id == "ZombieSpores")
+                    if (et.germ_id == ZombieSpores.ID)
                     {
                         if (et.excluded_effects == null)
                             et.excluded_effects = new List<string>();
                         et.excluded_effects.Add(ZombieSporesVaccineConfig.EFFECT_ID);
-                        et.excluded_effects.Add(SuperSerumConfig.EFFECT_ID);
+                        et.excluded_effects.Add(SerumSuperConfig.EFFECT_ID);
                     }
                     exposureList.Add(et);
                 }
@@ -167,13 +179,13 @@ namespace DiseasesExpanded
         {
             public static void Postfix(ref Database.Sicknesses __instance)
             {
-                __instance.Add(new HungerSickness());
-                __instance.Add(new BogSickness());
-                __instance.Add(new FrostSickness());
-                __instance.Add(new GasSickness());
-                __instance.Add(new SpindlySickness());
-                __instance.Add(new AlienSickness());
-                __instance.Add(new MutatingSickness());
+                if (Settings.Instance.HungerGerms.IncludeDisease)   __instance.Add(new HungerSickness());
+                if (Settings.Instance.BogInsects.IncludeDisease)    __instance.Add(new BogSickness());
+                if (Settings.Instance.FrostPox.IncludeDisease)      __instance.Add(new FrostSickness());
+                if (Settings.Instance.MooFlu.IncludeDisease)        __instance.Add(new GasSickness());
+                if (Settings.Instance.SleepingCurse.IncludeDisease) __instance.Add(new SpindlySickness());
+                if (Settings.Instance.AlienGoo.IncludeDisease)      __instance.Add(new AlienSickness());
+                if (Settings.Instance.MutatingVirus.IncludeDisease) __instance.Add(new MutatingSickness());
             }
         }
 
@@ -188,6 +200,7 @@ namespace DiseasesExpanded
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = BogInsects.ID, overlayColourName = BogInsects.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = FrostShards.ID, overlayColourName = FrostShards.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = GassyGerms.ID, overlayColourName = GassyGerms.ID });
+                Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = SpindlyGerms.ID, overlayColourName = SpindlyGerms.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = AlienGerms.ID, overlayColourName = AlienGerms.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = MutatingGerms.ID, overlayColourName = MutatingGerms.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = MedicalNanobots.ID, overlayColourName = MedicalNanobots.ID });
@@ -195,17 +208,20 @@ namespace DiseasesExpanded
 
             public static void Postfix(ref Diseases __instance, bool statsOnly)
             {
-                __instance.Add(new FrostShards(statsOnly));
-                __instance.Add(new GassyGerms(statsOnly));
-                __instance.Add(new AlienGerms(statsOnly));
-                __instance.Add(new MutatingGerms(statsOnly));
-                __instance.Add(new MedicalNanobots(statsOnly));
+                if (Settings.Instance.FrostPox.IncludeDisease)          __instance.Add(new FrostShards(statsOnly));
+                if (Settings.Instance.MooFlu.IncludeDisease)            __instance.Add(new GassyGerms(statsOnly));
+                if (Settings.Instance.AlienGoo.IncludeDisease)          __instance.Add(new AlienGerms(statsOnly));
+                if (Settings.Instance.MutatingVirus.IncludeDisease)     __instance.Add(new MutatingGerms(statsOnly));
+                if (Settings.Instance.MedicalNanobots.IncludeDisease)   __instance.Add(new MedicalNanobots(statsOnly));
 
-                if(DlcManager.IsExpansion1Active())
+                if (DlcManager.IsExpansion1Active() && Settings.Instance.BogInsects.IncludeDisease)
                     __instance.Add(new BogInsects(statsOnly));
 
-                if (DlcManager.IsExpansion1Active())
+                if (DlcManager.IsExpansion1Active() && Settings.Instance.HungerGerms.IncludeDisease)
                     __instance.Add(new HungerGerms(statsOnly));
+
+                if (DlcManager.IsExpansion1Active() && Settings.Instance.SleepingCurse.IncludeDisease)
+                    __instance.Add(new SpindlyGerms(statsOnly));
             }
         }
 

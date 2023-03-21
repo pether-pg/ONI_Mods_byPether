@@ -75,7 +75,7 @@ namespace DiseasesExpanded
 
         public const string ID = nameof(MedicalNanobots);
         public const string EFFECT_ID = "MedicalNanobotsEnhancement";
-        public static Color32 colorValue = ColorPalette.NanobotGray;
+        public static Color32 ColorValue = Settings.Instance.MedicalNanobots.GermColor;
 
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
 

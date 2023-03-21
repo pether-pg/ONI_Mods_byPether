@@ -39,7 +39,7 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
             PossibleSpawns.Add(AlienSicknessCureConfig.ID, 10);
             PossibleSpawns.Add(HappyPillConfig.ID, 10);
             PossibleSpawns.Add(MutatingAntiviralConfig.ID, 10);
-            PossibleSpawns.Add(SuperSerumConfig.ID, 10);
+            PossibleSpawns.Add(SerumSuperConfig.ID, 10);
             PossibleSpawns.Add(AdvancedCureConfig.ID, 10);
 
             List<string> possibleIds = new List<string>();

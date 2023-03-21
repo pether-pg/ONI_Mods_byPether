@@ -59,7 +59,7 @@ namespace DiseasesExpanded
                 {
                     if (!MudMaskConfig.HasEffect(infected))
                     {
-                        float damage = 1f;
+                        float damage = 1f * Settings.Instance.BogInsects.SeverityScale;
                         if (InsectAllergies.HasAffectingTrait(infected))
                             damage *= InsectAllergies.BogSicknessDamageModifier;
                         if (Settings.Instance.RebalanceForDiseasesRestored)

@@ -26,9 +26,9 @@ namespace DiseasesExpanded
 										STRINGS.BUILDINGS.SHIELDGENERATOR.DESC,
 										STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECCT);
 
-				ModUtil.AddBuildingToPlanScreen("Medical", GermcatcherConfig.ID);
-				ModUtil.AddBuildingToPlanScreen("Medical", VaccineApothecaryConfig.ID);
-				ModUtil.AddBuildingToPlanScreen("Rocketry", ShieldGeneratorConfig.ID);
+				ModUtil.AddBuildingToPlanScreen("Medical", GermcatcherConfig.ID, "wellness");
+				ModUtil.AddBuildingToPlanScreen("Medical", VaccineApothecaryConfig.ID, "medical");
+				ModUtil.AddBuildingToPlanScreen("Medical", ShieldGeneratorConfig.ID, "wellness");
 			}
 		}
 

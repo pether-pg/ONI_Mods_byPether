@@ -26,6 +26,9 @@ namespace DiseasesExpanded
         {
             public static void Postfix(ref GameObject __result)
             {
+                if (!Settings.Instance.FrostPox.IncludeDisease)
+                    return;
+
                 DiseaseDropper.Def def = __result.AddOrGetDef<DiseaseDropper.Def>();
                 def.diseaseIdx = Db.Get().Diseases.GetIndex((HashedString)FrostShards.ID);
                 def.emitFrequency = 1f;

@@ -4,7 +4,7 @@ using Klei.AI;
 
 namespace DiseasesExpanded
 {
-    class SuperSerumConfig : IEntityConfig
+    class SerumSuperConfig : IEntityConfig
     {
         public const string ID = "SuperSerum";
         public const string EFFECT_ID = "SuperSerumEffect";
@@ -55,7 +55,7 @@ namespace DiseasesExpanded
             {
                 new ComplexRecipe.RecipeElement(ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
-            SuperSerumConfig.recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(VaccineApothecaryConfig.ID, ingredients, results), ingredients, results)
+            recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(VaccineApothecaryConfig.ID, ingredients, results), ingredients, results)
             {
                 time = VaccineApothecaryConfig.RecipeTime,
                 description = Desc,

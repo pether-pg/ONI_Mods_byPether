@@ -18,7 +18,7 @@ namespace DiseasesExpanded.RandomEvents.Configs
             string name = "Pale Slickster";
             string desc = "This shy slickster's fur is devoid of lively colors it would normally have.";
             EffectorValues tieR0 = TUNING.DECOR.BONUS.TIER0;
-            KAnimFile anim = Assets.GetAnim((HashedString)"oilfloater_kanim");
+            KAnimFile anim = Assets.GetAnim(Kanims.PaleSlickster);
             EffectorValues decor = tieR0;
             EffectorValues noise = new EffectorValues();
             GameObject placedEntity = EntityTemplates.CreatePlacedEntity(ID, name, desc, 25f, anim, "idle_loop", Grid.SceneLayer.Creatures, 1, 1, decor, noise);

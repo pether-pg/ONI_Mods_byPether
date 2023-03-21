@@ -20,12 +20,13 @@ namespace DiseasesExpanded
                 excluded_effects = new List<string>()
                     {
                       BogSickness.RECOVERY_ID,
-                      MudMaskConfig.EffectID
+                      MudMaskConfig.EffectID,
+                      SerumYummyConfig.EFFECT_ID
                     }
             };
         }
         public const string ID = nameof(BogInsects);
-        public static Color32 colorValue = ColorPalette.BogViolet;
+        public static Color32 ColorValue = Settings.Instance.BogInsects.GermColor;
 
         private const float plantTempLethalLow = 218.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
         private const float plantTempWarnLow = 283.15f; // from EntityTemplates.ExtendEntityToBasicPlant()
