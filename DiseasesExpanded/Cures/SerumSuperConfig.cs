@@ -15,7 +15,7 @@ namespace DiseasesExpanded
 
         public static Effect GetEffect()
         {
-            int attributeChange = 5;
+            float attributeChange = 5 * Settings.Instance.AlienGoo.SeverityScale;
             Effect serumEffect = new Effect(EFFECT_ID, STRINGS.CURES.SUPERSERUM.NAME, STRINGS.CURES.SUPERSERUM.DESC, 10 * 600, true, false, false);
             serumEffect.SelfModifiers = new List<AttributeModifier>();
             serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Athletics.Id, attributeChange, STRINGS.CURES.SUPERSERUM.NAME));
@@ -45,6 +45,19 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
+            DefineRecipe();
+
+            MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
+
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.SuperSerum), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
+        }
+
+        private void DefineRecipe()
+        {
+            if (!Settings.Instance.AlienGoo.IncludeDisease)
+                return;
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
                 new ComplexRecipe.RecipeElement(ZombieSporesFlask.ID, 1f),
@@ -63,11 +76,6 @@ namespace DiseasesExpanded
                 fabricators = new List<Tag>() { VaccineApothecaryConfig.ID },
                 sortOrder = 1
             };
-
-            MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
-
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.SuperSerum), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
-            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
         }
     }
 }

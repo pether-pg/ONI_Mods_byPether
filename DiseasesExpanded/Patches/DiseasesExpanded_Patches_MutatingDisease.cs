@@ -6,28 +6,6 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_MutatingDisease
     {
-        [HarmonyPatch(typeof(Game))]
-        [HarmonyPatch("DestroyInstances")]
-        public class Game_DestroyInstances_Patch
-        {
-            public static void Prefix()
-            {
-                MutationData.Clear();
-                MedicalNanobotsData.Clear();
-            }
-        }
-
-        [HarmonyPatch(typeof(SaveGame))]
-        [HarmonyPatch("OnPrefabInit")]
-        public class SaveGame_OnPrefabInit_Patch
-        {
-            public static void Postfix(SaveGame __instance)
-            {
-                __instance.gameObject.AddComponent<MutationData>();
-                __instance.gameObject.AddComponent<MedicalNanobotsData>();
-            }
-        }
-
         [HarmonyPatch(typeof(SicknessInstance))]
         [HarmonyPatch("Cure")]
         public class SicknessInstance_Cure_Patch

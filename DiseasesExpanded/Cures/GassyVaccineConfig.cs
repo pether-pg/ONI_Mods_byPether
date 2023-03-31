@@ -28,6 +28,19 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
+            DefineRecipe();
+
+            MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, null, null);
+
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.VaccineCKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
+        }
+
+        private void DefineRecipe()
+        {
+            if (!Settings.Instance.MooFlu.IncludeDisease)
+                return;
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 new ComplexRecipe.RecipeElement((Tag)GassyGermFlask.ID, 1f),
@@ -45,11 +58,6 @@ namespace DiseasesExpanded
                 fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.GetAdvancedApothecaryId() },
                 sortOrder = 44
             };
-
-            MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, null, null);
-
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.VaccineCKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
-            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
         }
     }
 }

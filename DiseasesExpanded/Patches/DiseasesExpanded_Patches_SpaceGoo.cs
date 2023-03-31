@@ -112,37 +112,11 @@ namespace DiseasesExpanded
         [HarmonyPatch("UpdateSunlightIntensity")]
         public class TimeOfDay_UpdateSunlightIntensity_Patch
         {
-            public static Components.Cmps<ShieldGenerator.SMInstance> ShieldGenerators = new Components.Cmps<ShieldGenerator.SMInstance>();
-
-            public static Dictionary<WorldContainer, float> GetShieldedWorlds()
-            {
-                Dictionary<WorldContainer, float> result = new Dictionary<WorldContainer, float>();
-
-                foreach(ShieldGenerator.SMInstance shield in ShieldGenerators)
-                {
-                    if (shield == null || shield.gameObject == null)
-                        continue;
-
-                    WorldContainer world = shield.gameObject.GetMyWorld();
-                    if (!result.ContainsKey(world))
-                        result.Add(world, 0);
-
-                    if (shield.GetShieldStatus() > result[world])
-                        result[world] = shield.GetShieldStatus();
-                }
-
-                return result;
-            }
-
             public static void Postfix()
             {
-                Dictionary<WorldContainer, float> shieldedWorlds = GetShieldedWorlds();
-
+                ShieldData.Instance.UpdateShieldStaus();
                 foreach (WorldContainer world in ClusterManager.Instance.WorldContainers)
-                    if (shieldedWorlds.ContainsKey(world))
-                    {
-                        world.currentCosmicIntensity = world.cosmicRadiation * (100.0f - shieldedWorlds[world]) / 100;
-                    }
+                    world.currentCosmicIntensity = world.cosmicRadiation * ShieldData.Instance.GetRadiationScale(world.id);
             }
         }
     }

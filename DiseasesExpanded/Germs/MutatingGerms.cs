@@ -54,7 +54,6 @@ namespace DiseasesExpanded
             if (!MutationData.IsReadyToUse())
                 return;
 
-            this.overlayLegendHovertext = MutationData.Instance.GetLegendString();
             this.radiationKillRate = 1.5f + radResPerLvl * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_RadiationResistance);
             this.UVHalfLife = UVLampSupport.UVHalfLife_GetFromRadKillRate(radiationKillRate);
             this.temperatureRange = new Disease.RangeInfo(
@@ -63,6 +62,7 @@ namespace DiseasesExpanded
                 maxGrowthTemp + growthTempPerLvl * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance),
                 maxGrowthTemp + growthTempPerLvl * (1 + 2 * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance))
                 );
+            this.overlayLegendHovertext = MutationData.Instance.GetLegendString();
         }
 
         public void UpdateGrowthRules(bool ensureNull = false, int o2Lvl = 0, int co2Lvl = 0, int polLvl = 0, int h2oLvl = 0, int chlLvl = 0, int gasLvl = 0, int liqLvl = 0)

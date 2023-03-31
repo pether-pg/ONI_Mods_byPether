@@ -57,6 +57,8 @@ namespace DiseasesExpanded
                     "- Exposure Threshold: <color=#00FF00>{3}</color>, " +
                     "Radiation: <color=#00FF00>{4}</color>, " +
                     "Temperature: <color=#00FF00>{5}</color>";
+                public static LocString RADIATION_HELP_PATTERN = (LocString)"Radiation Kill Rate: {0}";
+                public static LocString TEMPERATURE_HELP_PATTERN = (LocString)"Optimal Temperature: {0} to {1}";
                 public static LocString UPGRADE_HELP_PATTERN = (LocString)"Use {0} to develop nanobots.";
                 public static LocString LEGEND_HEADER = (LocString)"Included features:\n";
             }
@@ -464,7 +466,7 @@ namespace DiseasesExpanded
             {
                 public static LocString NAME = (LocString)"Shield Generator";
                 public static LocString DESC = (LocString)"Shields the asteroid from cosmic radiation.";
-                public static LocString EFFECCT = (LocString)"When powered, generates shield around the asteroid to protect the surface from cosmic radiation.";
+                public static LocString EFFECCT = (LocString)"When powered, generates shield around the asteroid to protect the surface from cosmic radiation. \n\nRequires line of sight to space.";
             }
         }
 

@@ -57,6 +57,9 @@ namespace DiseasesExpanded
 
         public void Infect()
         {
+            if (!Settings.Instance.HungerGerms.IncludeDisease)
+                return;
+
             hadSickness = true;
             effects.Add(HungerSickness.CRITTER_EFFECT_ID, true);
             //SourceVisibility(HungerGerms.ID);

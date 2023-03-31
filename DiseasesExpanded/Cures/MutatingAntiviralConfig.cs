@@ -13,6 +13,9 @@ namespace DiseasesExpanded
 
         private void DefineRecipe(Tag mainIngridient, float amount = 1)
         {
+            if (!Settings.Instance.MutatingVirus.IncludeDisease)
+                return;
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
                 new ComplexRecipe.RecipeElement(mainIngridient, amount),

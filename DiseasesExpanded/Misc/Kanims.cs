@@ -30,6 +30,8 @@ namespace DiseasesExpanded
         public static HashedString TummySerum = (HashedString)"pill_orange_kanim";
         public static HashedString AlienCureKanim = (HashedString)"vial_blue_serum_kanim";
 
+        public static HashedString ShieldGenerator = (HashedString)"shield_generator_kanim";
+
         public static HashedString PaleSlickster = (HashedString)"oilfloater_pale_75_kanim";
 
         public static HashedString MedicalResearch = (HashedString)"custom_research_icon_kanim";

@@ -26,6 +26,8 @@ namespace DiseasesExpanded
             Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.MUTATEDSYMPTOMS.NAME, STRINGS.EFFECTS.MUTATEDSYMPTOMS.DESC, time, true, false, true);
             effect.SelfModifiers = new List<AttributeModifier>();
 
+            float scale = Settings.Instance.MutatingVirus.SeverityScale;
+
             int strLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Stress);
             int calLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Calories);
             int brtLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Breathing);
@@ -33,31 +35,31 @@ namespace DiseasesExpanded
             int attLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Attributes);
 
             if (strLvl > 0)
-                effect.SelfModifiers.Add(new AttributeModifier("StressDelta", stressPerLvl * strLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("StressDelta", stressPerLvl * strLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
             if (brtLvl > 0)
-                effect.SelfModifiers.Add(new AttributeModifier("BreathDelta", breathPerLvl * brtLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("BreathDelta", breathPerLvl * brtLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
             if (exhLvl > 0)
-                effect.SelfModifiers.Add(new AttributeModifier("StaminaDelta", staminaPerLvl * exhLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("StaminaDelta", staminaPerLvl * exhLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
 
             if (calLvl > 0)
             {
-                effect.SelfModifiers.Add(new AttributeModifier("CaloriesDelta", calPerLvl * calLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier("BladderDelta", bladderPerLvl * calLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("CaloriesDelta", calPerLvl * calLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("BladderDelta", bladderPerLvl * calLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
             }
 
             if (attLvl > 0)
             {
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Athletics.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Strength.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Digging.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Construction.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Art.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Caring.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Learning.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Machinery.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Cooking.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Botanist.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
-                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Ranching.Id, attrPerLvl * attLvl, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Athletics.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Strength.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Digging.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Construction.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Art.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Caring.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Learning.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Machinery.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Cooking.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Botanist.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Ranching.Id, attrPerLvl * attLvl * scale, (string)STRINGS.DISEASES.MUTATINGSICKNESS.NAME));
             }
             return effect;
         }

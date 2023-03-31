@@ -27,6 +27,19 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
+            DefineRecipe();
+
+            MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, (string)null);
+
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.CURES.MUDMASK.NAME, STRINGS.CURES.MUDMASK.DESC, 1f, true, Assets.GetAnim(Kanims.MudMaskKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
+        }
+
+        private void DefineRecipe()
+        {
+            if (!Settings.Instance.BogInsects.IncludeDisease)
+                return;
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 new ComplexRecipe.RecipeElement(SimHashes.Dirt.CreateTag(), 100f),
@@ -44,11 +57,6 @@ namespace DiseasesExpanded
                 fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
                 sortOrder = 12
             };
-
-            MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, (string)null);
-
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.CURES.MUDMASK.NAME, STRINGS.CURES.MUDMASK.DESC, 1f, true, Assets.GetAnim(Kanims.MudMaskKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
-            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
         }
     }
 }

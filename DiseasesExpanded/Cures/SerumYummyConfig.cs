@@ -14,10 +14,12 @@ namespace DiseasesExpanded
 
         public static Effect GetEffect()
         {
+            float bogScale = Settings.Instance.BogInsects.SeverityScale;
+            float hungerScale = Settings.Instance.HungerGerms.SeverityScale;
             Effect serumEffect = new Effect(EFFECT_ID, STRINGS.CURES.YUMMYSERUM.NAME, STRINGS.CURES.YUMMYSERUM.DESC, 10 * 600, true, false, false);
             serumEffect.SelfModifiers = new List<AttributeModifier>();
-            serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.Calories.deltaAttribute.Id, HungerSickness.caloriesPerDay / 4, STRINGS.CURES.YUMMYSERUM.NAME));
-            serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.HitPoints.deltaAttribute.Id, 10.0f / 600.0f, STRINGS.CURES.YUMMYSERUM.NAME));
+            serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.Calories.deltaAttribute.Id, hungerScale * HungerSickness.caloriesPerDay / 4, STRINGS.CURES.YUMMYSERUM.NAME));
+            serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.HitPoints.deltaAttribute.Id, bogScale * 10.0f / 600.0f, STRINGS.CURES.YUMMYSERUM.NAME));
 
             return serumEffect;
         }
@@ -34,6 +36,19 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
+            DefineRecipe();
+
+            MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
+
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.YummySerum), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
+        }
+
+        private static void DefineRecipe()
+        {
+            if (!Settings.Instance.BogInsects.IncludeDisease || !Settings.Instance.HungerGerms.IncludeDisease)
+                return;
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
                 new ComplexRecipe.RecipeElement(HungermsFlask.ID, 1f),
@@ -52,11 +67,6 @@ namespace DiseasesExpanded
                 fabricators = new List<Tag>() { VaccineApothecaryConfig.ID },
                 sortOrder = 1
             };
-
-            MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
-
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.YummySerum), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
-            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
         }
     }
 }

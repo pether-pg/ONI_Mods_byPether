@@ -87,6 +87,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buildings\ShieldData.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_SaveGame.cs" />
     <Compile Include="SettingsBackup.cs" />
     <Compile Include="Buildings\GermcatcherController.cs" />
     <Compile Include="Buildings\ShieldGenerator.cs" />

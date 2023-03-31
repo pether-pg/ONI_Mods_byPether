@@ -51,8 +51,9 @@ namespace DiseasesExpanded
             base.OnSpawn();
             _isReady = true;
 
-            Debug.Log($"{ModInfo.Namespace}: MedicalNanobotsData Spawned. Current development: {GetDevelopmentCode()}");
             Instance.UpdateAll();
+            Debug.Log($"{ModInfo.Namespace}: MedicalNanobotsData Spawned. Current development: {GetDevelopmentCode()}");
+            Debug.Log($"{ModInfo.Namespace}: MedicalNanobotsData Spawned. {GetEnvironmentDetailsForLegend()}");
         }
 
 
@@ -74,6 +75,16 @@ namespace DiseasesExpanded
 
             UpdateAll();
             Notify();
+        }
+
+        public void UpdateAll()
+        {
+            if (!_isReady)
+                return;
+
+            UpdateGerms();
+            UpdateEffect();
+            UpdateExposureTable();
         }
 
         public void UpdateGerms()
@@ -109,16 +120,6 @@ namespace DiseasesExpanded
                 return;
             effects.Remove(effect);
             effects.Add(MedicalNanobots.GetEffect());
-        }
-
-        public void UpdateAll()
-        {
-            if (!_isReady)
-                return;
-
-            UpdateGerms();
-            UpdateEffect();
-            UpdateExposureTable();
         }
 
         private void Notify()
@@ -183,9 +184,29 @@ namespace DiseasesExpanded
                 );
 
             string help = string.Format(STRINGS.GERMS.MEDICALNANOBOTS.UPGRADE_HELP_PATTERN, GetFabricatorName());
-            string legend = $"{attackLegend}\n{resistLegend}\n\n{help}";
+            string env = GetEnvironmentDetailsForLegend();
+            string legend = $"{attackLegend}\n{resistLegend}\n\n{env}\n\n{help}";
 
             return legend;
+        }
+
+        private string GetEnvironmentDetailsForLegend()
+        {
+            if (GermIdx.MedicalNanobotsIdx == GermIdx.Invalid)
+                return string.Empty;
+            
+            Disease germs = Db.Get().Diseases[GermIdx.MedicalNanobotsIdx];
+            string min = GameUtil.GetFormattedTemperature(germs.temperatureRange.minGrowth, displayUnits: true);
+            string max = GameUtil.GetFormattedTemperature(germs.temperatureRange.maxGrowth, displayUnits: true);
+            string result = string.Format(STRINGS.GERMS.MEDICALNANOBOTS.TEMPERATURE_HELP_PATTERN, min, max);
+
+            if(DlcManager.IsExpansion1Active())
+            {
+                string rad = string.Format(STRINGS.GERMS.MEDICALNANOBOTS.RADIATION_HELP_PATTERN, germs.radiationKillRate);
+                result += $"\n{rad}";
+            }
+
+            return result;
         }
 
         public string GetFabricatorName()

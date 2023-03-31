@@ -1,5 +1,4 @@
 ﻿using System;
-using System;
 using System.IO;
 using System.Reflection;
 
@@ -37,6 +36,8 @@ namespace DiseasesExpanded
         public void RestoreBackup(string filename)
         {
             if (!UseSettingsBackup)
+                return;
+            if (!File.Exists(GetBackupPath(filename)))
                 return;
             File.Copy(GetBackupPath(filename), GetOriginalPath(filename), true);
         }

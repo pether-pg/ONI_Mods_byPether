@@ -36,7 +36,7 @@ namespace DiseasesExpanded
                 default_state = this.off;
                 this.off
                     .PlayAnim("off")
-                    .Update((smi, dt) => smi.UpdateActive(dt, false))
+                    //.Update((smi, dt) => smi.UpdateActive(dt, false))
                     .ToggleStatusItem(Db.Get().BuildingStatusItems.Get(ShieldGeneratorConfig.StatusItemID), smi => smi)
                     .UpdateTransition(this.working_pre, (smi, dt) => smi.CanWork(), UpdateRate.SIM_200ms);
                 this.working_pre
@@ -44,7 +44,7 @@ namespace DiseasesExpanded
                     .OnAnimQueueComplete(this.working_loop);
                 this.working_loop
                     .PlayAnim("on", KAnim.PlayMode.Loop)
-                    .Update((smi, dt) => smi.UpdateActive(dt, true))
+                    //.Update((smi, dt) => smi.UpdateActive(dt, true))
                     .ToggleStatusItem(Db.Get().BuildingStatusItems.Get(ShieldGeneratorConfig.StatusItemID), smi => smi)
                     .UpdateTransition(this.working_pst, (smi, dt) => !smi.CanWork(), UpdateRate.SIM_200ms);
                 this.working_pst
@@ -62,18 +62,19 @@ namespace DiseasesExpanded
             public override void StartSM()
             {
                 base.StartSM();
-                DiseasesExpanded_Patches_SpaceGoo.TimeOfDay_UpdateSunlightIntensity_Patch.ShieldGenerators.Add(this);
+                ShieldData.Instance.Add(this);
             }
 
             public override void StopSM(string reason)
             {
-                DiseasesExpanded_Patches_SpaceGoo.TimeOfDay_UpdateSunlightIntensity_Patch.ShieldGenerators.Remove(this);
+                ShieldData.Instance.Remove(this);
                 base.StopSM(reason);
             }
 
             public float GetShieldStatus()
             {
-                return this.master.ShieldStatus;
+                return ShieldData.Instance.GetShieldPercent(master.gameObject.GetMyWorldId());
+                //return this.master.ShieldStatus;
             }
 
             public void SetShieldStatus(float val)

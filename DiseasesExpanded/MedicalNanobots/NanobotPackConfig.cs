@@ -6,7 +6,7 @@ namespace DiseasesExpanded
     class NanobotPackConfig : IEntityConfig
     {
         public const string ID = "NanobotPack";
-        public const int SPAWNED_BOTS_COUNT = 100000;
+        public const int SPAWNED_BOTS_COUNT = 1000 * 1000;
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
@@ -16,7 +16,13 @@ namespace DiseasesExpanded
 
         public void OnSpawn(GameObject inst)
         {
-            SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(inst.transform.position), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
+            int cell = Grid.PosToCell(inst.transform.position);
+            SimMessages.ModifyDiseaseOnCell(cell, GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellAbove(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellLeft(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellRight(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellUpLeft(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellUpRight(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
             PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.GERMS.MEDICALNANOBOTS.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
         }

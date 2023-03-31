@@ -84,6 +84,7 @@ namespace DiseasesExpanded
         private const float maxGrowthTemp = 30 + degC;
         private const float growthTempPerLvl = 5;
         private const float durationTimePerLvl = 150;
+        private const float baseHalfLife = 12000f;
 
         private const float stressPerDay = -3;
         private const float stressPerLvl = stressPerDay / 600;
@@ -101,7 +102,7 @@ namespace DiseasesExpanded
             : base(id: MedicalNanobots.ID,
                   strength: (byte)50,
                   temperature_range: new Disease.RangeInfo(0f, 0.15f, degC + 0, degC + 25),
-                  temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f),
+                  temperature_half_lives: new Disease.RangeInfo(10f, baseHalfLife, baseHalfLife, 10f),
                   pressure_range: new Disease.RangeInfo(0.0f, 0.0f, 1000f, 1000f),
                   pressure_half_lives: Disease.RangeInfo.Idempotent(),
                   1.5f,
@@ -115,7 +116,6 @@ namespace DiseasesExpanded
             if (!MedicalNanobotsData.IsReadyToUse())
                 return;
 
-            this.overlayLegendHovertext = MedicalNanobotsData.Instance.GetLegendString();
             this.radiationKillRate = 1.5f + radResPerLvl * MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Res_RadiationResistance);
             this.UVHalfLife = UVLampSupport.UVHalfLife_GetFromRadKillRate(radiationKillRate);
             this.temperatureRange = new Disease.RangeInfo(
@@ -124,10 +124,17 @@ namespace DiseasesExpanded
                 maxGrowthTemp + growthTempPerLvl * MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Res_TemperatureResistance),
                 maxGrowthTemp + growthTempPerLvl * (1 + 2 * MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Res_TemperatureResistance))
                 );
+            this.overlayLegendHovertext = MedicalNanobotsData.Instance.GetLegendString();
         }
 
-        protected override void PopulateElemGrowthInfo()
+        public void UpdateGrowthRules(bool ensureNull = false)
         {
+            if (ensureNull)
+            {
+                this.exposureRules = null;
+                this.growthRules = null;
+            }
+
             this.InitializeElemGrowthArray(ref this.elemGrowthInfo, Disease.DEFAULT_GROWTH_INFO);
             this.AddGrowthRule(GermGrowthRules.GrowthRule_Default());
 
@@ -139,7 +146,7 @@ namespace DiseasesExpanded
 
             // Gas
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, 12000f, 1200f, 10000f, 0.005f, 5100));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, baseHalfLife, baseHalfLife / 10, NanobotPackConfig.SPAWNED_BOTS_COUNT, 0.005f, 5100));
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Oxygen));
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Hydrogen));
@@ -156,6 +163,11 @@ namespace DiseasesExpanded
             {
                 populationHalfLife = new float?(float.PositiveInfinity)
             });
+        }
+
+        protected override void PopulateElemGrowthInfo()
+        {
+            UpdateGrowthRules();
         }
     }
 }

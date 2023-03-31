@@ -8,6 +8,7 @@ namespace DiseasesExpanded
     {
         public const string ID = "ShieldGenerator";
         public const string StatusItemID = "ShieldGeneratorStatusItem";
+        public const string ErrorStatusItemID = "ShieldGeneratorStatusItem";
         public override string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
         public override BuildingDef CreateBuildingDef()
@@ -17,7 +18,7 @@ namespace DiseasesExpanded
             EffectorValues none = NOISE_POLLUTION.NONE;
             EffectorValues tieR0_2 = BUILDINGS.DECOR.PENALTY.TIER0;
             EffectorValues noise = none;
-            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(ID, 2, 4, "meteor_detector_kanim", 30, 30f, materialMass, materials, 1600f, BuildLocationRule.OnFloor, tieR0_2, noise);
+            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(ID, 2, 4, "shield_generator_kanim", 30, 30f, materialMass, materials, 1600f, BuildLocationRule.OnFloor, tieR0_2, noise);
             buildingDef.RequiresPowerInput = true;
             buildingDef.EnergyConsumptionWhenActive = 1200f;
             buildingDef.Overheatable = false;

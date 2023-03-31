@@ -15,10 +15,11 @@ namespace DiseasesExpanded
 
         public static Effect GetEffect()
         {
+            float wheezeScale = Settings.Instance.FrostPox.SeverityScale;
             Effect serumEffect = new Effect(EFFECT_ID, STRINGS.CURES.DEEPBREATH.NAME, STRINGS.CURES.DEEPBREATH.DESC, 10 * 600, true, false, false);
             serumEffect.SelfModifiers = new List<AttributeModifier>();
             serumEffect.SelfModifiers.Add(new AttributeModifier("BreathDelta", 0.284f, STRINGS.CURES.DEEPBREATH.NAME));
-            serumEffect.SelfModifiers.Add(new AttributeModifier("GermResistance", 2f, STRINGS.CURES.DEEPBREATH.NAME));
+            serumEffect.SelfModifiers.Add(new AttributeModifier("GermResistance", 2f * wheezeScale, STRINGS.CURES.DEEPBREATH.NAME));
             return serumEffect;
         }
 
@@ -34,12 +35,25 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
+            DefineRecipe();
+
+            MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
+
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.DeepBreathSerum), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
+        }
+
+        private void DefineRecipe()
+        {
+            if (!Settings.Instance.FrostPox.IncludeDisease)
+                return; 
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
-            {
+                        {
                 new ComplexRecipe.RecipeElement(FrostShardsFlask.ID, 1f),
                 new ComplexRecipe.RecipeElement(SlimelungFlask.ID, 1f),
                 new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 100f)
-            };
+                        };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
                 new ComplexRecipe.RecipeElement(ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
@@ -52,11 +66,6 @@ namespace DiseasesExpanded
                 fabricators = new List<Tag>() { VaccineApothecaryConfig.ID },
                 sortOrder = 1
             };
-
-            MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, null, null);
-
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, Name, Desc, 1f, true, Assets.GetAnim(Kanims.DeepBreathSerum), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
-            return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
         }
     }
 }

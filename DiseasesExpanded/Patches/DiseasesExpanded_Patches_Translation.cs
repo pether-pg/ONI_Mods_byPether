@@ -16,7 +16,6 @@ namespace DiseasesExpanded
 
             public static void Postfix()
             {
-                return;
                 Translate(typeof(STRINGS));
             }
 
