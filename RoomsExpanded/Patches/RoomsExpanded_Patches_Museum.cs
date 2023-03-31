@@ -19,6 +19,7 @@ namespace RoomsExpanded
 
             RoomConstraintTags.AddStompInConflict(__instance.Barracks, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.Bedroom, RoomTypes_AllModded.Museum);
+            RoomConstraintTags.AddStompInConflict(__instance.PrivateBedroom, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.MessHall, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.GreatHall, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.Hospital, RoomTypes_AllModded.Museum);
@@ -26,6 +27,7 @@ namespace RoomsExpanded
             RoomConstraintTags.AddStompInConflict(__instance.RecRoom, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.Farm, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.CreaturePen, RoomTypes_AllModded.Museum);
+            RoomConstraintTags.AddStompInConflict(__instance.Park, RoomTypes_AllModded.Museum);
 
             if(Settings.Instance.Aquarium.IncludeRoom)
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.Aquarium, RoomTypes_AllModded.Museum);

@@ -12,7 +12,7 @@ namespace RoomsExpanded
     [Serializable]
     [RestartRequired]
     [ConfigFileAttribute("RoomsExpanded.Settings.json", true)]
-    public class Settings
+    public class Settings :IOptions
     {
         [Serializable]
         public class RoomSettings
@@ -84,12 +84,6 @@ namespace RoomsExpanded
             }
         }
 
-        public static string FilePath()
-        {
-            string filename = JsonSerializer<Settings>.GetDefaultFilename();
-            return filename;
-            //return SettingsPath.Instance.GetPathForFile(filename);
-        }
         public static void PLib_Initalize()
         {
             _instance = POptions.ReadSettings<Settings>();
@@ -264,5 +258,15 @@ namespace RoomsExpanded
             return max;
         }
 
+        public IEnumerable<IOptionsEntry> CreateOptions()
+        {
+            // list of additional options, can be empty
+            return new List<IOptionsEntry>();
+        }
+
+        public void OnOptionsChanged()
+        {
+            BackupConfig.Instance.StoreBackup(JsonSerializer<Settings>.GetDefaultFilename());
+        }
     }
 }

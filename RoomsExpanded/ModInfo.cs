@@ -20,6 +20,8 @@ namespace RoomsExpanded
             Debug.Log($"{Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
                         $"supporting game build {this.mod.packagedModInfo.minimumSupportedBuild} ({this.mod.packagedModInfo.supportedContent})");
 
+            BackupConfig.Instance.RestoreBackup(JsonSerializer<Settings>.GetDefaultFilename());
+
             PUtil.InitLibrary();
             new POptions().RegisterOptions(this, typeof(Settings));
             Settings.PLib_Initalize();

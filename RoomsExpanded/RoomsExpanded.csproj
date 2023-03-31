@@ -101,6 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackupConfig.cs" />
     <Compile Include="ColorPalette.cs" />
     <Compile Include="CrossModManager.cs" />
     <Compile Include="EffectScripts\DecorProviderModifier.cs" />
@@ -150,7 +151,6 @@
     <Compile Include="RoomTypes\RoomTypePrivateRoomData_Obsolete.cs" />
     <Compile Include="RoomTypes_AllModded.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="SettingsPath.cs" />
     <Compile Include="SortingCounter.cs" />
     <Compile Include="STRINGS.cs" />
   </ItemGroup>
