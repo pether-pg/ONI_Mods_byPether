@@ -809,3 +809,8 @@ FragrantFlowers/obj/Release/FragrantFlowers.csproj.FileListAbsolute.txt
 CheckpointAutomation/obj/Release/CheckpointAutomation.csproj.FileListAbsolute.txt
 CheckpointAutomation/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
 CheckpointAutomation/obj/Release/CheckpointAutomation.csproj.CopyComplete
+DiseasesExpanded/bin/Release/PLib.xml
+packages/PLib.4.12.0/.signature.p7s
+packages/PLib.4.12.0/icon.png
+packages/PLib.4.12.0/lib/net471/PLib.xml
+packages/PLib.4.12.0/PLib.4.12.0.nupkg
