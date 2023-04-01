@@ -63,6 +63,9 @@
     <Reference Include="ONITwitchLib">
       <HintPath>..\lib\ONITwitchLib.dll</HintPath>
     </Reference>
+    <Reference Include="PLib, Version=4.12.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PLib.4.12.0\lib\net471\PLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
@@ -89,7 +92,7 @@
   <ItemGroup>
     <Compile Include="Buildings\ShieldData.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_SaveGame.cs" />
-    <Compile Include="SettingsBackup.cs" />
+    <Compile Include="BackupConfig.cs" />
     <Compile Include="Buildings\GermcatcherController.cs" />
     <Compile Include="Buildings\ShieldGenerator.cs" />
     <Compile Include="Buildings\ShieldGeneratorConfig.cs" />
@@ -246,6 +249,7 @@
     <PostBuildEvent>IF exist "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" ( echo Mod Dir exists ) ELSE  ( mkdir "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)" &amp;&amp; echo Mod Dir created)
 
 "$(ILMergeConsolePath)" /ndebug /out:"$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)Merged.dll" "$(SolutionDir)$(TargetName)\bin\Release\$(TargetName).dll" "$(SolutionDir)$(TargetName)\bin\Release\ONITwitchLib.dll"  /targetplatform:v4,C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+"$(ILMergeConsolePath)" /ndebug /out:"$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)Merged.dll" "$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)Merged.dll" "$(SolutionDir)$(TargetName)\bin\Release\PLib.dll"  /targetplatform:v4,C:\Windows\Microsoft.NET\Framework64\v4.0.30319
 
 xcopy /Y /R  /I /Q  /E "$(SolutionDir)$(TargetName)\bin\Release\$(TargetName)Merged.dll" "C:\Users\pawel\Documents\Klei\OxygenNotIncluded\mods\Dev\$(TargetName)"</PostBuildEvent>
   </PropertyGroup>

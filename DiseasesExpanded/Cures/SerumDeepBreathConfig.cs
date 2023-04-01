@@ -49,11 +49,11 @@ namespace DiseasesExpanded
                 return; 
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
-                        {
+            {
                 new ComplexRecipe.RecipeElement(FrostShardsFlask.ID, 1f),
                 new ComplexRecipe.RecipeElement(SlimelungFlask.ID, 1f),
-                new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 100f)
-                        };
+                VaccineApothecaryConfig.GetMainIngridient()
+            };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
                 new ComplexRecipe.RecipeElement(ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)

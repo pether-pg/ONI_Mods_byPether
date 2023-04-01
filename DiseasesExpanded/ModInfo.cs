@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using ONITwitchLib;
+using PeterHan.PLib.Core;
+using PeterHan.PLib.Options;
 
 namespace DiseasesExpanded
 {
@@ -20,7 +22,13 @@ namespace DiseasesExpanded
             Debug.Log($"{Namespace}: DLL version: {GetType().Assembly.GetName().Version} " +
                         $"supporting game build {this.mod.packagedModInfo.minimumSupportedBuild} ({this.mod.packagedModInfo.supportedContent})");
 
-            SettingsBackup.Instance.RestoreBackup(JsonSerializer<Settings>.GetDefaultName());
+            BackupConfig.Instance.RestoreBackup(JsonSerializer<Settings>.GetDefaultName());
+
+            PUtil.InitLibrary();
+            new POptions().RegisterOptions(this, typeof(Settings));
+            Settings.PLib_Initalize();
+
+            Debug.Log($"{Namespace}: POptions registered!");
         }
 
         public override void OnAllModsLoaded(Harmony harmony, IReadOnlyList<Mod> mods)

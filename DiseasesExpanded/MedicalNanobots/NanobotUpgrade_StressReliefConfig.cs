@@ -23,23 +23,7 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
-            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
-            {
-                MedicalNanobotsData.MainIngridient,
-                new ComplexRecipe.RecipeElement(SimHashes.SuperCoolant.CreateTag(), MedicalNanobotsData.RECIPE_MASS_NORMAL)
-            };
-            ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
-            {
-                new ComplexRecipe.RecipeElement(ID, 1, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
-            };
-            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(MedicalNanobotsData.FABRICATOR_ID, ingredients, results), ingredients, results)
-            {
-                time = MedicalNanobotsData.RECIPE_TIME,
-                description = STRINGS.NANOBOTDEVELOPMENT.STRESS.DESC,
-                nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
-                fabricators = new List<Tag>() { MedicalNanobotsData.FABRICATOR_ID },
-                sortOrder = 21
-            };
+            DefineRecipe();
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(
                 ID,
@@ -57,6 +41,27 @@ namespace DiseasesExpanded
                 additionalTags: new List<Tag>() { GameTags.IndustrialIngredient });
 
             return looseEntity;
+        }
+
+        private static void DefineRecipe()
+        {
+            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
+            {
+                MedicalNanobotsData.MainIngridient,
+                new ComplexRecipe.RecipeElement(SimHashes.SuperCoolant.CreateTag(), MedicalNanobotsData.RECIPE_MASS_NORMAL)
+            };
+            ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
+            {
+                new ComplexRecipe.RecipeElement(ID, 1, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+            };
+            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(MedicalNanobotsData.FABRICATOR_ID, ingredients, results), ingredients, results)
+            {
+                time = MedicalNanobotsData.RECIPE_TIME,
+                description = STRINGS.NANOBOTDEVELOPMENT.STRESS.DESC,
+                nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
+                fabricators = new List<Tag>() { MedicalNanobotsData.FABRICATOR_ID },
+                sortOrder = 21
+            };
         }
     }
 }

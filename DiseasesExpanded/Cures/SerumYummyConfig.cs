@@ -53,7 +53,7 @@ namespace DiseasesExpanded
             {
                 new ComplexRecipe.RecipeElement(HungermsFlask.ID, 1f),
                 new ComplexRecipe.RecipeElement(BogBugsFlask.ID, 1f),
-                new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 100f)
+                VaccineApothecaryConfig.GetMainIngridient()
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {

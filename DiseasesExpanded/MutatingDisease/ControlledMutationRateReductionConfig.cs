@@ -22,6 +22,30 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
+            DefineRecipe();
+
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(
+                ID,
+                STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.NAME,
+                STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC,
+                1f,
+                true,
+                Assets.GetAnim(Kanims.ControlledMutation),
+                "object",
+                Grid.SceneLayer.Front,
+                EntityTemplates.CollisionShape.RECTANGLE,
+                0.8f,
+                0.4f,
+                true);
+
+            return looseEntity;
+        }
+
+        private static void DefineRecipe()
+        {
+            if (!Settings.Instance.MutatingVirus.IncludeDisease)
+                return;
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 new ComplexRecipe.RecipeElement((Tag)MutatingGermFlask.ID, 1f),
@@ -39,22 +63,6 @@ namespace DiseasesExpanded
                 fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.GetAdvancedApothecaryId() },
                 sortOrder = 61
             };
-
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(
-                ID,
-                STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.NAME,
-                STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC,
-                1f,
-                true,
-                Assets.GetAnim(Kanims.ControlledMutation),
-                "object",
-                Grid.SceneLayer.Front,
-                EntityTemplates.CollisionShape.RECTANGLE,
-                0.8f,
-                0.4f,
-                true);
-
-            return looseEntity;
         }
     }
 }

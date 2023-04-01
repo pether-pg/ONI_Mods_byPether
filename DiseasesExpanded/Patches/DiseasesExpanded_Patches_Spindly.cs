@@ -18,7 +18,6 @@ namespace DiseasesExpanded
             TUNING.TRAITS.NARCOLEPSY_SLEEPDURATION_MAX *= 2;
         }
 
-
         [HarmonyPatch(typeof(Narcolepsy.States))]
         [HarmonyPatch("InitializeStates")]
         public static class Narcolepsy_InitializeStates_Patch
@@ -45,6 +44,23 @@ namespace DiseasesExpanded
             }
         }
 
+        [HarmonyPatch(typeof(WormPlantConfig))]
+        [HarmonyPatch("CreatePrefab")]
+        public static class SapTreeConfig_CreatePrefab_Patch
+        {
+            public static void Postfix(ref GameObject __result)
+            {
+                if (!Settings.Instance.SleepingCurse.IncludeDisease)
+                    return;
+
+                DiseaseDropper.Def def = __result.AddOrGetDef<DiseaseDropper.Def>();
+                def.diseaseIdx = Db.Get().Diseases.GetIndex((HashedString)SpindlyGerms.ID);
+                def.emitFrequency = 0;
+                def.averageEmitPerSecond = 0;
+                def.singleEmitQuantity = 0;
+                __result.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = SpindlyGerms.ID;
+            }
+        }
 
         [HarmonyPatch(typeof(Harvestable))]
         [HarmonyPatch("OnCompleteWork")]

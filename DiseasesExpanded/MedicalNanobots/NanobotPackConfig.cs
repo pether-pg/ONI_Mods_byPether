@@ -29,6 +29,31 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
+            DefineRecipe();
+
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(
+                ID,
+                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.NAME,
+                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC,
+                1f,
+                true,
+                Assets.GetAnim(Kanims.MedicalNanobots),
+                "object",
+                Grid.SceneLayer.Front,
+                EntityTemplates.CollisionShape.RECTANGLE,
+                0.8f,
+                0.4f,
+                true,
+                additionalTags: new List<Tag>() { GameTags.IndustrialIngredient });
+
+            return looseEntity;
+        }
+
+        private static void DefineRecipe()
+        {
+            if (!Settings.Instance.MedicalNanobots.IncludeDisease)
+                return;
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[1]
             {
                 MedicalNanobotsData.MainIngridient
@@ -45,23 +70,6 @@ namespace DiseasesExpanded
                 fabricators = new List<Tag>() { MedicalNanobotsData.FABRICATOR_ID },
                 sortOrder = 11
             };
-
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(
-                ID,
-                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.NAME,
-                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC,
-                1f,
-                true,
-                Assets.GetAnim(Kanims.MedicalNanobots),
-                "object",
-                Grid.SceneLayer.Front,
-                EntityTemplates.CollisionShape.RECTANGLE,
-                0.8f,
-                0.4f,
-                true, 
-                additionalTags: new List<Tag>() { GameTags.IndustrialIngredient });
-
-            return looseEntity;
         }
     }
 }
