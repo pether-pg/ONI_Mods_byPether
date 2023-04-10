@@ -10,7 +10,7 @@ namespace DiseasesExpanded.RandomEvents.Configs
         public const string ID = "PlagueSlug";
         public const string BASE_TRAIT_ID = "PlagueSlugBaseTrait";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
         public GameObject CreatePrefab()
         {

@@ -10,7 +10,7 @@ namespace DiseasesExpanded.RandomEvents.Configs
         public const string ID = "HarmlessBee";
         public const string BASE_TRAIT_ID = "HarmlessBeeBaseTrait";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
         public GameObject CreatePrefab()
         {
