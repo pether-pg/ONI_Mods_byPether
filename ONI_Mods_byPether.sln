@@ -45,6 +45,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckpointAutomation", "Che
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslateTest", "TranslateTest\TranslateTest.csproj", "{16CF0616-672A-4D1F-886D-F6DEFF25D075}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreLogicPorts", "MoreLogicPorts\MoreLogicPorts.csproj", "{97B148D4-C601-41BB-916E-BE8CB3CB6EE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{16CF0616-672A-4D1F-886D-F6DEFF25D075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16CF0616-672A-4D1F-886D-F6DEFF25D075}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16CF0616-672A-4D1F-886D-F6DEFF25D075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B148D4-C601-41BB-916E-BE8CB3CB6EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B148D4-C601-41BB-916E-BE8CB3CB6EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B148D4-C601-41BB-916E-BE8CB3CB6EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B148D4-C601-41BB-916E-BE8CB3CB6EE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

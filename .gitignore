@@ -814,3 +814,6 @@ packages/PLib.4.12.0/.signature.p7s
 packages/PLib.4.12.0/icon.png
 packages/PLib.4.12.0/lib/net471/PLib.xml
 packages/PLib.4.12.0/PLib.4.12.0.nupkg
+MoreLogicPorts/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
+MoreLogicPorts/obj/Release/MoreLogicPorts.csproj.CopyComplete
+MoreLogicPorts/obj/Release/MoreLogicPorts.csproj.FileListAbsolute.txt
