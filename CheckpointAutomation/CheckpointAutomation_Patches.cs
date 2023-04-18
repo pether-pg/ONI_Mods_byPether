@@ -84,5 +84,33 @@ namespace CheckpointAutomation
                 go.AddOrGet<LogicOperationalController>();
             }
         }
+
+        [HarmonyPatch(typeof(SuitMarker))]
+        [HarmonyPatch("OnOperationalChanged")]
+        public class SuitMarker_OnOperationalChanged_Patch
+        {
+            public static void Postfix(SuitMarker __instance)
+            {
+                string animName = "disable_automation";
+                KBatchedAnimController kbac = __instance.GetComponent<KBatchedAnimController>();
+                if (kbac == null || !kbac.HasAnimation(animName))
+                    return;
+
+                LogicOperationalController loc = __instance.GetComponent<LogicOperationalController>();
+                if (loc == null) 
+                    return;
+
+                if (!loc.operational.GetFlag(LogicOperationalController.LogicOperationalFlag))
+                    kbac.Play(animName);
+                else
+                    Restore(__instance, kbac);
+            }
+
+            public static void Restore(SuitMarker instance, KBatchedAnimController kbac)
+            {
+                kbac.Play("no_suit");
+                Traverse.Create(instance).Field("hasAvailableSuit").SetValue(false);
+            }
+        }
     }
 }
