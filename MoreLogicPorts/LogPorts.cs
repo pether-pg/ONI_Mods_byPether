@@ -8,14 +8,25 @@ namespace MoreLogicPorts
     {
         public static List<Type> ConfigsToAddPorts()
         {
-            return new List<Type>()
+            List<Type> result = new List<Type>()
             {
                 typeof(LiquidPumpingStationConfig), // Pitcher Pump
                 typeof(BottleEmptierConfig),        // Bottle Emptier
                 typeof(BottleEmptierGasConfig),     // Canister Emptier
                 typeof(GasBottlerConfig),           // Canister Filler
+                typeof(IceCooledFanConfig),         // Ice-E Fan
                 typeof(CreatureDeliveryPointConfig) // Critter Drop-Off
             };
+
+            if(!ModInfo.IsCheckpointAutomationActive)
+            {
+                result.Add(typeof(JetSuitMarkerConfig));
+                result.Add(typeof(LeadSuitMarkerConfig));
+                result.Add(typeof(OxygenMaskMarkerConfig));
+                result.Add(typeof(SuitMarkerConfig));
+            }
+
+            return result;
         }
 
         public static void AddBehaviourToGameObject(GameObject go)
