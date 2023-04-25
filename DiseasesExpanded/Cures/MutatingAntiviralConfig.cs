@@ -40,7 +40,8 @@ namespace DiseasesExpanded
         {
             DefineRecipe(BasicForagePlantConfig.ID, 2);
             DefineRecipe(ForestForagePlantConfig.ID, 0.25f);
-            DefineRecipe(SwampForagePlantConfig.ID, 2 / 3.0f);
+            if(DlcManager.IsExpansion1Active())
+                DefineRecipe(SwampForagePlantConfig.ID, 2 / 3.0f);
 
             MedicineInfo medInfo = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.CureSpecific, null, new string[] { MutatingSickness.ID });
 
