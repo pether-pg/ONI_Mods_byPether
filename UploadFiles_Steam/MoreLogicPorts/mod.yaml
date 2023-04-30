@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] More Logic Ports" 
+# currently unused, but may be someday
+description: "Adds more Logic Ports to various buildings in the game" 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.MoreLogicPorts" 

@@ -10,6 +10,7 @@ namespace MoreLogicPorts
         {
             List<Type> result = new List<Type>()
             {
+                typeof(ManualHighEnergyParticleSpawnerConfig),
                 typeof(LiquidPumpingStationConfig), // Pitcher Pump
                 typeof(BottleEmptierConfig),        // Bottle Emptier
                 typeof(BottleEmptierGasConfig),     // Canister Emptier
