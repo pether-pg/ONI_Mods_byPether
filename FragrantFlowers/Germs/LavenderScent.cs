@@ -38,29 +38,29 @@ namespace FragrantFlowers
 
         public static Effect GetSmellEffect()
         {
-            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME, STRINGS.EFFECTS.SMELLEDLAVENDER.DESC, EFFECT_TIME, true, true, false);
+            float time = Settings.Instance.Lavender.EffectDuration;
+            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME, STRINGS.EFFECTS.SMELLEDLAVENDER.DESC, time, true, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier("Botanist", EFFECT_STR, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
-            effect.SelfModifiers.Add(new AttributeModifier("Ranching", EFFECT_STR, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
-            effect.SelfModifiers.Add(new AttributeModifier("Cooking", EFFECT_STR, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Botanist", Settings.Instance.Lavender.AttributeBonus, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Ranching", Settings.Instance.Lavender.AttributeBonus, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Cooking", Settings.Instance.Lavender.AttributeBonus, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
             return effect;
         }
 
         public static Effect GetCritterEffect()
         {
-            Effect effect = new Effect(EFFECT_ID_CRITTER, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME, STRINGS.EFFECTS.SMELLEDLAVENDER.DESC, EFFECT_TIME, true, true, false);
+            float time = Settings.Instance.Lavender.EffectDuration;
+            Effect effect = new Effect(EFFECT_ID_CRITTER, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME, STRINGS.EFFECTS.SMELLEDLAVENDER.DESC, time, true, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().CritterAttributes.Happiness.Id, 1, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.Wildness.deltaAttribute.Id, -5 / 600.0f, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.Fertility.deltaAttribute.Id, 5 / 600.0f, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().CritterAttributes.Happiness.Id, Settings.Instance.Lavender.CritterHappinessBonus, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.Wildness.deltaAttribute.Id, -Settings.Instance.Lavender.CritterWildernessBonus / 600.0f, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.Fertility.deltaAttribute.Id, Settings.Instance.Lavender.CritterFertilityBonus / 600.0f, STRINGS.EFFECTS.SMELLEDLAVENDER.NAME));
             return effect;
         }
 
         public const string ID = nameof(LavenderScent);
         public const string EFFECT_ID = "SmelledLavender";
         public const string EFFECT_ID_CRITTER = "CritterSmelledLavender";
-        public const float EFFECT_TIME = 300;
-        public const float EFFECT_STR = 3;
         public static Color32 colorValue = new Color32(105, 79, 179, 255);
 
         private const float plantTempLethalLow = 218.15f; // from EntityTemplates.ExtendEntityToBasicPlant()

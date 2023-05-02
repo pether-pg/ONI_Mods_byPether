@@ -12,6 +12,14 @@ namespace FragrantFlowers
     {
         public static Dictionary<string, FragrantPlantsTuning.CropsTuning> CropsDictionary;
 
+        public static void InitCropDictionary()
+        {
+            CropsDictionary = new Dictionary<string, FragrantPlantsTuning.CropsTuning>();
+            CropsDictionary.Add(Plant_SpinosaConfig.ID, FragrantPlantsTuning.SpinrosaTuning);
+            CropsDictionary.Add(Plant_DuskLavenderConfig.ID, FragrantPlantsTuning.DuskbloomTuning);
+            CropsDictionary.Add(Plant_RimedMallowConfig.ID, FragrantPlantsTuning.MallowTuning);
+        }
+
         [HarmonyPatch(typeof(Immigration), "ConfigureCarePackages")]
         public static class Immigration_ConfigureCarePackages_Patch
         {
@@ -19,9 +27,9 @@ namespace FragrantFlowers
             {
                 Traverse traverse = Traverse.Create(__instance).Field("carePackages");
                 List<CarePackageInfo> list = traverse.GetValue<CarePackageInfo[]>().ToList<CarePackageInfo>();
-                list.Add(new CarePackageInfo(Plant_SpinosaConfig.SEED_ID , 3f, null));
-                list.Add(new CarePackageInfo(Plant_DuskLavenderConfig.SEED_ID, 3f, null));
-                list.Add(new CarePackageInfo(Plant_RimedMallowConfig.SEED_ID, 3f, null));
+                list.Add(new CarePackageInfo(Plant_SpinosaConfig.SEED_ID , Settings.Instance.Rose.SeedsInCarePackage, null));
+                list.Add(new CarePackageInfo(Plant_DuskLavenderConfig.SEED_ID, Settings.Instance.Lavender.SeedsInCarePackage, null));
+                list.Add(new CarePackageInfo(Plant_RimedMallowConfig.SEED_ID, Settings.Instance.Mallow.SeedsInCarePackage, null));
                 traverse.SetValue(list.ToArray());
             }
         }
@@ -32,11 +40,11 @@ namespace FragrantFlowers
             public static void Postfix()
             {
                 ComposableDictionary<string, Mob> mobLookupTable = SettingsCache.mobs.MobLookupTable;
-                foreach (string str in FragrantFlowers_Patches_Worldgen.CropsDictionary.Keys)
+                foreach (string str in CropsDictionary.Keys)
                 {
                     if (!mobLookupTable.ContainsKey(str))
                     {
-                        FragrantPlantsTuning.CropsTuning tuning = FragrantFlowers_Patches_Worldgen.CropsDictionary[str];
+                        FragrantPlantsTuning.CropsTuning tuning = CropsDictionary[str];
                         Mob mob1 = new Mob(tuning.spawnLocation);
                         mob1.name = str;
                         Mob root = mob1;

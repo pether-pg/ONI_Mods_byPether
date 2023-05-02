@@ -38,18 +38,16 @@ namespace FragrantFlowers
 
         public static Effect GetSmellEffect()
         {
-            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDROSE.NAME, STRINGS.EFFECTS.SMELLEDROSE.DESC, EFFECT_TIME, true, true, false);
+            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDROSE.NAME, STRINGS.EFFECTS.SMELLEDROSE.DESC, Settings.Instance.Rose.EffectDuration, true, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier("Art", EFFECT_STR, STRINGS.EFFECTS.SMELLEDROSE.NAME));
-            effect.SelfModifiers.Add(new AttributeModifier("Learning", EFFECT_STR, STRINGS.EFFECTS.SMELLEDROSE.NAME));
-            effect.SelfModifiers.Add(new AttributeModifier("Caring", EFFECT_STR, STRINGS.EFFECTS.SMELLEDROSE.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Art", Settings.Instance.Rose.AttributeBonus, STRINGS.EFFECTS.SMELLEDROSE.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Learning", Settings.Instance.Rose.AttributeBonus, STRINGS.EFFECTS.SMELLEDROSE.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Caring", Settings.Instance.Rose.AttributeBonus, STRINGS.EFFECTS.SMELLEDROSE.NAME));
             return effect;
         }
 
         public const string ID = nameof(RoseScent);
         public const string EFFECT_ID = "SmelledRose";
-        public const float EFFECT_TIME = 300;
-        public const float EFFECT_STR = 3;
         public static Color32 colorValue = new Color32(235, 29, 35, 255);
 
         private const float plantTempLethalLow = 218.15f; // from EntityTemplates.ExtendEntityToBasicPlant()

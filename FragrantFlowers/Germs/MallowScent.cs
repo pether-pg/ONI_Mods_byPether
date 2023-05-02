@@ -38,18 +38,16 @@ namespace FragrantFlowers
 
         public static Effect GetSmellEffect()
         {
-            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDMALLOW.NAME, STRINGS.EFFECTS.SMELLEDMALLOW.DESC, EFFECT_TIME, true, true, false);
+            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.SMELLEDMALLOW.NAME, STRINGS.EFFECTS.SMELLEDMALLOW.DESC, Settings.Instance.Mallow.EffectDuration, true, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier("Athletics", EFFECT_STR, STRINGS.EFFECTS.SMELLEDMALLOW.NAME));
-            effect.SelfModifiers.Add(new AttributeModifier("Strength", EFFECT_STR, STRINGS.EFFECTS.SMELLEDMALLOW.NAME));
-            effect.SelfModifiers.Add(new AttributeModifier("Machinery", EFFECT_STR, STRINGS.EFFECTS.SMELLEDMALLOW.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Athletics", Settings.Instance.Mallow.AttributeBonus, STRINGS.EFFECTS.SMELLEDMALLOW.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Strength", Settings.Instance.Mallow.AttributeBonus, STRINGS.EFFECTS.SMELLEDMALLOW.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier("Machinery", Settings.Instance.Mallow.AttributeBonus, STRINGS.EFFECTS.SMELLEDMALLOW.NAME));
             return effect;
         }
 
         public const string ID = nameof(MallowScent);
         public const string EFFECT_ID = "SmelledMallow";
-        public const float EFFECT_TIME = 300;
-        public const float EFFECT_STR = 3;
         public static Color32 colorValue = new Color32(221, 229, 221, 255);
 
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K

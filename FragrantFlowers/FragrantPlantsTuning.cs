@@ -22,9 +22,10 @@ namespace FragrantFlowers
 
         public static CropsTuning MakeSpinrosaTuning()
         {
+            float avgDens = Settings.Instance.Rose.AverageDensity;
             CropsTuning tuning = new CropsTuning
             {
-                density = new MinMax(0.18f, 0.44f)
+                density = new MinMax(avgDens - 0.1f, avgDens + 0.1f)
             };
             HashSet<Temperature.Range> set1 = new HashSet<Temperature.Range>();
             set1.Add(Temperature.Range.Mild);
@@ -43,9 +44,10 @@ namespace FragrantFlowers
 
         public static CropsTuning MakeDuskbloomTuning()
         {
+            float avgDens = Settings.Instance.Lavender.AverageDensity;
             CropsTuning tuning = new CropsTuning
             {
-                density = new MinMax(0.18f, 0.44f)
+                density = new MinMax(avgDens - 0.1f, avgDens + 0.1f)
             };
             HashSet<Temperature.Range> set3 = new HashSet<Temperature.Range>();
             set3.Add(Temperature.Range.Mild);
@@ -64,9 +66,10 @@ namespace FragrantFlowers
 
         public static CropsTuning MakeMallowTuning()
         {
+            float avgDens = Settings.Instance.Mallow.AverageDensity;
             CropsTuning tuning = new CropsTuning
             {
-                density = new MinMax(0.18f, 0.44f)
+                density = new MinMax(avgDens - 0.1f, avgDens + 0.1f)
             };
             HashSet<Temperature.Range> set5 = new HashSet<Temperature.Range>();
             set5.Add(Temperature.Range.Chilly);
