@@ -373,6 +373,11 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Medical Nanobot Swarm";
                 public static LocString DESC = (LocString)"Construct and release more Medical Nanobots.";
             }
+            public class MORENANOBOTSBOTTLED
+            {
+                public static LocString NAME = (LocString)"Medical Nanobot Pack";
+                public static LocString DESC = (LocString)"Medical Nanobots stored in a gas container, easy to deploy anywhere in the base.";
+            }
 
             public class STRESS
             {
@@ -508,6 +513,14 @@ namespace DiseasesExpanded
             public class NANOBOTUPGRADE
             {
                 public static LocString PATTERN = (LocString)"New nanobot update is ready: {0}";
+            }
+        }
+
+        public class TAGS
+        {
+            public class DISPOSABLE_GERMS
+            {
+                public static LocString PROPER_NAME = "Disposable Germs";
             }
         }
 

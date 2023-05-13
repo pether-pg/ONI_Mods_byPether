@@ -12,6 +12,10 @@ namespace DiseasesExpanded
     class ModInfo : KMod.UserMod2
     {
         public static string Namespace { get; private set; }
+        public static List<Tag> CUSTOM_GASES = new List<Tag>
+        {
+            NanobotBottleConfig.BOTTLED_GERM_TAG
+        };
 
         public override void OnLoad(Harmony harmony)
         {
@@ -29,6 +33,10 @@ namespace DiseasesExpanded
             Settings.PLib_Initalize();
 
             Debug.Log($"{Namespace}: POptions registered!");
+
+            GameTags.MaterialCategories.Add(NanobotBottleConfig.BOTTLED_GERM_TAG);
+            GameTags.AllCategories.Add(NanobotBottleConfig.BOTTLED_GERM_TAG);
+            CUSTOM_GASES.AddRange(TUNING.STORAGEFILTERS.GASES);
         }
 
         public override void OnAllModsLoaded(Harmony harmony, IReadOnlyList<Mod> mods)

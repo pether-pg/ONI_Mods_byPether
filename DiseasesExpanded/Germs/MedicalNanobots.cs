@@ -39,7 +39,7 @@ namespace DiseasesExpanded
             int brtLvl = MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Att_Breathing);
             int exhLvl = MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Att_Stamina);
             int attLvl = MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Att_Attributes);
-            int hpsLvl = MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Att_Damage);
+            int hpsLvl = MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Att_Health);
             int resLvl = MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Res_BaseInfectionResistance);
 
             if (hpsLvl > 0)
@@ -90,11 +90,11 @@ namespace DiseasesExpanded
         private const float stressPerLvl = stressPerDay / 600;
         private const float calPerDay = 1666.682f;
         private const float calPerLvl = calPerDay / 30;
-        private const float breathPerLvl = 0.1f;
+        private const float breathPerLvl = 0.04f;
         private const float staminaPerLvl = 0.005f;
         private const float attrPerLvl = 1f;
         private const float resPerLvl = 0.3f;
-        private const float healPerLvl = 0.1f;
+        private const float healPerLvl = 0.05f;
 
         public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod
 
@@ -103,7 +103,7 @@ namespace DiseasesExpanded
                   strength: (byte)50,
                   temperature_range: new Disease.RangeInfo(0f, 0.15f, degC + 0, degC + 25),
                   temperature_half_lives: new Disease.RangeInfo(10f, baseHalfLife, baseHalfLife, 10f),
-                  pressure_range: new Disease.RangeInfo(0.0f, 0.0f, 1000f, 1000f),
+                  pressure_range: new Disease.RangeInfo(0.0f, 0.0f, 10000f, 10000f),
                   pressure_half_lives: Disease.RangeInfo.Idempotent(),
                   1.5f,
                   statsOnly)
@@ -146,7 +146,7 @@ namespace DiseasesExpanded
 
             // Gas
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, baseHalfLife, baseHalfLife / 10, NanobotPackConfig.SPAWNED_BOTS_COUNT, 0.005f, 5100));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 1f, baseHalfLife, baseHalfLife / 10, NanobotBottleConfig.SPAWNED_BOTS_COUNT, 0.005f, 5100));
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Oxygen));
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Hydrogen));

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class NanobotUpgrade_DurationBoostConfig : IEntityConfig
+    class NanobotSwarmConfig : IEntityConfig
     {
-        public const string ID = "NanobotUpgrade_DurationBoost";
+        public const string ID = "NanobotSwarm";
+        public const int SPAWNED_BOTS_COUNT = 1000 * 1000;
+        public const int SPAWNED_BOTS_COUNT_PER_TILE = SPAWNED_BOTS_COUNT / 6;
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
@@ -15,9 +17,14 @@ namespace DiseasesExpanded
 
         public void OnSpawn(GameObject inst)
         {
-            if (MedicalNanobotsData.IsReadyToUse())
-                MedicalNanobotsData.Instance.IncreaseDevelopment(MutationVectors.Vectors.Res_EffectDuration);
-            PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.NANOBOTDEVELOPMENT.DURATION.NAME, inst.transform);
+            int cell = Grid.PosToCell(inst.transform.position);
+            SimMessages.ModifyDiseaseOnCell(cell, GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellAbove(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellLeft(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellRight(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellUpLeft(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
+            SimMessages.ModifyDiseaseOnCell(Grid.CellUpRight(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
+            PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.GERMS.MEDICALNANOBOTS.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
         }
 
@@ -27,11 +34,11 @@ namespace DiseasesExpanded
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(
                 ID,
-                STRINGS.NANOBOTDEVELOPMENT.DURATION.NAME,
-                STRINGS.NANOBOTDEVELOPMENT.DURATION.DESC,
+                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.NAME,
+                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC,
                 1f,
                 true,
-                Assets.GetAnim(Kanims.MedicalNanobotsUpgrade),
+                Assets.GetAnim(Kanims.MedicalNanobots),
                 "object",
                 Grid.SceneLayer.Front,
                 EntityTemplates.CollisionShape.RECTANGLE,
@@ -48,10 +55,9 @@ namespace DiseasesExpanded
             if (!Settings.Instance.MedicalNanobots.IncludeDisease)
                 return;
 
-            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
+            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[1]
             {
-                MedicalNanobotsData.MainIngridient,
-                new ComplexRecipe.RecipeElement(SimHashes.Polypropylene.CreateTag(), MedicalNanobotsData.RECIPE_MASS_LARGE)
+                MedicalNanobotsData.MainIngridient
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
@@ -60,10 +66,10 @@ namespace DiseasesExpanded
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(MedicalNanobotsData.FABRICATOR_ID, ingredients, results), ingredients, results)
             {
                 time = MedicalNanobotsData.RECIPE_TIME,
-                description = STRINGS.NANOBOTDEVELOPMENT.DURATION.DESC,
+                description = STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { MedicalNanobotsData.FABRICATOR_ID },
-                sortOrder = 31
+                sortOrder = 11
             };
         }
     }

@@ -16,7 +16,7 @@ namespace DiseasesExpanded
         public void OnSpawn(GameObject inst)
         {
             if (MedicalNanobotsData.IsReadyToUse())
-                MedicalNanobotsData.Instance.IncreaseDevelopment(MutationVectors.Vectors.Att_Damage);
+                MedicalNanobotsData.Instance.IncreaseDevelopment(MutationVectors.Vectors.Att_Health);
             PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.NANOBOTDEVELOPMENT.HEALTH.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
         }

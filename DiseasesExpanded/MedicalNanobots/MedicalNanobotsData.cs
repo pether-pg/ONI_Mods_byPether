@@ -10,7 +10,7 @@ namespace DiseasesExpanded
     [SerializationConfig(MemberSerialization.OptIn)]
     class MedicalNanobotsData : KMonoBehaviour, ISaveLoadable
     {
-        public static readonly ComplexRecipe.RecipeElement MainIngridient = new ComplexRecipe.RecipeElement(SimHashes.Steel.CreateTag(), RECIPE_MASS_LARGE);
+        public static readonly ComplexRecipe.RecipeElement MainIngridient = new ComplexRecipe.RecipeElement(SimHashes.Steel.CreateTag(), RECIPE_MASS_BOT_SWARM);
 
         private static MedicalNanobotsData _instance = null;
         private static bool _isReady = false;
@@ -18,8 +18,9 @@ namespace DiseasesExpanded
 
         public const string FABRICATOR_ID = SupermaterialRefineryConfig.ID;
         public const float RECIPE_TIME = 600;
-        public const float RECIPE_MASS_LARGE = 10000;
-        public const float RECIPE_MASS_NORMAL = 1000;
+        public const float RECIPE_MASS_BOT_SWARM = 2000;
+        public const float RECIPE_MASS_LARGE = 2000;
+        public const float RECIPE_MASS_NORMAL = 200;
 
         public static MedicalNanobotsData Instance
         {
@@ -51,9 +52,9 @@ namespace DiseasesExpanded
             base.OnSpawn();
             _isReady = true;
 
+            Instance.InitalizeRecipes();
             Instance.UpdateAll();
             Debug.Log($"{ModInfo.Namespace}: MedicalNanobotsData Spawned. Current development: {GetDevelopmentCode()}");
-            Debug.Log($"{ModInfo.Namespace}: MedicalNanobotsData Spawned. {GetEnvironmentDetailsForLegend()}");
         }
 
 
@@ -73,6 +74,7 @@ namespace DiseasesExpanded
             if (DevelopmentLevels[development] > maxDevelopmentLevel)
                 DevelopmentLevels[development] = maxDevelopmentLevel;
 
+            UpdateRecipie(development);
             UpdateAll();
             Notify();
         }
@@ -97,6 +99,7 @@ namespace DiseasesExpanded
                 return;
 
             ((MedicalNanobots)dis).UpdateGermData();
+            SimMessages.CreateDiseaseTable(Db.Get().Diseases);
         }
 
         public void UpdateExposureTable()
@@ -120,6 +123,26 @@ namespace DiseasesExpanded
                 return;
             effects.Remove(effect);
             effects.Add(MedicalNanobots.GetEffect());
+        }
+        
+        public void InitalizeRecipes()
+        {
+            foreach (MutationVectors.Vectors vector in MutationVectors.GetAll())
+                UpdateRecipie(vector, true);
+        }
+
+
+        public void UpdateRecipie(MutationVectors.Vectors vector, bool onInit = false)
+        {
+            int lvl = GetDevelopmentLevel(vector);
+            if (lvl == maxDevelopmentLevel)
+                RecipeUpdater.DeleteNanobotUpgradeRecipe(vector);
+            else
+            {
+                if(lvl > 1 && !onInit)
+                    RecipeUpdater.MultiplyNanobotUpgradeCost(vector, 1.0f / lvl);
+                RecipeUpdater.MultiplyNanobotUpgradeCost(vector, 1 + lvl);
+            }
         }
 
         private void Notify()
@@ -147,7 +170,7 @@ namespace DiseasesExpanded
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Attributes),
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Breathing),
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Calories),
-                GetDevelopmentLevel(MutationVectors.Vectors.Att_Damage),
+                GetDevelopmentLevel(MutationVectors.Vectors.Att_Health),
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Stamina),
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Stress)
                 );
@@ -170,7 +193,7 @@ namespace DiseasesExpanded
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Attributes),
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Breathing),
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Calories),
-                GetDevelopmentLevel(MutationVectors.Vectors.Att_Damage),
+                GetDevelopmentLevel(MutationVectors.Vectors.Att_Health),
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Stamina),
                 GetDevelopmentLevel(MutationVectors.Vectors.Att_Stress)
                 );

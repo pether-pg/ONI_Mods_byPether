@@ -151,7 +151,7 @@ namespace DiseasesExpanded
                 GetMutationLevel(MutationVectors.Vectors.Att_Attributes),
                 GetMutationLevel(MutationVectors.Vectors.Att_Breathing),
                 GetMutationLevel(MutationVectors.Vectors.Att_Calories),
-                GetMutationLevel(MutationVectors.Vectors.Att_Damage),
+                GetMutationLevel(MutationVectors.Vectors.Att_Health),
                 GetMutationLevel(MutationVectors.Vectors.Att_Stamina),
                 GetMutationLevel(MutationVectors.Vectors.Att_Stress)
                 );
@@ -175,7 +175,7 @@ namespace DiseasesExpanded
                 GetMutationLevel(MutationVectors.Vectors.Att_Attributes),
                 GetMutationLevel(MutationVectors.Vectors.Att_Breathing),
                 GetMutationLevel(MutationVectors.Vectors.Att_Calories),
-                GetMutationLevel(MutationVectors.Vectors.Att_Damage),
+                GetMutationLevel(MutationVectors.Vectors.Att_Health),
                 GetMutationLevel(MutationVectors.Vectors.Att_Stamina),
                 GetMutationLevel(MutationVectors.Vectors.Att_Stress)
                 );
@@ -314,6 +314,7 @@ namespace DiseasesExpanded
                 return;
 
             ((MutatingGerms)dis).UpdateGermData();
+            SimMessages.CreateDiseaseTable(Db.Get().Diseases);
         }
 
         public void UpdateExposureTable()

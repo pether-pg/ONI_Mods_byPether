@@ -11,7 +11,7 @@ namespace DiseasesExpanded
         public enum Vectors
         {
             Att_Stress,
-            Att_Damage,
+            Att_Health,
             Att_Calories,
             Att_Breathing,
             Att_Stamina,
@@ -29,7 +29,7 @@ namespace DiseasesExpanded
         {
             return new List<Vectors>() { 
                 Vectors.Att_Stress,
-                Vectors.Att_Damage,
+                Vectors.Att_Health,
                 Vectors.Att_Calories,
                 Vectors.Att_Breathing,
                 Vectors.Att_Stamina,
@@ -50,6 +50,15 @@ namespace DiseasesExpanded
                 Vectors.Res_ExposureThreshold,
                 Vectors.Res_BaseInfectionResistance,
                 Vectors.Res_EffectDuration};
+        }
+
+        public static List<Vectors> GetAll()
+        {
+            List<Vectors> result = new List<Vectors>();
+            result.AddRange(GetAttackVectors());
+            result.AddRange(GetEnvironmentalVectors());
+            result.AddRange(GetResilianceVectors());
+            return result;
         }
     }
 }

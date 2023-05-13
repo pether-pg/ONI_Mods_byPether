@@ -1,11 +1,25 @@
 ﻿using HarmonyLib;
 using UnityEngine;
 using Klei.AI;
+using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_MutatingDisease
     {
+
+        [HarmonyPatch(typeof(BottleEmptierGasConfig))]
+        [HarmonyPatch("ConfigureBuildingTemplate")]
+        public class BottleEmptierGasConfig_ConfigureBuildingTemplate_Patch
+        {
+            public static void Postfix(GameObject go)
+            {
+                Storage storage = go.GetComponent<Storage>();
+                if (storage != null && storage.storageFilters != null)
+                    storage.storageFilters = ModInfo.CUSTOM_GASES;
+            }
+        }
+
         [HarmonyPatch(typeof(SicknessInstance))]
         [HarmonyPatch("Cure")]
         public class SicknessInstance_Cure_Patch
@@ -36,7 +50,7 @@ namespace DiseasesExpanded
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Stress, 3 * scale);
                         break;
                     case BogSickness.ID: // more common
-                        MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Damage, scale);
+                        MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Health, scale);
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Attributes, scale);
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_Replication, scale);
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_ExposureThreshold, scale);
@@ -66,7 +80,7 @@ namespace DiseasesExpanded
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_EffectDuration, scale);
                         break;
                     case SlimeSickness.ID: // more common
-                        MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Damage, scale);
+                        MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Health, scale);
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Breathing, scale);
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_Replication, scale);
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_BaseInfectionResistance, scale);

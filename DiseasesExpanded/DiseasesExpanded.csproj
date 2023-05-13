@@ -91,6 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buildings\ShieldData.cs" />
+    <Compile Include="MedicalNanobots\NanobotBottleConfig.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_SaveGame.cs" />
     <Compile Include="BackupConfig.cs" />
     <Compile Include="Buildings\GermcatcherController.cs" />
@@ -120,7 +121,7 @@
     <Compile Include="Germs\MedicalNanobots.cs" />
     <Compile Include="Germs\MutatingGerms.cs" />
     <Compile Include="MedicalNanobots\MedicalNanobotsData.cs" />
-    <Compile Include="MedicalNanobots\NanobotPackConfig.cs" />
+    <Compile Include="MedicalNanobots\NanobotSwarmConfig.cs" />
     <Compile Include="MedicalNanobots\NanobotUpgrade_AntiExhaustionConfig.cs" />
     <Compile Include="MedicalNanobots\NanobotUpgrade_AttributeBoostConfig.cs" />
     <Compile Include="MedicalNanobots\NanobotUpgrade_BreathingConfig.cs" />
@@ -181,6 +182,7 @@
     <Compile Include="RandomEvents\Events\NightOfTheLivingDead.cs" />
     <Compile Include="RandomEvents\Events\PrintSomeGerms.cs" />
     <Compile Include="RandomExtensions.cs" />
+    <Compile Include="RecipeUpdater.cs" />
     <Compile Include="Sicknesses\AlienSickness.cs" />
     <Compile Include="Sicknesses\MutatingSickness.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_MutatingDisease.cs" />

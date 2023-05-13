@@ -3,28 +3,29 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class NanobotPackConfig : IEntityConfig
+    class NanobotBottleConfig : IEntityConfig
     {
-        public const string ID = "NanobotPack";
+        public const string ID = "NanobotBottle";
         public const int SPAWNED_BOTS_COUNT = 1000 * 1000;
+        public const float OXYGEN_MASS = 1.0f;
+        public static Tag BOTTLED_GERM_TAG = TagManager.Create("BottledNanobots", STRINGS.TAGS.DISPOSABLE_GERMS.PROPER_NAME);
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
         public void OnPrefabInit(GameObject inst)
         {
+            PrimaryElement prime = inst.AddOrGet<PrimaryElement>();
+            prime.ElementID = SimHashes.Oxygen;
+            prime.Mass = OXYGEN_MASS;
+
+            if (!Settings.Instance.MedicalNanobots.IncludeDisease)
+                return;
+
+            prime.AddDisease(GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT, "Spawned");
         }
 
         public void OnSpawn(GameObject inst)
         {
-            int cell = Grid.PosToCell(inst.transform.position);
-            SimMessages.ModifyDiseaseOnCell(cell, GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellAbove(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellLeft(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellRight(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellUpLeft(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellUpRight(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT);
-            PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.GERMS.MEDICALNANOBOTS.NAME, inst.transform);
-            Util.KDestroyGameObject(inst);
         }
 
         public GameObject CreatePrefab()
@@ -33,18 +34,18 @@ namespace DiseasesExpanded
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(
                 ID,
-                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.NAME,
-                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC,
+                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.NAME,
+                STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.DESC,
                 1f,
                 true,
-                Assets.GetAnim(Kanims.MedicalNanobots),
+                Assets.GetAnim(Kanims.Microchip),
                 "object",
                 Grid.SceneLayer.Front,
                 EntityTemplates.CollisionShape.RECTANGLE,
-                0.8f,
-                0.4f,
+                0.9f,
+                0.6f,
                 true,
-                additionalTags: new List<Tag>() { GameTags.IndustrialIngredient });
+                additionalTags: new List<Tag>() { BOTTLED_GERM_TAG, GameTags.IndustrialIngredient });
 
             return looseEntity;
         }
@@ -54,9 +55,10 @@ namespace DiseasesExpanded
             if (!Settings.Instance.MedicalNanobots.IncludeDisease)
                 return;
 
-            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[1]
+            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                MedicalNanobotsData.MainIngridient
+                MedicalNanobotsData.MainIngridient,
+                new ComplexRecipe.RecipeElement(SimHashes.Oxygen.CreateTag(), OXYGEN_MASS)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {

@@ -15,7 +15,6 @@ namespace DiseasesExpanded
         {
             Strings.Add($"STRINGS.DUPLICANTS.DISEASES.{id.ToUpperInvariant()}.NAME", UI.FormatAsLink(name, id));
             Strings.Add($"STRINGS.DUPLICANTS.DISEASES.{id.ToUpperInvariant()}.DESCRIPTIVE_SYMPTOMS", symptomps);
-            //Strings.Add($"STRINGS.DUPLICANTS.DISEASES.{id.ToUpperInvariant()}.DESC", description);
             Strings.Add($"STRINGS.DUPLICANTS.DISEASES.{id.ToUpperInvariant()}.LEGEND_HOVERTEXT", hover);
         }
 
@@ -38,6 +37,11 @@ namespace DiseasesExpanded
         {
             Strings.Add($"STRINGS.BUILDINGS.STATUSITEMS.{id.ToUpperInvariant()}.NAME", name);
             Strings.Add($"STRINGS.BUILDINGS.STATUSITEMS.{id.ToUpperInvariant()}.TOOLTIP", tooltip);
+        }
+
+        public static void MakeTagCategoryStrings(Tag tag, string category)
+        {
+            Strings.Add($"MISC.TAGS.{tag.ToString().ToUpperInvariant()}", category);
         }
     }
 }

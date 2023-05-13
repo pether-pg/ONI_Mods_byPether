@@ -130,7 +130,7 @@ namespace DiseasesExpanded
 
                 private void Coughing(GameObject infected)
                 {
-                    int dmgLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Damage);
+                    int dmgLvl = MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Att_Health);
                     if(dmgLvl > 0)
                     {
                         float damage = 0.1f * dmgLvl * dmgLvl;
