@@ -3,6 +3,7 @@ using UnityEngine;
 using Klei.AI;
 using System;
 using System.Reflection;
+using System.Collections.Generic;
 
 namespace MoreLogicPorts
 {
@@ -19,26 +20,30 @@ namespace MoreLogicPorts
                 if (Patched)
                     return;
 
-
-                Harmony harmony = new Harmony("pether-pg.MoreLogicPorts");
+                Harmony harmony = new Harmony($"pether-pg.{ModInfo.Namespace}");
                 Debug.Log($"{ModInfo.Namespace}: Starting manual patching");
-                
-                foreach(Type config in LogPorts.ConfigsToAddPorts())
+
+                MethodInfo patchDef = typeof(CreateBuildingDef_Patch).GetMethod(nameof(CreateBuildingDef_Patch.Postfix));
+                MethodInfo patchConf = typeof(ConfigureBuildingTemplate_Patch).GetMethod(nameof(ConfigureBuildingTemplate_Patch.Postfix));
+                if(patchDef == null || patchConf == null)
                 {
-                    MethodInfo origDef = config.GetMethod("CreateBuildingDef");
-                    MethodInfo patchDef = typeof(CreateBuildingDef_Patch).GetMethod("Postfix");
+                    Debug.Log($"{ModInfo.Namespace}: Could not find manual patch code, no changes can be applied");
+                    return;
+                }
 
-                    MethodInfo origConf = config.GetMethod("ConfigureBuildingTemplate");
-                    MethodInfo patchConf = typeof(ConfigureBuildingTemplate_Patch).GetMethod("Postfix");
+                Dictionary<Type, string> ConfigsToPatch = LogPorts.ConfigsToAddPorts();
+                foreach (Type config in ConfigsToPatch.Keys)
+                {
+                    MethodInfo origDef = config.GetMethod(LogPorts.BUILDING_DEF_NAME);
+                    MethodInfo origConf = config.GetMethod(ConfigsToPatch[config]);
 
-                    if (origDef != null && patchDef != null && origConf != null && patchConf != null)
+                    if (origDef != null && origConf != null)
                     {
                         harmony.Patch(origDef, null, new HarmonyMethod(patchDef));
                         harmony.Patch(origConf, null, new HarmonyMethod(patchConf));
                     }
                     else
                         Debug.Log($"{ModInfo.Namespace}: Could not get methods to patch for {config}");
-
                 }
 
                 Patched = true;
