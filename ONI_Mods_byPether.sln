@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslateTest", "TranslateT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreLogicPorts", "MoreLogicPorts\MoreLogicPorts.csproj", "{97B148D4-C601-41BB-916E-BE8CB3CB6EE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SidequestMod", "SidequestMod\SidequestMod.csproj", "{D558C664-6BB5-4716-8B4D-1C05D9DE476E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -141,6 +143,10 @@ Global
 		{97B148D4-C601-41BB-916E-BE8CB3CB6EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97B148D4-C601-41BB-916E-BE8CB3CB6EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97B148D4-C601-41BB-916E-BE8CB3CB6EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D558C664-6BB5-4716-8B4D-1C05D9DE476E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D558C664-6BB5-4716-8B4D-1C05D9DE476E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D558C664-6BB5-4716-8B4D-1C05D9DE476E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D558C664-6BB5-4716-8B4D-1C05D9DE476E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -840,3 +840,6 @@ packages/PLib.4.13.0/PLib.4.13.0.nupkg
 .vs/ONI_Mods_byPether/FileContentIndex/read.lock
 .vs/ONI_Mods_byPether/v17/.suo
 .vs/ONI_Mods_byPether/FileContentIndex/98fc0518-ae2c-484c-a188-fd1396dec708.vsidx
+SidequestMod/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
+SidequestMod/obj/Release/SidequestMod.csproj.CopyComplete
+SidequestMod/obj/Release/SidequestMod.csproj.FileListAbsolute.txt
