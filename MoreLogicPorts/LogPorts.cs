@@ -27,6 +27,7 @@ namespace MoreLogicPorts
         {
             List<Type> result = new List<Type>()
             {
+                typeof(FossilDigSiteConfig),        // Lost Specimen
                 typeof(LiquidReservoirConfig),      // Liquid Reservoir
                 typeof(GasReservoirConfig),         // Gas Reservoir
                 typeof(MassiveHeatSinkConfig),      // AETN
