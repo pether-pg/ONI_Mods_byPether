@@ -29,17 +29,16 @@ namespace RoomsExpanded
                     if (pedestal == null) continue;
                     SingleEntityReceptacle receptacle = Traverse.Create(pedestal).Field("receptacle").GetValue<SingleEntityReceptacle>();
                     if (receptacle == null || receptacle.Occupant == null) continue;
+                    string id = receptacle.Occupant.name;
+                    if (foundArtifacts.Contains(id))
+                        continue;
                     foreach (List<string> list in ArtifactConfig.artifactItems.Values)
                     {
-                        bool shouldBreak = false;
-                        foreach (string id in list)
-                            if (receptacle.Occupant.name == id && !foundArtifacts.Contains(id))
-                            {
-                                foundArtifacts.Add(id);
-                                shouldBreak = true;
-                                break;
-                            }
-                        if (shouldBreak) break;
+                        if (list.Contains(id) || receptacle.Occupant.HasTag(GameTags.Keepsake))
+                        {
+                            foundArtifacts.Add(id);
+                            break;
+                        }
                     }
 
                 }
