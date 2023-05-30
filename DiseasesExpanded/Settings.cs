@@ -123,6 +123,7 @@ namespace DiseasesExpanded
             RebalanceForDiseasesRestored = false;
             AutoDetectRelatedMods = true;
             EnableMedicalResearchPoints = true;
+            InfectRawMeatDropsWithGerms = true;
 
             AlienGoo = new DiseaseSettings(true, 1.0f, ColorPalette.NavyBlue);
             BogInsects = new DiseaseSettings(true, 1.0f, ColorPalette.BogViolet);
@@ -147,6 +148,10 @@ namespace DiseasesExpanded
         [JsonProperty]
         [Option("Enable Medical Research Points", "Makes medical research tree more interactive.", category: "DiseasesExpanded: Additional")]
         public bool EnableMedicalResearchPoints { get; set; }
+
+        [JsonProperty]
+        [Option("Infect Raw Meat Drops With Germs", "Upon death, critters will drop meat infected with germs.", category: "DiseasesExpanded: Additional")]
+        public bool InfectRawMeatDropsWithGerms { get; set; }
 
         [JsonProperty]
         [Option("AlienGoo", category: "New Disease - Alien Goo")]

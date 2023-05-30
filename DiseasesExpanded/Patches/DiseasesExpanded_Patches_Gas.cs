@@ -97,9 +97,13 @@ namespace DiseasesExpanded
 
             public static GameObject InfectWithGerms(GameObject go, Butcherable butherable)
             {
-                Database.Diseases diseases = Db.Get().Diseases;
-                string germId = (butherable.gameObject.name == MooConfig.ID) ? GassyGerms.ID : FoodGerms.ID;
+                if (!Settings.Instance.InfectRawMeatDropsWithGerms)
+                    return go;
 
+                Database.Diseases diseases = Db.Get().Diseases;
+                string germId = FoodGerms.ID;
+                if (Settings.Instance.MooFlu.IncludeDisease && butherable.gameObject.name == MooConfig.ID)
+                    germId = GassyGerms.ID;
 
                 if (germId == GassyGerms.ID && !Settings.Instance.MooFlu.IncludeDisease)
                     return go;
