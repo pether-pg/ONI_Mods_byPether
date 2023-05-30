@@ -10,8 +10,11 @@ namespace SidequestMod.Sidequests.TutorialQuests
     {
         public TutorialToiletsQuest() : base()
         {
-            Name = nameof(TutorialToiletsQuest);
             ID = nameof(TutorialToiletsQuest);
+            Name = STRINGS.SIDEQUESTS.TUTORIAL_TOILETS.NAME;
+            StartingText = STRINGS.SIDEQUESTS.TUTORIAL_TOILETS.STARTING_TEXT;
+            PassingText = STRINGS.SIDEQUESTS.TUTORIAL_TOILETS.PASSING_TEXT;
+            TimeDuration = float.PositiveInfinity;
         }
 
         public override QuestStatus QuickStatusCheck()

@@ -1,5 +1,6 @@
 using HarmonyLib;
 using SidequestMod.Sidequests.TutorialQuests;
+using SidequestMod.Sidequests.InterestQuest.Piloting;
 
 namespace SidequestMod
 {
@@ -11,9 +12,10 @@ namespace SidequestMod
         {
             public static void Postfix()
             {
-                QuestManager.RegisterQuest(new TutorialToiletsQuest());
-                QuestManager.RegisterQuest(new TutorialOxygenQuest());
-                QuestManager.RegisterQuest(new TutorialClinicQuest());
+                SidequestManager.RegisterQuest(new TutorialToiletsQuest());
+                //QuestManager.RegisterQuest(new TutorialOxygenQuest());
+                //QuestManager.RegisterQuest(new TutorialClinicQuest());
+                SidequestManager.RegisterQuest(new PilotingInterest_SurfaceBreach_Quest());
             }
         }
 
@@ -23,7 +25,7 @@ namespace SidequestMod
         {
             public static void Prefix()
             {
-                QuestManager.Clear();
+                SidequestManager.Clear();
             }
         }
 
@@ -33,7 +35,7 @@ namespace SidequestMod
         {
             public static void Postfix(SaveGame __instance)
             {
-                __instance.gameObject.AddComponent<QuestManager>();
+                __instance.gameObject.AddComponent<SidequestManager>();
             }
         }
     }

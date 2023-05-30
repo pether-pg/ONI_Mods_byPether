@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SidequestMod.Sidequests;
+using UnityEngine;
 
 namespace SidequestMod
 {
-    class QuestManager : KMonoBehaviour, ISim4000ms
+    class SidequestManager : KMonoBehaviour, ISim4000ms
     {
-        private static QuestManager _instance;
-        public static QuestManager Instance
+        private static SidequestManager _instance;
+        public static SidequestManager Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = SaveGame.Instance.GetComponent<QuestManager>();
+                    _instance = SaveGame.Instance.GetComponent<SidequestManager>();
                 if (_instance == null)
-                    _instance = SaveGame.Instance.gameObject.AddComponent<QuestManager>();
+                    _instance = SaveGame.Instance.gameObject.AddComponent<SidequestManager>();
                 return _instance;
             }
         }
@@ -40,6 +41,8 @@ namespace SidequestMod
             {
                 quest.Update(dt);
                 QuestStatus status = quest.QuickStatusCheck();
+                if (status != QuestStatus.COMPLETED && quest.RemainingTime <= 0)
+                    status = QuestStatus.FAILED;
                 HandleStatus(quest, status);
             }
 
@@ -61,14 +64,14 @@ namespace SidequestMod
             {
                 quest.CompleteQuest();
                 quest.IsRunning = false;
-                Notify($"Completed quest: {quest.Name}");
+                NotificationManager.NotifyCompleted(this.gameObject.AddOrGet<Notifier>(), quest);
             }
 
             if (status == QuestStatus.FAILED)
             {
                 quest.FailQuest();
                 quest.IsRunning = false;
-                Notify($"Failed quest: {quest.Name}");
+                NotificationManager.NorifyFailed(this.gameObject.AddOrGet<Notifier>(), quest);
             }
         }
 
@@ -150,16 +153,7 @@ namespace SidequestMod
 
             ActiveQuests.Add(quest);
             quest.StartForDuplicant(mi);
-            Notify($"Starting quest: {quest.Name}");
-        }
-
-        public void Notify(string msg)
-        {
-            Notifier notifier = this.gameObject.AddOrGet<Notifier>();
-            if (notifier == null)
-                return;
-
-            notifier.Add(new Notification(msg, NotificationType.Good));
+            NotificationManager.NotifyStart(this.gameObject.AddOrGet<Notifier>(), quest);
         }
     }
 }

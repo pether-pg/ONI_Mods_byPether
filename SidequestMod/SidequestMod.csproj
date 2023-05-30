@@ -60,18 +60,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Patches.cs" />
+    <Compile Include="NotificationManager.cs" />
+    <Compile Include="Patches\Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuestManager.cs" />
+    <Compile Include="QuestScreen_Patches.cs" />
+    <Compile Include="SidequestManager.cs" />
     <Compile Include="Requirements.cs" />
     <Compile Include="RewardsAndPenalties.cs" />
+    <Compile Include="SidequestScreen.cs" />
     <Compile Include="Sidequests\InterestQuest\BaseInterestQuest.cs" />
+    <Compile Include="Sidequests\InterestQuest\Piloting\PilotingInterest_SurfaceBreach_Quest.cs" />
     <Compile Include="Sidequests\QuestStatus.cs" />
     <Compile Include="Sidequests\Sidequest.cs" />
     <Compile Include="Sidequests\TutorialQuests\TutorialClinicQuest.cs" />
     <Compile Include="Sidequests\TutorialQuests\TutorialOxygenQuest.cs" />
     <Compile Include="Sidequests\TutorialQuests\TutorialQuest.cs" />
     <Compile Include="Sidequests\TutorialQuests\TutorialToiletsQuest.cs" />
+    <Compile Include="STRINGS.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

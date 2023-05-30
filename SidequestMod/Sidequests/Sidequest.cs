@@ -10,12 +10,18 @@ namespace SidequestMod.Sidequests
     {
         public float QuestWeight = 1;
         public MinionIdentity RequestingDupe;
-        public string Name;
 
         public bool IsRunning = false;
         public bool IsTutorial = false;
         public bool IsFinished = false;
+
         public string ID { get; protected set; }
+        public string Name { get; protected set; }
+        public string StartingText { get; protected set; }
+        public string FailingText { get; protected set; }
+        public string PassingText { get; protected set; }
+        public float RemainingTime { get; protected set; }
+        public float TimeDuration { get; protected set; }
 
         public abstract bool QuestRequirement();
 
@@ -40,11 +46,13 @@ namespace SidequestMod.Sidequests
         {
             RequestingDupe = mi;
             IsRunning = true;
+            RemainingTime = TimeDuration;
         }
 
         public virtual void Update(float dt)
         {
-
+            if (RemainingTime != float.PositiveInfinity)
+                RemainingTime -= dt;
         }
 
         public abstract QuestStatus QuickStatusCheck();

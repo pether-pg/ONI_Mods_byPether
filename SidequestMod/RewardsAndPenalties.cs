@@ -19,29 +19,72 @@ namespace SidequestMod
 
         public static Effect GetSmallRewardEffect()
         {
-            Effect effect = new Effect(SMALL_REWARD_ID, "name", "desc", CYCLE / 2, true, true, false);
+            Effect effect = new Effect(SMALL_REWARD_ID, STRINGS.EFFECTS.SMALL_HAPPINESS.NAME, STRINGS.EFFECTS.SMALL_HAPPINESS.DESC, CYCLE / 2, true, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier(STRESS_MODIFIER, STRESS_PER_S / 2));
+            effect.SelfModifiers.Add(new AttributeModifier(STRESS_MODIFIER, -1 * STRESS_PER_S / 2));
             effect.SelfModifiers.Add(new AttributeModifier(MORALE_MODIFIER, 1));
             return effect;
         }
 
         public static Effect GetMediumRewardEffect()
         {
-            Effect effect = new Effect(MEDIUM_REWARD_ID, "name", "desc", CYCLE, true, true, false);
+            Effect effect = new Effect(MEDIUM_REWARD_ID, STRINGS.EFFECTS.MEDIUM_HAPPINESS.NAME, STRINGS.EFFECTS.MEDIUM_HAPPINESS.DESC, CYCLE, true, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier(STRESS_MODIFIER, STRESS_PER_S));
+            effect.SelfModifiers.Add(new AttributeModifier(STRESS_MODIFIER, -1 * STRESS_PER_S));
             effect.SelfModifiers.Add(new AttributeModifier(MORALE_MODIFIER, 2));
             return effect;
         }
 
         public static Effect GetBigRewardEffect()
         {
-            Effect effect = new Effect(BIG_REWARD_ID, "name", "desc", CYCLE * 2, true, true, false);
+            Effect effect = new Effect(BIG_REWARD_ID, STRINGS.EFFECTS.BIG_HAPPINESS.NAME, STRINGS.EFFECTS.BIG_HAPPINESS.DESC, CYCLE * 2, true, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier(STRESS_MODIFIER, STRESS_PER_S * 2));
+            effect.SelfModifiers.Add(new AttributeModifier(STRESS_MODIFIER, -1 * STRESS_PER_S * 2));
             effect.SelfModifiers.Add(new AttributeModifier(MORALE_MODIFIER, 4));
             return effect;
+        }
+
+        public static Effect GetSmallPenaltyEffect()
+        {
+            Effect effect = new Effect(SMALL_PENALTY_ID, STRINGS.EFFECTS.SMALL_SADNESS.NAME, STRINGS.EFFECTS.SMALL_SADNESS.DESC, CYCLE / 2, true, true, false);
+            effect.SelfModifiers = new List<AttributeModifier>();
+            effect.SelfModifiers.Add(new AttributeModifier(STRESS_MODIFIER, STRESS_PER_S / 2));
+            effect.SelfModifiers.Add(new AttributeModifier(MORALE_MODIFIER, -1));
+            return effect;
+        }
+
+        public static Effect GetMediumPenaltyEffect()
+        {
+            Effect effect = new Effect(MEDIUM_PENALTY_ID, STRINGS.EFFECTS.MEDIUM_SADNESS.NAME, STRINGS.EFFECTS.MEDIUM_SADNESS.DESC, CYCLE, true, true, false);
+            effect.SelfModifiers = new List<AttributeModifier>();
+            effect.SelfModifiers.Add(new AttributeModifier(STRESS_MODIFIER, STRESS_PER_S));
+            effect.SelfModifiers.Add(new AttributeModifier(MORALE_MODIFIER, -2));
+            return effect;
+        }
+
+        public static Effect GetBigPenaltyEffect()
+        {
+            Effect effect = new Effect(BIG_PENALTY_ID, STRINGS.EFFECTS.BIG_SADNESS.NAME, STRINGS.EFFECTS.BIG_SADNESS.DESC, CYCLE * 2, true, true, false);
+            effect.SelfModifiers = new List<AttributeModifier>();
+            effect.SelfModifiers.Add(new AttributeModifier(STRESS_MODIFIER, STRESS_PER_S * 2));
+            effect.SelfModifiers.Add(new AttributeModifier(MORALE_MODIFIER, -4));
+            return effect;
+        }
+
+        public static bool HasEffect(MinionIdentity mi, string effectId)
+        {
+            Effects eff = mi.GetComponent<Effects>();
+            if (eff == null)
+                return false;
+            return eff.HasEffect(effectId);
+        }
+
+        public static bool HasTrait(MinionIdentity mi, string traitId)
+        {
+            Traits traits = mi.GetComponent<Traits>();
+            if (traits == null)
+                return false;
+            return traits.HasTrait(traitId);
         }
 
         public static void ApplyEffect(MinionIdentity mi, string effectId)
@@ -56,6 +99,20 @@ namespace SidequestMod
             Effects eff = mi.GetComponent<Effects>();
             if (eff != null)
                 eff.Add(effect, true);
+        }
+
+        public static void GrantTrait(MinionIdentity mi, string traitID)
+        {
+
+            Trait trait = Db.Get().traits.TryGet(traitID);
+            GrantTrait(mi, trait);
+        }
+
+        public static void GrantTrait(MinionIdentity mi, Trait trait)
+        {
+            Traits traits = mi.GetComponent<Traits>();
+            if (traits != null && trait != null)
+                traits.Add(trait);
         }
     }
 }

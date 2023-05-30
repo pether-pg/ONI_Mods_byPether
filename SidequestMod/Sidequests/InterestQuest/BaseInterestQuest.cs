@@ -17,17 +17,17 @@ namespace SidequestMod.Sidequests.InterestQuest
 
         public override bool MinionIdentityRequirement(MinionIdentity mi)
         {
-            throw new NotImplementedException();
+            return Requirements.HasInterest(mi, RelatedInterest);
         }
 
         public override bool QuestRequirement()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
         public override QuestStatus QuickStatusCheck()
         {
-            throw new NotImplementedException();
+            return QuestStatus.ONGOING;
         }
     }
 }
