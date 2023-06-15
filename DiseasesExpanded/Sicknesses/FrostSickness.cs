@@ -18,19 +18,21 @@ namespace DiseasesExpanded
             }, 2220f, RECOVERY_ID)
         {
             float scale = Settings.Instance.FrostPox.SeverityScale;
-            this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
+            //this.AddSicknessComponent(new CustomFxSickEffectSickness(CustomFxSickEffectSickness.BLUE_SMOKE_KANIM));
             this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[2]
             {
                 new AttributeModifier("ThermalConductivityBarrier", -0.004f * scale, (string) STRINGS.DISEASES.FROSTSICKNESS.NAME),
                 new AttributeModifier("GermResistance", -3f * scale, (string) STRINGS.DISEASES.FROSTSICKNESS.NAME)
             }));
-            this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[3]
+            this.AddSicknessComponent(new SicknessExpressionEffect(ModdedExpressions.FrostyExpression));
+
+            /*this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[3]
             {
                 (HashedString) "anim_idle_cold_kanim",
                 (HashedString) "anim_loco_run_cold_kanim",
                 (HashedString) "anim_loco_walk_cold_kanim"
             }, Db.Get().Expressions.SickCold));
-            this.AddSicknessComponent((Sickness.SicknessComponent)new PeriodicEmoteSickness(Db.Get().Emotes.Minion.Cold, 15f));
+            this.AddSicknessComponent((Sickness.SicknessComponent)new PeriodicEmoteSickness(Db.Get().Emotes.Minion.Cold, 15f));*/
         }
     }
 }

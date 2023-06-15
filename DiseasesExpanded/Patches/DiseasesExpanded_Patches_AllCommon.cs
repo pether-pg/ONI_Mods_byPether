@@ -73,6 +73,8 @@ namespace DiseasesExpanded
                 ExpandExposureTable();
 
                 DiseasesExpanded_Patches_Spindly.UpdateNarcolepsyTimes();
+
+                AssetLoader.LoadAssets();
             }
 
             public static void Postfix()

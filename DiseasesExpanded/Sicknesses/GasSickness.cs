@@ -21,7 +21,7 @@ namespace DiseasesExpanded
                 Sickness.InfectionVector.Digestion,
             }, 2220f * Settings.Instance.MooFlu.SeverityScale, RECOVERY_ID)
         {
-            this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
+            this.AddSicknessComponent(new CustomFxSickEffectSickness(CustomFxSickEffectSickness.NGAS_SMOKE_KANIM));
             this.AddSicknessComponent((Sickness.SicknessComponent)new AnimatedSickness(new HashedString[1]
             {
                 (HashedString) "anim_idle_sick_kanim"

@@ -38,7 +38,7 @@ namespace DiseasesExpanded
                 STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.DESC,
                 1f,
                 true,
-                Assets.GetAnim(Kanims.Microchip),
+                Assets.GetAnim(Kanims.MedicalNanobotBottle),
                 "object",
                 Grid.SceneLayer.Front,
                 EntityTemplates.CollisionShape.RECTANGLE,
@@ -67,7 +67,7 @@ namespace DiseasesExpanded
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(MedicalNanobotsData.FABRICATOR_ID, ingredients, results), ingredients, results)
             {
                 time = MedicalNanobotsData.RECIPE_TIME,
-                description = STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC,
+                description = STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { MedicalNanobotsData.FABRICATOR_ID },
                 sortOrder = 11

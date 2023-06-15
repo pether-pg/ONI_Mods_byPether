@@ -28,7 +28,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         possibleIdx.Add(i);
                     possibleIdx.Shuffle();
 
-                    for (int i=0; i<max; i++)
+                    for (int i  =0; i < max; i++)
                     {
                         if (possibleIdx.Count == 0)
                             break;
@@ -36,7 +36,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         int idx = possibleIdx[0];
                         possibleIdx.RemoveAt(0);
 
-                        if (Components.MutantPlants[idx] != null)
+                        if (Components.MutantPlants[idx] != null && Components.MutantPlants[idx].GetComponent<SeedProducer>() != null)
                         {
                             Components.MutantPlants[idx].Mutate();
                             Components.MutantPlants[idx].ApplyMutations();

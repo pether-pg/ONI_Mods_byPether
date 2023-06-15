@@ -7,7 +7,6 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_MutatingDisease
     {
-
         [HarmonyPatch(typeof(BottleEmptierGasConfig))]
         [HarmonyPatch("ConfigureBuildingTemplate")]
         public class BottleEmptierGasConfig_ConfigureBuildingTemplate_Patch

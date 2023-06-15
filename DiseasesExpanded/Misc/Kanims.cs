@@ -22,13 +22,15 @@ namespace DiseasesExpanded
         public static HashedString VaccineCKanim = (HashedString)"vaccine_jelly_c_kanim";
         public static HashedString VaccineDKanim = (HashedString)"vaccine_jelly_d_kanim";
         public static HashedString ControlledMutation = (HashedString)"germ_modicon_b_kanim";
-        public static HashedString MedicalNanobots = (HashedString)"germ_modicon_b_kanim";
-        public static HashedString MedicalNanobotsUpgrade = (HashedString)"germ_modicon_b_kanim";
+        public static HashedString MedicalNanobots = (HashedString)"de_nanobot_kanim";
+        public static HashedString MedicalNanobotBottle = (HashedString)"nanobot_cannister_kanim";
+        public static HashedString MedicalNanobotsUpgrade = (HashedString)"de_nanobot_upgrade_kanim";
         public static HashedString DeepBreathSerum = (HashedString)"pill_green_kanim";
         public static HashedString SuperSerum = (HashedString)"pill_blue_kanim";
         public static HashedString YummySerum = (HashedString)"pill_purple_kanim";
         public static HashedString TummySerum = (HashedString)"pill_orange_kanim";
         public static HashedString AlienCureKanim = (HashedString)"vial_blue_serum_kanim";
+
         public static HashedString GasBottle = (HashedString)"gas_tank_kanim";
         public static HashedString Microchip = (HashedString)"kit_electrician_kanim";
 

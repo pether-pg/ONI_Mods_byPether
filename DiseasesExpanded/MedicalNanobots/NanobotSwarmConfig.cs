@@ -42,8 +42,8 @@ namespace DiseasesExpanded
                 "object",
                 Grid.SceneLayer.Front,
                 EntityTemplates.CollisionShape.RECTANGLE,
-                0.8f,
-                0.4f,
+                0.9f,
+                0.75f,
                 true,
                 additionalTags: new List<Tag>() { GameTags.IndustrialIngredient });
 

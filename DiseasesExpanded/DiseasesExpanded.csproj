@@ -81,6 +81,9 @@
     <Reference Include="UnityEngine">
       <HintPath>..\lib\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\lib\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\lib\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
@@ -88,10 +91,23 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\lib\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssetLoader.cs" />
+    <Compile Include="CustomSicknessComponents\CustomFxSickEffectSickness.cs" />
+    <Compile Include="ParticleHelper.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_Effects.cs" />
+    <Compile Include="CustomSicknessComponents\ModdedAccesories.cs" />
     <Compile Include="Buildings\ShieldData.cs" />
+    <Compile Include="CustomSicknessComponents\ParticleEffectSickness.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_Faces.cs" />
+    <Compile Include="CustomSicknessComponents\ModdedExpressions.cs" />
+    <Compile Include="CustomSicknessComponents\ModdedFaces.cs" />
     <Compile Include="MedicalNanobots\NanobotBottleConfig.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_ExposureMonitor.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_SaveGame.cs" />
     <Compile Include="BackupConfig.cs" />
     <Compile Include="Buildings\GermcatcherController.cs" />
@@ -216,6 +232,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Sicknesses\SpindlySickness.cs" />
     <Compile Include="Misc\SuitWearing.cs" />
+    <Compile Include="CustomSicknessComponents\SicknessExpressionEffect .cs" />
     <Compile Include="Traits\InsectAllergies.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Translation.cs" />
     <Compile Include="Misc\Kanims.cs" />
