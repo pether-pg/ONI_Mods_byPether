@@ -11,7 +11,7 @@ namespace ConfigurableBuildMenus
         [HarmonyPatch(nameof(GeneratedBuildings.LoadGeneratedBuildings))]
         public class GeneratedBuildings_LoadGeneratedBuildings_Patch
         {
-            public static void Postfix()
+            public static void Finalizer()
             {
                 JsonSerializer<ExistingBuildingIDs>.Serialize(new ExistingBuildingIDs());
 
