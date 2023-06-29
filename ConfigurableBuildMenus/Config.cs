@@ -53,6 +53,7 @@ namespace ConfigurableBuildMenus
                 {
                     BuildingId = "required. Must match Id of an existing building you want to customize.",
                     MoveToMenu = "Id of the menu you want to move your building to (by default on the end of the list). Optional - if not provided, the building will be removed",
+                    Category = "Id of a building category. Buildings are grouped by category in each menu. Optional, original category or 'uncategorized' used if not provided",
                     JustAfter = "Id of a building. Your building will be placed just after the specified one. Optional.",
                     OnListBeginning = "if set to true, your building will be placed on the very beginning of the menu, ignoring JustAfter value. Optional. In case many buildings have this, all of them will end up on the beginning of the menu and the last building in the config will be first in the menu."
                 }
@@ -133,6 +134,7 @@ namespace ConfigurableBuildMenus
             {
                 public string BuildingId;
                 public string MoveToMenu;
+                public string Category;
                 public string JustAfter;
                 public string OnListBeginning;
             }
@@ -152,6 +154,7 @@ namespace ConfigurableBuildMenus
         {
             public string BuildingId;
             public string MoveToMenu;
+            public string Category;
             public string JustAfter;
             public bool OnListBeginning;
         }
