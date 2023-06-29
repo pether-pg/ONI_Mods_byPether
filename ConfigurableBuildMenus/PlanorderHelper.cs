@@ -101,6 +101,8 @@ namespace ConfigurableBuildMenus
             return false;
         }
 
+        private static Dictionary<string, string> savedCategories = new Dictionary<string, string>();
+
         public static void Remove(Config.MoveBuildingItem movedItem)
         {
             int oldCategory = FindCategoryIdForBuilding(movedItem.BuildingId);
@@ -108,6 +110,13 @@ namespace ConfigurableBuildMenus
             {
                 Debug.Log($"{ModInfo.Namespace}: Could not find building {movedItem.BuildingId}");
                 return;
+            }
+            var planOrderData = BUILDINGS.PLANORDER[oldCategory];
+            foreach (KeyValuePair<string, string> datum in planOrderData.buildingAndSubcategoryData)
+            {
+                // If an existing modded building is removed and added elsewhere, remember its subcategory.
+                if (datum.Key == movedItem.BuildingId)
+                    savedCategories.Add(movedItem.BuildingId, datum.Value);
             }
             BUILDINGS.PLANORDER[oldCategory].data.RemoveAll(x => x == movedItem.BuildingId);
             BUILDINGS.PLANORDER[oldCategory].buildingAndSubcategoryData.RemoveAll(x => x.Key == movedItem.BuildingId);
@@ -131,6 +140,8 @@ namespace ConfigurableBuildMenus
             string category = "uncategorized"; 
             if(BUILDINGS.PLANSUBCATEGORYSORTING.ContainsKey(movedItem.BuildingId))
                 category = BUILDINGS.PLANSUBCATEGORYSORTING[movedItem.BuildingId];
+            if(savedCategories.ContainsKey(movedItem.BuildingId))
+                category = savedCategories[movedItem.BuildingId];
             KeyValuePair<string, string> movedPair = new KeyValuePair<string, string>(movedItem.BuildingId, category);
 
             if (movedItem.OnListBeginning)
