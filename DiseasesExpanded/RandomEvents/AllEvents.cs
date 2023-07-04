@@ -86,6 +86,7 @@ namespace DiseasesExpanded.RandomEvents
             {
                 RegisterEvent(new PrintSomeGerms(idx, WEIGHT_NEVER));
                 RegisterEvent(new SpawnInfectedElement(idx, WEIGHT_RARE));
+                RegisterEvent(new SpawnGermySurpriseBox(idx, WEIGHT_ALMOST_NEVER));
 
                 if (!string.IsNullOrEmpty(AdoptStrayPet.GetPetId(idx)))
                     RegisterEvent(new AdoptStrayPet(idx, WEIGHT_RARE));
