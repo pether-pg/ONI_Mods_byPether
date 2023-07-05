@@ -121,18 +121,29 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
 			SimMessages.ModifyDiseaseOnCell(Grid.CellUpRight(cell), DiseaseIdx, 1000000);
 		}
 
+		private int GetGiftAmount()
+		{
+			if (DiseaseIdx == byte.MaxValue)
+				return 0;
+
+			if (DiseaseIdx == GermIdx.AlienGermsIdx || DiseaseIdx == GermIdx.RadiationPoisoningIdx)
+				return Random.Range(1, 3);
+
+			return Random.Range(4, 9);
+		}
+
 		private IEnumerator SpawnGifts()
 		{
 			GetComponent<KBatchedAnimController>().Play("open");
-			var spawnCount = Random.Range(3, 6);
-			for (var idx = 0; idx < spawnCount; idx++)
+			int spawnCount = GetGiftAmount();
+			for (int i = 0; i < spawnCount; i++)
 			{
 				if (DiseaseIdx == byte.MaxValue)
 					break;
 
 				SpawnGerms(Grid.PosToCell(this.gameObject));
 
-				 GameObject prefab = GetGermyObject();
+				GameObject prefab = GetGermyObject();
 				if (prefab == null)
 					continue;
 
@@ -179,6 +190,7 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
 				yield return new WaitForSeconds(Random.Range(0.75f, 2.0f));
 			}
 
+			yield return new WaitForSeconds(4);
 			Destroy(gameObject);
 		}
 
