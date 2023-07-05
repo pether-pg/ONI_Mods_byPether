@@ -19,11 +19,17 @@ namespace ConfigurableBuildMenus
                 if (iconNameMap == null)
                     Debug.Log($"{ModInfo.Namespace}: Error - iconNameMap == null"); // Do not stop the flow, this is only for error logging
 
-                foreach (Config.NewBuildMenu newMenu in Config.Instance.NewBuildMenus)
-                    PlanorderHelper.CreateNewMenu(newMenu, iconNameMap);
+                if (Config.Instance.NewBuildMenus != null)
+                    foreach (Config.NewBuildMenu newMenu in Config.Instance.NewBuildMenus)
+                        PlanorderHelper.CreateNewMenu(newMenu, iconNameMap);
 
-                foreach (Config.MoveBuildingItem movedItem in Config.Instance.MoveBuildingItems)
-                    PlanorderHelper.Move(movedItem);
+                if(Config.Instance.NewBuildingCategories != null)
+                    foreach (Config.NewBuildingCategory newCategory in Config.Instance.NewBuildingCategories)
+                        PlanorderHelper.CreateNewCategory(newCategory);
+
+                if (Config.Instance.MoveBuildingItems != null)
+                    foreach (Config.MoveBuildingItem movedItem in Config.Instance.MoveBuildingItems)
+                        PlanorderHelper.Move(movedItem);
             }
         }
 

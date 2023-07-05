@@ -8,6 +8,8 @@ namespace ConfigurableBuildMenus
 {
     class PlanorderHelper
     {
+        public const string DEFAULT_CATEGORY_ID = "uncategorized";
+
         public static void CreateNewMenu(Config.NewBuildMenu newMenu, Dictionary<HashedString, string> iconNameMap)
         {
             if (string.IsNullOrEmpty(newMenu.MenuId) || iconNameMap == null)
@@ -47,8 +49,20 @@ namespace ConfigurableBuildMenus
                 iconNameMap.Add(key, newMenu.Icon);
         }
 
+        public static void CreateNewCategory(Config.NewBuildingCategory newCategory)
+        {
+            if (newCategory == null || string.IsNullOrEmpty(newCategory.CategoryId))
+                return;
+
+            Debug.Log($"{ModInfo.Namespace}: Defined new category: {newCategory.CategoryId}");
+
+            Strings.Add($"STRINGS.UI.NEWBUILDCATEGORIES." + newCategory.CategoryId.ToUpper() + ".BUILDMENUTITLE", newCategory.Name);
+        }
+
         public static bool Exists(string buildingId)
         {
+            if (string.IsNullOrEmpty(buildingId))
+                return false;
             return FindCategoryIdForBuilding(buildingId) >= 0;
         }
 
@@ -68,6 +82,12 @@ namespace ConfigurableBuildMenus
 
         public static void Move(Config.MoveBuildingItem movedItem)
         {
+            if(movedItem == null)
+            {
+                Debug.Log($"{ModInfo.Namespace}: Trying to move null, ignoring...");
+                return;
+            }
+
             if (Exists(movedItem.BuildingId) && RequiredDLCsActive(movedItem.BuildingId))
             {
                 Remove(movedItem);
@@ -86,7 +106,7 @@ namespace ConfigurableBuildMenus
                 return false;
             }
 
-            // Note: RequiredDlcIds in fact means AviableInDlc
+            // Note: RequiredDlcIds in fact means "Aviable In Dlc"
             List<string> buildingAviability = new List<string>();
             foreach (string dlc in def.RequiredDlcIds)
                 buildingAviability.Add(dlc);
@@ -109,20 +129,20 @@ namespace ConfigurableBuildMenus
                 Debug.Log($"{ModInfo.Namespace}: Could not find building {movedItem.BuildingId}");
                 return;
             }
+
             // If an existing modded building is removed and added elsewhere, remember its subcategory,
             // unless explicitly given.
             if(string.IsNullOrEmpty(movedItem.Category))
             {
                 var planOrderData = BUILDINGS.PLANORDER[oldCategory];
                 foreach (KeyValuePair<string, string> datum in planOrderData.buildingAndSubcategoryData)
-                {
                     if (datum.Key == movedItem.BuildingId)
                     {
                         movedItem.Category = datum.Value;
                         break;
                     }
-                }
             }
+
             BUILDINGS.PLANORDER[oldCategory].data.RemoveAll(x => x == movedItem.BuildingId);
             BUILDINGS.PLANORDER[oldCategory].buildingAndSubcategoryData.RemoveAll(x => x.Key == movedItem.BuildingId);
         }
@@ -142,7 +162,7 @@ namespace ConfigurableBuildMenus
                 return;
             }
 
-            string category = "uncategorized"; 
+            string category = DEFAULT_CATEGORY_ID; 
             if(BUILDINGS.PLANSUBCATEGORYSORTING.ContainsKey(movedItem.BuildingId))
                 category = BUILDINGS.PLANSUBCATEGORYSORTING[movedItem.BuildingId];
             if(!string.IsNullOrEmpty(movedItem.Category))
@@ -168,8 +188,6 @@ namespace ConfigurableBuildMenus
                         break;
                     }
                 }
-        }
-
-        
+        }        
     }
 }

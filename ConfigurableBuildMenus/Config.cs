@@ -8,6 +8,11 @@ namespace ConfigurableBuildMenus
 {
     class Config
     {
+        public InstructionHelper Instruction;
+        public List<NewBuildMenu> NewBuildMenus;
+        public List<NewBuildingCategory> NewBuildingCategories;
+        public List<MoveBuildingItem> MoveBuildingItems;
+
         private static Config _instance;
 
         public static Config Instance
@@ -42,20 +47,25 @@ namespace ConfigurableBuildMenus
             Instruction = new InstructionHelper() {
                 NewBuildMenuInstruction = new InstructionHelper.NewBuildMenuHelper()
                 {
-                    MenuId = "required. Id for your new menu, pick any one you like.",
-                    JustAfter = "Id of a menu. Your menu will be placed just after the specified one. Optional.",
-                    OnListBeginning = "if set to true, your menu will be placed on the very beginning, ignoring JustAfter value. Optional.",
+                    MenuId = "Required. Id for your new menu, pick any one you like.",
+                    JustAfter = "ID of a menu. Your menu will be placed just after the specified one. Optional.",
+                    OnListBeginning = "If set to true, your menu will be placed on the very beginning, ignoring JustAfter value. Optional.",
                     Name = "Name of your new menu that will be displayed in your game. Can be anything you like.",
                     Tooltip = "Tooltip text that will be displayed above your menu. Can be anything you like.",
-                    Icon = "icon name for your menu. You can use existing game icons or name of the file in the \"icons\" directory under mod path (without .png suffix here)"
+                    Icon = "Icon name for your menu. You can use existing game icons or name of the file in the \"icons\" directory under mod path (without .png suffix here)"
+                },
+                NewBuildingCategoryInstruction = new InstructionHelper.NewBuildingCategoryHelper()
+                { 
+                    CategoryId = "Required. ID of new category. Pick any one you like",
+                    Name = "Name of new category you will see in build menu. Can be anything, but try to keep it short."
                 },
                 MoveBuildingItemInstruction = new InstructionHelper.MoveBuildingItemHelper()
                 {
-                    BuildingId = "required. Must match Id of an existing building you want to customize.",
-                    MoveToMenu = "Id of the menu you want to move your building to (by default on the end of the list). Optional - if not provided, the building will be removed",
-                    Category = "Id of a building category. Buildings are grouped by category in each menu. Optional, original category or 'uncategorized' used if not provided",
-                    JustAfter = "Id of a building. Your building will be placed just after the specified one. Optional.",
-                    OnListBeginning = "if set to true, your building will be placed on the very beginning of the menu, ignoring JustAfter value. Optional. In case many buildings have this, all of them will end up on the beginning of the menu and the last building in the config will be first in the menu."
+                    BuildingId = "Required. Must match Id of an existing building you want to customize.",
+                    MoveToMenu = "ID of the menu you want to move your building to (by default on the end of the list). Optional - if not provided, the building will be removed",
+                    Category = "ID of a category. Buildings are grouped by category in each menu. Must match existing or new category. Optional - original category will be used by default.",
+                    JustAfter = "ID of a building. Your building will be placed just after the specified one. Optional.",
+                    OnListBeginning = "If set to true, your building will be placed on the very beginning of the menu, ignoring JustAfter value. Optional. In case many buildings have this, all of them will end up on the beginning of the menu and the last building in the config will be first in the menu."
                 }
             };
 
@@ -66,6 +76,14 @@ namespace ConfigurableBuildMenus
                                     Tooltip = "Many pretty things for your base {Hotkey}",
                                     Icon = "icon_errand_art"
                 }
+            };
+
+            NewBuildingCategories = new List<NewBuildingCategory>() {
+                new NewBuildingCategory() { CategoryId = PlanorderHelper.DEFAULT_CATEGORY_ID, Name = "Uncategorized" },
+                new NewBuildingCategory() { CategoryId = "flowers", Name = "Flower Pots" },
+                new NewBuildingCategory() { CategoryId = "paintings", Name = "Paintings" },
+                new NewBuildingCategory() { CategoryId = "sculptures", Name = "Sculptures" },
+                new NewBuildingCategory() { CategoryId = "monument", Name = "Monument" }
             };
 
             MoveBuildingItems = new List<MoveBuildingItem>() {
@@ -83,41 +101,39 @@ namespace ConfigurableBuildMenus
                 new MoveBuildingItem() { BuildingId = "ModularLaunchpadPortGasUnloader", MoveToMenu = "Rocketry"},
                 new MoveBuildingItem() { BuildingId = "ModularLaunchpadPortSolid", MoveToMenu = "Rocketry"},
                 new MoveBuildingItem() { BuildingId = "ModularLaunchpadPortSolidUnloader", MoveToMenu = "Rocketry"},
-                new MoveBuildingItem() { BuildingId = "FlowerVase", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "FlowerVaseWall", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "FlowerVaseHanging", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "FlowerVaseHangingFancy", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "SmallSculpture", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "Sculpture", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "IceSculpture", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "MarbleSculpture", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "MetalSculpture", MoveToMenu = "DecorMenu"},
+                new MoveBuildingItem() { BuildingId = "FlowerVase", MoveToMenu = "DecorMenu", Category = "flowers"},
+                new MoveBuildingItem() { BuildingId = "FlowerVaseWall", MoveToMenu = "DecorMenu", Category = "flowers"},
+                new MoveBuildingItem() { BuildingId = "FlowerVaseHanging", MoveToMenu = "DecorMenu", Category = "flowers"},
+                new MoveBuildingItem() { BuildingId = "FlowerVaseHangingFancy", MoveToMenu = "DecorMenu", Category = "flowers"},
+                new MoveBuildingItem() { BuildingId = "SmallSculpture", MoveToMenu = "DecorMenu", Category = "sculptures"},
+                new MoveBuildingItem() { BuildingId = "Sculpture", MoveToMenu = "DecorMenu", Category = "sculptures"},
+                new MoveBuildingItem() { BuildingId = "IceSculpture", MoveToMenu = "DecorMenu", Category = "sculptures"},
+                new MoveBuildingItem() { BuildingId = "MarbleSculpture", MoveToMenu = "DecorMenu", Category = "sculptures"},
+                new MoveBuildingItem() { BuildingId = "MetalSculpture", MoveToMenu = "DecorMenu", Category = "sculptures"},
                 new MoveBuildingItem() { BuildingId = "CrownMoulding", MoveToMenu = "DecorMenu"},
                 new MoveBuildingItem() { BuildingId = "CornerMoulding", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "Canvas", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "CanvasWide", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "CanvasTall", MoveToMenu = "DecorMenu"},
+                new MoveBuildingItem() { BuildingId = "Canvas", MoveToMenu = "DecorMenu", Category = "paintings"},
+                new MoveBuildingItem() { BuildingId = "CanvasWide", MoveToMenu = "DecorMenu", Category = "paintings"},
+                new MoveBuildingItem() { BuildingId = "CanvasTall", MoveToMenu = "DecorMenu", Category = "paintings"},
                 new MoveBuildingItem() { BuildingId = "ItemPedestal", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "MonumentBottom", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "MonumentMiddle", MoveToMenu = "DecorMenu"},
-                new MoveBuildingItem() { BuildingId = "MonumentTop", MoveToMenu = "DecorMenu"}
+                new MoveBuildingItem() { BuildingId = "MonumentBottom", MoveToMenu = "DecorMenu", Category = "monument"},
+                new MoveBuildingItem() { BuildingId = "MonumentMiddle", MoveToMenu = "DecorMenu", Category = "monument"},
+                new MoveBuildingItem() { BuildingId = "MonumentTop", MoveToMenu = "DecorMenu", Category = "monument"}
             };
         }
 
         private Config()
         {
             NewBuildMenus = new List<NewBuildMenu>();
+            NewBuildingCategories = new List<NewBuildingCategory>();
             MoveBuildingItems = new List<MoveBuildingItem>();
             return;
         }
 
-        public InstructionHelper Instruction;
-        public List<NewBuildMenu> NewBuildMenus;
-        public List<MoveBuildingItem> MoveBuildingItems;
-
         public class InstructionHelper
         {
             public NewBuildMenuHelper NewBuildMenuInstruction;
+            public NewBuildingCategoryHelper NewBuildingCategoryInstruction;
             public MoveBuildingItemHelper MoveBuildingItemInstruction;
 
             public class NewBuildMenuHelper
@@ -128,6 +144,12 @@ namespace ConfigurableBuildMenus
                 public string Name;
                 public string Tooltip;
                 public string Icon;
+            }
+
+            public class NewBuildingCategoryHelper
+            {
+                public string CategoryId;
+                public string Name;
             }
 
             public class MoveBuildingItemHelper
@@ -148,6 +170,12 @@ namespace ConfigurableBuildMenus
             public string Name;
             public string Tooltip;
             public string Icon;
+        }
+
+        public class NewBuildingCategory
+        {
+            public string CategoryId;
+            public string Name;
         }
 
         public class MoveBuildingItem
