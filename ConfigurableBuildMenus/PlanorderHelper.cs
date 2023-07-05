@@ -109,6 +109,20 @@ namespace ConfigurableBuildMenus
                 Debug.Log($"{ModInfo.Namespace}: Could not find building {movedItem.BuildingId}");
                 return;
             }
+            // If an existing modded building is removed and added elsewhere, remember its subcategory,
+            // unless explicitly given.
+            if(string.IsNullOrEmpty(movedItem.Category))
+            {
+                var planOrderData = BUILDINGS.PLANORDER[oldCategory];
+                foreach (KeyValuePair<string, string> datum in planOrderData.buildingAndSubcategoryData)
+                {
+                    if (datum.Key == movedItem.BuildingId)
+                    {
+                        movedItem.Category = datum.Value;
+                        break;
+                    }
+                }
+            }
             BUILDINGS.PLANORDER[oldCategory].data.RemoveAll(x => x == movedItem.BuildingId);
             BUILDINGS.PLANORDER[oldCategory].buildingAndSubcategoryData.RemoveAll(x => x.Key == movedItem.BuildingId);
         }
@@ -131,6 +145,9 @@ namespace ConfigurableBuildMenus
             string category = "uncategorized"; 
             if(BUILDINGS.PLANSUBCATEGORYSORTING.ContainsKey(movedItem.BuildingId))
                 category = BUILDINGS.PLANSUBCATEGORYSORTING[movedItem.BuildingId];
+            if(!string.IsNullOrEmpty(movedItem.Category))
+                category = movedItem.Category;
+
             KeyValuePair<string, string> movedPair = new KeyValuePair<string, string>(movedItem.BuildingId, category);
 
             if (movedItem.OnListBeginning)
