@@ -1,5 +1,0 @@
-{
-  "Instruction": "When UseExternalDirectory = false, the mod will load config from mod's directory. When UseExternalDirectory = true, the config will be loaded from ExternalDirectoryPath. Use it to preserve your config from being overwritten by Steam updates to the mod.",
-  "UseExternalDirectory": false,
-  "ExternalDirectoryPath": "../PreservedModsFiles/"
-}
