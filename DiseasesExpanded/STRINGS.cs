@@ -502,6 +502,14 @@ namespace DiseasesExpanded
                 public static LocString SHORT_DESC = (LocString)"Allergic reaction to insect bites";
                 public static LocString SHORT_DESC_TOOLTIP = (LocString)"Insect Allergies make small bites more dangerous.";
             }
+
+            public class NOTWASHINGHANDS
+            {
+                public static LocString NAME = (LocString)"Filthy";
+                public static LocString DESC = (LocString)"This duplicant won't wash their hands.";
+                public static LocString SHORT_DESC = (LocString)"This duplicant is not excited with a concept of personal hygiene.";
+                public static LocString SHORT_DESC_TOOLTIP = (LocString)"Washing hands is not something that this duplicant is interested with.";
+            }
         }
 
         public class NOTIFICATIONS

@@ -3,12 +3,9 @@ using UnityEngine;
 
 namespace DiseasesExpanded
 {
-    class InsectAllergies
+    class NotWashingHands
     {
-        public const string ID = nameof(InsectAllergies);
-        public const string ProtectionID = "HistamineSuppression";
-        public const float BogSicknessDamageModifier = 4;
-        public const float BeetaStingDamageModifier = 4;
+        public static string ID = nameof(NotWashingHands);
 
         public static DUPLICANTSTATS.TraitVal GetTrait()
         {
@@ -29,10 +26,7 @@ namespace DiseasesExpanded
             Klei.AI.Traits traits = duplicant.GetComponent<Klei.AI.Traits>();
             bool hasTrait = (traits != null && traits.HasTrait(ID));
 
-            Klei.AI.Effects effects = duplicant.GetComponent<Klei.AI.Effects>();
-            bool hasProtection = (effects != null && effects.HasEffect(InsectAllergies.ProtectionID));
-
-            return (hasTrait && !hasProtection);
+            return hasTrait;
         }
     }
 }

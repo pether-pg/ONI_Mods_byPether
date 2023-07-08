@@ -25,31 +25,5 @@ namespace DiseasesExpanded
                 __result.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = BogInsects.ID;
             }
         }
-
-        [HarmonyPatch(typeof(ModifierSet))]
-        [HarmonyPatch("LoadTraits")]
-        public static class ModifierSet_LoadTraits_Patch
-        {
-            public static void Prefix()
-            {
-                TUNING.TRAITS.TRAIT_CREATORS.Add(TraitUtil.CreateNamedTrait(InsectAllergies.ID, (string)STRINGS.TRAITS.INSECTALLERGIES.NAME, (string)STRINGS.TRAITS.INSECTALLERGIES.NAME));
-            }
-        }
-
-        [HarmonyPatch(typeof(MinionStartingStats))]
-        [HarmonyPatch("GenerateTraits")]
-        public static class MinionStartingStats_GenerateTraits_Patch
-        {
-            private static bool TraitAdded = false;
-
-            public static void Prefix()
-            {
-                if(!TraitAdded)
-                {
-                    DUPLICANTSTATS.BADTRAITS.Add(InsectAllergies.GetTrait());
-                    TraitAdded = true;
-                }
-            }
-        }
     }
 }
