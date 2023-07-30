@@ -24,8 +24,8 @@ namespace DiseasesExpanded
         {
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(RawEggConfig.ID, 1f),
-                new ComplexRecipe.RecipeElement(SimHashes.Ice.CreateTag(), 100f)
+                new ComplexRecipe.RecipeElement(SimHashes.MilkFat.CreateTag(), 1f),
+                new ComplexRecipe.RecipeElement(SimHashes.Ice.CreateTag(), 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {

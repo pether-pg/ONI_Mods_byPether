@@ -47,7 +47,7 @@ namespace DiseasesExpanded
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(GingerConfig.ID, 10f),
+                new ComplexRecipe.RecipeElement(GingerConfig.ID, 1f),
                 new ComplexRecipe.RecipeElement(LightBugBlackConfig.EGG_ID, 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]

@@ -47,7 +47,7 @@ namespace DiseasesExpanded
         {
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(SimHashes.OxyRock.CreateTag(), 100f),
+                new ComplexRecipe.RecipeElement(SimHashes.OxyRock.CreateTag(), 1f),
                 new ComplexRecipe.RecipeElement(LightBugConfig.EGG_ID, 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
