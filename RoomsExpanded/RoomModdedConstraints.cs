@@ -35,14 +35,6 @@ namespace RoomsExpanded
             "Fervine"           // from Fervine 
         };
 
-        /*public static RoomConstraints.Constraint RESEARCH_STATION = new RoomConstraints.Constraint(
-                                                                    bc => bc.HasTag(RoomConstraints.ConstraintTags.ResearchStation),
-                                                                        null,
-                                                                        name: ROOMS.CRITERIA.RESEARCH_STATION.NAME,
-                                                                        description: ROOMS.CRITERIA.RESEARCH_STATION.DESCRIPTION
-                                                                    );
-        */
-
         public static RoomConstraints.Constraint COOKING_STATION = new RoomConstraints.Constraint(
                                                                     bc => bc.HasTag(RoomConstraintTags.KitchenBuildingTag), 
                                                                     null, 
@@ -271,16 +263,18 @@ namespace RoomsExpanded
                                                                     if (room == null)
                                                                         return false;
 
+                                                                    int count = 0;
+
                                                                     for(int x = room.cavity.minX; x <= room.cavity.maxX; x++)
                                                                         for(int y = room.cavity.minY; y <= room.cavity.maxY; y++)
                                                                         {
                                                                             int cell = Grid.XYToCell(x, y);
                                                                             int above = Grid.CellAbove(cell);
-                                                                            if (Grid.IsSolidCell(above) && !Grid.Transparent[above])
-                                                                                return false;
+                                                                            if (Grid.IsSolidCell(above) && Grid.Transparent[above])
+                                                                                count++;
                                                                         }
 
-                                                                    return true;
+                                                                    return count >= 3;
                                                                 },
                                                                 name: STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME,
                                                                 description: STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME);
