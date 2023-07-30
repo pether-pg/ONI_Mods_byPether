@@ -3,6 +3,8 @@ using HarmonyLib;
 using UnityEngine;
 using Klei.AI;
 using TUNING;
+using System;
+using System.Reflection;
 
 namespace DiseasesExpanded
 {
@@ -36,15 +38,17 @@ namespace DiseasesExpanded
             }
         }
 
-        [HarmonyPatch(typeof(WorkableReactable))]
-        [HarmonyPatch("InternalCanBegin")]
-        public static class WorkableReactable_InternalCanBegin_Patch
+        [HarmonyPatch]
+        public static class WashHandsReactable_InternalCanBegin_Patch
         {
-            public static void Postfix(WorkableReactable __instance, GameObject new_reactor, ref bool __result)
+            public static MethodBase TargetMethod()
             {
-                if (__instance.id != (HashedString)"WashHands")
-                    return;
+                Type type = AccessTools.TypeByName("HandSanitizer+WashHandsReactable");
+                return AccessTools.Method(type, "InternalCanBegin");
+            }
 
+            public static void Postfix(GameObject new_reactor, ref bool __result)
+            {
                 if (new_reactor != null && NotWashingHands.HasAffectingTrait(new_reactor))
                     __result = false;
             }
