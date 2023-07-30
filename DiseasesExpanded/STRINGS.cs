@@ -121,7 +121,7 @@ namespace DiseasesExpanded
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Everlasting Hunger", nameof(HUNGERSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Makes duplicant hungry all the time.";
-                public static LocString DESCRIPTION = (LocString)"The hunger of the Experiment 52B seem to be infectious...";
+                public static LocString DESCRIPTION = (LocString)"The hunger of the ravenous plants seems to be infectious...";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Everlasting Hunger.";
             }
 

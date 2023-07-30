@@ -2,8 +2,10 @@
 using UnityEngine;
 using KSerialization;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Klei.AI;
+using UnityEngine;
 
 namespace DiseasesExpanded
 {
@@ -239,11 +241,22 @@ namespace DiseasesExpanded
             if (nextMutationProgress >= 100 && CanMutate())
             {
                 Mutate(infestedHost);
-                TryInfect(infestedHost);
+                TryInfectDelayed(infestedHost);
             }
         }
 
-        public void TryInfect(GameObject duplicant)
+        public void TryInfectDelayed(GameObject duplicant)
+        {
+            SaveGame.Instance.StartCoroutine(WaitToInfect(duplicant));
+        }
+
+        public IEnumerator WaitToInfect(GameObject duplicant)
+        {
+            yield return new WaitForSeconds(5);
+            TryInfectNow(duplicant);
+        }
+
+        public void TryInfectNow(GameObject duplicant)
         {
             if (IsRecentlyRecovered(duplicant))
                 return;
@@ -255,8 +268,17 @@ namespace DiseasesExpanded
             Sicknesses diseases = modifiers.GetSicknesses();
             if (diseases == null)
                 return;
-
-            diseases.Infect(new SicknessExposureInfo(MutatingSickness.ID, STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO));
+            try
+            {
+                Debug.Log($"{ModInfo.Namespace}: Trying to infect {duplicant.name} with Mutating Virus");
+                diseases.Infect(new SicknessExposureInfo(MutatingSickness.ID, STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO));
+                Notify(duplicant);
+                Debug.Log($"{ModInfo.Namespace}: Infection complete");
+            }
+            catch
+            {
+                Debug.Log($"{ModInfo.Namespace}: Infection failed...");
+            }
         }
 
         private bool IsRecentlyRecovered(GameObject duplicant)
@@ -358,10 +380,19 @@ namespace DiseasesExpanded
             if (!_isReady)
                 return;
 
+            Debug.Log($"{ModInfo.Namespace}: Virus mutation: UpdateColor()");
             UpdateColor();
-            UpdateGerms();
+
+            Debug.Log($"{ModInfo.Namespace}: Virus mutation: UpdateExposureTable()");
             UpdateExposureTable();
+
+            Debug.Log($"{ModInfo.Namespace}: Virus mutation: UpdateSickness()");
             UpdateSickness();
+
+            Debug.Log($"{ModInfo.Namespace}: Virus mutation: UpdateGerms()");
+            UpdateGerms();
+
+            Debug.Log($"{ModInfo.Namespace}: Virus mutation: complete");
         }
 
         private bool CanMutate()
@@ -387,8 +418,6 @@ namespace DiseasesExpanded
             MutateResiliance();
 
             UpdateAll();
-
-            Notify(infestedHost);
 
             lastMutationCycle = CurrentCycle();
             nextMutationProgress = 0;

@@ -37,7 +37,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         return;
 
                     MutationData.Instance.Mutate(mi.gameObject);                    
-                    MutationData.Instance.TryInfect(mi.gameObject);
+                    MutationData.Instance.TryInfectDelayed(mi.gameObject);
 
                     ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "We observed new mutation strain...");
                 });
