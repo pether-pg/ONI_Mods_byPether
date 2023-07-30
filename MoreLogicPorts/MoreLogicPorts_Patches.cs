@@ -15,7 +15,7 @@ namespace MoreLogicPorts
         {
             static bool Patched = false;
 
-            public static void Prefix()
+            public static void Postfix()
             {
                 if (Patched)
                     return;
@@ -34,6 +34,9 @@ namespace MoreLogicPorts
                 Dictionary<Type, string> ConfigsToPatch = LogPorts.ConfigsToAddPorts();
                 foreach (Type config in ConfigsToPatch.Keys)
                 {
+                    if (!Settings.Instance.CanAddPort(config))
+                        continue;
+
                     MethodInfo origDef = config.GetMethod(LogPorts.BUILDING_DEF_NAME);
                     MethodInfo origConf = config.GetMethod(ConfigsToPatch[config]);
 

@@ -43,6 +43,9 @@
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\lib\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -60,10 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JsonSerializer.cs" />
     <Compile Include="LogPorts.cs" />
     <Compile Include="ModInfo.cs" />
     <Compile Include="MoreLogicPorts_Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

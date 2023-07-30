@@ -19,6 +19,8 @@ namespace MoreLogicPorts
 
             if (Configs.ContainsKey(typeof(MassiveHeatSinkConfig)))
                 Configs[typeof(MassiveHeatSinkConfig)] = DO_POST_CONFIG_NAME;
+            if (Configs.ContainsKey(typeof(GravitasCreatureManipulatorConfig)))
+                Configs[typeof(GravitasCreatureManipulatorConfig)] = DO_POST_CONFIG_NAME;
 
             return Configs;
         }
@@ -27,16 +29,21 @@ namespace MoreLogicPorts
         {
             List<Type> result = new List<Type>()
             {
-                typeof(FossilDigSiteConfig),        // Lost Specimen
-                typeof(LiquidReservoirConfig),      // Liquid Reservoir
-                typeof(GasReservoirConfig),         // Gas Reservoir
-                typeof(MassiveHeatSinkConfig),      // AETN
-                typeof(LiquidPumpingStationConfig), // Pitcher Pump
-                typeof(BottleEmptierConfig),        // Bottle Emptier
-                typeof(BottleEmptierGasConfig),     // Canister Emptier
-                typeof(GasBottlerConfig),           // Canister Filler
-                typeof(IceCooledFanConfig),         // Ice-E Fan
-                typeof(CreatureDeliveryPointConfig) // Critter Drop-Off
+                typeof(GravitasCreatureManipulatorConfig),  // Critter Gene Manipulator POI
+                typeof(MegaBrainTankConfig),                // Big Brain Tank POI
+                typeof(FossilDigSiteConfig),                // Lost Specimen POI
+                typeof(LiquidReservoirConfig),              // Liquid Reservoir
+                typeof(GasReservoirConfig),                 // Gas Reservoir
+                typeof(MassiveHeatSinkConfig),              // AETN
+                typeof(PlanterBoxConfig),                   // Planter Box
+                typeof(FarmTileConfig),                     // Farm Tile
+                typeof(HydroponicFarmConfig),               // Hydroponic Farm Tile
+                typeof(LiquidPumpingStationConfig),         // Pitcher Pump
+                typeof(BottleEmptierConfig),                // Bottle Emptier
+                typeof(BottleEmptierGasConfig),             // Canister Emptier
+                typeof(GasBottlerConfig),                   // Canister Filler
+                typeof(IceCooledFanConfig),                 // Ice-E Fan
+                typeof(CreatureDeliveryPointConfig)         // Critter Drop-Off
             };
 
             // Manual Radbolt Generator
