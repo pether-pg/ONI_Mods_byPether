@@ -27,33 +27,54 @@ namespace DiseasesExpanded
                         $"supporting game build {this.mod.packagedModInfo.minimumSupportedBuild} ({this.mod.packagedModInfo.supportedContent})");
 
             BackupConfig.Instance.RestoreBackup(JsonSerializer<Settings>.GetDefaultName());
+            InitalizePlib();
 
-            PUtil.InitLibrary();
-            new POptions().RegisterOptions(this, typeof(Settings));
-            Settings.PLib_Initalize();
-
-            Debug.Log($"{Namespace}: POptions registered!");
-
-            GameTags.MaterialCategories.Add(NanobotBottleConfig.BOTTLED_GERM_TAG);
-            GameTags.AllCategories.Add(NanobotBottleConfig.BOTTLED_GERM_TAG);
-            CUSTOM_GASES.AddRange(TUNING.STORAGEFILTERS.GASES);
+            AddNewStorageFilter();
         }
 
         public override void OnAllModsLoaded(Harmony harmony, IReadOnlyList<Mod> mods)
         {
             base.OnAllModsLoaded(harmony, mods);
+            CheckForRelatedMods(mods);
+        }
 
-            if(Settings.Instance.AutoDetectRelatedMods)
+        private void InitalizePlib()
+        {
+            PUtil.InitLibrary();
+            new POptions().RegisterOptions(this, typeof(Settings));
+            Settings.PLib_Initalize();
+
+            Debug.Log($"{Namespace}: POptions registered!");
+        }
+
+        private void AddNewStorageFilter()
+        {
+            GameTags.MaterialCategories.Add(NanobotBottleConfig.BOTTLED_GERM_TAG);
+            GameTags.AllCategories.Add(NanobotBottleConfig.BOTTLED_GERM_TAG);
+            CUSTOM_GASES.AddRange(TUNING.STORAGEFILTERS.GASES);
+        }
+
+        private void CheckForRelatedMods(IReadOnlyList<Mod> mods)
+        {
+            if (Settings.Instance.AutoDetectRelatedMods)
             {
+                bool DiseasesReimaginedFound = false;
+
                 foreach (Mod mod in mods)
-                    if (mod.staticID == "1911357229.Steam"
-                        || Type.GetType("DiseasesReimagined.DiseasesPatch, DiseasesReimagined", false) != null) // double check in case steam messes with the ID
+                    if (mod.staticID == "1911357229.Steam")
                     {
-                        Settings.Instance.RebalanceForDiseasesRestored = mod.IsActive();
+                        DiseasesReimaginedFound = mod.IsActive();
                         string activeString = mod.IsActive() ? "Active" : "NOT Active";
                         Debug.Log($"{Namespace}: Mod Id = \"{mod.staticID}\", Title = \"{mod.title}\", detected to be {activeString}.");
                     }
 
+                if (Type.GetType("DiseasesReimagined.DiseasesPatch, DiseasesReimagined", false) != null)
+                {
+                    DiseasesReimaginedFound = true;
+                    Debug.Log($"{Namespace}: Found type for DiseasesReimagined.DiseasesPatch, DiseasesReimagined");
+                }
+
+                Settings.Instance.RebalanceForDiseasesRestored = DiseasesReimaginedFound;
                 JsonSerializer<Settings>.Serialize(Settings.Instance);
             }
         }

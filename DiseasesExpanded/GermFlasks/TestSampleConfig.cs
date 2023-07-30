@@ -113,18 +113,15 @@ namespace DiseasesExpanded
 
         private static void SpawnFlask(byte idx, GameObject worker)
         {
-            Debug.Log("TestSampleConfig.SpawnFlask() start");
             if (!Germcatcher.SpawnedFlasks.ContainsKey(idx))
                 return;
             string id = Germcatcher.SpawnedFlasks[idx];
 
-            Debug.Log("TestSampleConfig.SpawnFlask() ContainsKey");
             if (!string.IsNullOrEmpty(id))
             {
                 GameObject gameObject = GameUtil.KInstantiate(Assets.GetPrefab(id), worker.transform.GetPosition() + new Vector3(-0.2f, 1.0f, 0), Grid.SceneLayer.Ore);
                 if (gameObject != null)
                 {
-                    Debug.Log("TestSampleConfig.SpawnFlask() gameObject non-null");
                     PrimaryElement element = gameObject.GetComponent<PrimaryElement>();
                     if (element != null)
                         element.AddDisease(idx, Germcatcher.GatherThreshold, "Gathered germs");
