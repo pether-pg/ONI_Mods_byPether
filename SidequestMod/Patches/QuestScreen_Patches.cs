@@ -8,7 +8,6 @@ namespace SidequestMod
     class QuestScreen_Patches
     {
         static ManagementMenu.ManagementMenuToggleInfo info = new ManagementMenu.ManagementMenuToggleInfo("Quests", "OverviewUI_research_nav_icon", tooltip: "Quests - tooltip");
-        static SidequestScreen sidequestScreen;
 
         [HarmonyPatch(typeof(ManagementMenu))]
         [HarmonyPatch("OnPrefabInit")]
@@ -16,8 +15,6 @@ namespace SidequestMod
         {
             public static void Postfix()
             {
-                sidequestScreen = new SidequestScreen();
-
                 Traverse.Create(ManagementMenu.Instance).Method("AddToggleTooltip", info, null).GetValue();
 
                 Dictionary<ManagementMenu.ManagementMenuToggleInfo, ManagementMenu.ScreenData> ScreenInfoMatch;
@@ -25,8 +22,8 @@ namespace SidequestMod
 
                 ScreenInfoMatch.Add(info, new ManagementMenu.ScreenData()
                 {
-                    screen = (KScreen)sidequestScreen,
-                    tabIdx = 4,
+                    screen = (KScreen)AssetLoader.SidequestScreen,
+                    tabIdx = 0,
                     toggleInfo = info,
                     cancelHandler = (Func<bool>)null
                 });

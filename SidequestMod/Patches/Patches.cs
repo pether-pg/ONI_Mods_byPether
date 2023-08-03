@@ -10,6 +10,11 @@ namespace SidequestMod
         [HarmonyPatch("Initialize")]
         public class Db_Initialize_Patch
         {
+            public static void Prefix()
+            {
+                //AssetLoader.LoadAssets();
+            }
+
             public static void Postfix()
             {
                 SidequestManager.RegisterQuest(new TutorialToiletsQuest());
