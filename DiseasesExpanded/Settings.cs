@@ -124,6 +124,7 @@ namespace DiseasesExpanded
             AutoDetectRelatedMods = true;
             EnableMedicalResearchPoints = true;
             InfectRawMeatDropsWithGerms = true;
+            FrequentVirusAndNanobotUptades = false;
 
             AlienGoo = new DiseaseSettings(true, 1.0f, ColorPalette.NavyBlue);
             BogInsects = new DiseaseSettings(true, 1.0f, ColorPalette.BogViolet);
@@ -152,6 +153,10 @@ namespace DiseasesExpanded
         [JsonProperty]
         [Option("Infect Raw Meat Drops With Germs", "Upon death, critters will drop meat infected with germs.", category: "DiseasesExpanded: Additional")]
         public bool InfectRawMeatDropsWithGerms { get; set; }
+
+        [JsonProperty]
+        [Option("Frequent Virus And Nanobot Uptades", "Some of the Virus and Nanobot changes won't take place until next game load. Use this option to update all data each time they change. \n WARNING!! This may cause sim race and crash. If you are experiencing crashes on virus mutations, please turn this option to false", category: "DiseasesExpanded: Additional")]
+        public bool FrequentVirusAndNanobotUptades { get; set; }
 
         [JsonProperty]
         [Option("AlienGoo", category: "New Disease - Alien Goo")]

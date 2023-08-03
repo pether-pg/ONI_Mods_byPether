@@ -268,17 +268,12 @@ namespace DiseasesExpanded
             Sicknesses diseases = modifiers.GetSicknesses();
             if (diseases == null)
                 return;
-            try
-            {
-                Debug.Log($"{ModInfo.Namespace}: Trying to infect {duplicant.name} with Mutating Virus");
-                diseases.Infect(new SicknessExposureInfo(MutatingSickness.ID, STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO));
-                Notify(duplicant);
-                Debug.Log($"{ModInfo.Namespace}: Infection complete");
-            }
-            catch
-            {
-                Debug.Log($"{ModInfo.Namespace}: Infection failed...");
-            }
+
+            Debug.Log($"{ModInfo.Namespace}: Trying to infect {duplicant.name} with Mutating Virus at cycle {CurrentCycle()}");
+            diseases.Infect(new SicknessExposureInfo(MutatingSickness.ID, STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO));
+            Notify(duplicant);
+            Debug.Log($"{ModInfo.Namespace}: Infection complete");
+           
         }
 
         private bool IsRecentlyRecovered(GameObject duplicant)
@@ -336,7 +331,8 @@ namespace DiseasesExpanded
                 return;
 
             ((MutatingGerms)dis).UpdateGermData();
-            SimMessages.CreateDiseaseTable(Db.Get().Diseases);
+            if(Settings.Instance.FrequentVirusAndNanobotUptades)
+                SimMessages.CreateDiseaseTable(Db.Get().Diseases); // this can sometimes crash the game...
         }
 
         public void UpdateExposureTable()
@@ -380,19 +376,11 @@ namespace DiseasesExpanded
             if (!_isReady)
                 return;
 
-            Debug.Log($"{ModInfo.Namespace}: Virus mutation: UpdateColor()");
+            UpdateGerms();
             UpdateColor();
-
-            Debug.Log($"{ModInfo.Namespace}: Virus mutation: UpdateExposureTable()");
             UpdateExposureTable();
-
-            Debug.Log($"{ModInfo.Namespace}: Virus mutation: UpdateSickness()");
             UpdateSickness();
 
-            Debug.Log($"{ModInfo.Namespace}: Virus mutation: UpdateGerms()");
-            UpdateGerms();
-
-            Debug.Log($"{ModInfo.Namespace}: Virus mutation: complete");
         }
 
         private bool CanMutate()
