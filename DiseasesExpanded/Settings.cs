@@ -155,7 +155,7 @@ namespace DiseasesExpanded
         public bool InfectRawMeatDropsWithGerms { get; set; }
 
         [JsonProperty]
-        [Option("Frequent Virus And Nanobot Uptades", "Some of the Virus and Nanobot changes won't take place until next game load. Use this option to update all data each time they change. \n WARNING!! This may cause sim race and crash. If you are experiencing crashes on virus mutations, please turn this option to false", category: "DiseasesExpanded: Additional")]
+        [Option("Frequent Virus And Nanobot Uptades", "Some of the Virus and Nanobot changes don't take place until next game load. Use this option to update all data each time they change. \n!! WARNING !! This may cause sim race and crash. If you are experiencing crashes on virus mutations, please turn this option to false.", category: "DiseasesExpanded: Additional")]
         public bool FrequentVirusAndNanobotUptades { get; set; }
 
         [JsonProperty]
