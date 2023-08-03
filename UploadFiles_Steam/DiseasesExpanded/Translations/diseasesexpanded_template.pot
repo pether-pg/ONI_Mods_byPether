@@ -340,7 +340,7 @@ msgstr ""
 
 #. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION
 msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION"
-msgid "The hunger of the Experiment 52B seem to be infectious..."
+msgid "The hunger of the ravenous plants seems to be infectious..."
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS
@@ -921,6 +921,26 @@ msgstr ""
 #. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP
 msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP"
 msgid "Insect Allergies make small bites more dangerous."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.DESC"
+msgid "This duplicant won't wash their hands."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.NAME
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.NAME"
+msgid "Filthy"
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC"
+msgid "This duplicant is not excited with a concept of personal hygiene."
+msgstr ""
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC_TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC_TOOLTIP"
+msgid "Washing hands is not something that this duplicant is interested with."
 msgstr ""
 
 #. DiseasesExpanded.STRINGS.TRANSLATION.AUTHOR.NAME
