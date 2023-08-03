@@ -63,7 +63,7 @@ namespace DiseasesExpanded
                         if (InsectAllergies.HasAffectingTrait(infected))
                             damage *= InsectAllergies.BogSicknessDamageModifier;
                         if (Settings.Instance.RebalanceForDiseasesRestored)
-                            damage *= 4;
+                            damage *= 2;
                         infected.GetComponent<Health>()?.Damage(damage);
                         PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Negative, STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT, infected.transform);
                     }

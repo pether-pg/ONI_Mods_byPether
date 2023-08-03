@@ -71,6 +71,7 @@ namespace DiseasesExpanded
             this.AddGrowthRule((GrowthRule)GermGrowthRules.GrowthLike_Slimelung_Oxygen(SimHashes.Oxygen));
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.DieInElement(SimHashes.ChlorineGas));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.DieInElement(SimHashes.Methane));
 
             // Liquid
 

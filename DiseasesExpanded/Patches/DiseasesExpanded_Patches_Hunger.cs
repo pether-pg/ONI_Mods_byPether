@@ -73,8 +73,9 @@ namespace DiseasesExpanded
                 RancherChore.RancherChoreStates.Instance smi = targetRanchStation.GetSMI<RancherChore.RancherChoreStates.Instance>();
                 float medicineLvl = targetRanchStation.GetSMI<RancherChore.RancherChoreStates.Instance>().sm.rancher.Get(smi).GetAttributes().Get(Db.Get().Attributes.Caring.Id).GetTotalValue();
                 float reductionScale = 1.0f + medicineLvl * 0.1f;
+                float constantScale = 2.0f;
 
-                effects.Get(HungerSickness.CRITTER_EFFECT_ID).timeRemaining -= 600 * reductionScale;
+                effects.Get(HungerSickness.CRITTER_EFFECT_ID).timeRemaining -= 600 * reductionScale * constantScale;
             }
         }
     }
