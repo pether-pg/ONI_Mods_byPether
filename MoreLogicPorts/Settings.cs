@@ -25,23 +25,23 @@ namespace MoreLogicPorts
             }
         }
 
-        public Dictionary<string, bool> ShouldAddDisablePort;
+        public Dictionary<string, bool> AddDisablePort;
 
         public Settings()
         {
-            ShouldAddDisablePort = new Dictionary<string, bool>();
-            foreach (Type config in LogPorts.ConfigsToAddPorts().Keys)
-                ShouldAddDisablePort.Add(config.Name, true);
+            AddDisablePort = new Dictionary<string, bool>();
+            foreach (Type config in LogPorts.AffectedTypes(true))
+                AddDisablePort.Add(config.Name, true);
         }
 
         public bool CanAddPort(Type config)
         {
             string configName = config.Name;
 
-            if (ShouldAddDisablePort.ContainsKey(configName))
-                return ShouldAddDisablePort[configName];
+            if (AddDisablePort.ContainsKey(configName))
+                return AddDisablePort[configName];
 
-            ShouldAddDisablePort.Add(configName, false);
+            AddDisablePort.Add(configName, false);
             JsonSerializer<Settings>.Serialize(_instance);
 
             return false;

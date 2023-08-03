@@ -25,7 +25,7 @@ namespace MoreLogicPorts
             return Configs;
         }
 
-        private static List<Type> AffectedTypes()
+        public static List<Type> AffectedTypes(bool unconditionalGetAll = false)
         {
             List<Type> result = new List<Type>()
             {
@@ -47,11 +47,11 @@ namespace MoreLogicPorts
             };
 
             // Manual Radbolt Generator
-            if (DlcManager.IsExpansion1Active())
+            if (DlcManager.IsExpansion1Active() || unconditionalGetAll)
                 result.Add(typeof(ManualHighEnergyParticleSpawnerConfig));
 
             // Checkpoints
-            if (!ModInfo.IsCheckpointAutomationActive)
+            if (!ModInfo.IsCheckpointAutomationActive || unconditionalGetAll)
             {
                 result.Add(typeof(JetSuitMarkerConfig));
                 result.Add(typeof(LeadSuitMarkerConfig));
