@@ -331,7 +331,7 @@ namespace DiseasesExpanded
                 return;
 
             ((MutatingGerms)dis).UpdateGermData();
-            if(Settings.Instance.FrequentVirusAndNanobotUptades)
+            if(Settings.Instance.FrequentVirusAndNanobotUpdates)
                 SimMessages.CreateDiseaseTable(Db.Get().Diseases); // this can sometimes crash the game...
         }
 

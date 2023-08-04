@@ -99,7 +99,7 @@ namespace DiseasesExpanded
                 return;
 
             ((MedicalNanobots)dis).UpdateGermData();
-            if (Settings.Instance.FrequentVirusAndNanobotUptades)
+            if (Settings.Instance.FrequentVirusAndNanobotUpdates)
                 SimMessages.CreateDiseaseTable(Db.Get().Diseases); // this could sometimes crash the game
         }
 
