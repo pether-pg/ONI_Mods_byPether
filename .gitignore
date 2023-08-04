@@ -843,3 +843,6 @@ packages/PLib.4.13.0/PLib.4.13.0.nupkg
 SidequestMod/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
 SidequestMod/obj/Release/SidequestMod.csproj.CopyComplete
 SidequestMod/obj/Release/SidequestMod.csproj.FileListAbsolute.txt
+DietVariety/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
+DietVariety/obj/Release/DietVariety.csproj.CopyComplete
+DietVariety/obj/Release/DietVariety.csproj.FileListAbsolute.txt

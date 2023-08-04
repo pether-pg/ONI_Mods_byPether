@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreLogicPorts", "MoreLogic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SidequestMod", "SidequestMod\SidequestMod.csproj", "{D558C664-6BB5-4716-8B4D-1C05D9DE476E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DietVariety", "DietVariety\DietVariety.csproj", "{BCF023EA-7557-479E-9F98-645BA75AE89A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{D558C664-6BB5-4716-8B4D-1C05D9DE476E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D558C664-6BB5-4716-8B4D-1C05D9DE476E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D558C664-6BB5-4716-8B4D-1C05D9DE476E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF023EA-7557-479E-9F98-645BA75AE89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF023EA-7557-479E-9F98-645BA75AE89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF023EA-7557-479E-9F98-645BA75AE89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF023EA-7557-479E-9F98-645BA75AE89A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
