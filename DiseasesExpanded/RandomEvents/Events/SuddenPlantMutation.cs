@@ -21,14 +21,14 @@ namespace DiseasesExpanded.RandomEvents.Events
                 {
                     int numberOfPlants = GameClock.Instance.GetCycle() / 5;
                     int max = Mathf.Min(100, Components.MutantPlants.Count);
-                    numberOfPlants = Mathf.Clamp(numberOfPlants, 1, 100);
+                    numberOfPlants = Mathf.Clamp(numberOfPlants, 1, max);
 
                     List<int> possibleIdx = new List<int>();
                     for (int i = 0; i < Components.MutantPlants.Count; i++)
                         possibleIdx.Add(i);
                     possibleIdx.Shuffle();
 
-                    for (int i  =0; i < max; i++)
+                    for (int i = 0; i < numberOfPlants; i++)
                     {
                         if (possibleIdx.Count == 0)
                             break;
