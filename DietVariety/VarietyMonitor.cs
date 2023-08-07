@@ -58,7 +58,7 @@ namespace DietVariety
         public Effect GetEffect()
         {
             int uniqueCount = GetUniqueCount();
-            float duration = 600 * 5;
+            float duration = 0;
             float moraleBonus = Settings.Instance.MoralePerFoodType * uniqueCount - Settings.Instance.MinFoodTypesRequired * Settings.Instance.MoralePerFoodType;
             string desc = string.Format(STRINGS.EFFECTS.VARIED_DIET.DESC, uniqueCount, Settings.Instance.MaxMealsCounted);
             

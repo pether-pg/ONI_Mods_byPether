@@ -15,14 +15,27 @@ namespace DietVariety
             get
             {
                 if (_instance == null)
+                    _instance = JsonSerializer<Settings>.Deserialize();
+                if (_instance == null)
+                {
                     _instance = new Settings();
+                    JsonSerializer<Settings>.Serialize(_instance);
+                }
                 return _instance;
             }
         }
 
-        public int MinFoodTypesRequired = 3;
-        public float MoralePerFoodType = 0.5f;
-        public ushort MaxMealsCounted = 15;
-        public ushort PreferencePenaltyForEatenTypes = 100;
+        public int MinFoodTypesRequired;
+        public ushort MaxMealsCounted;
+        public float MoralePerFoodType;
+        public ushort PreferencePenaltyForEatenTypes;
+
+        public Settings()
+        {
+            MinFoodTypesRequired = 3;
+            MoralePerFoodType = 0.5f;
+            MaxMealsCounted = 15;
+            PreferencePenaltyForEatenTypes = 100;
+        }
     }
 }
