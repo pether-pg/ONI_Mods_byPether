@@ -20,9 +20,9 @@ namespace DietVariety
             }
         }
 
-        public int StartingMorale = -1;
+        public int MinFoodTypesRequired = 3;
         public float MoralePerFoodType = 0.5f;
-        public int MaxMealsCounted = 15;
-        public int PreferencePenaltyForEatenTypes = 100;
+        public ushort MaxMealsCounted = 15;
+        public ushort PreferencePenaltyForEatenTypes = 100;
     }
 }

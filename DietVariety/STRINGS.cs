@@ -12,8 +12,13 @@ namespace DietVariety
         {
             public class VARIED_DIET
             {
-                public static LocString NAME = "Rich Diet";
+                public static LocString NAME = "Diet Quality";
                 public static LocString DESC = "This duplicant ate {0} different meals during last {1} meals.";
+            }
+
+            public class A_NEW_HOPE_BOOST
+            {
+                public static LocString NAME = "Diet Quality inactive";
             }
         }
     }
