@@ -846,3 +846,6 @@ SidequestMod/obj/Release/SidequestMod.csproj.FileListAbsolute.txt
 DietVariety/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
 DietVariety/obj/Release/DietVariety.csproj.CopyComplete
 DietVariety/obj/Release/DietVariety.csproj.FileListAbsolute.txt
+ExampleFoodMod/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
+ExampleFoodMod/obj/Release/ExampleFoodMod.csproj.CopyComplete
+ExampleFoodMod/obj/Release/ExampleFoodMod.csproj.FileListAbsolute.txt

@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SidequestMod", "SidequestMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DietVariety", "DietVariety\DietVariety.csproj", "{BCF023EA-7557-479E-9F98-645BA75AE89A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleFoodMod", "ExampleFoodMod\ExampleFoodMod.csproj", "{516A4D42-5693-474D-8189-C6A1F28CB4FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{BCF023EA-7557-479E-9F98-645BA75AE89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCF023EA-7557-479E-9F98-645BA75AE89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCF023EA-7557-479E-9F98-645BA75AE89A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{516A4D42-5693-474D-8189-C6A1F28CB4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{516A4D42-5693-474D-8189-C6A1F28CB4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{516A4D42-5693-474D-8189-C6A1F28CB4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{516A4D42-5693-474D-8189-C6A1F28CB4FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
