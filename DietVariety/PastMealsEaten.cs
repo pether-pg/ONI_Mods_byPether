@@ -13,7 +13,7 @@ namespace DietVariety
         [Serialize]
         public Dictionary<int, Dictionary<string, int>> TimeSinceAte;
 
-        private Dictionary<GameObject, int> DuplicantsIds;
+        private Dictionary<GameObject, int> DuplicantIdsCache;
 
         private static PastMealsEaten _instance;
 
@@ -67,6 +67,12 @@ namespace DietVariety
                     TimeSinceAte[id][key] += 1;
         }
 
+        public void StopTrackingDeadDupe(GameObject deadDupe)
+        {
+            if (DuplicantIdsCache.ContainsKey(deadDupe))
+                DuplicantIdsCache.Remove(deadDupe);
+        }
+
         public int GetUniqueMealsCount(GameObject go)
         {
             EnsureDuplicantTracked(go);
@@ -95,13 +101,13 @@ namespace DietVariety
 
         private int GetGameObjectId(GameObject go)
         {
-            if (DuplicantsIds == null)
-                DuplicantsIds = new Dictionary<GameObject, int>();
+            if (DuplicantIdsCache == null)
+                DuplicantIdsCache = new Dictionary<GameObject, int>();
 
-            if (!DuplicantsIds.ContainsKey(go))
-                DuplicantsIds.Add(go, go.GetComponent<KPrefabID>().InstanceID);
+            if (!DuplicantIdsCache.ContainsKey(go))
+                DuplicantIdsCache.Add(go, go.GetComponent<KPrefabID>().InstanceID);
 
-            return DuplicantsIds[go];
+            return DuplicantIdsCache[go];
         }
     }
 }
