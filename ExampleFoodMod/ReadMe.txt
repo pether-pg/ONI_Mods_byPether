@@ -1,6 +1,7 @@
 ﻿Please search the project for TODO comments to see what must be changed.
 Use Ctrl + Shift + F to search more than one file
 
+When your code is ready, build the project.
 After building, your mod .dll file will be located under the path:
 ExampleFoodMod\bin\Release\ (.dll file here)
 You can open the directory by right-clicking the project and selecting "Open Folder in File Explorer"
