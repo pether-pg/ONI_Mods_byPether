@@ -43,12 +43,19 @@
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\lib\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\lib\UnityEngine.dll</HintPath>
     </Reference>
@@ -64,10 +71,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssetLoader.cs" />
+    <Compile Include="CustomSettingsController.cs" />
+    <Compile Include="FUtils\FButton.cs" />
+    <Compile Include="FUtils\FCycle.cs" />
+    <Compile Include="FUtils\FScreen.cs" />
+    <Compile Include="FUtils\FToggle2 .cs" />
     <Compile Include="ModAssets.cs" />
     <Compile Include="ModInfo.cs" />
     <Compile Include="NotificationManager.cs" />
     <Compile Include="Patches\Patches.cs" />
+    <Compile Include="Patches_SGTs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Patches\QuestScreen_Patches.cs" />
     <Compile Include="SidequestManager.cs" />
@@ -83,6 +96,11 @@
     <Compile Include="Sidequests\TutorialQuests\TutorialQuest.cs" />
     <Compile Include="Sidequests\TutorialQuests\TutorialToiletsQuest.cs" />
     <Compile Include="STRINGS.cs" />
+    <Compile Include="TMPConverter.cs" />
+    <Compile Include="TMPImportFix.cs" />
+    <Compile Include="TMPSettings.cs" />
+    <Compile Include="UISoundHelper.cs" />
+    <Compile Include="UIUtils.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

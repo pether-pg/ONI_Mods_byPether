@@ -19,16 +19,17 @@ namespace SidequestMod
 
                 Dictionary<ManagementMenu.ManagementMenuToggleInfo, ManagementMenu.ScreenData> ScreenInfoMatch;
                 ScreenInfoMatch = Traverse.Create(ManagementMenu.Instance).Field("ScreenInfoMatch").GetValue<Dictionary<ManagementMenu.ManagementMenuToggleInfo, ManagementMenu.ScreenData>>();
-
+                
                 ScreenInfoMatch.Add(info, new ManagementMenu.ScreenData()
                 {
-                    screen = (KScreen)AssetLoader.SidequestScreen,
+                    screen = CustomSettingsController.Instance,
                     tabIdx = 0,
                     toggleInfo = info,
                     cancelHandler = (Func<bool>)null
                 });
             }
         }
+
 
         [HarmonyPatch(typeof(KIconToggleMenu))]
         [HarmonyPatch("Setup")]

@@ -9,6 +9,8 @@ namespace SidequestMod
 
         public override void OnLoad(Harmony harmony)
         {
+            ModAssets.LoadAssets();
+
             base.OnLoad(harmony);
 
             Namespace = GetType().Namespace;
