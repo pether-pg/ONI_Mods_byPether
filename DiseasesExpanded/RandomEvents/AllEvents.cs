@@ -72,6 +72,30 @@ namespace DiseasesExpanded.RandomEvents
 
             Init();
 
+            RegisterGeneralEvents();
+            RegisterVirusEvents();
+            RegisterFoodPoisoningEvents();
+            RegisterSlimelungEvents();
+            RegisterBogEvents();
+            RegisterFrostEvents();
+            RegisterSpindlyEvents();
+            RegisterHungerEvents();
+            RegisterGassyEvents();
+            RegisterNanobotEvents();
+            RegisterRadiationEvents();
+            RegisterAlienEvents();
+            RegisterZombieEvents();
+        }
+
+        // TODO idea list:
+        // Ice Garden
+        // Get Vaccinated
+        // Pollination
+        // Nuclear Pee
+        // Med Prints
+
+        public static void RegisterGeneralEvents()
+        {
             // General
             RegisterEvent(new MandatoryTesting(WEIGHT_COMMON));
             RegisterEvent(new MiraculousRecovery(WEIGHT_RARE));
@@ -82,7 +106,7 @@ namespace DiseasesExpanded.RandomEvents
             RegisterEvent(new EradicateGerms(WEIGHT_RARE));
 
             // All
-            for(byte idx = 0; idx < Db.Get().Diseases.Count; idx++)
+            for (byte idx = 0; idx < Db.Get().Diseases.Count; idx++)
             {
                 RegisterEvent(new PrintSomeGerms(idx, WEIGHT_NEVER));
                 RegisterEvent(new SpawnInfectedElement(idx, WEIGHT_RARE));
@@ -93,57 +117,100 @@ namespace DiseasesExpanded.RandomEvents
             }
             foreach (string flowerId in SproutFlowers.SupportedFlowers())
                 RegisterEvent(new SproutFlowers(flowerId, WEIGHT_NORMAL));
+        }
 
-            // Mutating Virus
+        public static void RegisterVirusEvents()
+        {
+            if (!Settings.Instance.MutatingVirus.IncludeDisease)
+                return;
+
             for (int danger = (int)Danger.None; danger <= (int)Danger.Deadly; danger++)
                 RegisterEvent(new SuddenVirusMutation(danger, WEIGHT_NORMAL));
             RegisterEvent(new RegressiveVirusMutation(WEIGHT_NORMAL));
+        }
 
-            // Food Poisoning
+        public static void RegisterFoodPoisoningEvents()
+        {
             RegisterEvent(new FilthyFood(WEIGHT_NORMAL));
             RegisterEvent(new HurtingTummy(gas: false, WEIGHT_NORMAL));
+        }
 
-            // Slimelung
+        public static void RegisterSlimelungEvents()
+        {
             RegisterEvent(new SlimyPollutedOxygen(WEIGHT_NORMAL));
+        }
 
-            // Bog Bugs
+        public static void RegisterBogEvents()
+        {
+            if (!Settings.Instance.BogInsects.IncludeDisease)
+                return;
+
             RegisterEvent(new GreatBogBugMigration(WEIGHT_NORMAL));
+        }
 
-            // Frost Shards
+        public static void RegisterFrostEvents()
+        {
+            if (!Settings.Instance.FrostPox.IncludeDisease)
+                return;
+        }
 
-            // Spindly Curse
+        public static void RegisterSpindlyEvents()
+        {
+            if (!Settings.Instance.SleepingCurse.IncludeDisease)
+                return;
+
             RegisterEvent(new SpindlyPlants(WEIGHT_NORMAL));
+        }
 
-            // Hunger Germs
+        public static void RegisterHungerEvents()
+        {
+            if (!Settings.Instance.HungerGerms.IncludeDisease)
+                return;
+
             RegisterEvent(new HungryPet(WEIGHT_NORMAL));
             RegisterEvent(new PlagueOfHunger(WEIGHT_RARE));
+        }
 
-            // Gassy Germs
+        public static void RegisterGassyEvents()
+        {
+            if (!Settings.Instance.MooFlu.IncludeDisease)
+                return;
+
             RegisterEvent(new HurtingTummy(gas: true, WEIGHT_NORMAL));
             RegisterEvent(new StrayComet(isMoo: true, WEIGHT_NORMAL));
+        }
 
-            // Medical Nanobots
+        public static void RegisterNanobotEvents()
+        {
+            if (!Settings.Instance.MedicalNanobots.IncludeDisease)
+                return;
+
             RegisterEvent(new NanobotUpdate(false, WEIGHT_NORMAL));
             RegisterEvent(new NanobotUpdate(true, WEIGHT_RARE));
+        }
 
-            // Radiation
+        public static void RegisterRadiationEvents()
+        {
+            if (!DlcManager.IsExpansion1Active())
+                return;
+
             RegisterEvent(new SuddenPlantMutation(WEIGHT_NORMAL));
             RegisterEvent(new IntenseRadiation(WEIGHT_NORMAL));
+        }
 
-            // Alien Goo
+        public static void RegisterAlienEvents()
+        {
+            if (!Settings.Instance.AlienGoo.IncludeDisease)
+                return;
+
             RegisterEvent(new StrayComet(isMoo: false, WEIGHT_NORMAL));
             RegisterEvent(new SpaceScream(WEIGHT_RARE));
+        }
 
-            // Zombie Spores
+        public static void RegisterZombieEvents()
+        {
             RegisterEvent(new BloomingGraves(WEIGHT_RARE));
             RegisterEvent(new NightOfTheLivingDead(WEIGHT_ALMOST_NEVER));
         }
-
-        // TODO idea list:
-        // Ice Garden
-        // Get Vaccinated
-        // Pollination
-        // Nuclear Pee
-        // Med Prints
     }
 }
