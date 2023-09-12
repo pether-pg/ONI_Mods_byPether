@@ -20,7 +20,7 @@ namespace RoomsExpanded
 
         public static Effect CalculateEffectBonus(MinionModifiers modifiers)
         {
-            AttributeInstance scienceAttrInstance = modifiers.attributes.AttributeTable.Where(p => p.Name == "Science").FirstOrDefault();
+            AttributeInstance scienceAttrInstance = modifiers.attributes.AttributeTable.Where(p => p.Id == "Learning").FirstOrDefault();
             if (scienceAttrInstance == null)
                 return null;
 

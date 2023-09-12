@@ -28,6 +28,8 @@ namespace RoomsExpanded
             RoomConstraintTags.AddStompInConflict(__instance.Farm, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.CreaturePen, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.Park, RoomTypes_AllModded.Museum);
+            RoomConstraintTags.AddStompInConflict(__instance.Laboratory, RoomTypes_AllModded.Museum);
+            RoomConstraintTags.AddStompInConflict(__instance.Kitchen, RoomTypes_AllModded.Museum);
 
             if(Settings.Instance.Aquarium.IncludeRoom)
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.Aquarium, RoomTypes_AllModded.Museum);
@@ -37,13 +39,13 @@ namespace RoomsExpanded
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.GymRoom, RoomTypes_AllModded.Museum);
             if(Settings.Instance.Kitchenette.IncludeRoom)
                 RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.KitchenetteRoom, RoomTypes_AllModded.Museum);
-            //if(Settings.Instance.Laboratory.IncludeRoom)
-            //    RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.LaboratoryRoom, RoomTypes_AllModded.Museum);
+            if(Settings.Instance.MissionControl.IncludeRoom)
+                RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.MissionControlRoom, RoomTypes_AllModded.Museum);
         }
 
         public static Effect CalculateEffectBonus(MinionModifiers modifiers)
         {
-            AttributeInstance creativityAttrInstance = modifiers.attributes.AttributeTable.Where(p => p.Name == "Creativity").FirstOrDefault();
+            AttributeInstance creativityAttrInstance = modifiers.attributes.AttributeTable.Where(p => p.Id == "Art").FirstOrDefault();
             if (creativityAttrInstance == null)
                 return null;
 

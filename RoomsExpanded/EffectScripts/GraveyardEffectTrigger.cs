@@ -33,8 +33,6 @@ namespace RoomsExpanded
             if (effects == null || effects.HasEffect(RoomTypeGraveyardData.EffectId))
                 return;
             
-            // Works for DLC
-            /**/
             Effect effect = new Effect(RoomTypeGraveyardData.EffectId, name, description, duration, true, true, false);
             effect.SelfModifiers = new System.Collections.Generic.List<AttributeModifier>();
             effect.SelfModifiers.Add(new AttributeModifier("StressDelta", value, description: name));
