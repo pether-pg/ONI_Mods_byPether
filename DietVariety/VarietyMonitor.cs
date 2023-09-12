@@ -35,7 +35,8 @@ namespace DietVariety
 
         private void OnDeath(object data)
         {
-            PastMealsEaten.Instance.StopTrackingDeadDupe(this.gameObject);
+            if(PastMealsEaten.Instance != null && this.gameObject != null)
+                PastMealsEaten.Instance.StopTrackingDeadDupe(this.gameObject);
         }
 
         private void InitalizeEffect()

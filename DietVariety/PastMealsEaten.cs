@@ -69,6 +69,9 @@ namespace DietVariety
 
         public void StopTrackingDeadDupe(GameObject deadDupe)
         {
+            if (DuplicantIdsCache == null)
+                return;
+
             if (DuplicantIdsCache.ContainsKey(deadDupe))
                 DuplicantIdsCache.Remove(deadDupe);
         }
