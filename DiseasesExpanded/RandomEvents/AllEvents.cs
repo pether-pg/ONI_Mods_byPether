@@ -1,6 +1,7 @@
 ﻿using ONITwitchLib;
 using ONITwitchLib.Core;
 using DiseasesExpanded.RandomEvents.Events;
+using System;
 
 namespace DiseasesExpanded.RandomEvents
 {
@@ -104,6 +105,7 @@ namespace DiseasesExpanded.RandomEvents
             RegisterEvent(new IntensePollination(WEIGHT_NORMAL));
             RegisterEvent(new GreatSanishellMigration(WEIGHT_NORMAL));
             RegisterEvent(new EradicateGerms(WEIGHT_RARE));
+            RegisterEvent(new CursorDisinfecting(WEIGHT_NORMAL));
 
             // All
             for (byte idx = 0; idx < Db.Get().Diseases.Count; idx++)
@@ -196,6 +198,9 @@ namespace DiseasesExpanded.RandomEvents
 
             RegisterEvent(new SuddenPlantMutation(WEIGHT_NORMAL));
             RegisterEvent(new IntenseRadiation(WEIGHT_NORMAL));
+            
+            foreach(Danger danger in Enum.GetValues(typeof(Danger)))
+                RegisterEvent(new CursorRadioactive(danger, WEIGHT_NORMAL));
         }
 
         public static void RegisterAlienEvents()
