@@ -854,3 +854,8 @@ UninstalledModCrashHandler/obj/Release/UninstalledModCrashHandler.csproj.CopyCom
 UninstalledModCrashHandler/obj/Release/UninstalledModCrashHandler.csproj.FileListAbsolute.txt
 UninstalledModCrashHandler/bin/Release/mod.yaml
 UninstalledModCrashHandler/bin/Release/mod_info.yaml
+GridCellHelper/bin/Release/mod.yaml
+GridCellHelper/bin/Release/mod_info.yaml
+GridCellHelper/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
+GridCellHelper/obj/Release/GridCellHelper.csproj.CopyComplete
+GridCellHelper/obj/Release/GridCellHelper.csproj.FileListAbsolute.txt

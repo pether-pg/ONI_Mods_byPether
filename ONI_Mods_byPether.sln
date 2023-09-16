@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleFoodMod", "ExampleFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UninstalledModCrashHandler", "UninstalledModCrashHandler\UninstalledModCrashHandler.csproj", "{DEA164D5-798A-4F41-81A5-8D1405A995A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridCellHelper", "GridCellHelper\GridCellHelper.csproj", "{2EA7BA63-4D76-4196-A390-1D3D42E82D05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{DEA164D5-798A-4F41-81A5-8D1405A995A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEA164D5-798A-4F41-81A5-8D1405A995A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEA164D5-798A-4F41-81A5-8D1405A995A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
