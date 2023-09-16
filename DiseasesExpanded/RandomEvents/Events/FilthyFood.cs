@@ -26,9 +26,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                         PrimaryElement prime = edible.GetComponent<PrimaryElement>();
                         if (prime != null)
                             prime.AddDisease(GermIdx.FoodPoisoningIdx, 100000, GeneralName);
-
-                        ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Your food supply has been infected with food poisoning.");
                     }
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Your food supply has been infected with food poisoning.");
                 });
         }
     }

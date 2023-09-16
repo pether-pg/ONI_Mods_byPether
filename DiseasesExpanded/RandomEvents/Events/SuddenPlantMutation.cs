@@ -20,8 +20,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                 data =>
                 {
                     int numberOfPlants = GameClock.Instance.GetCycle() / 5;
-                    int max = Mathf.Min(100, Components.MutantPlants.Count);
-                    numberOfPlants = Mathf.Clamp(numberOfPlants, 1, max);
+                    int max = Mathf.Min(100, Components.MutantPlants.Count / 5);
+                    numberOfPlants = Mathf.Clamp(numberOfPlants, 0, max);
 
                     List<int> possibleIdx = new List<int>();
                     for (int i = 0; i < Components.MutantPlants.Count; i++)
