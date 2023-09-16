@@ -32,6 +32,36 @@ namespace DiseasesExpanded
             }
         }
 
+        [HarmonyPatch(typeof(EntombedItemManager))]
+        [HarmonyPatch("OnDeserialized")]
+        public class EntombedItemManager_OnDeserialized_Patch
+        {
+            public static void Prefix(EntombedItemManager __instance)
+            {
+                if (!Settings.Instance.PurgeMapFromDisabledGerms)
+                    return;
+
+                int germCount = Db.Get().Diseases.Count;
+
+                List<byte> diseaseIndices = Traverse.Create(__instance).Field("diseaseIndices").GetValue<List<byte>>();
+                List<int> diseaseCounts = Traverse.Create(__instance).Field("diseaseCounts").GetValue<List<int>>();
+
+                if (diseaseIndices == null || diseaseCounts == null)
+                    return;
+
+                for(int i=0; i< diseaseIndices.Count; i++)
+                {
+                    if(diseaseIndices[i] >= germCount && diseaseIndices[i] != byte.MaxValue)
+                    {
+                        diseaseIndices[i] = byte.MaxValue;
+                        diseaseCounts[i] = 0;
+                    }
+                }
+
+                Debug.Log($"{ModInfo.Namespace}: Entombed Items Purged!");
+            }
+        }
+
         [HarmonyPatch(typeof(Game))]
         [HarmonyPatch("OnSpawn")]
         public class Game_OnPrefabInit_Patch
@@ -45,7 +75,11 @@ namespace DiseasesExpanded
             private static void ThisEntireCityMustBePurged()
             {
                 PurgeMap();
-                Debug.Log($"{ModInfo.Namespace}: Map Purged!");
+                PurgeCmps<Edible>(Components.Edibles);
+                PurgeCmps<Pickupable>(Components.Pickupables);
+                PurgeCmps<BuildingComplete>(Components.BuildingCompletes);
+
+                Debug.Log($"{ModInfo.Namespace}: This cntire city just got purged!");
             }
 
             private static void PurgeMap()
@@ -61,6 +95,29 @@ namespace DiseasesExpanded
                             SimMessages.ConsumeDisease(cell, 1.0f, int.MaxValue, 0);
                         }
                     }
+                Debug.Log($"{ModInfo.Namespace}: Map Purged!");
+            }
+
+            private static void PurgeCmps<T>(object toPurge) where T : KMonoBehaviour
+            {
+                Components.Cmps<T> cmps = toPurge as Components.Cmps<T>;
+                if (cmps == null)
+                    return;
+
+                int germCount = Db.Get().Diseases.Count;
+                byte abaIdx = Db.Get().Diseases.GetIndex(AbandonedGerms.ID);
+
+                foreach(T cmp in cmps)
+                {
+                    PrimaryElement prime = cmp.GetComponent<PrimaryElement>();
+                    if (prime == null)
+                        continue;
+
+                    if (prime.DiseaseIdx >= germCount && prime.DiseaseIdx != byte.MaxValue)
+                        prime.AddDisease(abaIdx, 100000, "Overwrite disabled germs");
+                }
+
+                Debug.Log($"{ModInfo.Namespace}: Purged Cmps<{typeof(T)}>");
             }
         }
     }

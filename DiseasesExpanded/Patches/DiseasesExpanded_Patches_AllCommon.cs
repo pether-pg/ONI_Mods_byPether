@@ -21,6 +21,7 @@ namespace DiseasesExpanded
                     return;
 
                 Dictionary<string, Color32> namedLookup = Traverse.Create(__instance).Field("namedLookup").GetValue<Dictionary<string, Color32>>();
+                namedLookup.Add(AbandonedGerms.ID, AbandonedGerms.ColorValue); 
                 namedLookup.Add(HungerGerms.ID, HungerGerms.ColorValue);
                 namedLookup.Add(BogInsects.ID, BogInsects.ColorValue);
                 namedLookup.Add(FrostShards.ID, FrostShards.ColorValue);
@@ -48,6 +49,7 @@ namespace DiseasesExpanded
         {
             public static void Prefix()
             {
+                BasicModUtils.MakeGermStrings(AbandonedGerms.ID, STRINGS.GERMS.ABANDONED.NAME, STRINGS.GERMS.ABANDONED.LEGEND_HOVERTEXT, STRINGS.GERMS.ABANDONED.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(BogInsects.ID, STRINGS.GERMS.BOGINSECTS.NAME, STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT, STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(FrostShards.ID, STRINGS.GERMS.FROSTHARDS.NAME, STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT, STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION);
                 BasicModUtils.MakeGermStrings(GassyGerms.ID, STRINGS.GERMS.GASSYGERMS.NAME, STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT, STRINGS.DISEASES.GASSICKNESS.DESCRIPTION);
@@ -199,6 +201,7 @@ namespace DiseasesExpanded
         {
             public static void Prefix()
             {
+                Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = AbandonedGerms.ID, overlayColourName = AbandonedGerms.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = HungerGerms.ID, overlayColourName = HungerGerms.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = BogInsects.ID, overlayColourName = BogInsects.ID });
                 Assets.instance.DiseaseVisualization.info.Add(new DiseaseVisualization.Info() { name = FrostShards.ID, overlayColourName = FrostShards.ID });
@@ -211,6 +214,8 @@ namespace DiseasesExpanded
 
             public static void Postfix(ref Diseases __instance, bool statsOnly)
             {
+                __instance.Add(new AbandonedGerms(statsOnly));
+
                 if (Settings.Instance.FrostPox.IncludeDisease)          __instance.Add(new FrostShards(statsOnly));
                 if (Settings.Instance.MooFlu.IncludeDisease)            __instance.Add(new GassyGerms(statsOnly));
                 if (Settings.Instance.AlienGoo.IncludeDisease)          __instance.Add(new AlienGerms(statsOnly));
@@ -225,6 +230,17 @@ namespace DiseasesExpanded
 
                 if (DlcManager.IsExpansion1Active() && Settings.Instance.SleepingCurse.IncludeDisease)
                     __instance.Add(new SpindlyGerms(statsOnly));
+            }
+        }
+
+
+        [HarmonyPatch(typeof(OverlayModes.Disease))]
+        [HarmonyPatch("GetCustomLegendData")]
+        public static class OverlayModesDisease_GetCustomLegendData_Patch
+        {
+            public static void Postfix(ref List<LegendEntry> __result)
+            {
+                __result.RemoveAll(entry => entry.name.Contains(STRINGS.GERMS.ABANDONED.NAME));
             }
         }
 

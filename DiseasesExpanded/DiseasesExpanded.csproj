@@ -99,6 +99,7 @@
   <ItemGroup>
     <Compile Include="AssetLoader.cs" />
     <Compile Include="CustomSicknessComponents\CustomFxSickEffectSickness.cs" />
+    <Compile Include="Germs\AbandonedGerms.cs" />
     <Compile Include="ParticleHelper.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Effects.cs" />
     <Compile Include="CustomSicknessComponents\ModdedAccesories.cs" />
@@ -169,9 +170,13 @@
     <Compile Include="RandomEvents\Configs\HarmlessBeeConfig.cs" />
     <Compile Include="RandomEvents\Configs\LittleSunshineConfig.cs" />
     <Compile Include="RandomEvents\Configs\PlagueSlugConfig.cs" />
+    <Compile Include="RandomEvents\EntityScripts\DisinfectOwnLocation.cs" />
     <Compile Include="RandomEvents\EntityScripts\FirstAidKitOpener.cs" />
+    <Compile Include="RandomEvents\EntityScripts\FollowCursor.cs" />
     <Compile Include="RandomEvents\EntityScripts\GermySurpriseBox.cs" />
     <Compile Include="RandomEvents\Events\AdoptStrayPet.cs" />
+    <Compile Include="RandomEvents\Events\CursorDisinfecting.cs" />
+    <Compile Include="RandomEvents\Events\CursorRadioactive.cs" />
     <Compile Include="RandomEvents\Events\EradicateGerms.cs" />
     <Compile Include="RandomEvents\Events\FilthyFood.cs" />
     <Compile Include="RandomEvents\Events\SpawnGermySurpriseBox.cs" />

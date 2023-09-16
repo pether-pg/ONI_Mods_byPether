@@ -6,6 +6,13 @@ namespace DiseasesExpanded
     {
         public class GERMS
         {
+            public class ABANDONED
+            {
+                public static LocString NAME = (LocString)"Abandoned Germs";
+                public static LocString LEGEND_HOVERTEXT = (LocString)"Abandoned Germs present.\n";
+                public static LocString DESCRIPTION = "Those germs no longer exist, and if they do, they will die quickly.";
+            }
+
             public class BOGINSECTS
             {
                 public static LocString NAME = (LocString) UI.FormatAsLink("Bog Bugs", nameof(BOGINSECTS));
