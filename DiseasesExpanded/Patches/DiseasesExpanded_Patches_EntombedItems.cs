@@ -1,13 +1,23 @@
 ﻿using HarmonyLib;
 using UnityEngine;
 using Klei.AI;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_EntombedItems
     {
+        [HarmonyPatch(typeof(SaveLoader))]
+        [HarmonyPatch(new Type[] { typeof(string), typeof(bool), typeof(bool) })]
+        [HarmonyPatch("Save")]
+        public class SaveLoader_Save_Patch
+        {
+            public static void Prefix()
+            {
+                PreviousGermIndex.Instance.Save();
+            }
+        }
 
         [HarmonyPatch(typeof(EntombedItemManager))]
         [HarmonyPatch("OnDeserialized")]
@@ -22,7 +32,6 @@ namespace DiseasesExpanded
                 Dictionary<byte, byte> translationDict = PreviousGermIndex.Instance.GetGermTranslationDict();
                 TranslateOldGerms(__instance, translationDict);
                 PreviousGermIndex.Instance.UpdateSavedDictionary();
-                PreviousGermIndex.Instance.Save();
                 PreviousGermIndex.Instance.LogDictionary();
 
                 Debug.Log($"{ModInfo.Namespace}: Entombed Items Updated!");
