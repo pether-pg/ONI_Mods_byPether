@@ -50,10 +50,10 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
 
             foreach (var entry in entries)
             {
-                if (entry.obj is T kmonobeh)
+                if (entry.obj is T component)
                 {
-                    PrimaryElement prime = kmonobeh.GetComponent<PrimaryElement>();
-                    if (prime == null)
+                    PrimaryElement prime;
+                    if (component.TryGetComponent<PrimaryElement>(out prime) == false)
                         continue;
 
                     prime.AddDisease(prime.DiseaseIdx, -prime.DiseaseCount, "Purified by DisinfectOwnLocation");

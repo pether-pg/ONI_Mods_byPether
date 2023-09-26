@@ -31,9 +31,10 @@ namespace DiseasesExpanded.RandomEvents.Events
             for(int i = 0; i < repeat; i++)
             {
                 ClearAllCells();
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.2f);
             }
             ClearAllBuildings();
+            ClearAllPickupables();
         }
 
 
@@ -53,6 +54,24 @@ namespace DiseasesExpanded.RandomEvents.Events
                     continue;
 
                 PrimaryElement prime = building.primaryElement;
+                if (prime.DiseaseIdx == GermIdx.Invalid || prime.DiseaseCount <= 0)
+                    continue;
+
+                prime.AddDisease(prime.DiseaseIdx, -prime.DiseaseCount, GeneralName);
+            }
+        }
+
+        private void ClearAllPickupables()
+        {
+            foreach (Pickupable pickup in Components.Pickupables)
+            {
+                if (pickup == null)
+                    continue;
+
+                PrimaryElement prime;
+                if (pickup.TryGetComponent<PrimaryElement>(out prime) == false)
+                    continue;
+
                 if (prime.DiseaseIdx == GermIdx.Invalid || prime.DiseaseCount <= 0)
                     continue;
 
