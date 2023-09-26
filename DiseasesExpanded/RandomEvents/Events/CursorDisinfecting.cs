@@ -22,9 +22,16 @@ namespace DiseasesExpanded.RandomEvents.Events
             Event = new Action<object>(
                 data =>
                 {
-                    GameObject cursor = new GameObject(nameof(CursorDisinfecting));
+                    GameObject prefab = Assets.GetPrefab((Tag)"fx_disinfect_splash");
+                    GameObject cursor = GameUtil.KInstantiate(prefab, Grid.CellToPosCCC(Grid.PosToCell(KInputManager.GetMousePos()), Grid.SceneLayer.FXFront2), Grid.SceneLayer.FXFront2);
                     cursor.AddOrGet<FollowCursor>();
                     cursor.AddOrGet<DisinfectOwnLocation>();
+
+                    KBatchedAnimController kbac = cursor.GetComponent<KBatchedAnimController>();
+                    kbac.sceneLayer = Grid.SceneLayer.FXFront2;
+                    kbac.initialMode = KAnim.PlayMode.Loop;
+                    kbac.enabled = false;
+                    kbac.enabled = true;
 
                     cursor.SetActive(true);
 

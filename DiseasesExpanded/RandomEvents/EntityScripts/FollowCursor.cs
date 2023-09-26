@@ -8,6 +8,7 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
         public void Sim33ms(float dt)
         {
             Vector3 position = Camera.main.ScreenToWorldPoint(KInputManager.GetMousePos());
+            position.z = Grid.GetLayerZ(Grid.SceneLayer.FXFront);
             this.transform.SetPosition(position);
         }
     }
