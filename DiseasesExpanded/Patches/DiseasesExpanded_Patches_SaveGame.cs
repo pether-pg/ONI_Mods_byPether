@@ -32,50 +32,22 @@ namespace DiseasesExpanded
             }
         }
 
-        [HarmonyPatch(typeof(EntombedItemManager))]
-        [HarmonyPatch("OnDeserialized")]
-        public class EntombedItemManager_OnDeserialized_Patch
-        {
-            public static void Prefix(EntombedItemManager __instance)
-            {
-                if (!Settings.Instance.PurgeMapFromDisabledGerms)
-                    return;
-
-                int germCount = Db.Get().Diseases.Count;
-
-                List<byte> diseaseIndices = Traverse.Create(__instance).Field("diseaseIndices").GetValue<List<byte>>();
-                List<int> diseaseCounts = Traverse.Create(__instance).Field("diseaseCounts").GetValue<List<int>>();
-
-                if (diseaseIndices == null || diseaseCounts == null)
-                    return;
-
-                for(int i=0; i< diseaseIndices.Count; i++)
-                {
-                    if(diseaseIndices[i] >= germCount && diseaseIndices[i] != byte.MaxValue)
-                    {
-                        diseaseIndices[i] = byte.MaxValue;
-                        diseaseCounts[i] = 0;
-                    }
-                }
-
-                Debug.Log($"{ModInfo.Namespace}: Entombed Items Purged!");
-            }
-        }
-
         [HarmonyPatch(typeof(Game))]
         [HarmonyPatch("OnSpawn")]
         public class Game_OnPrefabInit_Patch
         {
             public static void Postfix()
             {
-                if (Settings.Instance.PurgeMapFromDisabledGerms)
-                    GameScheduler.Instance.Schedule("Purge the Map", 0.2f, obj => ThisEntireCityMustBePurged());
+                // if (Settings.Instance.PurgeMapFromDisabledGerms)
+                if (false)
+                    GameScheduler.Instance.Schedule("Purge Everything", 0.2f, obj => ThisEntireCityMustBePurged());
             }
 
             private static void ThisEntireCityMustBePurged()
             {
                 PurgeMap();
                 PurgeCmps<Edible>(Components.Edibles);
+                PurgeCmps<Harvestable>(Components.Harvestables);
                 PurgeCmps<Pickupable>(Components.Pickupables);
                 PurgeCmps<BuildingComplete>(Components.BuildingCompletes);
 
