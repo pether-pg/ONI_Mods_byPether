@@ -10,7 +10,7 @@ namespace DiseasesExpanded.RandomEvents.Events
     {
         public StrayComet(bool isMoo = false, int weight = 1)
         {
-            GeneralName = "Stray Comet";
+            GeneralName = STRINGS.RANDOM_EVENTS.STRAY_COMET.NAME;
             NameDetails = isMoo ? GassyMooCometConfig.ID : "AlienComet";
             ID = GenerateId(nameof(StrayComet), NameDetails);
             AppearanceWeight = weight;
@@ -45,7 +45,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     }
 
                     GameObject go = SpawnBombard(worldId, cometId);
-                    ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, "Hey, look! A shooting star!", go);
+                    ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, STRINGS.RANDOM_EVENTS.STRAY_COMET.TOAST, go);
                 });
         }
 

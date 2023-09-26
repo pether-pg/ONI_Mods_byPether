@@ -11,7 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public RegressiveVirusMutation(int weight = 1)
         {
             ID = nameof(RegressiveVirusMutation);
-            GeneralName = "Regressive Mutation";
+            GeneralName = STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.TOAST;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.None;
             Condition = new Func<object, bool>(data => MutationData.Instance.GetCompletionPercent() > 0);
@@ -23,7 +23,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     MutationData.Instance.BulkModifyMutation(MutationVectors.GetResilianceVectors(), -1);
                     MutationData.Instance.Mutate();
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "We observed slightly less dangerous variant of the Virus.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.TOAST);
                 });
         }
     }

@@ -12,7 +12,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         {
             ID = nameof(SpindlyPlants);
             Group = Helpers.MAKE_THINGS_GERMY_GROUP;
-            GeneralName = "Spindly Plants";
+            GeneralName = STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;
 
@@ -31,7 +31,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         effects.Add(effect, true);
                     }
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Our plants have developed protective spindles.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.TOAST);
                 });
         }
     }

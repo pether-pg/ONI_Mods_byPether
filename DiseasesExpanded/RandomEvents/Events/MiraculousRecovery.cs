@@ -9,7 +9,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public MiraculousRecovery(int weight = 1)
         {
             ID = nameof(MiraculousRecovery);
-            GeneralName = "Miraculous Recovery";
+            GeneralName = STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.NAME;
             DangerLevel = ONITwitchLib.Danger.None;
             AppearanceWeight = weight;
 
@@ -34,6 +34,8 @@ namespace DiseasesExpanded.RandomEvents.Events
                                 effects.Remove(AlienSickness.ASSIMILATION_EFFECT_ID);
 
                     }
+
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.TOAST);
                 });
 
         }

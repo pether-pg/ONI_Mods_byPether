@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using ONITwitchLib.Utils;
+using STRINGS;
 
 namespace DiseasesExpanded.RandomEvents.Events
 {
@@ -9,8 +10,8 @@ namespace DiseasesExpanded.RandomEvents.Events
         public GreatSanishellMigration(int weight = 1)
         {
             ID = nameof(GreatSanishellMigration);
-            GeneralName = "Great Migration";
-            NameDetails = "Sanishell";
+            GeneralName = STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.NAME;
+            NameDetails = Util.StripTextFormatting(CREATURES.SPECIES.CRAB.VARIANT_FRESH_WATER.NAME);
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;
 
@@ -49,7 +50,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         egg.SetActive(true);
                     }
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Researchers proclaim cycle of the Sanishell. All dwellings increase population.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.TOAST);
                 });
         }
     }

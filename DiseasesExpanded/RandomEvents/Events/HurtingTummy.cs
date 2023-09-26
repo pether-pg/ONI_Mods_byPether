@@ -11,7 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public HurtingTummy(bool gas = false, int weight = 1)
         {
             byte germIdx = gas ? GermIdx.GassyGermsIdx : GermIdx.FoodPoisoningIdx;
-            GeneralName = "Hurting Tummy";
+            GeneralName = STRINGS.RANDOM_EVENTS.HURTING_TUMMY.NAME;
             NameDetails = Db.Get().Diseases[germIdx].Id;
             ID = GenerateId(nameof(HurtingTummy), NameDetails);
             Group = Helpers.DIRECT_INFECT_GROUP;
@@ -34,7 +34,7 @@ namespace DiseasesExpanded.RandomEvents.Events
 
                     sicknesses.Infect(new SicknessExposureInfo(gas ? GasSickness.ID : FoodSickness.ID, GeneralName));
 
-                    ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, "One of your duplicants got hurting tummy. It's nothing good for sure...", mi.gameObject);
+                    ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, STRINGS.RANDOM_EVENTS.HURTING_TUMMY.TOAST, mi.gameObject);
                 });
         }
     }

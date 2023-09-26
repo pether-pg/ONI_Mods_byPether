@@ -12,8 +12,8 @@ namespace DiseasesExpanded.RandomEvents.Events
         {
             ID = nameof(GreatBogBugMigration);
             Group = Helpers.MAKE_THINGS_GERMY_GROUP;
-            GeneralName = "Great Migration";
-            NameDetails = "Bog Bug";
+            GeneralName = STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.NAME;
+            NameDetails = Util.StripTextFormatting(STRINGS.GERMS.BOGINSECTS.NAME);
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Medium;
 
@@ -27,14 +27,14 @@ namespace DiseasesExpanded.RandomEvents.Events
 
                     Game.Instance.StartCoroutine(MigrateAway());
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Researchers proclaim cycle of the Bog Bugs. All dwellings increase population.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST);
                 });
         }
 
         private IEnumerator MigrateAway()
         {
             yield return new WaitForSeconds(1800);
-            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Swarms of Bog Bugs started migrating away.");
+            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST_END);
 
             for(int i=0; i<5; i++)
             {

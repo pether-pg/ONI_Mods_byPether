@@ -12,7 +12,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         {
             ID = nameof(HungryPet);
             Group = Helpers.MAKE_THINGS_GERMY_GROUP;
-            GeneralName = "Hungry Pet";
+            GeneralName = STRINGS.RANDOM_EVENTS.HUNGRY_PET.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Medium;
 
@@ -34,7 +34,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                             continue;
 
                         monitor.Infect();
-                        ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, "One of your critters is more hungry than usually.", monitor.gameObject);
+                        ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, STRINGS.RANDOM_EVENTS.HUNGRY_PET.TOAST, monitor.gameObject);
                         break;
                     }
                 });

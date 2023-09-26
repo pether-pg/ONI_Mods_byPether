@@ -11,7 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
     {
         public NanobotUpdate(bool malicious = false, int weight = 1)
         {
-            GeneralName = "Nanobot Update";
+            GeneralName = STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.NAME;
             NameDetails = malicious ? "Malicious" : "Normal";
             ID = GenerateId(nameof(NanobotUpdate), NameDetails);
             AppearanceWeight = weight;
@@ -40,7 +40,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(pad.gameObject), GermIdx.MedicalNanobotsIdx, (int)MedicalNanobotsData.RECIPE_MASS_LARGE);
 
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "New update to Nanobot software got rushed for release! " + (malicious ? "Sadly, it may contain some bugs..." : ""));
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST + (malicious ? (string)STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_MALICIOUS : ""));
                 });
         }
 
@@ -50,7 +50,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             yield return new WaitForSeconds(time);
             MedicalNanobots.MaliciousOverride = false;
             MedicalNanobotsData.Instance.UpdateAll();
-            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Hotfix released: Malicious issues of Nanobot software got fixed.");
+            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_END);
         }
     }
 }

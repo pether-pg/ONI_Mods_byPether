@@ -12,7 +12,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public PanicMode(int weight = 1)
         {
             ID = nameof(PanicMode);
-            GeneralName = "PANIC MODE!!!";
+            GeneralName = STRINGS.RANDOM_EVENTS.PANIC_MODE.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;
 
@@ -22,7 +22,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                 data => 
                 {
                     SaveGame.Instance.StartCoroutine(SpamWarnings());
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "AAAAAAAAAAAAAAAAAAAAAA!!!!!");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.PANIC_MODE.TOAST);
                 });
         }
 

@@ -12,7 +12,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         {
             ID = nameof(SlimyPollutedOxygen);
             Group = Helpers.MAKE_THINGS_GERMY_GROUP;
-            GeneralName = "Slimy Polluted Oxygen";
+            GeneralName = STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.NAME;
             AppearanceWeight = weight;
             DangerLevel = Helpers.EstimateGermDanger(GermIdx.SlimelungIdx);
 
@@ -26,7 +26,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         if (Grid.Element[cell].id == SimHashes.ContaminatedOxygen)
                             SimMessages.ModifyDiseaseOnCell(cell, GermIdx.SlimelungIdx, germsToAdd);
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "All Polluted Oxygen is now even more yucky");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.TOAST);
                 });
         }
     }

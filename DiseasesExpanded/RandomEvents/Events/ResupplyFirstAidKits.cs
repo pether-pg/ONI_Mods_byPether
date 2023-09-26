@@ -9,7 +9,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public ResupplyFirstAidKits(int weight = 1)
         {
             ID = nameof(ResupplyFirstAidKits);
-            GeneralName = "Resupply First Aid Kits";
+            GeneralName = STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.NAME;
             DangerLevel = ONITwitchLib.Danger.None;
             AppearanceWeight = weight;
 
@@ -30,7 +30,7 @@ namespace DiseasesExpanded.RandomEvents.Events
 
                         GameObject kit = GameUtil.KInstantiate(Assets.GetPrefab(Configs.RandomFirstAidKitConfig.ID), spawnAt.transform.position, Grid.SceneLayer.BuildingFront);
                         kit.SetActive(true);
-                        ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, "Those medical supplies could be helpful... or better not...", kit);
+                        ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.TOAST, kit);
                     }
                 });
         }

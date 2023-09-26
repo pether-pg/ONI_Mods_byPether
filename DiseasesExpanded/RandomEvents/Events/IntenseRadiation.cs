@@ -14,7 +14,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public IntenseRadiation(int weight = 1)
         {
             ID = nameof(IntenseRadiation);
-            GeneralName = "Intense Radiation";
+            GeneralName = STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Medium;
 
@@ -30,7 +30,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                             ModifiedEmitters.Add(re);
                         }
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "We noticed increased readings on our radiation-measuring aparature.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST);
                     SaveGame.Instance.StartCoroutine(WaitToRestore());
                 });
         }
@@ -40,7 +40,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             yield return new WaitForSeconds(600);
             foreach (RadiationEmitter re in ModifiedEmitters)
                 ModifyRadiation(re, 0.5f, 0.2f);
-            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Radiation levels seem to be back to normal.");
+            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST_END);
         }
 
         private void ModifyRadiation(RadiationEmitter emitter, float radiusScale = 1, float radiationScale = 1)

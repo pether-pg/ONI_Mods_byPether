@@ -11,7 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
 
         public SpawnInfectedElement(byte germIdx, int weight = 1)
         {
-            GeneralName = "Spawn Infected Element";
+            GeneralName = STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.NAME;
             NameDetails = Db.Get().Diseases[germIdx].Id;
             ID = GenerateId(nameof(SpawnInfectedElement), NameDetails);
             Group = nameof(SpawnInfectedElement);
@@ -34,7 +34,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     foreach (int gameCell in intSet)
                         SimMessages.ReplaceAndDisplaceElement(gameCell, spawnedElementHash, SpawnEvent, mass, temp, germIdx, 100000);
 
-                    ONITwitchLib.ToastManager.InstantiateToastWithPosTarget(GeneralName, $"Spawned some {Util.StripTextFormatting(element.name)} filled with germs.", Grid.CellToPos(withCavityClearance));
+                    ONITwitchLib.ToastManager.InstantiateToastWithPosTarget(GeneralName, string.Format(STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.TOAST, Util.StripTextFormatting(element.name)), Grid.CellToPos(withCavityClearance));
                 });
         }
 

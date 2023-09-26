@@ -11,7 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
 
         public PrintSomeGerms(byte germIdx, int weight = 1)
         {
-            GeneralName = "Print Some Germs";
+            GeneralName = STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.NAME;
             NameDetails = Db.Get().Diseases[germIdx].Id;
             ID = GenerateId(nameof(PrintSomeGerms), NameDetails);
             Group = nameof(PrintSomeGerms);
@@ -26,7 +26,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     foreach (Telepad pod in Components.Telepads)
                         SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(pod.gameObject), germIdx, 10000000);
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Additional germs were printed from all Printing Pods.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.TOAST);
                 }
             );
         }

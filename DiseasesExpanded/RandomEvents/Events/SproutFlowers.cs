@@ -14,7 +14,7 @@ namespace DiseasesExpanded.RandomEvents.Events
 
         public SproutFlowers(string flowerId, int weight = 1)
         {
-            GeneralName = "Sprout Flowers";
+            GeneralName = STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.NAME;
             NameDetails = flowerId;
             ID = GenerateId(nameof(SproutFlowers), NameDetails);
             Group = nameof(SproutFlowers);
@@ -47,7 +47,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         int cell = FindCell(cells, flowerId, MAX_RETRIES);
                         if(cell == Grid.InvalidCell)
                         {
-                            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "New flower tried to sprout... but it failed... maybe next time...?");
+                            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST_FAILED);
                             continue;
                         }
 
@@ -55,7 +55,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         GameObject go = GameUtil.KInstantiate(Assets.GetPrefab(flowerId), pos, Grid.SceneLayer.BuildingFront);
                         go.SetActive(true);
 
-                        ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, "New flower just sprouted!", go);
+                        ONITwitchLib.ToastManager.InstantiateToastWithGoTarget(GeneralName, STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST, go);
                     }
 
                 });

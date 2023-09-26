@@ -10,7 +10,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public EradicateGerms(int weight = 1)
         {
             ID = nameof(EradicateGerms);
-            GeneralName = "Eradicate Germs";
+            GeneralName = STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.None;
 
@@ -21,7 +21,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                 {
                     Game.Instance.StartCoroutine(Eradicate());
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Most of the germs were eradicated from the atmosphere.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.TOAST);
                 });
         }
 

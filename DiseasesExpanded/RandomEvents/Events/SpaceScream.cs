@@ -12,7 +12,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         {
             ID = nameof(SpaceScream);
             Group = Helpers.DIRECT_INFECT_GROUP;
-            GeneralName = "In Space No One Can Hear You Scream";
+            GeneralName = STRINGS.RANDOM_EVENTS.SPACE_SCREAM.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Deadly;
 
@@ -33,7 +33,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         sicknesses.Infect(new SicknessExposureInfo(AlienSickness.ID, GeneralName));
                     }
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "We received strange distress signal from our rocket...");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.SPACE_SCREAM.TOAST);
                 });
         }
 

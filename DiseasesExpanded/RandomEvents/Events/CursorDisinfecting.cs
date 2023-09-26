@@ -9,7 +9,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public CursorDisinfecting(int weight = 1)
         {
             ID = nameof(CursorDisinfecting);
-            GeneralName = "Disinfecting Cursor";
+            GeneralName = STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.None;
 
@@ -30,7 +30,7 @@ namespace DiseasesExpanded.RandomEvents.Events
 
                     GameScheduler.Instance.Schedule("Destroy Disinfecting Cursor", 60, obj => DestroyCursor(cursor));
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, $"Your cursor just got upgraded with portable Purification Kit!");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST);
                 });
         }
 
@@ -40,7 +40,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                 return;
 
             Util.KDestroyGameObject(cursor);
-            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Oh no... Your cursor is broken...");
+            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST_END);
         }
     }
 }

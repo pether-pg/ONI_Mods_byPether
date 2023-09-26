@@ -11,7 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public SuddenVirusMutation(int dangerLvl, int weight = 1)
         {
             ID = GenerateId(nameof(SuddenVirusMutation), dangerLvl);
-            GeneralName = "Sudden Mutation";
+            GeneralName = STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.NAME;
             NameDetails = "Virus";
             AppearanceWeight = weight;
             
@@ -39,7 +39,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     MutationData.Instance.Mutate(mi.gameObject);                    
                     MutationData.Instance.TryInfectDelayed(mi.gameObject);
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "We observed new mutation strain...");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.TOAST);
                 });
         }
     }

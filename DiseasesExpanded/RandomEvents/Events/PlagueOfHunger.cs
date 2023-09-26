@@ -12,7 +12,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         {
             ID = nameof(PlagueOfHunger);
             Group = Helpers.DIRECT_INFECT_GROUP;
-            GeneralName = "Plague of Hunger";
+            GeneralName = STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Extreme;
 
@@ -33,7 +33,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         sicknesses.Infect(new SicknessExposureInfo(HungerSickness.ID, GeneralName));
                     }
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "A kilogram of Wheat for a Diamond, and three kilograms of Meal Lice for a Diamond, but do not harm Burgers and Pie!");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.TOAST);
                 });
         }
     }

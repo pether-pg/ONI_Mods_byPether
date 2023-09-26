@@ -540,6 +540,198 @@ namespace DiseasesExpanded
             }
         }
 
+        public class RANDOM_EVENTS
+        {
+            public class ADOPT_STRAY_PET
+            {
+                public static LocString NAME = "Adopt Stray Pet";
+                public static LocString TOAST = "It was so poor and cute and helpless and we had to adopt it!";
+            }
+
+            public class BLOOMING_GRAVES
+            {
+                public static LocString NAME = "Blooming Graves";
+                public static LocString TOAST = "Death cannot be healed. But it can bloom!";
+            }
+
+            public class CURSOR_DISINFECTING
+            {
+                public static LocString NAME = "Disinfecting Cursor";
+                public static LocString TOAST = "Your cursor just got upgraded with portable Purification Kit!";
+                public static LocString TOAST_END = "Oh no... It's broken...";
+            }
+
+            public class CURSOR_RADIOACTIVE
+            {
+                public static LocString NAME = "Radioactive Cursor";
+                public static LocString TOAST = "Your cursor just got upgraded with portable Radiation Emitter! \nIt now glows with around {0} rads!";
+                public static LocString TOAST_END = "Oh no... It's broken...";
+            }
+
+            public class ERADICATE_GERMS
+            {
+                public static LocString NAME = "Eradicate Germs";
+                public static LocString TOAST = "Most of the germs were eradicated from the environment.";
+            }
+
+            public class FILTHY_FOOD
+            {
+                public static LocString NAME = "Filthy Food";
+                public static LocString TOAST = "Your food supply has been infected with food poisoning.";
+            }
+
+            public class GREAT_BOG_BUG_MIGRATION
+            {
+                public static LocString NAME = "Great Migration";
+                public static LocString TOAST = "Researchers proclaim cycle of the Bog Bugs. All dwellings increase population.";
+                public static LocString TOAST_END = "Swarms of Bog Bugs started migrating away.";
+            }
+
+            public class GREAT_SANISHELL_MIGRATION
+            {
+                public static LocString NAME = "Great Migration";
+                public static LocString TOAST = "Researchers proclaim cycle of the Sanishell. All dwellings increase population.";
+            }
+
+            public class HUNGRY_PET
+            {
+                public static LocString NAME = "Hungry Pet";
+                public static LocString TOAST = "One of your critters is more hungry than usually. You should probably investigate...";
+            }
+
+            public class HURTING_TUMMY
+            {
+                public static LocString NAME = "Hurting Tummy";
+                public static LocString TOAST = "One of your duplicants got hurting tummy. It's nothing good for sure...";
+            }
+
+            public class INTENSE_POLLINATION
+            {
+                public static LocString NAME = "Intense Pollination";
+                public static LocString TOAST = "All of the plants released increased amount of pollen.";
+            }
+
+            public class INTENSE_RADIATION
+            {
+                public static LocString NAME = "Intense Radiation";
+                public static LocString TOAST = "We noticed increased readings on our radiation-measuring aparature.";
+                public static LocString TOAST_END = "Radiation levels seem to be back to normal.";
+            }
+
+            public class MANDATORY_TESTING
+            {
+                public static LocString NAME = "Mandatory Testing";
+                public static LocString TOAST = "All duplicants got encouraged to perform mandatory health tests. If one is infected with germs, our tests collect germ samples.";
+            }
+
+            public class MIRACULOUS_RECOVERY
+            {
+                public static LocString NAME = "Miraculous Recovery";
+                public static LocString TOAST = "A miracle! Our duplicants are no longer sick!";
+            }
+
+            public class NANOBOT_UPDATE
+            {
+                public static LocString NAME = "Nanobot Update";
+                public static LocString TOAST = "New update to Nanobot software got rushed for release! ";
+                public static LocString TOAST_MALICIOUS = "Sadly, it may contain some bugs...";
+                public static LocString TOAST_END = "Hotfix released: Malicious issues of Nanobot software got fixed.";
+            }
+
+            public class NIGHT_OF_THE_LIVING_DEAD
+            {
+                public static LocString NAME = "Night of the Living Dead";
+                public static LocString TOAST = "The end is nigh!";
+            }
+
+            public class PANIC_MODE
+            {
+                public static LocString NAME = "PANIC MODE!!!";
+                public static LocString TOAST = "AAAAAAAAAAAAAAAAAAAAAA!!!!!";
+            }
+
+            public class PLAGUE_OF_HUNGER
+            {
+                public static LocString NAME = "Plague of Hunger";
+                public static LocString TOAST = "A kilogram of Wheat for a Diamond, and three kilograms of Meal Lice for a Diamond, but do not harm Burgers and Pie!";
+            }
+
+            public class PRINT_SOME_GERMS
+            {
+                public static LocString NAME = "Print Some Germs";
+                public static LocString TOAST = "Additional germs were printed from all Printing Pods.";
+            }
+
+            public class REGRESSIVE_VIRUS_MUTATION
+            {
+                public static LocString NAME = "Regressive Mutation";
+                public static LocString TOAST = "We observed slightly less dangerous variant of the Virus.";
+            }
+
+            public class RESUPPLY_FIRST_AID_KIT
+            {
+                public static LocString NAME = "Resupply First Aid Kits";
+                public static LocString TOAST = "Those medical supplies could be helpful... or better not...";
+            }
+
+            public class SLIMY_POLLUTED_OXYGEN
+            {
+                public static LocString NAME = "Slimy Polluted Oxygen";
+                public static LocString TOAST = "All Polluted Oxygen is now even more yucky...";
+            }
+
+            public class SPACE_SCREAM
+            {
+                public static LocString NAME = "In Space No One Can Hear You Scream";
+                public static LocString TOAST = "We received strange distress signal from our rocket...";
+            }
+
+            public class SPAWN_GERMY_SURPRISE_BOX
+            {
+                public static LocString NAME = "Surprise Box";
+                public static LocString DESC = "Surprise Box DESC";
+                public static LocString TOAST_TITLE = "Surprise Box";
+                public static LocString TOAST_BODY = "I wonder what is inside?";
+            }
+
+            public class SPAWN_INFECTED_ELEMENT
+            {
+                public static LocString NAME = "Spawn Infected Element";
+                public static LocString TOAST = "Spawned some {0} filled with germs.";
+            }
+
+            public class SPINDLY_PLANTS
+            {
+                public static LocString NAME = "Spindly Plants";
+                public static LocString TOAST = "Our plants have developed protective spindles. We must be careful not to get hurt...";
+            }
+
+            public class SPROUT_FLOWERS
+            {
+                public static LocString NAME = "Sprout Flowers";
+                public static LocString TOAST = "New flower just sprouted!";
+                public static LocString TOAST_FAILED = "New flower tried to sprout... but it failed... maybe next time...?";
+            }
+
+            public class STRAY_COMET
+            {
+                public static LocString NAME = "Stray Comet";
+                public static LocString TOAST = "Hey, look! A shooting star!";
+            }
+
+            public class SUDDEN_PLANT_MUTATION
+            {
+                public static LocString NAME = "Sudden Mutation";
+                public static LocString TOAST = "Some of our plants mutated to have bigger leaves, richer fruits and... is that a tentacle?!?!";
+            }
+
+            public class SUDDEN_VIRUS_MUTATION
+            {
+                public static LocString NAME = "Sudden Mutation";
+                public static LocString TOAST = "We observed new mutation strain...";
+            }
+        }
+
         public class TRANSLATION
         {
             public class AUTHOR

@@ -10,7 +10,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             if (germIdx > Db.Get().Diseases.Count)
                 germIdx = 0;
 
-            GeneralName = "Adopt Stray Pet";
+            GeneralName = STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.NAME;
             NameDetails = Db.Get().Diseases[germIdx].Id;
             ID = GenerateId(nameof(AdoptStrayPet), NameDetails);
             Group = nameof(AdoptStrayPet);
@@ -32,7 +32,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     GameObject pet = GameUtil.KInstantiate(Assets.GetPrefab(petId), Components.Telepads[0].gameObject.transform.position, Grid.SceneLayer.Creatures);
                     pet.SetActive(true);
 
-                    ONITwitchLib.ToastManager.InstantiateToastWithPosTarget(GeneralName, "It was so poor and cute and helpless and we had to adopt it!", pet.transform.position);
+                    ONITwitchLib.ToastManager.InstantiateToastWithPosTarget(GeneralName, STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.TOAST, pet.transform.position);
                 });
         }
 

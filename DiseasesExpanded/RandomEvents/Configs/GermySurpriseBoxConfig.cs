@@ -39,7 +39,7 @@ namespace DiseasesExpanded.RandomEvents.Configs
 			StringEntry OniTwitchName;
 			if (Strings.TryGet("STRINGS.ITEMS.ONITWITCH.SURPRISEBOXCONFIG.NAME", out OniTwitchName))
 				return OniTwitchName.String;
-			return "Surprise Box";
+			return STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.NAME;
 		}
 
 		public static string TryGetDesc()
@@ -47,7 +47,7 @@ namespace DiseasesExpanded.RandomEvents.Configs
 			StringEntry OniTwitchName;
 			if (Strings.TryGet("STRINGS.ITEMS.ONITWITCH.SURPRISEBOXCONFIG.DESC", out OniTwitchName))
 				return OniTwitchName.String;
-			return "";
+			return STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.DESC;
 		}
 
 		public void OnPrefabInit(GameObject inst)

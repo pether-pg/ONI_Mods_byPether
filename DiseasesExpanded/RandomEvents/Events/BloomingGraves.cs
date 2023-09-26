@@ -11,7 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public BloomingGraves(int weight = 1)
         {
             ID = nameof(BloomingGraves);
-            GeneralName = "Blooming Graves";
+            GeneralName = STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Medium;
 
@@ -34,7 +34,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                             go.SetActive(true);
                         }
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Death cannot be healed. But it can bloom!");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.TOAST);
                 }
             );
 

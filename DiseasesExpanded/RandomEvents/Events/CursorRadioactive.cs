@@ -8,7 +8,7 @@ namespace DiseasesExpanded.RandomEvents.Events
     {
         public CursorRadioactive(ONITwitchLib.Danger danger, int weight = 1)
         {
-            GeneralName = "Radioactive Cursor";
+            GeneralName = STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.NAME;
             NameDetails = danger.ToString();
             ID = GenerateId(nameof(CursorRadioactive), NameDetails);
             AppearanceWeight = weight;
@@ -45,7 +45,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     float time = 45 * ((int)danger + 1);
                     GameScheduler.Instance.Schedule("Destroy Radioactive Cursor", time, obj => DestroyCursor(mouse));
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, $"Your cursor just got upgraded with portable Radiation Emitter! \nIt now glows with around {emitter.emitRads} rads!");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, string.Format(STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST, emitter.emitRads));
                 });
         }
 
@@ -55,7 +55,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                 return;
 
             Util.KDestroyGameObject(cursor);
-            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Oh no... Your cursor is broken...");
+            ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST_END);
         }
     }
 }

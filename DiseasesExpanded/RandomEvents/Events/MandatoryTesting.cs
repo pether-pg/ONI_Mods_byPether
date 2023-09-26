@@ -8,7 +8,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public MandatoryTesting(int weight = 1)
         {
             ID = nameof(MandatoryTesting);
-            GeneralName = "Mandatory Testing";
+            GeneralName = STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.None;
 
@@ -33,7 +33,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     foreach (MinionIdentity mi in Components.MinionIdentities)
                         TestSampleConfig.OnEatComplete(mi.gameObject);
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "All duplicants got encouraged to perform mandatory health tests. If one is infected with germs, our tests will detect them.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.TOAST);
                 });
         }
     }

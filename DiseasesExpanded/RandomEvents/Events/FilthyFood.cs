@@ -12,7 +12,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         {
             ID = nameof(FilthyFood);
             Group = Helpers.MAKE_THINGS_GERMY_GROUP;
-            GeneralName = "Filthy Food";
+            GeneralName = STRINGS.RANDOM_EVENTS.FILTHY_FOOD.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;
 
@@ -27,7 +27,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         if (prime != null)
                             prime.AddDisease(GermIdx.FoodPoisoningIdx, 100000, GeneralName);
                     }
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Your food supply has been infected with food poisoning.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.FILTHY_FOOD.TOAST);
                 });
         }
     }

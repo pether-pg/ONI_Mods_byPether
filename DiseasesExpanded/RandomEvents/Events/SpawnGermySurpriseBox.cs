@@ -38,12 +38,18 @@ namespace DiseasesExpanded.RandomEvents.Events
 
         string GetToastTitle()
         {
-            return "Surprise Box";
+            StringEntry OniTwitchName;
+            if (Strings.TryGet("STRINGS.ONITWITCH.TOASTS.SURPRISE_BOX.TITLE", out OniTwitchName))
+                return OniTwitchName.String;
+            return STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.NAME;
         }
 
         string GetToastBody()
         {
-            return "I wonder what is inside?";
+            StringEntry OniTwitchName;
+            if (Strings.TryGet("STRINGS.ONITWITCH.TOASTS.SURPRISE_BOX.BODY", out OniTwitchName))
+                return OniTwitchName.String;
+            return STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.TOAST_BODY;
         }
 
         int GetSpawnCell()

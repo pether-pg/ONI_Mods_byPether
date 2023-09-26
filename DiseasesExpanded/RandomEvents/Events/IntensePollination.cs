@@ -11,7 +11,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public IntensePollination(int weight = 1)
         {
             ID = nameof(IntensePollination);
-            GeneralName = "Intense Pollination";
+            GeneralName = STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;
 
@@ -40,7 +40,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(inst.gameObject), inst.def.diseaseIdx, count);
                     }
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "All of the plants released increased amount of pollen.");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.TOAST);
                 });
         }
     }

@@ -9,7 +9,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         {
             ID = nameof(NightOfTheLivingDead);
             Group = Helpers.DIRECT_INFECT_GROUP;
-            GeneralName = "Night of the Living Dead";
+            GeneralName = STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.NAME;
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Deadly;
 
@@ -26,7 +26,7 @@ namespace DiseasesExpanded.RandomEvents.Events
 
                         sicknesses.Infect(new SicknessExposureInfo(ZombieSickness.ID, GeneralName));
                     }
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "The end is nigh!");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.TOAST);
                 });
         }
     }

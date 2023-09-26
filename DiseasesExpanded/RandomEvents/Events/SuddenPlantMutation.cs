@@ -9,7 +9,7 @@ namespace DiseasesExpanded.RandomEvents.Events
         public SuddenPlantMutation(int weight = 1)
         {
             ID = nameof(SuddenPlantMutation);
-            GeneralName = "Sudden Mutation";
+            GeneralName = STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.NAME;
             NameDetails = "Plant";
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;
@@ -43,7 +43,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                         }
                     }
 
-                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, "Some of our plants mutated to have bigger leaves, richer fruits and... is that a tentacle?!?!");
+                    ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.TOAST);
                 });
         }
     }
