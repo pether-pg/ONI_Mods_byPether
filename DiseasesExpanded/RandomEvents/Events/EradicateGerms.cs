@@ -27,16 +27,16 @@ namespace DiseasesExpanded.RandomEvents.Events
 
         private IEnumerator Eradicate()
         {
+            EradicateCmps<Pickupable>(Components.Pickupables);
+            EradicateCmps<BuildingComplete>(Components.BuildingCompletes);
+
             int repeat = 5;
-            for(int i = 0; i < repeat; i++)
+            for (int i = 0; i < repeat; i++)
             {
                 ClearAllCells();
                 yield return new WaitForSeconds(0.2f);
             }
-            ClearAllBuildings();
-            ClearAllPickupables();
         }
-
 
         private void ClearAllCells()
         {
@@ -46,36 +46,22 @@ namespace DiseasesExpanded.RandomEvents.Events
                     SimMessages.ModifyDiseaseOnCell(cell, Grid.DiseaseIdx[cell], -1 * overkill * Grid.DiseaseCount[cell]);
         }
 
-        private void ClearAllBuildings()
+        private static void EradicateCmps<T>(object toPurge) where T : KMonoBehaviour
         {
-            foreach(BuildingComplete building in Components.BuildingCompletes)
+            Components.Cmps<T> cmps = toPurge as Components.Cmps<T>;
+            if (cmps == null)
+                return;
+
+            int germCount = Db.Get().Diseases.Count;
+            byte abaIdx = Db.Get().Diseases.GetIndex(AbandonedGerms.ID);
+
+            foreach (T cmp in cmps)
             {
-                if (building == null)
-                    continue;
-
-                PrimaryElement prime = building.primaryElement;
-                if (prime.DiseaseIdx == GermIdx.Invalid || prime.DiseaseCount <= 0)
-                    continue;
-
-                prime.AddDisease(prime.DiseaseIdx, -prime.DiseaseCount, GeneralName);
-            }
-        }
-
-        private void ClearAllPickupables()
-        {
-            foreach (Pickupable pickup in Components.Pickupables)
-            {
-                if (pickup == null)
-                    continue;
-
                 PrimaryElement prime;
-                if (pickup.TryGetComponent<PrimaryElement>(out prime) == false)
+                if (cmp.TryGetComponent<PrimaryElement>(out prime) == false)
                     continue;
 
-                if (prime.DiseaseIdx == GermIdx.Invalid || prime.DiseaseCount <= 0)
-                    continue;
-
-                prime.AddDisease(prime.DiseaseIdx, -prime.DiseaseCount, GeneralName);
+                prime.AddDisease(prime.DiseaseIdx, -prime.DiseaseCount, nameof(EradicateGerms));
             }
         }
     }
