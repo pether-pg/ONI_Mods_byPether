@@ -32,14 +32,14 @@ namespace DiseasesExpanded
             }
         }
 
+        /*
         [HarmonyPatch(typeof(Game))]
         [HarmonyPatch("OnSpawn")]
         public class Game_OnPrefabInit_Patch
         {
             public static void Postfix()
             {
-                // if (Settings.Instance.PurgeMapFromDisabledGerms)
-                if (false)
+                 if (Settings.Instance.PurgeMapFromDisabledGerms)
                     GameScheduler.Instance.Schedule("Purge Everything", 0.2f, obj => ThisEntireCityMustBePurged());
             }
 
@@ -92,5 +92,6 @@ namespace DiseasesExpanded
                 Debug.Log($"{ModInfo.Namespace}: Purged Cmps<{typeof(T)}>");
             }
         }
+        */
     }
 }

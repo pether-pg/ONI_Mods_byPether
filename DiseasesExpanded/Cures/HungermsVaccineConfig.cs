@@ -8,7 +8,7 @@ namespace DiseasesExpanded
     {
         public const string ID = "HungermsVaccine";
         public const string EffectID = "HungermsVaccineEffect";
-        public static ComplexRecipe recipe;
+        //public static ComplexRecipe recipe;
 
         public static string Name { get => string.Format(STRINGS.CURES.VACCINE.NAME, GermIdx.GetGermName(GermIdx.HungerGermsIdx)); }
         public static string Desc { get => string.Format(STRINGS.CURES.VACCINE.DESC, GermIdx.GetGermName(GermIdx.HungerGermsIdx)); }

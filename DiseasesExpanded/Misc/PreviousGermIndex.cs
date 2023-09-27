@@ -9,7 +9,9 @@ namespace DiseasesExpanded
 {
     class PreviousGermIndex
     {
-        public Dictionary<string, Dictionary<string, byte>> GermIdxById = new Dictionary<string, Dictionary<string, byte>>();
+        public string Info = $"DO NOT EDIT! This file contains information about previously enabled germs in your saves. " +
+                                $"Without it, if you would disable some germs, some entombed items could change a type of germs infecting it, or even crash the game.";
+        public Dictionary<string, Dictionary<string, byte>> GermIdxByIdAndGuid = new Dictionary<string, Dictionary<string, byte>>();
 
         private static PreviousGermIndex _instance;
 
@@ -53,7 +55,7 @@ namespace DiseasesExpanded
 
         public Dictionary<byte, byte> GetGermTranslationDict()
         {
-            if (GermIdxById == null || GermIdxById.Count == 0)
+            if (GermIdxByIdAndGuid == null || GermIdxByIdAndGuid.Count == 0)
                 return null;
 
             Dictionary<byte, byte> dict = new Dictionary<byte, byte>();
@@ -63,16 +65,16 @@ namespace DiseasesExpanded
                 return null;
 
 
-            if (GermIdxById[guid] == null || GermIdxById[guid].Count == 0)
+            if (GermIdxByIdAndGuid[guid] == null || GermIdxByIdAndGuid[guid].Count == 0)
                 return null;
 
-            foreach (string germId in GermIdxById[guid].Keys)
+            foreach (string germId in GermIdxByIdAndGuid[guid].Keys)
             {
                 byte newIdx = byte.MaxValue;
                 if (currentGermDict.ContainsKey(germId))
                     newIdx = currentGermDict[germId];
 
-                dict.Add(GermIdxById[guid][germId], newIdx);
+                dict.Add(GermIdxByIdAndGuid[guid][germId], newIdx);
             }
 
             Debug.Log($"{ModInfo.Namespace}: Germ OLD - NEW idx dictionary:");
@@ -86,7 +88,7 @@ namespace DiseasesExpanded
         {
             string guid = GetCurrentBaseGuid();
             if(guid != string.Empty)
-                GermIdxById[guid] = CreateCurrentGermIdxDict();
+                GermIdxByIdAndGuid[guid] = CreateCurrentGermIdxDict();
         }
 
         public void LogDictionary()
@@ -100,20 +102,20 @@ namespace DiseasesExpanded
                 return;
             }
 
-            if (GermIdxById == null || GermIdxById.Count == 0)
+            if (GermIdxByIdAndGuid == null || GermIdxByIdAndGuid.Count == 0)
             {
                 Debug.Log($"{ModInfo.Namespace}: (global dict empty)");
                 return;
             }
 
-            if (GermIdxById[guid] == null || GermIdxById[guid].Count == 0)
+            if (GermIdxByIdAndGuid[guid] == null || GermIdxByIdAndGuid[guid].Count == 0)
             {
                 Debug.Log($"{ModInfo.Namespace}: (base dict empty)");
                 return;
             }
 
-            foreach (string key in GermIdxById[guid].Keys)
-                Debug.Log($"{ModInfo.Namespace}: Germ Id = {key}, Idx = {GermIdxById[guid][key]}");
+            foreach (string key in GermIdxByIdAndGuid[guid].Keys)
+                Debug.Log($"{ModInfo.Namespace}: Germ Id = {key}, Idx = {GermIdxByIdAndGuid[guid][key]}");
         }
     }
 }
