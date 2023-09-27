@@ -43,7 +43,7 @@ namespace DiseasesExpanded.RandomEvents.Events
 
             List<int> FlyingRocketsWorldIds = new List<int>();
             foreach (Clustercraft rocket in Components.Clustercrafts)
-                if (rocket.Status == Clustercraft.CraftStatus.InFlight)
+                if (rocket != null && rocket.ModuleInterface != null && rocket.Status == Clustercraft.CraftStatus.InFlight)
                     FlyingRocketsWorldIds.Add(rocket.ModuleInterface.GetInteriorWorld().id);
 
             foreach (MinionIdentity mi in Components.MinionIdentities)

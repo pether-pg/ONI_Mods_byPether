@@ -25,9 +25,6 @@ namespace DiseasesExpanded
         {
             public static void Prefix(EntombedItemManager __instance)
             {
-                if (!Settings.Instance.PurgeMapFromDisabledGerms)
-                    return;
-
                 PreviousGermIndex.Instance.LogDictionary();
                 Dictionary<byte, byte> translationDict = PreviousGermIndex.Instance.GetGermTranslationDict();
                 TranslateOldGerms(__instance, translationDict);

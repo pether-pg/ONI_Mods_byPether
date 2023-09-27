@@ -125,7 +125,7 @@ namespace DiseasesExpanded
             EnableMedicalResearchPoints = true;
             InfectRawMeatDropsWithGerms = true;
             FrequentVirusAndNanobotUpdates = false;
-            PurgeMapFromDisabledGerms = false;
+            //PurgeMapFromDisabledGerms = false;
 
             AlienGoo = new DiseaseSettings(true, 1.0f, ColorPalette.NavyBlue);
             BogInsects = new DiseaseSettings(true, 1.0f, ColorPalette.BogViolet);
@@ -159,9 +159,9 @@ namespace DiseasesExpanded
         [Option("Frequent Virus And Nanobot Updates", "Some of the Virus and Nanobot changes don't take place until next game load. Use this option to update all data each time they change. \n!! WARNING !! This may cause sim race and crash. If you are experiencing crashes on virus mutations, please turn this option to false.", category: "DiseasesExpanded: Additional")]
         public bool FrequentVirusAndNanobotUpdates { get; set; }
 
-        [JsonProperty]
-        [Option("Purge Map From Disabled Germs", "Clear your map from disabled germs after loading the game. This shouldn't be required, unless you are planning to disable the mod.", category: "DiseasesExpanded: Additional")]
-        public bool PurgeMapFromDisabledGerms { get; set; }
+        //[JsonProperty]
+        //[Option("Purge Map From Disabled Germs", "Clear your map from disabled germs after loading the game. This shouldn't be required, unless you are planning to disable the mod.", category: "DiseasesExpanded: Additional")]
+        //public bool PurgeMapFromDisabledGerms { get; set; }
 
         [JsonProperty]
         [Option("AlienGoo", category: "New Disease - Alien Goo")]
