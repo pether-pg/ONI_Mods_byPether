@@ -38,8 +38,9 @@ namespace DiseasesExpanded.RandomEvents.Events
                     RadiationEmitter emitter = cursor.AddOrGet<RadiationEmitter>();
                     emitter.emitRadiusX = (short)(2 * ((int)danger + 1));
                     emitter.emitRadiusY = emitter.emitRadiusX;
-                    emitter.emitRads = currentCycle;
+                    emitter.emitRads = Math.Max(currentCycle, 100 * (int)danger);
                     emitter.enabled = true;
+                    emitter.emitRate = 0;
 
                     Light2D light2D = cursor.AddOrGet<Light2D>();
                     light2D.overlayColour = ColorPalette.RadiationGreen;

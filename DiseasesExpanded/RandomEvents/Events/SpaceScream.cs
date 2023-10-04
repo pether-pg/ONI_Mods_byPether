@@ -46,7 +46,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                 if (rocket != null && rocket.ModuleInterface != null && rocket.Status == Clustercraft.CraftStatus.InFlight)
                     FlyingRocketsWorldIds.Add(rocket.ModuleInterface.GetInteriorWorld().id);
 
-            foreach (MinionIdentity mi in Components.MinionIdentities)
+            foreach (MinionIdentity mi in Components.LiveMinionIdentities)
                 if (mi != null && FlyingRocketsWorldIds.Contains(mi.GetMyWorldId()))
                     result.Add(mi);
 

@@ -61,7 +61,7 @@ namespace DiseasesExpanded
             Dictionary<byte, byte> dict = new Dictionary<byte, byte>();
             Dictionary<string, byte> currentGermDict = CreateCurrentGermIdxDict();
             string guid = GetCurrentBaseGuid();
-            if (guid == string.Empty)
+            if (guid == string.Empty || !GermIdxByIdAndGuid.ContainsKey(guid))
                 return null;
 
 
@@ -87,8 +87,12 @@ namespace DiseasesExpanded
         public void UpdateSavedDictionary()
         {
             string guid = GetCurrentBaseGuid();
-            if(guid != string.Empty)
-                GermIdxByIdAndGuid[guid] = CreateCurrentGermIdxDict();
+            if (guid == string.Empty)
+                return;
+
+            if (!GermIdxByIdAndGuid.ContainsKey(guid))
+                GermIdxByIdAndGuid.Add(guid, new Dictionary<string, byte>());
+            GermIdxByIdAndGuid[guid] = CreateCurrentGermIdxDict();
         }
 
         public void LogDictionary()
@@ -96,7 +100,7 @@ namespace DiseasesExpanded
             Debug.Log($"{ModInfo.Namespace}: Germ ID - IDX dictionary:");
 
             string guid = GetCurrentBaseGuid();
-            if (guid == string.Empty)
+            if (guid == string.Empty || !GermIdxByIdAndGuid.ContainsKey(guid))
             {
                 Debug.Log($"{ModInfo.Namespace}: (base GUID empty)");
                 return;
