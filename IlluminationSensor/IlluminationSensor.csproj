@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IlluminationSensor_Patches_Skins.cs" />
     <Compile Include="IlluminationSensor_Patches_Translations.cs" />
     <Compile Include="LogicIlluminationSensor.cs" />
     <Compile Include="IlluminationSensor_Patches.cs" />

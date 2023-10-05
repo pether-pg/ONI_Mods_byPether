@@ -19,23 +19,12 @@ namespace IlluminationSensor
 										STRINGS.ILLUMINATIONSENSOR.DESCRIPTION,
 										STRINGS.ILLUMINATIONSENSOR.EFFECT);
 
+				BasicModUtils.MakeSkinCategoryStrings(IlluminationSensor_Patches_Skins.SUBCATEGORY_ID, STRINGS.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.BUILDING_LIGHT_SENSOR);
+
 				ModUtil.AddBuildingToPlanScreen("Automation", LogicIlluminationSensorConfig.ID);
 			}
 		}
 
-		/*
-		[HarmonyPatch(typeof(Db))]
-		[HarmonyPatch("Initialize")]
-		public static class Db_Initialize_Patch
-		{
-			public static void Prefix()
-			{
-				// for vanilla version
-				//BasicModUtils.AddToTech("GenericSensors", LogicIlluminationSensorConfig.ID);
-			}
-		}*/
-
-		/**/
 		[HarmonyPatch(typeof(Database.Techs))]
 		[HarmonyPatch("Init")]
 		public static class Techs_Init_Patch

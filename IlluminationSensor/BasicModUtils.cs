@@ -12,11 +12,9 @@ namespace IlluminationSensor
             Strings.Add($"STRINGS.BUILDINGS.PREFABS.{id.ToUpperInvariant()}.EFFECT", effect);
         }
 
-        public static void AddToTech(string tech, string id)
+        public static void MakeSkinCategoryStrings(string id, string name)
         {
-            // worked on vanilla 445739, 460672
-            //var techList = new List<string>(Database.Techs.TECH_GROUPING[tech]) { id };
-            //Database.Techs.TECH_GROUPING[tech] = techList.ToArray();
+            Strings.Add($"STRINGS.UI.KLEI_INVENTORY_SCREEN.SUBCATEGORIES.{id.ToUpperInvariant()}", name);
         }
     }
 }

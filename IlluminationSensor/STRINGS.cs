@@ -8,6 +8,14 @@ namespace IlluminationSensor
 {
     class STRINGS
     {
+        public class KLEI_INVENTORY_SCREEN
+        {
+            public class SUBCATEGORIES
+            {
+                public static LocString BUILDING_LIGHT_SENSOR = "Light Sensors";
+            }
+        }
+
         public class ILLUMINATIONSENSOR
         {
             public static LocString LOGIC_PORT = (LocString)("Surrounding" + UI.FormatAsLink("Illumination", "Light"));
