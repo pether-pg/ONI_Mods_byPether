@@ -30,6 +30,7 @@ namespace IlluminationSensor
             SoundEventVolumeCache.instance.AddVolume("luxsensor_kanim", "on", TUNING.NOISE_POLLUTION.NOISY.TIER3);
             SoundEventVolumeCache.instance.AddVolume("luxsensor_kanim", "off", TUNING.NOISE_POLLUTION.NOISY.TIER3);
             GeneratedBuildings.RegisterWithOverlay(OverlayModes.Logic.HighlightItemIDs, LogicIlluminationSensorConfig.ID);
+            buildingDef.Deprecated = true;
             return buildingDef;
         }
 
