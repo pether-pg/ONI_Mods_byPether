@@ -46,10 +46,6 @@ namespace MoreLogicPorts
                 typeof(CreatureDeliveryPointConfig)         // Critter Drop-Off
             };
 
-            // Manual Radbolt Generator
-            if (DlcManager.IsExpansion1Active() || unconditionalGetAll)
-                result.Add(typeof(ManualHighEnergyParticleSpawnerConfig));
-
             // Checkpoints
             if (!ModInfo.IsCheckpointAutomationActive || unconditionalGetAll)
             {
