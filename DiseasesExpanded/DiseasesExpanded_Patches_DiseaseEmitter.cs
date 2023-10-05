@@ -8,7 +8,6 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_DiseaseEmitter
     {
-
         [HarmonyPatch(typeof(DiseaseEmitter))]
         [HarmonyPatch("OnSpawn")]
         public static class DiseaseEmitter_OnSpawn_Patch
