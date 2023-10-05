@@ -214,7 +214,7 @@ namespace DiseasesExpanded
 
             public static void Postfix(ref Diseases __instance, bool statsOnly)
             {
-                __instance.Add(new AbandonedGerms(statsOnly));
+                //__instance.Add(new AbandonedGerms(statsOnly));
 
                 if (Settings.Instance.FrostPox.IncludeDisease)          __instance.Add(new FrostShards(statsOnly));
                 if (Settings.Instance.MooFlu.IncludeDisease)            __instance.Add(new GassyGerms(statsOnly));
