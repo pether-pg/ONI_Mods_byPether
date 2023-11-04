@@ -26,6 +26,7 @@ namespace DiseasesExpanded
 
         public void OnSpawn(GameObject inst)
         {
+            inst.AddComponent<MedicalNanobotReviver>();
         }
 
         public GameObject CreatePrefab()
