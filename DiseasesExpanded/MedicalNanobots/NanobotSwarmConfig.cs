@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace DiseasesExpanded
@@ -17,15 +18,40 @@ namespace DiseasesExpanded
 
         public void OnSpawn(GameObject inst)
         {
-            int cell = Grid.PosToCell(inst.transform.position);
-            SimMessages.ModifyDiseaseOnCell(cell, GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellAbove(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellLeft(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellRight(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellUpLeft(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
-            SimMessages.ModifyDiseaseOnCell(Grid.CellUpRight(cell), GermIdx.MedicalNanobotsIdx, SPAWNED_BOTS_COUNT_PER_TILE);
+            Vector3 position = inst.transform.position;
+            Game.Instance.StartCoroutine(StartSpawningBots(position));
             PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.GERMS.MEDICALNANOBOTS.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
+        }
+
+        private IEnumerator StartSpawningBots(Vector3 position)
+        {
+            int repeats = 5;
+            ClearArea(position);
+            for (int i=0; i<repeats; i++)
+            {
+                SpawnGerms(position, SPAWNED_BOTS_COUNT_PER_TILE);
+                yield return new WaitForSeconds(0.2f);
+            }
+        }
+
+        private void ClearArea(Vector3 position)
+        {
+            foreach (int cell in GetAffectedCells(position))
+                SimMessages.ConsumeDisease(cell, 1.0f, int.MaxValue, 0);
+        }
+
+        private void SpawnGerms(Vector3 position, int count)
+        {
+            foreach (int cell in GetAffectedCells(position))
+                SimMessages.ModifyDiseaseOnCell(cell, GermIdx.MedicalNanobotsIdx, count);
+        }
+
+        private List<int> GetAffectedCells(Vector3 position)
+        {
+            int cell = Grid.PosToCell(position);
+            List<int> result = new List<int>() { cell, Grid.CellAbove(cell), Grid.CellLeft(cell), Grid.CellRight(cell), Grid.CellUpLeft(cell), Grid.CellUpRight(cell) };
+            return result;
         }
 
         public GameObject CreatePrefab()
