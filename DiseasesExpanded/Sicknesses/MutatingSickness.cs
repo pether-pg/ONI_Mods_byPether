@@ -154,8 +154,6 @@ namespace DiseasesExpanded
 
                     this.sm.coughFinished.Trigger(this);
                 }
-
-                //private void FinishedCoughing(GameObject cougher) => this.sm.coughFinished.Trigger(this);
             }
 
             public class States : GameStateMachine<MutatingSickness.MutatingSicknessComponent.States, MutatingSickness.MutatingSicknessComponent.StatesInstance, SicknessInstance>
