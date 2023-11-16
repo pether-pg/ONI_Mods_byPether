@@ -104,8 +104,8 @@ namespace RoomsExpanded
                             return OriginalCheck(room);
                         }
                     ),
-                    name: ((string)ROOMS.CRITERIA.LIGHT.NAME), 
-                    description: ((string)ROOMS.CRITERIA.LIGHT.DESCRIPTION)
+                    name: ((string)ROOMS.CRITERIA.LIGHTSOURCE.NAME), 
+                    description: ((string)ROOMS.CRITERIA.LIGHTSOURCE.DESCRIPTION)
                     );
             }
 

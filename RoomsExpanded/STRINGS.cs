@@ -325,6 +325,12 @@ namespace RoomsExpanded
                     public static LocString NAME = (LocString)"Transparent Ceiling";
                     public static LocString DESCRIPTION = (LocString)"Top tiles of the room are transparent.";
                 }
+
+                public class DECOR_OR_WATER_FORT
+                {
+                    public static LocString NAME = (LocString)"Aquarium Decoration";
+                    public static LocString DESCRIPTION = (LocString)"Water Fort or a Decor item.";
+                }
             }
 
             public class EFFECTS

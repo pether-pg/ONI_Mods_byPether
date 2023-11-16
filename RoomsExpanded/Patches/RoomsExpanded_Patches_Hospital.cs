@@ -13,7 +13,7 @@ namespace RoomsExpanded
                 for (int i = 0; i < __instance.Hospital.additional_constraints.Length; i++)
                 {
                     if (__instance.Hospital.additional_constraints[i] == RoomConstraints.TOILET)
-                        __instance.Hospital.additional_constraints[i] = RoomConstraints.ADVANCED_WASH_STATION;
+                        __instance.Hospital.additional_constraints[i] = RoomConstraints.ADVANCEDWASHSTATION;
                     if (__instance.Hospital.additional_constraints[i] == RoomConstraints.MESS_STATION_SINGLE)
                         __instance.Hospital.additional_constraints[i] = RoomConstraints.DECORATIVE_ITEM;
                     if (__instance.Hospital.additional_constraints[i] == RoomConstraints.MAXIMUM_SIZE_96)

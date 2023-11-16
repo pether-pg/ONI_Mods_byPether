@@ -279,6 +279,12 @@ namespace RoomsExpanded
                                                                 name: STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME,
                                                                 description: STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME);
 
+        public static RoomConstraints.Constraint DECOR_OR_WATER_FORT = new RoomConstraints.Constraint(
+                                                                bc => bc.HasTag(RoomConstraints.ConstraintTags.Decoration) || bc.HasTag(UnderwaterCritterCondoConfig.ID), 
+                                                                null,
+                                                                name: STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.NAME,
+                                                                description: STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.DESCRIPTION);
+
         private static bool IsDecorativePlant(KPrefabID plant)
         {
             return DecorativeNames.Contains(plant.name) || plant.HasTag(MorePlantsTag);

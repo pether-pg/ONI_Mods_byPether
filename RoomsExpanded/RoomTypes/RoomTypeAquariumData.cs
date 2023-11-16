@@ -20,7 +20,7 @@ namespace RoomsExpanded
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
                                             RoomModdedConstraints.FISH_RELEASE,
-                                            RoomConstraints.DECORATIVE_ITEM,
+                                            RoomModdedConstraints.DECOR_OR_WATER_FORT,
                                             RoomConstraints.MINIMUM_SIZE_12,
                                             RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Aquarium.MaxSize)
                                         };
