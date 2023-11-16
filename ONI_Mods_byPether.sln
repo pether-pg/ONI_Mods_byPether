@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UninstalledModCrashHandler"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridCellHelper", "GridCellHelper\GridCellHelper.csproj", "{2EA7BA63-4D76-4196-A390-1D3D42E82D05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiobotUpgrades", "BiobotUpgrades\BiobotUpgrades.csproj", "{5FA1FE0F-F714-4BDB-B534-27B0E1A94D4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA1FE0F-F714-4BDB-B534-27B0E1A94D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA1FE0F-F714-4BDB-B534-27B0E1A94D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA1FE0F-F714-4BDB-B534-27B0E1A94D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA1FE0F-F714-4BDB-B534-27B0E1A94D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

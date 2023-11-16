@@ -859,3 +859,8 @@ GridCellHelper/bin/Release/mod_info.yaml
 GridCellHelper/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
 GridCellHelper/obj/Release/GridCellHelper.csproj.CopyComplete
 GridCellHelper/obj/Release/GridCellHelper.csproj.FileListAbsolute.txt
+BiobotUpgrades/bin/Release/mod.yaml
+BiobotUpgrades/bin/Release/mod_info.yaml
+BiobotUpgrades/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
+BiobotUpgrades/obj/Release/BiobotUpgrades.csproj.CopyComplete
+BiobotUpgrades/obj/Release/BiobotUpgrades.csproj.FileListAbsolute.txt
