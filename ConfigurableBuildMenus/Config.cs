@@ -47,43 +47,43 @@ namespace ConfigurableBuildMenus
             Instruction = new InstructionHelper() {
                 NewBuildMenuInstruction = new InstructionHelper.NewBuildMenuHelper()
                 {
-                    MenuId = "Required. Id for your new menu, pick any one you like.",
-                    JustAfter = "ID of a menu. Your menu will be placed just after the specified one. Optional.",
-                    OnListBeginning = "If set to true, your menu will be placed on the very beginning, ignoring JustAfter value. Optional.",
-                    Name = "Name of your new menu that will be displayed in your game. Can be anything you like.",
-                    Tooltip = "Tooltip text that will be displayed above your menu. Can be anything you like.",
-                    Icon = "Icon name for your menu. You can use existing game icons or name of the file in the \"icons\" directory under mod path (without .png suffix here)"
+                    MenuId = STRINGS.INSTRUCTION.NEW_MENU.MENU_ID,
+                    JustAfter = STRINGS.INSTRUCTION.NEW_MENU.JUST_AFTER,
+                    OnListBeginning = STRINGS.INSTRUCTION.NEW_MENU.ON_BEGINING,
+                    Name = STRINGS.INSTRUCTION.NEW_MENU.NAME,
+                    Tooltip = STRINGS.INSTRUCTION.NEW_MENU.TOOLTIP,
+                    Icon = STRINGS.INSTRUCTION.NEW_MENU.ICON
                 },
                 NewBuildingCategoryInstruction = new InstructionHelper.NewBuildingCategoryHelper()
                 { 
-                    CategoryId = "Required. ID of new category. Pick any one you like",
-                    Name = "Name of new category you will see in build menu. Can be anything, but try to keep it short."
+                    CategoryId = STRINGS.INSTRUCTION.NEW_CATEGORY.CATEGORY_ID,
+                    Name = STRINGS.INSTRUCTION.NEW_CATEGORY.NAME
                 },
                 MoveBuildingItemInstruction = new InstructionHelper.MoveBuildingItemHelper()
                 {
-                    BuildingId = "Required. Must match Id of an existing building you want to customize.",
-                    MoveToMenu = "ID of the menu you want to move your building to (by default on the end of the list). Optional - if not provided, the building will be removed",
-                    Category = "ID of a category. Buildings are grouped by category in each menu. Must match existing or new category. Optional - original category will be used by default.",
-                    JustAfter = "ID of a building. Your building will be placed just after the specified one. Optional.",
-                    OnListBeginning = "If set to true, your building will be placed on the very beginning of the menu, ignoring JustAfter value. Optional. In case many buildings have this, all of them will end up on the beginning of the menu and the last building in the config will be first in the menu."
+                    BuildingId = STRINGS.INSTRUCTION.MOVE_BUILDING.BUILDING_ID,
+                    MoveToMenu = STRINGS.INSTRUCTION.MOVE_BUILDING.MOVE_TO_MENU,
+                    Category = STRINGS.INSTRUCTION.MOVE_BUILDING.CATEGORY,
+                    JustAfter = STRINGS.INSTRUCTION.MOVE_BUILDING.JUST_AFTER,
+                    OnListBeginning = STRINGS.INSTRUCTION.MOVE_BUILDING.ON_BEGINING
                 }
             };
 
             NewBuildMenus = new List<NewBuildMenu>() {
                 new NewBuildMenu() { MenuId = "DecorMenu",
                                     JustAfter = "Furniture",
-                                    Name = "Decoration",
-                                    Tooltip = "Many pretty things for your base {Hotkey}",
+                                    Name = STRINGS.CUSTOM.DECOR_MENU.NAME,
+                                    Tooltip = STRINGS.CUSTOM.DECOR_MENU.TOOLTIP,
                                     Icon = "icon_errand_art"
                 }
             };
 
             NewBuildingCategories = new List<NewBuildingCategory>() {
-                new NewBuildingCategory() { CategoryId = PlanorderHelper.DEFAULT_CATEGORY_ID, Name = "Uncategorized" },
-                new NewBuildingCategory() { CategoryId = "flowers", Name = "Flower Pots" },
-                new NewBuildingCategory() { CategoryId = "paintings", Name = "Paintings" },
-                new NewBuildingCategory() { CategoryId = "sculptures", Name = "Sculptures" },
-                new NewBuildingCategory() { CategoryId = "monument", Name = "Monument" }
+                new NewBuildingCategory() { CategoryId = PlanorderHelper.DEFAULT_CATEGORY_ID, Name = STRINGS.CUSTOM.CATEGORIES.DEFAULT },
+                new NewBuildingCategory() { CategoryId = "flowers", Name = STRINGS.CUSTOM.CATEGORIES.FLOWERS },
+                new NewBuildingCategory() { CategoryId = "paintings", Name = STRINGS.CUSTOM.CATEGORIES.PAINTINGS },
+                new NewBuildingCategory() { CategoryId = "sculptures", Name = STRINGS.CUSTOM.CATEGORIES.SCULPTURES },
+                new NewBuildingCategory() { CategoryId = "monument", Name = STRINGS.CUSTOM.CATEGORIES.MONUMENT }
             };
 
             MoveBuildingItems = new List<MoveBuildingItem>() {
