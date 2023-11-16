@@ -25,7 +25,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION"
-msgid "At least {0} unique Artifacts"
+msgid "At least {0} unique Artifacts."
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME
@@ -41,6 +41,16 @@ msgstr ""
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.NAME"
 msgid "Cooking Station"
+msgstr ""
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.DESCRIPTION"
+msgid "Water Fort or a Decor item."
+msgstr ""
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.NAME"
+msgid "Aquarium Decoration"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECORPLANTS.DESCRIPTION
@@ -100,7 +110,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FOSSILS.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FOSSILS.NAME"
-msgid "{0} Fossils."
+msgid "{0} Fossils"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.DESCRIPTION
@@ -120,7 +130,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME"
-msgid "Genetic Analysis Station."
+msgid "Genetic Analysis Station"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION
@@ -190,7 +200,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME"
-msgid "No more than one bathroom set."
+msgid "No more than one bathroom set"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.DESCRIPTION
@@ -200,7 +210,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME"
-msgid "No more than one bed."
+msgid "No more than one bed"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION
@@ -250,7 +260,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME"
-msgid "Radiation Source."
+msgid "Radiation Source"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.DESCRIPTION
@@ -283,6 +293,16 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME"
 msgid "Shower"
 msgstr ""
 
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.DESCRIPTION"
+msgid "Contains Mission Control Station."
+msgstr ""
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.NAME"
+msgid "Pilot Support Building"
+msgstr ""
+
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.DESCRIPTION"
 msgid "At least {0} swimming critters"
@@ -291,6 +311,16 @@ msgstr ""
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.NAME"
 msgid "{0} Swimming Critters"
+msgstr ""
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.DESCRIPTION"
+msgid "Top tiles of the room are transparent."
+msgstr ""
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME"
+msgid "Transparent Ceiling"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION
@@ -501,6 +531,21 @@ msgstr ""
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.TOOLTIP
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.TOOLTIP"
 msgid "Conducting research in a designated room proves to be more efficient."
+msgstr ""
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.EFFECT"
+msgid " - Provides support for Pilots"
+msgstr ""
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.NAME"
+msgid "Pilot Help Center"
+msgstr ""
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.TOOLTIP"
+msgid "So many duplicants work together just to get a new mug."
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT
