@@ -46,15 +46,6 @@ namespace MoreLogicPorts
                 typeof(CreatureDeliveryPointConfig)         // Critter Drop-Off
             };
 
-            // Checkpoints
-            if (!ModInfo.IsCheckpointAutomationActive || unconditionalGetAll)
-            {
-                result.Add(typeof(JetSuitMarkerConfig));
-                result.Add(typeof(LeadSuitMarkerConfig));
-                result.Add(typeof(OxygenMaskMarkerConfig));
-                result.Add(typeof(SuitMarkerConfig));
-            }
-
             return result;
         }
 
