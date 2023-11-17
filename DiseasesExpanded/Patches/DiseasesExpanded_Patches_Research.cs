@@ -154,5 +154,15 @@ namespace DiseasesExpanded
                 );
             }
         }
+
+        [HarmonyPatch(typeof(MorbRoverMaker.Instance))]
+        [HarmonyPatch(nameof(MorbRoverMaker.Instance.SpawnRover))]
+        public class MorbRoverMaker_SpawnRover_Patch
+        {
+            public static void Postfix(MorbRoverMaker.Instance __instance)
+            {
+                MedicalResearchDataBank.GrantResearchPoints(__instance.gameObject, 5);
+            }
+        }
     }
 }

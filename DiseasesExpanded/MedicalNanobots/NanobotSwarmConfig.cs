@@ -19,7 +19,8 @@ namespace DiseasesExpanded
         public void OnSpawn(GameObject inst)
         {
             Vector3 position = inst.transform.position;
-            Game.Instance.StartCoroutine(StartSpawningBots(position));
+            if (Settings.Instance.MedicalNanobots.IncludeDisease)
+                Game.Instance.StartCoroutine(StartSpawningBots(position));
             PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.GERMS.MEDICALNANOBOTS.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
         }
@@ -38,7 +39,8 @@ namespace DiseasesExpanded
         private void ClearArea(Vector3 position)
         {
             foreach (int cell in GetAffectedCells(position))
-                SimMessages.ConsumeDisease(cell, 1.0f, int.MaxValue, 0);
+                if(Grid.DiseaseIdx[cell] != GermIdx.MedicalNanobotsIdx)
+                    SimMessages.ConsumeDisease(cell, 1.0f, int.MaxValue, 0);
         }
 
         private void SpawnGerms(Vector3 position, int count)
