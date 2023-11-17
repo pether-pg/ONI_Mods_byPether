@@ -60,9 +60,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Patches.cs" />
+    <Compile Include="BiobotUpgrades_Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SporeFuelMaker.cs" />
+    <Compile Include="ZombieFuelMakerStates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="mod.yaml">
