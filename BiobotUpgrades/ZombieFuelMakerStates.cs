@@ -8,60 +8,70 @@ namespace BiobotUpgrades
     [SerializationConfig(MemberSerialization.OptIn)]
     class ZombieFuelMakerStates : GameStateMachine<ZombieFuelMakerStates, ZombieFuelMakerStates.Instance>, ISaveLoadable
     {
-        const float MAX_EFFICIENCY = 1.0f;
+        public const string RECHARGING_STATUS_ID = "ZombieFuelMakerStatesRecharging";
+        public const string INACTIVE_STATUS_ID = "ZombieFuelMakerStatesInactive";
+
         const int SPORES_TO_SUSTAIN_PER_SECOND = 10000;
-        const int MAX_SPORES_CLEARED_PER_SECOND = (int)(MAX_EFFICIENCY * SPORES_TO_SUSTAIN_PER_SECOND);
         const float BATTERY_DEPLETION_RATE = 30f;
 
         public State off;
-        public State recharge_10;
-        public State recharge_25;
-        public State recharge_50;
-        public State recharge_75;
-        public State recharge_100;
-        public State recharge_150;
-        public State recharge_200;
+        public RechargingStates recharging;
+
+        public class RechargingStates : State
+        {
+            public State recharge_10;
+            public State recharge_25;
+            public State recharge_50;
+            public State recharge_75;
+            public State recharge_100;
+            public State recharge_150;
+            public State recharge_200;
+        }
 
         public override void InitializeStates(out StateMachine.BaseState default_state)
         {
             default_state = this.off;
             this.off
                 .ToggleEffect(GetEffectId(0))
-                .UpdateTransition(this.recharge_10, (smi, dt) => IsAboveThreshold(smi, 0.10f), UpdateRate.SIM_1000ms);
-            this.recharge_10
-                .ToggleEffect(GetEffectId(0.10f))
-                .Update((smi, dt) => ClearZombieSpores(smi, 0.10f), UpdateRate.RENDER_1000ms)
+                .ToggleStatusItem(Db.Get().CreatureStatusItems.Get(INACTIVE_STATUS_ID))
+                .UpdateTransition(this.recharging.recharge_10, (smi, dt) => IsAboveThreshold(smi, 0.10f), UpdateRate.SIM_1000ms);
+            this.recharging
+                .DefaultState(this.recharging.recharge_10)
                 .UpdateTransition(this.off, (smi, dt) => IsBelowThreshold(smi, 0.10f), UpdateRate.SIM_1000ms)
-                .UpdateTransition(this.recharge_25, (smi, dt) => IsAboveThreshold(smi, 0.25f), UpdateRate.SIM_1000ms);
-            this.recharge_25
+                .ToggleStatusItem(Db.Get().CreatureStatusItems.Get(RECHARGING_STATUS_ID));
+            this.recharging.recharge_10
+                .ToggleEffect(GetEffectId(0.10f))
+                .Update((smi, dt) => ClearZombieSpores(smi, 0.10f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_25, (smi, dt) => IsAboveThreshold(smi, 0.25f), UpdateRate.SIM_1000ms);
+            this.recharging.recharge_25
                 .ToggleEffect(GetEffectId(0.25f))
-                .Update((smi, dt) => ClearZombieSpores(smi, 0.25f), UpdateRate.RENDER_1000ms)
-                .UpdateTransition(this.recharge_10, (smi, dt) => IsBelowThreshold(smi, 0.25f), UpdateRate.SIM_1000ms)
-                .UpdateTransition(this.recharge_50, (smi, dt) => IsAboveThreshold(smi, 0.50f), UpdateRate.SIM_1000ms);
-            this.recharge_50
+                .Update((smi, dt) => ClearZombieSpores(smi, 0.25f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_10, (smi, dt) => IsBelowThreshold(smi, 0.25f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_50, (smi, dt) => IsAboveThreshold(smi, 0.50f), UpdateRate.SIM_1000ms);
+            this.recharging.recharge_50
                 .ToggleEffect(GetEffectId(0.50f))
-                .Update((smi, dt) => ClearZombieSpores(smi, 0.50f), UpdateRate.RENDER_1000ms)
-                .UpdateTransition(this.recharge_25, (smi, dt) => IsBelowThreshold(smi, 0.50f), UpdateRate.SIM_1000ms)
-                .UpdateTransition(this.recharge_75, (smi, dt) => IsAboveThreshold(smi, 0.75f), UpdateRate.SIM_1000ms);
-            this.recharge_75
+                .Update((smi, dt) => ClearZombieSpores(smi, 0.50f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_25, (smi, dt) => IsBelowThreshold(smi, 0.50f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_75, (smi, dt) => IsAboveThreshold(smi, 0.75f), UpdateRate.SIM_1000ms);
+            this.recharging.recharge_75
                 .ToggleEffect(GetEffectId(0.75f))
-                .Update((smi, dt) => ClearZombieSpores(smi, 0.75f), UpdateRate.RENDER_1000ms)
-                .UpdateTransition(this.recharge_50, (smi, dt) => IsBelowThreshold(smi, 0.75f), UpdateRate.SIM_1000ms)
-                .UpdateTransition(this.recharge_100, (smi, dt) => IsAboveThreshold(smi, 1.00f), UpdateRate.SIM_1000ms);
-            this.recharge_100
+                .Update((smi, dt) => ClearZombieSpores(smi, 0.75f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_50, (smi, dt) => IsBelowThreshold(smi, 0.75f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_100, (smi, dt) => IsAboveThreshold(smi, 1.00f), UpdateRate.SIM_1000ms);
+            this.recharging.recharge_100
                 .ToggleEffect(GetEffectId(1.00f))
-                .Update((smi, dt) => ClearZombieSpores(smi, 1.00f), UpdateRate.RENDER_1000ms)
-                .UpdateTransition(this.recharge_75, (smi, dt) => IsBelowThreshold(smi, 1.00f), UpdateRate.SIM_1000ms)
-                .UpdateTransition(this.recharge_150, (smi, dt) => IsAboveThreshold(smi, 1.50f), UpdateRate.SIM_1000ms);
-            this.recharge_150
+                .Update((smi, dt) => ClearZombieSpores(smi, 1.00f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_75, (smi, dt) => IsBelowThreshold(smi, 1.00f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_150, (smi, dt) => IsAboveThreshold(smi, 1.50f), UpdateRate.SIM_1000ms);
+            this.recharging.recharge_150
                 .ToggleEffect(GetEffectId(1.50f))
-                .Update((smi, dt) => ClearZombieSpores(smi, 1.50f), UpdateRate.RENDER_1000ms)
-                .UpdateTransition(this.recharge_75, (smi, dt) => IsBelowThreshold(smi, 1.50f), UpdateRate.SIM_1000ms)
-                .UpdateTransition(this.recharge_150, (smi, dt) => IsAboveThreshold(smi, 2.00f), UpdateRate.SIM_1000ms);
-            this.recharge_200
+                .Update((smi, dt) => ClearZombieSpores(smi, 1.50f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_75, (smi, dt) => IsBelowThreshold(smi, 1.50f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_150, (smi, dt) => IsAboveThreshold(smi, 2.00f), UpdateRate.SIM_1000ms);
+            this.recharging.recharge_200
                 .ToggleEffect(GetEffectId(2.00f))
-                .Update((smi, dt) => ClearZombieSpores(smi, 2.00f), UpdateRate.RENDER_1000ms)
-                .UpdateTransition(this.recharge_75, (smi, dt) => IsBelowThreshold(smi, 2.00f), UpdateRate.SIM_1000ms);
+                .Update((smi, dt) => ClearZombieSpores(smi, 2.00f), UpdateRate.SIM_1000ms)
+                .UpdateTransition(this.recharging.recharge_75, (smi, dt) => IsBelowThreshold(smi, 2.00f), UpdateRate.SIM_1000ms);
         }
 
         public static string GetEffectId(float threshold)
@@ -74,11 +84,9 @@ namespace BiobotUpgrades
         {
             string id = GetEffectId(threshold);
             float value = BATTERY_DEPLETION_RATE * threshold;
-            string name = "CreateRechargeEffect name";
-            string desc = "CreateRechargeEffect desc";
-            Effect effect = new Effect(id, name, desc, 0, true, false, false);
+            Effect effect = new Effect(id, STRINGS.REFUEL_MODULE.EFFECT.NAME, STRINGS.REFUEL_MODULE.EFFECT.DESC, 0, false, false, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.InternalBioBattery.deltaAttribute.Id, value));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Amounts.InternalBioBattery.deltaAttribute.Id, value, () => STRINGS.REFUEL_MODULE.EFFECT.NAME));
             return effect;
         }
 
@@ -86,7 +94,6 @@ namespace BiobotUpgrades
         {
             int count = HowManyZombieSpores(smi);
             int minimum = (int)(threshold * SPORES_TO_SUSTAIN_PER_SECOND);
-            Debug.Log($"IsAboveThreshold? threshold = {threshold}, count = {count}, minimum = {minimum}, result = {count > minimum}");
             return count > minimum;
         }
 
@@ -94,7 +101,6 @@ namespace BiobotUpgrades
         {
             int count = HowManyZombieSpores(smi);
             int maximum = (int)(threshold * SPORES_TO_SUSTAIN_PER_SECOND);
-            Debug.Log($"IsBelowThreshold? threshold = {threshold}, count = {count}, maximum = {maximum}, result = {count > maximum}");
             return count < maximum;
         }
 
@@ -126,7 +132,6 @@ namespace BiobotUpgrades
         [SerializationConfig(MemberSerialization.OptIn)]
         public new class Instance : GameStateMachine<ZombieFuelMakerStates, ZombieFuelMakerStates.Instance, IStateMachineTarget, object>.GameInstance, ISaveLoadable
         {
-
             public Instance(IStateMachineTarget master, ZombieFuelMakerStates.Def def)
               : base(master)
             {
