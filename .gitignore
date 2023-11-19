@@ -864,3 +864,4 @@ BiobotUpgrades/bin/Release/mod_info.yaml
 BiobotUpgrades/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
 BiobotUpgrades/obj/Release/BiobotUpgrades.csproj.CopyComplete
 BiobotUpgrades/obj/Release/BiobotUpgrades.csproj.FileListAbsolute.txt
+BiobotUpgrades/bin/Release/PLib.xml

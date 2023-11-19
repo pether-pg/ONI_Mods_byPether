@@ -35,9 +35,9 @@ namespace BiobotUpgrades
         }
 
         [JsonProperty]
-        [Limit(0.1f, 100.0f)]
+        [Limit(0.1f, 50.0f)]
         [DynamicOption(typeof(LogFloatOptionsEntry))]
-        [Option("GermsToSustainPerSecond", "Clearing that many Zombie Spores will regenerate 30W/s of Biobot's battery")]
+        [Option("Germs to sustain per second (in thousands)", "Clearing that many Zombie Spores will regenerate 30W/s of Biobot's battery", Format ="F1")]
         public float GermsToSustainPerSecondInThousands { get; set; }
 
         public Settings()

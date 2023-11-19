@@ -33,6 +33,10 @@ namespace BiobotUpgrades
                 Db.Get().effects.Add(ZombieFuelMakerStates.CreateRechargeEffect(0.50f));
                 Db.Get().effects.Add(ZombieFuelMakerStates.CreateRechargeEffect(0.75f));
                 Db.Get().effects.Add(ZombieFuelMakerStates.CreateRechargeEffect(1.00f));
+                Db.Get().effects.Add(ZombieFuelMakerStates.CreateRechargeEffect(1.50f));
+                Db.Get().effects.Add(ZombieFuelMakerStates.CreateRechargeEffect(2.00f));
+                Db.Get().effects.Add(ZombieFuelMakerStates.CreateRechargeEffect(2.50f));
+                Db.Get().effects.Add(ZombieFuelMakerStates.CreateRechargeEffect(3.00f));
 
                 StatusItem inactiveStatus = new StatusItem(ZombieFuelMakerStates.INACTIVE_STATUS_ID, "CREATURES", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
                 StatusItem rechargingStatus = new StatusItem(ZombieFuelMakerStates.RECHARGING_STATUS_ID, "CREATURES", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
