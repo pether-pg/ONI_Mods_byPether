@@ -92,7 +92,6 @@ namespace RoomsExpanded
             HideLegendEffect = true; 
             EnforcedLanguage = "";
 
-            //Laboratory = new RoomSettings(true, 64, ColorPalette.RoomRecreation, 0.1f);
             Kitchenette = new RoomSettings(true, 64, ColorPalette.RoomFood, 0.1f);
             Bathroom = new RoomSettings(true, 64, ColorPalette.RoomBathroom, 0.2f);
             Industrial = new PlainRoomSettings(false, 96, ColorPalette.RoomIndustrial);
@@ -106,7 +105,6 @@ namespace RoomsExpanded
             MuseumSpace = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
             MuseumHistory = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
             HospitalUpdate = new PlainRoomSettings(true, 96, ColorPalette.RoomHospital);
-            //PrivateBedroom = new PlainRoomSettings(true, 32, ColorPalette.RoomSleep);
             NurseryGenetic = new RoomSettings(true, 96, ColorPalette.RoomAgricultural, 0.2f);
             MissionControl = new PlainRoomSettings(true, 96, ColorPalette.RoomScience);
 
@@ -116,7 +114,6 @@ namespace RoomsExpanded
             ResizeMaxRoomSize64 = 64;
             ResizeMaxRoomSize96 = 96;
             ResizeMaxRoomSize120 = 120;
-            //ResizeMaxRoomSize = 128;
         }
 
         [JsonProperty]
@@ -127,10 +124,6 @@ namespace RoomsExpanded
         [Limit(0, 2)]
         [Option("Enforced Language", "EnforcedLanguage", category: "RoomsExpanded: Additional")]
         public string EnforcedLanguage { get; set; }
-
-        //[JsonProperty]
-        //[Option("Laboratory", category: "New Room - Laboratory")]
-        //public RoomSettings Laboratory { get; set; }
 
         [JsonProperty]
         [Option("Kitchenette", category: "New Room - Kitchenette")]
@@ -175,10 +168,6 @@ namespace RoomsExpanded
         [JsonProperty]
         [Option("Hospital Update", category: "Room Modification - Hospital")]
         public PlainRoomSettings HospitalUpdate { get; set; }
-
-        //[JsonProperty]
-        //[Option("Private Bedroom", category: "New Room - Private Bedroom")]
-        //public PlainRoomSettings PrivateBedroom { get; set; }
 
         [JsonProperty]
         [Option("Genetic Nursery", category: "New Room - Genetic Nursery")]
