@@ -29,5 +29,13 @@ namespace BiobotUpgrades
                 public static LocString DESC = "Energy created with collected Zombie Spores";
             }
         }
+
+        public class TRANSLATION
+        {
+            public class CONTRIBUTOR
+            {
+                public static LocString NAME = "pether.pg";
+            }
+        }
     }
 }
