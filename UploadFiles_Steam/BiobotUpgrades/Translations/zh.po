@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_CN\n"
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.EFFECT.DESC
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.EFFECT.DESC"
+msgid "Energy created with collected Zombie Spores"
+msgstr "收集僵尸孢子以产生能量"
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.EFFECT.NAME
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.EFFECT.NAME"
+msgid "Collected Zombie Spores"
+msgstr "收集僵尸孢子"
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.INACTIVE.NAME
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.INACTIVE.NAME"
+msgid "Zombie Recharge inactive"
+msgstr "充电功能未激活"
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.INACTIVE.TOOLTIP
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.INACTIVE.TOOLTIP"
+msgid "Ambient atmosphere lacks Zombie Spores for recharge"
+msgstr "环境大气中缺乏僵尸孢子进行充电"
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.RECHARGING.NAME
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.RECHARGING.NAME"
+msgid "Zombie Recharge active"
+msgstr "充电功能已激活"
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.RECHARGING.TOOLTIP
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.RECHARGING.TOOLTIP"
+msgid "Biobot collects ambient Zombie Spores to recharge it's Biofuel Battery"
+msgstr "生物机器人收集环境中的僵尸孢子来给它的生物燃料电池充电"
+
+#. BiobotUpgrades.STRINGS.TRANSLATION.CONTRIBUTOR.NAME
+msgctxt "BiobotUpgrades.STRINGS.TRANSLATION.CONTRIBUTOR.NAME"
+msgid "pether.pg"
+msgstr "ttdlyu"
