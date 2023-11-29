@@ -9,7 +9,7 @@ namespace BiobotUpgrades
 {
     [Serializable]
     [RestartRequired]
-    [ConfigFileAttribute("RoomsExpanded.Settings.json", true)]
+    [ConfigFileAttribute("BiobotUpgrades.Settings.json", true)]
     public class Settings
     {
         private static Settings _instance;

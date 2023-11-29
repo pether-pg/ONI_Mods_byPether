@@ -78,6 +78,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterStrings.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="SpawnableBiobotConfig.cs" />
     <Compile Include="STRINGS.cs" />
     <Compile Include="ZombieFuelMakerStates.cs" />
   </ItemGroup>

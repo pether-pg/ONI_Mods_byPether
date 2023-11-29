@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included"
+"POT Version: 2.0"
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.EFFECT.DESC
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.EFFECT.DESC"
+msgid "Energy created with collected Zombie Spores"
+msgstr ""
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.EFFECT.NAME
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.EFFECT.NAME"
+msgid "Collected Zombie Spores"
+msgstr ""
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.INACTIVE.NAME
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.INACTIVE.NAME"
+msgid "Zombie Recharge inactive"
+msgstr ""
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.INACTIVE.TOOLTIP
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.INACTIVE.TOOLTIP"
+msgid "Ambient atmosphere lacks Zombie Spores for recharge"
+msgstr ""
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.RECHARGING.NAME
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.RECHARGING.NAME"
+msgid "Zombie Recharge active"
+msgstr ""
+
+#. BiobotUpgrades.STRINGS.REFUEL_MODULE.RECHARGING.TOOLTIP
+msgctxt "BiobotUpgrades.STRINGS.REFUEL_MODULE.RECHARGING.TOOLTIP"
+msgid "Biobot collects ambient Zombie Spores to recharge it's Biofuel Battery"
+msgstr ""
+
+#. BiobotUpgrades.STRINGS.TRANSLATION.CONTRIBUTOR.NAME
+msgctxt "BiobotUpgrades.STRINGS.TRANSLATION.CONTRIBUTOR.NAME"
+msgid "pether.pg"
+msgstr ""
+
