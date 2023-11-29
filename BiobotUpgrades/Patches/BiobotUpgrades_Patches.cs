@@ -22,7 +22,6 @@ namespace BiobotUpgrades
             }
         }
 
-
         [HarmonyPatch(typeof(Db))]
         [HarmonyPatch(nameof(Db.Initialize))]
         public class Db_Initialize_Patch
@@ -48,8 +47,6 @@ namespace BiobotUpgrades
 
                 Db.Get().CreatureStatusItems.Add(inactiveStatus);
                 Db.Get().CreatureStatusItems.Add(rechargingStatus);
-
-
             }
         }
 
@@ -125,8 +122,7 @@ namespace BiobotUpgrades
                         return perkId1;
                     default:
                         return string.Empty;
-                }
-                
+                }                
             }
         }
     }
