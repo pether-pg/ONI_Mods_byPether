@@ -77,7 +77,10 @@ namespace BiobotUpgrades
             public static void Postfix(GameObject __result)
             {
                 Modifiers modifiers = __result.GetComponent<Modifiers>();
-                modifiers.initialAttributes.Add(Db.Get().Attributes.Botanist.Id);
+                modifiers.initialAttributes.Add(Db.Get().Attributes.Botanist.Id); // For Harvest and Uproot chores
+                modifiers.initialAttributes.Add(Db.Get().Attributes.Strength.Id); // For Compost Flipping chore
+
+                SymbolOverrideControllerUtil.AddToPrefab(__result); // For Compost Flipping
             }
         }
 
