@@ -74,7 +74,7 @@ namespace DiseasesExpanded
                 if (!CausesCurse(__instance))
                     return;
 
-                if (HasConflictingTraits(worker) || IsRecentlyRecovered(worker))
+                if (HasConflictingTraits(worker) || IsRecentlyRecovered(worker) || IsBiobot(worker))
                     return;
 
                 if (SuitWearing.IsWearingAtmoSuit(worker.gameObject) || SuitWearing.IsWearingLeadSuit(worker.gameObject))
@@ -122,6 +122,11 @@ namespace DiseasesExpanded
 
                 Effects effects = worker.gameObject.GetComponent<Effects>();
                 return (effects != null && effects.HasEffect(SpindlySickness.RECOVERY_ID));
+            }
+
+            private static bool IsBiobot(Worker worker)
+            {
+                return worker.HasTag(MorbRoverConfig.ID);
             }
 
             private static float GetInfectionChance(Worker worker)

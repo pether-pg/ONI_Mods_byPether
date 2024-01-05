@@ -43,11 +43,13 @@ namespace DiseasesExpanded
                 .OnAnimQueueComplete(this.working_loop);
             this.working_loop
                 .PlayAnim("working_loop", KAnim.PlayMode.Loop)
+                .Enter(smi => smi.GetComponent<Operational>().SetActive(true))
                 .Update((smi, dt) => { WorkingLoop(smi, dt); }, UpdateRate.SIM_1000ms)
                 .ToggleStatusItem(Db.Get().BuildingStatusItems.Get(GermcatcherConfig.StatusItemID), smi => smi)
                 .EventTransition(GameHashes.OperationalChanged, this.working_pst, smi => !smi.GetComponent<Operational>().IsOperational);
             this.working_pst
                 .PlayAnim("working_pst")
+                .Enter(smi => smi.GetComponent<Operational>().SetActive(false))
                 .OnAnimQueueComplete(this.on);
         }
 

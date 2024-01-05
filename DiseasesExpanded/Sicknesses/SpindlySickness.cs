@@ -12,21 +12,21 @@ namespace DiseasesExpanded
         public const string RECOVERY_ID = "SpindlySicknessRecovery";
         
         public SpindlySickness()
-            : base(ID, Sickness.SicknessType.Ailment, Sickness.Severity.Minor, 0.00025f, new List<Sickness.InfectionVector>()
+            : base(ID, SicknessType.Ailment, Severity.Minor, 0.00025f, new List<InfectionVector>()
             {
-                Sickness.InfectionVector.Contact
+                InfectionVector.Contact
             }, 10000f, RECOVERY_ID)
         {
             float scale = Settings.Instance.SleepingCurse.SeverityScale;
-            this.AddSicknessComponent((Sickness.SicknessComponent)new CommonSickEffectSickness());
-            this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[1]
+            this.AddSicknessComponent(new CommonSickEffectSickness());
+            this.AddSicknessComponent(new AttributeModifierSickness(new AttributeModifier[1]
             {
-                new AttributeModifier("StaminaDelta", -0.016666666f * scale, (string) STRINGS.DISEASES.SPINDLYCURSE.NAME)
+                new AttributeModifier("StaminaDelta", -0.016666666f * scale, STRINGS.DISEASES.SPINDLYCURSE.NAME)
             }));
-            this.AddSicknessComponent((Sickness.SicknessComponent)new SpindlySickness.SpindlySicknessComponent());
+            this.AddSicknessComponent(new SpindlySicknessComponent());
         }
 
-        public class SpindlySicknessComponent : Sickness.SicknessComponent
+        public class SpindlySicknessComponent : SicknessComponent
         {
             public override object OnInfect(GameObject go, SicknessInstance diseaseInstance)
             {

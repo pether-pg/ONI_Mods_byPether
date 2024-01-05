@@ -36,7 +36,6 @@ namespace DiseasesExpanded
                 default_state = this.off;
                 this.off
                     .PlayAnim("off")
-                    //.Update((smi, dt) => smi.UpdateActive(dt, false))
                     .ToggleStatusItem(Db.Get().BuildingStatusItems.Get(ShieldGeneratorConfig.StatusItemID), smi => smi)
                     .UpdateTransition(this.working_pre, (smi, dt) => smi.CanWork(), UpdateRate.SIM_200ms);
                 this.working_pre
@@ -44,11 +43,12 @@ namespace DiseasesExpanded
                     .OnAnimQueueComplete(this.working_loop);
                 this.working_loop
                     .PlayAnim("on", KAnim.PlayMode.Loop)
-                    //.Update((smi, dt) => smi.UpdateActive(dt, true))
+                    .Enter(smi => smi.GetComponent<Operational>().SetActive(true))
                     .ToggleStatusItem(Db.Get().BuildingStatusItems.Get(ShieldGeneratorConfig.StatusItemID), smi => smi)
                     .UpdateTransition(this.working_pst, (smi, dt) => !smi.CanWork(), UpdateRate.SIM_200ms);
                 this.working_pst
                     .PlayAnim("on_pst")
+                    .Enter(smi => smi.GetComponent<Operational>().SetActive(false))
                     .OnAnimQueueComplete(this.off);
             }
         }
