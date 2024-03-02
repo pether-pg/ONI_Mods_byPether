@@ -55,7 +55,6 @@ namespace DiseasesExpanded
         {
             public static Dictionary<string, float> Printables = new Dictionary<string, float>()
             {
-                { MudMaskConfig.ID, 5 },
                 { HappyPillConfig.ID, 5 },
                 { TestSampleConfig.ID, 5 },
                 { AntihistamineBoosterConfig.ID, 3 },
@@ -64,8 +63,13 @@ namespace DiseasesExpanded
                 { AlienSicknessCureConfig.ID, 1 },
                 { SerumSuperConfig.ID, 1 },
                 { SerumTummyConfig.ID, 1 },
-                { SerumYummyConfig.ID, 1 },
                 { SerumDeepBreathConfig.ID, 1 },
+            };
+
+            public static Dictionary<string, float> DlcPrintables = new Dictionary<string, float>()
+            {
+                { MudMaskConfig.ID, 5 },
+                { SerumYummyConfig.ID, 1 },
                 { RadShotConfig.ID, 1 },
                 { SapShotConfig.ID, 1 }
             };
@@ -76,6 +80,9 @@ namespace DiseasesExpanded
                 List<CarePackageInfo> list = traverse.GetValue<CarePackageInfo[]>().ToList<CarePackageInfo>();
                 foreach (string id in Printables.Keys)
                     list.Add(new CarePackageInfo(id, Printables[id], () => DiscoveredResources.Instance.IsDiscovered(id)));
+                if(DlcManager.IsExpansion1Active())
+                    foreach (string id in DlcPrintables.Keys)
+                        list.Add(new CarePackageInfo(id, DlcPrintables[id], () => DiscoveredResources.Instance.IsDiscovered(id)));
                 traverse.SetValue(list.ToArray());
             }
         }
