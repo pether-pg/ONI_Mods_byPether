@@ -5,6 +5,7 @@ using Klei.AI;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
+using System;
 
 namespace FragrantFlowers
 {
@@ -13,6 +14,7 @@ namespace FragrantFlowers
 
         [HarmonyPatch(typeof(EntityTemplates))]
         [HarmonyPatch("ExtendEntityToWildCreature")]
+        [HarmonyPatch(new Type[] { typeof(GameObject), typeof(int), typeof(bool) })]
         public static class EntityTemplates_ExtendEntityToWildCreature_Patch
         {
             public static void Postfix(ref GameObject __result)
