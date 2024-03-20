@@ -113,6 +113,7 @@ namespace DiseasesExpanded
 
         public void UpdateGermData()
         {
+            Debug.Log($"{ModInfo.Namespace}: MedicalNanobots.UpdateGermData() tried");
             if (!MedicalNanobotsData.IsReadyToUse())
                 return;
 
@@ -125,6 +126,7 @@ namespace DiseasesExpanded
                 maxGrowthTemp + growthTempPerLvl * (1 + 2 * MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Res_TemperatureResistance))
                 );
             this.overlayLegendHovertext = MedicalNanobotsData.Instance.GetLegendString();
+            Debug.Log($"{ModInfo.Namespace}: MedicalNanobots.UpdateGermData() done!");
         }
 
         public void UpdateGrowthRules(bool ensureNull = false)
@@ -146,11 +148,11 @@ namespace DiseasesExpanded
 
             // Gas
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 1f, baseHalfLife, baseHalfLife / 10, NanobotBottleConfig.SPAWNED_BOTS_COUNT, 0.005f, 5100));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 1f, baseHalfLife, baseHalfLife / 10, NanobotBottleConfig.SPAWNED_BOTS_COUNT, 0.005f, 10000));
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Oxygen));
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Hydrogen));
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.CarbonDioxide));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Oxygen, NanobotBottleConfig.SPAWNED_BOTS_COUNT));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.Hydrogen, NanobotBottleConfig.SPAWNED_BOTS_COUNT));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.CarbonDioxide, NanobotBottleConfig.SPAWNED_BOTS_COUNT));
 
             // Liquid
 

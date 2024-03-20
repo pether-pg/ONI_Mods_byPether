@@ -71,7 +71,8 @@ namespace DiseasesExpanded
             //    CompleteMutation();
 
             Debug.Log($"{ModInfo.Namespace}: MutationData Spawned. Current mutation: {GetMutationsCode()}");
-            Instance.UpdateAll();
+            Instance.UpdateAll(); 
+            SimMessages.CreateDiseaseTable(Db.Get().Diseases);
         }
 
         public void IncreaseMutationRateReductionLvl(int increment = 1)

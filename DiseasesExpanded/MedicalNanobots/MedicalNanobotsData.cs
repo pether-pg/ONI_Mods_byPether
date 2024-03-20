@@ -54,6 +54,7 @@ namespace DiseasesExpanded
 
             Instance.InitalizeRecipes();
             Instance.UpdateAll();
+            SimMessages.CreateDiseaseTable(Db.Get().Diseases);
             Debug.Log($"{ModInfo.Namespace}: MedicalNanobotsData Spawned. Current development: {GetDevelopmentCode()}");
         }
 

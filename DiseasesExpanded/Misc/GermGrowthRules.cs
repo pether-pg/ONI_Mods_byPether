@@ -121,6 +121,17 @@ namespace DiseasesExpanded
             return elementGrowthRule;
         }
 
+        public static ElementGrowthRule SurviveAndSpreadInElement(SimHashes element, int maxPerKg)
+        {
+            ElementGrowthRule elementGrowthRule = new ElementGrowthRule(element);
+            elementGrowthRule.underPopulationDeathRate = new float?(0.0f);
+            elementGrowthRule.populationHalfLife = new float?(float.PositiveInfinity);
+            elementGrowthRule.overPopulationHalfLife = new float?(3000f);
+            elementGrowthRule.maxCountPerKG = new float?(maxPerKg);
+            elementGrowthRule.diffusionScale = new float?(0.005f);
+            return elementGrowthRule;
+        }
+
         public static ElementGrowthRule ThriveInElement(SimHashes element, float scale = 1)
         {
             // For negative half-life, the smaller abslolute value, the faster growth

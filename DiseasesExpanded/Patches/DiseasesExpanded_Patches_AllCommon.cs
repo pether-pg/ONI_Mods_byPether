@@ -233,6 +233,15 @@ namespace DiseasesExpanded
             }
         }
 
+        [HarmonyPatch(typeof(SimMessages))]
+        [HarmonyPatch("CreateDiseaseTable")]
+        public static class SimMessages_CreateDiseaseTable_Patch
+        {
+            public static void Postfix()
+            {
+                Debug.Log($"{ModInfo.Namespace}: SimMessages.CreateDiseaseTable done!");
+            }
+        }
 
         [HarmonyPatch(typeof(OverlayModes.Disease))]
         [HarmonyPatch("GetCustomLegendData")]

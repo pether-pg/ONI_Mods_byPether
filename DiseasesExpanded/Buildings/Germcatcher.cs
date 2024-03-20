@@ -36,7 +36,7 @@ namespace DiseasesExpanded
             if (Settings.Instance.FrostPox.IncludeDisease)
                 SpawnedFlasks.Add(GermIdx.FrostShardsIdx, FrostShardsFlask.ID);
             if (Settings.Instance.MooFlu.IncludeDisease)
-                SpawnedFlasks.Add(GermIdx.GassyGermsIdx, FrostShardsFlask.ID);
+                SpawnedFlasks.Add(GermIdx.GassyGermsIdx, GassyGermFlask.ID);
             if (Settings.Instance.AlienGoo.IncludeDisease)
                 SpawnedFlasks.Add(GermIdx.AlienGermsIdx, AlienGermFlask.ID);
             if (Settings.Instance.MutatingVirus.IncludeDisease)

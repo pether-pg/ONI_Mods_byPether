@@ -51,6 +51,7 @@ namespace DiseasesExpanded
 
         public void UpdateGermData()
         {
+            Debug.Log($"{ModInfo.Namespace}: MutatingGerms.UpdateGermData() tried");
             if (!MutationData.IsReadyToUse())
                 return;
 
@@ -63,6 +64,7 @@ namespace DiseasesExpanded
                 maxGrowthTemp + growthTempPerLvl * (1 + 2 * MutationData.Instance.GetMutationLevel(MutationVectors.Vectors.Res_TemperatureResistance))
                 );
             this.overlayLegendHovertext = MutationData.Instance.GetLegendString();
+            Debug.Log($"{ModInfo.Namespace}: MutatingGerms.UpdateGermData() done!");
         }
 
         public void UpdateGrowthRules(bool ensureNull = false, int o2Lvl = 0, int co2Lvl = 0, int polLvl = 0, int h2oLvl = 0, int chlLvl = 0, int gasLvl = 0, int liqLvl = 0)
