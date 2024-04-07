@@ -59,6 +59,7 @@ namespace SignsTagsAndRibbons
                 AddButton(animFile, anim, anim, () => target.SetVariant(anim));
             }
         }
+
         private void AddButton(KAnimFile animFile, string animName, LocString tooltip, System.Action onClick)
         {
             var gameObject = Util.KInstantiateUI(stateButtonPrefab, buttonContainer.gameObject, true);

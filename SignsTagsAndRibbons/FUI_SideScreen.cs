@@ -25,7 +25,7 @@ namespace SignsTagsAndRibbons
         {
             var detailsScreen = Traverse.Create(DetailsScreen.Instance);
             screens = detailsScreen.Field("sideScreens").GetValue<List<DetailsScreen.SideScreenRef>>();
-            contentBody = detailsScreen.Field("sideScreenContentBody").GetValue<GameObject>();
+            contentBody = detailsScreen.Field("sideScreenConfigContentBody").GetValue<GameObject>();
 
             return screens != null && contentBody != null;
         }

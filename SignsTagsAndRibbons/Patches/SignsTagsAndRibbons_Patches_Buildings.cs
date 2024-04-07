@@ -22,6 +22,8 @@ namespace SignsTagsAndRibbons
                 BasicModUtils.MakeBuildingStrings(NumbersTagConfig.ID, STRINGS.BUILDINGS.NUMBER.NAME, STRINGS.BUILDINGS.NUMBER.DESC, STRINGS.BUILDINGS.NUMBER.EFFECT);
                 BasicModUtils.MakeBuildingStrings(LetterTagConfig.ID, STRINGS.BUILDINGS.LETTER.NAME, STRINGS.BUILDINGS.LETTER.DESC, STRINGS.BUILDINGS.LETTER.EFFECT);
                 BasicModUtils.MakeBuildingStrings(GeyserTagConfig.ID, STRINGS.BUILDINGS.GEYSER.NAME, STRINGS.BUILDINGS.GEYSER.DESC, STRINGS.BUILDINGS.GEYSER.EFFECT);
+                BasicModUtils.MakeBuildingStrings(LocationTagConfig.ID, STRINGS.BUILDINGS.LOCATION.NAME, STRINGS.BUILDINGS.LOCATION.DESC, STRINGS.BUILDINGS.LOCATION.EFFECT);
+                BasicModUtils.MakeBuildingStrings(SmallElementTagConfig.ID, STRINGS.BUILDINGS.SMALL_EMELENT.NAME, STRINGS.BUILDINGS.SMALL_EMELENT.DESC, STRINGS.BUILDINGS.SMALL_EMELENT.EFFECT);
 
                 BasicModUtils.MakeSideScreenStrings(SignSideScreen.SCREEN_TITLE_KEY, STRINGS.SIDESCREEN.TITLE);
 
@@ -37,7 +39,9 @@ namespace SignsTagsAndRibbons
                 ModUtil.AddBuildingToPlanScreen("Utilities", GasTagConfig.ID);
                 ModUtil.AddBuildingToPlanScreen("Utilities", NumbersTagConfig.ID);
                 ModUtil.AddBuildingToPlanScreen("Utilities", LetterTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", GeyserTagConfig.ID);
+                // ModUtil.AddBuildingToPlanScreen("Utilities", GeyserTagConfig.ID);
+                ModUtil.AddBuildingToPlanScreen("Utilities", LocationTagConfig.ID);
+                ModUtil.AddBuildingToPlanScreen("Utilities", SmallElementTagConfig.ID);
             }
         }
     }

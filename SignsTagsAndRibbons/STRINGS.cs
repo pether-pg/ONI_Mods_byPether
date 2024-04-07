@@ -171,6 +171,20 @@ namespace SignsTagsAndRibbons
                 public static LocString EFFECT = "This tag is a visual representation of geological formations.";
             }
 
+            public class LOCATION
+            {
+                public static LocString NAME = "Location Tag";
+                public static LocString DESC = "A wall tag for geysers, vents and volcanos.";
+                public static LocString EFFECT = "This tag is a visual representation of geological formations.";
+            }
+
+            public class SMALL_EMELENT
+            {
+                public static LocString NAME = "Small Element Tag";
+                public static LocString DESC = "A small tag for gas and liquid elements.";
+                public static LocString EFFECT = "This tag is a visual representation of gases and liquids.";
+            }
+
             public class NUMBER
             {
                 public static LocString NAME = "Number Tag";
