@@ -44,7 +44,7 @@ namespace DietVariety
             EnsureDuplicantTracked(go);
 
             int id = GetGameObjectId(go);
-            if (!TimeSinceAte[id].ContainsKey(foodId))
+            if (!TimeSinceAte.ContainsKey(id) || !TimeSinceAte[id].ContainsKey(foodId))
                 return 0;
 
             return Mathf.Min(MAX_COST, TimeSinceAte[id][foodId]);
@@ -63,7 +63,7 @@ namespace DietVariety
             foreach (string key in TimeSinceAte[id].Keys)
                 keysToIncrease.Add(key);
             foreach (string key in keysToIncrease)
-                if (TimeSinceAte[id][key] < Settings.Instance.MaxMealsCounted)
+                if (TimeSinceAte[id][key] <= Settings.Instance.MaxMealsCounted)
                     TimeSinceAte[id][key] += 1;
         }
 

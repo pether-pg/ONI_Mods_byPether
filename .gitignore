@@ -865,3 +865,8 @@ BiobotUpgrades/obj/Release/.NETFramework,Version=v4.7.1.AssemblyAttributes.cs
 BiobotUpgrades/obj/Release/BiobotUpgrades.csproj.CopyComplete
 BiobotUpgrades/obj/Release/BiobotUpgrades.csproj.FileListAbsolute.txt
 BiobotUpgrades/bin/Release/PLib.xml
+DietVariety/bin/Release/PLib.xml
+packages/PLib.4.15.0/.signature.p7s
+packages/PLib.4.15.0/icon.png
+packages/PLib.4.15.0/lib/net471/PLib.xml
+packages/PLib.4.15.0/PLib.4.15.0.nupkg

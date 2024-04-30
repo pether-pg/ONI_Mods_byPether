@@ -68,12 +68,13 @@ namespace DietVariety
         {
             int uniqueCount = GetUniqueCount();
             float duration = 0;
-            float moraleBonus = Settings.Instance.MoralePerFoodType * uniqueCount - Settings.Instance.MinFoodTypesRequired * Settings.Instance.MoralePerFoodType;
+            int moraleBonus = Mathf.FloorToInt(Settings.Instance.MoralePerFoodType * (uniqueCount - Settings.Instance.MinFoodTypesRequired));
+            string name = string.Format(STRINGS.EFFECTS.VARIED_DIET.NAME, moraleBonus);
             string desc = string.Format(STRINGS.EFFECTS.VARIED_DIET.DESC, uniqueCount, Settings.Instance.MaxMealsCounted);
             
-            Effect effect = new Effect(EFFECT_ID, STRINGS.EFFECTS.VARIED_DIET.NAME, desc, duration, true, false, false);
+            Effect effect = new Effect(EFFECT_ID, name, desc, duration, true, false, false);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.QualityOfLife.Id, moraleBonus, STRINGS.EFFECTS.VARIED_DIET.NAME));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.QualityOfLife.Id, moraleBonus, STRINGS.EFFECTS.VARIED_DIET.REASON));
             
             return effect;
         }
