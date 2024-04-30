@@ -1,0 +1,6 @@
+# recommended you make this the same as your mod name in Steam
+title: "[Vanilla + DLC] Diet Variety" 
+# currently unused, but may be someday
+description: "Encourages and rewards duplicants to enrich their diets with more variety." 
+# a name for other mods to recognize you by, recommended to not change this once you set it
+staticID: "pether-pg.DietVariety" 
