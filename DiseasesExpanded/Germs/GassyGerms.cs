@@ -62,9 +62,12 @@ namespace DiseasesExpanded
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, 12000f, 1200f, 10000f, 0.001f, 1000));
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveInElement(SimHashes.Oxygen));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.GrowthLike_Slimelung_Oxygen(SimHashes.Oxygen));
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveInElement(SimHashes.ChlorineGas));
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.Methane));
+            GrowthRule inNatGas = GermGrowthRules.ThriveAndSpreadInElement(SimHashes.Methane, 5);
+            inNatGas.minDiffusionCount = 1000;
+            inNatGas.diffusionScale = 0.005f;
+            this.AddGrowthRule(inNatGas);
             this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.ContaminatedOxygen));
 
 
