@@ -102,7 +102,7 @@ namespace DiseasesExpanded
             {
                 if (_instance == null)
                     _instance = JsonSerializer<Settings>.Deserialize();
-                if(_instance == null)
+                if (_instance == null)
                 {
                     _instance = new Settings();
                     JsonSerializer<Settings>.Serialize(_instance);
@@ -125,6 +125,7 @@ namespace DiseasesExpanded
             EnableMedicalResearchPoints = true;
             InfectRawMeatDropsWithGerms = true;
             FrequentVirusAndNanobotUpdates = false;
+            SwapAntihistamineType = false;
             //PurgeMapFromDisabledGerms = false;
 
             AlienGoo = new DiseaseSettings(true, 1.0f, ColorPalette.NavyBlue);
@@ -138,6 +139,10 @@ namespace DiseasesExpanded
 
             RandomEvents = new RandomEventsSettings();
         }
+
+        [JsonProperty]
+        [Option("Allergy Medication Type", "Changes Allergy Medication type from Cure to Booster", category: "DiseasesExpanded: Additional")]
+        public bool SwapAntihistamineType { get; set; }
 
         [JsonProperty]
         [Option("Rebalance For Diseases Restored", "Makes things harder and your game - miserable...", category: "DiseasesExpanded: Additional")]

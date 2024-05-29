@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DiseasesExpanded
 {
-    class AntihistamineBoosterConfig : IEntityConfig
+    class AntihistamineBoosterConfig// : IEntityConfig
     {
         public const string ID = "AntihistamineBooster";
         public const string EffectID = "HistamineSuppression"; // from vanilla ONI
@@ -31,14 +31,14 @@ namespace DiseasesExpanded
             {
                 new ComplexRecipe.RecipeElement((Tag) ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
-            AntihistamineBoosterConfig.recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
-            {
-                time = 100f,
-                description = STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC,
-                nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
-                fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
-                sortOrder = 11
-            };
+            //AntihistamineBoosterConfig.recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
+            //{
+            //    time = 100f,
+            //    description = STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC,
+            //    nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
+            //    fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
+            //    sortOrder = 10
+            //};
 
             MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, (string)null, new string[] { "Allergies" });
 

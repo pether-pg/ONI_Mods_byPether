@@ -80,10 +80,20 @@ namespace DiseasesExpanded
                 List<CarePackageInfo> list = traverse.GetValue<CarePackageInfo[]>().ToList<CarePackageInfo>();
                 foreach (string id in Printables.Keys)
                     list.Add(new CarePackageInfo(id, Printables[id], () => DiscoveredResources.Instance.IsDiscovered(id)));
-                if(DlcManager.IsExpansion1Active())
+                if (DlcManager.IsExpansion1Active())
                     foreach (string id in DlcPrintables.Keys)
                         list.Add(new CarePackageInfo(id, DlcPrintables[id], () => DiscoveredResources.Instance.IsDiscovered(id)));
                 traverse.SetValue(list.ToArray());
+            }
+        }
+
+        [HarmonyPatch(typeof(AntihistamineConfig), "CreatePrefab")]
+        public static class AntihistamineConfig_CreatePrefab_Patch
+        {
+            private static void Postfix(GameObject __result)
+            {
+                if (Settings.Instance.SwapAntihistamineType)
+                    __result.AddOrGet<MedicinalPill>().info.medicineType = MedicineInfo.MedicineType.Booster;
             }
         }
     }
