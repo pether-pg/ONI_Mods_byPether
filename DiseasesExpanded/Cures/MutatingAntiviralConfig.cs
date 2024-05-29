@@ -40,22 +40,22 @@ namespace DiseasesExpanded
         {
             DefineRecipe(BasicForagePlantConfig.ID, 2);
             DefineRecipe(ForestForagePlantConfig.ID, 0.25f);
-            if(DlcManager.IsExpansion1Active())
+            if (DlcManager.IsExpansion1Active())
                 DefineRecipe(SwampForagePlantConfig.ID, 2 / 3.0f);
 
             MedicineInfo medInfo = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.CureSpecific, null, new string[] { MutatingSickness.ID });
 
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, 
-                STRINGS.CURES.MUTATINGANTIVIRAL.NAME, 
-                STRINGS.CURES.MUTATINGANTIVIRAL.NAME, 
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID,
+                STRINGS.CURES.MUTATINGANTIVIRAL.NAME,
+                STRINGS.CURES.MUTATINGANTIVIRAL.DESC,
                 1f,
-                false, 
-                Assets.GetAnim(Kanims.UnstableAntiviralKanim), 
-                "object", 
-                Grid.SceneLayer.Front, 
-                EntityTemplates.CollisionShape.RECTANGLE, 
-                0.8f, 
-                0.4f, 
+                true,
+                Assets.GetAnim(Kanims.UnstableAntiviralKanim),
+                "object",
+                Grid.SceneLayer.Front,
+                EntityTemplates.CollisionShape.RECTANGLE,
+                0.8f,
+                0.4f,
                 true);
 
             GameObject medicineEntity = EntityTemplates.ExtendEntityToMedicine(looseEntity, medInfo);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DiseasesExpanded
 {
-    class HungermsVaccineConfig : IEntityConfig
+    class HungermsVaccineConfig// : IEntityConfig
     {
         public const string ID = "HungermsVaccine";
         public const string EffectID = "HungermsVaccineEffect";
@@ -44,7 +44,8 @@ namespace DiseasesExpanded
                 description = Desc,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.GetAdvancedApothecaryId() },
-                sortOrder = 1
+                sortOrder = 41,
+                requiredTech = "MedicineIV"
             };
             */
 

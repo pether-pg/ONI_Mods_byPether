@@ -41,13 +41,13 @@ namespace DiseasesExpanded
 
                 if (techInstance.progressInventory.PointsByTypeID[MedicalResearchTypeId] == 0)
                 {
-                    if(tech.ArePrerequisitesComplete())
+                    if (tech.ArePrerequisitesComplete())
                         return techInstance;
 
                     bool firstMedTech = true;
                     bool previousMedTechCompleted = true;
 
-                    foreach(Tech previousTech in tech.requiredTech)
+                    foreach (Tech previousTech in tech.requiredTech)
                     {
                         if (previousTech.costsByResearchTypeID.ContainsKey(MedicalResearchTypeId))
                         {
@@ -102,6 +102,7 @@ namespace DiseasesExpanded
             Dictionary<string, float> FlaskEfficiency = new Dictionary<string, float>()
             {
                 { UnspecifiedFlask.ID, 1 },
+                { RadiationGermsFlask.ID, 1 },
                 { PollenFlask.ID, 1 },
                 { FoodGermsFlask.ID, 1 },
                 { SlimelungFlask.ID, 2 },
@@ -137,7 +138,7 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
-            if(Settings.Instance.EnableMedicalResearchPoints)
+            if (Settings.Instance.EnableMedicalResearchPoints)
                 DefineRecipes();
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(

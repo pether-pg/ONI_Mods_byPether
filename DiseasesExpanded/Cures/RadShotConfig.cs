@@ -17,7 +17,7 @@ namespace DiseasesExpanded
 
             MedicineInfo medInfo = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.CureSpecific, AdvancedDoctorStationConfig.ID, new string[] { HungerSickness.ID });
 
-            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.CURES.RADSHOT.NAME, STRINGS.CURES.RADSHOT.NAME, 1f, false, Assets.GetAnim(Kanims.RadShotKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
+            GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.CURES.RADSHOT.NAME, STRINGS.CURES.RADSHOT.DESC, 1f, true, Assets.GetAnim(Kanims.RadShotKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             GameObject medicineEntity = EntityTemplates.ExtendEntityToMedicine(looseEntity, medInfo);
             return medicineEntity;
         }
@@ -39,11 +39,12 @@ namespace DiseasesExpanded
             };
             recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
-                time = 100f,
+                time = 200f,
                 description = STRINGS.CURES.RADSHOT.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { ApothecaryConfig.ID },
-                sortOrder = 12
+                sortOrder = 20,
+                requiredTech = "MedicineIV"
             };
         }
 
