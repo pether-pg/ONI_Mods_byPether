@@ -138,14 +138,45 @@ namespace DiseasesExpanded
                 return _medNanobots;
             }
         }
+        //---------- FragrantFlowers ----------
+        private static byte _roseScent = Invalid;
+        public static byte RoseScentIdx
+        {
+            get
+            {
+                if (_roseScent == Invalid)
+                    _roseScent = Db.Get().Diseases.GetIndex("RoseScent");
+                return _roseScent;
+            }
+        }
+        private static byte _mallowScent = Invalid;
+        public static byte MallowScentIdx
+        {
+            get
+            {
+                if (_mallowScent == Invalid)
+                    _mallowScent = Db.Get().Diseases.GetIndex("MallowScent");
+                return _mallowScent;
+            }
+        }
+        private static byte _lavenderScent = Invalid;
+        public static byte LavenderScentIdx
+        {
+            get
+            {
+                if (_lavenderScent == Invalid)
+                    _lavenderScent = Db.Get().Diseases.GetIndex("LavenderScent");
+                return _lavenderScent;
+            }
+        }
 
-        private static Dictionary<byte, string> GermNames = new Dictionary<byte, string>(); 
+        private static Dictionary<byte, string> GermNames = new Dictionary<byte, string>();
 
         public static string GetGermName(byte idx)
         {
             if (!GermNames.ContainsKey(idx) && Db.Get().Diseases.Count >= idx)
                 GermNames.Add(idx, Db.Get().Diseases[idx].Name);
-            
+
             if (GermNames.ContainsKey(idx))
                 return GermNames[idx];
 
