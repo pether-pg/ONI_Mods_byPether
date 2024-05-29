@@ -21,7 +21,7 @@ namespace DiseasesExpanded
                     return;
 
                 Dictionary<string, Color32> namedLookup = Traverse.Create(__instance).Field("namedLookup").GetValue<Dictionary<string, Color32>>();
-                namedLookup.Add(AbandonedGerms.ID, AbandonedGerms.ColorValue); 
+                namedLookup.Add(AbandonedGerms.ID, AbandonedGerms.ColorValue);
                 namedLookup.Add(HungerGerms.ID, HungerGerms.ColorValue);
                 namedLookup.Add(BogInsects.ID, BogInsects.ColorValue);
                 namedLookup.Add(FrostShards.ID, FrostShards.ColorValue);
@@ -39,7 +39,7 @@ namespace DiseasesExpanded
             {
                 foreach (string key in namedLookup.Keys)
                     if (namedLookup.ContainsKey(key))
-                        Debug.Log($"Color of {key}: R = {namedLookup[key].r}, G = {namedLookup[key].g}, B = {namedLookup[key].b}, A = {namedLookup[key].a}");                    
+                        Debug.Log($"Color of {key}: R = {namedLookup[key].r}, G = {namedLookup[key].g}, B = {namedLookup[key].b}, A = {namedLookup[key].a}");
             }
         }
 
@@ -78,10 +78,33 @@ namespace DiseasesExpanded
                 DiseasesExpanded_Patches_Spindly.UpdateNarcolepsyTimes();
 
                 AssetLoader.LoadAssets();
+
+                BasicModUtils.MakeCodexCategoryString("MEDICINE", STRINGS.CODEX.CATEGORY.MEDICINE);
+
+                BasicModUtils.MakeCuresStrings(TestSampleConfig.ID, STRINGS.GERMFLASKSAMPLE.NAME, STRINGS.GERMFLASKSAMPLE.DESC, STRINGS.GERMFLASKSAMPLE.DESC);
+                BasicModUtils.MakeCuresStrings(AlienSicknessCureConfig.ID, STRINGS.CURES.ALIENCURE.NAME, STRINGS.CURES.ALIENCURE.DESC, STRINGS.CURES.ALIENCURE.DESC);
+                BasicModUtils.MakeCuresStrings(AntihistamineBoosterConfig.ID, STRINGS.CURES.ANTIHISTAMINEBOOSTER.NAME, STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC, STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC);
+                BasicModUtils.MakeCuresStrings(GasCureConfig.ID, STRINGS.CURES.GASCURE.NAME, STRINGS.CURES.GASCURE.DESC, STRINGS.CURES.GASCURE.DESC);
+                BasicModUtils.MakeCuresStrings(HappyPillConfig.ID, STRINGS.CURES.HAPPYPILL.NAME, STRINGS.CURES.HAPPYPILL.DESC, STRINGS.CURES.HAPPYPILL.DESC);
+                BasicModUtils.MakeCuresStrings(MudMaskConfig.ID, STRINGS.CURES.MUDMASK.NAME, STRINGS.CURES.MUDMASK.DESC, STRINGS.CURES.MUDMASK.DESC);
+                BasicModUtils.MakeCuresStrings(MutatingAntiviralConfig.ID, STRINGS.CURES.MUTATINGANTIVIRAL.NAME, STRINGS.CURES.MUTATINGANTIVIRAL.DESC, STRINGS.CURES.MUTATINGANTIVIRAL.DESC);
+                BasicModUtils.MakeCuresStrings(RadShotConfig.ID, STRINGS.CURES.RADSHOT.NAME, STRINGS.CURES.RADSHOT.DESC, STRINGS.CURES.RADSHOT.DESC);
+                BasicModUtils.MakeCuresStrings(SapShotConfig.ID, STRINGS.CURES.SAPSHOT.NAME, STRINGS.CURES.SAPSHOT.DESC, STRINGS.CURES.SAPSHOT.DESC);
+                BasicModUtils.MakeCuresStrings(SerumDeepBreathConfig.ID, STRINGS.CURES.DEEPBREATH.NAME, STRINGS.CURES.DEEPBREATH.DESC, STRINGS.CURES.DEEPBREATH.DESC);
+                BasicModUtils.MakeCuresStrings(SerumSuperConfig.ID, STRINGS.CURES.SUPERSERUM.NAME, STRINGS.CURES.SUPERSERUM.DESC, STRINGS.CURES.SUPERSERUM.DESC);
+                BasicModUtils.MakeCuresStrings(SerumTummyConfig.ID, STRINGS.CURES.TUMMYSERUM.NAME, STRINGS.CURES.TUMMYSERUM.DESC, STRINGS.CURES.TUMMYSERUM.DESC);
+                BasicModUtils.MakeCuresStrings(SerumYummyConfig.ID, STRINGS.CURES.YUMMYSERUM.NAME, STRINGS.CURES.YUMMYSERUM.DESC, STRINGS.CURES.YUMMYSERUM.DESC);
+                BasicModUtils.MakeCuresStrings(SunburnCureConfig.ID, STRINGS.CURES.SUNBURNCURE.NAME, STRINGS.CURES.SUNBURNCURE.DESC, STRINGS.CURES.SUNBURNCURE.DESC);
             }
 
             public static void Postfix()
             {
+
+                BasicModUtils.MakeCuresStrings(GassyVaccineConfig.ID, GassyVaccineConfig.Name, GassyVaccineConfig.Desc, GassyVaccineConfig.Desc);
+                BasicModUtils.MakeCuresStrings(SlimelungVaccineConfig.ID, SlimelungVaccineConfig.Name, SlimelungVaccineConfig.Desc, SlimelungVaccineConfig.Desc);
+                BasicModUtils.MakeCuresStrings(AllergyVaccineConfig.ID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, AllergyVaccineConfig.Desc);
+                BasicModUtils.MakeCuresStrings(ZombieSporesVaccineConfig.ID, ZombieSporesVaccineConfig.Name, ZombieSporesVaccineConfig.Desc, ZombieSporesVaccineConfig.Desc);
+
                 float cycle = 600;
                 float cycle2 = 2 * cycle;
                 float cycle5 = 5 * cycle;
@@ -184,12 +207,12 @@ namespace DiseasesExpanded
         {
             public static void Postfix(ref Database.Sicknesses __instance)
             {
-                if (Settings.Instance.HungerGerms.IncludeDisease)   __instance.Add(new HungerSickness());
-                if (Settings.Instance.BogInsects.IncludeDisease)    __instance.Add(new BogSickness());
-                if (Settings.Instance.FrostPox.IncludeDisease)      __instance.Add(new FrostSickness());
-                if (Settings.Instance.MooFlu.IncludeDisease)        __instance.Add(new GasSickness());
+                if (Settings.Instance.HungerGerms.IncludeDisease) __instance.Add(new HungerSickness());
+                if (Settings.Instance.BogInsects.IncludeDisease) __instance.Add(new BogSickness());
+                if (Settings.Instance.FrostPox.IncludeDisease) __instance.Add(new FrostSickness());
+                if (Settings.Instance.MooFlu.IncludeDisease) __instance.Add(new GasSickness());
                 if (Settings.Instance.SleepingCurse.IncludeDisease) __instance.Add(new SpindlySickness());
-                if (Settings.Instance.AlienGoo.IncludeDisease)      __instance.Add(new AlienSickness());
+                if (Settings.Instance.AlienGoo.IncludeDisease) __instance.Add(new AlienSickness());
                 if (Settings.Instance.MutatingVirus.IncludeDisease) __instance.Add(new MutatingSickness());
             }
         }
@@ -216,11 +239,11 @@ namespace DiseasesExpanded
             {
                 //__instance.Add(new AbandonedGerms(statsOnly));
 
-                if (Settings.Instance.FrostPox.IncludeDisease)          __instance.Add(new FrostShards(statsOnly));
-                if (Settings.Instance.MooFlu.IncludeDisease)            __instance.Add(new GassyGerms(statsOnly));
-                if (Settings.Instance.AlienGoo.IncludeDisease)          __instance.Add(new AlienGerms(statsOnly));
-                if (Settings.Instance.MutatingVirus.IncludeDisease)     __instance.Add(new MutatingGerms(statsOnly));
-                if (Settings.Instance.MedicalNanobots.IncludeDisease)   __instance.Add(new MedicalNanobots(statsOnly));
+                if (Settings.Instance.FrostPox.IncludeDisease) __instance.Add(new FrostShards(statsOnly));
+                if (Settings.Instance.MooFlu.IncludeDisease) __instance.Add(new GassyGerms(statsOnly));
+                if (Settings.Instance.AlienGoo.IncludeDisease) __instance.Add(new AlienGerms(statsOnly));
+                if (Settings.Instance.MutatingVirus.IncludeDisease) __instance.Add(new MutatingGerms(statsOnly));
+                if (Settings.Instance.MedicalNanobots.IncludeDisease) __instance.Add(new MedicalNanobots(statsOnly));
 
                 if (DlcManager.IsExpansion1Active() && Settings.Instance.BogInsects.IncludeDisease)
                     __instance.Add(new BogInsects(statsOnly));
