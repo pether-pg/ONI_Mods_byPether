@@ -92,7 +92,7 @@ namespace FragrantFlowers
             public int CritterHappinessBonus { get; set; }
 
             [JsonProperty]
-            [Limit(1.0f, 10.0f)]
+            [Limit(0.0f, 10.0f)]
             [Option("Critter Fertility Bonus", "Fertility per cycle after smelling the flowers.")]
             public float CritterFertilityBonus { get; set; }
 
@@ -108,7 +108,7 @@ namespace FragrantFlowers
                 AverageDensity = 0.3f;
                 SeedsInCarePackage = 3;
                 CritterHappinessBonus = 1;
-                CritterFertilityBonus = 1.0f;
+                CritterFertilityBonus = 0.5f;
                 CritterWildernessBonus = 5;
             }
         }
