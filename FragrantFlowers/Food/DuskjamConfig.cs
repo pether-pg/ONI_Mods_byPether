@@ -23,7 +23,7 @@ namespace FragrantFlowers
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(Crop_DuskberryConfig.ID, 2f),
+                new ComplexRecipe.RecipeElement(Crop_DuskberryConfig.ID, 5/6.0f),
                 new ComplexRecipe.RecipeElement(SimHashes.Sucrose.CreateTag(), 4f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]

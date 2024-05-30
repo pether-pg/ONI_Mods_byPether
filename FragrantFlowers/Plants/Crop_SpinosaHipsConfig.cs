@@ -15,36 +15,29 @@ namespace FragrantFlowers
         }
 
         public const string ID = "SpinosaHips";
-        public const float GROW_TIME = 4500f;
+        public const float GROW_TIME = 6000f;
 
         public GameObject CreatePrefab()
         {
             GameObject template = EntityTemplates.CreateLooseEntity(
-                ID, 
+                ID,
                 STRINGS.CROPS.SPINOSAHIPS.NAME,
                 STRINGS.CROPS.SPINOSAHIPS.DESC,
-                1f, 
-                false, 
-                Assets.GetAnim("fruit_spinosahips_kanim"), 
+                1f,
+                false,
+                Assets.GetAnim("fruit_spinosahips_kanim"),
                 "object",
-                Grid.SceneLayer.Front, 
-                EntityTemplates.CollisionShape.RECTANGLE, 
-                0.8f, 
-                0.4f, 
+                Grid.SceneLayer.Front,
+                EntityTemplates.CollisionShape.RECTANGLE,
+                0.8f,
+                0.4f,
                 true,
-                0, 
-                SimHashes.Creature, 
+                0,
+                SimHashes.Creature,
                 null);
 
             EdiblesManager.FoodInfo foodInfo = new EdiblesManager.FoodInfo(
-                ID, 
-                "", 
-                1200000f,
-                -1, 
-                255.15f, 
-                277.15f, 
-                3200f,
-                true);
+                ID, "", 2400000f, -1, 255.15f, 277.15f, 4800f, true);
 
             ExpandBerrySludgeRecipe();
 
@@ -65,7 +58,7 @@ namespace FragrantFlowers
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 new ComplexRecipe.RecipeElement((Tag) ColdWheatConfig.SEED_ID, 5f),
-                new ComplexRecipe.RecipeElement((Tag) ID, 1.333f)
+                new ComplexRecipe.RecipeElement((Tag) ID, 2/3.0f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {

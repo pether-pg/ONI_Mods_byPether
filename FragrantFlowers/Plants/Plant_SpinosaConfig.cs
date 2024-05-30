@@ -40,7 +40,7 @@ namespace FragrantFlowers
         public const float TemperatureLethalHigh = 398.15f;    // 125°C: Plant will die (Highest Temp)
 
         public const float Irrigation = 0.03f;             // Water Irrigation Needed
-        public const float Fertilization = 0.012f;         // Dirty Fertilization Needed
+        public const float Fertilization = 1 / 30.0f;         // Dirty Fertilization Needed
 
         public ComplexRecipe Recipe;
 
@@ -136,7 +136,7 @@ namespace FragrantFlowers
                 true, // Implies this Crop will grow old and eventualy yeilds a produce.
                 2400f, // Max age this Crop can grow, or the time it require for it to complete its growth.
                 0f, // Minium Radiation required by this Crop.
-                9800f, // Maxium value of Radiation this Crop can get before stop growing and dying.
+                TUNING.PLANTS.RADIATION_THRESHOLDS.TIER_5,  // Maxium value of Radiation this Crop can get before stop growing and dying.
                 "SpinozaOriginal", // Crop trait id.
                 "Spinoza Original"); // Crop trait name.
 
@@ -145,20 +145,21 @@ namespace FragrantFlowers
             {
             new PlantElementAbsorber.ConsumeInfo
             {
-                tag = SimHashes.Dirt.CreateTag(),
+                tag = SimHashes.Phosphorite.CreateTag(),
                 massConsumptionRate = Fertilization
             }
             });
 
             //===> LIQUID IRRIGATION THIS CROP REQUIRES <===========================================================================
-            EntityTemplates.ExtendPlantToIrrigated(gameObject, new PlantElementAbsorber.ConsumeInfo[]
-            {
-            new PlantElementAbsorber.ConsumeInfo
-            {
-                tag = SimHashes.Water.CreateTag(),
-                massConsumptionRate = Irrigation
-            }
-            });
+            //EntityTemplates.ExtendPlantToIrrigated(gameObject, new PlantElementAbsorber.ConsumeInfo[]
+            //{
+            //new PlantElementAbsorber.ConsumeInfo
+            //{
+            //    tag = SimHashes.Water.CreateTag(),
+            //    massConsumptionRate = Irrigation
+            //}
+            //});
+
             gameObject.AddOrGet<StandardCropPlant>();
             gameObject.AddOrGet<LoopingSounds>();
 

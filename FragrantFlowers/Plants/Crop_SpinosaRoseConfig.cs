@@ -18,29 +18,29 @@ namespace FragrantFlowers
         public const string ID = "SpinosaRose";
         public const string SPICE_ID = "SpinosaRoseSpice";
         public const string SPICE_SPRITE = "roseSpice_125";
-        public const float GROW_TIME = 4500f;
+        public const float GROW_TIME = Crop_SpinosaHipsConfig.GROW_TIME / 2;
         public static readonly Tag TAG = TagManager.Create(ID);
 
         public GameObject CreatePrefab()
         {
             GameObject go = EntityTemplates.CreateLooseEntity(
-                ID, 
+                ID,
                 STRINGS.CROPS.SPINOSAROSE.NAME,
-                STRINGS.CROPS.SPINOSAROSE.DESC, 
-                1f, 
-                false, 
-                Assets.GetAnim("item_spinosarose_kanim"), 
-                "object", 
-                Grid.SceneLayer.Front, 
-                EntityTemplates.CollisionShape.CIRCLE, 
-                0.35f, 
-                0.35f, 
-                true, 
-                0, 
-                SimHashes.Creature, 
-                new List<Tag>{ 
-                    GameTags.CookingIngredient, 
-                    GameTags.IndustrialIngredient 
+                STRINGS.CROPS.SPINOSAROSE.DESC,
+                1f,
+                true,
+                Assets.GetAnim("item_spinosarose_kanim"),
+                "object",
+                Grid.SceneLayer.Front,
+                EntityTemplates.CollisionShape.CIRCLE,
+                0.35f,
+                0.35f,
+                true,
+                0,
+                SimHashes.Creature,
+                new List<Tag> {
+                    GameTags.CookingIngredient,
+                    GameTags.IndustrialIngredient
                 });
             go.AddOrGet<EntitySplitter>();
             go.AddOrGet<SimpleMassStatusItem>();
@@ -50,6 +50,7 @@ namespace FragrantFlowers
             def.rotTemperature = 277.15f;
             def.spoilTime = 4800f;
             def.staleTime = def.spoilTime / 2;
+            EntityTemplates.CreateAndRegisterCompostableFromPrefab(go);
 
             DefineRecipe();
 

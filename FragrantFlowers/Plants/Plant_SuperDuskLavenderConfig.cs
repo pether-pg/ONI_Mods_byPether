@@ -29,14 +29,15 @@ namespace FragrantFlowers
 
         //===> TEMPERATURE SETTINGS <=====================================
         public const float DefaultTemperature = 299.15f;       //  26°C: Normal Temperature
-        public const float TemperatureLethalLow = 258.15f;     // -15ºC: Plant will die (Lowest Temp)
+        public const float TemperatureLethalLow = 243.15f;     // -30ºC: Plant will die (Lowest Temp)
         public const float TemperatureWarningLow = 288.15f;    //  15°C: Plant will stop growing (Lowest Temp)
         public const float TemperatureWarningHigh = 313.15f;   //  40°C: Plant will stop growing (Highest Temp)
         public const float TemperatureLethalHigh = 333.15f;    //  60°C: Plant will die (Highest Temp)
         public const int WIDTH = 1;
         public const int HEIGHT = 2;
 
-        public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
+        public const float Irrigation = Plant_DuskLavenderConfig.Irrigation;              // Water Irrigation Needed
+        public const float Fertilization = Plant_DuskLavenderConfig.Fertilization;         // Phosphorite Fertilization Needed
 
         public ComplexRecipe Recipe;
 
@@ -105,7 +106,7 @@ namespace FragrantFlowers
                 true, // Implies this Crop will grow old and eventualy yeilds a produce.
                 2400f, // Max age this Crop can grow, or the time it require for it to complete its growth.
                 0f, // Minium Radiation required by this Crop.
-                9800f, // Maxium value of Radiation this Crop can get before stop growing and dying.
+                TUNING.PLANTS.RADIATION_THRESHOLDS.TIER_5,  // Maxium value of Radiation this Crop can get before stop growing and dying.
                 "SuperLavenderOriginal", // Crop trait id.
                 "Fruiting Lavender Original"); // Crop trait name.
 
@@ -114,19 +115,23 @@ namespace FragrantFlowers
             {
             new PlantElementAbsorber.ConsumeInfo
             {
-                tag = SimHashes.Phosphorite.CreateTag(),
+                tag = SimHashes.Dirt.CreateTag(),
                 massConsumptionRate = Fertilization
             }
             });
-
+            //===> LIQUID IRRIGATION THIS CROP REQUIRES <===========================================================================
+            EntityTemplates.ExtendPlantToIrrigated(gameObject, new PlantElementAbsorber.ConsumeInfo[]
+            {
+            new PlantElementAbsorber.ConsumeInfo
+            {
+                tag = SimHashes.Water.CreateTag(),
+                massConsumptionRate = Irrigation
+            }
+            });
             gameObject.AddOrGet<StandardCropPlant>();
             gameObject.AddOrGet<LoopingSounds>();
             gameObject.AddOrGet<BlightVulnerable>();
-
-            //===> DISEASE OR GERMS THIS CROP RELEASES <===========================================================================
-            DiseaseDropper.Def def = gameObject.AddOrGetDef<DiseaseDropper.Def>();
-            def.diseaseIdx = Db.Get().Diseases.GetIndex(Db.Get().Diseases.PollenGerms.id);
-            def.singleEmitQuantity = 1000000;
+            gameObject.AddOrGet<IlluminationVulnerable>().SetPrefersDarkness(true);
 
             return gameObject;
         }

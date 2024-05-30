@@ -15,7 +15,7 @@ namespace FragrantFlowers
         }
 
         public const string ID = "Duskberry";
-        public const float GROW_TIME = 4500f;
+        public const float GROW_TIME = 6000f;
 
 
         public GameObject CreatePrefab()
@@ -38,14 +38,7 @@ namespace FragrantFlowers
                 null);
 
             EdiblesManager.FoodInfo foodInfo = new EdiblesManager.FoodInfo(
-                ID,
-                "",
-                1200000f,
-                -1,
-                255.15f,
-                277.15f,
-                3200f,
-                true);
+                ID, "", 2400000f, -1, 255.15f, 277.15f, 4800f, true);
 
             ExpandBerrySludgeRecipe();
 
@@ -66,7 +59,7 @@ namespace FragrantFlowers
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 new ComplexRecipe.RecipeElement((Tag) ColdWheatConfig.SEED_ID, 5f),
-                new ComplexRecipe.RecipeElement((Tag) ID, 1.333f)
+                new ComplexRecipe.RecipeElement((Tag) ID, 2/3.0f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
