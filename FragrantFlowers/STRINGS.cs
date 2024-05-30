@@ -42,26 +42,26 @@ namespace FragrantFlowers
         {
             public class FLORAL
             {
-                public static LocString NAME = "Floral Scent Can";
-                public static LocString DESC = "Can full of Floral Scent, ready for Vaporizer.";
+                public static LocString NAME = UI.FormatAsLink("Floral Scent Can", FloralAromaCanConfig.ID);
+                public static LocString DESC = $"Can full of {UI.FormatAsLink("Floral Scent", "POLLENGERMS")}, ready for {UI.FormatAsLink("Vaporizer", VaporizerConfig.ID)}.";
             }
 
             public class ROSE
             {
-                public static LocString NAME = "Rose Scent Can";
-                public static LocString DESC = "Can full of Rose Scent, ready for Vaporizer.";
+                public static LocString NAME = UI.FormatAsLink("Rose Scent Can", RoseAromaCanConfig.ID);
+                public static LocString DESC = $"Can full of {UI.FormatAsLink("Rose Scent", RoseScent.ID)}, ready for {UI.FormatAsLink("Vaporizer", VaporizerConfig.ID)}.";
             }
 
             public class LAVENDER
             {
-                public static LocString NAME = "Lavender Scent Can";
-                public static LocString DESC = "Can full of Lavender Scent, ready for Vaporizer.";
+                public static LocString NAME = UI.FormatAsLink("Lavender Scent Can", LavenderAromaCanConfig.ID);
+                public static LocString DESC = $"Can full of {UI.FormatAsLink("Lavender Scent", LavenderScent.ID)}, ready for {UI.FormatAsLink("Vaporizer", VaporizerConfig.ID)}.";
             }
 
             public class MALLOW
             {
-                public static LocString NAME = "Mallow Scent Can";
-                public static LocString DESC = "Can full of Rose Scent, ready for Vaporizer.";
+                public static LocString NAME = UI.FormatAsLink("Mallow Scent Can", MallowAromaCanConfig.ID);
+                public static LocString DESC = $"Can full of {UI.FormatAsLink("Mallow Scent", MallowScent.ID)}, ready for {UI.FormatAsLink("Vaporizer", VaporizerConfig.ID)}.";
             }
         }
 
@@ -81,13 +81,13 @@ namespace FragrantFlowers
             public class DUSKBUN
             {
                 public static LocString NAME = UI.FormatAsLink("Duskbun", DuskbunConfig.ID);
-                public static LocString DESC = "A bun filled with " + UI.FormatAsLink(FOOD.DUSKJAM.NAME, DuskjamConfig.ID) + ".";
+                public static LocString DESC = $"A {UI.FormatAsLink("Frost Bun", ColdWheatBreadConfig.ID)} filled with {UI.FormatAsLink(FOOD.DUSKJAM.NAME, DuskjamConfig.ID)}.";
             }
 
             public class SPINOSACAKE
             {
                 public static LocString NAME = UI.FormatAsLink("Spinosa Cake", SpinosaCakeConfig.ID);
-                public static LocString DESC = "A delicious cake with " + UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Crop_SpinosaHipsConfig.ID) + " on top.";
+                public static LocString DESC = $"A delicious cake made from {UI.FormatAsLink("Raw Egg", RawEggConfig.ID)} and {UI.FormatAsLink("Sleat Wheet Grains", "ColdWheatSeed")} with {UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Crop_SpinosaHipsConfig.ID)} on top.";
             }
         }
 
@@ -123,20 +123,20 @@ namespace FragrantFlowers
         {
             public class SPINOSA
             {
-                public static LocString SEED_NAME = "Spinosa Black Seed";
-                public static LocString SEED_DESC = "The black seed of a " + UI.FormatAsLink("Spinosa", Plant_SpinosaConfig.ID) + ".";
+                public static LocString SEED_NAME = UI.FormatAsLink("Spinosa Black Seed", Plant_SpinosaConfig.ID.ToUpperInvariant());
+                public static LocString SEED_DESC = $"The black {UI.FormatAsLink("Seed", "PLANTS")} of a " + UI.FormatAsLink("Spinosa", Plant_SpinosaConfig.ID) + ".";
             }
 
             public class DUSKLAVENDER
             {
-                public static LocString SEED_NAME = "Dusk Seed";
-                public static LocString SEED_DESC = "The tiny seed of a " + UI.FormatAsLink("Duskbloom Lavender", Plant_DuskLavenderConfig.ID) + ".";
+                public static LocString SEED_NAME = UI.FormatAsLink("Dusk Seed", Plant_DuskLavenderConfig.ID.ToUpperInvariant());
+                public static LocString SEED_DESC = $"The tiny {UI.FormatAsLink("Seed", "PLANTS")} of a " + UI.FormatAsLink("Duskbloom Lavender", Plant_DuskLavenderConfig.ID) + ".";
             }
 
             public class RIMEDMALLOW
             {
-                public static LocString SEED_NAME = "Iced Mallow Seed";
-                public static LocString SEED_DESC = "The chill seed of a " + UI.FormatAsLink("Iced Mallow", Plant_RimedMallowConfig.ID) + ".";
+                public static LocString SEED_NAME = UI.FormatAsLink("Iced Mallow Seed", Plant_RimedMallowConfig.ID.ToUpperInvariant());
+                public static LocString SEED_DESC = $"The chill {UI.FormatAsLink("Seed", "PLANTS")} of a " + UI.FormatAsLink("Iced Mallow", Plant_RimedMallowConfig.ID) + ".";
             }
         }
 
@@ -144,36 +144,36 @@ namespace FragrantFlowers
         {
             public class SPINOSA
             {
-                public static LocString NAME = "Blooming Spinosa";
+                public static LocString NAME = UI.FormatAsLink("Blooming Spinosa", Plant_SpinosaConfig.ID);
                 public static LocString DESC = string.Concat(new string[] { "A rather thorny sten plant that blooms with a beautiful " + UI.FormatAsLink("Spinosa Rose", Crop_SpinosaRoseConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = DESC + "/nIn domesticated environment this crop requires copious amounts of" + UI.FormatAsLink("Water", "WATER") + ", and" + UI.FormatAsLink("Dirt", "DIRT") + "as fertilizer. Also requires direct exposure to sunlight.";
+                public static LocString DOMESTICATED_DESC = DESC;
             }
 
             public class SUPERSPINOSA
             {
-                public static LocString NAME = "Fruiting Spinosa";
+                public static LocString NAME = UI.FormatAsLink("Fruiting Spinosa", Plant_SuperSpinosaConfig.ID);
                 public static LocString DESC = string.Concat(new string[] { "A rather thorny sten plant that produces an edible " + UI.FormatAsLink("Spinosa Hips", Crop_SpinosaHipsConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/nThis domesticated plant requires copious amounts of" + UI.FormatAsLink("Water", "WATER") + ", and" + UI.FormatAsLink("Dirt", "DIRT") + "as fertilizer. Also requires direct exposure to sunlight." });
+                public static LocString DOMESTICATED_DESC = DESC;
             }
 
             public class DUSKLAVENDER
             {
-                public static LocString NAME = "Duskbloom Lavender";
+                public static LocString NAME = UI.FormatAsLink("Duskbloom Lavender", Plant_DuskLavenderConfig.ID);
                 public static LocString DESC = string.Concat(new string[] { "A shrub-like plant blooms with a beautiful " + UI.FormatAsLink("Duskbloom", Crop_DuskbloomConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/nIn domesticated environment this crop requires the use of " + UI.FormatAsLink("Phosphorite", "PHOSPHORITE") + " as fertilization." });
+                public static LocString DOMESTICATED_DESC = DESC;
             }
 
             public class SUPERDUSKLAVENDER
             {
-                public static LocString NAME = "Duskberry Lavender";
+                public static LocString NAME = UI.FormatAsLink("Duskberry Lavender", Plant_SuperDuskLavenderConfig.ID);
                 public static LocString DESC = string.Concat(new string[] { "A shrub-like plant sprouts with an edible " + UI.FormatAsLink("Duskberry", Crop_DuskberryConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/nIn domesticated environment this crop requires the use of " + UI.FormatAsLink("Phosphorite", "PHOSPHORITE") + " as fertilization." });
+                public static LocString DOMESTICATED_DESC = DESC;
             }
             public class RIMEDMALLOW
             {
-                public static LocString NAME = "Rimed Mallow";
+                public static LocString NAME = UI.FormatAsLink("Rimed Mallow", Plant_RimedMallowConfig.ID);
                 public static LocString DESC = string.Concat(new string[] { "An evergreen plant well adapt to thrive in very cold environments. Produces a fluffy " + UI.FormatAsLink("Rimed Cotton Boll", Crop_CottonBollConfig.ID) + "." });
-                public static LocString DOMESTICATED_DESC = string.Concat(new string[] { "/nIn domesticated environment this crop requires the use of pure water " + UI.FormatAsLink("Ice", "ICE") + " as fertilization." });
+                public static LocString DOMESTICATED_DESC = DESC;
             }
         }
 
