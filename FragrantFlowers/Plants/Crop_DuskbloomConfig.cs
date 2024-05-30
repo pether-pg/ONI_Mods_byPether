@@ -68,8 +68,8 @@ namespace FragrantFlowers
         {
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 100f),
-                new ComplexRecipe.RecipeElement(ID, 1f)
+                new ComplexRecipe.RecipeElement(ID, 1f),
+                new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 1f),
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
@@ -77,7 +77,7 @@ namespace FragrantFlowers
             };
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
-                time = 100f,
+                time = 50f,
                 description = ITEMS.PILLS.BASICCURE.RECIPEDESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { ApothecaryConfig.ID },
