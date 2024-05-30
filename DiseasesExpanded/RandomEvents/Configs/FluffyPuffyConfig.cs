@@ -14,8 +14,8 @@ namespace DiseasesExpanded.RandomEvents.Configs
 
         public GameObject CreatePrefab()
         {
-            string name = "Fluffy Puffy";
-            string desc = "Cute and fluffy like a cloud Puffy.";
+            string name = STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.NAME;
+            string desc = STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.DESC;
             EffectorValues tieR0 = TUNING.DECOR.BONUS.TIER0;
             KAnimFile anim = Assets.GetAnim((HashedString)"puft_kanim");
             EffectorValues decor = tieR0;
@@ -42,7 +42,7 @@ namespace DiseasesExpanded.RandomEvents.Configs
             SoundEventVolumeCache.instance.AddVolume("puft_kanim", "Puft_voice_die", NOISE_POLLUTION.CREATURES.TIER5);
             SoundEventVolumeCache.instance.AddVolume("puft_kanim", "Puft_voice_hurt", NOISE_POLLUTION.CREATURES.TIER5);
             EntityTemplates.CreateAndRegisterBaggedCreature(placedEntity, true, false);
-            EntityTemplates.AddCreatureBrain(placedEntity, new ChoreTable.Builder().Add((StateMachine.BaseDef)new DeathStates.Def()).Add((StateMachine.BaseDef)new TrappedStates.Def()).Add((StateMachine.BaseDef)new BaggedStates.Def()).Add((StateMachine.BaseDef)new FallStates.Def()).Add((StateMachine.BaseDef)new StunnedStates.Def()).Add((StateMachine.BaseDef)new DrowningStates.Def()).Add((StateMachine.BaseDef)new DebugGoToStates.Def()).Add((StateMachine.BaseDef)new FleeStates.Def()).Add((StateMachine.BaseDef)new DropElementStates.Def()).Add((StateMachine.BaseDef)new IdleStates.Def()), GameTags.Creatures.Species.GlomSpecies, (string)null);
+            EntityTemplates.AddCreatureBrain(placedEntity, new ChoreTable.Builder().Add((StateMachine.BaseDef)new DeathStates.Def()).Add((StateMachine.BaseDef)new TrappedStates.Def()).Add((StateMachine.BaseDef)new BaggedStates.Def()).Add((StateMachine.BaseDef)new FallStates.Def()).Add((StateMachine.BaseDef)new StunnedStates.Def()).Add((StateMachine.BaseDef)new DrowningStates.Def()).Add((StateMachine.BaseDef)new DebugGoToStates.Def()).Add((StateMachine.BaseDef)new FleeStates.Def()).Add((StateMachine.BaseDef)new DropElementStates.Def()).Add((StateMachine.BaseDef)new IdleStates.Def()), GameTags.Creatures.Species.PuftSpecies, (string)null);
 
             GermCarrier carrier = placedEntity.AddComponent<GermCarrier>();
             carrier.germId = SlimeGerms.ID;

@@ -20,8 +20,8 @@ namespace DiseasesExpanded
         {
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(
                 ID,
-                string.Format(STRINGS.GERMFLASK.NAME, "Sample"),
-                string.Format(STRINGS.GERMFLASK.DESC, "and contained"),
+                string.Format(STRINGS.GERMFLASK.NAME, STRINGS.UNSPECIFIEDFLASK.NAME),
+                string.Format(STRINGS.GERMFLASK.DESC, STRINGS.UNSPECIFIEDFLASK.DESC),
                 1f,
                 true,
                 Assets.GetAnim(Kanims.GermFlaskKanim),

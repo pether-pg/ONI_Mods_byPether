@@ -3,7 +3,6 @@ using TUNING;
 using UnityEngine;
 
 namespace DiseasesExpanded.RandomEvents.Configs
-
 {
     class PlagueSlugConfig : IEntityConfig
     {
@@ -14,8 +13,8 @@ namespace DiseasesExpanded.RandomEvents.Configs
 
         public GameObject CreatePrefab()
         {
-            string name = "Plague Slug";
-            string desc = "Favorite Slug of Papa Disease.";
+            string name = STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.NAME;
+            string desc = STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.DESC;
             EffectorValues tieR0 = TUNING.DECOR.BONUS.TIER0;
             KAnimFile anim = Assets.GetAnim((HashedString)"caterpillar_kanim");
             EffectorValues decor = tieR0;
@@ -36,9 +35,9 @@ namespace DiseasesExpanded.RandomEvents.Configs
             placedEntity.AddOrGet<LoopingSounds>();
             placedEntity.GetComponent<LoopingSounds>().updatePosition = true;
             EntityTemplates.CreateAndRegisterBaggedCreature(placedEntity, true, false);
-            EntityTemplates.AddCreatureBrain(placedEntity, new ChoreTable.Builder().Add((StateMachine.BaseDef)new DeathStates.Def()).Add((StateMachine.BaseDef)new TrappedStates.Def()).Add((StateMachine.BaseDef)new BaggedStates.Def()).Add((StateMachine.BaseDef)new FallStates.Def()).Add((StateMachine.BaseDef)new StunnedStates.Def()).Add((StateMachine.BaseDef)new DrowningStates.Def()).Add((StateMachine.BaseDef)new DebugGoToStates.Def()).Add((StateMachine.BaseDef)new FleeStates.Def()).Add((StateMachine.BaseDef)new DropElementStates.Def()).Add((StateMachine.BaseDef)new IdleStates.Def()), GameTags.Creatures.Species.GlomSpecies, (string)null);
+            EntityTemplates.AddCreatureBrain(placedEntity, new ChoreTable.Builder().Add((StateMachine.BaseDef)new DeathStates.Def()).Add((StateMachine.BaseDef)new TrappedStates.Def()).Add((StateMachine.BaseDef)new BaggedStates.Def()).Add((StateMachine.BaseDef)new FallStates.Def()).Add((StateMachine.BaseDef)new StunnedStates.Def()).Add((StateMachine.BaseDef)new DrowningStates.Def()).Add((StateMachine.BaseDef)new DebugGoToStates.Def()).Add((StateMachine.BaseDef)new FleeStates.Def()).Add((StateMachine.BaseDef)new DropElementStates.Def()).Add((StateMachine.BaseDef)new IdleStates.Def()), GameTags.Creatures.Species.StaterpillarSpecies, (string)null);
 
-            if(Settings.Instance.BogInsects.IncludeDisease)
+            if (Settings.Instance.BogInsects.IncludeDisease)
             {
                 GermCarrier carrier = placedEntity.AddComponent<GermCarrier>();
                 carrier.germId = BogInsects.ID;

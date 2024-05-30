@@ -15,8 +15,8 @@ namespace DiseasesExpanded.RandomEvents.Configs
 
         public GameObject CreatePrefab()
         {
-            string name = "Pale Slickster";
-            string desc = "This shy slickster's fur is devoid of lively colors it would normally have.";
+            string name = STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.NAME;
+            string desc = STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.DESC;
             EffectorValues tieR0 = TUNING.DECOR.BONUS.TIER0;
             KAnimFile anim = Assets.GetAnim(Kanims.PaleSlickster);
             EffectorValues decor = tieR0;
@@ -37,7 +37,7 @@ namespace DiseasesExpanded.RandomEvents.Configs
             placedEntity.GetComponent<LoopingSounds>().updatePosition = true;
 
             EntityTemplates.CreateAndRegisterBaggedCreature(placedEntity, true, false);
-            EntityTemplates.AddCreatureBrain(placedEntity, new ChoreTable.Builder().Add((StateMachine.BaseDef)new DeathStates.Def()).Add((StateMachine.BaseDef)new TrappedStates.Def()).Add((StateMachine.BaseDef)new BaggedStates.Def()).Add((StateMachine.BaseDef)new FallStates.Def()).Add((StateMachine.BaseDef)new StunnedStates.Def()).Add((StateMachine.BaseDef)new DrowningStates.Def()).Add((StateMachine.BaseDef)new DebugGoToStates.Def()).Add((StateMachine.BaseDef)new FleeStates.Def()).Add((StateMachine.BaseDef)new DropElementStates.Def()).Add((StateMachine.BaseDef)new IdleStates.Def()), GameTags.Creatures.Species.GlomSpecies, (string)null);
+            EntityTemplates.AddCreatureBrain(placedEntity, new ChoreTable.Builder().Add((StateMachine.BaseDef)new DeathStates.Def()).Add((StateMachine.BaseDef)new TrappedStates.Def()).Add((StateMachine.BaseDef)new BaggedStates.Def()).Add((StateMachine.BaseDef)new FallStates.Def()).Add((StateMachine.BaseDef)new StunnedStates.Def()).Add((StateMachine.BaseDef)new DrowningStates.Def()).Add((StateMachine.BaseDef)new DebugGoToStates.Def()).Add((StateMachine.BaseDef)new FleeStates.Def()).Add((StateMachine.BaseDef)new DropElementStates.Def()).Add((StateMachine.BaseDef)new IdleStates.Def()), GameTags.Creatures.Species.OilFloaterSpecies, (string)null);
 
             GermCarrier carrier = placedEntity.AddComponent<GermCarrier>();
             carrier.germId = ZombieSpores.ID;

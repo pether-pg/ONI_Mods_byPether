@@ -23,10 +23,10 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
         private void OnRefreshUserMenu(object obj)
         {
             string nextIcon = "action_direction_right";
-            string text = "Open Kit";
-            string tooltip = "Let's see what's inside!";
+            string text = STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TEXT;
+            string tooltip = STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TOOLTIP;
 
-            Game.Instance?.userMenu?.AddButton(this.gameObject, new KIconButtonMenu.ButtonInfo(nextIcon, text, new System.Action(this.OpenFirstAidKit), Action.BuildMenuKeyQ, tooltipText: tooltip));            
+            Game.Instance?.userMenu?.AddButton(this.gameObject, new KIconButtonMenu.ButtonInfo(nextIcon, text, new System.Action(this.OpenFirstAidKit), Action.BuildMenuKeyQ, tooltipText: tooltip));
         }
 
         private void OpenFirstAidKit()
@@ -49,7 +49,7 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
             possibleIds.Shuffle();
             string randomId = possibleIds[0];
 
-            for(int i=0; i<PossibleSpawns[randomId]; i++)
+            for (int i = 0; i < PossibleSpawns[randomId]; i++)
             {
                 GameObject spawn = GameUtil.KInstantiate(Assets.GetPrefab(randomId), this.gameObject.transform.position + new Vector3(0, 0.5f, 0), Grid.SceneLayer.BuildingFront);
                 spawn.SetActive(true);

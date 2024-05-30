@@ -49,7 +49,7 @@ namespace DiseasesExpanded
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Medical Nanobots present\n";
                 public static LocString DESCRIPTION = (LocString)"Medical Nanobots are engineeded with sole purpose of fighting malicious germs and improving duplicants' health.";
 
-                public static LocString VERSION_PATTERN = (LocString)"Version {ATTACK}/{RESILIANCE}"; 
+                public static LocString VERSION_PATTERN = (LocString)"Version {ATTACK}/{RESILIANCE}";
                 public static LocString VERION_EFFICIENCY_PATTERN = (LocString)"Efficiency: " +
                      "Attributes: <color=#00FF00>{0}</color>, " +
                      "Breathing: <color=#00FF00>{1}</color>, " +
@@ -328,6 +328,12 @@ namespace DiseasesExpanded
             public static LocString NAME = (LocString)"{0} Flask";
             public static LocString DESC = (LocString)"Contains gathered {0} germs.";
             public static LocString DESC_NOGERM = (LocString)"Contains gathered {0}.";
+        }
+
+        public class UNSPECIFIEDFLASK
+        {
+            public static LocString NAME = UI.FormatAsLink("Sample", "DISEASE");
+            public static LocString DESC = "and contained";
         }
 
         public class GERMFLASKSAMPLE
@@ -689,7 +695,7 @@ namespace DiseasesExpanded
             public class SPAWN_GERMY_SURPRISE_BOX
             {
                 public static LocString NAME = "Surprise Box";
-                public static LocString DESC = "Surprise Box DESC";
+                public static LocString DESC = "I wonder what is inside?";
                 public static LocString TOAST_TITLE = "Surprise Box";
                 public static LocString TOAST_BODY = "I wonder what is inside?";
             }
@@ -729,6 +735,59 @@ namespace DiseasesExpanded
             {
                 public static LocString NAME = "Sudden Mutation";
                 public static LocString TOAST = "We observed new mutation strain...";
+            }
+        }
+
+        public class RANDOM_EVENTS_CONFINGS
+        {
+            public class FLUFFYPUFFY
+            {
+                public static LocString NAME = "Fluffy Puffy";
+                public static LocString DESC = "Cute and fluffy like a cloud Puffy.";
+            }
+            public class HARMLESSBEE
+            {
+                public static LocString NAME = "Harmless Bee";
+                public static LocString DESC = "This Beeta may look angry, but it will never ever sting anyone.";
+            }
+            public class LITTLESUNSHINE
+            {
+                public static LocString NAME = "Little Sunshine";
+                public static LocString DESC = "Shining light of hope and joy.";
+            }
+            public class MORBALIEN
+            {
+                public static LocString NAME = "Little Alien";
+                public static LocString DESC = "Cute little and totally harmless alien.";
+            }
+            public class PALESLICKSTER
+            {
+                public static LocString NAME = "Pale Slickster";
+                public static LocString DESC = "This shy slickster's fur is devoid of lively colors it would normally have.";
+            }
+            public class PLAGUESLUG
+            {
+                public static LocString NAME = "Plague Slug";
+                public static LocString DESC = "Favorite Slug of Papa Disease.";
+            }
+            public class RANDOMFIRSTAIDKIT
+            {
+                public static LocString NAME = "First Aid Pack";
+                public static LocString DESC = "Whatever is stored inside, it must be useful somehow...";
+            }
+        }
+
+        public class RANDOM_EVENTS_ENTITYSCRIPTS
+        {
+            public class FIRSTAIDKITOPENER
+            {
+                public static LocString TEXT = "Open Kit";
+                public static LocString TOOLTIP = "Let's see what's inside!";
+            }
+            public class GERMYSURPRISEBOX
+            {
+                public static LocString TEXT = "Open";
+                public static LocString TOOLTIP = "Open this box to receive your surprise!";
             }
         }
 
