@@ -69,16 +69,16 @@ namespace FragrantFlowers
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 new ComplexRecipe.RecipeElement(ID, 1f),
-                new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 1f),
+                new ComplexRecipe.RecipeElement(SimHashes.Dirt.CreateTag(), 1f),
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
-                new ComplexRecipe.RecipeElement(BasicCureConfig.ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+                new ComplexRecipe.RecipeElement(AntihistamineConfig.ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
-                time = 50f,
-                description = ITEMS.PILLS.BASICCURE.RECIPEDESC,
+                time = 100f,
+                description = ITEMS.PILLS.ANTIHISTAMINE.RECIPEDESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { ApothecaryConfig.ID },
                 sortOrder = 10
