@@ -108,7 +108,7 @@ namespace FragrantFlowers
                 AverageDensity = 0.3f;
                 SeedsInCarePackage = 3;
                 CritterHappinessBonus = 1;
-                CritterFertilityBonus = 0.5f;
+                CritterFertilityBonus = 1.0f;
                 CritterWildernessBonus = 5;
             }
         }
