@@ -15,8 +15,8 @@ namespace DiseasesExpanded.RandomEvents.Configs
 
         public GameObject CreatePrefab()
         {
-            string name = "Pale Slickster";
-            string desc = "This shy slickster's fur is devoid of lively colors it would normally have.";
+            string name = STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.NAME;
+            string desc = STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.DESC;
             EffectorValues tieR0 = TUNING.DECOR.BONUS.TIER0;
             KAnimFile anim = Assets.GetAnim(Kanims.PaleSlickster);
             EffectorValues decor = tieR0;

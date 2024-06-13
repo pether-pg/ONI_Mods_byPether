@@ -9,13 +9,13 @@ namespace DiseasesExpanded.RandomEvents.Configs
     class RandomFirstAidKitConfig : IEntityConfig
     {
         public const string ID = "RandomFirstAidKit";
-        const string name = "First Aid Pack";
-        const string desc = "Whatever is stored inside, it must be useful somehow...";
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
         public GameObject CreatePrefab()
         {
+            string name = STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.NAME;
+            string desc = STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.DESC;
             EffectorValues tieR0_1 = TUNING.BUILDINGS.DECOR.BONUS.TIER0;
             EffectorValues tieR0_2 = TUNING.NOISE_POLLUTION.NOISY.TIER0;
             KAnimFile anim = Assets.GetAnim((HashedString)"gravitas_first_aid_kit_kanim");
