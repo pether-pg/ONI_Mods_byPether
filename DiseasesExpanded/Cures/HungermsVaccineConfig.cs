@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DiseasesExpanded
 {
-    class HungermsVaccineConfig// : IEntityConfig
+    class HungermsVaccineConfig : IEntityConfig
     {
         public const string ID = "HungermsVaccine";
         public const string EffectID = "HungermsVaccineEffect";
