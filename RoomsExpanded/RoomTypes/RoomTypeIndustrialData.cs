@@ -3,7 +3,7 @@ using STRINGS;
 
 namespace RoomsExpanded
 {
-    class RoomTypeIndustrialData :RoomTypeAbstractData
+    class RoomTypeIndustrialData : RoomTypeAbstractData
     {
         public static readonly string RoomId = "IndustrialRoom";
 
@@ -13,7 +13,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.INDUSTRIAL.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.INDUSTRIAL.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.INDUSTRIAL.EFFECT;
-            Catergory = CreateCategory();
+            Catergory = Db.Get().RoomTypeCategories.Industrial;
             ConstraintPrimary = RoomModdedConstraints.INDUSTRIAL;
             ConstrantsAdditional = new RoomConstraints.Constraint[2]
                                     {
@@ -28,12 +28,12 @@ namespace RoomsExpanded
                                 };
 
             Priority = -1;
-            
+
             Upgrades = upgr;
             SingleAssignee = true;
             PriorityUse = true;
             Effects = null;
-            SortKey = SortingCounter.GetAndIncrement();
+            SortKey = SortingCounter.GetAndIncrement(SortingCounter.PowerPlantSortKey);
         }
     }
 }

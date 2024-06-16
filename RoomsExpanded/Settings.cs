@@ -10,7 +10,7 @@ namespace RoomsExpanded
     [Serializable]
     [RestartRequired]
     [ConfigFileAttribute("RoomsExpanded.Settings.json", true)]
-    public class Settings :IOptions
+    public class Settings : IOptions
     {
         [Serializable]
         public class RoomSettings
@@ -23,7 +23,7 @@ namespace RoomsExpanded
             [Limit(12, 256)]
             [Option("MaxSize", "How big this room can be?")]
             public int MaxSize { get; set; }
-            
+
             [JsonProperty]
             [Limit(0.0, 1.0)]
             [Option("Bonus", "How big bonus the room should provide?")]
@@ -65,11 +65,11 @@ namespace RoomsExpanded
                 RoomColor = color;
             }
         }
-            
+
         private static Settings _instance = null;
         public static Settings Instance
         {
-            get 
+            get
             {
                 if (_instance == null)
                     _instance = JsonSerializer<Settings>.Deserialize();
@@ -78,7 +78,7 @@ namespace RoomsExpanded
                     _instance = new Settings();
                     JsonSerializer<Settings>.Serialize(_instance);
                 }
-                return _instance; 
+                return _instance;
             }
         }
 
@@ -89,7 +89,7 @@ namespace RoomsExpanded
 
         public Settings()
         {
-            HideLegendEffect = true; 
+            HideLegendEffect = true;
             EnforcedLanguage = "";
 
             Kitchenette = new RoomSettings(true, 64, ColorPalette.RoomFood, 0.1f);
@@ -98,14 +98,14 @@ namespace RoomsExpanded
             Graveyard = new RoomSettings(false, 96, ColorPalette.RoomPark, 0.2f);
             Agricultural = new PlainRoomSettings(true, 96, ColorPalette.RoomAgricultural);
             Gym = new RoomSettings(true, 64, ColorPalette.RoomRecreation, 0.1f);
-            Nursery = new RoomSettings(!DlcManager.IsExpansion1Active(), 64, ColorPalette.RoomAgricultural, 0.1f);
+            Nursery = new RoomSettings(true, 64, ColorPalette.RoomAgricultural, 0.1f);
             Aquarium = new RoomSettings(false, 96, ColorPalette.RoomBathroom, 0.2f);
             Botanical = new PlainRoomSettings(true, 96, ColorPalette.RoomPark);
-            Museum = new RoomSettings(true, 96, ColorPalette.RoomHospital, 0.3f);
+            Museum = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
             MuseumSpace = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
             MuseumHistory = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
             HospitalUpdate = new PlainRoomSettings(true, 96, ColorPalette.RoomHospital);
-            NurseryGenetic = new RoomSettings(true, 96, ColorPalette.RoomAgricultural, 0.2f);
+            NurseryGenetic = new RoomSettings(DlcManager.IsExpansion1Active(), 96, ColorPalette.RoomAgricultural, 0.2f);
             MissionControl = new PlainRoomSettings(true, 96, ColorPalette.RoomScience);
 
             ResizeMinRoomSize12 = 12;

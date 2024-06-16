@@ -16,9 +16,9 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.NURSERY.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.NURSERY.TOOLTIP;
             Effect = string.Format(STRINGS.ROOMS.TYPES.NURSERY.EFFECT, MiscUtils.Percent(Settings.Instance.Nursery.Bonus));
-            Catergory = CreateCategory();
+            Catergory = Db.Get().RoomTypeCategories.Agricultural;
             ConstraintPrimary = RoomModdedConstraints.PLANTER_BOX;
-            ConstrantsAdditional = new RoomConstraints.Constraint[4] { 
+            ConstrantsAdditional = new RoomConstraints.Constraint[4] {
                                             RoomModdedConstraints.UNIQUE_PLANTS,
                                             RoomConstraints.LIGHT,
                                             RoomConstraints.MINIMUM_SIZE_12,

@@ -15,7 +15,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.SHOWERROOM.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.SHOWERROOM.TOOLTIP;
             Effect = string.Format(STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT, MiscUtils.Percent(Settings.Instance.Bathroom.Bonus));
-            Catergory = CreateCategory();
+            Catergory = Db.Get().RoomTypeCategories.Bathroom;
             ConstraintPrimary = RoomModdedConstraints.BATHROOM;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                             {
@@ -25,18 +25,18 @@ namespace RoomsExpanded
                                             RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Bathroom.MaxSize)
                                             };
 
-                RoomDetails = new RoomDetails.Detail[2]
-                                {
+            RoomDetails = new RoomDetails.Detail[2]
+                            {
                                 new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.SIZE.NAME, (object) room.cavity.numCells))),
                                 new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.BUILDING_COUNT.NAME, (object) room.buildings.Count)))
-                                };
+                            };
 
-                Priority = 0;
-                Upgrades = null;
-                SingleAssignee = false;
-                PriorityUse = false;
-                Effects = null;
-                SortKey = SortingCounter.GetAndIncrement(SortingCounter.PlumbedBathroomSortKey);
+            Priority = 0;
+            Upgrades = null;
+            SingleAssignee = false;
+            PriorityUse = false;
+            Effects = null;
+            SortKey = SortingCounter.GetAndIncrement(SortingCounter.PlumbedBathroomSortKey);
         }
     }
 }

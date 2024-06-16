@@ -14,7 +14,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.MISSIONCONTROL.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.MISSIONCONTROL.TOOLTIP;
             Effect = STRINGS.ROOMS.TYPES.MISSIONCONTROL.EFFECT;
-            Catergory = CreateCategory();
+            Catergory = Db.Get().RoomTypeCategories.Science;
             ConstraintPrimary = RoomModdedConstraints.SPACE_BUILDING;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                             {

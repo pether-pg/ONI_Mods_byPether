@@ -14,7 +14,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.GYMROOM.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP;
             Effect = string.Format(STRINGS.ROOMS.TYPES.GYMROOM.EFFECT, MiscUtils.Percent(Settings.Instance.Gym.Bonus));
-            Catergory = CreateCategory();
+            Catergory = Db.Get().RoomTypeCategories.Recreation;
             ConstraintPrimary = RoomModdedConstraints.RUNNING_WHEEL;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {

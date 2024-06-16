@@ -14,9 +14,9 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.NURSERYGENETIC.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.NURSERYGENETIC.TOOLTIP;
             Effect = string.Format(STRINGS.ROOMS.TYPES.NURSERYGENETIC.EFFECT, MiscUtils.Percent(Settings.Instance.NurseryGenetic.Bonus));
-            Catergory = CreateCategory();
+            Catergory = Db.Get().RoomTypeCategories.Agricultural;
             ConstraintPrimary = RoomModdedConstraints.GENETIC_STATION;
-            ConstrantsAdditional = new RoomConstraints.Constraint[3] 
+            ConstrantsAdditional = new RoomConstraints.Constraint[3]
                                         {
                                             RoomModdedConstraints.RADIATION_EMMITER,
                                             RoomConstraints.MINIMUM_SIZE_12,

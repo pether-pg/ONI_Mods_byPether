@@ -13,7 +13,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.KITCHENETTE.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.KITCHENETTE.TOOLTIP;
             Effect = string.Format(STRINGS.ROOMS.TYPES.KITCHENETTE.EFFECT, MiscUtils.Percent(Settings.Instance.Kitchenette.Bonus));
-            Catergory = CreateCategory();
+            Catergory = Db.Get().RoomTypeCategories.Food;
             ConstraintPrimary = RoomModdedConstraints.COOKING_STATION;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
@@ -34,7 +34,7 @@ namespace RoomsExpanded
             SingleAssignee = false;
             PriorityUse = false;
             Effects = null;
-            SortKey = SortingCounter.GetAndIncrement(SortingCounter.KitchenSortKey - 1);
+            SortKey = SortingCounter.GetAndIncrement(SortingCounter.KitchenSortKey);
         }
     }
 }

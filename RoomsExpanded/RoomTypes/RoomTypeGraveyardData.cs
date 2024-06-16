@@ -14,7 +14,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.GRAVEYARD.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP;
             Effect = string.Format(STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT, Settings.Instance.Graveyard.Bonus);
-            Catergory = CreateCategory();
+            Catergory = Db.Get().RoomTypeCategories.Park;
             ConstraintPrimary = RoomModdedConstraints.GRAVESTONE;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {

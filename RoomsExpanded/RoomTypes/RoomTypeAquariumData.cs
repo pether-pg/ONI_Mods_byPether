@@ -15,7 +15,7 @@ namespace RoomsExpanded
             Name = STRINGS.ROOMS.TYPES.AQUARIUM.NAME;
             Tooltip = STRINGS.ROOMS.TYPES.AQUARIUM.TOOLTIP;
             Effect = string.Format(STRINGS.ROOMS.TYPES.AQUARIUM.EFFECT, MiscUtils.Percent(Settings.Instance.Aquarium.Bonus));
-            Catergory = CreateCategory();
+            Catergory = Db.Get().RoomTypeCategories.Recreation;
             ConstraintPrimary = RoomModdedConstraints.FISH_FEEDER;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
