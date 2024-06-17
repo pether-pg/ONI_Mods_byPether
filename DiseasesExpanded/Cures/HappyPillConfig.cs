@@ -15,7 +15,7 @@ namespace DiseasesExpanded
 
         public static Effect GetEffect()
         {
-            Effect effect = new Effect(EFFECT_ID, "Happy Pill Effect", "Happy Pill Desc", 600, true, true, false);
+            Effect effect = new Effect(EFFECT_ID, STRINGS.CURES.HAPPYPILL.NAME, STRINGS.CURES.HAPPYPILL.DESC, 600, true, true, false);
             effect.SelfModifiers = new List<AttributeModifier>();
             effect.SelfModifiers.Add(new AttributeModifier("StressDelta", stressPerSecond, EFFECT_ID));
             effect.SelfModifiers.Add(new AttributeModifier("QualityOfLife", moraleBonus, EFFECT_ID));
@@ -60,7 +60,7 @@ namespace DiseasesExpanded
                 description = STRINGS.CURES.HAPPYPILL.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
-                sortOrder = 11
+                sortOrder = 12
             };
 
             MedicineInfo info = new MedicineInfo(ID, EFFECT_ID, MedicineInfo.MedicineType.Booster, (string)null);
