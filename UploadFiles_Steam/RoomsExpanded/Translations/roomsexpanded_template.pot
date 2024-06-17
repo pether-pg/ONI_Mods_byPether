@@ -5,12 +5,12 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.DESCRIPTION"
-msgid "Requires a single Grooming Station or Farm Station"
+msgid "Requires a single Ranching building or Farm Station"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME"
-msgid "Grooming or Farm Station"
+msgid "<link=\"BUILDCATEGORYREQUIREMENTCLASSRANCHSTATIONTYPE\">Ranching building</link> or <link=\"FARMSTATION\">Farm Station</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.DESCRIPTION
@@ -20,7 +20,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME"
-msgid "Any bed"
+msgid "Any <link=\"BUILDCATEGORYREQUIREMENTCLASSBEDTYPE\">bed</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION
@@ -80,7 +80,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHFEEDER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHFEEDER.NAME"
-msgid "Fish Feeder"
+msgid "<link=\"FISHFEEDER\">Fish Feeder</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.DESCRIPTION
@@ -90,7 +90,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.NAME"
-msgid "Fish Release"
+msgid "<link=\"FISHDELIVERYPOINT\">Fish Release</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FLOWERPOT.DESCRIPTION
@@ -120,7 +120,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.NAME"
-msgid "Refrigerator"
+msgid "<link=\"REFRIGERATOR\">Refrigerator</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.DESCRIPTION
@@ -130,7 +130,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME"
-msgid "Genetic Analysis Station"
+msgid "<link=\"GENETICANALYSISSTATION\">Genetic Analysis Station</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION
@@ -140,7 +140,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.NAME"
-msgid "Tasteful Memorial"
+msgid "<link=\"GRAVE\">Tasteful Memorial</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.DESCRIPTION
@@ -150,7 +150,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME"
-msgid "Industrial Machinery"
+msgid "<link=\"BUILDCATEGORYREQUIREMENTCLASSINDUSTRIALMACHINERY\">Industrial Machinery</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION
@@ -160,7 +160,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME"
-msgid "Manual Generator"
+msgid "<link=\"MANUALGENERATOR\">Manual Generator</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION
@@ -210,7 +210,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME"
-msgid "No more than one bed"
+msgid "No more than one <link=\"BUILDCATEGORYREQUIREMENTCLASSBEDTYPE\">bed</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION
@@ -230,7 +230,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME"
-msgid "Pedestal"
+msgid "<link=\"ITEMPEDESTAL\">Pedestal</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTCOUNT.DESCRIPTION
@@ -250,7 +250,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.NAME"
-msgid "Planter Box"
+msgid "<link=\"PLANTERBOX\">Planter Box</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.DESCRIPTION
@@ -260,7 +260,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME"
-msgid "Radiation Source"
+msgid "<link=\"RADIATION\">Radiation Source</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.DESCRIPTION
@@ -290,7 +290,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME"
-msgid "Shower"
+msgid "<link=\"SHOWER\">Shower</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.DESCRIPTION
@@ -300,7 +300,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.NAME"
-msgid "Pilot Support Building"
+msgid "<link=\"MISSIONCONTROLCLUSTER\">Pilot Support Building</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.DESCRIPTION
@@ -320,7 +320,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME"
-msgid "Transparent Ceiling"
+msgid "<link=\"TRANSPARENT\">Transparent Ceiling</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION
@@ -330,7 +330,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME"
-msgid "Water Cooler"
+msgid "<link=\"WATERCOOLER\">Water Cooler</link>"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION
@@ -365,12 +365,12 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION"
-msgid "Visited Museum"
+msgid "Visited Art Museum"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME"
-msgid "Museum"
+msgid "Art Museum"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMHISTORY.DESCRIPTION
@@ -415,7 +415,7 @@ msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT"
-msgid " - Enables Farm and Grooming Stations"
+msgid " - Enables Farm and Ranching building"
 msgstr ""
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.NAME
