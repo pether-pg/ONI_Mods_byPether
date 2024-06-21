@@ -46,9 +46,12 @@ namespace DiseasesExpanded
             if (DlcManager.IsExpansion1Active() && Settings.Instance.HungerGerms.IncludeDisease)
                 SpawnedFlasks.Add(GermIdx.HungerGermsIdx, HungermsFlask.ID);
 
-            SpawnedFlasks.Add(GermIdx.RoseScentIdx, PollenFlask.ID);
-            SpawnedFlasks.Add(GermIdx.LavenderScentIdx, PollenFlask.ID);
-            SpawnedFlasks.Add(GermIdx.MallowScentIdx, PollenFlask.ID);
+            if (ModInfo.IsFragrantFlowersEnabled)
+            {
+                SpawnedFlasks.Add(GermIdx.RoseScentIdx, PollenFlask.ID);
+                SpawnedFlasks.Add(GermIdx.LavenderScentIdx, PollenFlask.ID);
+                SpawnedFlasks.Add(GermIdx.MallowScentIdx, PollenFlask.ID);
+            }
         }
 
         public void GatherGerms(float dt)

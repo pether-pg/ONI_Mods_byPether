@@ -138,6 +138,7 @@ namespace DiseasesExpanded
                 return _medNanobots;
             }
         }
+
         //---------- FragrantFlowers ----------
         private static byte _roseScent = Invalid;
         public static byte RoseScentIdx
