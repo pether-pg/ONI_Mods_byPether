@@ -870,3 +870,4 @@ packages/PLib.4.15.0/.signature.p7s
 packages/PLib.4.15.0/icon.png
 packages/PLib.4.15.0/lib/net471/PLib.xml
 packages/PLib.4.15.0/PLib.4.15.0.nupkg
+SignsTagsAndRibbons/bin/Release/Newtonsoft.Json.xml
