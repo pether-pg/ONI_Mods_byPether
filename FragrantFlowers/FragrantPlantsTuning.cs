@@ -13,13 +13,37 @@ namespace FragrantFlowers
         public static CropsTuning DuskbloomTuning;
         public static CropsTuning MallowTuning;
 
+        public static SeedTuning DuskLavenderSeedTuning;
+        public static SeedTuning SpinosaSeedTuning;
+        public static SeedTuning RimedMallowSeedTuning;
+        public static MinMax seedDensity = new MinMax(0.015f, 0.03f);
+
         static FragrantPlantsTuning()
         {
             MakeSpinrosaTuning();
             MakeDuskbloomTuning();
             MakeMallowTuning();
+            MakeSeedsTuning();
         }
 
+        public static void MakeSeedsTuning()
+        {
+            DuskLavenderSeedTuning = new SeedTuning
+            {
+                density = seedDensity,
+                biomes = DuskbloomTuning.biomes,
+            };
+            SpinosaSeedTuning = new SeedTuning
+            {
+                density = seedDensity,
+                biomes = SpinrosaTuning.biomes,
+            };
+            RimedMallowSeedTuning = new SeedTuning
+            {
+                density = seedDensity,
+                biomes = MallowTuning.biomes,
+            };
+        }
         public static CropsTuning MakeSpinrosaTuning()
         {
             float avgDens = Settings.Instance.Rose.AverageDensity;
@@ -120,6 +144,18 @@ namespace FragrantFlowers
             public Mob.Location spawnLocation;
             public bool ValidBiome(SubWorld subworld, string biome) =>
                 ((this.biomeTemperatures.Contains(subworld.temperatureRange) && ((this.biomesExcluded == null) || !this.biomesExcluded.Any<string>(b => biome.Contains(b)))) && this.biomes.Any<string>(b => biome.Contains(b)));
+        }
+
+        public struct SeedTuning
+        {
+            public MinMax density;
+            public ISet<string> biomes;
+            public ISet<string> biomesExcluded;
+
+            public bool ValidBiome(string biome)
+            {
+                return (biomesExcluded == null || !biomesExcluded.Any(b => biome.Contains(b))) && biomes.Any(b => biome.Contains(b));
+            }
         }
     }
 }

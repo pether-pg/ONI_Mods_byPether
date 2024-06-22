@@ -44,11 +44,16 @@ namespace FragrantFlowers
         [Option("Spinosa Rose", category: "New Flower - Spinosa Rose")]
         public BasicFlowerSettings Rose { get; set; }
 
+        [JsonProperty]
+        [Option("Seeds spawn", "Do you want to spawn buries seeds?", category: "Additional Settings")]
+        public bool SeedsSpawn { get; set; }
+
         public Settings()
         {
             Lavender = new LavenderSettings();
             Mallow = new BasicFlowerSettings();
             Rose = new BasicFlowerSettings();
+            SeedsSpawn = false;
         }
 
         [Serializable]
