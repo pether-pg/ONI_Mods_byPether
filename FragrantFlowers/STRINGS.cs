@@ -231,6 +231,14 @@ namespace FragrantFlowers
             }
         }
 
+        public class CODEX
+        {
+            public static LocString AROMATICPLANTSUBTITLE = "Aromatic Plant";
+            public static LocString FOODPLANTSUBTITLE = "Food Plant";
+            public static LocString PERFUMEINGREDIENTTITLE = "Perfume Ingredient";
+            public static LocString CONSUMABLETTITLE = "Consumable";
+        }
+
         public class TRANSLATION
         {
             public class AUTHOR
