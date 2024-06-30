@@ -12,6 +12,7 @@ namespace DiseasesExpanded
     class ModInfo : KMod.UserMod2
     {
         public static string Namespace { get; private set; }
+        public static bool IsFragrantFlowersEnabled { get; private set; }
         public static List<Tag> CUSTOM_GASES = new List<Tag>
         {
             NanobotBottleConfig.BOTTLED_GERM_TAG
@@ -61,9 +62,15 @@ namespace DiseasesExpanded
                 bool DiseasesReimaginedFound = false;
 
                 foreach (Mod mod in mods)
-                    if (mod.staticID == "1911357229.Steam")
+                    if (mod.staticID == "DiseasesReimagined")
                     {
                         DiseasesReimaginedFound = mod.IsActive();
+                        string activeString = mod.IsActive() ? "Active" : "NOT Active";
+                        Debug.Log($"{Namespace}: Mod Id = \"{mod.staticID}\", Title = \"{mod.title}\", detected to be {activeString}.");
+                    }
+                    else if (mod.staticID == "pether-pg.FragrantFlowers")
+                    {
+                        IsFragrantFlowersEnabled = mod.IsActive();
                         string activeString = mod.IsActive() ? "Active" : "NOT Active";
                         Debug.Log($"{Namespace}: Mod Id = \"{mod.staticID}\", Title = \"{mod.title}\", detected to be {activeString}.");
                     }
