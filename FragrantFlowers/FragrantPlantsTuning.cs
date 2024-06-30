@@ -13,11 +13,39 @@ namespace FragrantFlowers
         public static CropsTuning DuskbloomTuning;
         public static CropsTuning MallowTuning;
 
+        public static SeedTuning DuskLavenderSeedTuning;
+        public static SeedTuning SpinosaSeedTuning;
+        public static SeedTuning RimedMallowSeedTuning;
+        public static MinMax seedDensity = new MinMax(0.015f, 0.03f);
+
         static FragrantPlantsTuning()
         {
             MakeSpinrosaTuning();
             MakeDuskbloomTuning();
             MakeMallowTuning();
+            MakeSeedsTuning();
+        }
+        public static void MakeSeedsTuning()
+        {
+            DuskLavenderSeedTuning = new SeedTuning
+            {
+                density = seedDensity,
+                biomes = DuskbloomTuning.biomes,
+                biomesExcluded = new HashSet<string>() {
+                    EARTH_BIOME_STRINGS.ASTHENOSPHERE,},
+            };
+            SpinosaSeedTuning = new SeedTuning
+            {
+                density = seedDensity,
+                biomes = SpinrosaTuning.biomes,
+                biomesExcluded = new HashSet<string>() {
+                    EARTH_BIOME_STRINGS.SURFACE,},
+            };
+            RimedMallowSeedTuning = new SeedTuning
+            {
+                density = seedDensity,
+                biomes = MallowTuning.biomes,
+            };
         }
 
         public static CropsTuning MakeSpinrosaTuning()
@@ -25,19 +53,28 @@ namespace FragrantFlowers
             float avgDens = Settings.Instance.Rose.AverageDensity;
             CropsTuning tuning = new CropsTuning
             {
-                density = new MinMax(avgDens - 0.1f, avgDens + 0.1f)
+                density = new MinMax(avgDens - 0.1f, avgDens + 0.1f),
+                biomeTemperatures = new HashSet<Temperature.Range>() {
+                    Temperature.Range.Cold,
+                    Temperature.Range.Chilly,
+                    Temperature.Range.Cool,
+                    Temperature.Range.Mild,
+                    Temperature.Range.Room,
+                    Temperature.Range.HumanWarm,
+                    Temperature.Range.HumanHot,
+                    Temperature.Range.Hot,
+                },
+                biomes = new HashSet<string>()
+                {
+                    BIOMES_STRINGS.SEDIMENTARY,
+                    BAATOR_BIOME_STRINGS.AVERNUS,
+                    EARTH_BIOME_STRINGS.ASTHENOSPHERE,
+                    EARTH_BIOME_STRINGS.SURFACE,
+                    ROLLER_SNAKES_STRINGS.TESTDESERT,
+                    EMPTY_WORLDS_BIOME_STRINGS.CUSTOMFOREST,
+                },
+                spawnLocation = Mob.Location.Floor,
             };
-            HashSet<Temperature.Range> set1 = new HashSet<Temperature.Range>();
-            set1.Add(Temperature.Range.Mild);
-            set1.Add(Temperature.Range.Room);
-            set1.Add(Temperature.Range.HumanWarm);
-            set1.Add(Temperature.Range.HumanHot);
-            set1.Add(Temperature.Range.Hot);
-            tuning.biomeTemperatures = set1;
-            HashSet<string> set2 = new HashSet<string>();
-            set2.Add(BIOMES_STRINGS.SEDIMENTARY);
-            tuning.biomes = set2;
-            tuning.spawnLocation = Mob.Location.Floor;
             SpinrosaTuning = tuning;
             return tuning;
         }
@@ -47,19 +84,26 @@ namespace FragrantFlowers
             float avgDens = Settings.Instance.Lavender.AverageDensity;
             CropsTuning tuning = new CropsTuning
             {
-                density = new MinMax(avgDens - 0.1f, avgDens + 0.1f)
+                density = new MinMax(avgDens - 0.1f, avgDens + 0.1f),
+                biomeTemperatures = new HashSet<Temperature.Range>(){
+                    Temperature.Range.Cold,
+                    Temperature.Range.Chilly,
+                    Temperature.Range.Cool,
+                    Temperature.Range.Mild,
+                    Temperature.Range.Room,
+                    Temperature.Range.HumanWarm,
+                    Temperature.Range.HumanHot,
+                    Temperature.Range.Hot,
+                },
+                biomes = new HashSet<string>() {
+                    BIOMES_STRINGS.FOREST,
+                    BAATOR_BIOME_STRINGS.SHADOWFEL,
+                    EARTH_BIOME_STRINGS.ASTHENOSPHERE,
+                    EARTH_BIOME_STRINGS.SURFACE,
+                    EMPTY_WORLDS_BIOME_STRINGS.CUSTOMFOREST,
+                },
+                spawnLocation = Mob.Location.Floor,
             };
-            HashSet<Temperature.Range> set3 = new HashSet<Temperature.Range>();
-            set3.Add(Temperature.Range.Mild);
-            set3.Add(Temperature.Range.Room);
-            set3.Add(Temperature.Range.HumanWarm);
-            set3.Add(Temperature.Range.HumanHot);
-            set3.Add(Temperature.Range.Hot);
-            tuning.biomeTemperatures = set3;
-            HashSet<string> set4 = new HashSet<string>();
-            set4.Add(BIOMES_STRINGS.FOREST);
-            tuning.biomes = set4;
-            tuning.spawnLocation = Mob.Location.Floor;
             DuskbloomTuning = tuning;
             return tuning;
         }
@@ -69,18 +113,22 @@ namespace FragrantFlowers
             float avgDens = Settings.Instance.Mallow.AverageDensity;
             CropsTuning tuning = new CropsTuning
             {
-                density = new MinMax(avgDens - 0.1f, avgDens + 0.1f)
+                density = new MinMax(avgDens - 0.1f, avgDens + 0.1f),
+                biomeTemperatures = new HashSet<Temperature.Range>()
+                {
+                    Temperature.Range.Cool,
+                    Temperature.Range.Chilly,
+                    Temperature.Range.Cold,
+                    Temperature.Range.VeryCold,
+                    Temperature.Range.ExtremelyCold,
+                },
+                biomes = new HashSet<string>() {
+                    BIOMES_STRINGS.FROZEN,
+                    BAATOR_BIOME_STRINGS.STYGIA,
+                    BAATOR_BIOME_STRINGS.CANIA,
+                },
+                spawnLocation = Mob.Location.Ceiling,
             };
-            HashSet<Temperature.Range> set5 = new HashSet<Temperature.Range>();
-            set5.Add(Temperature.Range.Chilly);
-            set5.Add(Temperature.Range.Cold);
-            set5.Add(Temperature.Range.VeryCold);
-            set5.Add(Temperature.Range.ExtremelyCold);
-            tuning.biomeTemperatures = set5;
-            HashSet<string> set6 = new HashSet<string>();
-            set6.Add(BIOMES_STRINGS.FROZEN);
-            tuning.biomes = set6;
-            tuning.spawnLocation = Mob.Location.Ceiling;
             MallowTuning = tuning;
             return tuning;
         }
@@ -109,6 +157,42 @@ namespace FragrantFlowers
             public static string SWAMP = (PREFIX + "Swamp");
             public static string WASTELAND = (PREFIX + "Wasteland");
         }
+        public class ROLLER_SNAKES_STRINGS // RollerSnakes mod
+        {
+            public static string TESTDESERT = "TestDesert";
+        }
+        public class EMPTY_WORLDS_BIOME_STRINGS //EmptyWorlds mod
+        {
+            public static string CUSTOMFOREST = "CustomForest";
+        }
+        public class EARTH_BIOME_STRINGS //Earth mod
+        {
+            public static string PREFIX = @"biomes/Earth/";
+            public static string
+                ASTHENOSPHERE = PREFIX + "Asthenosphere",
+                CORE = PREFIX + "Core",
+                MANTLE = PREFIX + "Mantle",
+                MANTLE2 = PREFIX + "Mantle2",
+                OCEAN = PREFIX + "Ocean",
+                SKY = PREFIX + "Sky",
+                SURFACE = PREFIX + "Surface";
+        }
+        public class BAATOR_BIOME_STRINGS //Baator mod
+        {
+            public static string PREFIX = @"biomes/";
+            public static string
+                SURFACECRAGS = PREFIX + "Baator_SurfaceCrags",
+                SHADOWFEL = PREFIX + "Baator_Shadowfel",
+                AVERNUS = PREFIX + "Baator_Avernus",
+                DIS = PREFIX + "Baator_Dis",
+                MINAUROS = PREFIX + "Baator_Minauros",
+                PHLEGETHOS = PREFIX + "Baator_Phlegethos",
+                STYGIA = PREFIX + "Baator_Stygia",
+                MALBOLGE = PREFIX + "Baator_Malbolge",
+                MALADOMINI = PREFIX + "Baator_Maladomini",
+                CANIA = PREFIX + "Baator_Cania",
+                NESSUS = PREFIX + "Baator_Nessus";
+        }
 
         [StructLayout(LayoutKind.Sequential)]
         public struct CropsTuning
@@ -120,6 +204,18 @@ namespace FragrantFlowers
             public Mob.Location spawnLocation;
             public bool ValidBiome(SubWorld subworld, string biome) =>
                 ((this.biomeTemperatures.Contains(subworld.temperatureRange) && ((this.biomesExcluded == null) || !this.biomesExcluded.Any<string>(b => biome.Contains(b)))) && this.biomes.Any<string>(b => biome.Contains(b)));
+        }
+
+        public struct SeedTuning
+        {
+            public MinMax density;
+            public ISet<string> biomes;
+            public ISet<string> biomesExcluded;
+
+            public bool ValidBiome(string biome)
+            {
+                return (biomesExcluded == null || !biomesExcluded.Any(b => biome.Contains(b))) && biomes.Any(b => biome.Contains(b));
+            }
         }
     }
 }
