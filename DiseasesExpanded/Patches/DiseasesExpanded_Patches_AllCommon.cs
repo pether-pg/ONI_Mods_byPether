@@ -222,13 +222,13 @@ namespace DiseasesExpanded
                 if (Settings.Instance.MutatingVirus.IncludeDisease)     __instance.Add(new MutatingGerms(statsOnly));
                 if (Settings.Instance.MedicalNanobots.IncludeDisease)   __instance.Add(new MedicalNanobots(statsOnly));
 
-                if (DlcManager.IsExpansion1Active() && Settings.Instance.BogInsects.IncludeDisease)
+                if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && Settings.Instance.BogInsects.IncludeDisease)
                     __instance.Add(new BogInsects(statsOnly));
 
-                if (DlcManager.IsExpansion1Active() && Settings.Instance.HungerGerms.IncludeDisease)
+                if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && Settings.Instance.HungerGerms.IncludeDisease)
                     __instance.Add(new HungerGerms(statsOnly));
 
-                if (DlcManager.IsExpansion1Active() && Settings.Instance.SleepingCurse.IncludeDisease)
+                if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && Settings.Instance.SleepingCurse.IncludeDisease)
                     __instance.Add(new SpindlyGerms(statsOnly));
             }
         }

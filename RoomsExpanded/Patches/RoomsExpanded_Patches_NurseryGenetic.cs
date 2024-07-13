@@ -10,7 +10,7 @@ namespace RoomsExpanded
     {
         public static void AddRoom(ref RoomTypes __instance)
         {
-            if (Settings.Instance.NurseryGenetic.IncludeRoom && DlcManager.IsExpansion1Active())
+            if (Settings.Instance.NurseryGenetic.IncludeRoom && DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
             {
                 __instance.Add(RoomTypes_AllModded.GeneticNursery);
 

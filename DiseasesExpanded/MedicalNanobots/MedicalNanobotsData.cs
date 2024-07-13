@@ -225,7 +225,7 @@ namespace DiseasesExpanded
             string max = GameUtil.GetFormattedTemperature(germs.temperatureRange.maxGrowth, displayUnits: true);
             string result = string.Format(STRINGS.GERMS.MEDICALNANOBOTS.TEMPERATURE_HELP_PATTERN, min, max);
 
-            if(DlcManager.IsExpansion1Active())
+            if(DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
             {
                 string rad = string.Format(STRINGS.GERMS.MEDICALNANOBOTS.RADIATION_HELP_PATTERN, germs.radiationKillRate);
                 result += $"\n{rad}";

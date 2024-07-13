@@ -30,7 +30,7 @@ namespace DiseasesExpanded
             SpawnedFlasks.Add(GermIdx.SlimelungIdx, SlimelungFlask.ID);
             SpawnedFlasks.Add(GermIdx.ZombieSporesIdx, ZombieSporesFlask.ID);
 
-            if(DlcManager.IsExpansion1Active())
+            if(DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 SpawnedFlasks.Add(GermIdx.RadiationPoisoningIdx, RadiationGermsFlask.ID);
 
             if (Settings.Instance.FrostPox.IncludeDisease)
@@ -41,9 +41,9 @@ namespace DiseasesExpanded
                 SpawnedFlasks.Add(GermIdx.AlienGermsIdx, AlienGermFlask.ID);
             if (Settings.Instance.MutatingVirus.IncludeDisease)
                 SpawnedFlasks.Add(GermIdx.MutatingGermsIdx, MutatingGermFlask.ID);
-            if (DlcManager.IsExpansion1Active() && Settings.Instance.BogInsects.IncludeDisease)
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && Settings.Instance.BogInsects.IncludeDisease)
                 SpawnedFlasks.Add(GermIdx.BogInsectsIdx, BogBugsFlask.ID);
-            if (DlcManager.IsExpansion1Active() && Settings.Instance.HungerGerms.IncludeDisease)
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && Settings.Instance.HungerGerms.IncludeDisease)
                 SpawnedFlasks.Add(GermIdx.HungerGermsIdx, HungermsFlask.ID);
         }
 

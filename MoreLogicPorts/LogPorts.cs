@@ -50,7 +50,7 @@ namespace MoreLogicPorts
                 typeof(RefrigeratorConfig)         
             };
 
-            if(DlcManager.IsContentSubscribed("DlcManager.EXPANSION2_ID") || unconditionalGetAll)
+            if(DlcManager.IsContentSubscribed(DlcManager.DLC2_ID) || unconditionalGetAll)
             {
                 result.Add(typeof(CampfireConfig));
                 result.Add(typeof(IceKettleConfig));

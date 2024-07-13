@@ -14,7 +14,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             AppearanceWeight = weight;
             DangerLevel = ONITwitchLib.Danger.Small;
 
-            Condition = new Func<object, bool>(data => DlcManager.IsExpansion1Active());
+            Condition = new Func<object, bool>(data => DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID));
 
             Event = new Action<object>(
                 data =>
