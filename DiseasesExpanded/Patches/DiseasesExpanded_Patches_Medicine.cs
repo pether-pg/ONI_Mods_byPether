@@ -77,13 +77,13 @@ namespace DiseasesExpanded
             public static void Postfix(ref Immigration __instance)
             {
                 Traverse traverse = Traverse.Create(__instance).Field("carePackages");
-                List<CarePackageInfo> list = traverse.GetValue<CarePackageInfo[]>().ToList<CarePackageInfo>();
+                List<CarePackageInfo> list = traverse.GetValue<List<CarePackageInfo>>();
                 foreach (string id in Printables.Keys)
                     list.Add(new CarePackageInfo(id, Printables[id], () => DiscoveredResources.Instance.IsDiscovered(id)));
                 if(DlcManager.IsExpansion1Active())
                     foreach (string id in DlcPrintables.Keys)
                         list.Add(new CarePackageInfo(id, DlcPrintables[id], () => DiscoveredResources.Instance.IsDiscovered(id)));
-                traverse.SetValue(list.ToArray());
+                traverse.SetValue(list);
             }
         }
     }
