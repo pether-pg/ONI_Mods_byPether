@@ -13,14 +13,14 @@ namespace DiseasesExpanded
 
         public static ComplexRecipe.RecipeElement GetMainIngridient()
         {
-            if(DlcManager.IsExpansion1Active())
+            if(DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return new ComplexRecipe.RecipeElement(SimHashes.UraniumOre.CreateTag(), VaccineApothecaryConfig.UraniumOreCost);
             return new ComplexRecipe.RecipeElement(SimHashes.RefinedCarbon.CreateTag(), VaccineApothecaryConfig.RefinedCarbonCost);
         }
 
         public static string GetAdvancedApothecaryId()
         {
-            if (DlcManager.IsExpansion1Active())
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return ID;
             return ApothecaryConfig.ID;
         }

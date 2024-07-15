@@ -26,7 +26,7 @@ namespace ResearchRequirements
 
         public static int WorldsWithBeds()
         {
-            if (!DlcManager.IsExpansion1Active())
+            if (!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return 1;
 
             List<int> UniqueWorldIds = new List<int>();
@@ -42,7 +42,7 @@ namespace ResearchRequirements
 
         public static int RevealedSpaceHexes(int radiusMin, int radiusMax)
         {
-            if (!DlcManager.IsExpansion1Active())
+            if (!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return 0;
 
             int count = 0;

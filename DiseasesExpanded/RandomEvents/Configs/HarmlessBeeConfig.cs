@@ -3,7 +3,6 @@ using TUNING;
 using UnityEngine;
 
 namespace DiseasesExpanded.RandomEvents.Configs
-
 {
     class HarmlessBeeConfig : IEntityConfig
     {
@@ -14,8 +13,8 @@ namespace DiseasesExpanded.RandomEvents.Configs
 
         public GameObject CreatePrefab()
         {
-            string name = "Harmless Bee";
-            string desc = "This Beeta may look angry, but it will never ever sting anyone.";
+            string name = STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.NAME;
+            string desc = STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.DESC;
             EffectorValues tieR0 = TUNING.DECOR.BONUS.TIER0;
             KAnimFile anim = Assets.GetAnim((HashedString)"bee_kanim");
             EffectorValues decor = tieR0;

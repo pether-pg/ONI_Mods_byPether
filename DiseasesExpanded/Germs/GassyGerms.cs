@@ -31,8 +31,8 @@ namespace DiseasesExpanded
 
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
         private const float chlorineFreezingK = degC - 101;
-        private const float grassTempHighWarningK = 348.15f; // see GasGrassConfig.cs
-        private const float grassTempHighLethalK = 373.15f; // see GasGrassConfig.cs
+        private const float grassTempHighWarningK = 428.15f; // see GasGrassConfig.cs
+        private const float grassTempHighLethalK = 453.15f; // see GasGrassConfig.cs
 
         public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod
 

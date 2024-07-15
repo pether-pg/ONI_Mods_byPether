@@ -45,6 +45,9 @@ namespace DiseasesExpanded
 
         private static void DefineRecipe()
         {
+            if (!Settings.Instance.MedicalNanobots.IncludeDisease)
+                return;
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
                 MedicalNanobotsData.MainIngridient,

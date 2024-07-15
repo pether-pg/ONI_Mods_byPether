@@ -79,8 +79,9 @@ namespace DietVariety
                         // Load on the stack 1st argument of FindEdibleFetchTarget method - Storage destination
                         yield return new CodeInstruction(OpCodes.Ldarg_1);
 
-                        // Load on the stack 5th local variable - Pickupable pickupable = pickup2.pickupable;
-                        yield return new CodeInstruction(OpCodes.Ldloc_S, 5);
+                        // Load on the stack 6th local variable - Pickupable pickupable = pickup2.pickupable;
+                        // Also defined as [5] valuetype FetchManager/Pickup pickup in IL code
+                        yield return new CodeInstruction(OpCodes.Ldloc_S, 6);
 
                         yield return new CodeInstruction(OpCodes.Call, myExtraCodeMethodInfo);
                     }

@@ -19,19 +19,19 @@ msgstr ""
 #. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.DESC
 msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.DESC"
 msgid ""
+"Germcatchers collect germ samples for medical study and vaccine production."
+msgstr ""
+"Keimfänger sammeln Keimproben für medizinische Forschung und "
+"Impfstoffproduktion."
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECT"
+msgid ""
 "Gathers ambient germs and stores them in the flask for future research at an "
 "Apothecary and vaccine production."
 msgstr ""
 "Sammelt Keime aus der Umgebung und füllt sie in Ampullen ab für zukünftige "
 "Forschungen in der Apotheke und zur Produktion von Impfstoffen."
-
-#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECCT
-msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECCT"
-msgid ""
-"Germcatchers collect germ samples for medical study and vaccine production."
-msgstr ""
-"Keimfänger sammeln Keimproben für medizinische Forschung und "
-"Impfstoffproduktion."
 
 #. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.NAME
 msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.NAME"
@@ -43,8 +43,8 @@ msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.DESC"
 msgid "Shields the asteroid from cosmic radiation."
 msgstr "Schirmt den Asteroiden vor kosmischer Strahlung."
 
-#. DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECCT
-msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECCT"
+#. DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECT"
 msgid ""
 "When powered, generates shield around the asteroid to protect the surface "
 "from cosmic radiation. \n"
@@ -64,6 +64,15 @@ msgstr "Schildgenerator"
 #. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC
 msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC"
 msgid ""
+"Vaccines produced here can grant your duplicants immunity for various "
+"diseases."
+msgstr ""
+"Hier produzierte Impfstoffe können deinen Duplikanten Immunitäten gegen "
+"verschiedene Krankheiten gewähren."
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECT"
+msgid ""
 "Vaccine Apothecary uses radiation to weaken germs stored in a flasks to "
 "produce life-saving vaccines. \n"
 "\n"
@@ -76,15 +85,6 @@ msgstr ""
 "Das Gerät muss von hochqualifiziertem medizinischem Personal bedient werden, "
 "und es wird empfohlen, für die Zeit der Impfstoffzubereitung einen "
 "Strahlenschutz zu tragen."
-
-#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECCT
-msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECCT"
-msgid ""
-"Vaccines produced here can grant your duplicants immunity for various "
-"diseases."
-msgstr ""
-"Hier produzierte Impfstoffe können deinen Duplikanten Immunitäten gegen "
-"verschiedene Krankheiten gewähren."
 
 #. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME
 msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME"
@@ -526,14 +526,14 @@ msgstr "Lässt Duplikant periodisch an zufälligen Orten einschlafen."
 #. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO
 msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO"
 msgid ""
-"Got hurt by the Spindle of a Grubfruit.\n"
+"Got hurt by the Spindle of a {0}.\n"
 "\n"
 "As a result, this duplicant will fall asleep in random places.\n"
 "Improve Farming skill or wear protective equipment to prevent future "
 "infections.\n"
 "Use Espresso Machine to prevent Narcoleptic Naps.\n"
 msgstr ""
-"Hat sich an der Spindel einer Wühlfrucht gestochen.\n"
+"Hat sich an der Spindel einer {0} gestochen.\n"
 "\n"
 "Infolgedessen schläft dieser Duplikant an zufälligen Orten ein.\n"
 "Verbessere deine Farming-Fähigkeiten oder trage Schutzausrüstung, um "

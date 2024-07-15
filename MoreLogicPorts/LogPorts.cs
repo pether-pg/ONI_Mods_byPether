@@ -21,6 +21,8 @@ namespace MoreLogicPorts
                 Configs[typeof(MassiveHeatSinkConfig)] = DO_POST_CONFIG_NAME;
             if (Configs.ContainsKey(typeof(GravitasCreatureManipulatorConfig)))
                 Configs[typeof(GravitasCreatureManipulatorConfig)] = DO_POST_CONFIG_NAME;
+            if (Configs.ContainsKey(typeof(StorageLockerSmartConfig)))
+                Configs[typeof(StorageLockerSmartConfig)] = DO_POST_CONFIG_NAME;
 
             return Configs;
         }
@@ -43,8 +45,16 @@ namespace MoreLogicPorts
                 typeof(BottleEmptierGasConfig),             // Canister Emptier
                 typeof(GasBottlerConfig),                   // Canister Filler
                 typeof(IceCooledFanConfig),                 // Ice-E Fan
-                typeof(CreatureDeliveryPointConfig)         // Critter Drop-Off
+                typeof(CreatureDeliveryPointConfig),        // Critter Drop-Off
+                typeof(StorageLockerSmartConfig),         
+                typeof(RefrigeratorConfig)         
             };
+
+            if(DlcManager.IsContentSubscribed(DlcManager.DLC2_ID) || unconditionalGetAll)
+            {
+                result.Add(typeof(CampfireConfig));
+                result.Add(typeof(IceKettleConfig));
+            }
 
             return result;
         }

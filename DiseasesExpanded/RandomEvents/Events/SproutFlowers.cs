@@ -83,7 +83,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             GermyFlowers.Add(ColdBreatherConfig.ID, GermIdx.FrostShardsIdx);
             GermyFlowers.Add(GasGrassConfig.ID, GermIdx.GassyGermsIdx);
 
-            if (!DlcManager.IsExpansion1Active())
+            if (!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return;
 
             GermyFlowers.Add(SwampHarvestPlantConfig.ID, GermIdx.BogInsectsIdx);

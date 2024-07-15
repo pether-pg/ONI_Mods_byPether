@@ -27,11 +27,11 @@ namespace DiseasesExpanded
                 if (__instance == null || __instance.sleepy == null)
                     return;
 
-                __instance.sleepy.Enter("Espresso Check", (smi => 
-                    {
-                        if (smi != null && smi.gameObject != null && HasEsspressoEffect(smi.gameObject))
-                            smi.GoTo(__instance.idle);
-                    }
+                __instance.sleepy.Enter("Espresso Check", (smi =>
+                {
+                    if (smi != null && smi.gameObject != null && HasEsspressoEffect(smi.gameObject))
+                        smi.GoTo(__instance.idle);
+                }
                 ));
             }
 
@@ -79,10 +79,10 @@ namespace DiseasesExpanded
 
                 if (SuitWearing.IsWearingAtmoSuit(worker.gameObject) || SuitWearing.IsWearingLeadSuit(worker.gameObject))
                     return;
-                
+
                 float randomRoll = UnityEngine.Random.Range(0.0f, 100.0f);
                 if (GetInfectionChance(worker) > randomRoll)
-                    TryInfect(worker);
+                    TryInfect(worker, __instance.gameObject.GetProperName());
             }
 
             private static bool CausesCurse(Harvestable harvestable)
@@ -150,7 +150,7 @@ namespace DiseasesExpanded
                 return value;
             }
 
-            private static void TryInfect(Worker worker)
+            private static void TryInfect(Worker worker, string source)
             {
                 Modifiers modifiers = worker.gameObject.GetComponent<Modifiers>();
                 if (modifiers == null)
@@ -160,7 +160,7 @@ namespace DiseasesExpanded
                 if (diseases == null)
                     return;
 
-                diseases.Infect(new SicknessExposureInfo(SpindlySickness.ID, STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO));
+                diseases.Infect(new SicknessExposureInfo(SpindlySickness.ID, string.Format(STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO, source)));
             }
         }
     }

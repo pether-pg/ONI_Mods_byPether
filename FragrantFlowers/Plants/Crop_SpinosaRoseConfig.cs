@@ -24,23 +24,23 @@ namespace FragrantFlowers
         public GameObject CreatePrefab()
         {
             GameObject go = EntityTemplates.CreateLooseEntity(
-                ID, 
+                ID,
                 STRINGS.CROPS.SPINOSAROSE.NAME,
-                STRINGS.CROPS.SPINOSAROSE.DESC, 
-                1f, 
-                false, 
-                Assets.GetAnim("item_spinosarose_kanim"), 
-                "object", 
-                Grid.SceneLayer.Front, 
-                EntityTemplates.CollisionShape.CIRCLE, 
-                0.35f, 
-                0.35f, 
-                true, 
-                0, 
-                SimHashes.Creature, 
-                new List<Tag>{ 
-                    GameTags.CookingIngredient, 
-                    GameTags.IndustrialIngredient 
+                STRINGS.CROPS.SPINOSAROSE.DESC,
+                1f,
+                false,
+                Assets.GetAnim("item_spinosarose_kanim"),
+                "object",
+                Grid.SceneLayer.Front,
+                EntityTemplates.CollisionShape.CIRCLE,
+                0.35f,
+                0.35f,
+                true,
+                0,
+                SimHashes.Creature,
+                new List<Tag>{
+                    GameTags.CookingIngredient,
+                    GameTags.IndustrialIngredient
                 });
             go.AddOrGet<EntitySplitter>();
             go.AddOrGet<SimpleMassStatusItem>();
@@ -68,8 +68,8 @@ namespace FragrantFlowers
         {
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(SimHashes.Phosphorite.CreateTag(), 100f),
-                new ComplexRecipe.RecipeElement(ID, 1f)
+                new ComplexRecipe.RecipeElement(ID, 1f),
+                new ComplexRecipe.RecipeElement(SimHashes.Phosphorite.CreateTag(), 1f),
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
@@ -81,7 +81,8 @@ namespace FragrantFlowers
                 description = ITEMS.PILLS.INTERMEDIATECURE.RECIPEDESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { ApothecaryConfig.ID },
-                sortOrder = 10
+                sortOrder = 10,
+                requiredTech = "MedicineII"
             };
         }
 

@@ -47,7 +47,7 @@ namespace RoomsExpanded
 
         public static bool CanGrantExtraBonus()
         {
-            if (!DlcManager.IsExpansion1Active())
+            if (!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return true;
 
             string key = Db.Get().ColonyAchievements.CollectedArtifacts.Id;

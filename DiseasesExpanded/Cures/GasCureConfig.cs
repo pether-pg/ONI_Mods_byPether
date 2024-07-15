@@ -37,8 +37,8 @@ namespace DiseasesExpanded
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
+                new ComplexRecipe.RecipeElement((Tag) PrickleFlowerConfig.SEED_ID, 1f),
                 new ComplexRecipe.RecipeElement(SimHashes.Fertilizer.CreateTag(), 1f),
-                new ComplexRecipe.RecipeElement((Tag) PrickleFlowerConfig.SEED_ID, 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
@@ -50,7 +50,7 @@ namespace DiseasesExpanded
                 description = STRINGS.CURES.GASCURE.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
-                sortOrder = 11
+                sortOrder = 12
             };
         }
     }

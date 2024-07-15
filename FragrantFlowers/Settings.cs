@@ -92,7 +92,7 @@ namespace FragrantFlowers
             public int CritterHappinessBonus { get; set; }
 
             [JsonProperty]
-            [Limit(1.0f, 10.0f)]
+            [Limit(0.0f, 10.0f)]
             [Option("Critter Fertility Bonus", "Fertility per cycle after smelling the flowers.")]
             public float CritterFertilityBonus { get; set; }
 

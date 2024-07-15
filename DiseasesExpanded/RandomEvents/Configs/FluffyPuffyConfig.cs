@@ -14,8 +14,8 @@ namespace DiseasesExpanded.RandomEvents.Configs
 
         public GameObject CreatePrefab()
         {
-            string name = "Fluffy Puffy";
-            string desc = "Cute and fluffy like a cloud Puffy.";
+            string name = STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.NAME;
+            string desc = STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.DESC;
             EffectorValues tieR0 = TUNING.DECOR.BONUS.TIER0;
             KAnimFile anim = Assets.GetAnim((HashedString)"puft_kanim");
             EffectorValues decor = tieR0;
