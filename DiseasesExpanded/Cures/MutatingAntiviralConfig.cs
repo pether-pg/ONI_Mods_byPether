@@ -40,6 +40,8 @@ namespace DiseasesExpanded
         {
             DefineRecipe(BasicForagePlantConfig.ID, 2);
             DefineRecipe(ForestForagePlantConfig.ID, 0.25f);
+            if (DlcManager.IsContentSubscribed(DlcManager.DLC2_ID))
+                DefineRecipe(IceCavesForagePlantConfig.ID, 2);
             if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 DefineRecipe(SwampForagePlantConfig.ID, 2 / 3.0f);
 
