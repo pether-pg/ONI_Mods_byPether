@@ -26,11 +26,11 @@ namespace FragrantFlowers
             public static void Postfix(ref Immigration __instance)
             {
                 Traverse traverse = Traverse.Create(__instance).Field("carePackages");
-                List<CarePackageInfo> list = traverse.GetValue<CarePackageInfo[]>().ToList<CarePackageInfo>();
+                List<CarePackageInfo> list = traverse.GetValue<List<CarePackageInfo>>();
                 list.Add(new CarePackageInfo(Plant_SpinosaConfig.SEED_ID , Settings.Instance.Rose.SeedsInCarePackage, null));
                 list.Add(new CarePackageInfo(Plant_DuskLavenderConfig.SEED_ID, Settings.Instance.Lavender.SeedsInCarePackage, null));
                 list.Add(new CarePackageInfo(Plant_RimedMallowConfig.SEED_ID, Settings.Instance.Mallow.SeedsInCarePackage, null));
-                traverse.SetValue(list.ToArray());
+                traverse.SetValue(list);
             }
         }
 
