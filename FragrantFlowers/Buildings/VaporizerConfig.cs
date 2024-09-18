@@ -15,8 +15,10 @@ namespace FragrantFlowers
             EffectorValues noise = none;
             BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(ID, 1, 1, "aromatics_vaporizer_kanim", 30, 30f, materialMass, materials, 1600f, BuildLocationRule.Anywhere, tieR0_2, noise);
             buildingDef.RequiresPowerInput = true;
-            buildingDef.EnergyConsumptionWhenActive = 120f;
-            buildingDef.Overheatable = false;
+            buildingDef.EnergyConsumptionWhenActive = 60f;
+            buildingDef.ExhaustKilowattsWhenActive = 0.125f;
+            buildingDef.SelfHeatKilowattsWhenActive = 0.5f;
+            buildingDef.OverheatTemperature = 398.15f;
             buildingDef.Floodable = false;
             buildingDef.Entombable = true;
             buildingDef.ViewMode = OverlayModes.Disease.ID;
