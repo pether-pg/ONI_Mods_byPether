@@ -396,7 +396,7 @@ namespace DiseasesExpanded
             public class STRESS
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Nanobot Stress Relief Module", MedicalNanobots.ID);
-                public static LocString DESC = (LocString)"Medical Nanobots will by more efficient while calming down stressed duplicants.";
+                public static LocString DESC = (LocString)"Medical Nanobots will by more efficient while calming down stressed duplicants and improving their morale.";
             }
 
             public class HEALTH
@@ -432,7 +432,8 @@ namespace DiseasesExpanded
             public class SPAWNING
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Nanobot Perpetum Mobile Protocol", MedicalNanobots.ID);
-                public static LocString DESC = (LocString)"Medical Nanobots loss rate will be reduced, allowing them to survive longer in the hostile atmosphere.";
+                public static LocString DESC = (LocString)"Medical Nanobots loss rate will be reduced, allowing some of them to respawn after enhancement is complete.";
+                public static LocString POPUP = (LocString)"Nanobot Perpetum Mobile!";
             }
 
             public class TEMPERATURE

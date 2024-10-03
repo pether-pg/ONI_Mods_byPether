@@ -64,6 +64,7 @@ namespace DiseasesExpanded
                 { SerumSuperConfig.ID, 1 },
                 { SerumTummyConfig.ID, 1 },
                 { SerumDeepBreathConfig.ID, 1 },
+                { NanobotBottleConfig.ID, 1 }
             };
 
             public static Dictionary<string, float> DlcPrintables = new Dictionary<string, float>()

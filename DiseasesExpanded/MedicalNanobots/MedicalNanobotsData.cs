@@ -10,17 +10,9 @@ namespace DiseasesExpanded
     [SerializationConfig(MemberSerialization.OptIn)]
     class MedicalNanobotsData : KMonoBehaviour, ISaveLoadable
     {
-        public static readonly ComplexRecipe.RecipeElement MainIngridient = new ComplexRecipe.RecipeElement(SimHashes.Steel.CreateTag(), RECIPE_MASS_BOT_SWARM);
-
         private static MedicalNanobotsData _instance = null;
         private static bool _isReady = false;
         private const int maxDevelopmentLevel = 15;
-
-        public const string FABRICATOR_ID = SupermaterialRefineryConfig.ID;
-        public const float RECIPE_TIME = 600;
-        public const float RECIPE_MASS_BOT_SWARM = 2000;
-        public const float RECIPE_MASS_LARGE = 2000;
-        public const float RECIPE_MASS_NORMAL = 200;
 
         public static MedicalNanobotsData Instance
         {
@@ -140,11 +132,7 @@ namespace DiseasesExpanded
             if (lvl == maxDevelopmentLevel)
                 RecipeUpdater.DeleteNanobotUpgradeRecipe(vector);
             else
-            {
-                if(lvl > 1 && !onInit)
-                    RecipeUpdater.MultiplyNanobotUpgradeCost(vector, 1.0f / lvl);
-                RecipeUpdater.MultiplyNanobotUpgradeCost(vector, 1 + lvl);
-            }
+                RecipeUpdater.SetNewRecipeCost(vector);
         }
 
         private void Notify()
@@ -237,11 +225,11 @@ namespace DiseasesExpanded
         public string GetFabricatorName()
         {
             StringEntry name;
-            StringKey key = new StringKey($"STRINGS.BUILDINGS.PREFABS.{FABRICATOR_ID.ToUpperInvariant()}.NAME");
+            StringKey key = new StringKey($"STRINGS.BUILDINGS.PREFABS.{RecipeUpdater.FABRICATOR_ID.ToUpperInvariant()}.NAME");
             if (Strings.TryGet(key, out name))
                 return name.String;
 
-            return FABRICATOR_ID;
+            return RecipeUpdater.FABRICATOR_ID;
         }
     }
 }
