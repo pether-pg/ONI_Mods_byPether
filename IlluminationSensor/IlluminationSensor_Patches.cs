@@ -31,7 +31,6 @@ namespace IlluminationSensor
 		{
 			public static void Postfix(Database.Techs __instance)
 			{
-				// for dlc version
 				Tech tech = __instance.TryGet("GenericSensors");
 				tech.unlockedItemIDs.Add(LogicIlluminationSensorConfig.ID);
 			}

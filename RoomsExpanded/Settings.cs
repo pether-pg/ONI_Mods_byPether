@@ -102,7 +102,7 @@ namespace RoomsExpanded
             Aquarium = new RoomSettings(false, 96, ColorPalette.RoomBathroom, 0.2f);
             Botanical = new PlainRoomSettings(true, 96, ColorPalette.RoomPark);
             Museum = new RoomSettings(true, 96, ColorPalette.RoomHospital, 0.3f);
-            MuseumSpace = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
+            MuseumSpace = new RoomSettings(true, 120, ColorPalette.RoomRecreation, 0.3f);
             MuseumHistory = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
             HospitalUpdate = new PlainRoomSettings(true, 96, ColorPalette.RoomHospital);
             NurseryGenetic = new RoomSettings(true, 96, ColorPalette.RoomAgricultural, 0.2f);
