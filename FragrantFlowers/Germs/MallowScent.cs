@@ -51,10 +51,10 @@ namespace FragrantFlowers
         public static Color32 colorValue = new Color32(221, 229, 221, 255);
 
         private const float degC = 273.15f; // used to quickly convert temperature from *C to K
-        private const float tempLethalLow = -50 + degC; 
+        private const float tempLethalLow = -60 + degC;
         private const float tempWarnLow = -30 + degC;
-        private const float tempWarnHigh = 5 + degC;
-        private const float tempLethalHigh = 20 + degC;
+        private const float tempWarnHigh = 20 + degC;
+        private const float tempLethalHigh = 25 + degC;
 
         public float UVHalfLife { get; private set; } // for Romen's UV Lamp mod, do not rename from UVHalfLife
 
