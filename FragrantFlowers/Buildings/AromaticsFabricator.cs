@@ -24,7 +24,7 @@ namespace FragrantFlowers
 
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(FabricatorId, ingredients, results), ingredients, results)
             {
-                time = 60,
+                time = WORKING_TIME,
                 description = Description,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Ingredient,
                 fabricators = new List<Tag>() { (Tag)FabricatorId },
@@ -41,10 +41,7 @@ namespace FragrantFlowers
             Diseases diseases = Db.Get().Diseases;
             Disease germ = diseases.TryGet(germId);
             if (germ == null)
-            {
-                UpdateSourceVisibility(go, string.Empty);
                 return;
-            }
 
             SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(go.transform.position), diseases.GetIndex(germId), (int)(amountPerSecond * dt));
         }
@@ -63,7 +60,7 @@ namespace FragrantFlowers
             return string.Empty;
         }
 
-        private float Delta(ComplexRecipe recipe, float dt)
+        private float Delta(float dt)
         {
             return dt / WORKING_TIME;
         }
@@ -76,12 +73,16 @@ namespace FragrantFlowers
 
             if (recipe == null || !operational.IsOperational)
             {
+                if (string.IsNullOrEmpty(LastGermId))
+                    return;
+
+                LastGermId = string.Empty;
                 UpdateSourceVisibility(gameObject, string.Empty);
                 return;
             }
 
             foreach (var ingridient in recipe.ingredients)
-                buildStorage.ConsumeIgnoringDisease(ingridient.material, ingridient.amount * Delta(recipe, dt));
+                buildStorage.ConsumeIgnoringDisease(ingridient.material, ingridient.amount * Delta(dt));
 
             string currentGermId = GetGermIdFromRecipe(recipe);
             SpawnGerms(gameObject, currentGermId, dt);
@@ -90,8 +91,7 @@ namespace FragrantFlowers
                 return;
 
             LastGermId = currentGermId;
-            if (!string.IsNullOrEmpty(currentGermId))
-                UpdateSourceVisibility(gameObject, currentGermId);
+            UpdateSourceVisibility(gameObject, currentGermId);
         }
 
         protected override List<GameObject> SpawnOrderProduct(ComplexRecipe recipe)
@@ -106,9 +106,9 @@ namespace FragrantFlowers
             if (string.IsNullOrEmpty(germId))
                 return result;
 
-            string germName = Db.Get().Diseases.Get(germId).Name; 
-            
-            result.Add(new Descriptor(STRINGS.DESCRIPTORS.SPAWNGERMS.NAME.Replace("{GERMS}", germName), 
+            string germName = Db.Get().Diseases.Get(germId).Name;
+
+            result.Add(new Descriptor(STRINGS.DESCRIPTORS.SPAWNGERMS.NAME.Replace("{GERMS}", germName),
                                         STRINGS.DESCRIPTORS.SPAWNGERMS.DESC.Replace("{GERMS}", germName)));
             return result;
         }

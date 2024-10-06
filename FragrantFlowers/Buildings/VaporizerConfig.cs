@@ -27,12 +27,13 @@ namespace FragrantFlowers
 
         public override void DoPostConfigureComplete(GameObject go)
         {
-            go.AddOrGet<Operational>();
             go.AddOrGet<LogicOperationalController>();
-            go.AddOrGet<ComplexFabricatorWorkable>();
             go.AddOrGetDef<VaporizerController.Def>();
+            go.AddOrGet<DiseaseSourceVisualizer>();
+            Prioritizable.AddRef(go);
             AromaticsFabricator af = go.AddOrGet<AromaticsFabricator>();
             BuildingTemplates.CreateComplexFabricatorStorage(go, af);
+            af.duplicantOperated = false;
         }
     }
 }
