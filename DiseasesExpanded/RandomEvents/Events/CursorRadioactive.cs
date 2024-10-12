@@ -17,7 +17,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             Condition = new Func<object, bool>(
                 data =>
                 {
-                    if (!DlcManager.IsExpansion1Active())
+                    if (!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                         return false;
 
                     int minCycle = 100 * (int)danger;

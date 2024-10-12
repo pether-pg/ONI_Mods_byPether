@@ -56,7 +56,7 @@ namespace DiseasesExpanded
         {
             get
             {
-                if (_radPoisoning == Invalid && DlcManager.IsExpansion1Active())
+                if (_radPoisoning == Invalid && DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                     _radPoisoning = Db.Get().Diseases.GetIndex(Db.Get().Diseases.RadiationPoisoning.id);
                 return _radPoisoning;
             }
@@ -78,7 +78,7 @@ namespace DiseasesExpanded
         {
             get
             {
-                if (_bogInsects == Invalid && DlcManager.IsExpansion1Active())
+                if (_bogInsects == Invalid && DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                     _bogInsects = Db.Get().Diseases.GetIndex(BogInsects.ID);
                 return _bogInsects;
             }
@@ -139,13 +139,45 @@ namespace DiseasesExpanded
             }
         }
 
-        private static Dictionary<byte, string> GermNames = new Dictionary<byte, string>(); 
+        //---------- FragrantFlowers ----------
+        private static byte _roseScent = Invalid;
+        public static byte RoseScentIdx
+        {
+            get
+            {
+                if (_roseScent == Invalid)
+                    _roseScent = Db.Get().Diseases.GetIndex("RoseScent");
+                return _roseScent;
+            }
+        }
+        private static byte _mallowScent = Invalid;
+        public static byte MallowScentIdx
+        {
+            get
+            {
+                if (_mallowScent == Invalid)
+                    _mallowScent = Db.Get().Diseases.GetIndex("MallowScent");
+                return _mallowScent;
+            }
+        }
+        private static byte _lavenderScent = Invalid;
+        public static byte LavenderScentIdx
+        {
+            get
+            {
+                if (_lavenderScent == Invalid)
+                    _lavenderScent = Db.Get().Diseases.GetIndex("LavenderScent");
+                return _lavenderScent;
+            }
+        }
+
+        private static Dictionary<byte, string> GermNames = new Dictionary<byte, string>();
 
         public static string GetGermName(byte idx)
         {
             if (!GermNames.ContainsKey(idx) && Db.Get().Diseases.Count >= idx)
                 GermNames.Add(idx, Db.Get().Diseases[idx].Name);
-            
+
             if (GermNames.ContainsKey(idx))
                 return GermNames[idx];
 

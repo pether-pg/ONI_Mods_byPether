@@ -56,7 +56,8 @@ namespace DiseasesExpanded
                 description = Desc,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)VaccineApothecaryConfig.GetAdvancedApothecaryId() },
-                sortOrder = 44
+                sortOrder = 44,
+                requiredTech = "MedicineIV"
             };
         }
     }

@@ -14,8 +14,8 @@ namespace DiseasesExpanded.RandomEvents.Configs
 
         public GameObject CreatePrefab()
         {
-            string name = "Little Alien";
-            string desc = "Cute little and totally harmless alien.";
+            string name = STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.NAME;
+            string desc = STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.DESC;
             EffectorValues tieR0 = TUNING.DECOR.BONUS.TIER0;
             KAnimFile anim = Assets.GetAnim((HashedString)"glom_kanim");
             EffectorValues decor = tieR0;
@@ -31,7 +31,7 @@ namespace DiseasesExpanded.RandomEvents.Configs
             placedEntity.AddOrGet<Trappable>();
             placedEntity.AddOrGetDef<ThreatMonitor.Def>();
             placedEntity.AddOrGetDef<CreatureFallMonitor.Def>();
-            
+
             placedEntity.AddOrGetDef<OvercrowdingMonitor.Def>().spaceRequiredPerCreature = 0;
             placedEntity.AddOrGet<LoopingSounds>();
             placedEntity.GetComponent<LoopingSounds>().updatePosition = true;
@@ -42,7 +42,7 @@ namespace DiseasesExpanded.RandomEvents.Configs
             EntityTemplates.CreateAndRegisterBaggedCreature(placedEntity, true, false);
             EntityTemplates.AddCreatureBrain(placedEntity, new ChoreTable.Builder().Add((StateMachine.BaseDef)new DeathStates.Def()).Add((StateMachine.BaseDef)new TrappedStates.Def()).Add((StateMachine.BaseDef)new BaggedStates.Def()).Add((StateMachine.BaseDef)new FallStates.Def()).Add((StateMachine.BaseDef)new StunnedStates.Def()).Add((StateMachine.BaseDef)new DrowningStates.Def()).Add((StateMachine.BaseDef)new DebugGoToStates.Def()).Add((StateMachine.BaseDef)new FleeStates.Def()).Add((StateMachine.BaseDef)new DropElementStates.Def()).Add((StateMachine.BaseDef)new IdleStates.Def()), GameTags.Creatures.Species.GlomSpecies, (string)null);
 
-            if(Settings.Instance.AlienGoo.IncludeDisease)
+            if (Settings.Instance.AlienGoo.IncludeDisease)
             {
                 GermCarrier carrier = placedEntity.AddComponent<GermCarrier>();
                 carrier.germId = AlienGerms.ID;

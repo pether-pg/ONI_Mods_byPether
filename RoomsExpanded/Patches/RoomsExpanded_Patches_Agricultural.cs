@@ -78,7 +78,9 @@ namespace RoomsExpanded
             typeof(System.Action<KMonoBehaviour>), 
             typeof(EventReference), 
             typeof(string), 
-            typeof(string[]) })]
+            typeof(string[]),
+            typeof(string),
+            typeof(string) })]
         public static class ColonyAchievement_Constructor_Patch
         {
             public static void Prefix(string platformAchievementId, ref List<ColonyAchievementRequirement> requirementChecklist)

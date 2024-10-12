@@ -56,11 +56,12 @@ namespace DiseasesExpanded
             };
             recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
-                time = 100f,
+                time = 200f,
                 description = STRINGS.CURES.ALIENCURE.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
-                sortOrder = 11
+                sortOrder = 20,
+                requiredTech = "MedicineIV"
             };
         }
     }

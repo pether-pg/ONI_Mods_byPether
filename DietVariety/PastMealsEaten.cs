@@ -8,8 +8,6 @@ namespace DietVariety
     [SerializationConfig(MemberSerialization.OptIn)]
     class PastMealsEaten : KMonoBehaviour
     {
-        public const int MAX_COST = 20;
-
         [Serialize]
         public Dictionary<int, Dictionary<string, int>> TimeSinceAte;
 
@@ -47,7 +45,7 @@ namespace DietVariety
             if (!TimeSinceAte.ContainsKey(id) || !TimeSinceAte[id].ContainsKey(foodId))
                 return 0;
 
-            return Mathf.Min(MAX_COST, TimeSinceAte[id][foodId]);
+            return Mathf.Max(0, Settings.Instance.MaxMealsCounted - TimeSinceAte[id][foodId]);
         }
 
         public void RegisterNewMeal(GameObject go, string foodId)
@@ -63,7 +61,7 @@ namespace DietVariety
             foreach (string key in TimeSinceAte[id].Keys)
                 keysToIncrease.Add(key);
             foreach (string key in keysToIncrease)
-                if (TimeSinceAte[id][key] <= Settings.Instance.MaxMealsCounted)
+                if (TimeSinceAte[id][key] < Settings.Instance.MaxMealsCounted)
                     TimeSinceAte[id][key] += 1;
         }
 

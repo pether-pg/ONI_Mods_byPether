@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using STRINGS;
 
 namespace RoomsExpanded
 {
@@ -29,7 +30,7 @@ namespace RoomsExpanded
                 public class AGRICULTURAL
                 {
                     public static LocString NAME = (LocString)"Agricultural Room";
-                    public static LocString EFFECT = (LocString)" - Enables Farm and Grooming Stations";
+                    public static LocString EFFECT = (LocString)" - Enables Farm and Ranching building";
                     public static LocString TOOLTIP = (LocString)"Area, where all critters and plants can happily live together in harmony.";
                 }
 
@@ -136,8 +137,8 @@ namespace RoomsExpanded
             {
                 public class AGRICULTURAL
                 {
-                    public static LocString NAME = (LocString)"Grooming or Farm Station";
-                    public static LocString DESCRIPTION = (LocString)"Requires a single Grooming Station or Farm Station";
+                    public static LocString NAME = (LocString)$"{UI.FormatAsLink("Ranching building", "BUILDCATEGORYREQUIREMENTCLASSRANCHSTATIONTYPE")} or {UI.FormatAsLink("Farm Station", "FARMSTATION")}";
+                    public static LocString DESCRIPTION = (LocString)"Requires a single Ranching building or Farm Station";
                 }
 
                 public class COOKING
@@ -148,43 +149,43 @@ namespace RoomsExpanded
 
                 public class FRIDGE
                 {
-                    public static LocString NAME = (LocString)"Refrigerator";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Refrigerator", "REFRIGERATOR");
                     public static LocString DESCRIPTION = (LocString)"At least one Refrigerator.";
                 }
 
                 public class SHOWER
                 {
-                    public static LocString NAME = (LocString)"Shower";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Shower", "SHOWER");
                     public static LocString DESCRIPTION = (LocString)"At least one Shower";
                 }
 
                 public class GRAVE
                 {
-                    public static LocString NAME = (LocString)"Tasteful Memorial";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Tasteful Memorial", "GRAVE");
                     public static LocString DESCRIPTION = (LocString)"At least one Tasteful Memorial";
                 }
 
                 public class MANUALGENERATOR
                 {
-                    public static LocString NAME = (LocString)"Manual Generator";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Manual Generator", "MANUALGENERATOR");
                     public static LocString DESCRIPTION = (LocString)"At least one Manual Generator";
                 }
 
                 public class WATERCOOLER
                 {
-                    public static LocString NAME = (LocString)"Water Cooler";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Water Cooler", "WATERCOOLER");
                     public static LocString DESCRIPTION = (LocString)"At least one Water Cooler";
                 }
 
                 public class INDUSTRIAL
                 {
-                    public static LocString NAME = (LocString)"Industrial Machinery";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Industrial Machinery", "BUILDCATEGORYREQUIREMENTCLASSINDUSTRIALMACHINERY");
                     public static LocString DESCRIPTION = (LocString)"At least one Industrial Machinery building";
                 }
 
                 public class PLANTERBOX
                 {
-                    public static LocString NAME = (LocString)"Planter Box";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Planter Box", "PLANTERBOX");
                     public static LocString DESCRIPTION = (LocString)"At least one Planter Box";
                 }
 
@@ -196,13 +197,13 @@ namespace RoomsExpanded
 
                 public class FISHFEEDER
                 {
-                    public static LocString NAME = (LocString)"Fish Feeder";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Fish Feeder", "FISHFEEDER");
                     public static LocString DESCRIPTION = (LocString)"At least one Fish Feeder";
                 }
 
                 public class FISHRELEASE
                 {
-                    public static LocString NAME = (LocString)"Fish Release";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Fish Release", "FISHDELIVERYPOINT");
                     public static LocString DESCRIPTION = (LocString)"At least one Fish Release";
                 }
 
@@ -250,7 +251,7 @@ namespace RoomsExpanded
 
                 public class PEDESTAL
                 {
-                    public static LocString NAME = (LocString)"Pedestal";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Pedestal", "ITEMPEDESTAL");
                     public static LocString DESCRIPTION = (LocString)"At least one Pedestal";
                 }
 
@@ -274,13 +275,13 @@ namespace RoomsExpanded
 
                 public class ANYBED
                 {
-                    public static LocString NAME = (LocString)"Any bed";
+                    public static LocString NAME = (LocString)"Any " + UI.FormatAsLink("bed", "BUILDCATEGORYREQUIREMENTCLASSBEDTYPE");
                     public static LocString DESCRIPTION = (LocString)"One Cott or Luxury Bed.";
                 }
 
                 public class ONLYONEBED
                 {
-                    public static LocString NAME = (LocString)"No more than one bed";
+                    public static LocString NAME = (LocString)"No more than one " + UI.FormatAsLink("bed", "BUILDCATEGORYREQUIREMENTCLASSBEDTYPE");
                     public static LocString DESCRIPTION = (LocString)"The room cannot have more than one bed.";
                 }
 
@@ -292,13 +293,13 @@ namespace RoomsExpanded
 
                 public class GENETICSTATION
                 {
-                    public static LocString NAME = (LocString)"Genetic Analysis Station";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Genetic Analysis Station", "GeneticAnalysisStation");
                     public static LocString DESCRIPTION = (LocString)"The room must contain Genetic Analysis Station.";
                 }
 
                 public class RADIATIONSOURCE
                 {
-                    public static LocString NAME = (LocString)"Radiation Source";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Radiation Source", "RADIATION");
                     public static LocString DESCRIPTION = (LocString)"At least one source of radiation.";
                 }
 
@@ -316,13 +317,13 @@ namespace RoomsExpanded
 
                 public class SPACE_BUILDING
                 {
-                    public static LocString NAME = (LocString)"Pilot Support Building";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Pilot Support Building", "MISSIONCONTROLCLUSTER");
                     public static LocString DESCRIPTION = (LocString)"Contains Mission Control Station.";
                 }
 
                 public class TRANSPARENT_CEILING
                 {
-                    public static LocString NAME = (LocString)"Transparent Ceiling";
+                    public static LocString NAME = (LocString)UI.FormatAsLink("Transparent Ceiling", "TRANSPARENT");
                     public static LocString DESCRIPTION = (LocString)"Top tiles of the room are transparent.";
                 }
 
@@ -337,8 +338,8 @@ namespace RoomsExpanded
             {
                 public class MUSEUM
                 {
-                    public static LocString NAME = (LocString)"Museum";
-                    public static LocString DESCRIPTION = (LocString)"Visited Museum";
+                    public static LocString NAME = (LocString)"Art Museum";
+                    public static LocString DESCRIPTION = (LocString)"Visited Art Museum";
                 }
 
                 public class MUSEUMSPACE

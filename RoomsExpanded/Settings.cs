@@ -98,11 +98,11 @@ namespace RoomsExpanded
             Graveyard = new RoomSettings(false, 96, ColorPalette.RoomPark, 0.2f);
             Agricultural = new PlainRoomSettings(true, 96, ColorPalette.RoomAgricultural);
             Gym = new RoomSettings(true, 64, ColorPalette.RoomRecreation, 0.1f);
-            Nursery = new RoomSettings(!DlcManager.IsExpansion1Active(), 64, ColorPalette.RoomAgricultural, 0.1f);
+            Nursery = new RoomSettings(!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID), 64, ColorPalette.RoomAgricultural, 0.1f);
             Aquarium = new RoomSettings(false, 96, ColorPalette.RoomBathroom, 0.2f);
             Botanical = new PlainRoomSettings(true, 96, ColorPalette.RoomPark);
             Museum = new RoomSettings(true, 96, ColorPalette.RoomHospital, 0.3f);
-            MuseumSpace = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
+            MuseumSpace = new RoomSettings(true, 120, ColorPalette.RoomRecreation, 0.3f);
             MuseumHistory = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
             HospitalUpdate = new PlainRoomSettings(true, 96, ColorPalette.RoomHospital);
             NurseryGenetic = new RoomSettings(true, 96, ColorPalette.RoomAgricultural, 0.2f);

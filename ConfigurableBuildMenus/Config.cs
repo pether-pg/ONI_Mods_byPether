@@ -110,6 +110,7 @@ namespace ConfigurableBuildMenus
                 new MoveBuildingItem() { BuildingId = "IceSculpture", MoveToMenu = "DecorMenu", Category = "sculptures"},
                 new MoveBuildingItem() { BuildingId = "MarbleSculpture", MoveToMenu = "DecorMenu", Category = "sculptures"},
                 new MoveBuildingItem() { BuildingId = "MetalSculpture", MoveToMenu = "DecorMenu", Category = "sculptures"},
+                new MoveBuildingItem() { BuildingId = "WoodSculpture", MoveToMenu = "DecorMenu", Category = "sculptures"},
                 new MoveBuildingItem() { BuildingId = "CrownMoulding", MoveToMenu = "DecorMenu"},
                 new MoveBuildingItem() { BuildingId = "CornerMoulding", MoveToMenu = "DecorMenu"},
                 new MoveBuildingItem() { BuildingId = "Canvas", MoveToMenu = "DecorMenu", Category = "paintings"},

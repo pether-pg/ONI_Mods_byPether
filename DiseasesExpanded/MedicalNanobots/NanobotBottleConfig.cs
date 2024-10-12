@@ -58,19 +58,19 @@ namespace DiseasesExpanded
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                MedicalNanobotsData.MainIngridient,
+                RecipeUpdater.MainIngridient_Swarm,
                 new ComplexRecipe.RecipeElement(SimHashes.Oxygen.CreateTag(), OXYGEN_MASS)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
                 new ComplexRecipe.RecipeElement(ID, 1, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
-            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(MedicalNanobotsData.FABRICATOR_ID, ingredients, results), ingredients, results)
+            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(RecipeUpdater.FABRICATOR_ID, ingredients, results), ingredients, results)
             {
-                time = MedicalNanobotsData.RECIPE_TIME,
+                time = RecipeUpdater.RECIPE_TIME_SWARM,
                 description = STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
-                fabricators = new List<Tag>() { MedicalNanobotsData.FABRICATOR_ID },
+                fabricators = new List<Tag>() { RecipeUpdater.FABRICATOR_ID },
                 sortOrder = 11
             };
         }
