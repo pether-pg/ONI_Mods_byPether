@@ -15,37 +15,37 @@ namespace DiseasesExpanded
 
             public class BOGINSECTS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Bog Bugs", nameof(BOGINSECTS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Bog Bugs", nameof(BOGINSECTS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Bog Bugs present.\n";
             }
 
             public class FROSTHARDS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Frost Shards", nameof(FROSTHARDS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Frost Shards", nameof(FROSTHARDS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Frost Shards present.\n";
             }
 
             public class GASSYGERMS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Gassy Germs", nameof(GASSYGERMS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Gassy Germs", nameof(GASSYGERMS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"GassyGerms present\n";
             }
 
             public class HUNGERGERMS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Hungerms", nameof(HUNGERGERMS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Hungerms", nameof(HUNGERGERMS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Hungerms present\n";
             }
 
             public class ALIENGERMS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Alien Goo", nameof(ALIENGERMS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Alien Goo", nameof(ALIENGERMS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Alien Goo present\n";
             }
 
             public class MEDICALNANOBOTS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Medical Nanobots", nameof(MEDICALNANOBOTS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Medical Nanobots", nameof(MEDICALNANOBOTS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Medical Nanobots present\n";
                 public static LocString DESCRIPTION = (LocString)"Medical Nanobots are engineeded with sole purpose of fighting malicious germs and improving duplicants' health.";
 
@@ -101,7 +101,7 @@ namespace DiseasesExpanded
         {
             public class BOGSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Bog Bugs Infestation", nameof(BOGSICKNESS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Bog Bugs Infestation", nameof(BOGSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Annoying bites of small Bog Bugs";
                 public static LocString POPFXTEXT = (LocString)"Bog Bug Bite!";
                 public static LocString DESCRIPTION = (LocString)"Bog Bugs are lured by " + UI.FormatAsLink("Bog Bucket", SwampHarvestPlantConfig.ID) + " sweet scent, but they can also feed on duplicants...";
@@ -110,7 +110,7 @@ namespace DiseasesExpanded
 
             public class FROSTSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Frost Pox", nameof(FROSTSICKNESS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Frost Pox", nameof(FROSTSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Pretty, but pretty cold frost patterns on the skin.";
                 public static LocString DESCRIPTION = (LocString)"Little shards of frost cover duplicant's skin in a pretty patterns, reducing their resistance for temperature and diseases.";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Frost Pox.";
@@ -118,7 +118,7 @@ namespace DiseasesExpanded
 
             public class GASSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Moo Flu", nameof(GASSICKNESS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Moo Flu", nameof(GASSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Makes duplicant fart like a mad Moo.";
                 public static LocString DESCRIPTION = (LocString)"Whatever it is in the " + UI.FormatAsLink("Gas Grass", GasGrassConfig.ID) + ", it makes everything around fart...";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Moo Flu.";
@@ -126,7 +126,7 @@ namespace DiseasesExpanded
 
             public class HUNGERSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Everlasting Hunger", nameof(HUNGERSICKNESS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Everlasting Hunger", nameof(HUNGERSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Makes duplicant hungry all the time.";
                 public static LocString DESCRIPTION = (LocString)"The hunger of the ravenous plants seems to be infectious...";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Everlasting Hunger.";
@@ -134,7 +134,7 @@ namespace DiseasesExpanded
 
             public class SPINDLYCURSE
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Sleeping Curse", nameof(SPINDLYCURSE));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Sleeping Curse", nameof(SPINDLYCURSE));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Periodically causes duplicant to fall asleep in random places.";
                 public static LocString DESCRIPTION = (LocString)"The tale says one duplicant slept 100 cycles after hurting herself on the Spindle, but it is possible she just faked it not to clean the toilets...";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Sleeping Curse.";
@@ -143,7 +143,7 @@ namespace DiseasesExpanded
 
             public class ALIENSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Alien Symbiot", nameof(ALIENSICKNESS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Alien Symbiot", nameof(ALIENSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Enhances and stresses the duplicant.";
                 public static LocString DESCRIPTION = (LocString)"Alien microbes increase duplicant's skills. However, this feels unnatural and makes infected duplicant stressed out. The goo is perfectly adapted for space travels and it will rapidly grow wherever radiation is present.";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Alien Goo.";
@@ -152,7 +152,7 @@ namespace DiseasesExpanded
 
             public class MUTATINGSICKNESS
             {
-                public static LocString NAME = (LocString) UI.FormatAsLink("Mutating Disease", nameof(MUTATINGSICKNESS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Mutating Disease", nameof(MUTATINGSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"May affect duplicants in many different ways";
                 public static LocString DESCRIPTION = (LocString)"Virus causing the disease is very unstable and often mutates. Results may be different each time.";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Mutating Disease.";
@@ -736,6 +736,14 @@ namespace DiseasesExpanded
             {
                 public static LocString NAME = "Sudden Mutation";
                 public static LocString TOAST = "We observed new mutation strain...";
+            }
+        }
+
+        public class CODEX
+        {
+            public class CATEGORY
+            {
+                public static LocString MEDICINE = UI.FormatAsLink("Medicine", nameof(MEDICINE));
             }
         }
 
