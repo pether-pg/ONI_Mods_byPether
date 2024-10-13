@@ -207,12 +207,12 @@ namespace DiseasesExpanded
         {
             public static void Postfix(ref Database.Sicknesses __instance)
             {
-                if (Settings.Instance.HungerGerms.IncludeDisease) __instance.Add(new HungerSickness());
-                if (Settings.Instance.BogInsects.IncludeDisease) __instance.Add(new BogSickness());
-                if (Settings.Instance.FrostPox.IncludeDisease) __instance.Add(new FrostSickness());
-                if (Settings.Instance.MooFlu.IncludeDisease) __instance.Add(new GasSickness());
+                if (Settings.Instance.HungerGerms.IncludeDisease)   __instance.Add(new HungerSickness());
+                if (Settings.Instance.BogInsects.IncludeDisease)    __instance.Add(new BogSickness());
+                if (Settings.Instance.FrostPox.IncludeDisease)      __instance.Add(new FrostSickness());
+                if (Settings.Instance.MooFlu.IncludeDisease)        __instance.Add(new GasSickness());
                 if (Settings.Instance.SleepingCurse.IncludeDisease) __instance.Add(new SpindlySickness());
-                if (Settings.Instance.AlienGoo.IncludeDisease) __instance.Add(new AlienSickness());
+                if (Settings.Instance.AlienGoo.IncludeDisease)      __instance.Add(new AlienSickness());
                 if (Settings.Instance.MutatingVirus.IncludeDisease) __instance.Add(new MutatingSickness());
             }
         }
@@ -239,11 +239,11 @@ namespace DiseasesExpanded
             {
                 //__instance.Add(new AbandonedGerms(statsOnly));
 
-                if (Settings.Instance.FrostPox.IncludeDisease) __instance.Add(new FrostShards(statsOnly));
-                if (Settings.Instance.MooFlu.IncludeDisease) __instance.Add(new GassyGerms(statsOnly));
-                if (Settings.Instance.AlienGoo.IncludeDisease) __instance.Add(new AlienGerms(statsOnly));
-                if (Settings.Instance.MutatingVirus.IncludeDisease) __instance.Add(new MutatingGerms(statsOnly));
-                if (Settings.Instance.MedicalNanobots.IncludeDisease) __instance.Add(new MedicalNanobots(statsOnly));
+                if (Settings.Instance.FrostPox.IncludeDisease)          __instance.Add(new FrostShards(statsOnly));
+                if (Settings.Instance.MooFlu.IncludeDisease)            __instance.Add(new GassyGerms(statsOnly));
+                if (Settings.Instance.AlienGoo.IncludeDisease)          __instance.Add(new AlienGerms(statsOnly));
+                if (Settings.Instance.MutatingVirus.IncludeDisease)     __instance.Add(new MutatingGerms(statsOnly));
+                if (Settings.Instance.MedicalNanobots.IncludeDisease)   __instance.Add(new MedicalNanobots(statsOnly));
 
                 if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && Settings.Instance.BogInsects.IncludeDisease)
                     __instance.Add(new BogInsects(statsOnly));
