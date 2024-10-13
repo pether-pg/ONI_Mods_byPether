@@ -8,8 +8,8 @@ namespace DiseasesExpanded
         public const string ID = "VaccineApothecary";
         public const float RecipeTime = 100;
         public const float MutationRecipeTime = 600;
-        public const float UraniumOreCost = 20f;
-        public const float RefinedCarbonCost = 200f;
+        public const float UraniumOreCost = 1f;
+        public const float RefinedCarbonCost = 100f;
 
         public static ComplexRecipe.RecipeElement GetMainIngridient()
         {
