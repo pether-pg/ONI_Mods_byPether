@@ -43,5 +43,17 @@ namespace DiseasesExpanded
         {
             Strings.Add($"MISC.TAGS.{tag.ToString().ToUpperInvariant()}", category);
         }
+
+        public static void MakeCuresStrings(string id, string name, string rectext, string desc)
+        {
+            Strings.Add($"STRINGS.ITEMS.PILLS.{id.ToUpperInvariant()}.NAME", name);
+            Strings.Add($"STRINGS.ITEMS.PILLS.{id.ToUpperInvariant()}.RECIPEDESC", rectext);
+            Strings.Add($"STRINGS.ITEMS.PILLS.{id.ToUpperInvariant()}.DESC", desc);
+        }
+
+        public static void MakeCodexCategoryString(string category, string text)
+        {
+            Strings.Add($"STRINGS.UI.CODEX.CATEGORYNAMES.{category}", text);
+        }
     }
 }
