@@ -42,7 +42,7 @@ namespace FragrantFlowers
             AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(ID, 1f) }, RoseScent.ID, "RoseScent recipe");
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.AROMACANS.ROSE.NAME, STRINGS.AROMACANS.ROSE.DESC, 1f, true, Assets.GetAnim("aromatic_rosescent_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
-            looseEntity.AddTag(GameTags.IndustrialIngredient);
+            looseEntity.AddTag(GameTags.IndustrialProduct);
             return looseEntity;
         }
     }

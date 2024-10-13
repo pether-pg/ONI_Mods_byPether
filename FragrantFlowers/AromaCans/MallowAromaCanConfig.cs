@@ -42,7 +42,7 @@ namespace FragrantFlowers
             AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(ID, 1f) }, MallowScent.ID, "MallowScent recipe");
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.AROMACANS.MALLOW.NAME, STRINGS.AROMACANS.MALLOW.DESC, 1f, true, Assets.GetAnim("aromatic_mallowscent_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
-            looseEntity.AddTag(GameTags.IndustrialIngredient);
+            looseEntity.AddTag(GameTags.IndustrialProduct);
             return looseEntity;
         }
     }
