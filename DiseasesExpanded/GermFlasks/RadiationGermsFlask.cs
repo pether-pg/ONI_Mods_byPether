@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using STRINGS;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace DiseasesExpanded
 {
@@ -36,6 +38,24 @@ namespace DiseasesExpanded
                 true);
 
             looseEntity.AddTag(GameTags.IndustrialIngredient);
+
+            ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[1]
+            {
+                new ComplexRecipe.RecipeElement(ID, 1f)
+            };
+            ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
+            {
+                new ComplexRecipe.RecipeElement(BasicRadPillConfig.ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+            };
+            BasicRadPillConfig.recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, ingredients, results), ingredients, results)
+            {
+                time = 50f,
+                description = (string)ITEMS.PILLS.BASICRADPILL.RECIPEDESC,
+                nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
+                fabricators = new List<Tag>() { ApothecaryConfig.ID },
+                sortOrder = 10
+            };
+
             return looseEntity;
         }
     }
