@@ -47,6 +47,11 @@ namespace DiseasesExpanded
                         if (et.sickness_id == si.Sickness.id && !string.IsNullOrEmpty(et.germ_id))
                             return true;
 
+                RadiationMonitor.Instance smi = worker.GetSMI<RadiationMonitor.Instance>();
+
+                if (smi != null && smi.sm.isSick.Get(smi))
+                    return true;
+
                 return false;
             }
         }

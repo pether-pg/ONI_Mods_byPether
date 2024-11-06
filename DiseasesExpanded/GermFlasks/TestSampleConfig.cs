@@ -89,6 +89,11 @@ namespace DiseasesExpanded
                     infectingGerms.Add(germId);
             }
 
+            RadiationMonitor.Instance smi = worker.GetSMI<RadiationMonitor.Instance>();
+
+            if (smi != null && smi.sm.isSick.Get(smi))
+                infectingGerms.Add(RadiationPoisoning.ID);
+
             if (infectingGerms.Count == 0)
                 return;
 
