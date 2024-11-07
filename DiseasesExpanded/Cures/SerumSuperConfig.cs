@@ -30,6 +30,9 @@ namespace DiseasesExpanded
             serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Botanist.Id, attributeChange, STRINGS.CURES.SUPERSERUM.NAME));
             serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Ranching.Id, attributeChange, STRINGS.CURES.SUPERSERUM.NAME));
 
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
+                serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.SpaceNavigation.Id, attributeChange, STRINGS.CURES.SUPERSERUM.NAME));
+
             return serumEffect;
         }
 
