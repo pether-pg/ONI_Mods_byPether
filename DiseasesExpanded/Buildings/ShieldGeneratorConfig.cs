@@ -9,7 +9,7 @@ namespace DiseasesExpanded
         public const string ID = "ShieldGenerator";
         public const string StatusItemID = "ShieldGeneratorStatusItem";
         public const string ErrorStatusItemID = "ShieldGeneratorStatusItem";
-        public override string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public override string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
 
         public override BuildingDef CreateBuildingDef()
         {

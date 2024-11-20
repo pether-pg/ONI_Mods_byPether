@@ -14,7 +14,7 @@ namespace DiseasesExpanded
         [HarmonyPatch("OnCompleteWork")]
         public static class MedicinalPillWorkable_OnCompleteWork_Patch
         {
-            public static void Postfix(MedicinalPillWorkable __instance, Worker worker)
+            public static void Postfix(MedicinalPillWorkable __instance, WorkerBase worker)
             {
                 if (__instance.pill.info.effect != TestSampleConfig.EFFECT_ID)
                     return;

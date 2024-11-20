@@ -150,7 +150,8 @@ namespace DiseasesExpanded
                     STRINGS.MEDICALRESEARCH.NAME,
                     STRINGS.MEDICALRESEARCH.DESC,
                     (anim, centered) => Assets.GetSprite((HashedString)Assets_OnPrefabInit_Patch.SpriteName),
-                    DlcManager.AVAILABLE_ALL_VERSIONS
+                    null,
+                    null
                 );
             }
         }

@@ -5,7 +5,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Klei.AI;
-using UnityEngine;
 
 namespace DiseasesExpanded
 {
