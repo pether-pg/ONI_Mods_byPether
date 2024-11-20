@@ -1,17 +1,18 @@
-using HarmonyLib;
+﻿using HarmonyLib;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
 
 namespace RealCaloriesInfo
 {
-    public class Patches
+    class RealCaloriesInfo_Patches_Obsolete
     {
-        [HarmonyPatch(typeof(RationTracker))]
-        [HarmonyPatch("CountRations")]
+        // This no longer works, leaving for reference
+        // [HarmonyPatch(typeof(RationTracker))]
+        // [HarmonyPatch("CountRations")]
         public class RationTracker_CountRations_Patch
         {
-            public static int WorldId = 0; 
+            public static int WorldId = 0;
             static MethodInfo getCaloriesMethodInfo = AccessTools.Property(typeof(Edible), nameof(Edible.Calories)).GetMethod;
             static MethodInfo myExtraCodeMethodInfo = AccessTools.Method(typeof(RationTracker_CountRations_Patch), nameof(RationTracker_CountRations_Patch.GetPermittedCalories));
 
@@ -58,7 +59,7 @@ namespace RealCaloriesInfo
                         Debug.Log($"{ModInfo.Namespace}: Could not get ConsumableConsumer for minion {mi.name}");
                         continue;
                     }
-                    
+
                     if (!consumer.IsPermitted(edible.FoodID))
                         return false;
                 }
