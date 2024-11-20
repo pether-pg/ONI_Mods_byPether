@@ -52,7 +52,7 @@ namespace RoomsExpanded
         {
             private static string AthleticsId = "";
 
-            public static void Postfix(ref Worker worker, float dt, ref ManualGenerator __instance)
+            public static void Postfix(ref WorkerBase worker, float dt, ref ManualGenerator __instance)
             {
                 if (!Settings.Instance.Gym.IncludeRoom) return;
                 if (RoomTypes_AllModded.IsInTheRoom(__instance, RoomTypeGymData.RoomId))
