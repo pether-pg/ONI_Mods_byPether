@@ -1,7 +1,7 @@
 ﻿using System;
 using TUNING;
 using UnityEngine;
-using STRINGS;
+using STR = STRINGS;
 using System.Collections.Generic;
 using Klei.AI;
 
@@ -75,7 +75,7 @@ namespace FragrantFlowers
             FruitCakeConfig.recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(MicrobeMusherConfig.ID, ingredients, results), ingredients, results)
             {
                 time = TUNING.FOOD.RECIPES.STANDARD_COOK_TIME,
-                description = ITEMS.FOOD.FRUITCAKE.RECIPEDESC,
+                description = STR.ITEMS.FOOD.FRUITCAKE.RECIPEDESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { MicrobeMusherConfig.ID },
                 sortOrder = 3

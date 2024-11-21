@@ -1,7 +1,7 @@
 ﻿using System;
 using TUNING;
 using UnityEngine;
-using STRINGS;
+using STR = STRINGS;
 using System.Collections.Generic;
 using Klei.AI;
 using Database;
@@ -78,7 +78,7 @@ namespace FragrantFlowers
             ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
                 time = 100f,
-                description = ITEMS.PILLS.INTERMEDIATECURE.RECIPEDESC,
+                description = STR.ITEMS.PILLS.INTERMEDIATECURE.RECIPEDESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { ApothecaryConfig.ID },
                 sortOrder = 10,

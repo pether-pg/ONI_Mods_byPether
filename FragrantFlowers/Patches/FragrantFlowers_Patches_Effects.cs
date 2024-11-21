@@ -70,7 +70,7 @@ namespace FragrantFlowers
                 }
             }
 
-            public static ArtableStatusItem UpliftArtistSkill(ArtableStatusItem current, Worker worker)
+            public static ArtableStatusItem UpliftArtistSkill(ArtableStatusItem current, WorkerBase worker)
             {
                 if (worker == null || worker.gameObject == null)
                     return current;

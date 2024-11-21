@@ -1,5 +1,5 @@
 ﻿using Klei.AI;
-using STRINGS;
+using STR = STRINGS;
 using System;
 using System.Collections.Generic;
 using TUNING;
@@ -83,7 +83,7 @@ namespace FragrantFlowers
             recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(RockCrusherConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
                 time = 100f,
-                description = ITEMS.INDUSTRIAL_PRODUCTS.BASIC_FABRIC.DESC,
+                description = STR.ITEMS.INDUSTRIAL_PRODUCTS.BASIC_FABRIC.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { RockCrusherConfig.ID },
                 sortOrder = 11
