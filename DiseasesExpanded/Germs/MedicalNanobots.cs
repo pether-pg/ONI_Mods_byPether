@@ -44,8 +44,6 @@ namespace DiseasesExpanded
 
             if (hpsLvl > 0)
                 effect.SelfModifiers.Add(new AttributeModifier("HitPointsDelta", sgn * healPerLvl * hpsLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
-            if (strLvl > 0)
-                effect.SelfModifiers.Add(new AttributeModifier("StressDelta", sgn * stressPerLvl * strLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
             if (brtLvl > 0)
                 effect.SelfModifiers.Add(new AttributeModifier("BreathDelta", sgn * breathPerLvl * brtLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
             if (exhLvl > 0)
@@ -54,6 +52,12 @@ namespace DiseasesExpanded
                 effect.SelfModifiers.Add(new AttributeModifier("CaloriesDelta", sgn * calPerLvl * calLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
             if (resLvl > 0)
                 effect.SelfModifiers.Add(new AttributeModifier("GermResistance", sgn * resPerLvl * resLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
+
+            if (strLvl > 0)
+            {
+                effect.SelfModifiers.Add(new AttributeModifier("StressDelta", sgn * stressPerLvl * strLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
+                effect.SelfModifiers.Add(new AttributeModifier("QualityOfLife", sgn * moralePerLvl * strLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
+            }
 
             if (attLvl > 0)
             {
@@ -68,9 +72,23 @@ namespace DiseasesExpanded
                 effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Cooking.Id, sgn * attrPerLvl * attLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
                 effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Botanist.Id, sgn * attrPerLvl * attLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
                 effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Ranching.Id, sgn * attrPerLvl * attLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
+                if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
+                    effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.SpaceNavigation.Id, sgn * attrPerLvl * attLvl, STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME));
             }
 
             return effect;
+        }
+
+        public static void RespawnPerpetumMobile(GameObject source)
+        {
+            int respawnLvl = MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Res_Replication);
+            if (respawnLvl < 1)
+                return;
+
+            byte idx = GermIdx.MedicalNanobotsIdx;
+            int count = perpetumMobilePerLvl * respawnLvl;
+            PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.NANOBOTDEVELOPMENT.SPAWNING.POPUP, source.transform);
+            SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(source.transform.position), idx, count);
         }
 
         public const string ID = nameof(MedicalNanobots);
@@ -83,13 +101,15 @@ namespace DiseasesExpanded
         private const float minGrowthTemp = 10 + degC;
         private const float maxGrowthTemp = 30 + degC;
         private const float growthTempPerLvl = 5;
-        private const float durationTimePerLvl = 150;
+        private const float durationTimePerLvl = 300;
         private const float baseHalfLife = 12000f;
+        private const int perpetumMobilePerLvl = NanobotSwarmConfig.SPAWNED_BOTS_COUNT / 20;
 
+        private const float moralePerLvl = 1;
         private const float stressPerDay = -3;
         private const float stressPerLvl = stressPerDay / 600;
         private const float calPerDay = 1666.682f;
-        private const float calPerLvl = calPerDay / 30;
+        private const float calPerLvl = calPerDay / 20;
         private const float breathPerLvl = 0.04f;
         private const float staminaPerLvl = 0.005f;
         private const float attrPerLvl = 1f;

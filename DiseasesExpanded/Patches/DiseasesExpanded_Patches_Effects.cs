@@ -24,7 +24,7 @@ namespace DiseasesExpanded
                 if (!(e is Effect effect))
                     return;
 
-                if (effect.Id == MedicalNanobots.EFFECT_ID) 
+                if (effect.Id == MedicalNanobots.EFFECT_ID)
                     ApplyNanobotParticles(go);
             }
 
@@ -34,7 +34,10 @@ namespace DiseasesExpanded
                     return;
 
                 if (effect.Id == MedicalNanobots.EFFECT_ID)
+                {
                     RemoveNanobotParticles(go);
+                    MedicalNanobots.RespawnPerpetumMobile(go);
+                }
             }
 
             public static void ApplyNanobotParticles(GameObject go)

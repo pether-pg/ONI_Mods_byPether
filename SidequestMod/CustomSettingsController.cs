@@ -146,7 +146,7 @@ namespace SidequestMod
             }
 
             ///Radiation
-            if (DlcManager.IsExpansion1Active())
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
             {
                 if (instance.QualitySettings.ContainsKey(CustomGameSettingConfigs.Radiation.id))
                 {
@@ -399,7 +399,7 @@ namespace SidequestMod
 
             ///Meteors
             Radiation = transform.Find("Content/Rads").gameObject.AddOrGet<FCycle>();
-            if (DlcManager.IsExpansion1Active())
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
             {
                 Radiation.Initialize(
                     Radiation.transform.Find("Left").gameObject.AddOrGet<FButton>(),

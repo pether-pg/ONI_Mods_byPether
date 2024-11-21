@@ -46,7 +46,7 @@ namespace DiseasesExpanded
         private void DefineRecipe()
         {
             if (!Settings.Instance.FrostPox.IncludeDisease)
-                return; 
+                return;
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
@@ -64,7 +64,8 @@ namespace DiseasesExpanded
                 description = Desc,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { VaccineApothecaryConfig.ID },
-                sortOrder = 1
+                sortOrder = 1,
+                requiredTech = "MedicineIV"
             };
         }
     }

@@ -15,7 +15,7 @@ namespace DiseasesExpanded
                 sickness_id = FrostSickness.ID,
                 exposure_threshold = 500,
                 infect_immediately = true,
-                excluded_traits = new List<string>() { },
+                excluded_traits = new List<string>() { "FrostProof" },
                 base_resistance = 2,
                 excluded_effects = new List<string>()
                     {

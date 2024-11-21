@@ -5,42 +5,42 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.AROMACANS.FLORAL.DESC
 msgctxt "FragrantFlowers.STRINGS.AROMACANS.FLORAL.DESC"
-msgid "Can full of Floral Scent, ready for Vaporizer."
+msgid "Can full of <link=\"POLLENGERMS\">Floral Scent</link>, ready for <link=\"VAPORIZER\">Vaporizer</link>."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.AROMACANS.FLORAL.NAME
 msgctxt "FragrantFlowers.STRINGS.AROMACANS.FLORAL.NAME"
-msgid "Floral Scent Can"
+msgid "<link=\"FLORALAROMACAN\">Floral Scent Can</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.AROMACANS.LAVENDER.DESC
 msgctxt "FragrantFlowers.STRINGS.AROMACANS.LAVENDER.DESC"
-msgid "Can full of Lavender Scent, ready for Vaporizer."
+msgid "Can full of <link=\"LAVENDERSCENT\">Lavender Scent</link>, ready for <link=\"VAPORIZER\">Vaporizer</link>."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.AROMACANS.LAVENDER.NAME
 msgctxt "FragrantFlowers.STRINGS.AROMACANS.LAVENDER.NAME"
-msgid "Lavender Scent Can"
+msgid "<link=\"LAVENDERAROMACAN\">Lavender Scent Can</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.AROMACANS.MALLOW.DESC
 msgctxt "FragrantFlowers.STRINGS.AROMACANS.MALLOW.DESC"
-msgid "Can full of Rose Scent, ready for Vaporizer."
+msgid "Can full of <link=\"MALLOWSCENT\">Mallow Scent</link>, ready for <link=\"VAPORIZER\">Vaporizer</link>."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.AROMACANS.MALLOW.NAME
 msgctxt "FragrantFlowers.STRINGS.AROMACANS.MALLOW.NAME"
-msgid "Mallow Scent Can"
+msgid "<link=\"MALLOWAROMACAN\">Mallow Scent Can</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.AROMACANS.ROSE.DESC
 msgctxt "FragrantFlowers.STRINGS.AROMACANS.ROSE.DESC"
-msgid "Can full of Rose Scent, ready for Vaporizer."
+msgid "Can full of <link=\"ROSESCENT\">Rose Scent</link>, ready for <link=\"VAPORIZER\">Vaporizer</link>."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.AROMACANS.ROSE.NAME
 msgctxt "FragrantFlowers.STRINGS.AROMACANS.ROSE.NAME"
-msgid "Rose Scent Can"
+msgid "<link=\"ROSEAROMACAN\">Rose Scent Can</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.BUILDINGS.VAPORIZER.DESC
@@ -150,7 +150,7 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.FOOD.DUSKBUN.DESC
 msgctxt "FragrantFlowers.STRINGS.FOOD.DUSKBUN.DESC"
-msgid "A bun filled with <link=\"DUSKJAM\">Duskjam</link>."
+msgid "A <link=\"COLDWHEATBREAD\">Frost Bun</link> filled with <link=\"DUSKJAM\">Duskjam</link>."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.FOOD.DUSKBUN.NAME
@@ -170,7 +170,7 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.FOOD.SPINOSACAKE.DESC
 msgctxt "FragrantFlowers.STRINGS.FOOD.SPINOSACAKE.DESC"
-msgid "A delicious cake with <link=\"SPINOSAHIPS\">Spinosa Hips</link> on top."
+msgid "A delicious cake made from <link=\"RAWEGG\">Raw Egg</link> and <link=\"COLDWHEATSEED\">Sleat Wheet Grains</link> with <link=\"SPINOSAHIPS\">Spinosa Hips</link> on top."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.FOOD.SPINOSACAKE.NAME
@@ -190,7 +190,7 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.GERMS.LAVENDERSCENT.DESCRIPTION
 msgctxt "FragrantFlowers.STRINGS.GERMS.LAVENDERSCENT.DESCRIPTION"
-msgid "Pretty nice smell of Lavenders.\n"
+msgid "Pretty nice smell of Lavenders.\n\nLavender Scent allergens trigger excessive sneezing fits in Duplicants who possess the Allergies trait."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.GERMS.LAVENDERSCENT.LEGEND_HOVERTEXT
@@ -205,7 +205,7 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.GERMS.MALLOWSCENT.DESCRIPTION
 msgctxt "FragrantFlowers.STRINGS.GERMS.MALLOWSCENT.DESCRIPTION"
-msgid "Pretty nice smell of Mallows.\n"
+msgid "Pretty nice smell of Mallows.\n\nMallows Scent allergens trigger excessive sneezing fits in Duplicants who possess the Allergies trait."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.GERMS.MALLOWSCENT.LEGEND_HOVERTEXT
@@ -220,7 +220,7 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.GERMS.ROSESCENT.DESCRIPTION
 msgctxt "FragrantFlowers.STRINGS.GERMS.ROSESCENT.DESCRIPTION"
-msgid "Pretty nice smell of Roses.\n"
+msgid "Pretty nice smell of Roses.\n\nRose Scent allergens trigger excessive sneezing fits in Duplicants who possess the Allergies trait."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.GERMS.ROSESCENT.LEGEND_HOVERTEXT
@@ -240,12 +240,12 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.DOMESTICATED_DESC
 msgctxt "FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.DOMESTICATED_DESC"
-msgid "/nIn domesticated environment this crop requires the use of <link=\"PHOSPHORITE\">Phosphorite</link> as fertilization."
+msgid "In domesticated environment this crop requires the use of <link=\"PHOSPHORITE\">Phosphorite</link> as fertilization."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.NAME
 msgctxt "FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.NAME"
-msgid "Duskbloom Lavender"
+msgid "<link=\"DUSKBLOOMLAVENDER\">Duskbloom Lavender</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.DESC
@@ -255,12 +255,12 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.DOMESTICATED_DESC
 msgctxt "FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.DOMESTICATED_DESC"
-msgid "/nIn domesticated environment this crop requires the use of pure water <link=\"ICE\">Ice</link> as fertilization."
+msgid "In domesticated environment this crop requires the use of pure water in form of <link=\"ICE\">Ice</link> as fertilization."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.NAME
 msgctxt "FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.NAME"
-msgid "Rimed Mallow"
+msgid "<link=\"RIMEDMALLOWPLANT\">Rimed Mallow</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.SPINOSA.DESC
@@ -270,12 +270,12 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.SPINOSA.DOMESTICATED_DESC
 msgctxt "FragrantFlowers.STRINGS.PLANTS.SPINOSA.DOMESTICATED_DESC"
-msgid "A rather thorny sten plant that blooms with a beautiful <link=\"SPINOSAROSE\">Spinosa Rose</link>./nIn domesticated environment this crop requires copious amounts of<link=\"WATER\">Water</link>, and<link=\"DIRT\">Dirt</link>as fertilizer. Also requires direct exposure to sunlight."
+msgid "In domesticated environment this crop requires copious amounts of <link=\"WATER\">Water</link>, and <link=\"DIRT\">Dirt</link> as fertilizer. Also requires direct exposure to sunlight."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.SPINOSA.NAME
 msgctxt "FragrantFlowers.STRINGS.PLANTS.SPINOSA.NAME"
-msgid "Blooming Spinosa"
+msgid "<link=\"SPINOSAPLANT\">Blooming Spinosa</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.DESC
@@ -285,12 +285,12 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.DOMESTICATED_DESC
 msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.DOMESTICATED_DESC"
-msgid "/nIn domesticated environment this crop requires the use of <link=\"PHOSPHORITE\">Phosphorite</link> as fertilization."
+msgid "In domesticated environment this crop requires the use of <link=\"PHOSPHORITE\">Phosphorite</link> as fertilization."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.NAME
 msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.NAME"
-msgid "Duskberry Lavender"
+msgid "<link=\"DUSKBERRYLAVENDER\">Duskberry Lavender</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.DESC
@@ -300,42 +300,42 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.DOMESTICATED_DESC
 msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.DOMESTICATED_DESC"
-msgid "/nThis domesticated plant requires copious amounts of<link=\"WATER\">Water</link>, and<link=\"DIRT\">Dirt</link>as fertilizer. Also requires direct exposure to sunlight."
+msgid "In domesticated environment this crop requires copious amounts of <link=\"WATER\">Water</link>, and <link=\"DIRT\">Dirt</link> as fertilizer. Also requires direct exposure to sunlight."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.NAME
 msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.NAME"
-msgid "Fruiting Spinosa"
+msgid "<link=\"SUPERSPINOSAPLANT\">Fruiting Spinosa</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.SEEDS.DUSKLAVENDER.SEED_DESC
 msgctxt "FragrantFlowers.STRINGS.SEEDS.DUSKLAVENDER.SEED_DESC"
-msgid "The tiny seed of a <link=\"DUSKBLOOMLAVENDER\">Duskbloom Lavender</link>."
+msgid "The tiny <link=\"PLANTS\">Seed</link> of a <link=\"DUSKBLOOMLAVENDER\">Duskbloom Lavender</link>."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.SEEDS.DUSKLAVENDER.SEED_NAME
 msgctxt "FragrantFlowers.STRINGS.SEEDS.DUSKLAVENDER.SEED_NAME"
-msgid "Dusk Seed"
+msgid "<link=\"DUSKBLOOMLAVENDER\">Dusk Seed</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC
 msgctxt "FragrantFlowers.STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC"
-msgid "The chill seed of a <link=\"RIMEDMALLOWPLANT\">Iced Mallow</link>."
+msgid "The chill <link=\"PLANTS\">Seed</link> of a <link=\"RIMEDMALLOWPLANT\">Iced Mallow</link>."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME
 msgctxt "FragrantFlowers.STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME"
-msgid "Iced Mallow Seed"
+msgid "<link=\"RIMEDMALLOWPLANT\">Iced Mallow Seed</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.SEEDS.SPINOSA.SEED_DESC
 msgctxt "FragrantFlowers.STRINGS.SEEDS.SPINOSA.SEED_DESC"
-msgid "The black seed of a <link=\"SPINOSAPLANT\">Spinosa</link>."
+msgid "The black <link=\"PLANTS\">Seed</link> of a <link=\"SPINOSAPLANT\">Spinosa</link>."
 msgstr ""
 
 #. FragrantFlowers.STRINGS.SEEDS.SPINOSA.SEED_NAME
 msgctxt "FragrantFlowers.STRINGS.SEEDS.SPINOSA.SEED_NAME"
-msgid "Spinosa Black Seed"
+msgid "<link=\"SPINOSAPLANT\">Spinosa Black Seed</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.SPICES.LAVENDER.DESC
@@ -345,7 +345,7 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.SPICES.LAVENDER.NAME
 msgctxt "FragrantFlowers.STRINGS.SPICES.LAVENDER.NAME"
-msgid "Wild Spice"
+msgid "<link=\"DUSKBLOOMSPICE\">Wild Spice</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.SPICES.MALLOW.DESC
@@ -355,7 +355,7 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.SPICES.MALLOW.NAME
 msgctxt "FragrantFlowers.STRINGS.SPICES.MALLOW.NAME"
-msgid "Rimed Spice"
+msgid "<link=\"COTTONBOLLSPICE\">Rimed Spice</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.SPICES.ROSE.DESC
@@ -365,7 +365,7 @@ msgstr ""
 
 #. FragrantFlowers.STRINGS.SPICES.ROSE.NAME
 msgctxt "FragrantFlowers.STRINGS.SPICES.ROSE.NAME"
-msgid "Inspiring Spice"
+msgid "<link=\"SPINOSAROSESPICE\">Inspiring Spice</link>"
 msgstr ""
 
 #. FragrantFlowers.STRINGS.TRANSLATION.AUTHOR.NAME

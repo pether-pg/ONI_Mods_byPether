@@ -25,6 +25,7 @@ namespace FragrantFlowers
             MakeMallowTuning();
             MakeSeedsTuning();
         }
+      
         public static void MakeSeedsTuning()
         {
             DuskLavenderSeedTuning = new SeedTuning

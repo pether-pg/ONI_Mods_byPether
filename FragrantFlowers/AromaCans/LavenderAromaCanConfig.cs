@@ -39,10 +39,10 @@ namespace FragrantFlowers
                 sortOrder = 11
             };
 
-            AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(ID, 1f) }, LavenderScent.ID, "LavenderScent recipe");
+            AromaticsFabricator.RegisterAromaticsRecipe(new ComplexRecipe.RecipeElement[1] { new ComplexRecipe.RecipeElement(ID, 1f) }, LavenderScent.ID, STRINGS.GERMS.LAVENDERSCENT.DESCRIPTION);
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.AROMACANS.LAVENDER.NAME, STRINGS.AROMACANS.LAVENDER.DESC, 1f, true, Assets.GetAnim("aromatic_lavenderscent_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
-            looseEntity.AddTag(GameTags.IndustrialIngredient);
+            looseEntity.AddTag(GameTags.IndustrialProduct);
             return looseEntity;
         }
     }

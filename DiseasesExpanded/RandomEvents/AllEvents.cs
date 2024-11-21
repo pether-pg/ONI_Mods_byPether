@@ -193,7 +193,7 @@ namespace DiseasesExpanded.RandomEvents
 
         public static void RegisterRadiationEvents()
         {
-            if (!DlcManager.IsExpansion1Active())
+            if (!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return;
 
             RegisterEvent(new SuddenPlantMutation(WEIGHT_NORMAL));

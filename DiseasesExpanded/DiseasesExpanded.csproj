@@ -100,6 +100,7 @@
     <Compile Include="AssetLoader.cs" />
     <Compile Include="CustomSicknessComponents\CustomFxSickEffectSickness.cs" />
     <Compile Include="MedicalNanobots\MedicalNanobotReviver.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_Codex.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_DiseaseEmitter.cs" />
     <Compile Include="Germs\AbandonedGerms.cs" />
     <Compile Include="Misc\PreviousGermIndex.cs" />

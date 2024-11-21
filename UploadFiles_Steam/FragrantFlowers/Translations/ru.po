@@ -1,0 +1,374 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included"
+"POT Version: 2.0"
+
+#. FragrantFlowers.STRINGS.AROMACANS.FLORAL.DESC
+msgctxt "FragrantFlowers.STRINGS.AROMACANS.FLORAL.DESC"
+msgid "Can full of <link=\"POLLENGERMS\">Floral Scent</link>, ready for <link=\"VAPORIZER\">Vaporizer</link>."
+msgstr "Баллон, наполненный <link=\"POLLENGERMS\">цветочным запахом</link>. Можно использовать в <link=\"VAPORIZER\">освежителе воздуха</link>."
+
+#. FragrantFlowers.STRINGS.AROMACANS.FLORAL.NAME
+msgctxt "FragrantFlowers.STRINGS.AROMACANS.FLORAL.NAME"
+msgid "<link=\"FLORALAROMACAN\">Floral Scent Can</link>"
+msgstr "<link=\"FLORALAROMACAN\">Баллон с цветочным запахом</link>"
+
+#. FragrantFlowers.STRINGS.AROMACANS.LAVENDER.DESC
+msgctxt "FragrantFlowers.STRINGS.AROMACANS.LAVENDER.DESC"
+msgid "Can full of <link=\"LAVENDERSCENT\">Lavender Scent</link>, ready for <link=\"VAPORIZER\">Vaporizer</link>."
+msgstr "Баллон, наполненный <link=\"LAVENDERSCENT\">запахом лаванды</link>. Можно использовать в <link=\"VAPORIZER\">освежителе воздуха</link>."
+
+#. FragrantFlowers.STRINGS.AROMACANS.LAVENDER.NAME
+msgctxt "FragrantFlowers.STRINGS.AROMACANS.LAVENDER.NAME"
+msgid "<link=\"LAVENDERAROMACAN\">Lavender Scent Can</link>"
+msgstr "<link=\"LAVENDERAROMACAN\">Баллон с запахом лаванды</link>"
+
+#. FragrantFlowers.STRINGS.AROMACANS.MALLOW.DESC
+msgctxt "FragrantFlowers.STRINGS.AROMACANS.MALLOW.DESC"
+msgid "Can full of <link=\"MALLOWSCENT\">Mallow Scent</link>, ready for <link=\"VAPORIZER\">Vaporizer</link>."
+msgstr "Баллон, наполненный <link=\"MALLOWSCENT\">запахом мальвы</link>. Можно использовать в <link=\"VAPORIZER\">освежителе воздуха</link>."
+
+#. FragrantFlowers.STRINGS.AROMACANS.MALLOW.NAME
+msgctxt "FragrantFlowers.STRINGS.AROMACANS.MALLOW.NAME"
+msgid "<link=\"MALLOWAROMACAN\">Mallow Scent Can</link>"
+msgstr "<link=\"MALLOWAROMACAN\">Баллон с запахом мальвы</link>"
+
+#. FragrantFlowers.STRINGS.AROMACANS.ROSE.DESC
+msgctxt "FragrantFlowers.STRINGS.AROMACANS.ROSE.DESC"
+msgid "Can full of <link=\"ROSESCENT\">Rose Scent</link>, ready for <link=\"VAPORIZER\">Vaporizer</link>."
+msgstr "Баллон, наполненный <link=\"ROSESCENT\">запахом роз</link>. Можно использовать в <link=\"VAPORIZER\">освежителе воздуха</link>."
+
+#. FragrantFlowers.STRINGS.AROMACANS.ROSE.NAME
+msgctxt "FragrantFlowers.STRINGS.AROMACANS.ROSE.NAME"
+msgid "<link=\"ROSEAROMACAN\">Rose Scent Can</link>"
+msgstr "<link=\"ROSEAROMACAN\">Баллон с запахом роз</link>"
+
+#. FragrantFlowers.STRINGS.BUILDINGS.VAPORIZER.DESC
+msgctxt "FragrantFlowers.STRINGS.BUILDINGS.VAPORIZER.DESC"
+msgid "While working, releases various scents into the air."
+msgstr "Во время работы распыляет в воздух различные ароматы."
+
+#. FragrantFlowers.STRINGS.BUILDINGS.VAPORIZER.EFFECT
+msgctxt "FragrantFlowers.STRINGS.BUILDINGS.VAPORIZER.EFFECT"
+msgid "While working, releases various scents into the air."
+msgstr "Во время работы распыляет в воздух различные ароматы."
+
+#. FragrantFlowers.STRINGS.BUILDINGS.VAPORIZER.NAME
+msgctxt "FragrantFlowers.STRINGS.BUILDINGS.VAPORIZER.NAME"
+msgid "Vaporizer"
+msgstr "Освежитель воздуха"
+
+#. FragrantFlowers.STRINGS.CROPS.COTTONBOLL.DESC
+msgctxt "FragrantFlowers.STRINGS.CROPS.COTTONBOLL.DESC"
+msgid "A soft, fluffy staple fiber that grows in a boll encased in ice crystals. The fiber of the boll is almost pure cellulose, but also contains high concentration of aromatic oils that gives it a smooth and pleasing scent."
+msgstr "Мягкое, пушистое штапельное волокно в покрытой кристаллами льда коробочке. Представляет собой почти чистую целлюлозу, но также содержит высокую концентрацию ароматических масел, которые придают ему мягкий и приятный аромат."
+
+#. FragrantFlowers.STRINGS.CROPS.COTTONBOLL.NAME
+msgctxt "FragrantFlowers.STRINGS.CROPS.COTTONBOLL.NAME"
+msgid "<link=\"RIMEDCOTTON\">Rimed Cotton Boll</link>"
+msgstr "<link=\"RIMEDCOTTON\">Коробочка ледохлопка</link>"
+
+#. FragrantFlowers.STRINGS.CROPS.DUSKBERRY.DESC
+msgctxt "FragrantFlowers.STRINGS.CROPS.DUSKBERRY.DESC"
+msgid "A small, soft, jelly filled fruiting body of a <link=\"DUSKBERRYLAVENDER\">Duskberry Lavender</link>. They taste delightful and have a slightly sweet tart flavor that is mixed with a little bit of acidic."
+msgstr "Небольшой, мягкий, желеобразный плод <link=\"DUSKBERRYLAVENDER\">сумеряничной лаванды</link>. Он имеет восхитительный сладковато-терпкий вкус с небольшой кислинкой."
+
+#. FragrantFlowers.STRINGS.CROPS.DUSKBERRY.NAME
+msgctxt "FragrantFlowers.STRINGS.CROPS.DUSKBERRY.NAME"
+msgid "<link=\"DUSKBERRY\">Duskberry</link>"
+msgstr "<link=\"DUSKBERRY\">Сумеряника</link>"
+
+#. FragrantFlowers.STRINGS.CROPS.DUSKBLOOM.DESC
+msgctxt "FragrantFlowers.STRINGS.CROPS.DUSKBLOOM.DESC"
+msgid "The gentle blossom of a <link=\"DUSKBLOOMLAVENDER\">Duskbloom Lavender</link>. It has a delicate, sweet smell that is floral, herbal, and evergreen woodsy at the same time."
+msgstr "Нежный цветок <link=\"DUSKBLOOMLAVENDER\">сумеречной лаванды</link>. У него тонкий, приятный запах, объединяющий в себе ароматы трав, цветов и вечнозеленых лесов."
+
+#. FragrantFlowers.STRINGS.CROPS.DUSKBLOOM.NAME
+msgctxt "FragrantFlowers.STRINGS.CROPS.DUSKBLOOM.NAME"
+msgid "<link=\"DUSKBLOOM\">Duskbloom</link>"
+msgstr "<link=\"DUSKBLOOM\">Цветок сумеречной лаванды</link>"
+
+#. FragrantFlowers.STRINGS.CROPS.SPINOSAHIPS.DESC
+msgctxt "FragrantFlowers.STRINGS.CROPS.SPINOSAHIPS.DESC"
+msgid "A small, berry-sized, reddish fruiting body of a <link=\"SUPERSPINOSAPLANT\">Fruiting Spinosa</link>. These have a floral, slightly sweet flavor with a touch of tartness, rich in Vitamin C."
+msgstr "Небольшой, размером с ягоду, красноватый плод <link=\"SUPERSPINOSAPLANT\">шиповника плодового</link>. Он имеет цветочный, слегка сладкий вкус с терпкой ноткой и богат витамином С."
+
+#. FragrantFlowers.STRINGS.CROPS.SPINOSAHIPS.NAME
+msgctxt "FragrantFlowers.STRINGS.CROPS.SPINOSAHIPS.NAME"
+msgid "<link=\"SPINOSAHIPS\">Spinosa Hips</link>"
+msgstr "<link=\"SPINOSAHIPS\">Ягода шиповника</link>"
+
+#. FragrantFlowers.STRINGS.CROPS.SPINOSAROSE.DESC
+msgctxt "FragrantFlowers.STRINGS.CROPS.SPINOSAROSE.DESC"
+msgid "The beautiful blossom of a <link=\"SPINOSAPLANT\">Spinosa</link>. It has a simultaneously sweet and spicy smell, giving ode to meadows, honey, and fruit notes."
+msgstr "Прекрасный цветок <link=\"SPINOSAPLANT\">шиповника</link>. Обладает одновременно сладким и пряным запахом с луговыми, фруктовыми и медовыми нотами."
+
+#. FragrantFlowers.STRINGS.CROPS.SPINOSAROSE.NAME
+msgctxt "FragrantFlowers.STRINGS.CROPS.SPINOSAROSE.NAME"
+msgid "<link=\"SPINOSAROSE\">Spinosa Rose</link>"
+msgstr "<link=\"SPINOSAROSE\">Роза шиповника</link>"
+
+#. FragrantFlowers.STRINGS.DESCRIPTORS.SPAWNGERMS.DESC
+msgctxt "FragrantFlowers.STRINGS.DESCRIPTORS.SPAWNGERMS.DESC"
+msgid "While working, releases {GERMS} into the air."
+msgstr "Во время работы распыляет в воздух {GERMS}."
+
+#. FragrantFlowers.STRINGS.DESCRIPTORS.SPAWNGERMS.NAME
+msgctxt "FragrantFlowers.STRINGS.DESCRIPTORS.SPAWNGERMS.NAME"
+msgid "{GERMS}"
+msgstr "{GERMS}"
+
+#. FragrantFlowers.STRINGS.EFFECTS.SMELLEDLAVENDER.DESC
+msgctxt "FragrantFlowers.STRINGS.EFFECTS.SMELLEDLAVENDER.DESC"
+msgid "This one just smelled some Lavender, feeling much closer to the nature as a result."
+msgstr "Только что понюхал лаванду и теперь чувствует себя ближе к природе."
+
+#. FragrantFlowers.STRINGS.EFFECTS.SMELLEDLAVENDER.NAME
+msgctxt "FragrantFlowers.STRINGS.EFFECTS.SMELLEDLAVENDER.NAME"
+msgid "Smelled Lavender"
+msgstr "Понюхал лаванду"
+
+#. FragrantFlowers.STRINGS.EFFECTS.SMELLEDMALLOW.DESC
+msgctxt "FragrantFlowers.STRINGS.EFFECTS.SMELLEDMALLOW.DESC"
+msgid "This duplicant just smelled some Mallow and is invigorted to work faster."
+msgstr "Этот дубликант только что понюхал мальву и теперь воодушевлен работать быстрее."
+
+#. FragrantFlowers.STRINGS.EFFECTS.SMELLEDMALLOW.NAME
+msgctxt "FragrantFlowers.STRINGS.EFFECTS.SMELLEDMALLOW.NAME"
+msgid "Smelled Mallow"
+msgstr "Понюхал мальву"
+
+#. FragrantFlowers.STRINGS.EFFECTS.SMELLEDROSE.DESC
+msgctxt "FragrantFlowers.STRINGS.EFFECTS.SMELLEDROSE.DESC"
+msgid "This duplicant just smelled some Roses and is now inspired to create great things."
+msgstr "Этот дубликант только что понюхал розу и теперь вдохновлен на великие свершения."
+
+#. FragrantFlowers.STRINGS.EFFECTS.SMELLEDROSE.NAME
+msgctxt "FragrantFlowers.STRINGS.EFFECTS.SMELLEDROSE.NAME"
+msgid "Smelled Roses"
+msgstr "Понюхал розу"
+
+#. FragrantFlowers.STRINGS.FOOD.DUSKBUN.DESC
+msgctxt "FragrantFlowers.STRINGS.FOOD.DUSKBUN.DESC"
+msgid "A <link=\"COLDWHEATBREAD\">Frost Bun</link> filled with <link=\"DUSKJAM\">Duskjam</link>."
+msgstr "<link=\"COLDWHEATBREAD\">Ледобулка</link> с начинкой из <link=\"DUSKJAM\">сумеряничного варенья</link>."
+
+#. FragrantFlowers.STRINGS.FOOD.DUSKBUN.NAME
+msgctxt "FragrantFlowers.STRINGS.FOOD.DUSKBUN.NAME"
+msgid "<link=\"DUSKBUN\">Duskbun</link>"
+msgstr "<link=\"DUSKBUN\">Ледобулка с сумеряникой</link>"
+
+#. FragrantFlowers.STRINGS.FOOD.DUSKJAM.DESC
+msgctxt "FragrantFlowers.STRINGS.FOOD.DUSKJAM.DESC"
+msgid "A long lasting <link=\"DUSKBERRY\">Duskberry</link> jam preserved in <link=\"SUCROSE\">Sucrose</link>."
+msgstr "Непортящееся варенье из <link=\"DUSKBERRY\">сумеряники</link>, консервированное в <link=\"SUCROSE\">сахарозе</link>."
+
+#. FragrantFlowers.STRINGS.FOOD.DUSKJAM.NAME
+msgctxt "FragrantFlowers.STRINGS.FOOD.DUSKJAM.NAME"
+msgid "<link=\"DUSKJAM\">Duskjam</link>"
+msgstr "<link=\"DUSKJAM\">Варенье из сумеряники</link>"
+
+#. FragrantFlowers.STRINGS.FOOD.SPINOSACAKE.DESC
+msgctxt "FragrantFlowers.STRINGS.FOOD.SPINOSACAKE.DESC"
+msgid "A delicious cake made from <link=\"RAWEGG\">Raw Egg</link> and <link=\"COLDWHEATSEED\">Sleat Wheet Grains</link> with <link=\"SPINOSAHIPS\">Spinosa Hips</link> on top."
+msgstr "Вкуснейший торт из <link=\"RAWEGG\">сырых яиц</link> и <link=\"COLDWHEATSEED\">морозной пшеницы</link> с <link=\"SPINOSAHIPS\">ягодой шиповника</link> сверху."
+
+#. FragrantFlowers.STRINGS.FOOD.SPINOSACAKE.NAME
+msgctxt "FragrantFlowers.STRINGS.FOOD.SPINOSACAKE.NAME"
+msgid "<link=\"SPINOSACAKE\">Spinosa Cake</link>"
+msgstr "<link=\"SPINOSACAKE\">Торт с шиповником</link>"
+
+#. FragrantFlowers.STRINGS.FOOD.SPINOSASYRUP.DESC
+msgctxt "FragrantFlowers.STRINGS.FOOD.SPINOSASYRUP.DESC"
+msgid "A long lasting <link=\"SPINOSAHIPS\">Spinosa Hips</link> syrup preserved in <link=\"SUCROSE\">Sucrose</link>."
+msgstr "Непортящийся сироп из <link=\"SPINOSAHIPS\">ягод шиповника</link>, консервированный в <link=\"SUCROSE\">сахарозе</link>."
+
+#. FragrantFlowers.STRINGS.FOOD.SPINOSASYRUP.NAME
+msgctxt "FragrantFlowers.STRINGS.FOOD.SPINOSASYRUP.NAME"
+msgid "<link=\"SPINOSASYRUP\">Spinosa Syrup</link>"
+msgstr "<link=\"SPINOSASYRUP\">Сироп из шиповника</link>"
+
+#. FragrantFlowers.STRINGS.GERMS.LAVENDERSCENT.DESCRIPTION
+msgctxt "FragrantFlowers.STRINGS.GERMS.LAVENDERSCENT.DESCRIPTION"
+msgid "Pretty nice smell of Lavenders.\n\nLavender Scent allergens trigger excessive sneezing fits in Duplicants who possess the Allergies trait."
+msgstr "Приятный запах лаванды.\n\nАллергены запаха лаванды вызывают приступы нескончаемого чихания у дубликантов с характеристикой "Аллергия".\n"
+
+#. FragrantFlowers.STRINGS.GERMS.LAVENDERSCENT.LEGEND_HOVERTEXT
+msgctxt "FragrantFlowers.STRINGS.GERMS.LAVENDERSCENT.LEGEND_HOVERTEXT"
+msgid "Lavender Scent present.\n"
+msgstr "Присутствуют аллергены запаха лаванды.\n"
+
+#. FragrantFlowers.STRINGS.GERMS.LAVENDERSCENT.NAME
+msgctxt "FragrantFlowers.STRINGS.GERMS.LAVENDERSCENT.NAME"
+msgid "<link=\"LAVENDERSCENT\">Lavender Scent</link>"
+msgstr "<link=\"LAVENDERSCENT\">Запах лаванды</link>"
+
+#. FragrantFlowers.STRINGS.GERMS.MALLOWSCENT.DESCRIPTION
+msgctxt "FragrantFlowers.STRINGS.GERMS.MALLOWSCENT.DESCRIPTION"
+msgid "Pretty nice smell of Mallows.\n\nMallows Scent allergens trigger excessive sneezing fits in Duplicants who possess the Allergies trait."
+msgstr "Приятный запах мальвы.\n\nАллергены запаха мальвы вызывают приступы нескончаемого чихания у дубликантов с характеристикой "Аллергия".\n"
+
+#. FragrantFlowers.STRINGS.GERMS.MALLOWSCENT.LEGEND_HOVERTEXT
+msgctxt "FragrantFlowers.STRINGS.GERMS.MALLOWSCENT.LEGEND_HOVERTEXT"
+msgid "Mallow Scent present.\n"
+msgstr "Присутствуют аллергены запаха мальвы.\n"
+
+#. FragrantFlowers.STRINGS.GERMS.MALLOWSCENT.NAME
+msgctxt "FragrantFlowers.STRINGS.GERMS.MALLOWSCENT.NAME"
+msgid "<link=\"MALLOWSCENT\">Mallow Scent</link>"
+msgstr "<link=\"MALLOWSCENT\">Запах мальвы</link>"
+
+#. FragrantFlowers.STRINGS.GERMS.ROSESCENT.DESCRIPTION
+msgctxt "FragrantFlowers.STRINGS.GERMS.ROSESCENT.DESCRIPTION"
+msgid "Pretty nice smell of Roses.\n\nRose Scent allergens trigger excessive sneezing fits in Duplicants who possess the Allergies trait."
+msgstr "Приятный запах роз.\n\nАллергены запаха роз вызывают приступы нескончаемого чихания у дубликантов с характеристикой "Аллергия".\n"
+
+#. FragrantFlowers.STRINGS.GERMS.ROSESCENT.LEGEND_HOVERTEXT
+msgctxt "FragrantFlowers.STRINGS.GERMS.ROSESCENT.LEGEND_HOVERTEXT"
+msgid "Rose Scent present.\n"
+msgstr "Присутствуют аллергены запаха роз.\n"
+
+#. FragrantFlowers.STRINGS.GERMS.ROSESCENT.NAME
+msgctxt "FragrantFlowers.STRINGS.GERMS.ROSESCENT.NAME"
+msgid "<link=\"ROSESCENT\">Rose Scent</link>"
+msgstr "<link=\"ROSESCENT\">Запах роз</link>"
+
+#. FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.DESC"
+msgid "A shrub-like plant blooms with a beautiful <link=\"DUSKBLOOM\">Duskbloom</link>."
+msgstr "Кустарниковое растение, которое цветет красивыми <link=\"DUSKBLOOM\">цветами сумеречной лаванды</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.DOMESTICATED_DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.DOMESTICATED_DESC"
+msgid "In domesticated environment this crop requires the use of <link=\"PHOSPHORITE\">Phosphorite</link> as fertilization."
+msgstr "Кустарниковое растение, которое цветет красивыми <link=\"DUSKBLOOM\">цветами сумеречной лаванды</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.NAME
+msgctxt "FragrantFlowers.STRINGS.PLANTS.DUSKLAVENDER.NAME"
+msgid "<link=\"DUSKBLOOMLAVENDER\">Duskbloom Lavender</link>"
+msgstr "<link=\"DUSKBLOOMLAVENDER\">Сумеречная лаванда</link>"
+
+#. FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.DESC"
+msgid "An evergreen plant well adapt to thrive in very cold environments. Produces a fluffy <link=\"RIMEDCOTTON\">Rimed Cotton Boll</link>."
+msgstr "Вечнозеленое растение, хорошо приспособленное к холодным условиям. Производит пушистую <link=\"RIMEDCOTTON\">коробочку ледохлопка</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.DOMESTICATED_DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.DOMESTICATED_DESC"
+msgid "In domesticated environment this crop requires the use of pure water in form of <link=\"ICE\">Ice</link> as fertilization."
+msgstr "Вечнозеленое растение, хорошо приспособленное к холодным условиям. Производит пушистую <link=\"RIMEDCOTTON\">коробочку ледохлопка</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.NAME
+msgctxt "FragrantFlowers.STRINGS.PLANTS.RIMEDMALLOW.NAME"
+msgid "<link=\"RIMEDMALLOWPLANT\">Rimed Mallow</link>"
+msgstr "<link=\"RIMEDMALLOWPLANT\">Ледяная мальва</link>"
+
+#. FragrantFlowers.STRINGS.PLANTS.SPINOSA.DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.SPINOSA.DESC"
+msgid "A rather thorny sten plant that blooms with a beautiful <link=\"SPINOSAROSE\">Spinosa Rose</link>."
+msgstr "Довольно колючее растение, на котором цветут красивые <link=\"SPINOSAROSE\">розы шиповника</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.SPINOSA.DOMESTICATED_DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.SPINOSA.DOMESTICATED_DESC"
+msgid "In domesticated environment this crop requires copious amounts of <link=\"WATER\">Water</link>, and <link=\"DIRT\">Dirt</link> as fertilizer. Also requires direct exposure to sunlight."
+msgstr "Довольно колючее растение, на котором цветут красивые <link=\"SPINOSAROSE\">розы шиповника</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.SPINOSA.NAME
+msgctxt "FragrantFlowers.STRINGS.PLANTS.SPINOSA.NAME"
+msgid "<link=\"SPINOSAPLANT\">Blooming Spinosa</link>"
+msgstr "<link=\"SPINOSAPLANT\">Шиповник цветковый</link>"
+
+#. FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.DESC"
+msgid "A shrub-like plant sprouts with an edible <link=\"DUSKBERRY\">Duskberry</link>."
+msgstr "Кустарниковое растение, которое плодоносит съедобной <link=\"DUSKBERRY\">сумеряникой</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.DOMESTICATED_DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.DOMESTICATED_DESC"
+msgid "In domesticated environment this crop requires the use of <link=\"PHOSPHORITE\">Phosphorite</link> as fertilization."
+msgstr "Кустарниковое растение, которое плодоносит съедобной <link=\"DUSKBERRY\">сумеряникой</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.NAME
+msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERDUSKLAVENDER.NAME"
+msgid "<link=\"DUSKBERRYLAVENDER\">Duskberry Lavender</link>"
+msgstr "<link=\"DUSKBERRYLAVENDER\">Сумеряничная лаванда</link>"
+
+#. FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.DESC"
+msgid "A rather thorny sten plant that produces an edible <link=\"SPINOSAHIPS\">Spinosa Hips</link>."
+msgstr "Довольно колючее растение, на котором созревают съедобные <link=\"SPINOSAHIPS\">ягоды шиповника</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.DOMESTICATED_DESC
+msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.DOMESTICATED_DESC"
+msgid "In domesticated environment this crop requires copious amounts of <link=\"WATER\">Water</link>, and <link=\"DIRT\">Dirt</link> as fertilizer. Also requires direct exposure to sunlight."
+msgstr "Довольно колючее растение, на котором созревают съедобные <link=\"SPINOSAHIPS\">ягоды шиповника</link>."
+
+#. FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.NAME
+msgctxt "FragrantFlowers.STRINGS.PLANTS.SUPERSPINOSA.NAME"
+msgid "<link=\"SUPERSPINOSAPLANT\">Fruiting Spinosa</link>"
+msgstr "<link=\"SUPERSPINOSAPLANT\">Шиповник плодовый</link>"
+
+#. FragrantFlowers.STRINGS.SEEDS.DUSKLAVENDER.SEED_DESC
+msgctxt "FragrantFlowers.STRINGS.SEEDS.DUSKLAVENDER.SEED_DESC"
+msgid "The tiny <link=\"PLANTS\">Seed</link> of a <link=\"DUSKBLOOMLAVENDER\">Duskbloom Lavender</link>."
+msgstr "Крошечное <link=\"PLANTS\">семя</link> <link=\"DUSKBLOOMLAVENDER\">сумеречной лаванды</link>."
+
+#. FragrantFlowers.STRINGS.SEEDS.DUSKLAVENDER.SEED_NAME
+msgctxt "FragrantFlowers.STRINGS.SEEDS.DUSKLAVENDER.SEED_NAME"
+msgid "<link=\"DUSKBLOOMLAVENDER\">Dusk Seed</link>"
+msgstr "<link=\"DUSKBLOOMLAVENDER\">Семя сумеречной лаванды</link>"
+
+#. FragrantFlowers.STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC
+msgctxt "FragrantFlowers.STRINGS.SEEDS.RIMEDMALLOW.SEED_DESC"
+msgid "The chill <link=\"PLANTS\">Seed</link> of a <link=\"RIMEDMALLOWPLANT\">Iced Mallow</link>."
+msgstr "Прохладное <link=\"PLANTS\">семя</link> <link=\"RIMEDMALLOWPLANT\">ледяной мальвы</link>."
+
+#. FragrantFlowers.STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME
+msgctxt "FragrantFlowers.STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME"
+msgid "<link=\"RIMEDMALLOWPLANT\">Iced Mallow Seed</link>"
+msgstr "<link=\"RIMEDMALLOWPLANT\">Семя ледяной мальвы</link>"
+
+#. FragrantFlowers.STRINGS.SEEDS.SPINOSA.SEED_DESC
+msgctxt "FragrantFlowers.STRINGS.SEEDS.SPINOSA.SEED_DESC"
+msgid "The black <link=\"PLANTS\">Seed</link> of a <link=\"SPINOSAPLANT\">Spinosa</link>."
+msgstr "Черное <link=\"PLANTS\">семя</link> <link=\"SPINOSAPLANT\">шиповника</link>."
+
+#. FragrantFlowers.STRINGS.SEEDS.SPINOSA.SEED_NAME
+msgctxt "FragrantFlowers.STRINGS.SEEDS.SPINOSA.SEED_NAME"
+msgid "<link=\"SPINOSAPLANT\">Spinosa Black Seed</link>"
+msgstr "<link=\"SPINOSAPLANT\">Семя шиповника</link>"
+
+#. FragrantFlowers.STRINGS.SPICES.LAVENDER.DESC
+msgctxt "FragrantFlowers.STRINGS.SPICES.LAVENDER.DESC"
+msgid "With faint Duskbloom aroma, this spice develops deep bond with the nature in duplicants."
+msgstr "Легкий запах лаванды создает глубокую связь с дикой природой."
+
+#. FragrantFlowers.STRINGS.SPICES.LAVENDER.NAME
+msgctxt "FragrantFlowers.STRINGS.SPICES.LAVENDER.NAME"
+msgid "<link=\"DUSKBLOOMSPICE\">Wild Spice</link>"
+msgstr "<link=\"DUSKBLOOMSPICE\">Дикая специя</link>"
+
+#. FragrantFlowers.STRINGS.SPICES.MALLOW.DESC
+msgctxt "FragrantFlowers.STRINGS.SPICES.MALLOW.DESC"
+msgid "Fresh like an icicle in the morning, this spice invigorates duplicants with icy energy."
+msgstr "Свежая, как утренняя сосулька, наполняет ледяной энергией."
+
+#. FragrantFlowers.STRINGS.SPICES.MALLOW.NAME
+msgctxt "FragrantFlowers.STRINGS.SPICES.MALLOW.NAME"
+msgid "<link=\"COTTONBOLLSPICE\">Rimed Spice</link>"
+msgstr "<link=\"COTTONBOLLSPICE\">Леденящая специя</link>"
+
+#. FragrantFlowers.STRINGS.SPICES.ROSE.DESC
+msgctxt "FragrantFlowers.STRINGS.SPICES.ROSE.DESC"
+msgid "Made with delicate Spinosa petals, this spice inspires duplicants to achieve great things."
+msgstr "Молотые лепестки шиповника вдохновляют на великие открытия."
+
+#. FragrantFlowers.STRINGS.SPICES.ROSE.NAME
+msgctxt "FragrantFlowers.STRINGS.SPICES.ROSE.NAME"
+msgid "<link=\"SPINOSAROSESPICE\">Inspiring Spice</link>"
+msgstr "<link=\"SPINOSAROSESPICE\">Вдохновляющая специя</link>"
+
+#. FragrantFlowers.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "FragrantFlowers.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "Ronivan + pether.pg"
+msgstr "RealWiseSerpent"

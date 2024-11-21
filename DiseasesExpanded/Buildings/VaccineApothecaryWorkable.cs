@@ -14,19 +14,19 @@ namespace DiseasesExpanded
             base.OnSpawn();
         }
 
-        protected override void OnStartWork(Worker worker)
+        protected override void OnStartWork(WorkerBase worker)
         {
             EnableRadiationEmitter(true);
             base.OnStartWork(worker);
         }
 
-        protected override void OnStopWork(Worker worker)
+        protected override void OnStopWork(WorkerBase worker)
         {
             EnableRadiationEmitter(false);
             base.OnStopWork(worker);
         }
 
-        protected override void OnCompleteWork(Worker worker)
+        protected override void OnCompleteWork(WorkerBase worker)
         {
             EnableRadiationEmitter(false);
             base.OnCompleteWork(worker);

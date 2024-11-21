@@ -58,11 +58,11 @@ namespace DiseasesExpanded
                 if (Settings.Instance.MutatingVirus.IncludeDisease)
                     diseases.Add(Db.Get().Diseases.Get(MutatingGerms.ID));
 
-                if (DlcManager.IsExpansion1Active())
+                if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                     diseases.Add(Db.Get().Diseases.RadiationPoisoning);
-                if (DlcManager.IsExpansion1Active() && Settings.Instance.BogInsects.IncludeDisease)
+                if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && Settings.Instance.BogInsects.IncludeDisease)
                     diseases.Add(Db.Get().Diseases.Get(BogInsects.ID));
-                if (DlcManager.IsExpansion1Active() && Settings.Instance.HungerGerms.IncludeDisease)
+                if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && Settings.Instance.HungerGerms.IncludeDisease)
                     diseases.Add(Db.Get().Diseases.Get(HungerGerms.ID));
 
                 diseaseEmitter.SetDiseases(diseases);

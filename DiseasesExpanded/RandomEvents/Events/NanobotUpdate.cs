@@ -37,7 +37,7 @@ namespace DiseasesExpanded.RandomEvents.Events
                     MedicalNanobotsData.Instance.IncreaseDevelopment(vector);
 
                     foreach (Telepad pad in Components.Telepads)
-                        SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(pad.gameObject), GermIdx.MedicalNanobotsIdx, (int)MedicalNanobotsData.RECIPE_MASS_LARGE);
+                        SimMessages.ModifyDiseaseOnCell(Grid.PosToCell(pad.gameObject), GermIdx.MedicalNanobotsIdx, (int)RecipeUpdater.RECIPE_MASS_LARGE);
 
 
                     ONITwitchLib.ToastManager.InstantiateToast(GeneralName, STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST + (malicious ? (string)STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_MALICIOUS : ""));

@@ -27,11 +27,11 @@ namespace DiseasesExpanded
                 if (__instance == null || __instance.sleepy == null)
                     return;
 
-                __instance.sleepy.Enter("Espresso Check", (smi => 
-                    {
-                        if (smi != null && smi.gameObject != null && HasEsspressoEffect(smi.gameObject))
-                            smi.GoTo(__instance.idle);
-                    }
+                __instance.sleepy.Enter("Espresso Check", (smi =>
+                {
+                    if (smi != null && smi.gameObject != null && HasEsspressoEffect(smi.gameObject))
+                        smi.GoTo(__instance.idle);
+                }
                 ));
             }
 
@@ -66,7 +66,7 @@ namespace DiseasesExpanded
         [HarmonyPatch("OnCompleteWork")]
         public static class Harvestable_OnCompleteWork_Patch
         {
-            public static void Postfix(Harvestable __instance, Worker worker)
+            public static void Postfix(Harvestable __instance, WorkerBase worker)
             {
                 if (!Settings.Instance.SleepingCurse.IncludeDisease)
                     return;
@@ -79,10 +79,10 @@ namespace DiseasesExpanded
 
                 if (SuitWearing.IsWearingAtmoSuit(worker.gameObject) || SuitWearing.IsWearingLeadSuit(worker.gameObject))
                     return;
-                
+
                 float randomRoll = UnityEngine.Random.Range(0.0f, 100.0f);
                 if (GetInfectionChance(worker) > randomRoll)
-                    TryInfect(worker);
+                    TryInfect(worker, __instance.gameObject.GetProperName());
             }
 
             private static bool CausesCurse(Harvestable harvestable)
@@ -103,7 +103,7 @@ namespace DiseasesExpanded
                 return false;
             }
 
-            private static bool HasConflictingTraits(Worker worker)
+            private static bool HasConflictingTraits(WorkerBase worker)
             {
                 List<string> conflictingIds = new List<string>() { "Narcolepsy", "NightLight" };
                 Traits traits = worker.gameObject.GetComponent<Traits>();
@@ -115,7 +115,7 @@ namespace DiseasesExpanded
                 return false;
             }
 
-            private static bool IsRecentlyRecovered(Worker worker)
+            private static bool IsRecentlyRecovered(WorkerBase worker)
             {
                 if (worker == null || worker.gameObject == null)
                     return false;
@@ -124,19 +124,19 @@ namespace DiseasesExpanded
                 return (effects != null && effects.HasEffect(SpindlySickness.RECOVERY_ID));
             }
 
-            private static bool IsBiobot(Worker worker)
+            private static bool IsBiobot(WorkerBase worker)
             {
                 return worker.HasTag(MorbRoverConfig.ID);
             }
 
-            private static float GetInfectionChance(Worker worker)
+            private static float GetInfectionChance(WorkerBase worker)
             {
                 float skill = GetBotanicSkillValue(worker);
                 float scale = Settings.Instance.RebalanceForDiseasesRestored ? 2 : 4;
                 return (100 - (skill * scale)) / 5.0f;
             }
 
-            private static float GetBotanicSkillValue(Worker worker)
+            private static float GetBotanicSkillValue(WorkerBase worker)
             {
                 MinionModifiers modifiers = worker.gameObject.GetComponent<MinionModifiers>();
                 if (modifiers == null)
@@ -150,7 +150,7 @@ namespace DiseasesExpanded
                 return value;
             }
 
-            private static void TryInfect(Worker worker)
+            private static void TryInfect(WorkerBase worker, string source)
             {
                 Modifiers modifiers = worker.gameObject.GetComponent<Modifiers>();
                 if (modifiers == null)
@@ -160,7 +160,7 @@ namespace DiseasesExpanded
                 if (diseases == null)
                     return;
 
-                diseases.Infect(new SicknessExposureInfo(SpindlySickness.ID, STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO));
+                diseases.Infect(new SicknessExposureInfo(SpindlySickness.ID, string.Format(STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO, source)));
             }
         }
     }

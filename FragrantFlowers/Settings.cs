@@ -44,11 +44,16 @@ namespace FragrantFlowers
         [Option("Spinosa Rose", category: "New Flower - Spinosa Rose")]
         public BasicFlowerSettings Rose { get; set; }
 
+        [JsonProperty]
+        [Option("Seeds spawn", "Do you want to spawn buries seeds?", category: "Additional Settings")]
+        public bool SeedsSpawn { get; set; }
+
         public Settings()
         {
             Lavender = new LavenderSettings();
             Mallow = new BasicFlowerSettings();
             Rose = new BasicFlowerSettings();
+            SeedsSpawn = false;
         }
 
         [Serializable]
@@ -92,7 +97,7 @@ namespace FragrantFlowers
             public int CritterHappinessBonus { get; set; }
 
             [JsonProperty]
-            [Limit(1.0f, 10.0f)]
+            [Limit(0.0f, 10.0f)]
             [Option("Critter Fertility Bonus", "Fertility per cycle after smelling the flowers.")]
             public float CritterFertilityBonus { get; set; }
 

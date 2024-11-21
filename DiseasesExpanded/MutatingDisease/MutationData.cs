@@ -5,7 +5,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Klei.AI;
-using UnityEngine;
 
 namespace DiseasesExpanded
 {
@@ -228,7 +227,7 @@ namespace DiseasesExpanded
         {
             float radiation = 2;
             RadiationMonitor.Instance smi = infestedHost.GetSMI<RadiationMonitor.Instance>();
-            if (smi != null && DlcManager.IsExpansion1Active())
+            if (smi != null && DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 radiation = smi.sm.radiationExposure.Get(smi) / 100;
 
             float acc = GetAccelerationParameter();

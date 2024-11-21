@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SignsTagsAndRibbons
 {
-    class GeyserTagConfig : IBuildingConfig
+    public class GeyserTagConfig : IBuildingConfig
     {
         public const string ID = "GeyserTag";
 
