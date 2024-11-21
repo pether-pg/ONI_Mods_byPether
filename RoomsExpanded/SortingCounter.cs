@@ -9,13 +9,13 @@ namespace RoomsExpanded
     {
         public static readonly int PlumbedBathroomSortKey = 2;
         public static readonly int BedroomSortKey = 4;
-        public static readonly int FarmSortKey = 11;
-        public static readonly int CreaturePenSortKey = 12;
+        public static readonly int KitchenSortKey = 7;
+        public static readonly int FarmSortKey = 12;
+        public static readonly int CreaturePenSortKey = 13;
         public static readonly int LaboratorySortKey = 14;
         public static readonly int RecreationRoom = 15;
         public static readonly int ParkSortKey = 16;
         public static readonly int MuseumSortKey = ParkSortKey + 2;
-        public static readonly int KitchenSortKey = 6;
 
         private static int value = 0;
 

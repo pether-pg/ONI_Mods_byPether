@@ -96,15 +96,6 @@ namespace DiseasesExpanded
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_Replication, scale);
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_ExposureThreshold, scale);
                         break;
-                    case ColdBrain.ID: // more common
-                        MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Stress, scale);
-                        MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Attributes, scale);
-                        MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_TemperatureResistance, scale);
-                        MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_ExposureThreshold, scale);
-                        break;
-                    case HeatRash.ID:
-                        MutationData.Instance.Reinforce(MutationVectors.Vectors.Res_TemperatureResistance, 3 * scale);
-                        break;
                     case Sunburn.ID:
                         MutationData.Instance.Reinforce(MutationVectors.Vectors.Att_Stamina, 3 * scale);
                         break;

@@ -15,7 +15,7 @@ namespace DiseasesExpanded
                 return;
             int count = prime.DiseaseCount;
             int delta = (prime.DiseaseIdx == GermIdx.MedicalNanobotsIdx) ? CalculateDeltaGerms(count) : NanobotBottleConfig.SPAWNED_BOTS_COUNT;
-            prime.AddDisease(prime.DiseaseIdx, delta, "Nanobot Revival");
+            prime.AddDisease(GermIdx.MedicalNanobotsIdx, delta, "Nanobot Revival");
         }
         
         private int CalculateDeltaGerms(int currentGerms)

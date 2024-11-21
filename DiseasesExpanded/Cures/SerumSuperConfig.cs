@@ -30,6 +30,9 @@ namespace DiseasesExpanded
             serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Botanist.Id, attributeChange, STRINGS.CURES.SUPERSERUM.NAME));
             serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Ranching.Id, attributeChange, STRINGS.CURES.SUPERSERUM.NAME));
 
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
+                serumEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.SpaceNavigation.Id, attributeChange, STRINGS.CURES.SUPERSERUM.NAME));
+
             return serumEffect;
         }
 
@@ -74,7 +77,8 @@ namespace DiseasesExpanded
                 description = Desc,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { VaccineApothecaryConfig.ID },
-                sortOrder = 1
+                sortOrder = 1,
+                requiredTech = "MedicineIV"
             };
         }
     }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
+using UnityEngine;
 using KSerialization;
 
 namespace SignsTagsAndRibbons
@@ -15,6 +17,8 @@ namespace SignsTagsAndRibbons
 
         [Serialize]
         public int selectedIndex = 0;
+
+        const string VARIANT_KEY = "Selected_Variant";
 
 
         protected override void OnSpawn()
@@ -37,41 +41,36 @@ namespace SignsTagsAndRibbons
             kbac.Play(variant);
         }
 
-        /*
-         * Previous solution
-         * Might be reused one day
-         * 
-
-        protected override void OnCleanUp()
+        public string GetCurrentVariant()
         {
-            this.Unsubscribe(493375141);
-            base.OnCleanUp();
+            if (AnimationNames == null || AnimationNames.Count <= selectedIndex)
+                return string.Empty;
+            return AnimationNames[selectedIndex];
         }
 
-        protected override void OnPrefabInit()
+        public static void Blueprints_SetData(GameObject source, JObject data)
         {
-            base.OnPrefabInit();
-            this.Subscribe(493375141, new System.Action<object>(this.OnRefreshUserMenu));
+            if (source.TryGetComponent<SelectableSign>(out var behavior))
+            {
+                var t1 = data.GetValue(VARIANT_KEY);
+                if (t1 == null)
+                    return;
+
+                string variant = t1.Value<string>();
+                behavior.SetVariant(variant);
+            }
         }
 
-        private void OnRefreshUserMenu(object obj)
+        public static JObject Blueprints_GetData(GameObject source)
         {
-            string nextIcon = "action_direction_right";
-            string backIcon = "action_direction_left";
-
-            int count = animsWithNames.Keys.Count;
-            if (count > 1) Game.Instance?.userMenu?.AddButton(this.gameObject, new KIconButtonMenu.ButtonInfo(nextIcon, INTERNALSTRINGS.NEXT_ART_BUTTON.TEXT, new System.Action(this.OnNextArtClicked), Action.BuildMenuKeyQ, tooltipText: ((string)INTERNALSTRINGS.NEXT_ART_BUTTON.TOOLTIP)));
-            if (count > 1) Game.Instance?.userMenu?.AddButton(this.gameObject, new KIconButtonMenu.ButtonInfo(backIcon, INTERNALSTRINGS.BACK_ART_BUTTON.TEXT, new System.Action(this.OnBackArtClicked), Action.BuildMenuKeyR, tooltipText: ((string)INTERNALSTRINGS.BACK_ART_BUTTON.TOOLTIP)));
+            if (source.TryGetComponent<SelectableSign>(out var behavior))
+            {
+                return new JObject()
+                {
+                    { VARIANT_KEY, behavior.GetCurrentVariant()}
+                };
+            }
+            return null;
         }
-
-        private void OnNextArtClicked()
-        {
-            // Select next variant
-        }
-
-        private void OnBackArtClicked()
-        {
-            // Select previous variant
-        }*/
     }
 }

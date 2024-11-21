@@ -37,7 +37,8 @@ namespace DiseasesExpanded
                 description = STRINGS.CURES.SUNBURNCURE.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
-                sortOrder = 10
+                sortOrder = 12,
+                requiredTech = "MedicineII"
             };
 
             MedicineInfo info = new MedicineInfo(ID, null, MedicineInfo.MedicineType.CureSpecific, DoctorStationConfig.ID, new string[] { Sunburn.ID });

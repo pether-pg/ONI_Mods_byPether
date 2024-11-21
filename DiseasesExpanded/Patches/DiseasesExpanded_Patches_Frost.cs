@@ -42,7 +42,7 @@ namespace DiseasesExpanded
         [HarmonyPatch("OnCompleteWork")]
         public static class SaunaWorkables_OnCompleteWork_Patch
         {
-            public static void Postfix(Worker worker)
+            public static void Postfix(WorkerBase worker)
             {
                 Klei.AI.Sicknesses sicknesses = worker.GetSicknesses();
                 string curedSickness = FrostSickness.ID;
@@ -59,7 +59,7 @@ namespace DiseasesExpanded
         [HarmonyPatch("OnCompleteWork")]
         public static class HotTubWorkable_OnCompleteWork_Patch
         {
-            public static void Postfix(Worker worker)
+            public static void Postfix(WorkerBase worker)
             {
                 Klei.AI.Sicknesses sicknesses = worker.GetSicknesses();
                 string curedSickness = FrostSickness.ID;

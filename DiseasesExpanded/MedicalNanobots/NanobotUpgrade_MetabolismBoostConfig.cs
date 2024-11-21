@@ -6,6 +6,7 @@ namespace DiseasesExpanded
     class NanobotUpgrade_MetabolismBoostConfig : IEntityConfig
     {
         public const string ID = "NanobotUpgrade_MetabolismBoost";
+        public const MutationVectors.Vectors VECTOR = MutationVectors.Vectors.Att_Calories;
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
@@ -16,7 +17,7 @@ namespace DiseasesExpanded
         public void OnSpawn(GameObject inst)
         {
             if (MedicalNanobotsData.IsReadyToUse())
-                MedicalNanobotsData.Instance.IncreaseDevelopment(MutationVectors.Vectors.Att_Calories);
+                MedicalNanobotsData.Instance.IncreaseDevelopment(VECTOR);
             PopFXManager.Instance.SpawnFX(PopFXManager.Instance.sprite_Plus, STRINGS.NANOBOTDEVELOPMENT.CALORIES.NAME, inst.transform);
             Util.KDestroyGameObject(inst);
         }
@@ -50,19 +51,19 @@ namespace DiseasesExpanded
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                MedicalNanobotsData.MainIngridient,
-                new ComplexRecipe.RecipeElement(SimHashes.RefinedCarbon.CreateTag(), MedicalNanobotsData.RECIPE_MASS_LARGE)
+                RecipeUpdater.MainIngridient,
+                RecipeUpdater.GetSecondaryIngridient(VECTOR)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
                 new ComplexRecipe.RecipeElement(ID, 1, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
-            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(MedicalNanobotsData.FABRICATOR_ID, ingredients, results), ingredients, results)
+            ComplexRecipe recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(RecipeUpdater.FABRICATOR_ID, ingredients, results), ingredients, results)
             {
-                time = MedicalNanobotsData.RECIPE_TIME,
+                time = RecipeUpdater.RECIPE_TIME,
                 description = STRINGS.NANOBOTDEVELOPMENT.CALORIES.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
-                fabricators = new List<Tag>() { MedicalNanobotsData.FABRICATOR_ID },
+                fabricators = new List<Tag>() { RecipeUpdater.FABRICATOR_ID },
                 sortOrder = 21
             };
         }

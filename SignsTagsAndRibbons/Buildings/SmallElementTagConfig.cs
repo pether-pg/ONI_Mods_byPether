@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SignsTagsAndRibbons
 {
-    class SmallElementTagConfig : IBuildingConfig
+    public class SmallElementTagConfig : IBuildingConfig
     {
         public const string ID = "SmallElementTag";
 

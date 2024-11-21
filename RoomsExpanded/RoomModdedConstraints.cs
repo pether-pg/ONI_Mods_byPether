@@ -24,6 +24,7 @@ namespace RoomsExpanded
             "Cylindrica",       // from DLC - Bliss Burst
             "WineCups" ,        // from DLC - Mellow Mallow
             "ToePlant",         // from DLC - Tranquil Toes
+            "IceFlower",        // from Frost Pack DLC
             "FrostBlossom",     // from Omni Flora
             "IcyShroom",        // from Omni Flora
             "MyrthRose",        // from Omni Flora

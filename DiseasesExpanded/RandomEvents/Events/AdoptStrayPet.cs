@@ -17,7 +17,7 @@ namespace DiseasesExpanded.RandomEvents.Events
             AppearanceWeight = weight;
             DangerLevel = Helpers.EstimateGermDanger(germIdx);
 
-            Condition = new Func<object, bool>(data => !string.IsNullOrEmpty(GetPetId(germIdx)) && DlcManager.IsExpansion1Active() && GameClock.Instance.GetCycle() > (int)DangerLevel * 100);
+            Condition = new Func<object, bool>(data => !string.IsNullOrEmpty(GetPetId(germIdx)) && DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && GameClock.Instance.GetCycle() > (int)DangerLevel * 100);
 
             Event = new Action<object>(
                 data =>

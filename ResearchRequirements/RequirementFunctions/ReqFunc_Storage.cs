@@ -34,9 +34,9 @@ namespace ResearchRequirements
                 StoredGases.Add(ElementLoader.FindElementByHash(SimHashes.Steam).tag, 0);
 
             //DLC Techs:
-            if (DlcManager.IsExpansion1Active() && !TechRequirements.Instance.GetGameTech("CryoFuelPropulsion").IsComplete())
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && !TechRequirements.Instance.GetGameTech("CryoFuelPropulsion").IsComplete())
                 StoredLiquids.Add(ElementLoader.FindElementByHash(SimHashes.LiquidHydrogen).tag, 0);
-            if (DlcManager.IsExpansion1Active() && !TechRequirements.Instance.GetGameTech("HydrocarbonPropulsion").IsComplete())
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID) && !TechRequirements.Instance.GetGameTech("HydrocarbonPropulsion").IsComplete())
                 StoredLiquids.Add(ElementLoader.FindElementByHash(SimHashes.LiquidOxygen).tag, 0);
         }
 

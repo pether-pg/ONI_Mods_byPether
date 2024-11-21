@@ -225,7 +225,7 @@ namespace ResearchRequirements
 
         public static int RadboltTravelDistance()
         {
-            if(!DlcManager.IsExpansion1Active())
+            if(!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return 0;
             ColonyAchievementTracker tracker = SaveGame.Instance.GetComponent<ColonyAchievementTracker>();
             if (tracker == null)

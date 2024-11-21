@@ -61,7 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModInfo.cs" />
-    <Compile Include="Patches.cs" />
+    <Compile Include="RealCaloriesInfo_Patches.cs" />
+    <Compile Include="RealCaloriesInfo_Patches_Obsolete.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -3,7 +3,6 @@ using TUNING;
 using UnityEngine;
 
 namespace DiseasesExpanded.RandomEvents.Configs
-
 {
     class LittleSunshineConfig : IEntityConfig
     {
@@ -14,8 +13,8 @@ namespace DiseasesExpanded.RandomEvents.Configs
 
         public GameObject CreatePrefab()
         {
-            string name = "Little Sunshine";
-            string desc = "Shining light of hope and joy.";
+            string name = STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.NAME;
+            string desc = STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.DESC;
             EffectorValues tieR0 = TUNING.DECOR.BONUS.TIER0;
             KAnimFile anim = Assets.GetAnim((HashedString)"lightbug_kanim");
             EffectorValues decor = tieR0;

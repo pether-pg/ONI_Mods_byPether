@@ -8,24 +8,24 @@ namespace DiseasesExpanded
         public const string ID = "VaccineApothecary";
         public const float RecipeTime = 100;
         public const float MutationRecipeTime = 600;
-        public const float UraniumOreCost = 20f;
-        public const float RefinedCarbonCost = 200f;
+        public const float UraniumOreCost = 1f;
+        public const float RefinedCarbonCost = 100f;
 
         public static ComplexRecipe.RecipeElement GetMainIngridient()
         {
-            if(DlcManager.IsExpansion1Active())
+            if(DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return new ComplexRecipe.RecipeElement(SimHashes.UraniumOre.CreateTag(), VaccineApothecaryConfig.UraniumOreCost);
             return new ComplexRecipe.RecipeElement(SimHashes.RefinedCarbon.CreateTag(), VaccineApothecaryConfig.RefinedCarbonCost);
         }
 
         public static string GetAdvancedApothecaryId()
         {
-            if (DlcManager.IsExpansion1Active())
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                 return ID;
             return ApothecaryConfig.ID;
         }
 
-        public override string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public override string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
 
         public override BuildingDef CreateBuildingDef()
         {

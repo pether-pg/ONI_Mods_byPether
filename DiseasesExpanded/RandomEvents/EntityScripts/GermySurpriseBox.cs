@@ -20,7 +20,7 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
 			StringEntry OniTwitchName;
 			if (Strings.TryGet("STRINGS.ONITWITCH.UI.SURPRISE_BOX_SIDE_SCREEN.NAME", out OniTwitchName))
 				return OniTwitchName.String;
-			return "Open";
+            return STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TEXT;
 		}
 
 		private string TryGetTooltip()
@@ -28,7 +28,7 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
 			StringEntry OniTwitchName;
 			if (Strings.TryGet("STRINGS.ONITWITCH.UI.SURPRISE_BOX_SIDE_SCREEN.TOOLTIP", out OniTwitchName))
 				return OniTwitchName.String;
-			return "Open this box to receive your surprise!";
+			return STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TOOLTIP;
 		}
 
 		public int HorizontalGroupID()
