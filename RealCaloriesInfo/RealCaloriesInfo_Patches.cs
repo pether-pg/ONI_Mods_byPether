@@ -11,9 +11,6 @@ namespace RealCaloriesInfo
         [HarmonyPatch("InternalRefresh")]
         public class MeterScreen_Rations_InternalRefresh_Patch
         {
-            // Throws System.FormatException:
-            // Method virtual System.Void MeterScreen_Rations::InternalRefresh() cannot be patched.
-            // Reason: Invalid IL code in (wrapper dynamic-method) MeterScreen_Rations:MeterScreen_Rations.InternalRefresh_Patch0 
             public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
             {
                 return SupportMethods.SharedTranspiler(instructions);
@@ -39,6 +36,7 @@ namespace RealCaloriesInfo
             {
                 foreach (var instruction in instructions)
                 {
+                    // if CountAmount would be called, instead call my method that will do all the calculations
                     if (instruction.operand is MethodInfo m && m == countAmountMethodInfo)
                     {
                         yield return new CodeInstruction(OpCodes.Call, myExtraCodeMethodInfo);
@@ -47,7 +45,10 @@ namespace RealCaloriesInfo
                         yield return instruction;
                 }
             }
-            public static float CountAmountAlternative(Dictionary<string, float> unitCountByID, WorldInventory inventory, bool excludeUnreachable)
+
+            // 1st argument is required to satisfy callvirt - it requires instance of an object
+            // following arguments are the same as in WorldResourceAmountTracker<RationTracker>.CountAmount() to use the same stack as the original method
+            public static float CountAmountAlternative(object justForCallvirt, Dictionary<string, float> unitCountByID, WorldInventory inventory, bool excludeUnreachable)
             {
                 float num = 0.0f;
                 ICollection<Pickupable> pickupables = inventory.GetPickupables(GameTags.Edible);
@@ -71,13 +72,12 @@ namespace RealCaloriesInfo
                         }
                     }
                 }
-                return 69_420_000; // meme debug value
                 return num;
             }
 
             public static float GetPermittedCalories(Edible edible, WorldInventory inventory)
             {
-                if (IsAlwaysPermitted(edible, GetWorldId(inventory)))
+                if (IsPermitedAtLeastOnce(edible, GetWorldId(inventory)))
                     return edible.Calories;
                 return 0;
             }
@@ -94,17 +94,32 @@ namespace RealCaloriesInfo
                 {
                     if (!(mi.GetMyWorldId() == worldId))
                         continue;
+
                     ConsumableConsumer consumer = mi.gameObject.GetComponent<ConsumableConsumer>();
                     if (consumer == null)
-                    {
-                        Debug.Log($"{ModInfo.Namespace}: Could not get ConsumableConsumer for minion {mi.name}");
                         continue;
-                    }
 
                     if (!consumer.IsPermitted(edible.FoodID))
                         return false;
                 }
                 return true;
+            }
+
+            public static bool IsPermitedAtLeastOnce(Edible edible, int worldId)
+            {
+                foreach (MinionIdentity mi in Components.MinionIdentities)
+                {
+                    if (!(mi.GetMyWorldId() == worldId))
+                        continue;
+
+                    ConsumableConsumer consumer = mi.gameObject.GetComponent<ConsumableConsumer>();
+                    if (consumer == null)
+                        continue;
+
+                    if (consumer.IsPermitted(edible.FoodID))
+                        return true;
+                }
+                return false;
             }
         }
     }
