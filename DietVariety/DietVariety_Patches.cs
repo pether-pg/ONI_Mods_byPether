@@ -1,5 +1,6 @@
 using HarmonyLib;
 using UnityEngine;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -57,6 +58,7 @@ namespace DietVariety
 
         [HarmonyPatch(typeof(FetchManager))]
         [HarmonyPatch("FindEdibleFetchTarget")]
+        [HarmonyPatch(new Type[] {typeof(Storage), typeof(HashSet<Tag>), typeof(Tag[])})]
         public class FetchManager_FindEdibleFetchTarget_Patch
         {
             static FieldInfo pickupPathCostFieldInfo = AccessTools.Field(typeof(FetchManager.Pickup), nameof(FetchManager.Pickup.PathCost));
