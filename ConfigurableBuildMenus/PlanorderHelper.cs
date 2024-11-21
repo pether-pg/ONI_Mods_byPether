@@ -106,19 +106,26 @@ namespace ConfigurableBuildMenus
                 return false;
             }
 
-            // Note: RequiredDlcIds in fact means "Aviable In Dlc"
-            List<string> buildingAviability = new List<string>();
-            foreach (string dlc in def.RequiredDlcIds)
-                buildingAviability.Add(dlc);
+            List<string> requiredDLCs = new List<string>();
+            List<string> forbiddenDLCs = new List<string>();
 
-            if (buildingAviability.Contains(DlcManager.VANILLA_ID))
-                return true;
+            if (def.RequiredDlcIds != null)
+                foreach (string dlc in def.RequiredDlcIds)
+                    requiredDLCs.Add(dlc);
 
-            foreach (string actve in DlcManager.GetActiveDLCIds())
-                if (buildingAviability.Contains(actve))
-                    return true;
+            if (def.ForbiddenDlcIds != null)
+                foreach (string dlc in def.ForbiddenDlcIds)
+                    forbiddenDLCs.Add(dlc);
 
-            return false;
+            foreach (string dlc in requiredDLCs)
+                if (!DlcManager.IsContentSubscribed(dlc))
+                    return false;
+
+            foreach (string dlc in forbiddenDLCs)
+                if (DlcManager.IsContentSubscribed(dlc))
+                    return false;
+
+            return true;
         }
 
         public static void Remove(Config.MoveBuildingItem movedItem)
