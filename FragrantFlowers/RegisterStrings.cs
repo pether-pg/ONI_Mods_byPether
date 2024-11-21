@@ -62,5 +62,13 @@ namespace FragrantFlowers
             Strings.Add($"STRINGS.BUILDINGS.STATUSITEMS.{id.ToUpperInvariant()}.NAME", name);
             Strings.Add($"STRINGS.BUILDINGS.STATUSITEMS.{id.ToUpperInvariant()}.TOOLTIP", tooltip);
         }
+
+        public static void MakeCodexStrings(string plantId, string name, string subtitle, string body = "")
+        {
+            Strings.Add($"STRINGS.CODEX.{plantId.ToUpperInvariant()}.TITLE", name);
+            Strings.Add($"STRINGS.CODEX.{plantId.ToUpperInvariant()}.SUBTITLE", subtitle);
+            if (body != "")
+                Strings.Add($"STRINGS.CODEX.{plantId.ToUpperInvariant()}.BODY.CONTAINER1", body);
+        }
     }
 }
