@@ -739,14 +739,6 @@ namespace DiseasesExpanded
             }
         }
 
-        public class CODEX
-        {
-            public class CATEGORY
-            {
-                public static LocString MEDICINE = UI.FormatAsLink("Medicine", nameof(MEDICINE));
-            }
-        }
-
         public class RANDOM_EVENTS_CONFINGS
         {
             public class FLUFFYPUFFY

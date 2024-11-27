@@ -79,8 +79,6 @@ namespace DiseasesExpanded
 
                 AssetLoader.LoadAssets();
 
-                BasicModUtils.MakeCodexCategoryString("MEDICINE", STRINGS.CODEX.CATEGORY.MEDICINE);
-
                 BasicModUtils.MakeCuresStrings(TestSampleConfig.ID, STRINGS.GERMFLASKSAMPLE.NAME, STRINGS.GERMFLASKSAMPLE.DESC, STRINGS.GERMFLASKSAMPLE.DESC);
                 BasicModUtils.MakeCuresStrings(AlienSicknessCureConfig.ID, STRINGS.CURES.ALIENCURE.NAME, STRINGS.CURES.ALIENCURE.DESC, STRINGS.CURES.ALIENCURE.DESC);
                 BasicModUtils.MakeCuresStrings(AntihistamineBoosterConfig.ID, STRINGS.CURES.ANTIHISTAMINEBOOSTER.NAME, STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC, STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC);
@@ -99,11 +97,11 @@ namespace DiseasesExpanded
 
             public static void Postfix()
             {
-
                 BasicModUtils.MakeCuresStrings(GassyVaccineConfig.ID, GassyVaccineConfig.Name, GassyVaccineConfig.Desc, GassyVaccineConfig.Desc);
                 BasicModUtils.MakeCuresStrings(SlimelungVaccineConfig.ID, SlimelungVaccineConfig.Name, SlimelungVaccineConfig.Desc, SlimelungVaccineConfig.Desc);
                 BasicModUtils.MakeCuresStrings(AllergyVaccineConfig.ID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, AllergyVaccineConfig.Desc);
                 BasicModUtils.MakeCuresStrings(ZombieSporesVaccineConfig.ID, ZombieSporesVaccineConfig.Name, ZombieSporesVaccineConfig.Desc, ZombieSporesVaccineConfig.Desc);
+                BasicModUtils.MakeCuresStrings(HungermsVaccineConfig.ID, HungermsVaccineConfig.Name, HungermsVaccineConfig.Desc, HungermsVaccineConfig.Desc);
 
                 float cycle = 600;
                 float cycle2 = 2 * cycle;
