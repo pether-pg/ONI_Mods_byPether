@@ -13,10 +13,12 @@ namespace DiseasesExpanded
 
         public static Effect GetEffect()
         {
-            Effect effect = new Effect(EFFECT_ID, EFFECT_ID, EFFECT_ID, 5 * 600, true, true, false);
-            effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier("StressDelta", stressPerSecond, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Sneezyness.Id, 1, EFFECT_ID));
+            Effect effect = new Effect(EFFECT_ID, STRINGS.CURES.ALIENCURE.NAME, STRINGS.CURES.ALIENCURE.DESC, 5 * 600, true, true, false);
+            effect.SelfModifiers = new List<AttributeModifier>
+            {
+                new AttributeModifier("StressDelta", stressPerSecond, STRINGS.CURES.ALIENCURE.NAME),
+                new AttributeModifier(Db.Get().Attributes.Sneezyness.Id, 1, STRINGS.CURES.ALIENCURE.NAME)
+            };
             return effect;
         }
 

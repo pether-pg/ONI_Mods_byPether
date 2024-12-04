@@ -18,7 +18,7 @@ namespace DiseasesExpanded
             float scale = Settings.Instance.HungerGerms.SeverityScale;
             Effect effect = new Effect(CRITTER_EFFECT_ID, STRINGS.DISEASES.HUNGERSICKNESS.NAME, STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION, DURATION, true, true, true);
             effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().CritterAttributes.Metabolism.Id, 100 * scale * (Settings.Instance.RebalanceForDiseasesRestored ? 3 : 1)));
+            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().CritterAttributes.Metabolism.Id, 100 * scale * (Settings.Instance.RebalanceForDiseasesRestored ? 3 : 1), STRINGS.DISEASES.HUNGERSICKNESS.NAME));
             return effect;
         }
 
