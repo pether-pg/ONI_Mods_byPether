@@ -11,7 +11,6 @@ namespace SignsTagsAndRibbons
     // Using Aki's code from https://github.com/aki-art/ONI-Mods/blob/master/Futility/FUI/SideScreen.cs
     class FUI_SideScreen
     {
-
         public static GameObject AddClonedSideScreen<T>(string name, string originalName, Type originalType, SidescreenTabTypes targetTab = SidescreenTabTypes.Config)
         {
             bool elementsReady = GetElements(out List<SideScreenRef> screens, out var tabs);
