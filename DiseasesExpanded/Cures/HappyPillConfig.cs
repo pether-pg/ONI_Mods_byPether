@@ -16,20 +16,22 @@ namespace DiseasesExpanded
         public static Effect GetEffect()
         {
             Effect effect = new Effect(EFFECT_ID, STRINGS.CURES.HAPPYPILL.NAME, STRINGS.CURES.HAPPYPILL.DESC, 600, true, true, false);
-            effect.SelfModifiers = new List<AttributeModifier>();
-            effect.SelfModifiers.Add(new AttributeModifier("StressDelta", stressPerSecond, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier("QualityOfLife", moraleBonus, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Athletics.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Strength.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Digging.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Construction.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Art.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Caring.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Learning.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Machinery.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Cooking.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Botanist.Id, attributePenalty, EFFECT_ID));
-            effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.Ranching.Id, attributePenalty, EFFECT_ID));
+            effect.SelfModifiers = new List<AttributeModifier>
+            {
+                new AttributeModifier("StressDelta", stressPerSecond, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier("QualityOfLife", moraleBonus, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Athletics.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Strength.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Digging.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Construction.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Art.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Caring.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Learning.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Machinery.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Cooking.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Botanist.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME),
+                new AttributeModifier(Db.Get().Attributes.Ranching.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME)
+            };
 
             return effect;
         }
