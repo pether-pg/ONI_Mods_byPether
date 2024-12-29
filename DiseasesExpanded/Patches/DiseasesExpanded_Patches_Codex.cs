@@ -81,6 +81,16 @@ namespace DiseasesExpanded
                     {
                         new CodexText(desc, CodexTextStyle.Body)
                     };
+
+                var pillDescriptors = go.GetComponent<MedicinalPill>().GetDescriptors(go);
+                if (pillDescriptors.Count > 0)
+                {
+                    content.Add(new CodexText((string)CODEX.HEADERS.EQUIPMENTEFFECTS, CodexTextStyle.Subtitle));
+                    foreach (Descriptor descriptor in pillDescriptors)
+                        content.Add(new CodexTextWithTooltip("    " + descriptor.text, descriptor.tooltipText));
+                    content.Add(new CodexSpacer());
+                }
+
                 ContentContainer contentContainer = new ContentContainer(content, ContentContainer.ContentLayout.Vertical);
                 contentContainerList.Add(contentContainer);
 
