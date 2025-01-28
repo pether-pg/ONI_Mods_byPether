@@ -52,6 +52,7 @@ namespace BiobotUpgrades
 
         [HarmonyPatch(typeof(ModifierSet))]
         [HarmonyPatch(nameof(ModifierSet.CreateTrait))]
+        [HarmonyPatch(new System.Type[] { typeof(string), typeof(string), typeof(string), typeof(string), typeof(bool), typeof(ChoreGroup[]), typeof(bool), typeof(bool) })]
         public class ModifierSet_CreateTrait_Patch
         {
             public static void Prefix(string id, ref ChoreGroup[] disabled_chore_groups)
