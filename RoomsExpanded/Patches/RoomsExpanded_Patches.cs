@@ -6,8 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using STRINGS;
 using System.Reflection;
-
-
+using Klei.AI;
 
 namespace RoomsExpanded
 {
@@ -47,6 +46,15 @@ namespace RoomsExpanded
                     Db_Initialize_Patch.Patched = true;
                 }
             }
+
+            public static void Postfix()
+            {
+                Effect BionicUpkeepEffect = new Effect(RoomTypeBionicUpkeepData.EffectId, STRINGS.ROOMS.EFFECTS.BIONIC_UPKEEP.NAME, STRINGS.ROOMS.EFFECTS.BIONIC_UPKEEP.DESCRIPTION, 1800, false, true, false);
+                BionicUpkeepEffect.SelfModifiers = new List<AttributeModifier>();
+                BionicUpkeepEffect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.QualityOfLife.Id, 2f, STRINGS.ROOMS.EFFECTS.BIONIC_UPKEEP.NAME));
+
+                Db.Get().effects.Add(BionicUpkeepEffect);
+            }
         }
 
         // This method of patching causes an issue with KLEI's translations of Room Constraints. 
@@ -66,7 +74,6 @@ namespace RoomsExpanded
                 SortingCounter.Init();
 
                 Debug.Log("RoomsExpanded: RoomTypes_Constructor_Patch Postfix");
-                //RoomsExpanded_Patches_Laboratory.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Bathroom.AddRoom(ref __instance);
                 RoomsExpanded_Patches_Nursery.AddRoom(ref __instance);
                 RoomsExpanded_Patches_NurseryGenetic.AddRoom(ref __instance);
@@ -82,7 +89,8 @@ namespace RoomsExpanded
                 RoomsExpanded_Patches_MuseumSpace.AddRoom(ref __instance);
                 RoomsExpanded_Patches_MuseumHistory.AddRoom(ref __instance);
                 RoomsExpanded_Patches_MissionControl.AddRoom(ref __instance);
-                //RoomsExpanded_Patches_PrivateRoom.AddRoom(ref __instance);
+                RoomsExpanded_Patches_BionicUpkeep.AddRoom(ref __instance);
+                RoomsExpanded_Patches_DataMining.AddRoom(ref __instance);
 
                 // Temporary "Room Size" mod functionality restored for DLC
                 // Must be removed once "Room Size" is updated for DLC
@@ -116,10 +124,10 @@ namespace RoomsExpanded
 
                 // overwritten by later RoomType.GetRoomEffectsString(), see patch below
                 if (Settings.Instance.Bathroom.IncludeRoom)
-                    ROOMS.TYPES.PLUMBEDBATHROOM.EFFECT = string.Format("\n   {0}", RoomTypes_AllModded.BathroomRoom.effect);
+                    ROOMS.TYPES.PLUMBEDBATHROOM.EFFECT = string.Format("   {0}", RoomTypes_AllModded.BathroomRoom.effect);
 
                 if (Settings.Instance.Bathroom.IncludeRoom)
-                    STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT += string.Format("\n   {0}", RoomTypes_AllModded.BathroomRoom.effect);
+                    STRINGS.ROOMS.TYPES.PRIVATEROOM.EFFECT += string.Format("   {0}", RoomTypes_AllModded.BathroomRoom.effect);
             }
         }
 
@@ -208,8 +216,6 @@ namespace RoomsExpanded
                     namedLookup.Add(RoomTypeIndustrialData.RoomId, Settings.Instance.Industrial.RoomColor);
                 if (!namedLookup.ContainsKey(RoomTypeKitchenetteData.RoomId))
                     namedLookup.Add(RoomTypeKitchenetteData.RoomId, Settings.Instance.Kitchenette.RoomColor);
-                //if (!namedLookup.ContainsKey(RoomTypeLaboratoryData.RoomId))
-                //    namedLookup.Add(RoomTypeLaboratoryData.RoomId, Settings.Instance.Laboratory.RoomColor);
                 if (!namedLookup.ContainsKey(RoomTypeMuseumData.RoomId))
                     namedLookup.Add(RoomTypeMuseumData.RoomId, Settings.Instance.Museum.RoomColor);
                 if (!namedLookup.ContainsKey(RoomTypeMuseumHistoryData.RoomId))
@@ -220,10 +226,12 @@ namespace RoomsExpanded
                     namedLookup.Add(RoomTypeNurseryData.RoomId, Settings.Instance.Nursery.RoomColor);
                 if (!namedLookup.ContainsKey(RoomTypeNurseryGeneticData.RoomId))
                     namedLookup.Add(RoomTypeNurseryGeneticData.RoomId, Settings.Instance.NurseryGenetic.RoomColor);
-                //if (!namedLookup.ContainsKey(RoomTypePrivateRoomData.RoomId))
-                //    namedLookup.Add(RoomTypePrivateRoomData.RoomId, Settings.Instance.PrivateBedroom.RoomColor);
                 if (!namedLookup.ContainsKey(RoomTypeMissionControlRoomData.RoomId))
                     namedLookup.Add(RoomTypeMissionControlRoomData.RoomId, Settings.Instance.MissionControl.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeBionicUpkeepData.RoomId))
+                    namedLookup.Add(RoomTypeBionicUpkeepData.RoomId, Settings.Instance.BionicWorkshop.RoomColor);
+                if (!namedLookup.ContainsKey(RoomTypeDataMiningData.RoomId))
+                    namedLookup.Add(RoomTypeDataMiningData.RoomId, Settings.Instance.DataMiningCenter.RoomColor);
 
                 //LogColors(namedLookup);
             }

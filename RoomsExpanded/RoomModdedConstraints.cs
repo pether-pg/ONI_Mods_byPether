@@ -286,6 +286,18 @@ namespace RoomsExpanded
                                                                 name: STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.NAME,
                                                                 description: STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.DESCRIPTION);
 
+        public static RoomConstraints.Constraint DATA_MINER = new RoomConstraints.Constraint(
+                                                                bc => bc.HasTag(DataMinerConfig.ID),
+                                                                null,
+                                                                name: STRINGS.ROOMS.CRITERIA.DATA_MINER.NAME,
+                                                                description: STRINGS.ROOMS.CRITERIA.DATA_MINER.DESCRIPTION);
+
+        public static RoomConstraints.Constraint ROBO_MINER = new RoomConstraints.Constraint(
+                                                                bc => bc.HasTag(AutoMinerConfig.ID),
+                                                                null,
+                                                                name: STRINGS.ROOMS.CRITERIA.ROBO_MINER.NAME,
+                                                                description: STRINGS.ROOMS.CRITERIA.ROBO_MINER.DESCRIPTION);
+
         private static bool IsDecorativePlant(KPrefabID plant)
         {
             return DecorativeNames.Contains(plant.name) || plant.HasTag(MorePlantsTag);
