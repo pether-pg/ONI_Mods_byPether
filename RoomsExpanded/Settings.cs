@@ -107,6 +107,8 @@ namespace RoomsExpanded
             HospitalUpdate = new PlainRoomSettings(true, 96, ColorPalette.RoomHospital);
             NurseryGenetic = new RoomSettings(true, 96, ColorPalette.RoomAgricultural, 0.2f);
             MissionControl = new PlainRoomSettings(true, 96, ColorPalette.RoomScience);
+            BionicWorkshop = new PlainRoomSettings(DlcManager.IsContentSubscribed(DlcManager.DLC3_ID), 64, ColorPalette.RoomBathroom);
+            DataMiningCenter = new RoomSettings(DlcManager.IsContentSubscribed(DlcManager.DLC3_ID), 96, ColorPalette.RoomScience, 0.2f);
 
             ResizeMinRoomSize12 = 12;
             ResizeMinRoomSize24 = 24;
@@ -181,6 +183,14 @@ namespace RoomsExpanded
         [Option("Mission Control", category: "New Room - Mission Control")]
         public PlainRoomSettings MissionControl { get; set; }
 
+        [JsonProperty]
+        [Option("Bionic Workshop", category: "New Room - Bionic Workshop")]
+        public PlainRoomSettings BionicWorkshop { get; set; }
+
+        [JsonProperty]
+        [Option("Data Mining Center", category: "New Room - Data Mining Center")]
+        public RoomSettings DataMiningCenter { get; set; }
+
         //[JsonProperty]
         //[Option("History Museum", category: "New Room - History Museum")]
         public RoomSettings MuseumHistory { get; set; }
@@ -241,6 +251,7 @@ namespace RoomsExpanded
             max = Math.Max(max, HospitalUpdate.MaxSize);
             max = Math.Max(max, MissionControl.MaxSize);
             max = Math.Max(max, NurseryGenetic.MaxSize);
+            max = Math.Max(max, BionicWorkshop.MaxSize);
 
             return max;
         }

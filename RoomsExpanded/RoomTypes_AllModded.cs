@@ -171,6 +171,31 @@ namespace RoomsExpanded
             }
         }
 
+        private static RoomType prv_BionicUpkeep = null;
+
+        public static RoomType BionicUpkeepRoom
+        {
+            get
+            {
+                if (prv_BionicUpkeep == null)
+                    prv_BionicUpkeep = new RoomTypeBionicUpkeepData().GetRoomType();
+                return prv_BionicUpkeep;
+            }
+        }
+
+        private static RoomType prv_DataMining = null;
+
+        public static RoomType DataMining
+        {
+            get
+            {
+                if (prv_DataMining == null)
+                    prv_DataMining = new RoomTypeDataMiningData().GetRoomType();
+                return prv_DataMining;
+            }
+        }
+        
+
         private static RoomType prv_Industrial = null;
         public static RoomType IndustrialRoom(RoomType[] upgrades)
         {

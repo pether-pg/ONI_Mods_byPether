@@ -52,11 +52,12 @@ namespace ResearchRequirements
             foreach (IUsable toilet in Components.Toilets)
                 exp = exp + GetElementExposition(Grid.PosToCell((KMonoBehaviour)toilet), 2, 3);
 
-            foreach (Sleepable sleepable in Components.Sleepables)
-                if (sleepable.name == "BedComplete")
-                    exp = exp + GetElementExposition(Grid.PosToCell((KMonoBehaviour)sleepable), 2, 2);
-                else
-                    exp = exp + GetElementExposition(Grid.PosToCell((KMonoBehaviour)sleepable), 4, 2);
+            foreach (int worldID in ReqFunc_Space.GetAllWorldIds())
+                foreach (Sleepable sleepable in Components.NormalBeds.WorldItemsEnumerate(worldID, true))
+                    if (sleepable.name == "LuxuryBedComplete")
+                        exp = exp + GetElementExposition(Grid.PosToCell((KMonoBehaviour)sleepable), 4, 2);
+                    else
+                        exp = exp + GetElementExposition(Grid.PosToCell((KMonoBehaviour)sleepable), 2, 2);
 
             if (exp.OtherMass + exp.OxygenMass <= 0)
                 return 0;
@@ -100,7 +101,7 @@ namespace ResearchRequirements
         {
             int count = 0;
             foreach (MonumentPart monumentPart in Components.MonumentParts)
-                if (monumentPart.part == MonumentPart.Part.Top && monumentPart.IsMonumentCompleted())
+                if (monumentPart.part == Database.MonumentPartResource.Part.Top && monumentPart.IsMonumentCompleted())
                     count++;
             return count;
         }

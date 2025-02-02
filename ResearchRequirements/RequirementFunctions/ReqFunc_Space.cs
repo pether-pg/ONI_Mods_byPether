@@ -30,9 +30,10 @@ namespace ResearchRequirements
                 return 1;
 
             List<int> UniqueWorldIds = new List<int>();
-            foreach (Sleepable sleepable in Components.Sleepables)
-                if (!UniqueWorldIds.Contains(sleepable.GetMyWorldId()) && !sleepable.GetMyWorld().IsModuleInterior)
-                    UniqueWorldIds.Add(sleepable.GetMyWorldId());
+            foreach (int worldID in GetAllWorldIds())
+                foreach (Sleepable sleepable in Components.NormalBeds.WorldItemsEnumerate(worldID, true))
+                    if (!UniqueWorldIds.Contains(sleepable.GetMyWorldId()) && !sleepable.GetMyWorld().IsModuleInterior)
+                        UniqueWorldIds.Add(sleepable.GetMyWorldId());
 
             foreach (int i in UniqueWorldIds)
                 Debug.Log($"Unique sleepable world: {i}");
@@ -51,8 +52,9 @@ namespace ResearchRequirements
                 return 0;
 
             List<AxialI> ColonisedWorlds = new List<AxialI>();
-            foreach (Sleepable sleepable in Components.Sleepables)
-                if (!ColonisedWorlds.Contains(sleepable.GetMyWorldLocation()))
+            foreach (int worldID in GetAllWorldIds())
+                foreach (Sleepable sleepable in Components.NormalBeds.WorldItemsEnumerate(worldID, true))
+                    if (!ColonisedWorlds.Contains(sleepable.GetMyWorldLocation()))
                     ColonisedWorlds.Add(sleepable.GetMyWorldLocation());
 
             List<AxialI> HexesMinRad = new List<AxialI>();
@@ -92,6 +94,11 @@ namespace ResearchRequirements
                 }
 
             return max;
+        }
+
+        public static List<int> GetAllWorldIds()
+        {
+            return ClusterManager.Instance.GetWorldIDsSorted();
         }
     }
 }

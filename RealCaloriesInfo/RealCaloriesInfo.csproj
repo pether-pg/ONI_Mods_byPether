@@ -61,7 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ModInfo.cs" />
-    <Compile Include="RealCaloriesInfo_Patches.cs" />
+    <Compile Include="RealCaloriesInfo_Patches_Calories.cs" />
+    <Compile Include="RealCaloriesInfo_Patches_Electrobanks.cs" />
     <Compile Include="RealCaloriesInfo_Patches_Obsolete.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

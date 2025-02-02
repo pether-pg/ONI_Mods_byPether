@@ -1,0 +1,464 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh\n"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ACOUSTICS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ACOUSTICS"
+msgid "Have one Snoring or Farting Duplicant: {0}"
+msgstr "有一个打鼾或放屁的复制人 {0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_FILTRATION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_FILTRATION"
+msgid "{0}"
+msgstr "{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_POWER_REGULATION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_POWER_REGULATION"
+msgid "Have non-manual Generators: {0}"
+msgstr "拥有非人力发电机：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_RESEARCH
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_RESEARCH"
+msgid "Research technologies: {0}"
+msgstr "研究科技：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_SANITATION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_SANITATION"
+msgid "TBD: {0}"
+msgstr "待定：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_SCANNERS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ADVANCED_SCANNERS"
+msgid "Scan deep space hexes (at least 3 tiles away from your asteroids): {0}"
+msgstr "扫描太空（距离你的小行星至少 3 格）：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.AGRICULTURE
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.AGRICULTURE"
+msgid "Have Duplicants with \"Crop Tending\" skill: {0}"
+msgstr "拥有具有“作物照料”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ANIMAL_CONTROL
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ANIMAL_CONTROL"
+msgid "Domesticate Critters: {0}"
+msgstr "驯养小动物：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ARTIFICIAL_FRIENDS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ARTIFICIAL_FRIENDS"
+msgid "Have Duplicant with \"Improved Tinkering I\" skill: {0}"
+msgstr "拥有具有“管道修理 I”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ARTISTRY
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ARTISTRY"
+msgid "Have Duplicant with \"Art Fundamentals\" skill: {0}"
+msgstr "拥有具有“艺术基础”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.BASIC_REFINEMENT
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.BASIC_REFINEMENT"
+msgid "Have Duplicant with \"Hard Digging\" skill: {0}"
+msgstr "拥有具有“挖掘”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.BASIC_ROCKETRY
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.BASIC_ROCKETRY"
+msgid "Analyse planets: {0}"
+msgstr "分析行星：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.CATALYTICS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.CATALYTICS"
+msgid "Store Carbon Dioxide: {0}"
+msgstr "储存二氧化碳：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.CLOTHING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.CLOTHING"
+msgid "Gather Fiber: {0}"
+msgstr "收集芦苇纤维：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.COMBUSTION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.COMBUSTION"
+msgid "Daily Energy consumption: {0} kW"
+msgstr "每日电量消耗：{0} 千瓦"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.CRASH_PLAN
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.CRASH_PLAN"
+msgid "Build at least 1 bed different asteroids: {0}"
+msgstr "在不同的小行星至少建造1个床：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.CRYO_FUEL_PROPULSION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.CRYO_FUEL_PROPULSION"
+msgid "Store Liquid Hydrogen {0}"
+msgstr "储存液氢 {0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.DIRECTED_AIR_STREAMS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.DIRECTED_AIR_STREAMS"
+msgid "Have your beds and toilets exposed to other gases than Oxygen: {0} %"
+msgstr "让您的床和厕所暴露在氧气以外的其他气体中：{0} %"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.DISTILLATION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.DISTILLATION"
+msgid "Store Polluted Water: {0}"
+msgstr "储存污染水：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.DUPE_TRAFFIC_CONTROL
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.DUPE_TRAFFIC_CONTROL"
+msgid "Have Duplicant with \"Astronomy\" skill: {0}"
+msgstr "拥有具有“天文学”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.DURABLE_LIFE_SUPPORT
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.DURABLE_LIFE_SUPPORT"
+msgid "Have Duplicants with \"Rocket Piloting\" skill: {0}"
+msgstr "拥有具有“火箭驾驶”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ENVIRONMENTAL_APPRECIATION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ENVIRONMENTAL_APPRECIATION"
+msgid "Have Duplicant suffering from Sunburn: {0}"
+msgstr "让复制人晒伤：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.FARMING_TECH
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.FARMING_TECH"
+msgid "Have Duplicant with \"Improved Farming I\" skill: {0}"
+msgstr "拥有具有“改良耕作 I”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.FINE_ART
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.FINE_ART"
+msgid "Have Duplicants with \"Aesthetic Design\" skill: {0}"
+msgstr "拥有具有“美学设计”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.FINE_DINING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.FINE_DINING"
+msgid "Have Duplicant with \"Grilling\" skill: {0}"
+msgstr "拥有具有“烧烤”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.FINER_DINING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.FINER_DINING"
+msgid "Have Duplicant with high Cuisine attribute: {0}"
+msgstr "拥有烹饪属性高的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.FLOW_REDIRECTION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.FLOW_REDIRECTION"
+msgid "Have Duplicant with high Athletics attribute: {0}"
+msgstr "拥有运动属性高的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.FOOD_REPURPOSING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.FOOD_REPURPOSING"
+msgid "{0}"
+msgstr "{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.GAS_DISTRIBUTION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.GAS_DISTRIBUTION"
+msgid "Have Senior Pilot with Mouth Breather trait: {0}"
+msgstr "拥有大口呼吸者特性的火箭飞行员II：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.GAS_PIPING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.GAS_PIPING"
+msgid "Daily Oxygen production: {0} kg"
+msgstr "每日氧气产量：{0} 公斤"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.GENERIC_SENSORS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.GENERIC_SENSORS"
+msgid "Have Duplicant interested with Operating: {0}"
+msgstr "让复制人对操作感兴趣：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.GLASS_FURNISHINGS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.GLASS_FURNISHINGS"
+msgid "Gather Glass: {0} kg"
+msgstr "收集玻璃：{0} 公斤"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.HIGH_TEMP_FORGING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.HIGH_TEMP_FORGING"
+msgid "Gather Steel: {0} kg"
+msgstr "收集钢：{0} 公斤"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.HVAC
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.HVAC"
+msgid "Gather Ice: {0} kg"
+msgstr "收集冰：{0} 公斤"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.HYDROCARBON_PROPULSION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.HYDROCARBON_PROPULSION"
+msgid "Store Liquid Oxygen: {0}"
+msgstr "储存液态氧气：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.IMPROVED_COMBUSTION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.IMPROVED_COMBUSTION"
+msgid "Survive long enough: {0}"
+msgstr "生存足够长的时间：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.IMPROVED_GAS_PIPING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.IMPROVED_GAS_PIPING"
+msgid "Have Duplicants suffering from Popped Ear Drums: {0} %"
+msgstr "有复制人患有鼓膜破裂：{0} %"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.IMPROVED_LIQUID_PIPING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.IMPROVED_LIQUID_PIPING"
+msgid "Have Duplicant with \"Plumbing\" skill: {0}"
+msgstr "拥有具有“管道”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.IMPROVED_OXYGEN
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.IMPROVED_OXYGEN"
+msgid "Daily Oxygen consumption: {0} kg"
+msgstr "每日耗氧量：{0} 公斤"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.INTERIOR_DECOR
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.INTERIOR_DECOR"
+msgid "Researchable only at night: {0}"
+msgstr "只在晚上研究：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.JETPACKS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.JETPACKS"
+msgid "Control Slicksters: {0}"
+msgstr "控制浮游生物: {0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.JOBS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.JOBS"
+msgid "Obtain new Duplicants: {0}"
+msgstr "获得新的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.LIQUID_DISTRIBUTION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.LIQUID_DISTRIBUTION"
+msgid "Have Senior Pilot with Small Bladder trait: {0}"
+msgstr "拥有膀胱特征的火箭飞行员II：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.LIQUID_FILTERING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.LIQUID_FILTERING"
+msgid "Store Salt Water and/or Brine: {0} liters"
+msgstr "储存盐水和/或浓盐水：{0} 升"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.LIQUID_PIPING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.LIQUID_PIPING"
+msgid "Have Duplicant interested with Tidying: {0}"
+msgstr "复制人有整理兴趣特质：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.LIQUID_TEMPERATURE
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.LIQUID_TEMPERATURE"
+msgid "Have Duplicant suffering from Hypothermia or Heat Stroke: {0}"
+msgstr "复制人患有低温症或中暑：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.LOGIC_CIRCUITS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.LOGIC_CIRCUITS"
+msgid "Have Duplicant with \"Field Research\" skill: {0}"
+msgstr "拥有具有“实地调查”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.LOGIC_CONTROL
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.LOGIC_CONTROL"
+msgid "Daily Energy wasted: {0} kW"
+msgstr "每日浪费的电量：{0} kW"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.LUXURY
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.LUXURY"
+msgid "Gather Plastic: {0} kg"
+msgstr "收集塑料：{0} 公斤"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.MEDICINE_I
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.MEDICINE_I"
+msgid "Have Duplicant suffering from Allergies or Food Poisoning: {0}"
+msgstr "复制人患有花香过敏症或食物中毒：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.MEDICINE_II
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.MEDICINE_II"
+msgid "Have Duplicant suffering from Slimelung: {0}"
+msgstr "复制人患有粘液肺细菌：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.MEDICINE_III
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.MEDICINE_III"
+msgid "Have Duplicant with \"Advanced Medical Care\" skill: {0}"
+msgstr "拥有具有“高级医疗护理”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.MEDICINE_IV
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.MEDICINE_IV"
+msgid "Have Duplicant suffering from Zombie Sickness: {0}"
+msgstr "复制人患有僵尸孢子：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.MONUMENTS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.MONUMENTS"
+msgid "Have Duplicants with 16 morale: {0}"
+msgstr "拥有 16 点士气的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.MULTIPLEXING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.MULTIPLEXING"
+msgid "{0}"
+msgstr "{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.NO_REQUIREMENT
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.NO_REQUIREMENT"
+msgid "(no additional requirement)"
+msgstr "（无额外要求）"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.NOTIFICATION_SYSTEMS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.NOTIFICATION_SYSTEMS"
+msgid "{0}"
+msgstr "{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.NUCLEAR_REFINEMENT
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.NUCLEAR_REFINEMENT"
+msgid "Have Duplicants with Hazmat Digging skill: {0}"
+msgstr "拥有具有极坚硬挖掘技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.NUCLEAR_RESEARCH
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.NUCLEAR_RESEARCH"
+msgid "Research technologies: {0}"
+msgstr "研究技术：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.PARALLEL_AUTOMATION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.PARALLEL_AUTOMATION"
+msgid "Build Research Centers: {0}"
+msgstr "建造研究站：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.PLASTICS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.PLASTICS"
+msgid "Store Crude Oil: {0} liters"
+msgstr "储存原油：{0} 升"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.PORTABLE_GASES
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.PORTABLE_GASES"
+msgid "Have Duplicants suffering from Yucky Lungs: {0}"
+msgstr "有复制人患有恶心的肺：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.POWER_REGULATION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.POWER_REGULATION"
+msgid "Build Batteries: {0}"
+msgstr "建造电池：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.PRECISION_PLUMBING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.PRECISION_PLUMBING"
+msgid "Researchable only during two earliest hours: {0}"
+msgstr "只在一天时间表前的两个小时内进行研究：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.PRESSURE_MANAGER
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.PRESSURE_MANAGER"
+msgid "{0}"
+msgstr "{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.PRETTY_GOOD_CONDUCTORS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.PRETTY_GOOD_CONDUCTORS"
+msgid "Have non-manual Generators: {0}"
+msgstr "拥有非人力发电机：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.RADIATION_PROTECTION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.RADIATION_PROTECTION"
+msgid "Have Duplicant suffering from Radiation Sickness: {0}"
+msgstr "复制人患有放射病：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.RANCHING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.RANCHING"
+msgid "Have Duplicant with \"Critter Ranching\" skill: {0}"
+msgstr "拥有具有“小动物放牧”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.REFINED_OBJECTS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.REFINED_OBJECTS"
+msgid "Build Ladders: {0}"
+msgstr "建造梯子：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.REFRACTIVE_DECOR
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.REFRACTIVE_DECOR"
+msgid "Have Duplicants with \"Masterworks\" skill: {0}"
+msgstr "拥有具有“大师作品”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.RENAISSANCE_ART
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.RENAISSANCE_ART"
+msgid "Have Duplicant with high Creativity attribute: {0}"
+msgstr "拥有高研究属性的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.RENEWABLE_ENERGY
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.RENEWABLE_ENERGY"
+msgid "Store Steam: {0}"
+msgstr "收集蒸汽: {0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.REQUIREMENT_IGNORED
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.REQUIREMENT_IGNORED"
+msgid "(requirement ignored)"
+msgstr "（忽略要求）"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.RESEARCH_PREVIOUS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.RESEARCH_PREVIOUS"
+msgid "! Research previous technologies !"
+msgstr "！研究之前的技术！"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.ROBOTIC_TOOLS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.ROBOTIC_TOOLS"
+msgid "Have Duplicants with \"Super-Duperhard Digging\" skill: {0}"
+msgstr "拥有具有“超坚硬挖掘材料”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SANITATION_SCIENCES
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SANITATION_SCIENCES"
+msgid "Spawn Morbs: {0}"
+msgstr "产生或发现疫病章鱼：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SCREENS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SCREENS"
+msgid "{0}"
+msgstr "{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SKY_DETECTORS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SKY_DETECTORS"
+msgid "Complete \"Home Sweet Home\" quest: {0}"
+msgstr "完成“甜蜜之家”成就：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SMART_STORAGE
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SMART_STORAGE"
+msgid "Have Duplicant with \"Improved Carrying II\" skill: {0}"
+msgstr "拥有具有“改良携带 II”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SMELTING
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SMELTING"
+msgid "Gather Refined Metals: {0} kg"
+msgstr "收集精炼金属：{0} 公斤"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SOLID_DISTRIBUTION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SOLID_DISTRIBUTION"
+msgid "Have Senior Pilot with Bottomless Stomach trait: {0}"
+msgstr "拥有无底洞之胃特征的火箭飞行员II：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SOLID_MANAGEMENT
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SOLID_MANAGEMENT"
+msgid "{0}"
+msgstr "{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SOLID_TRANSPORT
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SOLID_TRANSPORT"
+msgid "Have Duplicant with high Strength attribute: {0}"
+msgstr "拥有高力量属性的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SPACE_POWER
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SPACE_POWER"
+msgid "Have Senior Pilot with Nyctophobic trait: {0}"
+msgstr "拥有具有恐黑特征的火箭飞行员II：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SPACE_PROGRAM
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SPACE_PROGRAM"
+msgid "Have Duplicant with \"Rocket Piloting\" skill: {0}"
+msgstr "拥有具有“火箭驾驶”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.SUITS
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.SUITS"
+msgid "Have Duplicants with \"Exosuit Training\" skill: {0}"
+msgstr "拥有具有“太空服训练”技能的复制人：{0}"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.TEMPERATURE_MODULATION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.TEMPERATURE_MODULATION"
+msgid "Have Duplicants suffering from Chilly Surroundings: {0} %"
+msgstr "让复制人遭受寒冷环境的困扰：{0} %"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.TRAVEL_TUBES
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.TRAVEL_TUBES"
+msgid "Daily time spent traveling: {0} %"
+msgstr "每天花在步行上的时间：{0} %"
+
+#. ResearchRequirements.STRINGS.REQUIREMENTS.VALVE_MINIATURIZATION
+msgctxt "ResearchRequirements.STRINGS.REQUIREMENTS.VALVE_MINIATURIZATION"
+msgid "Store Petroleum: {0} liters"
+msgstr "储存石油：{0} 升"
+
+#. ResearchRequirements.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "ResearchRequirements.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr "中文翻译;如果是主人的话可以哦"

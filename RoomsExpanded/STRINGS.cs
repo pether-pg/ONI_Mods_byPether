@@ -44,7 +44,7 @@ namespace RoomsExpanded
                 public class SHOWERROOM
                 {
                     public static LocString NAME = (LocString)"Shower Room";
-                    public static LocString EFFECT = (LocString)" - Shorter shower time by {0}";
+                    public static LocString EFFECT = (LocString)" • Shorter shower time by {0}";
                     public static LocString TOOLTIP = (LocString)"Just entering such a nice bathroom make duplicants feel cleaner.";
                 }
 
@@ -130,6 +130,20 @@ namespace RoomsExpanded
                     public static LocString NAME = (LocString)"Pilot Help Center";
                     public static LocString EFFECT = (LocString)" - Provides support for Pilots";
                     public static LocString TOOLTIP = (LocString)"So many duplicants work together just to get a new mug.";
+                }
+
+                public class BIONIC_UPKEEP
+                {
+                    public static LocString NAME = (LocString)"Bionic Pit Stop";
+                    public static LocString EFFECT = (LocString)" - Morale Bonus";
+                    public static LocString TOOLTIP = (LocString)"Maintenance workshop for Bionic duplicants.";
+                }
+
+                public class DATA_MINING
+                {
+                    public static LocString NAME = (LocString)"Data Mining Shaft";
+                    public static LocString EFFECT = (LocString)" - Faster Data Mining: +{0}";
+                    public static LocString TOOLTIP = (LocString)"Nobody really knows how Robo-Miner helps in here... Nobody but Meep.";
                 }
             }
 
@@ -332,6 +346,18 @@ namespace RoomsExpanded
                     public static LocString NAME = (LocString)"Aquarium Decoration";
                     public static LocString DESCRIPTION = (LocString)"Water Fort or a Decor item.";
                 }
+
+                public class DATA_MINER
+                {
+                    public static LocString NAME = (LocString)"Data Miner";
+                    public static LocString DESCRIPTION = (LocString)"At least one Data Miner building.";
+                }
+
+                public class ROBO_MINER
+                {
+                    public static LocString NAME = (LocString)"Robo-Miner";
+                    public static LocString DESCRIPTION = (LocString)"At least one Robo-Miner building.";
+                }
             }
 
             public class EFFECTS
@@ -382,6 +408,12 @@ namespace RoomsExpanded
                 {
                     public static LocString NAME = (LocString)"Private Bathroom";
                     public static LocString DESCRIPTION = (LocString)"This Duplicant visited their Private Bathroom.";
+                }
+
+                public class BIONIC_UPKEEP
+                {
+                    public static LocString NAME = (LocString)"Bionic Pit Stop";
+                    public static LocString DESCRIPTION = (LocString)"This Duplicant used Bionic Pit Stop.";
                 }
             }
         }
