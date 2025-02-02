@@ -74,7 +74,7 @@ namespace DiseasesExpanded
                 if (!CausesCurse(__instance))
                     return;
 
-                if (HasConflictingTraits(worker) || IsRecentlyRecovered(worker) || IsBiobot(worker))
+                if (HasConflictingTraits(worker) || IsRecentlyRecovered(worker) || IsBiobot(worker) || IsBionic(worker))
                     return;
 
                 if (SuitWearing.IsWearingAtmoSuit(worker.gameObject) || SuitWearing.IsWearingLeadSuit(worker.gameObject))
@@ -127,6 +127,14 @@ namespace DiseasesExpanded
             private static bool IsBiobot(WorkerBase worker)
             {
                 return worker.HasTag(MorbRoverConfig.ID);
+            }
+
+            private static bool IsBionic(WorkerBase worker)
+            {
+                MinionIdentity mi = worker.GetComponent<MinionIdentity>();
+                if (mi != null && mi.model == "BionicMinion")
+                    return true;
+                return false;
             }
 
             private static float GetInfectionChance(WorkerBase worker)
