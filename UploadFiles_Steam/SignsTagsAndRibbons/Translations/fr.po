@@ -1,0 +1,1151 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Pholith\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"X-Generator: Poedit 3.5\n"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.BIOHAZARD_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.BIOHAZARD_TAG"
+msgid "Biohazard Alert"
+msgstr "Danger Biologique"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.COLDSPOT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.COLDSPOT_TAG"
+msgid "Cold Spot"
+msgstr "Point Froid"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.COMET_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.COMET_TAG"
+msgid "Comet Alert"
+msgstr "Danger de Comète"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.DANGER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.DANGER_TAG"
+msgid "Danger Alert"
+msgstr "Alerte Danger"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.ELETRIC_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.ELETRIC_TAG"
+msgid "Electricity Alert"
+msgstr "Danger Électrique"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.HOTSPOT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.HOTSPOT_TAG"
+msgid "Hot Spot"
+msgstr "Point Chaud"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.LIGHT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.LIGHT_TAG"
+msgid "Brightness Alert"
+msgstr "Danger de Luminiosité"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.NOSALERT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.NOSALERT_TAG"
+msgid "Select Alert Tag"
+msgstr "Sélectionner un Marqueur d'Alerte"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.RADIATION_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.RADIATION_TAG"
+msgid "Radiation Alert"
+msgstr "Danger de Radiation"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.WARNING_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.WARNING_TAG"
+msgid "Warning"
+msgstr "Danger"
+
+#. SignsTagsAndRibbons.STRINGS.BACK_ART_BUTTON.TEXT
+msgctxt "SignsTagsAndRibbons.STRINGS.BACK_ART_BUTTON.TEXT"
+msgid "Previous Tag"
+msgstr "Marqueur Précédent"
+
+#. SignsTagsAndRibbons.STRINGS.BACK_ART_BUTTON.TOOLTIP
+msgctxt "SignsTagsAndRibbons.STRINGS.BACK_ART_BUTTON.TOOLTIP"
+msgid "Changes Tag backwards to another of the same tier. {Hotkey}"
+msgstr "Revient au Marqueur précédent du même niveau. {Hotkey}"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.DESC"
+msgid "A wall sign for alerts and dangers."
+msgstr "Un panneau mural pour des alertes et dangers."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.EFFECT"
+msgid ""
+"This sign is a visual representation of many different alerts. Select the "
+"type of alert using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Warning\n"
+" - Hot Spot\n"
+" - Cold Spot\n"
+" - Comet Alert\n"
+" - Biohazard Alert\n"
+" - Radiation Alert\n"
+" - Brightness Alert\n"
+" - Electricity Alert\n"
+" - Danger Alert"
+msgstr ""
+"Ce panneau est une représentation visuelle de plusieurs alertes différentes. "
+"Sélectionnez le type d’alerte à l’aide du menu.\n"
+"\n"
+"Liste des marqueurs :\n"
+"\n"
+"- Danger\n"
+"- Point chaud\n"
+"- Point froid\n"
+"- Danger de Comète\n"
+"- Danger biologique\n"
+"- Danger de Radiation\n"
+"- Danger de Luminosité\n"
+"- Danger Électrique\n"
+"- Alerte Danger"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.NAME"
+msgid "Danger Sign"
+msgstr "Panneau de Danger"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.DESC"
+msgid "A danger ribbon mark for corners."
+msgstr "Un ruban de danger pour les coins."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.EFFECT"
+msgid "It serves to demark a corner segment of a dangerous ribbon line."
+msgstr "Il sert à délimiter un segment de coin d'une ligne de ruban dangereux."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.NAME"
+msgid "Danger Ribbon Corner"
+msgstr "Ruban de Danger de Coin"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.DESC"
+msgid "A danger ribbon element."
+msgstr "Un ruban de danger."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.EFFECT"
+msgid "It serves to demark a straight line used to outline a dangerous area."
+msgstr "Il sert à délimiter un segment d'une ligne de ruban dangereux."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.NAME"
+msgid "Danger Ribbon"
+msgstr "Ruban de Danger"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.DESC"
+msgid "A wall tag for gases."
+msgstr "Un marqueur mural de gaz."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.EFFECT"
+msgid ""
+"This tag is a visual representation of gases in an industrial environment. "
+"Select the type of gas using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Oxygen\n"
+" - Polluted Oxygen\n"
+" - Carbon Dioxide\n"
+" - Hydrogen\n"
+" - Natural Gas\n"
+" - Propane\n"
+" - Chlorine\n"
+" - Helium\n"
+" - Sour Gas\n"
+" - Steam\n"
+" - Nuclear Fallout"
+msgstr ""
+"Ce marqueur est une représentation visuelle des gaz dans un environnement "
+"industriel. Sélectionnez le type de gaz à l'aide de l'option de menu. \n"
+"\n"
+"Liste des balises : \n"
+" - Oxygène\n"
+" - Oxygène pollué\n"
+" - Dioxyde de carbone\n"
+" - Hydrogène\n"
+" - Gaz naturel\n"
+" - Propane\n"
+" - Chlore\n"
+" - Hélium\n"
+" - Gaz corrosif\n"
+" - Vapeur\n"
+" - Retombées radioactives"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.NAME"
+msgid "Gas Tag"
+msgstr "Marqueur de Gaz"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.DESC"
+msgid "A wall tag for geysers, vents and volcanos."
+msgstr "Un marqueur mural pour les geysers, cheminées et volcans."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.EFFECT"
+msgid "This tag is a visual representation of geological formations."
+msgstr ""
+"Ce marqueur est une représentation visuelle des formations géologiques."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.NAME"
+msgid "Geyser Tag"
+msgstr "Marqueur de Geyser"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.DESC"
+msgid "A wall sign for directive environmental information."
+msgstr "Un panneau mural pour informations environnementales."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.EFFECT"
+msgid ""
+"This sign is a visual representation many different directive informations "
+"regarding environment. Select the type of directive using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Atmo Suit\n"
+" - Jet Suit\n"
+" - Lead Suit\n"
+" - Dormitory\n"
+" - Infirmary\n"
+" - Workshop\n"
+" - Research Facility\n"
+" - Observatory\n"
+" - Restroom\n"
+" - Refectory\n"
+" - Farm\n"
+" - Critter Ranch\n"
+" - Rocket Platform"
+msgstr ""
+"Ce panneau est une représentation visuelle de plusieurs informations "
+"différentes concernant l'environnement. Sélectionnez le type d'environnement "
+"à l'aide de l'option de menu. \n"
+"\n"
+"Liste des marqueurs : \n"
+" - Combinaison Atmo\n"
+" - Combinaison à Propulsion\n"
+" - Combinaison en Plomb\n"
+" - Dortoir\n"
+" - Infirmerie\n"
+" - Atelier\n"
+" - Laboratoire\n"
+" - Observatoire\n"
+" - Salle de repos\n"
+" - Réfectoire\n"
+" - Serre\n"
+" - Étable\n"
+" - Plateforme pour fusées"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.NAME"
+msgid "Info Sign"
+msgstr "Panneau d'Info"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.DESC"
+msgid "A wall tag for letters."
+msgstr "Un marqueur mural pour lettres."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.EFFECT"
+msgid "This tag serves to show a single letter."
+msgstr "Ce marqueur sert à afficher une seule lettre."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.NAME"
+msgid "Letter Tag"
+msgstr "Marqueur de Lettre"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.DESC"
+msgid "A wall tag for liquids."
+msgstr "Un marqueur mural pour les liquides."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.EFFECT"
+msgid ""
+"This tag is a visual representation of liquids in an industrial environment. "
+"Select the type of liquid using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Water\n"
+" - Polluted Water\n"
+" - Salt Water\n"
+" - Brine\n"
+" - Ethanol\n"
+" - Crude Oil\n"
+" - Petroleum\n"
+" - Super Coolant\n"
+" - Naphtha\n"
+" - Visco-Gel\n"
+" - Liquid Oxygen\n"
+" - Liquid Hydrogen\n"
+" - Liquid Carbon Dioxide\n"
+" - Nuclear Waste"
+msgstr ""
+"Ce marqueur est une représentation visuelle des liquides dans un "
+"environnement industriel. Sélectionnez le type de liquide à l'aide de "
+"l'option de menu. \n"
+"\n"
+"Liste des balises : \n"
+" - Eau\n"
+" - Eau polluée\n"
+" - Eau salée\n"
+" - Saumure\n"
+" - Éthanol\n"
+" - Pétrole brut\n"
+" - Pétrole\n"
+" - Super réfrigérant\n"
+" - Naphta\n"
+" - Visco-Gel\n"
+" - Oxygène liquide\n"
+" - Hydrogène liquide\n"
+" - Dioxyde de carbone liquide\n"
+" - Déchets nucléaires"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.NAME"
+msgid "Liquid Tag"
+msgstr "Marqueur de Liquide"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.DESC"
+msgid "A wall tag for geysers, vents and volcanos."
+msgstr "Un marqueur mural pour geysers, cheminées et volcans."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.EFFECT"
+msgid "This tag is a visual representation of geological formations."
+msgstr ""
+"Ce marqueur est une représentation visuelle des formations géologiques."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.NAME"
+msgid "Location Tag"
+msgstr "Marqueur de Lieu"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.MENU_SUBCATEGORY.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.MENU_SUBCATEGORY.NAME"
+msgid "Signs, Tags and Ribbons"
+msgstr "Panneaux, Marqueurs et Rubans"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.DESC"
+msgid "A wall meter scale used in open liquid reservoirs."
+msgstr "Une échelle métrique murale utilisée dans les réservoirs de liquides."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.EFFECT"
+msgid ""
+"This scale is often used to measure the amount of liquid in a reservoir."
+msgstr ""
+"Cette échelle est souvent utilisée pour mesurer la quantité de liquide dans "
+"un réservoir."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.NAME"
+msgid "Meter Scale"
+msgstr "Échelle Murale"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.DESC"
+msgid "A wall tag for numbers."
+msgstr "Un marqueur murale pour nombres."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.EFFECT"
+msgid "This tag serves to show a single digit."
+msgstr "Ce marqueur permet de montrer un seul chiffre."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.NAME"
+msgid "Number Tag"
+msgstr "Marqueur de Nombre"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.DESC"
+msgid "A small tag for gas and liquid elements."
+msgstr "Un petit marqueur pour les gaz et les liquides."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.EFFECT"
+msgid "This tag is a visual representation of gases and liquids."
+msgstr "Ce marqueur est une représentation visuel des gaz et des liquides."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.NAME"
+msgid "Small Element Tag"
+msgstr "Petit Marqueur d'Élément"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.DESC"
+msgid "A wall tag for solids."
+msgstr "Un marqueur mural pour solides."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.EFFECT"
+msgid ""
+"This tag is a visual representation of solids in an industrial environment. "
+"Select the type of solids using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Agriculture\n"
+" - Consumable Ore\n"
+" - Critter Egg\n"
+" - Cultivable Soil\n"
+" - Filtration Medium\n"
+" - Industrial Ingredient\n"
+" - Liquefiable\n"
+" - Manufacture Material\n"
+" - Medical Supplies\n"
+" - Metal Ore\n"
+" - Miscellaneous\n"
+" - Organic\n"
+" - Rare Resource\n"
+" - Raw Mineral\n"
+" - Refined Metal\n"
+" - Refined Mineral\n"
+" - Cooking Ingredient\n"
+" - Edibles\n"
+" - Seeds\n"
+" - Compostables"
+msgstr ""
+"Ce marqueur est une représentation visuelle des solides dans un "
+"environnement industriel. Sélectionnez le type de solide à l'aide de "
+"l'option de menu. \n"
+"\n"
+"Liste des marqueurs : \n"
+" - Agriculture\n"
+" - Minerai consommable\n"
+" - Œuf de créature\n"
+" - Terre cultivable\n"
+" - Matériau de filtration\n"
+" - Ingrédient industriel\n"
+" - Liquéfiable\n"
+" - Matériau de fabrication\n"
+" - Fournitures médicales\n"
+" - Minerai de métal\n"
+" - Divers\n"
+" - Organique\n"
+" - Ressource rare\n"
+" - Minéral brut\n"
+" - Métal raffiné\n"
+" - Minéral raffiné\n"
+" - Ingrédient de cuisine\n"
+" - Aliment comestible\n"
+" - Graine\n"
+" - Compostable"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.NAME"
+msgid "Solid Tag"
+msgstr "Marqueur de Solide"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.DESC"
+msgid "A wall tag for system and sensors."
+msgstr "Un marqueur murale pour systèmes en capteurs."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.EFFECT"
+msgid ""
+"This tag is a visual representation of many different kinds of eletronics, "
+"systems and sensors signs. Select the type of system using the menu "
+"option. \n"
+"\n"
+"List of tags: \n"
+" - Closed Cycle\n"
+" - Organic Recycle\n"
+" - Recycle\n"
+" - Power Toggle\n"
+" - Gas Element Sensor\n"
+" - Liquid Sensor\n"
+" - Power Sensor\n"
+" - Pressure Sensor\n"
+" - Temperature Sensor\n"
+" - Time Sensor"
+msgstr ""
+"Ce marqueur est une représentation visuelle des différents types "
+"d'électroniques, de systèmes et de capteurs. Sélectionnez le type de système "
+"à l'aide de l'option de menu. \n"
+"\n"
+"Liste des marqueurs : \n"
+" - Cycle fermé\n"
+" - Recyclage organique\n"
+" - Recyclage\n"
+" - Interrupteur électrique\n"
+" - Capteur de gaz\n"
+" - Capteur de liquide\n"
+" - Capteur de puissance\n"
+" - Capteur de pression\n"
+" - Capteur de température\n"
+" - Capteur de temps"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.NAME"
+msgid "System Tag"
+msgstr "Marqueur de Système"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.DESC"
+msgid "A wall tag for utilities."
+msgstr "Un marqueur mural pour indications utiles."
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.EFFECT"
+msgid ""
+"This tag is a visual representation of many different kinds of utilities "
+"signs. Select the type of utility using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Direction\n"
+" - Diagonal Direction\n"
+" - Both Direction\n"
+" - Gas Pump\n"
+" - Liquid Pump\n"
+" - Solid Conveyor"
+msgstr ""
+"Ce marqueur est une représentation visuelle des différentes indications "
+"utiles. Sélectionnez le type d'indication à l'aide de l'option de menu. \n"
+"\n"
+"Liste des balises : \n"
+" - Direction\n"
+" - Direction diagonale\n"
+" - Les deux directions\n"
+" - Pompe à gaz\n"
+" - Pompe à liquide\n"
+" - Convoyeur solide"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.NAME"
+msgid "Utility Tag"
+msgstr "Panneau d'Utilitaire"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.CHLORINE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.CHLORINE_TAG"
+msgid "Chlorine Gas"
+msgstr "Chlore"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.CO2_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.CO2_TAG"
+msgid "Carbon Dioxide Gas"
+msgstr "Dioxyde de Carbone"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.FALLOUT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.FALLOUT_TAG"
+msgid "Nuclear Fallout"
+msgstr "Retombées Radioactives"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.HELIUM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.HELIUM_TAG"
+msgid "Helium Gas"
+msgstr "Hélium"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.HYDROGEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.HYDROGEN_TAG"
+msgid "Hydrogen Gas"
+msgstr "Hydrogène"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.METHANE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.METHANE_TAG"
+msgid "Natural Gas"
+msgstr "Gaz Naturel"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.NOGAS_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.NOGAS_TAG"
+msgid "Select Gas"
+msgstr "Choisir un Gaz"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.OXYGEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.OXYGEN_TAG"
+msgid "Oxygen Gas"
+msgstr "Oxygène"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.POXYGEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.POXYGEN_TAG"
+msgid "Polluted Oxygen"
+msgstr "Oxygène pollué"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.PROPANE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.PROPANE_TAG"
+msgid "Propane Gas"
+msgstr "Propane"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.SOUR_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.SOUR_TAG"
+msgid "Sour Gas"
+msgstr "Gaz corrosif"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.STEAM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.STEAM_TAG"
+msgid "Steam"
+msgstr "Vapeur"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.ATMO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.ATMO_TAG"
+msgid "Atmo Suit"
+msgstr "Combinaison Atmo"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.CRITTERRANCH_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.CRITTERRANCH_TAG"
+msgid "Critter Ranch"
+msgstr "Étable"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.DORMITORY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.DORMITORY_TAG"
+msgid "Dormitory"
+msgstr "Dortoir"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.FARM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.FARM_TAG"
+msgid "Farm"
+msgstr "Serre"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.FOOD_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.FOOD_TAG"
+msgid "Refectory"
+msgstr "Réfectoire"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.INFIRMARY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.INFIRMARY_TAG"
+msgid "Infirmary"
+msgstr "Infirmerie"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.JET_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.JET_TAG"
+msgid "Jet Suit"
+msgstr "Combinaison à Propulsion"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.LEADSUIT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.LEADSUIT_TAG"
+msgid "Lead Suit"
+msgstr "Combinaison en Plomb"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.NOINFO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.NOINFO_TAG"
+msgid "Select Info Tag"
+msgstr "Choisir le Marqueur d'Information"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.OBSERVATORY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.OBSERVATORY_TAG"
+msgid "Observatory"
+msgstr "Observatoire"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.RESEARCH_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.RESEARCH_TAG"
+msgid "Research Facility"
+msgstr "Laboratoire"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.RESTROOM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.RESTROOM_TAG"
+msgid "Restroom"
+msgstr "Salle de repos"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.ROCKET_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.ROCKET_TAG"
+msgid "Rocket Platform"
+msgstr "Plateforme pour fusées"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.WORKSHOP_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.WORKSHOP_TAG"
+msgid "Workshop"
+msgstr "Atelier"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.A_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.A_TAG"
+msgid "A"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.B_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.B_TAG"
+msgid "B"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.C_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.C_TAG"
+msgid "C"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.D_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.D_TAG"
+msgid "D"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.E_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.E_TAG"
+msgid "E"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.F_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.F_TAG"
+msgid "F"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.G_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.G_TAG"
+msgid "G"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.H_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.H_TAG"
+msgid "H"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.I_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.I_TAG"
+msgid "I"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.J_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.J_TAG"
+msgid "J"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.K_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.K_TAG"
+msgid "K"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.L_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.L_TAG"
+msgid "L"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.M_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.M_TAG"
+msgid "M"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.N_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.N_TAG"
+msgid "N"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.NOLETTER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.NOLETTER_TAG"
+msgid "Letters Tag"
+msgstr "Marqueur de Lettres"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.O_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.O_TAG"
+msgid "O"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.P_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.P_TAG"
+msgid "P"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Q_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Q_TAG"
+msgid "Q"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.R_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.R_TAG"
+msgid "R"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.S_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.S_TAG"
+msgid "S"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.T_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.T_TAG"
+msgid "T"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.U_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.U_TAG"
+msgid "U"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.V_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.V_TAG"
+msgid "V"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.W_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.W_TAG"
+msgid "W"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.X_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.X_TAG"
+msgid "X"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Y_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Y_TAG"
+msgid "Y"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Z_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Z_TAG"
+msgid "Z"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.BRINE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.BRINE_TAG"
+msgid "Brine"
+msgstr "Saumure"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.COOL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.COOL_TAG"
+msgid "Super Coolant"
+msgstr "Super Refroidissant"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.CRUDEOIL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.CRUDEOIL_TAG"
+msgid "Crude Oil"
+msgstr "Pétrole Brut"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.ETHANOL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.ETHANOL_TAG"
+msgid "Ethanol"
+msgstr "Éthanol"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_02_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_02_TAG"
+msgid "Liquid Oxygen"
+msgstr "Oxygène Liquide"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_CO2_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_CO2_TAG"
+msgid "Liquid Carbon Dioxide"
+msgstr "Dioxyde de Carbone Liquide"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_H_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_H_TAG"
+msgid "Liquid Hydrogen"
+msgstr "Hydrogène Liquide"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NAPHTHA_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NAPHTHA_TAG"
+msgid "Naphtha"
+msgstr "Naphta Liquide"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NOLIQUID_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NOLIQUID_TAG"
+msgid "Select Liquid"
+msgstr "Choisir un Liquide"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NWASTE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NWASTE_TAG"
+msgid "Nuclear Waste"
+msgstr "Déchet Nucléaire"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.PETROLEUM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.PETROLEUM_TAG"
+msgid "Petroleum"
+msgstr "Pétrole"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.POLLUTEDWATER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.POLLUTEDWATER_TAG"
+msgid "Polluted Water"
+msgstr "Eau pollué"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.SALTWATER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.SALTWATER_TAG"
+msgid "Salt Water"
+msgstr "Eau Salée"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.VISCO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.VISCO_TAG"
+msgid "Visco-Gel"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.WATER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.WATER_TAG"
+msgid "Water"
+msgstr "Eau"
+
+#. SignsTagsAndRibbons.STRINGS.NEXT_ART_BUTTON.TEXT
+msgctxt "SignsTagsAndRibbons.STRINGS.NEXT_ART_BUTTON.TEXT"
+msgid "Next Tag"
+msgstr "Marqueur Suivant"
+
+#. SignsTagsAndRibbons.STRINGS.NEXT_ART_BUTTON.TOOLTIP
+msgctxt "SignsTagsAndRibbons.STRINGS.NEXT_ART_BUTTON.TOOLTIP"
+msgid "Changes Tag forward to another of the same tier. {Hotkey}"
+msgstr "Passe au marqueur suivant du même niveau. {Hotkey}"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.EIGHT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.EIGHT_TAG"
+msgid "8"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.FIVE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.FIVE_TAG"
+msgid "5"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.FOUR_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.FOUR_TAG"
+msgid "4"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.NINE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.NINE_TAG"
+msgid "9"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.NONUMBER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.NONUMBER_TAG"
+msgid "Numbers Tag"
+msgstr "Marqueur de Nombres"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.ONE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.ONE_TAG"
+msgid "1"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.SEVEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.SEVEN_TAG"
+msgid "7"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.SIX_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.SIX_TAG"
+msgid "6"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.THREE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.THREE_TAG"
+msgid "3"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.TWO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.TWO_TAG"
+msgid "2"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.ZERO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.ZERO_TAG"
+msgid "0"
+msgstr ""
+
+#. SignsTagsAndRibbons.STRINGS.SIDESCREEN.TITLE
+msgctxt "SignsTagsAndRibbons.STRINGS.SIDESCREEN.TITLE"
+msgid "Select Variant"
+msgstr "Choisir une variante"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.AGRICULTURE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.AGRICULTURE_TAG"
+msgid "Agriculture"
+msgstr "Agriculture"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.COMPOSTABLE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.COMPOSTABLE_TAG"
+msgid "Compostables"
+msgstr "Compostable"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CONSUMORE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CONSUMORE_TAG"
+msgid "Consumable Ore"
+msgstr "Minerai Consommable"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.COOKINGING_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.COOKINGING_TAG"
+msgid "Cooking Ingredient"
+msgstr "Ingrédient"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CRITTEREGG_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CRITTEREGG_TAG"
+msgid "Critter Egg"
+msgstr "Œuf de Créature"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CULSOIL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CULSOIL_TAG"
+msgid "Cultivable Soil"
+msgstr "Sol Cultivable"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.EDIBLES_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.EDIBLES_TAG"
+msgid "Edibles"
+msgstr "Consommables"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.FILTRATION_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.FILTRATION_TAG"
+msgid "Filtration Medium"
+msgstr "Matériau de Filtration"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.INDING_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.INDING_TAG"
+msgid "Industrial Ingredient"
+msgstr "Ingrédient Industriel"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.LIQUEFIABLE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.LIQUEFIABLE_TAG"
+msgid "Liquefiable"
+msgstr "Liquéfiable"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MANUFACT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MANUFACT_TAG"
+msgid "Manufactured Material"
+msgstr "Matériau Manufacturé"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MEDSUP_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MEDSUP_TAG"
+msgid "Medical Supplies"
+msgstr "Fourniture médicale"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.METALORE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.METALORE_TAG"
+msgid "Metal Ore"
+msgstr "Minerai de Métal"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MISC_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MISC_TAG"
+msgid "Miscellaneous"
+msgstr "Divers"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.NOSOLID_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.NOSOLID_TAG"
+msgid "Select Solid"
+msgstr "Choisir un Solide"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.ORGANIC_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.ORGANIC_TAG"
+msgid "Organic"
+msgstr "Organique"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.RARE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.RARE_TAG"
+msgid "Rare Resource"
+msgstr "Ressource Rare"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.RAWMINERAL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.RAWMINERAL_TAG"
+msgid "Raw Mineral"
+msgstr "Matériau Brut"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.REFMETAL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.REFMETAL_TAG"
+msgid "Refined Metal"
+msgstr "Métal Raffiné"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.REFMINERAL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.REFMINERAL_TAG"
+msgid "Refined Mineral"
+msgstr "Minéral raffiné"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.SEEDS_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.SEEDS_TAG"
+msgid "Seeds"
+msgstr "Graine"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.CLOSEDCY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.CLOSEDCY_TAG"
+msgid "Closed Cycle"
+msgstr "Cycle fermé"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.GASSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.GASSEN_TAG"
+msgid "Gas Element Sensor"
+msgstr "Capteur d'Élément Gazeux"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.LIQUIDSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.LIQUIDSEN_TAG"
+msgid "Liquid Element Sensor"
+msgstr "Capteur d'Élément Liquide"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.MOTIONSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.MOTIONSEN_TAG"
+msgid "Motion Sensor"
+msgstr "Détecteur de Mouvement"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.NOSYS_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.NOSYS_TAG"
+msgid "Select System Tag"
+msgstr "Choisir un Marqueur de Système"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.ORGANICCY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.ORGANICCY_TAG"
+msgid "Organic Recycle"
+msgstr "Recyclage Organique"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.POWER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.POWER_TAG"
+msgid "Power Toggle"
+msgstr "Interrupteur Électrique"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.POWERSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.POWERSEN_TAG"
+msgid "Power Sensor"
+msgstr "Capteur de Puissance"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.PRESSURESEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.PRESSURESEN_TAG"
+msgid "Pressure Sensor"
+msgstr "Capteur de Pression"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.RECYCLE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.RECYCLE_TAG"
+msgid "Recycle"
+msgstr "Recyclage"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.TEMPSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.TEMPSEN_TAG"
+msgid "Temperature Sensor"
+msgstr "Capteur de Température"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.TIMESEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.TIMESEN_TAG"
+msgid "Time Sensor"
+msgstr "Capteur Horaire"
+
+#. SignsTagsAndRibbons.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr "Pholith"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.ARROW_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.ARROW_TAG"
+msgid "Direction"
+msgstr "Direction"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.BOTHARROW_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.BOTHARROW_TAG"
+msgid "Both Directions"
+msgstr "Dans les 2 sens"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.DIAGARROW_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.DIAGARROW_TAG"
+msgid "Diagonal Direction"
+msgstr "En Diagonale"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.GASPUMP_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.GASPUMP_TAG"
+msgid "Gas Pump"
+msgstr "Pompe à Gaz"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.LIQUIDPUMP_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.LIQUIDPUMP_TAG"
+msgid "Liquid Pump"
+msgstr "Pompe à Liquide"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.NOSUT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.NOSUT_TAG"
+msgid "Select Utility Tag"
+msgstr "Choisir un Marqueur Utilitaire"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.SOLIDCON_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.SOLIDCON_TAG"
+msgid "Solid Conveyor"
+msgstr "Convoyeur de Solide"
