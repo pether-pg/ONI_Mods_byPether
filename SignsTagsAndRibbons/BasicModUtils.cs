@@ -12,6 +12,11 @@ namespace SignsTagsAndRibbons
             Strings.Add($"STRINGS.BUILDINGS.PREFABS.{id.ToUpperInvariant()}.EFFECT", effect);
         }
 
+        public static void MakeBuildMenuSubcatagory(string id, string name)
+        {
+            Strings.Add($"STRINGS.UI.NEWBUILDCATEGORIES." + id.ToUpper() + ".BUILDMENUTITLE", name);
+        }
+
         public static void MakeSideScreenStrings(string key, string name)
         {
             Strings.Add(key, name);

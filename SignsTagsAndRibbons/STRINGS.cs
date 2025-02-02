@@ -11,6 +11,11 @@ namespace SignsTagsAndRibbons
 
         public class BUILDINGS
         {
+            public class MENU_SUBCATEGORY
+            {
+                public static LocString NAME = "Signs, Tags and Ribbons";
+            }
+
             public class DANGERRIBBON
             {
                 public static LocString NAME = "Danger Ribbon";
@@ -381,6 +386,14 @@ namespace SignsTagsAndRibbons
             public static LocString X_TAG = "X";
             public static LocString Y_TAG = "Y";
             public static LocString Z_TAG = "Z";
+        }
+
+        public class TRANSLATION
+        {
+            public class AUTHOR
+            {
+                public static LocString NAME = "pether.pg";
+            }
         }
     }
 }

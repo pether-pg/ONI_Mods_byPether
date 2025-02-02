@@ -73,6 +73,7 @@
     <Compile Include="Buildings\LocationTagConfig.cs" />
     <Compile Include="Buildings\SmallElementTagConfig.cs" />
     <Compile Include="FUI_SideScreen.cs" />
+    <Compile Include="SignTagsAndRibbons_Patches_Translation.cs" />
     <Compile Include="STRINGS.cs" />
     <Compile Include="Buildings\LetterTagConfig.cs" />
     <Compile Include="Buildings\LiquidTagConfig.cs" />

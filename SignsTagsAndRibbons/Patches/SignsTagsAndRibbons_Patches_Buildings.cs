@@ -7,7 +7,7 @@ namespace SignsTagsAndRibbons
         [HarmonyPatch(typeof(GeneratedBuildings), "LoadGeneratedBuildings")]
         public class GeneratedBuildings_LoadGeneratedBuildings_Patch
         {
-            private static void Prefix()
+            public static void Prefix()
             {
                 BasicModUtils.MakeBuildingStrings(DangerRibbonConfig.ID, STRINGS.BUILDINGS.DANGERRIBBON.NAME, STRINGS.BUILDINGS.DANGERRIBBON.DESC, STRINGS.BUILDINGS.DANGERRIBBON.EFFECT);
                 BasicModUtils.MakeBuildingStrings(DangerRibbonCornerConfig.ID, STRINGS.BUILDINGS.DANGERCORNER.NAME, STRINGS.BUILDINGS.DANGERCORNER.DESC, STRINGS.BUILDINGS.DANGERCORNER.EFFECT);
@@ -27,21 +27,24 @@ namespace SignsTagsAndRibbons
 
                 BasicModUtils.MakeSideScreenStrings(SignSideScreen.SCREEN_TITLE_KEY, STRINGS.SIDESCREEN.TITLE);
 
-                ModUtil.AddBuildingToPlanScreen("Utilities", DangerRibbonConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", DangerRibbonCornerConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", MeterScaleConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", InfoTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", SystemTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", UtilityTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", AlertTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", SolidTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", LiquidTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", GasTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", NumbersTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", LetterTagConfig.ID);
-                // ModUtil.AddBuildingToPlanScreen("Utilities", GeyserTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", LocationTagConfig.ID);
-                ModUtil.AddBuildingToPlanScreen("Utilities", SmallElementTagConfig.ID);
+                const string categoryId = "SignsTagsRibbonsSubcategory";
+                BasicModUtils.MakeBuildMenuSubcatagory(categoryId, STRINGS.BUILDINGS.MENU_SUBCATEGORY.NAME);
+
+                ModUtil.AddBuildingToPlanScreen("Utilities", DangerRibbonConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", DangerRibbonCornerConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", MeterScaleConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", InfoTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", SystemTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", UtilityTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", AlertTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", SolidTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", LiquidTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", GasTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", NumbersTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", LetterTagConfig.ID, categoryId);
+                // ModUtil.AddBuildingToPlanScreen("Utilities", GeyserTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", LocationTagConfig.ID, categoryId);
+                ModUtil.AddBuildingToPlanScreen("Utilities", SmallElementTagConfig.ID, categoryId);
             }
         }
     }
