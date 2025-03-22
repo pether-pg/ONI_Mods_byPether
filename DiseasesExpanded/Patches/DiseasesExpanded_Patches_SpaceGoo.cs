@@ -115,8 +115,9 @@ namespace DiseasesExpanded
             public static void Postfix()
             {
                 ShieldData.Instance.UpdateShieldStaus();
-                foreach (WorldContainer world in ClusterManager.Instance.WorldContainers)
-                    world.currentCosmicIntensity = world.cosmicRadiation * ShieldData.Instance.GetRadiationScale(world.id);
+                if (ClusterManager.Instance != null && ClusterManager.Instance.WorldContainers != null)
+                    foreach (WorldContainer world in ClusterManager.Instance.WorldContainers)
+                        world.currentCosmicIntensity = world.cosmicRadiation * ShieldData.Instance.GetRadiationScale(world.id);
             }
         }
     }

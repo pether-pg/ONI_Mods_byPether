@@ -14,7 +14,7 @@ namespace DiseasesExpanded
                 id = ID,
                 statBonus = DUPLICANTSTATS.SMALL_STATPOINT_BONUS,
                 rarity = DUPLICANTSTATS.RARITY_COMMON,
-                dlcId = DlcManager.EXPANSION1_ID
+                requiredDlcIds = new string[] { DlcManager.EXPANSION1_ID }
             };
         }
 

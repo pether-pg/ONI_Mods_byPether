@@ -56,63 +56,31 @@ namespace DiseasesExpanded
         }
 
         [HarmonyPatch(typeof(Butcherable))]
-        [HarmonyPatch("OnButcherComplete")]
-        public static class Butcherable_OnButcherComplete_Patch
+        [HarmonyPatch(nameof(Butcherable.CreateDrops))]
+        public static class Butcherable_CreateDrops_Patch
         {
-            static MethodInfo spawnPrefabMethodInfo = AccessTools.Method(
-                typeof(Scenario), 
-                nameof(Scenario.SpawnPrefab),
-                new System.Type[] { typeof(int), typeof(int), typeof(int), typeof(string), typeof(Grid.SceneLayer)});
-            
-            static MethodInfo myExtraCodeMethodInfo = AccessTools.Method(
-                typeof(Butcherable_OnButcherComplete_Patch), 
-                nameof(Butcherable_OnButcherComplete_Patch.InfectWithGerms));
-
-            public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
-            {
-                if (spawnPrefabMethodInfo == null || myExtraCodeMethodInfo == null)
-                    Debug.Log($"{ModInfo.Namespace}: Butcherable_OnButcherComplete_Patch encountered null MethodInfo, no changes will take place...");
-
-                foreach (var instruction in instructions)
-                {
-                    // In any case, call the instruction
-                    yield return instruction;
-
-                    // Ignore extra code if it wouldn't work anyway
-                    if (spawnPrefabMethodInfo == null || myExtraCodeMethodInfo == null)
-                        continue;
-
-                    // If that was Scenario.SpawnPrefab, emhance spawned prefab with germs
-                    if (instruction.operand is MethodInfo m && m == spawnPrefabMethodInfo)
-                    {
-                        // Load on the stack 0th argument of OnButcherComplete method - Butcherable object
-                        yield return new CodeInstruction(OpCodes.Ldarg_0);
-
-                        // Call InfectWithGerms to add Food- or Gassy Germs
-                        // GameObject go is already on the stack after Scenario.SpawnPrefab()
-                        yield return new CodeInstruction(OpCodes.Call, myExtraCodeMethodInfo);
-                    }
-                }
-            }
-
-            public static GameObject InfectWithGerms(GameObject go, Butcherable butherable)
+            public static void Postfix(Butcherable __instance, ref GameObject[] __result)
             {
                 if (!Settings.Instance.InfectRawMeatDropsWithGerms)
-                    return go;
+                    return;
 
                 Database.Diseases diseases = Db.Get().Diseases;
                 string germId = FoodGerms.ID;
-                if (Settings.Instance.MooFlu.IncludeDisease && butherable.gameObject.name == MooConfig.ID)
+                if (Settings.Instance.MooFlu.IncludeDisease && __instance.gameObject.name == MooConfig.ID)
                     germId = GassyGerms.ID;
 
-                if (germId == GassyGerms.ID && !Settings.Instance.MooFlu.IncludeDisease)
-                    return go;
+                foreach (GameObject go in __result)
+                {
+                    if (go.name != MeatConfig.ID && go.name != FishMeatConfig.ID)
+                        continue;
 
-                PrimaryElement prime = go.GetComponent<PrimaryElement>();
-                if (prime != null && !string.IsNullOrEmpty(germId))
-                    prime.AddDisease(diseases.GetIndex(germId), 100000, "Infected meat");
+                    if (germId == GassyGerms.ID && !Settings.Instance.MooFlu.IncludeDisease)
+                        continue;
 
-                return go;
+                    PrimaryElement prime = go.GetComponent<PrimaryElement>();
+                    if (prime != null && !string.IsNullOrEmpty(germId))
+                        prime.AddDisease(diseases.GetIndex(germId), 100000, "Infected meat");
+                }
             }
         }
 
