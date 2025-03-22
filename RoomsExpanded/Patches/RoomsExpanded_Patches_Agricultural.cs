@@ -77,7 +77,8 @@ namespace RoomsExpanded
             typeof(string), 
             typeof(System.Action<KMonoBehaviour>), 
             typeof(EventReference), 
-            typeof(string), 
+            typeof(string),
+            typeof(string[]),
             typeof(string[]),
             typeof(string),
             typeof(string) })]
