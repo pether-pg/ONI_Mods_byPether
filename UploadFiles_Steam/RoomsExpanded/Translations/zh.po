@@ -11,17 +11,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Application: Oxygen Not IncludedPOT Version: 2.0\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.5\n"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.DESCRIPTION"
-msgid "Requires a single Grooming Station or Farm Station"
+msgid "Requires a single Ranching building or Farm Station"
 msgstr "需要一个照料站或农业站"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME"
-msgid "Grooming or Farm Station"
-msgstr "照料站或农业站"
+msgid ""
+"<link=\"BUILDCATEGORYREQUIREMENTCLASSRANCHSTATIONTYPE\">Ranching building</"
+"link> or <link=\"FARMSTATION\">Farm Station</link>"
+msgstr ""
+"<link=\"BUILDCATEGORYREQUIREMENTCLASSRANCHSTATIONTYPE\">照料站</link>或"
+"<link=\"FARMSTATION\">农业站</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.DESCRIPTION"
@@ -30,13 +34,13 @@ msgstr "一张床铺或者舒适的床。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME"
-msgid "Any bed"
-msgstr "任何床"
+msgid "Any <link=\"BUILDCATEGORYREQUIREMENTCLASSBEDTYPE\">bed</link>"
+msgstr "任何<link=\"BUILDCATEGORYREQUIREMENTCLASSBEDTYPE\">床</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION"
-msgid "At least {0} unique Artifacts"
-msgstr "至少{0}件独特工艺品"
+msgid "At least {0} unique Artifacts."
+msgstr "至少{0}件独特工艺品。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME"
@@ -52,6 +56,26 @@ msgstr "至少一个食物压制器、电动烤炉或燃气灶。"
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.COOKING.NAME"
 msgid "Cooking Station"
 msgstr "烹饪台"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DATA_MINER.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DATA_MINER.DESCRIPTION"
+msgid "At least one Data Miner building."
+msgstr "至少一个数据挖掘仪。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DATA_MINER.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DATA_MINER.NAME"
+msgid "Data Miner"
+msgstr "数据挖掘仪"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.DESCRIPTION"
+msgid "Water Fort or a Decor item."
+msgstr "水中城堡或一个装饰物。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECOR_OR_WATER_FORT.NAME"
+msgid "Aquarium Decoration"
+msgstr "水族馆装饰"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECORPLANTS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.DECORPLANTS.DESCRIPTION"
@@ -80,8 +104,8 @@ msgstr "至少一个喂鱼器"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHFEEDER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHFEEDER.NAME"
-msgid "Fish Feeder"
-msgstr "喂鱼器"
+msgid "<link=\"FISHFEEDER\">Fish Feeder</link>"
+msgstr "<link=\"FISHFEEDER\">喂鱼器</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.DESCRIPTION"
@@ -90,8 +114,8 @@ msgstr "至少一个鱼类放生点"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.NAME"
-msgid "Fish Release"
-msgstr "鱼类放生点"
+msgid "<link=\"FISHDELIVERYPOINT\">Fish Release</link>"
+msgstr "<link=\"FISHDELIVERYPOINT\">鱼类放生点</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FLOWERPOT.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FLOWERPOT.DESCRIPTION"
@@ -110,8 +134,8 @@ msgstr "至少{0}块化石。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FOSSILS.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FOSSILS.NAME"
-msgid "{0} Fossils."
-msgstr "{0}化石。"
+msgid "{0} Fossils"
+msgstr "{0}化石"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.DESCRIPTION"
@@ -120,8 +144,8 @@ msgstr "至少一个冰箱。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.NAME"
-msgid "Refrigerator"
-msgstr "冰箱"
+msgid "<link=\"REFRIGERATOR\">Refrigerator</link>"
+msgstr "<link=\"REFRIGERATOR\">冰箱</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.DESCRIPTION"
@@ -130,8 +154,8 @@ msgstr "这个房间必须包含植物分析仪。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME"
-msgid "Genetic Analysis Station."
-msgstr "遗传分析站。"
+msgid "<link=\"GENETICANALYSISSTATION\">Genetic Analysis Station</link>"
+msgstr "<link=\"GENETICANALYSISSTATION\">植物分析仪</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION"
@@ -140,7 +164,7 @@ msgstr "至少一个雅致的纪念碑"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GRAVE.NAME"
-msgid "Tasteful Memorial"
+msgid "<link=\"GRAVE\">Tasteful Memorial</link>"
 msgstr "雅致的纪念碑"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.DESCRIPTION
@@ -150,8 +174,11 @@ msgstr "至少一个工业器械"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME"
-msgid "Industrial Machinery"
-msgstr "工业器械"
+msgid ""
+"<link=\"BUILDCATEGORYREQUIREMENTCLASSINDUSTRIALMACHINERY\">Industrial "
+"Machinery</link>"
+msgstr ""
+"<link=\"BUILDCATEGORYREQUIREMENTCLASSINDUSTRIALMACHINERY\">工业器械</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION"
@@ -160,8 +187,8 @@ msgstr "至少一个人力发电机"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME"
-msgid "Manual Generator"
-msgstr "人力发电机"
+msgid "<link=\"MANUALGENERATOR\">Manual Generator</link>"
+msgstr "<link=\"MANUALGENERATOR\">人力发电机</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION"
@@ -200,8 +227,8 @@ msgstr "这个房间不能多于一座淋浴、洗手池或厕所。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBATHROOMSET.NAME"
-msgid "No more than one bathroom set."
-msgstr "不能多于一套浴室设施。"
+msgid "No more than one bathroom set"
+msgstr "不能多于一套浴室设施"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.DESCRIPTION"
@@ -210,8 +237,9 @@ msgstr "这个房间不能多于一张床。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME"
-msgid "No more than one bed."
-msgstr "不多于一张床。"
+msgid ""
+"No more than one <link=\"BUILDCATEGORYREQUIREMENTCLASSBEDTYPE\">bed</link>"
+msgstr "不能多于一张<link=\"BUILDCATEGORYREQUIREMENTCLASSBEDTYPE\">床</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PAINTINGS.DESCRIPTION"
@@ -230,8 +258,8 @@ msgstr "至少一个基座"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME"
-msgid "Pedestal"
-msgstr "基座"
+msgid "<link=\"ITEMPEDESTAL\">Pedestal</link>"
+msgstr "<link=\"ITEMPEDESTAL\">基座</link>基座"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTCOUNT.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTCOUNT.DESCRIPTION"
@@ -250,8 +278,8 @@ msgstr "至少一个种植箱"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.NAME"
-msgid "Planter Box"
-msgstr "种植箱"
+msgid "<link=\"PLANTERBOX\">Planter Box</link>"
+msgstr "<link=\"PLANTERBOX\">种植箱</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.DESCRIPTION"
@@ -260,8 +288,18 @@ msgstr "至少一个辐射源。"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME"
-msgid "Radiation Source."
-msgstr "辐射源。"
+msgid "<link=\"RADIATION\">Radiation Source</link>"
+msgstr "<link=\"RADIATION\">辐射源</link>"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ROBO_MINER.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ROBO_MINER.DESCRIPTION"
+msgid "At least one Robo-Miner building."
+msgstr "至少一个自动采矿机。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.ROBO_MINER.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ROBO_MINER.NAME"
+msgid "Robo-Miner"
+msgstr "自动采矿机"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SCULPTURES.DESCRIPTION"
@@ -290,8 +328,18 @@ msgstr "至少一座淋浴"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME"
-msgid "Shower"
-msgstr "淋浴间"
+msgid "<link=\"SHOWER\">Shower</link>"
+msgstr "<link=\"SHOWER\">淋浴</link>"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.DESCRIPTION"
+msgid "Contains Mission Control Station."
+msgstr "包含航天指挥站。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SPACE_BUILDING.NAME"
+msgid "<link=\"MISSIONCONTROLCLUSTER\">Pilot Support Building</link>"
+msgstr "<link=\"MISSIONCONTROLCLUSTER\">航天指挥站</link>"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.DESCRIPTION"
@@ -303,6 +351,16 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SWIMMINGCREATURES.NAME"
 msgid "{0} Swimming Critters"
 msgstr "{0}只游泳小动物"
 
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.DESCRIPTION"
+msgid "Top tiles of the room are transparent."
+msgstr "房间顶部砖块是透明的。"
+
+#. RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.TRANSPARENT_CEILING.NAME"
+msgid "<link=\"TRANSPARENT\">Transparent Ceiling</link>"
+msgstr "<link=\"TRANSPARENT\">透明屋顶</link>"
+
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION"
 msgid "At least one Water Cooler"
@@ -310,8 +368,18 @@ msgstr "至少一个饮水机"
 
 #. RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME"
-msgid "Water Cooler"
-msgstr "饮水机"
+msgid "<link=\"WATERCOOLER\">Water Cooler</link>"
+msgstr "<link=\"WATERCOOLER\">饮水机</link>"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.BIONIC_UPKEEP.DESCRIPTION
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.BIONIC_UPKEEP.DESCRIPTION"
+msgid "This Duplicant used Bionic Pit Stop."
+msgstr "这个复制人使用仿生保养站。"
+
+#. RoomsExpanded.STRINGS.ROOMS.EFFECTS.BIONIC_UPKEEP.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.BIONIC_UPKEEP.NAME"
+msgid "Bionic Pit Stop"
+msgstr "仿生保养站"
 
 #. RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION"
@@ -346,12 +414,12 @@ msgstr "豪华私人卧室"
 
 #. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION
 msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION"
-msgid "Visited Museum"
+msgid "Visited Art Museum"
 msgstr "参观艺术博物馆"
 
 #. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME"
-msgid "Museum"
+msgid "Art Museum"
 msgstr "艺术博物馆"
 
 #. RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUMHISTORY.DESCRIPTION
@@ -396,8 +464,8 @@ msgstr "私人卧室"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.EFFECT"
-msgid " - Enables Farm and Grooming Stations"
-msgstr " - 启用照料站或农业站"
+msgid " - Enables Farm and Ranching building"
+msgstr " - 启用农业站或照料站"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AGRICULTURAL.NAME"
@@ -425,6 +493,21 @@ msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.AQUARIUM.TOOLTIP"
 msgid "Properly exposed critters seem to be much prettier."
 msgstr "适当展出的小动物看起来更漂亮。"
 
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.BIONIC_UPKEEP.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BIONIC_UPKEEP.EFFECT"
+msgid " - Morale Bonus"
+msgstr " - Morale Bonus"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.BIONIC_UPKEEP.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BIONIC_UPKEEP.NAME"
+msgid "Bionic Pit Stop"
+msgstr "仿生保养站"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.BIONIC_UPKEEP.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BIONIC_UPKEEP.TOOLTIP"
+msgid "Maintenance workshop for Bionic duplicants."
+msgstr "仿生复制人的维护车间。"
+
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.BOTANICAL.EFFECT"
 msgid " - Morale bonus"
@@ -441,10 +524,27 @@ msgid ""
 "Serene harmony of exotic plants amazes everyone who enters Botanical Garden."
 msgstr "不同风情的植物宁静和谐相处，让每一个参观植物园的人惊叹。"
 
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.DATA_MINING.EFFECT
+#| msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT"
+#| msgid " - Faster athletics increase by {0}"
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.DATA_MINING.EFFECT"
+msgid " - Faster Data Mining: +{0}"
+msgstr " - 更快的数据挖掘: +{0}"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.DATA_MINING.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.DATA_MINING.NAME"
+msgid "Data Mining Shaft"
+msgstr "数据挖掘井"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.DATA_MINING.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.DATA_MINING.TOOLTIP"
+msgid "Nobody really knows how Robo-Miner helps in here... Nobody but Meep."
+msgstr "没人知道这里放个自动采矿机有什么用……除了米珀。"
+
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT"
 msgid " - Stress: +10% or -10% for {0} cycle"
-msgstr " - 压力: +10% 或 -10% 每{0}周期"
+msgstr " - 压力: {0}周期 +10% 或 -10%"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME"
@@ -515,6 +615,21 @@ msgstr "实验室"
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.LABORATORY.TOOLTIP"
 msgid "Conducting research in a designated room proves to be more efficient."
 msgstr "在专门的房间内进行研究会更有效率。"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.EFFECT
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.EFFECT"
+msgid " - Provides support for Pilots"
+msgstr " - 为航天提供支援"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.NAME
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.NAME"
+msgid "Pilot Help Center"
+msgstr "航天支援中心"
+
+#. RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.TOOLTIP
+msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MISSIONCONTROL.TOOLTIP"
+msgid "So many duplicants work together just to get a new mug."
+msgstr "这么多复制人一起工作只为了一个马克杯。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT"
@@ -632,9 +747,11 @@ msgid "For duplicants who want to have some privacy."
 msgstr "给想要一些私人空间的复制人。"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT
+#| msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT"
+#| msgid " - Shorter shower time by {0}"
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.EFFECT"
-msgid " - Shorter shower time by {0}"
-msgstr " - 减少淋浴时间{0}"
+msgid " • Shorter shower time by {0}"
+msgstr " • 减少淋浴时间{0}"
 
 #. RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.NAME
 msgctxt "RoomsExpanded.STRINGS.ROOMS.TYPES.SHOWERROOM.NAME"
@@ -649,7 +766,67 @@ msgstr "一进入这样漂亮的浴室，复制人感到仿佛重新打印了一
 #. RoomsExpanded.STRINGS.TRANSLATION.AUTHOR.NAME
 msgctxt "RoomsExpanded.STRINGS.TRANSLATION.AUTHOR.NAME"
 msgid "pether.pg"
-msgstr "Ventulus"
+msgstr "pether.pg"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.AGRICULTURAL.NAME"
+#~ msgid "Grooming or Farm Station"
+#~ msgstr "照料站或农业站"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ANYBED.NAME"
+#~ msgid "Any bed"
+#~ msgstr "任何床"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHFEEDER.NAME"
+#~ msgid "Fish Feeder"
+#~ msgstr "喂鱼器"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FISHRELEASE.NAME"
+#~ msgid "Fish Release"
+#~ msgstr "鱼类放生点"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.FRIDGE.NAME"
+#~ msgid "Refrigerator"
+#~ msgstr "冰箱"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.GENETICSTATION.NAME"
+#~ msgid "Genetic Analysis Station."
+#~ msgstr "遗传分析站。"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME"
+#~ msgid "Industrial Machinery"
+#~ msgstr "工业器械"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME"
+#~ msgid "Manual Generator"
+#~ msgstr "人力发电机"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.ONLYONEBED.NAME"
+#~ msgid "No more than one bed."
+#~ msgstr "不多于一张床。"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME"
+#~ msgid "Pedestal"
+#~ msgstr "基座"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.PLANTERBOX.NAME"
+#~ msgid "Planter Box"
+#~ msgstr "种植箱"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.RADIATIONSOURCE.NAME"
+#~ msgid "Radiation Source."
+#~ msgstr "辐射源。"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SHOWER.NAME"
+#~ msgid "Shower"
+#~ msgstr "淋浴间"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME"
+#~ msgid "Water Cooler"
+#~ msgstr "饮水机"
+
+#~ msgctxt "RoomsExpanded.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME"
+#~ msgid "Museum"
+#~ msgstr "艺术博物馆"
 
 #~ msgctxt "RoomsExpanded.STRINGS.ROOMS.CRITERIA.SEEDPLANTS.DESCRIPTION"
 #~ msgid "At least {0} Plants growing seeds of different types."
