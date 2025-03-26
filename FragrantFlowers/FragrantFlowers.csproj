@@ -94,6 +94,7 @@
     <Compile Include="AromaCans\LavenderAromaCanConfig.cs" />
     <Compile Include="AromaCans\MallowAromaCanConfig.cs" />
     <Compile Include="JsonSerializer.cs" />
+    <Compile Include="Patches\FragrantFlowers_Patches_Codex.cs" />
     <Compile Include="Patches\FragrantFlowers_Patches_Effects.cs" />
     <Compile Include="Buildings\AromaticsFabricator.cs" />
     <Compile Include="FragrantPlantsTuning.cs" />
