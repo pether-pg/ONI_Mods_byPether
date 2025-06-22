@@ -8,7 +8,7 @@ namespace DiseasesExpanded
     {
         public const string ID = "AlienSicknessCure";
         public const string EFFECT_ID = "AlienSicknessCureEffect";
-        public static readonly float stressPerSecond = -25 / 600.0f;
+        public static readonly float stressPerSecond = -50 / 600.0f;
         public static ComplexRecipe recipe;
 
         public static Effect GetEffect()

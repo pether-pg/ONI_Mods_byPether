@@ -11,14 +11,14 @@ namespace DiseasesExpanded
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
-        private void DefineRecipe(Tag mainIngridient, float amount = 1)
+        private void DefineRecipe(Tag[] mainIngridients, float[] amounts)
         {
             if (!Settings.Instance.MutatingVirus.IncludeDisease)
                 return;
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
-                new ComplexRecipe.RecipeElement(mainIngridient, amount),
+                new ComplexRecipe.RecipeElement(mainIngridients, amounts),
                 new ComplexRecipe.RecipeElement(SimHashes.Sand.CreateTag(), 100f),
                 new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 100f)
             };
@@ -36,14 +36,27 @@ namespace DiseasesExpanded
             };
         }
 
+        private void AddToIngridientLists(List<Tag> tags, List<float> floats, Tag tag, float f)
+        {
+            tags.Add(tag);
+            floats.Add(f);
+        }
+
         public GameObject CreatePrefab()
         {
-            DefineRecipe(BasicForagePlantConfig.ID, 2);
-            DefineRecipe(ForestForagePlantConfig.ID, 0.25f);
+            List<Tag> ingridientTags = new List<Tag>();
+            List<float> ingridientFloats = new List<float>();
+
+            AddToIngridientLists(ingridientTags, ingridientFloats, BasicForagePlantConfig.ID, 2);
+            AddToIngridientLists(ingridientTags, ingridientFloats, ForestForagePlantConfig.ID, 0.25f);
+            if (DlcManager.IsContentSubscribed(DlcManager.DLC4_ID))
+                AddToIngridientLists(ingridientTags, ingridientFloats, GardenForagePlantConfig.ID, 2);
             if (DlcManager.IsContentSubscribed(DlcManager.DLC2_ID))
-                DefineRecipe(IceCavesForagePlantConfig.ID, 2);
+                AddToIngridientLists(ingridientTags, ingridientFloats, IceCavesForagePlantConfig.ID, 2);
             if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
-                DefineRecipe(SwampForagePlantConfig.ID, 2 / 3.0f);
+                AddToIngridientLists(ingridientTags, ingridientFloats, SwampForagePlantConfig.ID, 2 / 3.0f);
+
+            DefineRecipe(ingridientTags.ToArray(), ingridientFloats.ToArray());
 
             MedicineInfo medInfo = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.CureSpecific, null, new string[] { MutatingSickness.ID });
 

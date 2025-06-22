@@ -11,7 +11,7 @@ namespace DiseasesExpanded
     class DiseasesExpanded_Patches_Codex
     {
 
-        [HarmonyPatch(typeof(CodexCache), "CollectYAMLEntries")]
+        //[HarmonyPatch(typeof(CodexCache), "CollectYAMLEntries")]
         public class CodexEntryGenerator_GenerateSomeEntries_Patch
         {
             public static void Postfix()
