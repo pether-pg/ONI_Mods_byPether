@@ -16,9 +16,8 @@ namespace RoomsExpanded
             Effect = STRINGS.ROOMS.TYPES.MISSIONCONTROL.EFFECT;
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.SPACE_BUILDING;
-            ConstrantsAdditional = new RoomConstraints.Constraint[4]
+            ConstrantsAdditional = new RoomConstraints.Constraint[3]
                                             {
-                                            RoomModdedConstraints.TRANSPARENT_CEILING,
                                             RoomConstraints.IS_BACKWALLED,
                                             RoomConstraints.MINIMUM_SIZE_12,
                                             RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Bathroom.MaxSize)

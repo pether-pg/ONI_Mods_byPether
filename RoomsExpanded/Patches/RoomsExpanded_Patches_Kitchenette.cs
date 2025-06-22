@@ -95,5 +95,16 @@ namespace RoomsExpanded
                 go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.KitchenBuildingTag);
             }
         }
+
+        [HarmonyPatch(typeof(SmokerConfig))]
+        [HarmonyPatch("ConfigureBuildingTemplate")]
+        public static class SmokerConfig_ConfigureBuildingTemplate_Patch
+        {
+            public static void Postfix(GameObject go)
+            {
+                if (!Settings.Instance.Kitchenette.IncludeRoom) return;
+                go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.KitchenBuildingTag);
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace RoomsExpanded
     {
         public static void AddRoom(ref RoomTypes __instance)
         {
-            if (!Settings.Instance.MuseumHistory.IncludeRoom || !CrossModManager.IsModEnabled(CrossModManager.FossilModId))
+            if (!Settings.Instance.MuseumHistory.IncludeRoom)
                 return;
 
             __instance.Add(RoomTypes_AllModded.HistoryMuseum);
@@ -32,6 +32,32 @@ namespace RoomsExpanded
             effect.SelfModifiers = new List<AttributeModifier>();
             effect.SelfModifiers.Add(new AttributeModifier("QualityOfLife", moraleBonus, description: STRINGS.ROOMS.EFFECTS.MUSEUMHISTORY.NAME));
             return effect;
+        }
+
+        [HarmonyPatch(typeof(FossilSculptureConfig))]
+        [HarmonyPatch("ConfigureBuildingTemplate")]
+        public static class FossilSculptureConfig_ConfigureBuildingTemplate_Patch
+        {
+            public static void Postfix(ref GameObject go)
+            {
+                if (!Settings.Instance.MuseumHistory.IncludeRoom)
+                    return;
+
+                go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.FossilBuilding);
+            }
+        }
+
+        [HarmonyPatch(typeof(CeilingFossilSculptureConfig))]
+        [HarmonyPatch("ConfigureBuildingTemplate")]
+        public static class CeilingFossilSculptureConfig_ConfigureBuildingTemplate_Patch
+        {
+            public static void Postfix(ref GameObject go)
+            {
+                if (!Settings.Instance.MuseumHistory.IncludeRoom)
+                    return;
+
+                go.GetComponent<KPrefabID>().AddTag(RoomConstraintTags.FossilBuilding);
+            }
         }
     }
 }

@@ -101,9 +101,9 @@ namespace RoomsExpanded
             Nursery = new RoomSettings(!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID), 64, ColorPalette.RoomAgricultural, 0.1f);
             Aquarium = new RoomSettings(false, 96, ColorPalette.RoomBathroom, 0.2f);
             Botanical = new PlainRoomSettings(true, 96, ColorPalette.RoomPark);
-            Museum = new RoomSettings(true, 96, ColorPalette.RoomHospital, 0.3f);
+            Museum = new RoomSettings(true, 120, ColorPalette.RoomHospital, 0.3f);
             MuseumSpace = new RoomSettings(true, 120, ColorPalette.RoomRecreation, 0.3f);
-            MuseumHistory = new RoomSettings(true, 96, ColorPalette.RoomRecreation, 0.3f);
+            MuseumHistory = new RoomSettings(DlcManager.IsContentSubscribed(DlcManager.DLC4_ID), 120, ColorPalette.RoomRecreation, 0.3f);
             HospitalUpdate = new PlainRoomSettings(true, 96, ColorPalette.RoomHospital);
             NurseryGenetic = new RoomSettings(true, 96, ColorPalette.RoomAgricultural, 0.2f);
             MissionControl = new PlainRoomSettings(true, 96, ColorPalette.RoomScience);
@@ -191,8 +191,8 @@ namespace RoomsExpanded
         [Option("Data Mining Center", category: "New Room - Data Mining Center")]
         public RoomSettings DataMiningCenter { get; set; }
 
-        //[JsonProperty]
-        //[Option("History Museum", category: "New Room - History Museum")]
+        [JsonProperty]
+        [Option("History Museum", category: "New Room - History Museum")]
         public RoomSettings MuseumHistory { get; set; }
 
         [JsonProperty]
