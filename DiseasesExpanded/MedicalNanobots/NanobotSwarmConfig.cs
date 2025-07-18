@@ -7,7 +7,7 @@ namespace DiseasesExpanded
     class NanobotSwarmConfig : IEntityConfig
     {
         public const string ID = "NanobotSwarm";
-        public const int SPAWNED_BOTS_COUNT = 1000 * 1000;
+        public const int SPAWNED_BOTS_COUNT = 1_000_000;
         public const int SPAWNED_BOTS_COUNT_PER_TILE = SPAWNED_BOTS_COUNT / 6;
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;

@@ -71,6 +71,7 @@ namespace DiseasesExpanded
                 BasicModUtils.MakeTraitStrings(NotWashingHands.ID, STRINGS.TRAITS.NOTWASHINGHANDS.NAME, STRINGS.TRAITS.NOTWASHINGHANDS.DESC, STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC, STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC_TOOLTIP);
 
                 BasicModUtils.MakeStatusItemStrings(GermcatcherConfig.StatusItemID, STRINGS.STATUSITEMS.GATHERING.NAME, STRINGS.STATUSITEMS.GATHERING.TOOLTIP);
+                BasicModUtils.MakeStatusItemStrings(NanobotReplicatorConfig.StatusItemID, STRINGS.STATUSITEMS.NANOBOT_REPLICATION.NAME, STRINGS.STATUSITEMS.NANOBOT_REPLICATION.TOOLTIP);
                 BasicModUtils.MakeStatusItemStrings(ShieldGeneratorConfig.StatusItemID, STRINGS.STATUSITEMS.SHIELDPOWERUP.NAME, STRINGS.STATUSITEMS.SHIELDPOWERUP.TOOLTIP);
 
                 ExpandExposureTable();
@@ -148,6 +149,10 @@ namespace DiseasesExpanded
                 StatusItem statusItem = new StatusItem(GermcatcherConfig.StatusItemID, "BUILDINGS", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
                 statusItem.SetResolveStringCallback((str, data) => str += ((GermcatcherController.Instance)data).GetStatusItemProgress());
                 Db.Get().BuildingStatusItems.Add(statusItem);
+
+                StatusItem nanoReplicationStatus = new StatusItem(NanobotReplicatorConfig.StatusItemID, "BUILDINGS", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
+                nanoReplicationStatus.SetResolveStringCallback((str, data) => str += ((NanobotReplicator.Instance)data).GetStatusItemProgress());
+                Db.Get().BuildingStatusItems.Add(nanoReplicationStatus);
 
                 StatusItem shieldStatus = new StatusItem(ShieldGeneratorConfig.StatusItemID, "BUILDINGS", "status_item_info", StatusItem.IconType.Info, NotificationType.Neutral, false, OverlayModes.None.ID);
                 shieldStatus.SetResolveStringCallback((str, data) => str += ((ShieldGenerator.SMInstance)data).GetStatusItemProgress());

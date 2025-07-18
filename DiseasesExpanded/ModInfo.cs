@@ -15,7 +15,7 @@ namespace DiseasesExpanded
         public static bool IsFragrantFlowersEnabled { get; private set; }
         public static List<Tag> CUSTOM_GASES = new List<Tag>
         {
-            NanobotBottleConfig.BOTTLED_GERM_TAG
+            NanobotBottleConfig.BOTTLED_NANOBOTS_TAG
         };
 
         public override void OnLoad(Harmony harmony)
@@ -30,6 +30,8 @@ namespace DiseasesExpanded
             BackupConfig.Instance.RestoreBackup(JsonSerializer<Settings>.GetDefaultName());
             InitalizePlib();
 
+
+            GameTags.MaterialBuildingElements.Add(NanobotBottleConfig.BOTTLED_NANOBOTS_TAG);
             AddNewStorageFilter();
         }
 
@@ -50,8 +52,8 @@ namespace DiseasesExpanded
 
         private void AddNewStorageFilter()
         {
-            GameTags.MaterialCategories.Add(NanobotBottleConfig.BOTTLED_GERM_TAG);
-            GameTags.AllCategories.Add(NanobotBottleConfig.BOTTLED_GERM_TAG);
+            GameTags.MaterialCategories.Add(NanobotBottleConfig.BOTTLED_NANOBOTS_TAG);
+            GameTags.AllCategories.Add(NanobotBottleConfig.BOTTLED_NANOBOTS_TAG);
             CUSTOM_GASES.AddRange(TUNING.STORAGEFILTERS.GASES);
         }
 

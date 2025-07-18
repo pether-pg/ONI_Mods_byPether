@@ -26,9 +26,21 @@ namespace DiseasesExpanded
                                         STRINGS.BUILDINGS.SHIELDGENERATOR.DESC,
                                         STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECT);
 
+                BasicModUtils.MakeBuildingStrings(NanobotReplicatorConfig.ID,
+                                        STRINGS.BUILDINGS.NANOBOT_REPLICATOR.NAME,
+                                        STRINGS.BUILDINGS.NANOBOT_REPLICATOR.DESC,
+                                        STRINGS.BUILDINGS.NANOBOT_REPLICATOR.EFFECT);
+
+                BasicModUtils.MakeBuildingStrings(NanobotForgeConfig.ID,
+                                        STRINGS.BUILDINGS.NANOBOT_FORGE.NAME,
+                                        STRINGS.BUILDINGS.NANOBOT_FORGE.DESC,
+                                        STRINGS.BUILDINGS.NANOBOT_FORGE.EFFECT);
+
                 ModUtil.AddBuildingToPlanScreen("Medical", GermcatcherConfig.ID, "wellness");
                 ModUtil.AddBuildingToPlanScreen("Medical", VaccineApothecaryConfig.ID, "medical");
                 ModUtil.AddBuildingToPlanScreen("Medical", ShieldGeneratorConfig.ID, "wellness");
+                ModUtil.AddBuildingToPlanScreen("Medical", NanobotForgeConfig.ID, "wellness");
+                ModUtil.AddBuildingToPlanScreen("Medical", NanobotReplicatorConfig.ID, "wellness");
             }
         }
 
@@ -49,6 +61,8 @@ namespace DiseasesExpanded
                 Tech tech2 = __instance.TryGet("MedicineIV");
                 if (tech2 != null)
                 {
+                    tech2.unlockedItemIDs.Add(NanobotForgeConfig.ID);
+                    tech2.unlockedItemIDs.Add(NanobotReplicatorConfig.ID);
                     tech2.unlockedItemIDs.Add(VaccineApothecaryConfig.ID);
                     tech2.unlockedItemIDs.Add(ShieldGeneratorConfig.ID);
                 }

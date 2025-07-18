@@ -6,9 +6,9 @@ namespace DiseasesExpanded
     class NanobotBottleConfig : IEntityConfig
     {
         public const string ID = "NanobotBottle";
-        public const int SPAWNED_BOTS_COUNT = 1000 * 1000;
+        public const int SPAWNED_BOTS_COUNT = NanobotSwarmConfig.SPAWNED_BOTS_COUNT;
         public const float OXYGEN_MASS = 1.0f;
-        public static Tag BOTTLED_GERM_TAG = TagManager.Create("BottledNanobots", STRINGS.TAGS.DISPOSABLE_GERMS.PROPER_NAME);
+        public static Tag BOTTLED_NANOBOTS_TAG = TagManager.Create("BottledNanobots", STRINGS.TAGS.DISPOSABLE_GERMS.PROPER_NAME);
 
         public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
@@ -46,7 +46,7 @@ namespace DiseasesExpanded
                 0.9f,
                 0.6f,
                 true,
-                additionalTags: new List<Tag>() { BOTTLED_GERM_TAG, GameTags.IndustrialIngredient });
+                additionalTags: new List<Tag>() { BOTTLED_NANOBOTS_TAG, GameTags.IndustrialIngredient });
 
             return looseEntity;
         }

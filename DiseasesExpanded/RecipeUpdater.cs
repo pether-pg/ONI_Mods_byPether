@@ -8,7 +8,7 @@ namespace DiseasesExpanded
     {
         public const int INVALID_IDX = -1;
 
-        public const string FABRICATOR_ID = SupermaterialRefineryConfig.ID;
+        public const string FABRICATOR_ID = NanobotForgeConfig.ID;
         public const float RECIPE_TIME = 600;
         public const float RECIPE_TIME_SWARM = 200;
         public const float RECIPE_MASS_BOT_SWARM = 1000;

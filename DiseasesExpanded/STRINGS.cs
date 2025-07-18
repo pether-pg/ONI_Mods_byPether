@@ -482,11 +482,26 @@ namespace DiseasesExpanded
                 public static LocString DESC = (LocString)"Vaccines produced here can grant your duplicants immunity for various diseases.";
                 public static LocString EFFECT = (LocString)$"Vaccine Apothecary uses {UI.FormatAsLink("Radiation", "RADIATION")} to weaken {UI.FormatAsLink("germs", "DISEASE")} stored in a {UI.FormatAsLink("flasks", TestSampleConfig.ID)} to produce life-saving vaccines.\n\nIt must be operated by highly-trained {UI.FormatAsLink("medical", "ROLES")} personel and it is suggested to use radiation protection for the time of vaccine preparation.";
             }
+
             public class SHIELDGENERATOR
             {
                 public static LocString NAME = (LocString)"Shield Generator";
                 public static LocString DESC = (LocString)"Shields the asteroid from cosmic radiation.";
                 public static LocString EFFECT = (LocString)$"When powered, generates shield around the asteroid to protect the surface from cosmic {UI.FormatAsLink("Radiation", "RADIATION")}. \n\nRequires line of sight to space.";
+            }
+
+            public class NANOBOT_FORGE
+            {
+                public static LocString NAME = "Nanobot Forge";
+                public static LocString DESC = $"Allows to manufacture and upgrade {UI.FormatAsLink("Medical Nanobots", MedicalNanobots.ID)}.";
+                public static LocString EFFECT = $"Duplicants with {UI.FormatAsLink("Advanced Medical Care", "MEDICINE3")} training can use this building to create {UI.FormatAsLink("Medical Nanobots", MedicalNanobots.ID)} or various upgrades to them.";
+            }
+
+            public class NANOBOT_REPLICATOR
+            {
+                public static LocString NAME = "Nanobot Replicator";
+                public static LocString DESC = "Slowly replicates Nanobots and releases them into air.";
+                public static LocString EFFECT = $"When powered, replicates {UI.FormatAsLink("Medical Nanobots", MedicalNanobots.ID)} on a slow, but steady rate and releases them. Upgrade {UI.FormatAsLink(NANOBOTDEVELOPMENT.SPAWNING.NAME, NanobotUpgrade_SpawnIncreaseConfig.ID)} for better spawning rates.";
             }
         }
 
@@ -497,6 +512,13 @@ namespace DiseasesExpanded
                 public static LocString NAME = (LocString)"Gathering";
                 public static LocString TOOLTIP = (LocString)"This building is currently gathering ambient germs.";
                 public static LocString PROGRESS = (LocString)" {GERMS} - {PROGRESS}%";
+            }
+
+            public class NANOBOT_REPLICATION
+            {
+                public static LocString NAME = (LocString)"Replicating Nanobots: ";
+                public static LocString TOOLTIP = (LocString)"This building is currently replicating Medical Nanobots and releasing them into the air: ";
+                public static LocString PROGRESS = (LocString)" {COUNT}/s";
             }
 
             public class SHIELDPOWERUP

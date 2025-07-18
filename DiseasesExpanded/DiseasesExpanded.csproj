@@ -98,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssetLoader.cs" />
+    <Compile Include="Buildings\NanobotForgeConfig.cs" />
+    <Compile Include="Buildings\NanobotReplicator.cs" />
+    <Compile Include="Buildings\NanobotReplicatorConfig.cs" />
     <Compile Include="CustomSicknessComponents\CustomFxSickEffectSickness.cs" />
     <Compile Include="MedicalNanobots\MedicalNanobotReviver.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Codex.cs" />
