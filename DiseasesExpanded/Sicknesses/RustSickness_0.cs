@@ -15,6 +15,7 @@ namespace DiseasesExpanded
         public const float BASE_BATTERIES_VALUE = -0.5f;
         public const float BASE_POWER_VALUE = 50;
         public const float BASE_STRESS_VALUE = 50.0f / 8 / 600; // 50 stress per cycle on highest stage
+        public const float BASE_OIL_VALUE = -10.0f / 600; 
 
         /* Disease progression plan:
          * 

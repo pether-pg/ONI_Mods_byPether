@@ -32,13 +32,14 @@ namespace DiseasesExpanded
                 (HashedString) "anim_idle_sick_kanim"
             }, Db.Get().Expressions.Sick));
 
-            this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[5]
+            this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[6]
             {
                 new AttributeModifier(Db.Get().Attributes.AirConsumptionRate.Id, RustSickness_0.YUCKY_LUNGGS_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
                 new AttributeModifier(Db.Get().Attributes.BionicBatteryCountCapacity.Id, RustSickness_0.BASE_BATTERIES_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
                 new AttributeModifier(Db.Get().Attributes.Athletics.Id, RustSickness_0.BASE_ATTRIBUTE_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
                 new AttributeModifier(Db.Get().Attributes.Learning.Id, RustSickness_0.BASE_ATTRIBUTE_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
-                new AttributeModifier("StressDelta", RustSickness_0.BASE_STRESS_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_2.NAME)
+                new AttributeModifier("StressDelta", RustSickness_0.BASE_STRESS_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
+                new AttributeModifier("BionicOilDelta", RustSickness_0.BASE_OIL_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_2.NAME)
             }));
 
             this.AddSicknessComponent(new PeriodicEmoteSickness(Db.Get().Emotes.Minion.Sick, 50f));

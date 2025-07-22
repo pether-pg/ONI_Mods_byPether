@@ -32,5 +32,21 @@ namespace DiseasesExpanded
             Notification msg = new Notification(message, notiType, click_focus: infestedHost?.transform);
             notifier.Add(msg);
         }
+
+        public static bool IsSickWith(GameObject go, string sicknessID, float percentCuredThreshold = 0)
+        {
+            Sicknesses sicknesses = go.GetSicknesses();
+            if (sicknesses == null)
+                return false;
+
+            SicknessInstance sicknessInstance = sicknesses.Get(sicknessID);
+            if (sicknessInstance == null)
+                return false;
+
+            if (sicknessInstance.GetPercentCured() > percentCuredThreshold)
+                return true;
+
+            return false;
+        }
     }
 }

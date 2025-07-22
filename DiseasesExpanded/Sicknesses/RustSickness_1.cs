@@ -28,11 +28,13 @@ namespace DiseasesExpanded
                 (HashedString) "anim_idle_sick_kanim"
             }, Db.Get().Expressions.Sick));
 
-            this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[3]
+            this.AddSicknessComponent((Sickness.SicknessComponent)new AttributeModifierSickness(new AttributeModifier[4]
             {
                 new AttributeModifier(Db.Get().Attributes.AirConsumptionRate.Id, RustSickness_0.YUCKY_LUNGGS_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_1.NAME),
                 new AttributeModifier(Db.Get().Attributes.BionicBatteryCountCapacity.Id, RustSickness_0.BASE_BATTERIES_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_1.NAME),
-                new AttributeModifier(Db.Get().Attributes.Learning.Id, RustSickness_0.BASE_ATTRIBUTE_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_1.NAME) // Blame Aki
+                new AttributeModifier(Db.Get().Attributes.Learning.Id, RustSickness_0.BASE_ATTRIBUTE_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_1.NAME), // Blame Aki
+                new AttributeModifier("BionicOilDelta", RustSickness_0.BASE_OIL_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_1.NAME) // Blame Pink Hoodie
+
             }));
             this.AddSicknessComponent(new PeriodicEmoteSickness(Db.Get().Emotes.Minion.Sick, 50f));
             this.AddSicknessComponent(new RustSickness_1_Component());
