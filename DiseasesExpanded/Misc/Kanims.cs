@@ -10,12 +10,15 @@ namespace DiseasesExpanded
     {
         public static HashedString GasCureKanim = (HashedString)"custom_pill_1_kanim";
         public static HashedString MudMaskKanim = (HashedString)"custom_salve_1_kanim";
-        public static HashedString SapShotKanim = (HashedString)"custom_serum_1_kanim";
+        public static HashedString SapShotKanim = (HashedString)"custom_serum_1_kanim"; 
         public static HashedString RadShotKanim = (HashedString)"vial_radiation_kanim"; // from DLC ONI
         public static HashedString UnstableAntiviralKanim = (HashedString)"pill_1_kanim"; // from vanilla ONI
+        public static HashedString ZombieCure = (HashedString)"vial_spore_kanim"; // from vanilla ONI
+        public static HashedString Rust2Cure = (HashedString)"iv_allergies_kanim"; // from vanilla ONI
+        public static HashedString Rust3Cure = (HashedString)"vial_iodine_kanim"; // from vanilla ONI 
         public static HashedString HappyPill = (HashedString)"pill_happy_kanim";
         public static HashedString AntihistamineBoosterKanim = (HashedString)"pill_allergies_kanim"; // from vanilla ONI
-        public static HashedString SunburnCure = (HashedString)"iv_sunburn_kanim"; // from vanilla ONI
+        public static HashedString SunburnCure = (HashedString)"iv_sunburn_kanim"; // from vanilla ONI 
         public static HashedString GermFlaskKanim = (HashedString)"germ_bottle_1_kanim";
         public static HashedString VaccineAKanim = (HashedString)"vaccine_jelly_a_kanim";
         public static HashedString VaccineBKanim = (HashedString)"vaccine_jelly_b_kanim";
@@ -30,6 +33,9 @@ namespace DiseasesExpanded
         public static HashedString YummySerum = (HashedString)"pill_purple_kanim";
         public static HashedString TummySerum = (HashedString)"pill_orange_kanim";
         public static HashedString AlienCureKanim = (HashedString)"vial_blue_serum_kanim";
+
+        public static string NanobotForge = "nanobot_forge_tmp_kanim";
+        public static string NanobotReplicator = "nanobot_replicator_tmp_kanim";
 
         public static HashedString GasBottle = (HashedString)"gas_tank_kanim";
         public static HashedString Microchip = (HashedString)"kit_electrician_kanim";

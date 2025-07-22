@@ -27,6 +27,7 @@ namespace DiseasesExpanded
         public static Color32 IcyBlue = new Color32(176, 230, 230, 255);
         public static Color32 GassyOrange = new Color32(208, 138, 74, 255);
         public static Color32 ChlorineGreen = new Color32(178, 215, 144, 255);
+        public static Color32 RustyOrange = new Color32(63, 47, 17, 255);
 
         // Existing in game, gathered from ColorSet.namedLookup
         public static Color32 PoisonYellow = new Color32(255, 231, 47, 255);

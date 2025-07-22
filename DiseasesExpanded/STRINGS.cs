@@ -37,6 +37,13 @@ namespace DiseasesExpanded
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Hungerms present\n";
             }
 
+            public class RUST_GERMS
+            {
+                public static LocString NAME = UI.FormatAsLink("Rust Dust", nameof(RUST_GERMS));
+                public static LocString DESCRIPTION = "Small dust-like germs causing rusting process.";
+                public static LocString LEGEND_HOVERTEXT = "Rust Dust present\n";
+            }
+
             public class ALIENGERMS
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Alien Goo", nameof(ALIENGERMS));
@@ -132,6 +139,38 @@ namespace DiseasesExpanded
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area causes Everlasting Hunger.";
             }
 
+            public class RUST_SICKNESS_0
+            {
+                public static LocString NAME = UI.FormatAsLink("Rusty Lungs", nameof(RUST_SICKNESS_0));
+                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes varoius sympthoms, especially dangerous for Bionic Duplicants.";
+                public static LocString LEGEND_HOVERTEXT = "Area causes Rusty Lungs.";
+                public static LocString EXPOSURE_INFO = $"Got exposed to { UI.FormatAsLink("Rust Dust", nameof(GERMS.RUST_GERMS))}";
+            }
+
+            public class RUST_SICKNESS_1
+            {
+                public static LocString NAME = UI.FormatAsLink("Rust Dust Crust (stage 1)", nameof(RUST_SICKNESS_1));
+                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes varoius sympthoms, especially dangerous for Bionic Duplicants.";
+                public static LocString LEGEND_HOVERTEXT = "Area causes Rusty Lungs.";
+                public static LocString EXPOSURE_INFO = $"Creeping {UI.FormatAsLink("Rust Dust", nameof(GERMS.RUST_GERMS))} spread, causing more severe infection.";
+            }
+
+            public class RUST_SICKNESS_2
+            {
+                public static LocString NAME = UI.FormatAsLink("Rust Dust Crust (stage 2)", nameof(RUST_SICKNESS_2));
+                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes varoius sympthoms, especially dangerous for Bionic Duplicants.";
+                public static LocString LEGEND_HOVERTEXT = "Area causes Rusty Lungs.";
+                public static LocString EXPOSURE_INFO = $"Creeping {UI.FormatAsLink("Rust Dust", nameof(GERMS.RUST_GERMS))} spread, causing even more severe infection.";
+            }
+
+            public class RUST_SICKNESS_3
+            {
+                public static LocString NAME = UI.FormatAsLink("Rust Dust Crust (stage 3)", nameof(RUST_SICKNESS_3));
+                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes varoius sympthoms, especially dangerous for Bionic Duplicants.";
+                public static LocString LEGEND_HOVERTEXT = "Area causes Rusty Lungs.";
+                public static LocString EXPOSURE_INFO = $"Creeping {UI.FormatAsLink("Rust Dust", nameof(GERMS.RUST_GERMS))} spread, imposing critical risk.";
+            }
+
             public class SPINDLYCURSE
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Sleeping Curse", nameof(SPINDLYCURSE));
@@ -161,6 +200,27 @@ namespace DiseasesExpanded
             }
         }
 
+        public class SYMPTHOMS
+        {
+            public class POWER_USAGE
+            {
+                public static LocString NAME = "Increased power usage: {POWER} Watts";
+                public static LocString TOOLTIP = "Creeping Rust decreases efficiency of this Bionic's power circuits, as a result increasing power consumed by {POWER} Watts.";
+            }
+
+            public class DEVELOPMENT_CHANCE
+            {
+                public static LocString NAME = "Chance of developing {SICKNESS}: {CHANCE}%";
+                public static LocString TOOLTIP = "There is {CHANCE}% risk that the Disease will develop into {SICKNESS}.";
+            }
+
+            public class DEATH_CHANCE
+            {
+                public static LocString NAME = "Death risk: {CHANCE}%";
+                public static LocString TOOLTIP = "There is {CHANCE}% risk that the Duplicant will succumb to the disease. Use medical treatment before that happens!";
+            }
+        }
+
         public class EFFECTS
         {
             public class BOGRECOVERY
@@ -185,6 +245,12 @@ namespace DiseasesExpanded
             {
                 public static LocString NAME = (LocString)"Everlasting Hunger Recovery";
                 public static LocString DESC = (LocString)"This duplicant just recovered from Everlasting Hunger.";
+            }
+
+            public class RUST_RECOVERY
+            {
+                public static LocString NAME = "Creeping Rust Crust Recovery";
+                public static LocString DESC = "This duplicant just recovered from Creeping Rust Crust.";
             }
 
             public class SPINDLYRECOVERY
@@ -320,6 +386,18 @@ namespace DiseasesExpanded
             {
                 public static LocString NAME = "Sun Lotion";
                 public static LocString DESC = "Cures duplicant from severe " + UI.FormatAsLink("Sunburn", "SunburnSickness") + ".";
+            }
+
+            public class RUST_2_CURE
+            {
+                public static LocString NAME = "Medical Oil";
+                public static LocString DESC = "Cures duplicant from " + DISEASES.RUST_SICKNESS_2.NAME + ".";
+            }
+
+            public class RUST_3_CURE
+            {
+                public static LocString NAME = "Spare Parts Shot";
+                public static LocString DESC = "Replaces parts most damaged by " + DISEASES.RUST_SICKNESS_3.NAME + ".";
             }
         }
 

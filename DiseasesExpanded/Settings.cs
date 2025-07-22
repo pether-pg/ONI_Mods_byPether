@@ -132,6 +132,7 @@ namespace DiseasesExpanded
             FrostPox = new DiseaseSettings(true, 1.0f, ColorPalette.IcyBlue);
             MooFlu = new DiseaseSettings(true, 1.0f, ColorPalette.GassyOrange);
             HungerGerms = new DiseaseSettings(true, 1.0f, ColorPalette.HungryBrown);
+            RustDust = new DiseaseSettings(true, 1.0f, ColorPalette.RustyOrange);
             SleepingCurse = new DiseaseSettings(true, 1.0f, ColorPalette.PaleGreen);
             MedicalNanobots = new DiseaseSettings(true, 1.0f, ColorPalette.NanobotGray);
             MutatingVirus = new VirusSettings(true, 1.0f, 1000, 5, 0.5f, false);
@@ -182,6 +183,10 @@ namespace DiseasesExpanded
         [JsonProperty]
         [Option("HungerGerms", category: "New Disease - Hunger Germs")]
         public DiseaseSettings HungerGerms { get; set; }
+
+        [JsonProperty]
+        [Option("RustGerms", category: "New Disease - Rust Dust")]
+        public DiseaseSettings RustDust { get; set; }
 
         [JsonProperty]
         [Option("SleepingCurse", category: "New Disease - Sleeping Curse")]

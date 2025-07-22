@@ -101,8 +101,12 @@
     <Compile Include="Buildings\NanobotForgeConfig.cs" />
     <Compile Include="Buildings\NanobotReplicator.cs" />
     <Compile Include="Buildings\NanobotReplicatorConfig.cs" />
+    <Compile Include="Cures\RustSickness2CureConfig.cs" />
+    <Compile Include="Cures\RustSickness3CureConfig.cs" />
     <Compile Include="CustomSicknessComponents\CustomFxSickEffectSickness.cs" />
+    <Compile Include="Germs\RustGerms.cs" />
     <Compile Include="MedicalNanobots\MedicalNanobotReviver.cs" />
+    <Compile Include="Misc\SicknessHelper.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Codex.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_DiseaseEmitter.cs" />
     <Compile Include="Germs\AbandonedGerms.cs" />
@@ -119,6 +123,7 @@
     <Compile Include="MedicalNanobots\NanobotBottleConfig.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_ExposureMonitor.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_PrimaryElement.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_Rust.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_SaveGame.cs" />
     <Compile Include="BackupConfig.cs" />
     <Compile Include="Buildings\GermcatcherController.cs" />
@@ -170,6 +175,7 @@
     <Compile Include="Cures\RadShotConfig.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Traits.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Twitch.cs" />
+    <Compile Include="Patches\DiseasesExpanded_Patches_Worldgen.cs" />
     <Compile Include="RandomEvents\AllEvents.cs" />
     <Compile Include="RandomEvents\Configs\GermySurpriseBoxConfig.cs" />
     <Compile Include="RandomEvents\Configs\PaleSlicksterConfig.cs" />
@@ -218,7 +224,9 @@
     <Compile Include="RandomEvents\Events\PrintSomeGerms.cs" />
     <Compile Include="RandomExtensions.cs" />
     <Compile Include="RecipeUpdater.cs" />
+    <Compile Include="RustSicknessHistory.cs" />
     <Compile Include="Sicknesses\AlienSickness.cs" />
+    <Compile Include="Sicknesses\RustSickness_0.cs" />
     <Compile Include="Sicknesses\MutatingSickness.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_MutatingDisease.cs" />
     <Compile Include="Misc\BasicModUtils.cs" />
@@ -249,6 +257,9 @@
     <Compile Include="Patches\DiseasesExpanded_Patches_Beetas.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Medicine.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Sicknesses\RustSickness_1.cs" />
+    <Compile Include="Sicknesses\RustSickness_2.cs" />
+    <Compile Include="Sicknesses\RustSickness_3.cs" />
     <Compile Include="Sicknesses\SpindlySickness.cs" />
     <Compile Include="Misc\SuitWearing.cs" />
     <Compile Include="CustomSicknessComponents\SicknessExpressionEffect .cs" />

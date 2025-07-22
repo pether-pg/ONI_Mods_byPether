@@ -11,7 +11,7 @@ namespace DiseasesExpanded
             Strings.Add($"STRINGS.DUPLICANTS.DISEASES.{id.ToUpperInvariant()}.DESC", desc);
         }
 
-        public static void MakeDiseaseStrings(string id, string name, string symptomps, string description, string hover)
+        public static void MakeDiseaseStrings(string id, string name, string symptomps, string hover)
         {
             Strings.Add($"STRINGS.DUPLICANTS.DISEASES.{id.ToUpperInvariant()}.NAME", UI.FormatAsLink(name, id));
             Strings.Add($"STRINGS.DUPLICANTS.DISEASES.{id.ToUpperInvariant()}.DESCRIPTIVE_SYMPTOMS", symptomps);

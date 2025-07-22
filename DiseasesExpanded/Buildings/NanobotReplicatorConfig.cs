@@ -19,7 +19,7 @@ namespace DiseasesExpanded
             EffectorValues tieR3_2 = TUNING.NOISE_POLLUTION.NOISY.TIER3;
             EffectorValues tieR1 = TUNING.BUILDINGS.DECOR.PENALTY.TIER1;
             EffectorValues noise = tieR3_2;
-            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(ID, 1, 2, "nanobot_replicator_tmp_kanim", 30, 30f, construction_mass, nanobotMaterial, 800f, BuildLocationRule.OnFloor, tieR1, noise);
+            BuildingDef buildingDef = BuildingTemplates.CreateBuildingDef(ID, 1, 2, Kanims.NanobotReplicator, 30, 30f, construction_mass, nanobotMaterial, 800f, BuildLocationRule.OnFloor, tieR1, noise);
             buildingDef.RequiresPowerInput = true;
             buildingDef.EnergyConsumptionWhenActive = 60f;
             buildingDef.ExhaustKilowattsWhenActive = 0.5f;

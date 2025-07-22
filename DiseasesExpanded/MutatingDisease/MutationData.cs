@@ -272,8 +272,7 @@ namespace DiseasesExpanded
             Debug.Log($"{ModInfo.Namespace}: Trying to infect {duplicant.name} with Mutating Virus at cycle {CurrentCycle()}");
             diseases.Infect(new SicknessExposureInfo(MutatingSickness.ID, STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO));
             Notify(duplicant);
-            Debug.Log($"{ModInfo.Namespace}: Infection complete");
-           
+            Debug.Log($"{ModInfo.Namespace}: Infection complete");           
         }
 
         private bool IsRecentlyRecovered(GameObject duplicant)
