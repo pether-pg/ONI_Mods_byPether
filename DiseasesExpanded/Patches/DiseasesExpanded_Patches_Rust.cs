@@ -14,6 +14,9 @@ namespace DiseasesExpanded.Patches
         {
             public static void Postfix(GameObject __result)
             {
+                if (!Settings.Instance.RustDust.IncludeDisease)
+                    return;
+
                 __result.AddOrGet<RustSicknessHistory>();
             }
         }
@@ -60,6 +63,9 @@ namespace DiseasesExpanded.Patches
         {
             public static void Postfix(GameObject __result)
             {
+                if (!Settings.Instance.RustDust.IncludeDisease)
+                    return;
+
                 Diet.Info[] original = __result.AddOrGetDef<SolidConsumerMonitor.Def>().diet.infos;
                 Diet.Info[] modified = new Diet.Info[original.Length];
                 for (int i = 0; i < original.Length; i++)
@@ -89,6 +95,9 @@ namespace DiseasesExpanded.Patches
         {
             public static void Postfix(UseSolidLubricantChore.Instance smi)
             {
+                if (!Settings.Instance.RustDust.IncludeDisease)
+                    return;
+
                 Sicknesses sicknesses = smi.gameObject.GetSicknesses();
                 if (sicknesses == null)
                     return;
@@ -110,6 +119,9 @@ namespace DiseasesExpanded.Patches
 
             public static void Postfix()
             {
+                if (!Settings.Instance.RustDust.IncludeDisease)
+                    return;
+
                 if (Db_Initialize_Patch.Patched)
                     return;
 
@@ -147,7 +159,6 @@ namespace DiseasesExpanded.Patches
                 Db_Initialize_Patch.Patched = true;
             }
         }
-
 
         //[HarmonyPatch(typeof(BionicOilMonitor))]
         //[HarmonyPatch(nameof(BionicOilMonitor.WantsOilChange))]

@@ -34,7 +34,7 @@ namespace DiseasesExpanded
                 new AttributeModifier(Db.Get().Attributes.BionicBatteryCountCapacity.Id, RustSickness_0.BASE_BATTERIES_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_1.NAME),
                 new AttributeModifier(Db.Get().Attributes.Learning.Id, RustSickness_0.BASE_ATTRIBUTE_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_1.NAME), // Blame Aki
                 new AttributeModifier("BionicOilDelta", RustSickness_0.BASE_OIL_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_1.NAME) // Blame Pink Hoodie
-
+                // For extra line that adds nothing to the code - blame Rex (Th3Fanbus) who wanted to be included
             }));
             this.AddSicknessComponent(new PeriodicEmoteSickness(Db.Get().Emotes.Minion.Sick, 50f));
             this.AddSicknessComponent(new RustSickness_1_Component());
