@@ -237,7 +237,7 @@ msgstr "不稳定抗病毒药"
 #. DiseasesExpanded.STRINGS.CURES.RADSHOT.DESC
 msgctxt "DiseasesExpanded.STRINGS.CURES.RADSHOT.DESC"
 msgid "Uranium contains about 18 million kCal per gram - enough to quickly satisfy even the most <link=\"HUNGERGERMS\">overwhelming hunger</link>."
-msgstr "铀每克含约1800万千卡能量——足以迅速满足即使是最严重的<link=\"HUNGERGERMS\">极度饥饿</link>。"
+msgstr "铀每克含约1800万千卡能量——足以迅速满足即使是最严重的<link=\"HUNGERGERMS\">无尽饥饿</link>。"
 
 #. DiseasesExpanded.STRINGS.CURES.RADSHOT.NAME
 msgctxt "DiseasesExpanded.STRINGS.CURES.RADSHOT.NAME"
@@ -267,7 +267,7 @@ msgstr "备用零件注射剂"
 #. DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC
 msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC"
 msgid "Thick and full of sugar, Sweet Sap Shot condenses many calories into one syringe to quickly satisfy even the most <link=\"HUNGERGERMS\">overwhelming hunger</link>."
-msgstr "浓稠且含糖丰富的甜浆注射剂将大量热量浓缩于一支注射器中，能够迅速满足即使是最严重的<link=\"HUNGERGERMS\">极度饥饿</link>。"
+msgstr "浓稠且含糖丰富的甜浆注射剂将大量热量浓缩于一支注射器中，能够迅速满足即使是最严重的<link=\"HUNGERGERMS\">无尽饥饿</link>。"
 
 #. DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME
 msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME"
