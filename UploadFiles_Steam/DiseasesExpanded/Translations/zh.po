@@ -1,0 +1,1658 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"X-Generator: Poedit 3.6\n"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.DESC"
+msgid "Germcatchers collect germ samples for medical study and vaccine production."
+msgstr "病菌收集器用于采集病菌样本，以供医学研究和疫苗生产。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECT"
+msgid "Gathers ambient <link=\"DISEASE\">germs</link> and stores them in the <link=\"TESTSAMPLE\">flasks</link> for future research at an <link=\"APOTHECARY\">Apothecary</link> and vaccine production."
+msgstr "收集环境中的<link=\"DISEASE\">病菌</link>，并将它们储存在<link=\"TESTSAMPLE\">样本瓶中</link>，以便日后在<link=\"APOTHECARY\">配药桌</link>进行研究和疫苗生产。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.NAME"
+msgid "Germcatcher"
+msgstr "病菌收集器"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_FORGE.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_FORGE.DESC"
+msgid "Allows to manufacture and upgrade <link=\"MEDICALNANOBOTS\">Medical Nanobots</link>."
+msgstr "用于制造和升级<link=\"MEDICALNANOBOTS\">医疗纳米机器人</link>。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_FORGE.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_FORGE.EFFECT"
+msgid "Duplicants with <link=\"MEDICINE3\">Advanced Medical Care</link> training can use this building to create <link=\"MEDICALNANOBOTS\">Medical Nanobots</link> or various upgrades to them."
+msgstr "学习了<link=\"MEDICINE3\">高级医疗护理</link> 的复制人可以使用该建筑制造<link=\"MEDICALNANOBOTS\">医疗纳米机器人</link>或为其制作各类升级。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_FORGE.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_FORGE.NAME"
+msgid "Nanobot Forge"
+msgstr "纳米机器人锻造台"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_REPLICATOR.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_REPLICATOR.DESC"
+msgid "Slowly replicates Nanobots and releases them into air."
+msgstr "缓慢复制纳米机器人并将其释放到空气中。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_REPLICATOR.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_REPLICATOR.EFFECT"
+msgid "When powered, replicates <link=\"MEDICALNANOBOTS\">Medical Nanobots</link> on a slow, but steady rate and releases them. Upgrade <link=\"NANOBOTUPGRADESPAWNINCREASE\">Nanobot Perpetum Mobile Protocol</link> for better spawning rates."
+msgstr "通电时以缓慢但稳定的速度复制<link=\"MEDICALNANOBOTS\">医疗纳米机器人</link>并释放它们。升级<link=\"NANOBOTUPGRADESPAWNINCREASE\">纳米机器人永动协议</link>可提高生成速率。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_REPLICATOR.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.NANOBOT_REPLICATOR.NAME"
+msgid "Nanobot Replicator"
+msgstr "纳米机器人复制器"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.DESC"
+msgid "Shields the asteroid from cosmic radiation."
+msgstr "保护小行星免受宇宙辐射。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECT"
+msgid ""
+"When powered, generates shield around the asteroid to protect the surface from cosmic <link=\"RADIATION\">Radiation</link>. \n"
+"\n"
+"Requires line of sight to space."
+msgstr ""
+"通电时，在小行星周围产生护盾，保护表面免受太空<link=\"RADIATION\">辐射</link>的影响。\n"
+"\n"
+"需要太空视野。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.NAME"
+msgid "Shield Generator"
+msgstr "护盾发生器"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC"
+msgid "Vaccines produced here can grant your duplicants immunity for various diseases."
+msgstr "在这里生产的疫苗可以赋予你的复制人对多种疾病的免疫力。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECT"
+msgid ""
+"Vaccine Apothecary uses <link=\"RADIATION\">Radiation</link> to weaken <link=\"DISEASE\">germs</link> stored in a <link=\"TESTSAMPLE\">flasks</link> to produce life-saving vaccines.\n"
+"\n"
+"It must be operated by highly-trained <link=\"ROLES\">medical</link> personel and it is suggested to use radiation protection for the time of vaccine preparation."
+msgstr ""
+"疫苗制备站利用<link=\"RADIATION\">辐射</link>削弱储存在<link=\"TESTSAMPLE\">样本瓶</link>中的<link=\"DISEASE\">病菌</link>，以生产救命疫苗。\n"
+"\n"
+"该设备必须由高素质的<link=\"ROLES\">医疗</link>人员操作，建议在疫苗制备期间采取辐射防护措施。"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME"
+msgid "Vaccine Apothecary"
+msgstr "疫苗制备站"
+
+#. DiseasesExpanded.STRINGS.CODEX.CATEGORY.MEDICINE
+msgctxt "DiseasesExpanded.STRINGS.CODEX.CATEGORY.MEDICINE"
+msgid "<link=\"MEDICINE\">Medicine</link>"
+msgstr "<link=\"MEDICINE\">医疗</link>"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.DESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.DESC"
+msgid "Conducted in laboratory conditions, forces Unstable Virus to mutate back it's severity genoms to a weaker form."
+msgstr "在实验室条件下进行，促使不稳定病毒将其环境基因组突变回较弱的形式。"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.NAME
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.NAME"
+msgid "<link=\"MUTATINGGERMS\">Controlled Severity Mutation</link>"
+msgstr "<link=\"MUTATINGGERMS\">受控严重度变异</link>"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.RECIPEDESC"
+msgid "Weakens Unstable Virus severity"
+msgstr "削弱不稳定病毒的严重程度"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.DESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.DESC"
+msgid "Conducted in laboratory conditions, forces Unstable Virus to mutate back it's environmental genoms to a weaker form."
+msgstr "在实验室条件下进行，促使不稳定病毒将其环境基因组突变回较弱的形式。"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.NAME
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.NAME"
+msgid "<link=\"MUTATINGGERMS\">Controlled Environmental Mutation</link>"
+msgstr "<link=\"MUTATINGGERMS\">受控环境变异</link>"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.RECIPEDESC"
+msgid "Weakens Unstable Virus ability to live in various environments"
+msgstr "削弱不稳定病毒在多种环境中的存活能力"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC"
+msgid "Conducted in laboratory conditions, reduces ability of Unstable Virus to mutate."
+msgstr "在实验室条件下进行，降低不稳定病毒的变异能力。"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.NAME
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.NAME"
+msgid "<link=\"MUTATINGGERMS\">Mutation Rate Reduction</link>"
+msgstr "<link=\"MUTATINGGERMS\">变异速率降低</link>"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.RECIPEDESC"
+msgid "Slows down mutation rate of Unstable Virus."
+msgstr "减缓不稳定病毒的变异速率。"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.DESC"
+msgid "Conducted in laboratory conditions, forces Unstable Virus to mutate back it's resiliance genoms to a weaker form."
+msgstr "在实验室条件下进行，促使不稳定病毒将其抗性基因组突变回较弱的形式。"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.NAME"
+msgid "<link=\"MUTATINGGERMS\">Controlled Resiliance Mutation</link>"
+msgstr "<link=\"MUTATINGGERMS\">受控抗性变异</link>"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.RECIPEDESC"
+msgid "Weakens Unstable Virus resiliance"
+msgstr "削弱不稳定病毒的抗性"
+
+#. DiseasesExpanded.STRINGS.CURES.ALIENCURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.ALIENCURE.DESC"
+msgid "Discourages <link=\"ALIENGERMS\">Alien Goo</link> from inhabiting the body of affected duplicant."
+msgstr "防止<link=\"ALIENGERMS\">异星胶质</link>寄生在受影响的复制人体内。"
+
+#. DiseasesExpanded.STRINGS.CURES.ALIENCURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.ALIENCURE.NAME"
+msgid "Alien Cure"
+msgstr "异星疗剂"
+
+#. DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC"
+msgid "Prevents allergic reactions in the future."
+msgstr "预防未来的过敏反应。"
+
+#. DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.NAME"
+msgid "Allergy Immuno Booster"
+msgstr "过敏免疫增强剂"
+
+#. DiseasesExpanded.STRINGS.CURES.DEEPBREATH.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.DEEPBREATH.DESC"
+msgid "Slightly improves duplicant's breath and germ resistance."
+msgstr "略微提升复制人的呼吸能力和抗菌能力。"
+
+#. DiseasesExpanded.STRINGS.CURES.DEEPBREATH.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.DEEPBREATH.NAME"
+msgid "Deep Breath Serum"
+msgstr "深呼吸血清"
+
+#. DiseasesExpanded.STRINGS.CURES.GASCURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.GASCURE.DESC"
+msgid "If a berry sprouts in a duplicant's belly, their farts will smell like flowers"
+msgstr "如果有浆果在复制人的肚子里发芽，他们的屁就会带有花香。"
+
+#. DiseasesExpanded.STRINGS.CURES.GASCURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.GASCURE.NAME"
+msgid "Sprouting Tablet"
+msgstr "花香丸"
+
+#. DiseasesExpanded.STRINGS.CURES.HAPPYPILL.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.HAPPYPILL.DESC"
+msgid "Improves overall <link=\"MORALE\">happines</link> of affectected duplicant but reduces their motivation to perform even most basic tasks."
+msgstr "提升受影响复制人的整体<link=\"MORALE\">士气</link> ，但会降低他们执行即使是最基本任务的积极性。"
+
+#. DiseasesExpanded.STRINGS.CURES.HAPPYPILL.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.HAPPYPILL.NAME"
+msgid "Happy Pill"
+msgstr "欣喜片"
+
+#. DiseasesExpanded.STRINGS.CURES.MUDMASK.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUDMASK.DESC"
+msgid "When covered in mud, duplicants are not so tasty for <link=\"BOGINSECTS\">Bog Bugs</link>."
+msgstr "当覆盖着泥浆时，复制人对<link=\"BOGINSECTS\">沼泽虫</link>来说不那么美味。"
+
+#. DiseasesExpanded.STRINGS.CURES.MUDMASK.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUDMASK.NAME"
+msgid "Muddy Salve"
+msgstr "泥沼软膏"
+
+#. DiseasesExpanded.STRINGS.CURES.MUTATINGANTIVIRAL.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUTATINGANTIVIRAL.DESC"
+msgid "Cures from, and grants immunity to <link=\"MUTATINGGERMS\">Mutating Disease</link> for a short time."
+msgstr "治疗并短暂赋予对<link=\"MUTATINGGERMS\">变异疾病</link>的免疫力。"
+
+#. DiseasesExpanded.STRINGS.CURES.MUTATINGANTIVIRAL.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUTATINGANTIVIRAL.NAME"
+msgid "Unstable Antiviral"
+msgstr "不稳定抗病毒药"
+
+#. DiseasesExpanded.STRINGS.CURES.RADSHOT.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.RADSHOT.DESC"
+msgid "Uranium contains about 18 million kCal per gram - enough to quickly satisfy even the most <link=\"HUNGERGERMS\">overwhelming hunger</link>."
+msgstr "铀每克含约1800万千卡能量——足以迅速满足即使是最严重的<link=\"HUNGERGERMS\">极度饥饿</link>。"
+
+#. DiseasesExpanded.STRINGS.CURES.RADSHOT.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.RADSHOT.NAME"
+msgid "Sweet Rad Shot"
+msgstr "甜辐射饮剂"
+
+#. DiseasesExpanded.STRINGS.CURES.RUST_2_CURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.RUST_2_CURE.DESC"
+msgid "Cures duplicant from <link=\"RUSTSICKNESS2\">Rust Dust Crust (stage 2)</link>."
+msgstr "治疗复制人<link=\"RUSTSICKNESS2\">锈尘痂皮（二期）</link>。"
+
+#. DiseasesExpanded.STRINGS.CURES.RUST_2_CURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.RUST_2_CURE.NAME"
+msgid "Medical Oil"
+msgstr "医疗油"
+
+#. DiseasesExpanded.STRINGS.CURES.RUST_3_CURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.RUST_3_CURE.DESC"
+msgid "Replaces parts most damaged by <link=\"RUSTSICKNESS3\">Rust Dust Crust (stage 3)</link>."
+msgstr "更换被<link=\"RUSTSICKNESS3\">锈尘痂皮（三期）</link>严重损坏的部件。"
+
+#. DiseasesExpanded.STRINGS.CURES.RUST_3_CURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.RUST_3_CURE.NAME"
+msgid "Spare Parts Shot"
+msgstr "备用零件注射剂"
+
+#. DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC"
+msgid "Thick and full of sugar, Sweet Sap Shot condenses many calories into one syringe to quickly satisfy even the most <link=\"HUNGERGERMS\">overwhelming hunger</link>."
+msgstr "浓稠且含糖丰富的甜浆注射剂将大量热量浓缩于一支注射器中，能够迅速满足即使是最严重的<link=\"HUNGERGERMS\">极度饥饿</link>。"
+
+#. DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME"
+msgid "Sweet Sap Shot"
+msgstr "甜浆注射剂"
+
+#. DiseasesExpanded.STRINGS.CURES.SUNBURNCURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.SUNBURNCURE.DESC"
+msgid "Cures duplicant from severe <link=\"SUNBURNSICKNESS\">Sunburn</link>."
+msgstr "治疗复制人严重的<link=\"SUNBURNSICKNESS\">晒伤</link>。"
+
+#. DiseasesExpanded.STRINGS.CURES.SUNBURNCURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.SUNBURNCURE.NAME"
+msgid "Sun Lotion"
+msgstr "晒后修复膏"
+
+#. DiseasesExpanded.STRINGS.CURES.SUPERSERUM.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.SUPERSERUM.DESC"
+msgid "Enhances duplicant's attributes and makes them immune to most dangerous pathogens."
+msgstr "增强复制人的属性，使其免疫大多数致命病原体。"
+
+#. DiseasesExpanded.STRINGS.CURES.SUPERSERUM.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.SUPERSERUM.NAME"
+msgid "Super Serum"
+msgstr "超级血清"
+
+#. DiseasesExpanded.STRINGS.CURES.TUMMYSERUM.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.TUMMYSERUM.DESC"
+msgid "Calms even most angry tummy and makes it immune to subsequent infections."
+msgstr "缓解最严重的胃部不适，并使其免疫后续感染。"
+
+#. DiseasesExpanded.STRINGS.CURES.TUMMYSERUM.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.TUMMYSERUM.NAME"
+msgid "Tummy Serum"
+msgstr "肠胃护养液"
+
+#. DiseasesExpanded.STRINGS.CURES.VACCINE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.VACCINE.DESC"
+msgid "Grants immunity to {0} disease."
+msgstr "赋予对{0}疾病的免疫力。"
+
+#. DiseasesExpanded.STRINGS.CURES.VACCINE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.VACCINE.NAME"
+msgid "{0} Vaccine"
+msgstr "{0}疫苗"
+
+#. DiseasesExpanded.STRINGS.CURES.YUMMYSERUM.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.YUMMYSERUM.DESC"
+msgid "Stimulates duplicant's digestive system and makes them immune to most ravenous pathogens."
+msgstr "刺激复制人的消化系统，使其免疫大多数暴食型病原体。"
+
+#. DiseasesExpanded.STRINGS.CURES.YUMMYSERUM.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.YUMMYSERUM.NAME"
+msgid "Yummy Serum"
+msgstr "美味药液"
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTION"
+msgid "Alien microbes increase duplicant's skills. However, this feels unnatural and makes infected duplicant stressed out. The goo is perfectly adapted for space travels and it will rapidly grow wherever radiation is present."
+msgstr "外星微生物能提升复制人的技能。不过，这种现象令人感到不适，会让感染者感到压力增大。这种胶质非常适应太空环境，只要有辐射存在，它就会迅速繁殖。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Enhances and stresses the duplicant."
+msgstr "增强复制人的能力，同时增加压力。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.EXPOSURE_INFO"
+msgid "Got exposed to Alien Goo"
+msgstr "接触了异星胶质"
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area affected by Alien Goo."
+msgstr "受异星胶质影响的区域。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.NAME"
+msgid "<link=\"ALIENSICKNESS\">Alien Symbiot</link>"
+msgstr "<link=\"ALIENSICKNESS\">异星共生体</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION"
+msgid "Bog Bugs are lured by <link=\"SWAMPHARVESTPLANT\">Bog Bucket</link> sweet scent, but they can also feed on duplicants..."
+msgstr "<link=\"SWAMPHARVESTPLANT\">沼浆笼</link>的甜香会吸引沼泽虫，但它们也会以复制人为食……"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Annoying bites of small Bog Bugs"
+msgstr "小沼泽虫讨厌的叮咬"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area can result in Bog Bugs bites"
+msgstr "该区域可能导致沼泽虫叮咬"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.NAME"
+msgid "<link=\"BOGSICKNESS\">Bog Bugs Infestation</link>"
+msgstr "<link=\"BOGSICKNESS\">沼泽虫侵扰</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT"
+msgid "Bog Bug Bite!"
+msgstr "沼泽虫叮咬！"
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION"
+msgid "Little shards of frost cover duplicant's skin in a pretty patterns, reducing their resistance for temperature and diseases."
+msgstr "细小的冰霜碎片以美丽的图案覆盖复制人的皮肤，降低了他们对温度和疾病的抵抗力。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Pretty, but pretty cold frost patterns on the skin."
+msgstr "皮肤上美丽却非常冰冷的霜纹。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area causes Frost Pox."
+msgstr "该区域会导致霜痘。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.NAME"
+msgid "<link=\"FROSTSICKNESS\">Frost Pox</link>"
+msgstr "<link=\"FROSTSICKNESS\">霜痘</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTION"
+msgid "Whatever it is in the <link=\"GASGRASS\">Gas Grass</link>, it makes everything around fart..."
+msgstr "无论<link=\"GASGRASS\">释气草</link>里有什么，都让周围的一切放屁……"
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Makes duplicant fart like a mad Moo."
+msgstr "让复制人像疯狂的海牛一样放屁。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area causes Moo Flu."
+msgstr "该区域会导致牛屁冲天。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.NAME"
+msgid "<link=\"GASSICKNESS\">Moo Flu</link>"
+msgstr "<link=\"GASSICKNESS\">牛屁冲天</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION"
+msgid "The hunger of the ravenous plants seems to be infectious..."
+msgstr "贪食植物的饥饿似乎具有传染性……"
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Makes duplicant hungry all the time."
+msgstr "让复制人始终感到饥饿。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area causes Everlasting Hunger."
+msgstr "该区域会导致无尽饥饿。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.NAME"
+msgid "<link=\"HUNGERSICKNESS\">Everlasting Hunger</link>"
+msgstr "<link=\"HUNGERSICKNESS\">无尽饥饿</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTION"
+msgid "Virus causing the disease is very unstable and often mutates. Results may be different each time."
+msgstr "引起该疾病的病毒非常不稳定，且经常发生变异。每次的结果可能都会不同。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "May affect duplicants in many different ways"
+msgstr "可能以多种不同方式影响复制人"
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO"
+msgid "Got infected by Mutating Virus."
+msgstr "感染了变异病毒。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area affected by Mutating Disease."
+msgstr "受变异疾病影响的区域。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.NAME"
+msgid "<link=\"MUTATINGSICKNESS\">Mutating Disease</link>"
+msgstr "<link=\"MUTATINGSICKNESS\">变异疾病</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.POPFXTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.POPFXTEXT"
+msgid "Painful cough!"
+msgstr "剧烈咳嗽！"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_0.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_0.DESCRIPTIVE_SYMPTOMS"
+msgid "Causes varoius sympthoms, especially dangerous for Bionic Duplicants."
+msgstr "引起各种症状，对仿生复制人尤其危险。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_0.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_0.EXPOSURE_INFO"
+msgid "Got exposed to <link=\"RUSTGERMS\">Rust Dust</link>"
+msgstr "接触了<link=\"RUSTGERMS\">锈尘菌</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_0.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_0.LEGEND_HOVERTEXT"
+msgid "Area causes Rusty Lungs."
+msgstr "该区域会导致锈肺症。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_0.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_0.NAME"
+msgid "<link=\"RUSTSICKNESS0\">Rusty Lungs</link>"
+msgstr "<link=\"RUSTSICKNESS0\">锈肺症</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_1.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_1.DESCRIPTIVE_SYMPTOMS"
+msgid "Causes varoius sympthoms, especially dangerous for Bionic Duplicants."
+msgstr "引起各种症状，对仿生复制人尤其危险。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_1.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_1.EXPOSURE_INFO"
+msgid "Creeping <link=\"RUSTGERMS\">Rust Dust</link> spread, causing more severe infection."
+msgstr "蔓延的<link=\"RUSTGERMS\">锈尘</link>扩散，导致感染加重。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_1.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_1.LEGEND_HOVERTEXT"
+msgid "Area causes Rusty Lungs."
+msgstr "该区域会导致锈肺症。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_1.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_1.NAME"
+msgid "<link=\"RUSTSICKNESS1\">Rust Dust Crust (stage 1)</link>"
+msgstr "<link=\"RUSTSICKNESS1\">锈尘痂皮（一期）</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_2.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_2.DESCRIPTIVE_SYMPTOMS"
+msgid "Causes varoius sympthoms, especially dangerous for Bionic Duplicants."
+msgstr "引起各种症状，对仿生复制人尤其危险。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_2.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_2.EXPOSURE_INFO"
+msgid "Creeping <link=\"RUSTGERMS\">Rust Dust</link> spread, causing even more severe infection."
+msgstr "蔓延的<link=\"RUSTGERMS\">锈尘</link>扩散，导致感染加重。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_2.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_2.LEGEND_HOVERTEXT"
+msgid "Area causes Rusty Lungs."
+msgstr "该区域会导致锈肺症。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_2.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_2.NAME"
+msgid "<link=\"RUSTSICKNESS2\">Rust Dust Crust (stage 2)</link>"
+msgstr "<link=\"RUSTSICKNESS1\">锈尘痂皮（二期）</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_3.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_3.DESCRIPTIVE_SYMPTOMS"
+msgid "Causes varoius sympthoms, especially dangerous for Bionic Duplicants."
+msgstr "引起各种症状，对仿生复制人尤其危险。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_3.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_3.EXPOSURE_INFO"
+msgid "Creeping <link=\"RUSTGERMS\">Rust Dust</link> spread, imposing critical risk."
+msgstr "蔓延的<link=\"RUSTGERMS\">锈尘</link>扩散，带来严重风险。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_3.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_3.LEGEND_HOVERTEXT"
+msgid "Area causes Rusty Lungs."
+msgstr "该区域会导致锈肺症。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_3.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.RUST_SICKNESS_3.NAME"
+msgid "<link=\"RUSTSICKNESS3\">Rust Dust Crust (stage 3)</link>"
+msgstr "<link=\"RUSTSICKNESS1\">锈尘痂皮（三期）</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTION"
+msgid "The tale says one duplicant slept 100 cycles after hurting herself on the Spindle, but it is possible she just faked it not to clean the toilets..."
+msgstr "传说有个复制人在纺锤机受伤后睡了100个周期，但也有可能她只是装病不想打扫厕所……"
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTIVE_SYMPTOMS"
+msgid "Periodically causes duplicant to fall asleep in random places."
+msgstr "周期性的导致复制人随地睡着。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO"
+msgid ""
+"Got hurt by the Spindle of a {0}.\n"
+"\n"
+"As a result, this duplicant will fall asleep in random places.\n"
+"Improve Farming skill or wear protective equipment to prevent future infections.\n"
+"Use Espresso Machine to prevent Narcoleptic Naps.\n"
+msgstr ""
+"被{0}的纺锤刺伤到了\n"
+"\n"
+"这名复制人随时随地都可能睡着。\n"
+"提升农业技能或者穿好防护设备来预防这类感染。\n"
+"使用咖啡机来预防间歇性睡病\n"
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.LEGEND_HOVERTEXT"
+msgid "Area affected by Sleeping Curse."
+msgstr "该区域会导致睡美人诅咒。"
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.NAME"
+msgid "<link=\"SPINDLYCURSE\">Sleeping Curse</link>"
+msgstr "<link=\"SPINDLYCURSE\">睡美人诅咒</link>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.ALIENASSIMILATION.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.ALIENASSIMILATION.DESC"
+msgid "Alien Symbiot completed assimilation and no longer provides benefits to the host."
+msgstr "异星共生体已完成同化，不再为宿主提供增益效果。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.ALIENASSIMILATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.ALIENASSIMILATION.NAME"
+msgid "Assimilation Successful"
+msgstr "同化完成"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.DESC"
+msgid "This duplicant was cured from Alien Symbiot."
+msgstr "该复制人已清除异星共生体。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.NAME"
+msgid "Alien Symbiot Recovery"
+msgstr "异星共生体清除"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.DESC"
+msgid "This duplicant just recovered from Bog Bugs Infestation."
+msgstr "该复制人刚从沼泽虫侵扰中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.NAME"
+msgid "Bog Bugs Infestation Recovery"
+msgstr "沼泽虫侵染恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.DESC"
+msgid "This duplicant just recovered from Frost Pox."
+msgstr "该复制人刚从霜痘中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.NAME"
+msgid "Frost Pox Recovery"
+msgstr "霜痘恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.DESC"
+msgid "This duplicant just recovered from Moo Flu."
+msgstr "该复制人刚从牛屁冲天中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.NAME"
+msgid "Moo Flu Recovery"
+msgstr "牛屁冲天恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.DESC"
+msgid "This duplicant just recovered from Everlasting Hunger."
+msgstr "该复制人刚从无尽饥饿中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.NAME"
+msgid "Everlasting Hunger Recovery"
+msgstr "无尽饥饿恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.DESC"
+msgid "This Duplicant just delivered germ sample for futher testing."
+msgstr "这名复制人刚刚递交了病菌样本以供进一步检测。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.NAME"
+msgid "Just Got Tested"
+msgstr "刚完成检测"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.DESC"
+msgid "This duplicant just recovered from Mutating Disease."
+msgstr "该复制人刚从变异疾病中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.NAME"
+msgid "Mutating Disease Recovery"
+msgstr "变异疾病恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.DESC"
+msgid "This duplicant is suffering from various symptoms of mutating disease."
+msgstr "该复制人正遭受变异疾病的多重症状折磨。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.NAME"
+msgid "Mutating Disease Symptoms"
+msgstr "变异疾病症状"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.NANOBOTENHANCEMENT.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.NANOBOTENHANCEMENT.DESC"
+msgid "This Duplicant is getting health boost from friendly Nanobot enhancement."
+msgstr "该复制人正从友善纳米机器人强化中获得健康提升。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME"
+msgid "Nanobot Enhancement"
+msgstr "纳米机器人强化"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.RUST_RECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.RUST_RECOVERY.DESC"
+msgid "This duplicant just recovered from Creeping Rust Crust."
+msgstr "该复制人刚从锈尘痂皮中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.RUST_RECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.RUST_RECOVERY.NAME"
+msgid "Creeping Rust Crust Recovery"
+msgstr "锈尘痂皮恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.DESC"
+msgid "This duplicant just recovered from Sleeping Curse."
+msgstr "该复制人刚从睡美人诅咒中恢复。"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.NAME"
+msgid "Sleeping Curse Recovery"
+msgstr "睡美人诅咒恢复"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYTHORNS.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.SPINDLYTHORNS.DESC"
+msgid "This Plant developed protective thorns, similar to Grub Fruit spindles. Touching it may cause Sleeping Curse..."
+msgstr "该植物已发展出类似虫果的纺锤刺的防护棘刺。接触它可致睡美人诅咒……"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYTHORNS.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.SPINDLYTHORNS.NAME"
+msgid "Spindly Thorns"
+msgstr "纺锤棘刺"
+
+#. DiseasesExpanded.STRINGS.GERMFLASK.DESC
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.DESC"
+msgid "Contains gathered {0} germs."
+msgstr "含有{0}个聚集的病菌。"
+
+#. DiseasesExpanded.STRINGS.GERMFLASK.DESC_NOGERM
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.DESC_NOGERM"
+msgid "Contains gathered {0}."
+msgstr "含有{0}。"
+
+#. DiseasesExpanded.STRINGS.GERMFLASK.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.NAME"
+msgid "{0} Flask"
+msgstr "{0}样本瓶"
+
+#. DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.DESC
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.DESC"
+msgid "Used to gather <link=\"DISEASE\">germ</link> sample from infected duplicant into a flask for futher testing."
+msgstr "用于从受感染复制人身上收集<link=\"DISEASE\">病菌</link>样本至烧瓶以供进一步检测。"
+
+#. DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.NAME"
+msgid "Test Sample Flask"
+msgstr "检测样本烧瓶"
+
+#. DiseasesExpanded.STRINGS.GERMS.ABANDONED.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ABANDONED.DESCRIPTION"
+msgid "Those germs no longer exist, and if they do, they will die quickly."
+msgstr "Those germs no longer exist, and if they do, they will die quickly."
+
+#. DiseasesExpanded.STRINGS.GERMS.ABANDONED.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ABANDONED.LEGEND_HOVERTEXT"
+msgid "Abandoned Germs present.\n"
+msgstr "Abandoned Germs present.\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.ABANDONED.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ABANDONED.NAME"
+msgid "Abandoned Germs"
+msgstr "废案病菌（会很快自然灭绝）"
+
+#. DiseasesExpanded.STRINGS.GERMS.ALIENGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ALIENGERMS.LEGEND_HOVERTEXT"
+msgid "Alien Goo present\n"
+msgstr "存在异星胶质。\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.ALIENGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ALIENGERMS.NAME"
+msgid "<link=\"ALIENGERMS\">Alien Goo</link>"
+msgstr "<link=\"ALIENGERMS\">异星胶质</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT"
+msgid "Bog Bugs present.\n"
+msgstr "存在沼泽虫。\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.NAME"
+msgid "<link=\"BOGINSECTS\">Bog Bugs</link>"
+msgstr "<link=\"BOGINSECTS\">沼泽虫</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT"
+msgid "Frost Shards present.\n"
+msgstr "存在冰霜碎片。\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.NAME"
+msgid "<link=\"FROSTHARDS\">Frost Shards</link>"
+msgstr "<link=\"FROSTHARDS\">冰霜碎片</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT"
+msgid "GassyGerms present\n"
+msgstr "存在牛屁冲天菌。\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.NAME"
+msgid "<link=\"GASSYGERMS\">Gassy Germs</link>"
+msgstr "<link=\"GASSYGERMS\">牛屁冲天菌</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT"
+msgid "Hungerms present\n"
+msgstr "存在饥饿菌\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.NAME"
+msgid "<link=\"HUNGERGERMS\">Hungerms</link>"
+msgstr "<link=\"HUNGERGERMS\">饥饿菌</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.DESCRIPTION"
+msgid "Medical Nanobots are engineeded with sole purpose of fighting malicious germs and improving duplicants' health."
+msgstr "医疗纳米机器人被设计制造的唯一目的是对抗有害病菌并改善复制人健康状况。"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.LEGEND_HEADER
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.LEGEND_HEADER"
+msgid "Included features:\n"
+msgstr "拥有的功能：\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.LEGEND_HOVERTEXT"
+msgid "Medical Nanobots present\n"
+msgstr "存在医疗纳米机器人。\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Medical Nanobots</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">医疗纳米机器人</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.RADIATION_HELP_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.RADIATION_HELP_PATTERN"
+msgid "Radiation Kill Rate: {0}"
+msgstr "辐射致死率：{0}"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.TEMPERATURE_HELP_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.TEMPERATURE_HELP_PATTERN"
+msgid "Optimal Temperature: {0} to {1}"
+msgstr "最佳温度范围：{0}至{1}"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.UPGRADE_HELP_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.UPGRADE_HELP_PATTERN"
+msgid "Use {0} to develop nanobots."
+msgstr "使用{0}开发纳米机器人。"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERION_EFFICIENCY_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERION_EFFICIENCY_PATTERN"
+msgid "Efficiency: Attributes: <color=#00FF00>{0}</color>, Breathing: <color=#00FF00>{1}</color>, Calories: <color=#00FF00>{2}</color> - Healing: <color=#00FF00>{3}</color>, Energy: <color=#00FF00>{4}</color>, Stress reduction: <color=#00FF00>{5}</color>"
+msgstr "效率：属性：<color=#00FF00>{0}</color>，呼吸：<color=#00FF00>{1}</color>，卡路里：<color=#00FF00>{2}</color> - 治疗：<color=#00FF00>{3}</color>，能量：<color=#00FF00>{4}</color>，压力减少：<color=#00FF00>{5}</color>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERSION_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERSION_PATTERN"
+msgid "Version {ATTACK}/{RESILIANCE}"
+msgstr "版本 {ATTACK}/{RESILIANCE}"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERSION_RESILIANCE_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERSION_RESILIANCE_PATTERN"
+msgid "Resiliance: Germ Resistance: <color=#00FF00>{0}</color>, Duration: <color=#00FF00>{1}</color>, Perpetum Mobile: <color=#00FF00>{2}</color> - Exposure Threshold: <color=#00FF00>{3}</color>, Radiation: <color=#00FF00>{4}</color>, Temperature: <color=#00FF00>{5}</color>"
+msgstr "抗性：病菌抗性：<color=#00FF00>{0}</color>，持续时间：<color=#00FF00>{1}</color>，永动机：<color=#00FF00>{2}</color> - 暴露阈值：<color=#00FF00>{3}</color>，辐射：<color=#00FF00>{4}</color>，温度：<color=#00FF00>{5}</color>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.LEGEND_HEADER
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.LEGEND_HEADER"
+msgid "Genoms' values:\n"
+msgstr "基因值：\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT"
+msgid "Unstable Virus present\n"
+msgstr "存在不稳定病毒\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN"
+msgid "Use {0} to mutate the germs in more safe direction."
+msgstr "使用{0}将病菌突变至安全的方向。"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN"
+msgid "Estimated mutation speed: {0:F2} (mutation rate reduction Lvl: {1})"
+msgstr "预估突变速度：{0:F2}（突变率降低等级：{1}）"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.NAME"
+msgid "<link=\"MUTATINGGERMS\">Unstable Virus</link>"
+msgstr "<link=\"MUTATINGGERMS\">不稳定病毒</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_PATTERN"
+msgid "Strain {ATTACK}/{RESILIANCE}"
+msgstr "菌株 {ATTACK}/{RESILIANCE}"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_RESILIANCE_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_RESILIANCE_PATTERN"
+msgid "Resiliance: Infectibility: <color=#FF0000>{0}</color>, Duration: <color=#FF0000>{1}</color>, Germ Coughing: <color=#FF0000>{2}</color> - Exposure Threshold: <color=#FF0000>{3}</color>, Radiation: <color=#FF0000>{4}</color>, Temperature: <color=#FF0000>{5}</color>"
+msgstr "抗性：感染率：<color=#FF0000>{0}</color>，持续时间：<color=#FF0000>{1}</color>，病菌咳出量：<color=#FF0000>{2}</color> - 暴露阈值：<color=#FF0000>{3}</color>，辐射：<color=#FF0000>{4}</color>，温度：<color=#FF0000>{5}</color>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_SEVERITY_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_SEVERITY_PATTERN"
+msgid "Severity: Attributes: <color=#FF0000>{0}</color>, Breathing: <color=#FF0000>{1}</color>, Calories: <color=#FF0000>{2}</color> - Damage: <color=#FF0000>{3}</color>, Exhaustion: <color=#FF0000>{4}</color>, Stress: <color=#FF0000>{5}</color>"
+msgstr "严重程度：属性：<color=#FF0000>{0}</color>，呼吸：<color=#FF0000>{1}</color>，卡路里：<color=#FF0000>{2}</color> - 伤害：<color=#FF0000>{3}</color>，疲惫：<color=#FF0000>{4}</color>，压力：<color=#FF0000>{5}</color>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN"
+msgid "Threat potential: {0}%"
+msgstr "威胁潜力：{0}%"
+
+#. DiseasesExpanded.STRINGS.GERMS.RUST_GERMS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.GERMS.RUST_GERMS.DESCRIPTION"
+msgid "Small dust-like germs causing rusting process."
+msgstr "细小粉尘状病菌，可引发锈蚀过程。"
+
+#. DiseasesExpanded.STRINGS.GERMS.RUST_GERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.RUST_GERMS.LEGEND_HOVERTEXT"
+msgid "Rust Dust present\n"
+msgstr "存在锈尘菌\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.RUST_GERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.RUST_GERMS.NAME"
+msgid "<link=\"RUSTGERMS\">Rust Dust</link>"
+msgstr "<link=\"RUSTGERMS\">锈尘菌</link>"
+
+#. DiseasesExpanded.STRINGS.MEDICALRESEARCH.DESC
+msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.DESC"
+msgid ""
+"<link=\"RESEARCH\">Medical Research</link> is required to unlock medical technologies.\n"
+"It can be conducted by studying germ samples at an <link=\"APOTHECARY\">Apothecary</link> or obtained by doctors while tending their patients."
+msgstr ""
+"<link=\"RESEARCH\">医疗研究</link>是解锁医疗技术的必要条件。\n"
+"可通过在<link=\"APOTHECARY\">配药桌</link>研究病菌样本，或由医生治疗病患时获取相关数据。"
+
+#. DiseasesExpanded.STRINGS.MEDICALRESEARCH.NAME
+msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.NAME"
+msgid "<link=\"RESEARCH\">Medical Research</link>"
+msgstr "<link=\"RESEARCH\">医疗研究</link>"
+
+#. DiseasesExpanded.STRINGS.MEDICALRESEARCH.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.RECIPEDESC"
+msgid "Unlocks medical technologies."
+msgstr "解锁医疗技术。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.ATTRIBUTES.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.ATTRIBUTES.DESC"
+msgid "Medical Nanobots will enhance duplicant's skils and attributes, making them better at all errands."
+msgstr "医疗纳米机器人将提升复制人的技能和属性，使其更擅长执行所有任务。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.ATTRIBUTES.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.ATTRIBUTES.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot BioEnhancement Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人生物增幅块</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.BREATHING.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.BREATHING.DESC"
+msgid "Medical Nanobots will recycle some of exhaled CO2 to redirect Oxygen back to duplicant's bloodstream."
+msgstr "医疗纳米机器人将回收部分呼出的二氧化碳，将氧气重新导入复制人的血液系统。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.BREATHING.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.BREATHING.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Oxygen Recycle Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人氧气循环增幅块</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.CALORIES.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.CALORIES.DESC"
+msgid "Medical Nanobots will stimulate duplicants' metabolism better to reduce amount of calories required for survival."
+msgstr "医疗纳米机器人将优化复制人的新陈代谢系统，降低生存所需卡路里消耗量。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.CALORIES.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.CALORIES.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Metabolism++ Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人代谢增幅块</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.DURATION.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.DURATION.DESC"
+msgid "Optimizes efficiency with which Nanobots operate in duplicant's system, making thier effects last longer."
+msgstr "优化纳米机器人在复制人体内系统的运作效率，延长其作用持续时间。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.DURATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.DURATION.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Operative Optimization</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人运作优化系统</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.EXHAUSTION.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.EXHAUSTION.DESC"
+msgid "Medical Nanobots stimulate duplicant's exhaustion levels to make them more rested and invigorated."
+msgstr "医疗纳米机器人将调节复制人的疲劳程度，使其获得更充分的休息与体力恢复。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.EXHAUSTION.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.EXHAUSTION.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Invigorating Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人活力激发增幅块</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.HEALTH.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.HEALTH.DESC"
+msgid "Makes Medical Nanobots better at repairing damaged tissues."
+msgstr "提升医疗纳米机器人修复受损组织的效率。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.HEALTH.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.HEALTH.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot BioRepair Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人生物修复增幅块</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC"
+msgid "Construct and release more Medical Nanobots."
+msgstr "制造并释放更多医疗纳米机器人。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Medical Nanobot Swarm</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">医疗纳米机器人集群</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.DESC"
+msgid "Medical Nanobots stored in a gas container, easy to deploy anywhere in the base."
+msgstr "医疗纳米机器人储存于气体容器中，可便捷部署于基地任意位置。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Medical Nanobot Swarm (Bottled)</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">医疗纳米机器人集群(罐装型)</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RADIATION.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RADIATION.DESC"
+msgid "Coats Nanobots with additional lead layer, allowing them to survive more extreme radiation levels."
+msgstr "为纳米机器人附加铅保护层，使其能在更高强度辐射环境下运作。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RADIATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RADIATION.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Leaden Coating</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人铅质防护镀层</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RESISTANCE.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RESISTANCE.DESC"
+msgid "Improves Nanobots' fighting algorithms, increasing germ resistance of affected duplicants."
+msgstr "优化纳米机器人算法，提升受作用复制人的病菌抗性。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RESISTANCE.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RESISTANCE.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot ImmunoBoost Protocol</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人免疫增强协议</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.DESC"
+msgid "Medical Nanobots loss rate will be reduced, allowing some of them to respawn after enhancement is complete."
+msgstr "降低医疗纳米机器人损耗率，部分纳米机器人可在增强完成后重生。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Perpetum Mobile Protocol</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人永续运作协议</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.POPUP
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.POPUP"
+msgid "Nanobot Perpetum Mobile!"
+msgstr "纳米机器人永续运作！"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.STRESS.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.STRESS.DESC"
+msgid "Medical Nanobots will by more efficient while calming down stressed duplicants and improving their morale."
+msgstr "医疗纳米机器人将更高效地缓解复制人压力并提升其士气。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.STRESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.STRESS.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Stress Relief Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人压力缓解增幅块</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.TEMPERATURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.TEMPERATURE.DESC"
+msgid "Coats Nanobots with additional insulation layer, allowing them to survive more extreme temperatures."
+msgstr "为纳米机器人附加绝缘层，使其能在更极端温度环境下运作。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.TEMPERATURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.TEMPERATURE.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Insulation Coating</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人隔热镀层</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.THRESHOLD.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.THRESHOLD.DESC"
+msgid "Medical Nanobots will enter duplicant's system more easily."
+msgstr "医疗纳米机器人将更易融入复制人体内系统。"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.THRESHOLD.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.THRESHOLD.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Integration Protocol</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">纳米机器人集成协议</link>"
+
+#. DiseasesExpanded.STRINGS.NOTIFICATIONS.NANOBOTUPGRADE.PATTERN
+msgctxt "DiseasesExpanded.STRINGS.NOTIFICATIONS.NANOBOTUPGRADE.PATTERN"
+msgid "New nanobot update is ready: {0}"
+msgstr "新的纳米机器人更新已就绪：{0}"
+
+#. DiseasesExpanded.STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN
+msgctxt "DiseasesExpanded.STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN"
+msgid "New virus mutation observed: {0}"
+msgstr "检测到新的病毒变异：{0}"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.NAME"
+msgid "Adopt Stray Pet"
+msgstr "收留流浪宠物"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.TOAST"
+msgid "It was so poor and cute and helpless and we had to adopt it!"
+msgstr "它那么可怜又可爱还无依无靠，我们只能收留它了！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.NAME"
+msgid "Blooming Graves"
+msgstr "盛放之墓"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.TOAST"
+msgid "Death cannot be healed. But it can bloom!"
+msgstr "死亡无法治愈，但可以绽放！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.NAME"
+msgid "Disinfecting Cursor"
+msgstr "消毒光标"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST"
+msgid "Your cursor just got upgraded with portable Purification Kit!"
+msgstr "你的光标已升级为便携式净化套装！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST_END"
+msgid "Oh no... It's broken..."
+msgstr "糟糕...它坏掉了..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.NAME"
+msgid "Radioactive Cursor"
+msgstr "放射性光标"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST"
+msgid ""
+"Your cursor just got upgraded with portable Radiation Emitter! \n"
+"It now glows with around {0} rads!"
+msgstr ""
+"你的光标已升级为便携式辐射发射器！\n"
+"现在它散发着约{0}拉德的辐射！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST_END"
+msgid "Oh no... It's broken..."
+msgstr "糟糕...它坏掉了..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.NAME"
+msgid "Eradicate Germs"
+msgstr "根除病菌"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.TOAST"
+msgid "Most of the germs were eradicated from the environment."
+msgstr "大部分病菌已从环境中被根除。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.FILTHY_FOOD.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.FILTHY_FOOD.NAME"
+msgid "Filthy Food"
+msgstr "污染食物"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.FILTHY_FOOD.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.FILTHY_FOOD.TOAST"
+msgid "Your food supply has been infected with food poisoning."
+msgstr "你们的食物储备已遭到食物污染。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.NAME"
+msgid "Great Migration"
+msgstr "大迁徙"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST"
+msgid "Researchers proclaim cycle of the Bog Bugs. All dwellings increase population."
+msgstr "研究员宣布本周期是沼泽虫之周期，所有虫巢的数量都会增加。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST_END"
+msgid "Swarms of Bog Bugs started migrating away."
+msgstr "成群的沼泽虫开始迁徙离去。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.NAME"
+msgid "Great Migration"
+msgstr "大迁徙"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.TOAST"
+msgid "Researchers proclaim cycle of the Sanishell. All dwellings increase population."
+msgstr "研究员宣布本周期是沙泥蟹之周期，所有巢穴的数量都会增加。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.HUNGRY_PET.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.HUNGRY_PET.NAME"
+msgid "Hungry Pet"
+msgstr "饥饿宠物"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.HUNGRY_PET.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.HUNGRY_PET.TOAST"
+msgid "One of your critters is more hungry than usually. You should probably investigate..."
+msgstr "你的一只小动物似乎比平时更饿，最好去看看怎么回事……"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.HURTING_TUMMY.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.HURTING_TUMMY.NAME"
+msgid "Hurting Tummy"
+msgstr "肚子不舒服"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.HURTING_TUMMY.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.HURTING_TUMMY.TOAST"
+msgid "One of your duplicants got hurting tummy. It's nothing good for sure..."
+msgstr "有个复制人肚子疼得厉害，这肯定不是什么好事……"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.NAME"
+msgid "Intense Pollination"
+msgstr "剧烈授粉"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.TOAST"
+msgid "All of the plants released increased amount of pollen."
+msgstr "所有植物释放的花粉量增加。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.NAME"
+msgid "Intense Radiation"
+msgstr "强辐射"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST"
+msgid "We noticed increased readings on our radiation-measuring aparature."
+msgstr "我们注意到辐射测量装置上的读数有所上升。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST_END"
+msgid "Radiation levels seem to be back to normal."
+msgstr "辐射水平似乎已恢复正常。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.NAME"
+msgid "Mandatory Testing"
+msgstr "强制检测"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.TOAST"
+msgid "All duplicants got encouraged to perform mandatory health tests. If one is infected with germs, our tests collect germ samples."
+msgstr "全体复制人需执行强制健康检测。若检测到病菌感染，系统将自动采集病菌样本。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.NAME"
+msgid "Miraculous Recovery"
+msgstr "奇迹康复"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.TOAST"
+msgid "A miracle! Our duplicants are no longer sick!"
+msgstr "奇迹降临！我们的复制人全部康复了！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.NAME"
+msgid "Nanobot Update"
+msgstr "纳米机器人升级"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST"
+msgid "New update to Nanobot software got rushed for release! "
+msgstr "纳米机器人软件紧急更新已发布！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_END"
+msgid "Hotfix released: Malicious issues of Nanobot software got fixed."
+msgstr "热修复已发布：纳米机器人软件的恶意漏洞已修复。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_MALICIOUS
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_MALICIOUS"
+msgid "Sadly, it may contain some bugs..."
+msgstr "遗憾的是，本次更新可能存在一些漏洞……"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.NAME"
+msgid "Night of the Living Dead"
+msgstr "活死人之夜"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.TOAST"
+msgid "The end is nigh!"
+msgstr "末日将近！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PANIC_MODE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PANIC_MODE.NAME"
+msgid "PANIC MODE!!!"
+msgstr "紧急模式！！！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PANIC_MODE.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PANIC_MODE.TOAST"
+msgid "AAAAAAAAAAAAAAAAAAAAAA!!!!!"
+msgstr "啊啊啊啊啊啊啊啊啊!!!!!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.NAME"
+msgid "Plague of Hunger"
+msgstr "饥荒瘟疫"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.TOAST"
+msgid "A kilogram of Wheat for a Diamond, and three kilograms of Meal Lice for a Diamond, but do not harm Burgers and Pie!"
+msgstr "一公斤小麦换一颗钻石，三公斤米虱换一颗钻石，但不得损害汉堡和馅饼！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.NAME"
+msgid "Print Some Germs"
+msgstr "释放病菌"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.TOAST"
+msgid "Additional germs were printed from all Printing Pods."
+msgstr "所有打印舱均额外释放了病菌。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.NAME"
+msgid "Regressive Mutation"
+msgstr "退化突变"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.TOAST"
+msgid "We observed slightly less dangerous variant of the Virus."
+msgstr "我们观察到该病毒的致病性略有减弱。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.NAME"
+msgid "Resupply First Aid Kits"
+msgstr "补充急救包"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.TOAST"
+msgid "Those medical supplies could be helpful... or better not..."
+msgstr "这些医疗物资或许能派上用场……还是别用为好……"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.NAME"
+msgid "Slimy Polluted Oxygen"
+msgstr "粘稠的污染氧"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.TOAST"
+msgid "All Polluted Oxygen is now even more yucky..."
+msgstr "所有污染氧现在变得更加恶心了……"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPACE_SCREAM.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPACE_SCREAM.NAME"
+msgid "In Space No One Can Hear You Scream"
+msgstr "在太空中，没人能听见你的尖叫"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPACE_SCREAM.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPACE_SCREAM.TOAST"
+msgid "We received strange distress signal from our rocket..."
+msgstr "我们收到了来自火箭的诡异求救信号……"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.DESC"
+msgid "I wonder what is inside?"
+msgstr "里面究竟有什么？"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.NAME"
+msgid "Surprise Box"
+msgstr "惊喜盒"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.TOAST_BODY
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.TOAST_BODY"
+msgid "I wonder what is inside?"
+msgstr "里面究竟有什么？"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.TOAST_TITLE
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.TOAST_TITLE"
+msgid "Surprise Box"
+msgstr "惊喜盒"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.NAME"
+msgid "Spawn Infected Element"
+msgstr "生成受感染"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.TOAST"
+msgid "Spawned some {0} filled with germs."
+msgstr "已生成含病菌的{0}。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.NAME"
+msgid "Spindly Plants"
+msgstr "尖刺植物"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.TOAST"
+msgid "Our plants have developed protective spindles. We must be careful not to get hurt..."
+msgstr "我们的植物长出了防护性尖刺。务必小心避免受伤……"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.NAME"
+msgid "Sprout Flowers"
+msgstr "萌芽花"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST"
+msgid "New flower just sprouted!"
+msgstr "新的花朵刚刚发芽了！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST_FAILED
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST_FAILED"
+msgid "New flower tried to sprout... but it failed... maybe next time...?"
+msgstr "新花朵试图萌芽……但失败了……或许下次能成……？"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.STRAY_COMET.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.STRAY_COMET.NAME"
+msgid "Stray Comet"
+msgstr "流浪彗星"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.STRAY_COMET.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.STRAY_COMET.TOAST"
+msgid "Hey, look! A shooting star!"
+msgstr "嘿，快看！是流星！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.NAME"
+msgid "Sudden Mutation"
+msgstr "突发突变"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.TOAST"
+msgid "Some of our plants mutated to have bigger leaves, richer fruits and... is that a tentacle?!?!"
+msgstr "我们的部分植物发生了突变，叶片更肥大，果实更饱满，而且……那是一条触手吗？！？！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.NAME"
+msgid "Sudden Mutation"
+msgstr "突发突变"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.TOAST"
+msgid "We observed new mutation strain..."
+msgstr "我们检测到新的突变菌株……"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.DESC"
+msgid "Cute and fluffy like a cloud Puffy."
+msgstr "像云朵噗噗一样可爱又毛茸茸的。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.NAME"
+msgid "Fluffy Puffy"
+msgstr "茸茸噗噗"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.DESC"
+msgid "This Beeta may look angry, but it will never ever sting anyone."
+msgstr "这只辐射蜂可能看起来很生气，但它绝对不会蜇任何人。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.NAME"
+msgid "Harmless Bee"
+msgstr "无害蜜蜂"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.DESC"
+msgid "Shining light of hope and joy."
+msgstr "希望与喜悦的闪耀之光。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.NAME"
+msgid "Little Sunshine"
+msgstr "小阳光"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.DESC"
+msgid "Cute little and totally harmless alien."
+msgstr "可爱且完全无害的外星小生物。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.NAME"
+msgid "Little Alien"
+msgstr "小外星人"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.DESC"
+msgid "This shy slickster's fur is devoid of lively colors it would normally have."
+msgstr "这只害羞的浮游生物皮毛失去了本该有的鲜艳色彩。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.NAME"
+msgid "Pale Slickster"
+msgstr "苍白浮油生物"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.DESC"
+msgid "Favorite Slug of Papa Disease."
+msgstr "病原之父最爱的蛞蝓。"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.NAME"
+msgid "Plague Slug"
+msgstr "瘟疫蛞蝓"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.DESC"
+msgid "Whatever is stored inside, it must be useful somehow..."
+msgstr "不管里面储存了什么，总该有点用处吧……"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.NAME"
+msgid "First Aid Pack"
+msgstr "急救套装"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TEXT
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TEXT"
+msgid "Open Kit"
+msgstr "打开套装"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TOOLTIP"
+msgid "Let's see what's inside!"
+msgstr "让我们看看里面有什么！"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TEXT
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TEXT"
+msgid "Open"
+msgstr "打开"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TOOLTIP"
+msgid "Open this box to receive your surprise!"
+msgstr "打开此箱领取惊喜！"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.NAME
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.NAME"
+msgid "Gathering"
+msgstr "收集中"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.PROGRESS
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.PROGRESS"
+msgid " {GERMS} - {PROGRESS}%"
+msgstr " {GERMS} - {PROGRESS}%"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.TOOLTIP"
+msgid "This building is currently gathering ambient germs."
+msgstr "该建筑正在收集环境中的病菌。"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.NANOBOT_REPLICATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.NANOBOT_REPLICATION.NAME"
+msgid "Replicating Nanobots: "
+msgstr "复制纳米机器人中："
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.NANOBOT_REPLICATION.PROGRESS
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.NANOBOT_REPLICATION.PROGRESS"
+msgid " {COUNT}/s"
+msgstr " {COUNT}/s"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.NANOBOT_REPLICATION.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.NANOBOT_REPLICATION.TOOLTIP"
+msgid "This building is currently replicating Medical Nanobots and releasing them into the air: "
+msgstr "该建筑正在复制医疗纳米机器人并将其释放到空气中："
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.NAME
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.NAME"
+msgid "Shield Status"
+msgstr "护盾状态"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.PROGRESS
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.PROGRESS"
+msgid ": {PROGRESS}%"
+msgstr ": {PROGRESS}%"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.TOOLTIP"
+msgid "This building generates protective shield: "
+msgstr "该建筑正在生成防护护盾： "
+
+#. DiseasesExpanded.STRINGS.SYMPTHOMS.DEATH_CHANCE.NAME
+msgctxt "DiseasesExpanded.STRINGS.SYMPTHOMS.DEATH_CHANCE.NAME"
+msgid "Death risk: {CHANCE}%"
+msgstr "死亡风险：{CHANCE}%"
+
+#. DiseasesExpanded.STRINGS.SYMPTHOMS.DEATH_CHANCE.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.SYMPTHOMS.DEATH_CHANCE.TOOLTIP"
+msgid "There is {CHANCE}% risk that the Duplicant will succumb to the disease. Use medical treatment before that happens!"
+msgstr "该复制人有{CHANCE}%的几率病发身亡。务必在此之前进行医疗处理！"
+
+#. DiseasesExpanded.STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.NAME
+msgctxt "DiseasesExpanded.STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.NAME"
+msgid "Chance of developing {SICKNESS}: {CHANCE}%"
+msgstr "患上{SICKNESS}的几率：{CHANCE}%"
+
+#. DiseasesExpanded.STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.TOOLTIP"
+msgid "There is {CHANCE}% risk that the Disease will develop into {SICKNESS}."
+msgstr "该疾病有{CHANCE}%的几率恶化为{SICKNESS}。"
+
+#. DiseasesExpanded.STRINGS.SYMPTHOMS.POWER_USAGE.NAME
+msgctxt "DiseasesExpanded.STRINGS.SYMPTHOMS.POWER_USAGE.NAME"
+msgid "Increased power usage: {POWER} Watts"
+msgstr "功耗增加：{POWER} W"
+
+#. DiseasesExpanded.STRINGS.SYMPTHOMS.POWER_USAGE.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.SYMPTHOMS.POWER_USAGE.TOOLTIP"
+msgid "Creeping Rust decreases efficiency of this Bionic's power circuits, as a result increasing power consumed by {POWER} Watts."
+msgstr "锈蚀蔓延降低了该仿生复制人供电回路的效率，导致功耗增加 {POWER} W。"
+
+#. DiseasesExpanded.STRINGS.TAGS.DISPOSABLE_GERMS.PROPER_NAME
+msgctxt "DiseasesExpanded.STRINGS.TAGS.DISPOSABLE_GERMS.PROPER_NAME"
+msgid "Disposable Germs"
+msgstr "一次性病菌"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.DESC"
+msgid "Insects bites will cause additional damage to this Duplicant."
+msgstr "昆虫咬伤将对该复制人造成额外伤害。"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.NAME
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.NAME"
+msgid "Insect Allergies"
+msgstr "昆虫过敏"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC"
+msgid "Allergic reaction to insect bites"
+msgstr "对昆虫叮咬过敏"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP"
+msgid "Insect Allergies make small bites more dangerous."
+msgstr "昆虫过敏会使得轻微叮咬更加危险。"
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.DESC"
+msgid "This duplicant won't wash their hands."
+msgstr "该复制人拒绝洗手。"
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.NAME
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.NAME"
+msgid "Filthy"
+msgstr "肮脏"
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC"
+msgid "This duplicant is not excited with a concept of personal hygiene."
+msgstr "该复制人对个人卫生概念毫无兴趣。"
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC_TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC_TOOLTIP"
+msgid "Washing hands is not something that this duplicant is interested with."
+msgstr "该复制人对洗手毫无兴趣。"
+
+#. DiseasesExpanded.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "DiseasesExpanded.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr "pether.pg"
+
+#. DiseasesExpanded.STRINGS.UNSPECIFIEDFLASK.DESC
+msgctxt "DiseasesExpanded.STRINGS.UNSPECIFIEDFLASK.DESC"
+msgid "and contained"
+msgstr "包含"
+
+#. DiseasesExpanded.STRINGS.UNSPECIFIEDFLASK.NAME
+msgctxt "DiseasesExpanded.STRINGS.UNSPECIFIEDFLASK.NAME"
+msgid "<link=\"DISEASE\">Sample</link>"
+msgstr "<link=\"DISEASE\">样本</link>"
