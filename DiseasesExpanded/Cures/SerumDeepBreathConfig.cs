@@ -17,9 +17,12 @@ namespace DiseasesExpanded
         {
             float wheezeScale = Settings.Instance.FrostPox.SeverityScale;
             Effect serumEffect = new Effect(EFFECT_ID, STRINGS.CURES.DEEPBREATH.NAME, STRINGS.CURES.DEEPBREATH.DESC, 10 * 600, true, false, false);
-            serumEffect.SelfModifiers = new List<AttributeModifier>();
-            serumEffect.SelfModifiers.Add(new AttributeModifier("BreathDelta", 0.284f, STRINGS.CURES.DEEPBREATH.NAME));
-            serumEffect.SelfModifiers.Add(new AttributeModifier("GermResistance", 2f * wheezeScale, STRINGS.CURES.DEEPBREATH.NAME));
+            serumEffect.SelfModifiers = new List<AttributeModifier>
+            {
+                new AttributeModifier(Db.Get().Attributes.AirConsumptionRate.Id, -0.025f, STRINGS.CURES.DEEPBREATH.NAME),                
+                new AttributeModifier("BreathDelta", 0.284f, STRINGS.CURES.DEEPBREATH.NAME),
+                new AttributeModifier("GermResistance", 2f * wheezeScale, STRINGS.CURES.DEEPBREATH.NAME)
+            };
             return serumEffect;
         }
 
