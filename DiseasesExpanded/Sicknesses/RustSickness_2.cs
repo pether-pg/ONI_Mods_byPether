@@ -17,8 +17,8 @@ namespace DiseasesExpanded
         public static BionicBatteryMonitor.WattageModifier GetWattageModifier()
         {
             return new BionicBatteryMonitor.WattageModifier(
-                WATTAGE_MODIFIER_ID, 
-                WATTAGE_MODIFIER_ID, 
+                WATTAGE_MODIFIER_ID,
+                STRINGS.DISEASES.RUST_SICKNESS_2.NAME, 
                 RustSickness_0.BASE_POWER_VALUE * stageScale, 
                 RustSickness_0.BASE_POWER_VALUE * stageScale);
         }

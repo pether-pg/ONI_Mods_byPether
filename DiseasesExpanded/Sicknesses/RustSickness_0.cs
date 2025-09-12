@@ -39,7 +39,7 @@ namespace DiseasesExpanded
 
 
         public RustSickness_0()
-            : base(ID, SicknessType.Pathogen, Severity.Benign, 0.00025f, new List<Sickness.InfectionVector>() { InfectionVector.Inhalation, InfectionVector.Exposure }, DURATION, RECOVERY_ID)
+            : base(ID, SicknessType.Pathogen, Severity.Benign, 0.00025f, new List<Sickness.InfectionVector>() { InfectionVector.Inhalation, InfectionVector.Exposure, InfectionVector.Contact, InfectionVector.Digestion }, DURATION, RECOVERY_ID)
         {
             this.AddSicknessComponent(new CommonSickEffectSickness());
             this.AddSicknessComponent(new AnimatedSickness(new HashedString[1]

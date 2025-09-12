@@ -16,7 +16,7 @@ namespace DiseasesExpanded
         private List<int> CureBonuses           = new List<int>() { 0, 5, 10, 15 };
         private int PenaltyPerCycleAge = 1;
 
-        private float thresholdPerStage = 50;
+        private float thresholdPerStage = 100;
         private const float MIN_CHANCE = 5;
         private const float MAX_CHANCE = 95;
 

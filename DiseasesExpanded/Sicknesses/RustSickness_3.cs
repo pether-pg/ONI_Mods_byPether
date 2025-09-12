@@ -16,12 +16,13 @@ namespace DiseasesExpanded
         {
             return new BionicBatteryMonitor.WattageModifier(
                 WATTAGE_MODIFIER_ID,
-                WATTAGE_MODIFIER_ID,
+                STRINGS.DISEASES.RUST_SICKNESS_3.NAME,
                 RustSickness_0.BASE_POWER_VALUE * stageScale,
                 RustSickness_0.BASE_POWER_VALUE * stageScale);
         }
 
-        private const float stageScale = 8;
+        private const float stageScale = 6;
+        private const float stageScaleMajor = 8;
 
         public RustSickness_3()
             : base(ID, SicknessType.Pathogen, Severity.Critical, 0.00025f, new List<InfectionVector>() { InfectionVector.Inhalation }, DURATION, RECOVERY_ID)
@@ -40,7 +41,7 @@ namespace DiseasesExpanded
                 new AttributeModifier(Db.Get().Attributes.Learning.Id, RustSickness_0.BASE_ATTRIBUTE_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_3.NAME),
                 new AttributeModifier(Db.Get().Attributes.Machinery.Id, RustSickness_0.BASE_ATTRIBUTE_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_3.NAME),
                 new AttributeModifier(Db.Get().Attributes.Strength.Id, RustSickness_0.BASE_ATTRIBUTE_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_3.NAME),
-                new AttributeModifier("StressDelta", RustSickness_0.BASE_STRESS_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_3.NAME),
+                new AttributeModifier("StressDelta", RustSickness_0.BASE_STRESS_VALUE * stageScaleMajor, (string) STRINGS.DISEASES.RUST_SICKNESS_3.NAME),
                 new AttributeModifier("BionicOilDelta", RustSickness_0.BASE_OIL_VALUE * stageScale, (string) STRINGS.DISEASES.RUST_SICKNESS_3.NAME)
             }));
 

@@ -106,6 +106,7 @@
     <Compile Include="CustomSicknessComponents\CustomFxSickEffectSickness.cs" />
     <Compile Include="Germs\RustGerms.cs" />
     <Compile Include="MedicalNanobots\MedicalNanobotReviver.cs" />
+    <Compile Include="Misc\ApothecarySortingOrder.cs" />
     <Compile Include="Misc\SicknessHelper.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_Codex.cs" />
     <Compile Include="Patches\DiseasesExpanded_Patches_DiseaseEmitter.cs" />

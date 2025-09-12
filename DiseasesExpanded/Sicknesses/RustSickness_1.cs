@@ -14,11 +14,6 @@ namespace DiseasesExpanded
 
         private const float stageScale = 2;
 
-        public static BionicBatteryMonitor.WattageModifier GetWattageModifier()
-        {
-            return new BionicBatteryMonitor.WattageModifier(WATTAGE_MODIFIER_ID, WATTAGE_MODIFIER_ID, 10000, 10000);
-        }
-
         public RustSickness_1()
             : base(ID, SicknessType.Pathogen, Severity.Minor, 0.00025f, new List<InfectionVector>() { InfectionVector.Inhalation }, DURATION, RECOVERY_ID)
         {

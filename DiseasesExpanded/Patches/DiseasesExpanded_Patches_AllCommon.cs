@@ -124,7 +124,7 @@ namespace DiseasesExpanded
                 Db.Get().effects.Add(new Effect(FrostSickness.RECOVERY_ID, STRINGS.EFFECTS.FROSTRECOVERY.NAME, STRINGS.EFFECTS.FROSTRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(GasSickness.RECOVERY_ID, STRINGS.EFFECTS.GASRECOVERY.NAME, STRINGS.EFFECTS.GASRECOVERY.DESC, cycle5, true, true, false));
                 Db.Get().effects.Add(new Effect(HungerSickness.RECOVERY_ID, STRINGS.EFFECTS.HUNGERRECOVERY.NAME, STRINGS.EFFECTS.HUNGERRECOVERY.DESC, cycle5, true, true, false));
-                Db.Get().effects.Add(new Effect(RustSickness_0.RECOVERY_ID, STRINGS.EFFECTS.RUST_RECOVERY.NAME, STRINGS.EFFECTS.RUST_RECOVERY.DESC, cycle2, true, true, false));
+                Db.Get().effects.Add(new Effect(RustSickness_0.RECOVERY_ID, STRINGS.EFFECTS.RUST_RECOVERY.NAME, STRINGS.EFFECTS.RUST_RECOVERY.DESC, cycle5, true, true, false));
                 Db.Get().effects.Add(new Effect(BogSickness.RECOVERY_ID, STRINGS.EFFECTS.BOGRECOVERY.NAME, STRINGS.EFFECTS.BOGRECOVERY.DESC, cycle2, true, true, false));
                 Db.Get().effects.Add(new Effect(SpindlySickness.RECOVERY_ID, STRINGS.EFFECTS.SPINDLYRECOVERY.NAME, STRINGS.EFFECTS.SPINDLYRECOVERY.DESC, cycle5, true, true, false));
                 Db.Get().effects.Add(new Effect(MutatingSickness.RECOVERY_ID, STRINGS.EFFECTS.MUTATEDRECOVERY.NAME, STRINGS.EFFECTS.MUTATEDRECOVERY.DESC, cycle5, true, true, false));
