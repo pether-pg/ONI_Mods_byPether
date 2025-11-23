@@ -102,7 +102,7 @@ namespace BiobotUpgrades
 
             public static bool BiobotPrecondition(Chore.Precondition.Context context, object data)
             {
-                if (context.consumerState.gameObject.name != MorbRoverConfig.ID)
+                if (!context.consumerState.prefabid.HasTag(MorbRoverConfig.ID))
                     return false;
 
                 if (GetSkillPerkIdHash(data) == Db.Get().SkillPerks.CanDigVeryFirm.Id) return true;
@@ -127,6 +127,26 @@ namespace BiobotUpgrades
                     default:
                         return string.Empty;
                 }                
+            }
+        }
+
+        [HarmonyPatch(typeof(PlantFiberProducer))]
+        [HarmonyPatch("OnHarvest")]
+        public class PlantFiberProducer_OnHarvest_Patch
+        {
+            public static bool Prefix(PlantFiberProducer __instance, object obj)
+            {
+                Harvestable harvestable = (Harvestable)obj;
+                if (harvestable == null || harvestable.completed_by == null || harvestable.completed_by.gameObject == null)
+                    return false;
+
+                if (harvestable.completed_by.gameObject.name == MorbRoverConfig.ID)
+                {
+                    Traverse.Create(__instance).Method("SpawnPlantFiber").GetValue<GameObject>();
+                    return false;
+                }
+
+                return true;
             }
         }
     }
