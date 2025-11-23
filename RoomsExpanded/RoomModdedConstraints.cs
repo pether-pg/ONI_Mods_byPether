@@ -25,6 +25,7 @@ namespace RoomsExpanded
             "WineCups" ,        // from DLC - Mellow Mallow
             "ToePlant",         // from DLC - Tranquil Toes
             "IceFlower",        // from Frost Pack DLC
+            "GardenDecorPlant", // from Prehistoric DLC
             "FrostBlossom",     // from Omni Flora
             "IcyShroom",        // from Omni Flora
             "MyrthRose",        // from Omni Flora
@@ -35,6 +36,12 @@ namespace RoomsExpanded
             "Tropicalgae",      // from Omni Flora
             "Fervine"           // from Fervine 
         };
+
+        public static RoomConstraints.Constraint ANY_DECOR_BUILDING = new RoomConstraints.Constraint(
+                                                                    bc => bc.HasTag(""),
+                                                                    null,
+                                                                    name: STRINGS.ROOMS.CRITERIA.ANY_DECOR_BUILDING.NAME,
+                                                                    description: STRINGS.ROOMS.CRITERIA.ANY_DECOR_BUILDING.DESCRIPTION);
 
         public static RoomConstraints.Constraint COOKING_STATION = new RoomConstraints.Constraint(
                                                                     bc => bc.HasTag(RoomConstraintTags.KitchenBuildingTag), 

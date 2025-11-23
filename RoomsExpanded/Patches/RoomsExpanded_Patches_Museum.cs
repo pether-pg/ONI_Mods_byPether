@@ -20,8 +20,11 @@ namespace RoomsExpanded
             RoomConstraintTags.AddStompInConflict(__instance.Barracks, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.Bedroom, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.PrivateBedroom, RoomTypes_AllModded.Museum);
+            RoomConstraintTags.AddStompInConflict(__instance.Latrine, RoomTypes_AllModded.Museum);
+            RoomConstraintTags.AddStompInConflict(__instance.PlumbedBathroom, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.MessHall, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.GreatHall, RoomTypes_AllModded.Museum);
+            RoomConstraintTags.AddStompInConflict(__instance.BanquetHall, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.Hospital, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.MassageClinic, RoomTypes_AllModded.Museum);
             RoomConstraintTags.AddStompInConflict(__instance.RecRoom, RoomTypes_AllModded.Museum);

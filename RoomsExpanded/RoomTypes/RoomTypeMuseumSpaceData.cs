@@ -19,7 +19,7 @@ namespace RoomsExpanded
             ConstrantsAdditional = new RoomConstraints.Constraint[5]
                                         {
                                         RoomModdedConstraints.ARTIFACTS,
-                                        RoomConstraints.LIGHT,
+                                        RoomConstraints.ORNAMENTDISPLAYED,
                                         RoomConstraints.NO_INDUSTRIAL_MACHINERY,
                                         RoomConstraints.MINIMUM_SIZE_32,
                                         RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.MuseumSpace.MaxSize)
@@ -27,7 +27,7 @@ namespace RoomsExpanded
 
             RoomDetails = new RoomDetails.Detail[2]
                                 {
-                                new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.SIZE.NAME, (object) room.cavity.numCells))),
+                                new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.SIZE.NAME, (object) room.cavity.NumCells))),
                                 new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.BUILDING_COUNT.NAME, (object) room.buildings.Count)))
                                 };
 

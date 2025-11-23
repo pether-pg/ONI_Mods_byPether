@@ -14,7 +14,7 @@ namespace RoomsExpanded
             Tooltip = STRINGS.ROOMS.TYPES.KITCHENETTE.TOOLTIP;
             Effect = string.Format(STRINGS.ROOMS.TYPES.KITCHENETTE.EFFECT, MiscUtils.Percent(Settings.Instance.Kitchenette.Bonus));
             Catergory = CreateCategory();
-            ConstraintPrimary = RoomModdedConstraints.COOKING_STATION;
+            ConstraintPrimary = RoomConstraints.COOK_TOP;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
                                         RoomConstraints.REFRIGERATOR,
@@ -25,7 +25,7 @@ namespace RoomsExpanded
 
             RoomDetails = new RoomDetails.Detail[2]
                                 {
-                                new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.SIZE.NAME, (object) room.cavity.numCells))),
+                                new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.SIZE.NAME, (object) room.cavity.NumCells))),
                                 new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.BUILDING_COUNT.NAME, (object) room.buildings.Count)))
                                 };
 

@@ -29,7 +29,7 @@ namespace RoomsExpanded
             if (maxSize == 120)
                 return RoomConstraints.MAXIMUM_SIZE_120;
 
-            return new RoomConstraints.Constraint((Func<KPrefabID, bool>)null, (Func<Room, bool>)(room => room.cavity.numCells <= maxSize), 
+            return new RoomConstraints.Constraint((Func<KPrefabID, bool>)null, (Func<Room, bool>)(room => room.cavity.NumCells <= maxSize), 
                 name: string.Format((string)ROOMS.CRITERIA.MAXIMUM_SIZE.NAME, (object)maxSize.ToString()), 
                 description: string.Format((string)ROOMS.CRITERIA.MAXIMUM_SIZE.DESCRIPTION, (object)maxSize.ToString()));
         }
@@ -41,7 +41,7 @@ namespace RoomsExpanded
             if (minSize == 32)
                 return RoomConstraints.MINIMUM_SIZE_32;
 
-            return new RoomConstraints.Constraint((Func<KPrefabID, bool>)null, (Func<Room, bool>)(room => room.cavity.numCells >= minSize),
+            return new RoomConstraints.Constraint((Func<KPrefabID, bool>)null, (Func<Room, bool>)(room => room.cavity.NumCells >= minSize),
                 name: string.Format((string)ROOMS.CRITERIA.MINIMUM_SIZE.NAME, (object)minSize.ToString()),
                 description: string.Format((string)ROOMS.CRITERIA.MINIMUM_SIZE.DESCRIPTION, (object)minSize.ToString()));
         }

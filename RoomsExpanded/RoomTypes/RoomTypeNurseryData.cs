@@ -18,16 +18,15 @@ namespace RoomsExpanded
             Effect = string.Format(STRINGS.ROOMS.TYPES.NURSERY.EFFECT, MiscUtils.Percent(Settings.Instance.Nursery.Bonus));
             Catergory = CreateCategory();
             ConstraintPrimary = RoomModdedConstraints.PLANTER_BOX;
-            ConstrantsAdditional = new RoomConstraints.Constraint[4] { 
+            ConstrantsAdditional = new RoomConstraints.Constraint[3] { 
                                             RoomModdedConstraints.UNIQUE_PLANTS,
-                                            RoomConstraints.LIGHT,
                                             RoomConstraints.MINIMUM_SIZE_12,
                                             RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Nursery.MaxSize)
                                         };
 
             RoomDetails = new RoomDetails.Detail[2]
                             {
-                                new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.SIZE.NAME, (object) room.cavity.numCells))),
+                                new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.SIZE.NAME, (object) room.cavity.NumCells))),
                                 new RoomDetails.Detail((Func<Room, string>) (room => string.Format((string) ROOMS.DETAILS.PLANT_COUNT.NAME, (object) room.plants.Count)))
                             };
 
