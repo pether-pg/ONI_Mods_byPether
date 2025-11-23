@@ -134,7 +134,8 @@ namespace DiseasesExpanded.Patches
                     return;
                 }
 
-                var originalWantsOilChange = oilMonitorType.GetMethod(nameof(BionicOilMonitor.WantsOilChange));
+                Debug.Log($"{ModInfo.Namespace}: Trying to get BionicOilMonitor.WantsOilChange method...");
+                var originalWantsOilChange = oilMonitorType.GetMethod(nameof(BionicOilMonitor.WantsOilChange), new Type[] { typeof(BionicOilMonitor.Instance) });
                 var postfixWantsOilChange = typeof(BionicOilMonitor_WantsOilChange_Patch)?.GetMethod("Postfix");
 
                 if (originalWantsOilChange == null || postfixWantsOilChange == null)
@@ -145,7 +146,8 @@ namespace DiseasesExpanded.Patches
                     Debug.Log($"{ModInfo.Namespace}: BionicOilMonitor_WantsOilChange_Patch - manual patching completed");
                 }
 
-                var originalHasDecentAmountOfOil = oilMonitorType.GetMethod(nameof(BionicOilMonitor.HasDecentAmountOfOil));
+                Debug.Log($"{ModInfo.Namespace}: Trying to get BionicOilMonitor.HasDecentAmountOfOil method...");
+                var originalHasDecentAmountOfOil = oilMonitorType.GetMethod(nameof(BionicOilMonitor.HasDecentAmountOfOil), new Type[] { typeof(BionicOilMonitor.Instance) });
                 var postfixHasDecentAmountOfOil = typeof(BionicOilMonitor_HasDecentAmountOfOil_Patch)?.GetMethod("Postfix");
 
                 if (originalHasDecentAmountOfOil == null || postfixHasDecentAmountOfOil == null)
