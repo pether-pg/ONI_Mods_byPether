@@ -155,12 +155,6 @@ namespace RoomsExpanded
                     public static LocString DESCRIPTION = (LocString)"Requires a single Ranching building or Farm Station";
                 }
 
-                public class ANY_DECOR_BUILDING
-                {
-                    public static LocString NAME = (LocString)"Any Decor Item";
-                    public static LocString DESCRIPTION = (LocString)"A Painting, Sculpture, or any other decorative item.";
-                }
-
                 public class COOKING
                 {
                     public static LocString NAME = (LocString)"Cooking Station";

@@ -37,12 +37,6 @@ namespace RoomsExpanded
             "Fervine"           // from Fervine 
         };
 
-        public static RoomConstraints.Constraint ANY_DECOR_BUILDING = new RoomConstraints.Constraint(
-                                                                    bc => bc.HasTag(""),
-                                                                    null,
-                                                                    name: STRINGS.ROOMS.CRITERIA.ANY_DECOR_BUILDING.NAME,
-                                                                    description: STRINGS.ROOMS.CRITERIA.ANY_DECOR_BUILDING.DESCRIPTION);
-
         public static RoomConstraints.Constraint COOKING_STATION = new RoomConstraints.Constraint(
                                                                     bc => bc.HasTag(RoomConstraintTags.KitchenBuildingTag), 
                                                                     null, 
