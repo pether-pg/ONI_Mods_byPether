@@ -54,21 +54,21 @@ namespace DiseasesExpanded
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Medical Nanobots", nameof(MEDICALNANOBOTS));
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Medical Nanobots present\n";
-                public static LocString DESCRIPTION = (LocString)"Medical Nanobots are engineeded with sole purpose of fighting malicious germs and improving duplicants' health.";
+                public static LocString DESCRIPTION = (LocString)"Medical Nanobots are engineered with sole purpose of fighting malicious germs and improving duplicant's health.";
 
                 public static LocString VERSION_PATTERN = (LocString)"Version {ATTACK}/{RESILIANCE}";
                 public static LocString VERION_EFFICIENCY_PATTERN = (LocString)"Efficiency: " +
                      "Attributes: <color=#00FF00>{0}</color>, " +
                      "Breathing: <color=#00FF00>{1}</color>, " +
-                     "Calories: <color=#00FF00>{2}</color> " +
-                     "- Healing: <color=#00FF00>{3}</color>, " +
+                     "Calories: <color=#00FF00>{2}</color>, " +
+                     "Healing: <color=#00FF00>{3}</color>, " +
                      "Energy: <color=#00FF00>{4}</color>, " +
                      "Stress reduction: <color=#00FF00>{5}</color>";
-                public static LocString VERSION_RESILIANCE_PATTERN = (LocString)"Resiliance: " +
+                public static LocString VERSION_RESILIANCE_PATTERN = (LocString)"Resilience: " +
                     "Germ Resistance: <color=#00FF00>{0}</color>, " +
                     "Duration: <color=#00FF00>{1}</color>, " +
-                    "Perpetum Mobile: <color=#00FF00>{2}</color> " +
-                    "- Exposure Threshold: <color=#00FF00>{3}</color>, " +
+                    "Perpetuum Mobile: <color=#00FF00>{2}</color>, " +
+                    "Exposure Threshold: <color=#00FF00>{3}</color>, " +
                     "Radiation: <color=#00FF00>{4}</color>, " +
                     "Temperature: <color=#00FF00>{5}</color>";
                 public static LocString RADIATION_HELP_PATTERN = (LocString)"Radiation Kill Rate: {0}";
@@ -86,21 +86,21 @@ namespace DiseasesExpanded
                 public static LocString STRAIN_SEVERITY_PATTERN = (LocString)"Severity: " +
                     "Attributes: <color=#FF0000>{0}</color>, " +
                     "Breathing: <color=#FF0000>{1}</color>, " +
-                    "Calories: <color=#FF0000>{2}</color> " +
-                    "- Damage: <color=#FF0000>{3}</color>, " +
+                    "Calories: <color=#FF0000>{2}</color>, " +
+                    "Damage: <color=#FF0000>{3}</color>, " +
                     "Exhaustion: <color=#FF0000>{4}</color>, " +
                     "Stress: <color=#FF0000>{5}</color>";
-                public static LocString STRAIN_RESILIANCE_PATTERN = (LocString)"Resiliance: " +
+                public static LocString STRAIN_RESILIANCE_PATTERN = (LocString)"Resilience: " +
                     "Infectibility: <color=#FF0000>{0}</color>, " +
                     "Duration: <color=#FF0000>{1}</color>, " +
-                    "Germ Coughing: <color=#FF0000>{2}</color> " +
-                    "- Exposure Threshold: <color=#FF0000>{3}</color>, " +
+                    "Germ Coughing: <color=#FF0000>{2}</color>, " +
+                    "Exposure Threshold: <color=#FF0000>{3}</color>, " +
                     "Radiation: <color=#FF0000>{4}</color>, " +
                     "Temperature: <color=#FF0000>{5}</color>";
                 public static LocString MUTATION_HELP_PATTERN = (LocString)"Use {0} to mutate the germs in more safe direction.";
                 public static LocString TREAT_POTENTIAL_PATTERN = (LocString)"Threat potential: {0}%";
                 public static LocString MUTATION_SPEED_PATTERN = (LocString)"Estimated mutation speed: {0:F2} (mutation rate reduction Lvl: {1})";
-                public static LocString LEGEND_HEADER = (LocString)"Genoms' values:\n";
+                public static LocString LEGEND_HEADER = (LocString)"Genome's values:\n";
             }
         }
 
@@ -142,7 +142,7 @@ namespace DiseasesExpanded
             public class RUST_SICKNESS_0
             {
                 public static LocString NAME = UI.FormatAsLink("Rusty Lungs", nameof(RUST_SICKNESS_0));
-                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes varoius sympthoms, especially dangerous for Bionic Duplicants.";
+                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes various symptoms, especially dangerous for Bionic Duplicants.";
                 public static LocString LEGEND_HOVERTEXT = "Area causes Rusty Lungs.";
                 public static LocString EXPOSURE_INFO = $"Got exposed to { UI.FormatAsLink("Rust Dust", nameof(GERMS.RUST_GERMS))}";
             }
@@ -150,7 +150,7 @@ namespace DiseasesExpanded
             public class RUST_SICKNESS_1
             {
                 public static LocString NAME = UI.FormatAsLink("Rust Dust Crust (stage 1)", nameof(RUST_SICKNESS_1));
-                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes varoius sympthoms, especially dangerous for Bionic Duplicants.";
+                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes various symptoms, especially dangerous for Bionic Duplicants.";
                 public static LocString LEGEND_HOVERTEXT = "Area causes Rusty Lungs.";
                 public static LocString EXPOSURE_INFO = $"Creeping {UI.FormatAsLink("Rust Dust", nameof(GERMS.RUST_GERMS))} spread, causing more severe infection.";
             }
@@ -158,7 +158,7 @@ namespace DiseasesExpanded
             public class RUST_SICKNESS_2
             {
                 public static LocString NAME = UI.FormatAsLink("Rust Dust Crust (stage 2)", nameof(RUST_SICKNESS_2));
-                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes varoius sympthoms, especially dangerous for Bionic Duplicants.";
+                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes various symptoms, especially dangerous for Bionic Duplicants.";
                 public static LocString LEGEND_HOVERTEXT = "Area causes Rusty Lungs.";
                 public static LocString EXPOSURE_INFO = $"Creeping {UI.FormatAsLink("Rust Dust", nameof(GERMS.RUST_GERMS))} spread, causing even more severe infection.";
             }
@@ -166,7 +166,7 @@ namespace DiseasesExpanded
             public class RUST_SICKNESS_3
             {
                 public static LocString NAME = UI.FormatAsLink("Rust Dust Crust (stage 3)", nameof(RUST_SICKNESS_3));
-                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes varoius sympthoms, especially dangerous for Bionic Duplicants.";
+                public static LocString DESCRIPTIVE_SYMPTOMS = "Causes various symptoms, especially dangerous for Bionic Duplicants.";
                 public static LocString LEGEND_HOVERTEXT = "Area causes Rusty Lungs.";
                 public static LocString EXPOSURE_INFO = $"Creeping {UI.FormatAsLink("Rust Dust", nameof(GERMS.RUST_GERMS))} spread, imposing critical risk.";
             }
@@ -182,7 +182,7 @@ namespace DiseasesExpanded
 
             public class ALIENSICKNESS
             {
-                public static LocString NAME = (LocString)UI.FormatAsLink("Alien Symbiot", nameof(ALIENSICKNESS));
+                public static LocString NAME = (LocString)UI.FormatAsLink("Alien Symbiote", nameof(ALIENSICKNESS));
                 public static LocString DESCRIPTIVE_SYMPTOMS = (LocString)"Enhances and stresses the duplicant.";
                 public static LocString DESCRIPTION = (LocString)"Alien microbes increase duplicant's skills. However, this feels unnatural and makes infected duplicant stressed out. The goo is perfectly adapted for space travels and it will rapidly grow wherever radiation is present.";
                 public static LocString LEGEND_HOVERTEXT = (LocString)"Area affected by Alien Goo.";
@@ -200,7 +200,7 @@ namespace DiseasesExpanded
             }
         }
 
-        public class SYMPTHOMS
+        public class SYMPTOMS
         {
             public class POWER_USAGE
             {
@@ -226,79 +226,79 @@ namespace DiseasesExpanded
             public class BOGRECOVERY
             {
                 public static LocString NAME = (LocString)"Bog Bugs Infestation Recovery";
-                public static LocString DESC = (LocString)"This duplicant just recovered from Bog Bugs Infestation.";
+                public static LocString DESC = (LocString)string.Concat("This duplicant just recovered from ", DISEASES.BOGSICKNESS.NAME, " and is temporarily immune to the ", UI.PRE_KEYWORD, "Disease", UI.PST_KEYWORD);
             }
 
             public class FROSTRECOVERY
             {
                 public static LocString NAME = (LocString)"Frost Pox Recovery";
-                public static LocString DESC = (LocString)"This duplicant just recovered from Frost Pox.";
+                public static LocString DESC = (LocString)string.Concat("This duplicant just recovered from ", DISEASES.FROSTSICKNESS.NAME, " and is temporarily immune to the ", UI.PRE_KEYWORD, "Disease", UI.PST_KEYWORD);
             }
 
             public class GASRECOVERY
             {
                 public static LocString NAME = (LocString)"Moo Flu Recovery";
-                public static LocString DESC = (LocString)"This duplicant just recovered from Moo Flu.";
+                public static LocString DESC = (LocString)string.Concat("This duplicant just recovered from ", DISEASES.GASSICKNESS.NAME, " and is temporarily immune to the ", UI.PRE_KEYWORD, "Disease", UI.PST_KEYWORD);
             }
 
             public class HUNGERRECOVERY
             {
                 public static LocString NAME = (LocString)"Everlasting Hunger Recovery";
-                public static LocString DESC = (LocString)"This duplicant just recovered from Everlasting Hunger.";
+                public static LocString DESC = (LocString)string.Concat("This duplicant just recovered from ", DISEASES.HUNGERSICKNESS.NAME, " and is temporarily immune to the ", UI.PRE_KEYWORD, "Disease", UI.PST_KEYWORD);
             }
 
             public class RUST_RECOVERY
             {
                 public static LocString NAME = "Creeping Rust Crust Recovery";
-                public static LocString DESC = "This duplicant just recovered from Creeping Rust Crust.";
+                public static LocString DESC = $"This duplicant just recovered from {UI.FormatAsLink("Creeping Rust Crust", "RUSTSICKNESS")}.";
             }
 
             public class SPINDLYRECOVERY
             {
                 public static LocString NAME = (LocString)"Sleeping Curse Recovery";
-                public static LocString DESC = (LocString)"This duplicant just recovered from Sleeping Curse.";
+                public static LocString DESC = (LocString)string.Concat("This duplicant just recovered from ", DISEASES.SPINDLYCURSE.NAME, " and is temporarily immune to the ", UI.PRE_KEYWORD, "Disease", UI.PST_KEYWORD);
             }
 
             public class ALIENRECOVERY
             {
-                public static LocString NAME = (LocString)"Alien Symbiot Recovery";
-                public static LocString DESC = (LocString)"This duplicant was cured from Alien Symbiot.";
+                public static LocString NAME = (LocString)"Alien Symbiote Recovery";
+                public static LocString DESC = (LocString)string.Concat("This duplicant was cured from ", DISEASES.ALIENSICKNESS.NAME, " and is temporarily immune to the ", UI.PRE_KEYWORD, "Disease", UI.PST_KEYWORD);
             }
 
             public class ALIENASSIMILATION
             {
                 public static LocString NAME = (LocString)"Assimilation Successful";
-                public static LocString DESC = (LocString)"Alien Symbiot completed assimilation and no longer provides benefits to the host.";
+                public static LocString DESC = (LocString)string.Concat(DISEASES.ALIENSICKNESS.NAME, " completed assimilation and no longer provides benefits to the host");
             }
 
             public class MUTATEDSYMPTOMS
             {
                 public static LocString NAME = (LocString)"Mutating Disease Symptoms";
-                public static LocString DESC = (LocString)"This duplicant is suffering from various symptoms of mutating disease.";
+                public static LocString DESC = (LocString)"This duplicant is suffering from various symptoms of " + DISEASES.MUTATINGSICKNESS.NAME;
             }
 
             public class MUTATEDRECOVERY
             {
                 public static LocString NAME = (LocString)"Mutating Disease Recovery";
-                public static LocString DESC = (LocString)"This duplicant just recovered from Mutating Disease.";
+                public static LocString DESC = (LocString)string.Concat("This duplicant just recovered from ", DISEASES.MUTATINGSICKNESS.NAME, " and is temporarily immune to the ", UI.PRE_KEYWORD, "Disease", UI.PST_KEYWORD);
             }
 
             public class JUSTGOTTESTED
             {
                 public static LocString NAME = (LocString)"Just Got Tested";
-                public static LocString DESC = (LocString)"This Duplicant just delivered germ sample for futher testing.";
+                public static LocString DESC = (LocString)"This Duplicant just delivered germ sample for further testing";
             }
 
             public class SPINDLYTHORNS
             {
                 public static LocString NAME = (LocString)"Spindly Thorns";
-                public static LocString DESC = (LocString)"This Plant developed protective thorns, similar to Grub Fruit spindles. Touching it may cause Sleeping Curse...";
+                public static LocString DESC = (LocString)"This Plant developed protective thorns, similar to Grub Fruit spindles. Touching it may cause " + DISEASES.SPINDLYCURSE.NAME + "...";
             }
 
             public class NANOBOTENHANCEMENT
             {
                 public static LocString NAME = (LocString)"Nanobot Enhancement";
-                public static LocString DESC = (LocString)"This Duplicant is getting health boost from friendly Nanobot enhancement.";
+                public static LocString DESC = (LocString)"This Duplicant is getting health boost from friendly Nanobot enhancement";
             }
         }
 
@@ -306,31 +306,31 @@ namespace DiseasesExpanded
         {
             public class GASCURE
             {
-                public static LocString NAME = (LocString)"Sprouting Tablet";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Sprouting Tablet", GasCureConfig.ID);
                 public static LocString DESC = (LocString)"If a berry sprouts in a duplicant's belly, their farts will smell like flowers";
             }
 
             public class MUDMASK
             {
-                public static LocString NAME = (LocString)"Muddy Salve";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Muddy Salve", MudMaskConfig.ID);
                 public static LocString DESC = (LocString)"When covered in mud, duplicants are not so tasty for " + UI.FormatAsLink("Bog Bugs", BogInsects.ID) + ".";
             }
 
             public class SAPSHOT
             {
-                public static LocString NAME = (LocString)"Sweet Sap Shot";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Sweet Sap Shot", SapShotConfig.ID);
                 public static LocString DESC = (LocString)"Thick and full of sugar, Sweet Sap Shot condenses many calories into one syringe to quickly satisfy even the most " + UI.FormatAsLink("overwhelming hunger", HungerGerms.ID) + ".";
             }
 
             public class RADSHOT
             {
-                public static LocString NAME = (LocString)"Sweet Rad Shot";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Sweet Rad Shot", RadShotConfig.ID);
                 public static LocString DESC = (LocString)"Uranium contains about 18 million kCal per gram - enough to quickly satisfy even the most " + UI.FormatAsLink("overwhelming hunger", HungerGerms.ID) + ".";
             }
 
             public class ANTIHISTAMINEBOOSTER
             {
-                public static LocString NAME = (LocString)"Allergy Immuno Booster";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Allergy Immuno Booster", AntihistamineBoosterConfig.ID);
                 public static LocString DESC = (LocString)"Prevents allergic reactions in the future.";
             }
 
@@ -342,61 +342,61 @@ namespace DiseasesExpanded
 
             public class DEEPBREATH
             {
-                public static LocString NAME = (LocString)"Deep Breath Serum";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Deep Breath Serum", SerumDeepBreathConfig.ID);
                 public static LocString DESC = (LocString)"Slightly improves duplicant's breath and germ resistance.";
             }
 
             public class SUPERSERUM
             {
-                public static LocString NAME = (LocString)"Super Serum";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Super Serum", SerumSuperConfig.ID);
                 public static LocString DESC = (LocString)"Enhances duplicant's attributes and makes them immune to most dangerous pathogens.";
             }
 
             public class TUMMYSERUM
             {
-                public static LocString NAME = (LocString)"Tummy Serum";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Tummy Serum", SerumTummyConfig.ID);
                 public static LocString DESC = (LocString)"Calms even most angry tummy and makes it immune to subsequent infections.";
             }
 
             public class YUMMYSERUM
             {
-                public static LocString NAME = (LocString)"Yummy Serum";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Yummy Serum", SerumYummyConfig.ID);
                 public static LocString DESC = (LocString)"Stimulates duplicant's digestive system and makes them immune to most ravenous pathogens.";
             }
 
             public class MUTATINGANTIVIRAL
             {
-                public static LocString NAME = (LocString)"Unstable Antiviral";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Unstable Antiviral", MutatingAntiviralConfig.ID);
                 public static LocString DESC = (LocString)"Cures from, and grants immunity to " + UI.FormatAsLink("Mutating Disease", MutatingGerms.ID) + " for a short time.";
             }
 
             public class ALIENCURE
             {
-                public static LocString NAME = "Alien Cure";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Alien Cure", AlienSicknessCureConfig.ID);
                 public static LocString DESC = "Discourages " + UI.FormatAsLink("Alien Goo", AlienGerms.ID) + " from inhabiting the body of affected duplicant.";
             }
 
             public class HAPPYPILL
             {
-                public static LocString NAME = "Happy Pill";
-                public static LocString DESC = $"Improves overall {UI.FormatAsLink("happines", "MORALE")} of affectected duplicant but reduces their motivation to perform even most basic tasks.";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Happy Pill", HappyPillConfig.ID);
+                public static LocString DESC = $"Improves overall {UI.FormatAsLink("happiness", "MORALE")} of affected duplicant but reduces their motivation to perform even most basic tasks.";
             }
 
             public class SUNBURNCURE
             {
-                public static LocString NAME = "Sun Lotion";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Sun Lotion", SunburnCureConfig.ID);
                 public static LocString DESC = "Cures duplicant from severe " + UI.FormatAsLink("Sunburn", "SunburnSickness") + ".";
             }
 
             public class RUST_2_CURE
             {
-                public static LocString NAME = "Medical Oil";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Medical Oil", RustSickness2CureConfig.ID);
                 public static LocString DESC = "Cures duplicant from " + DISEASES.RUST_SICKNESS_2.NAME + ".";
             }
 
             public class RUST_3_CURE
             {
-                public static LocString NAME = "Spare Parts Shot";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Spare Parts Shot", RustSickness3CureConfig.ID);
                 public static LocString DESC = "Replaces parts most damaged by " + DISEASES.RUST_SICKNESS_3.NAME + ".";
             }
         }
@@ -416,14 +416,14 @@ namespace DiseasesExpanded
 
         public class GERMFLASKSAMPLE
         {
-            public static LocString NAME = (LocString)"Test Sample Flask";
-            public static LocString DESC = (LocString)"Used to gather " + UI.FormatAsLink("germ", "DISEASE") + " sample from infected duplicant into a flask for futher testing.";
+            public static LocString NAME = (LocString)UI.FormatAsLink("Test Sample Flask", TestSampleConfig.ID);
+            public static LocString DESC = (LocString)"Used to gather " + UI.FormatAsLink("germ", "DISEASE") + " sample from infected duplicant into a flask for further testing.";
         }
 
         public class MEDICALRESEARCH
         {
-            public static LocString NAME = UI.FormatAsLink("Medical Research", nameof(RESEARCH));
-            public static LocString DESC = (LocString)(UI.FormatAsLink("Medical Research", nameof(RESEARCH)) + " is required to unlock medical technologies.\nIt can be conducted by studying germ samples at an " + UI.FormatAsLink("Apothecary", "APOTHECARY") + " or obtained by doctors while tending their patients.");
+            public static LocString NAME = UI.FormatAsLink("Medical Research", "RESEARCHDLC1");
+            public static LocString DESC = (LocString)(UI.FormatAsLink("Medical Research", "RESEARCHDLC1") + " is required to unlock medical technologies.\nIt can be conducted by studying germ samples at an " + UI.FormatAsLink("Apothecary", "APOTHECARY") + " or obtained by doctors while tending their patients.");
             public static LocString RECIPEDESC = (LocString)"Unlocks medical technologies.";
         }
 
@@ -432,20 +432,20 @@ namespace DiseasesExpanded
             public class ATTACK
             {
                 public static LocString NAME = UI.FormatAsLink("Controlled Severity Mutation", MutatingGerms.ID);
-                public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's severity genoms to a weaker form.";
+                public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's severity genome to a weaker form.";
                 public static LocString RECIPEDESC = (LocString)"Weakens Unstable Virus severity";
             }
             public class ENVIRONMENTAL
             {
                 public static LocString NAME = UI.FormatAsLink("Controlled Environmental Mutation", MutatingGerms.ID);
-                public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's environmental genoms to a weaker form.";
+                public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's environmental genome to a weaker form.";
                 public static LocString RECIPEDESC = (LocString)"Weakens Unstable Virus ability to live in various environments";
             }
             public class RESILIANCE
             {
-                public static LocString NAME = UI.FormatAsLink("Controlled Resiliance Mutation", MutatingGerms.ID);
-                public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's resiliance genoms to a weaker form.";
-                public static LocString RECIPEDESC = (LocString)"Weakens Unstable Virus resiliance";
+                public static LocString NAME = UI.FormatAsLink("Controlled resilience Mutation", MutatingGerms.ID);
+                public static LocString DESC = (LocString)"Conducted in laboratory conditions, forces Unstable Virus to mutate back it's resilience genome to a weaker form.";
+                public static LocString RECIPEDESC = (LocString)"Weakens Unstable Virus resilience";
             }
 
             public class MUTATIONRATEREDUCTION
@@ -486,7 +486,7 @@ namespace DiseasesExpanded
             public class CALORIES
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Nanobot Metabolism++ Module", MedicalNanobots.ID);
-                public static LocString DESC = (LocString)"Medical Nanobots will stimulate duplicants' metabolism better to reduce amount of calories required for survival.";
+                public static LocString DESC = (LocString)"Medical Nanobots will stimulate duplicant's metabolism better to reduce amount of calories required for survival.";
             }
 
             public class BREATHING
@@ -504,14 +504,14 @@ namespace DiseasesExpanded
             public class ATTRIBUTES
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Nanobot BioEnhancement Module", MedicalNanobots.ID);
-                public static LocString DESC = (LocString)"Medical Nanobots will enhance duplicant's skils and attributes, making them better at all errands.";
+                public static LocString DESC = (LocString)"Medical Nanobots will enhance duplicant's skills and attributes, making them better at all errands.";
             }
 
             public class SPAWNING
             {
-                public static LocString NAME = (LocString)UI.FormatAsLink("Nanobot Perpetum Mobile Protocol", MedicalNanobots.ID);
+                public static LocString NAME = (LocString)UI.FormatAsLink("Nanobot Perpetuum Mobile Protocol", MedicalNanobots.ID);
                 public static LocString DESC = (LocString)"Medical Nanobots loss rate will be reduced, allowing some of them to respawn after enhancement is complete.";
-                public static LocString POPUP = (LocString)"Nanobot Perpetum Mobile!";
+                public static LocString POPUP = (LocString)"Nanobot Perpetuum Mobile!";
             }
 
             public class TEMPERATURE
@@ -541,7 +541,7 @@ namespace DiseasesExpanded
             public class DURATION
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Nanobot Operative Optimization", MedicalNanobots.ID);
-                public static LocString DESC = (LocString)"Optimizes efficiency with which Nanobots operate in duplicant's system, making thier effects last longer.";
+                public static LocString DESC = (LocString)"Optimizes efficiency with which Nanobots operate in duplicant's system, making their effects last longer.";
             }
         }
 
@@ -549,35 +549,35 @@ namespace DiseasesExpanded
         {
             public class GERMCATCHER
             {
-                public static LocString NAME = (LocString)"Germcatcher";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Germcatcher", GermcatcherConfig.ID);
                 public static LocString DESC = (LocString)"Germcatchers collect germ samples for medical study and vaccine production.";
                 public static LocString EFFECT = (LocString)$"Gathers ambient {UI.FormatAsLink("germs", "DISEASE")} and stores them in the {UI.FormatAsLink("flasks", TestSampleConfig.ID)} for future research at an {UI.FormatAsLink("Apothecary", "APOTHECARY")} and vaccine production.";
             }
 
             public class VACCINEAPOTHECARY
             {
-                public static LocString NAME = (LocString)"Vaccine Apothecary";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Vaccine Apothecary", VaccineApothecaryConfig.ID);
                 public static LocString DESC = (LocString)"Vaccines produced here can grant your duplicants immunity for various diseases.";
-                public static LocString EFFECT = (LocString)$"Vaccine Apothecary uses {UI.FormatAsLink("Radiation", "RADIATION")} to weaken {UI.FormatAsLink("germs", "DISEASE")} stored in a {UI.FormatAsLink("flasks", TestSampleConfig.ID)} to produce life-saving vaccines.\n\nIt must be operated by highly-trained {UI.FormatAsLink("medical", "ROLES")} personel and it is suggested to use radiation protection for the time of vaccine preparation.";
+                public static LocString EFFECT = (LocString)$"Vaccine Apothecary uses {UI.FormatAsLink("Radiation", "RADIATION")} to weaken {UI.FormatAsLink("germs", "DISEASE")} stored in a {UI.FormatAsLink("flasks", TestSampleConfig.ID)} to produce life-saving vaccines.\n\nIt must be operated by highly-trained {UI.FormatAsLink("medical", "ROLES")} personnel and it is suggested to use radiation protection for the time of vaccine preparation.";
             }
 
             public class SHIELDGENERATOR
             {
-                public static LocString NAME = (LocString)"Shield Generator";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Shield Generator", ShieldGeneratorConfig.ID);
                 public static LocString DESC = (LocString)"Shields the asteroid from cosmic radiation.";
                 public static LocString EFFECT = (LocString)$"When powered, generates shield around the asteroid to protect the surface from cosmic {UI.FormatAsLink("Radiation", "RADIATION")}. \n\nRequires line of sight to space.";
             }
 
             public class NANOBOT_FORGE
             {
-                public static LocString NAME = "Nanobot Forge";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Nanobot Forge", NanobotForgeConfig.ID);
                 public static LocString DESC = $"Allows to manufacture and upgrade {UI.FormatAsLink("Medical Nanobots", MedicalNanobots.ID)}.";
                 public static LocString EFFECT = $"Duplicants with {UI.FormatAsLink("Advanced Medical Care", "MEDICINE3")} training can use this building to create {UI.FormatAsLink("Medical Nanobots", MedicalNanobots.ID)} or various upgrades to them.";
             }
 
             public class NANOBOT_REPLICATOR
             {
-                public static LocString NAME = "Nanobot Replicator";
+                public static LocString NAME = (LocString)UI.FormatAsLink("Nanobot Replicator", NanobotReplicatorConfig.ID);
                 public static LocString DESC = "Slowly replicates Nanobots and releases them into air.";
                 public static LocString EFFECT = $"When powered, replicates {UI.FormatAsLink("Medical Nanobots", MedicalNanobots.ID)} on a slow, but steady rate and releases them. Upgrade {UI.FormatAsLink(NANOBOTDEVELOPMENT.SPAWNING.NAME, NanobotUpgrade_SpawnIncreaseConfig.ID)} for better spawning rates.";
             }
