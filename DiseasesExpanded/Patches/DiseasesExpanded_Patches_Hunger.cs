@@ -44,6 +44,24 @@ namespace DiseasesExpanded
             }
         }
 
+        [HarmonyPatch(typeof(FlyTrapPlantConfig))]
+        [HarmonyPatch("CreatePrefab")]
+        public static class FlyTrapPlantConfig_CreatePrefab_Patch
+        {
+            public static void Postfix(ref GameObject __result)
+            {
+                if (!Settings.Instance.HungerGerms.IncludeDisease)
+                    return;
+
+                DiseaseDropper.Def def = __result.AddOrGetDef<DiseaseDropper.Def>();
+                def.diseaseIdx = Db.Get().Diseases.GetIndex((HashedString)HungerGerms.ID);
+                def.emitFrequency = 1f;
+                def.averageEmitPerSecond = 1000;
+                def.singleEmitQuantity = 100000;
+                __result.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = HungerGerms.ID;
+            }
+        }
+
         [HarmonyPatch(typeof(EntityTemplates))]
         [HarmonyPatch("ExtendEntityToWildCreature")]
         [HarmonyPatch(new Type[] { typeof(GameObject), typeof(int), typeof(bool) })]

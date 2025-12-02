@@ -30,7 +30,10 @@ namespace DiseasesExpanded
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
-                new ComplexRecipe.RecipeElement(SimHashes.Resin.CreateTag(), 1f),
+                new ComplexRecipe.RecipeElement(new Tag[] { 
+                    SimHashes.Resin.CreateTag(),
+                    SimHashes.NaturalResin.CreateTag(),
+                }, 1f),
                 new ComplexRecipe.RecipeElement(SimHashes.Water.CreateTag(), 1f),
                 new ComplexRecipe.RecipeElement(SimHashes.Sucrose.CreateTag(), 1f)
             };
