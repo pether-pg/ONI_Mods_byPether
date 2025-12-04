@@ -51,9 +51,5 @@ namespace DiseasesExpanded
             Strings.Add($"STRINGS.ITEMS.PILLS.{id.ToUpperInvariant()}.DESC", desc);
         }
 
-        public static void MakeCodexCategoryString(string category, string text)
-        {
-            Strings.Add($"STRINGS.UI.CODEX.CATEGORYNAMES.{category}", text);
-        }
     }
 }
