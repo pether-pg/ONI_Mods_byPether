@@ -95,8 +95,8 @@ namespace DiseasesExpanded
 
                 return new List<Descriptor>()
                 {
-                    new Descriptor( STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.NAME.Replace("{CHANCE}", chance.ToString()).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
-                                    STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.TOOLTIP.Replace("{CHANCE}", chance.ToString()).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
+                    new Descriptor( STRINGS.SYMPTOMS.DEVELOPMENT_CHANCE.NAME.Replace("{CHANCE}", chance.ToString()).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
+                                    STRINGS.SYMPTOMS.DEVELOPMENT_CHANCE.TOOLTIP.Replace("{CHANCE}", chance.ToString()).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
                                     Descriptor.DescriptorType.Symptom)
                 };
             }
