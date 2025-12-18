@@ -23,6 +23,37 @@ namespace FragrantFlowers
             }
         }
 
+        [HarmonyPatch(typeof(EntityTemplates))]
+        [HarmonyPatch("ExtendEntityToFertileCreature")]
+        [HarmonyPatch(new Type[] { 
+            typeof(GameObject), 
+            typeof(IHasDlcRestrictions),
+            typeof(string),
+            typeof(string),
+            typeof(string),
+            typeof(string),
+            typeof(float),
+            typeof(string),
+            typeof(float),
+            typeof(float),
+            typeof(List<FertilityMonitor.BreedingChance>),
+            typeof(int),
+            typeof(bool),
+            typeof(bool),
+            typeof(float),
+            typeof(bool),
+            typeof(bool),
+            typeof(float),
+            typeof(bool)
+        })]
+        public static class EntityTemplates_ExtendEntityToFertileCreature_Patch
+        {
+            public static void Postfix(ref GameObject __result)
+            {
+                __result.AddOrGet<LavenderSmelling>();
+            }
+        }
+
         [HarmonyPatch(typeof(Artable))]
         [HarmonyPatch("OnCompleteWork")]
         public static class Artable_OnCompleteWork_Patch
