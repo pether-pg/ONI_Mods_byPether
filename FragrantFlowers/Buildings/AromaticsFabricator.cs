@@ -13,7 +13,7 @@ namespace FragrantFlowers
 
         public static readonly Tag BasicCanIngridientTag = SimHashes.Ethanol.CreateTag();
         public static readonly float BasicCanIngridientMass = 100;
-        public static Dictionary<ComplexRecipe, string> RecipesScents = new Dictionary<ComplexRecipe, string>();
+        public static Dictionary<string, string> RecipesScents = new Dictionary<string, string>();
 
         public static void RegisterAromaticsRecipe(ComplexRecipe.RecipeElement[] ingredients, string germId, string Description)
         {
@@ -32,8 +32,8 @@ namespace FragrantFlowers
             };
 
             if (RecipesScents == null)
-                RecipesScents = new Dictionary<ComplexRecipe, string>();
-            RecipesScents.Add(recipe, germId);
+                RecipesScents = new Dictionary<string, string>();
+            RecipesScents.Add(recipe.id, germId);
         }
 
         public void SpawnGerms(GameObject go, string germId, float dt, int amountPerSecond = 5000)
@@ -55,8 +55,9 @@ namespace FragrantFlowers
 
         public string GetGermIdFromRecipe(ComplexRecipe recipe)
         {
-            if (recipe != null && RecipesScents.ContainsKey(recipe))
-                return RecipesScents[recipe];
+            if (recipe != null && RecipesScents.ContainsKey(recipe.id))
+                return RecipesScents[recipe.id];
+
             return string.Empty;
         }
 
