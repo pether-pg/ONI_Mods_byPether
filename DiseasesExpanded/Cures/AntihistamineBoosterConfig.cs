@@ -10,7 +10,7 @@ namespace DiseasesExpanded
         public const string EffectID = "HistamineSuppression"; // from vanilla ONI
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => null;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -22,14 +22,23 @@ namespace DiseasesExpanded
 
         public GameObject CreatePrefab()
         {
+            var tags = new List<Tag>() { "PrickleFlowerSeed", KelpConfig.ID };
+            var amounts = new List<float>() { 1f, 10f };
+
+            if (ModInfo.IsFragrantFlowersEnabled)
+            {
+                tags.Add("Duskbloom");
+                amounts.Add(1f);
+            }
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement((Tag) "PrickleFlowerSeed", 1f),
+                new ComplexRecipe.RecipeElement(tags.ToArray(), amounts.ToArray()),
                 new ComplexRecipe.RecipeElement(SimHashes.Dirt.CreateTag(), 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
-                new ComplexRecipe.RecipeElement((Tag) ID, 1f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
+                new ComplexRecipe.RecipeElement((Tag) ID, 10f, ComplexRecipe.RecipeElement.TemperatureOperation.AverageTemperature)
             };
             AntihistamineBoosterConfig.recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
@@ -40,7 +49,7 @@ namespace DiseasesExpanded
                 sortOrder = 11
             };
 
-            MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, (string)null, new string[] { "Allergies" });
+            MedicineInfo info = new MedicineInfo(ID, EffectID, MedicineInfo.MedicineType.Booster, (string)null, new string[] { "Allergies" }, new string[] { "DupeMosquitoBite" });
 
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.CURES.ANTIHISTAMINEBOOSTER.NAME, STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC, 1f, true, Assets.GetAnim(Kanims.AntihistamineBoosterKanim), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             return EntityTemplates.ExtendEntityToMedicine(looseEntity, info);
