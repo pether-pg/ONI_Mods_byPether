@@ -33,10 +33,13 @@ namespace DiseasesExpanded
                 new AttributeModifier(Db.Get().Attributes.Ranching.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME)
             };
 
+            if (DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
+                effect.SelfModifiers.Add(new AttributeModifier(Db.Get().Attributes.SpaceNavigation.Id, attributePenalty, STRINGS.CURES.HAPPYPILL.NAME));
+
             return effect;
         }
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => null;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -58,7 +61,7 @@ namespace DiseasesExpanded
             };
             recipe = new ComplexRecipe(ComplexRecipeManager.MakeRecipeID(ApothecaryConfig.ID, (IList<ComplexRecipe.RecipeElement>)ingredients, (IList<ComplexRecipe.RecipeElement>)results), ingredients, results)
             {
-                time = 100f,
+                time = 50f,
                 description = STRINGS.CURES.HAPPYPILL.DESC,
                 nameDisplay = ComplexRecipe.RecipeNameDisplay.Result,
                 fabricators = new List<Tag>() { (Tag)ApothecaryConfig.ID },
