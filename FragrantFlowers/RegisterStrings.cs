@@ -10,7 +10,7 @@ namespace FragrantFlowers
             Strings.Add($"STRINGS.CREATURES.SPECIES.{id.ToUpperInvariant()}.DESC", desc);
         }
 
-        public static void MakePlantProductStrings(string id, string name, string desc)
+        public static void MakeIndustrialProductStrings(string id, string name, string desc)
         {
             Strings.Add($"STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.{id.ToUpperInvariant()}.NAME", name);
             Strings.Add($"STRINGS.ITEMS.INDUSTRIAL_PRODUCTS.{id.ToUpperInvariant()}.DESC", desc);
