@@ -12,6 +12,7 @@
     <RootNamespace>DiseasesExpanded</RootNamespace>
     <AssemblyName>DiseasesExpanded</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <LangVersion>preview</LangVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -105,6 +106,7 @@
     <Compile Include="Cures\RustSickness3CureConfig.cs" />
     <Compile Include="CustomSicknessComponents\CustomFxSickEffectSickness.cs" />
     <Compile Include="Germs\RustGerms.cs" />
+    <Compile Include="Geysers\RustyWaterGeyser_Data.cs" />
     <Compile Include="MedicalNanobots\MedicalNanobotReviver.cs" />
     <Compile Include="Misc\ApothecarySortingOrder.cs" />
     <Compile Include="Misc\SicknessHelper.cs" />
@@ -289,6 +291,7 @@
     <Compile Include="STRINGS.cs" />
     <Compile Include="Misc\UVLampSupport.cs" />
     <Compile Include="Traits\NotWashingHands.cs" />
+    <Compile Include="Geysers\RustyWaterGeyserConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -639,6 +639,15 @@ namespace DiseasesExpanded
             }
         }
 
+        public class GEYSERS
+        {
+            public class RUSTY_WATER
+            {
+                public static LocString NAME = "Rusty Water Geyser";
+                public static LocString DESC = "A source of warm and nice water. It just looks a little rusty...";
+            }
+        }
+
         public class TAGS
         {
             public class DISPOSABLE_GERMS

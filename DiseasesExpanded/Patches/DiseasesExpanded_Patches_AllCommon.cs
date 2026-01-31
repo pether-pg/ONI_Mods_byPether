@@ -102,11 +102,13 @@ namespace DiseasesExpanded
                 BasicModUtils.MakeCuresStrings(SerumTummyConfig.ID, STRINGS.CURES.TUMMYSERUM.NAME, STRINGS.CURES.TUMMYSERUM.DESC, STRINGS.CURES.TUMMYSERUM.DESC);
                 BasicModUtils.MakeCuresStrings(SerumYummyConfig.ID, STRINGS.CURES.YUMMYSERUM.NAME, STRINGS.CURES.YUMMYSERUM.DESC, STRINGS.CURES.YUMMYSERUM.DESC);
                 BasicModUtils.MakeCuresStrings(SunburnCureConfig.ID, STRINGS.CURES.SUNBURNCURE.NAME, STRINGS.CURES.SUNBURNCURE.DESC, STRINGS.CURES.SUNBURNCURE.DESC);
+
+                BasicModUtils.MakeGeyserStrings(RustyWaterGeyser_Data.TYPE, STRINGS.GEYSERS.RUSTY_WATER.NAME, STRINGS.GEYSERS.RUSTY_WATER.DESC);
+                BasicModUtils.MakeGeyserStrings(RustyWaterGeyser_Data.TYPE_2, STRINGS.GEYSERS.RUSTY_WATER.NAME, STRINGS.GEYSERS.RUSTY_WATER.DESC);
             }
 
             public static void Postfix()
             {
-
                 BasicModUtils.MakeCuresStrings(GassyVaccineConfig.ID, GassyVaccineConfig.Name, GassyVaccineConfig.Desc, GassyVaccineConfig.Desc);
                 BasicModUtils.MakeCuresStrings(SlimelungVaccineConfig.ID, SlimelungVaccineConfig.Name, SlimelungVaccineConfig.Desc, SlimelungVaccineConfig.Desc);
                 BasicModUtils.MakeCuresStrings(AllergyVaccineConfig.ID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, AllergyVaccineConfig.Desc);

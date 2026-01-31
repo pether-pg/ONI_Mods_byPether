@@ -15,7 +15,7 @@ namespace DiseasesExpanded
         public static HashedString UnstableAntiviralKanim = (HashedString)"pill_1_kanim"; // from vanilla ONI
         public static HashedString ZombieCure = (HashedString)"vial_spore_kanim"; // from vanilla ONI
         public static HashedString Rust2Cure = (HashedString)"iv_allergies_kanim"; // from vanilla ONI
-        public static HashedString Rust3Cure = (HashedString)"vial_iodine_kanim"; // from vanilla ONI 
+        public static HashedString Rust3Cure = (HashedString)"rust_sickness_3_cure_kanim";
         public static HashedString HappyPill = (HashedString)"pill_happy_kanim";
         public static HashedString AntihistamineBoosterKanim = (HashedString)"pill_allergies_kanim"; // from vanilla ONI
         public static HashedString SunburnCure = (HashedString)"iv_sunburn_kanim"; // from vanilla ONI 
@@ -45,5 +45,7 @@ namespace DiseasesExpanded
         public static HashedString PaleSlickster = (HashedString)"oilfloater_pale_75_kanim";
 
         public static HashedString MedicalResearch = (HashedString)"custom_research_icon_kanim";
+
+        public static string RustyWaterGeyser = "rusty_water_geyser_kanim";
     }
 }

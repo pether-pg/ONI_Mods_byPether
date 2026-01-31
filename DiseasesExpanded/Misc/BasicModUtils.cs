@@ -55,5 +55,11 @@ namespace DiseasesExpanded
         {
             Strings.Add($"STRINGS.UI.CODEX.CATEGORYNAMES.{category}", text);
         }
+
+        public static void MakeGeyserStrings(string type_id, string name, string desc)
+        {
+            Strings.Add($"STRINGS.CREATURES.SPECIES.GEYSER.{type_id.ToUpperInvariant()}.NAME", name);
+            Strings.Add($"STRINGS.CREATURES.SPECIES.GEYSER.{type_id.ToUpperInvariant()}.DESC", desc);
+        }
     }
 }
