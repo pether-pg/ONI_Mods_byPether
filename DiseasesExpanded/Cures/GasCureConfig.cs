@@ -10,7 +10,7 @@ namespace DiseasesExpanded
         public static ComplexRecipe recipe;
         public const int FlowerGermsSpawned = 10000;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => null;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -35,9 +35,18 @@ namespace DiseasesExpanded
             if (!Settings.Instance.MooFlu.IncludeDisease)
                 return;
 
+            var tags = new List<Tag>() { PrickleFlowerConfig.SEED_ID };
+
+            if (ModInfo.IsFragrantFlowersEnabled)
+            {
+                tags.Add("SpinosaSeed");
+                tags.Add("LavenderSeed");
+                tags.Add("IceMallowSeed");
+            }
+
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement((Tag) PrickleFlowerConfig.SEED_ID, 1f),
+                new ComplexRecipe.RecipeElement(tags.ToArray(), 1f),
                 new ComplexRecipe.RecipeElement(SimHashes.Fertilizer.CreateTag(), 1f),
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
