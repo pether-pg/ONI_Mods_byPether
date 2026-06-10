@@ -11,10 +11,7 @@ namespace FragrantFlowers
 {
     public class Crop_CottonBollConfig : IEntityConfig
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => null;
 
         public const string ID = "RimedCotton";
         public const string SPICE_ID = "CottonBollSpice";
@@ -105,7 +102,7 @@ namespace FragrantFlowers
                 Color.white,
                 statBonus: new AttributeModifier(Db.Get().Attributes.Athletics.Id, 3, nameof(Spices)),
                 imageName: SPICE_SPRITE,
-                dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
+                dlcID: null
             );
 
             return spice;

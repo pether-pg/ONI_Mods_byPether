@@ -9,10 +9,7 @@ namespace FragrantFlowers
 {
     public class Plant_RimedMallowConfig : IEntityConfig
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => null;
 
         //===> BASE INFORMATION <=========================================
         public const string ID = "RimedMallowPlant";

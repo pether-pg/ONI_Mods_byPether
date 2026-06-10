@@ -9,10 +9,7 @@ namespace FragrantFlowers
 {
     public class Plant_SpinosaConfig : IEntityConfig
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => null;
 
         //===> BASE INFORMATION <=========================================
         public const string ID = "SpinosaPlant";
@@ -185,6 +182,11 @@ namespace FragrantFlowers
         //===> CROP SWAP WITH DIVERGENT CRITTER TOUCH <===========================================================================
         public void OnPrefabInit(GameObject prefab)
         {
+            prefab.AddOrGet<StandardCropPlant>().anims = animSet;
+
+            if (!DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
+                return;
+
             TransformingPlant transformingPlant = prefab.AddOrGet<TransformingPlant>();
             transformingPlant.transformPlantId = Plant_SuperSpinosaConfig.ID;
             transformingPlant.SubscribeToTransformEvent(GameHashes.CropTended);
@@ -204,7 +206,6 @@ namespace FragrantFlowers
             };
             transformingPlant.fxKAnim = "plant_transform_fx_kanim";
             transformingPlant.fxAnim = "plant_transform";
-            prefab.AddOrGet<StandardCropPlant>().anims = Plant_SpinosaConfig.animSet;
         }
 
         public void OnSpawn(GameObject inst)

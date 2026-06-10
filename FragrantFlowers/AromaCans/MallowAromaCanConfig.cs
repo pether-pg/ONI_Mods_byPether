@@ -8,7 +8,7 @@ namespace FragrantFlowers
         public const string ID = "MallowAromaCan";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => null;
 
         public void OnPrefabInit(GameObject inst)
         {

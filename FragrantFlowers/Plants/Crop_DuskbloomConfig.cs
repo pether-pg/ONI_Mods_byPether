@@ -10,10 +10,7 @@ namespace FragrantFlowers
 {
     public class Crop_DuskbloomConfig : IEntityConfig
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => null;
 
         public const string ID = "Duskbloom";
         public const string SPICE_ID = "DuskbloomSpice";
@@ -100,7 +97,7 @@ namespace FragrantFlowers
                 Color.white,
                 statBonus: new AttributeModifier(Db.Get().Attributes.Ranching.Id, 3, nameof(Spices)),
                 imageName: SPICE_SPRITE,
-                dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
+                dlcID: null
             );
 
             return spice;
