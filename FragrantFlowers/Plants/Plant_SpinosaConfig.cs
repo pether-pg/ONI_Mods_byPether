@@ -42,6 +42,8 @@ namespace FragrantFlowers
         public const float Irrigation = 0.03f;             // Water Irrigation Needed
         public const float Fertilization = 0.012f;         // Dirty Fertilization Needed
 
+        public const float PlantFiberProduction = 4f;          // PlantFiber per cycle
+
         public ComplexRecipe Recipe;
 
 
@@ -159,6 +161,7 @@ namespace FragrantFlowers
                 massConsumptionRate = Irrigation
             }
             });
+            gameObject.AddOrGet<PlantFiberProducer>().amount = PlantFiberProduction * Crop_SpinosaRoseConfig.GROW_TIME / 600;
             gameObject.AddOrGet<StandardCropPlant>();
             gameObject.AddOrGet<LoopingSounds>();
 
