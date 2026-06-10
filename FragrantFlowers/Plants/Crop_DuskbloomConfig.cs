@@ -40,7 +40,8 @@ namespace FragrantFlowers
                 SimHashes.Creature,
                 new List<Tag> { 
                     GameTags.CookingIngredient, 
-                    GameTags.IndustrialIngredient 
+                    GameTags.IndustrialIngredient,
+                    GameTags.PedestalDisplayable
                 });
             go.AddOrGet<EntitySplitter>();
             go.AddOrGet<SimpleMassStatusItem>();
@@ -50,6 +51,11 @@ namespace FragrantFlowers
             def.rotTemperature = 277.15f;
             def.spoilTime = 4800f;
             def.staleTime = def.spoilTime / 2;
+
+            go.AddOrGet<OccupyArea>().SetCellOffsets(EntityTemplates.GenerateOffsets(1, 1)); ;
+            DecorProvider decorProvider = go.AddOrGet<DecorProvider>();
+            decorProvider.SetValues(DECOR.BONUS.TIER0);
+            decorProvider.overrideName = STRINGS.CROPS.DUSKBLOOM.NAME;
 
             DefineRecipe();
 
