@@ -99,7 +99,7 @@ namespace FragrantFlowers
                 SPICE_ID,
                 new Spice.Ingredient[2] {
                     new Spice.Ingredient() { IngredientSet = new Tag[1] { ID }, AmountKG = 0.1f },
-                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Ice.CreateTag() }, AmountKG = 3f }
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.OxyRock.CreateTag() }, AmountKG = 3f }
                 },
                 MallowScent.colorValue,
                 Color.white,
