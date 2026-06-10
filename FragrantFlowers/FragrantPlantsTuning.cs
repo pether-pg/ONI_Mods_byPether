@@ -9,7 +9,7 @@ namespace FragrantFlowers
     {
         public static bool DebugMode = false;
         public static string[] SupportedVersions = DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        public static CropsTuning SpinrosaTuning;
+        public static CropsTuning SpinosaTuning;
         public static CropsTuning DuskbloomTuning;
         public static CropsTuning MallowTuning;
 
@@ -20,7 +20,7 @@ namespace FragrantFlowers
 
         static FragrantPlantsTuning()
         {
-            MakeSpinrosaTuning();
+            MakeSpinosaTuning();
             MakeDuskbloomTuning();
             MakeMallowTuning();
             MakeSeedsTuning();
@@ -38,7 +38,7 @@ namespace FragrantFlowers
             SpinosaSeedTuning = new SeedTuning
             {
                 density = seedDensity,
-                biomes = SpinrosaTuning.biomes,
+                biomes = SpinosaTuning.biomes,
                 biomesExcluded = new HashSet<string>() {
                     EARTH_BIOME_STRINGS.SURFACE,},
             };
@@ -49,7 +49,7 @@ namespace FragrantFlowers
             };
         }
 
-        public static CropsTuning MakeSpinrosaTuning()
+        public static CropsTuning MakeSpinosaTuning()
         {
             float avgDens = Settings.Instance.Rose.AverageDensity;
             CropsTuning tuning = new CropsTuning
@@ -76,7 +76,7 @@ namespace FragrantFlowers
                 },
                 spawnLocation = Mob.Location.Floor,
             };
-            SpinrosaTuning = tuning;
+            SpinosaTuning = tuning;
             return tuning;
         }
 

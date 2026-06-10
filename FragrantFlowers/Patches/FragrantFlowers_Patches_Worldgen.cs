@@ -17,7 +17,7 @@ namespace FragrantFlowers
         {
             CropsDictionary = new Dictionary<string, FragrantPlantsTuning.CropsTuning>
             {
-                { Plant_SpinosaConfig.ID, FragrantPlantsTuning.SpinrosaTuning },
+                { Plant_SpinosaConfig.ID, FragrantPlantsTuning.SpinosaTuning },
                 { Plant_DuskLavenderConfig.ID, FragrantPlantsTuning.DuskbloomTuning },
                 { Plant_RimedMallowConfig.ID, FragrantPlantsTuning.MallowTuning }
             };

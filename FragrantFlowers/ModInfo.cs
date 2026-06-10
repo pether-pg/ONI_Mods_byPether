@@ -23,7 +23,7 @@ namespace FragrantFlowers
 
             PUtil.InitLibrary();
             new POptions().RegisterOptions(this, typeof(Settings));
-            Settings.PLib_Initalize();
+            Settings.PLib_Initialize();
 
             FragrantFlowers_Patches_Worldgen.InitCropDictionary();
         }
