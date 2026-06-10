@@ -35,9 +35,9 @@ namespace FragrantFlowers
         //===> TEMPERATURE SETTINGS <=====================================
         public const float DefaultTemperature = 253.15f;       // -20°C: Normal Temperature
         public const float TemperatureLethalLow = 118.15f;     //-155ºC: Plant will die (Lowest Temp)
-        public const float TemperatureWarningLow = 183.15f;    // -60°C: Plant will stop growing (Lowest Temp)
+        public const float TemperatureWarningLow = 183.15f;    // -90°C: Plant will stop growing (Lowest Temp)
         public const float TemperatureWarningHigh = 273.15f;   //   0°C: Plant will stop growing (Highest Temp)
-        public const float TemperatureLethalHigh = 283.15f;    //  10°C: Plant will die (Highest Temp)
+        public const float TemperatureLethalHigh = 298.15f;    //  25°C: Plant will die (Highest Temp)
 
         public const float Fertilization = 0.0016666667f;         // Ice Fertilization Needed
 
