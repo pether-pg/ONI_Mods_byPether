@@ -82,6 +82,7 @@ namespace FragrantFlowers
 				true,
 				true, 
 				true,
+				false, // does it require Backwall_Foundation?
 				2400f,
 				0f, 
 				9800f, 

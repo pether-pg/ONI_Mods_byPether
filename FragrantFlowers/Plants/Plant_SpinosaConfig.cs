@@ -134,6 +134,7 @@ namespace FragrantFlowers
                 true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
                 true, // Implies this Crop requires a solid ground to grow.
                 true, // Implies this Crop will grow old and eventualy yeilds a produce.
+                false, // does it require Backwall_Foundation?
                 2400f, // Max age this Crop can grow, or the time it require for it to complete its growth.
                 0f, // Minium Radiation required by this Crop.
                 9800f, // Maxium value of Radiation this Crop can get before stop growing and dying.
