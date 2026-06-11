@@ -26,25 +26,22 @@ namespace FragrantFlowers
         [HarmonyPatch(typeof(EntityTemplates))]
         [HarmonyPatch("ExtendEntityToFertileCreature")]
         [HarmonyPatch(new Type[] { 
-            typeof(GameObject), 
-            typeof(IHasDlcRestrictions),
-            typeof(string),
-            typeof(string),
-            typeof(string),
-            typeof(string),
-            typeof(float),
-            typeof(string),
-            typeof(float),
-            typeof(float),
-            typeof(List<FertilityMonitor.BreedingChance>),
-            typeof(int),
-            typeof(bool),
-            typeof(bool),
-            typeof(float),
-            typeof(bool),
-            typeof(bool),
-            typeof(float),
-            typeof(bool)
+            typeof(GameObject),             // GameObject prefab
+            typeof(IHasDlcRestrictions),    // IHasDlcRestrictions dlcRestrictions
+            typeof(string),                 // string eggId
+            typeof(string),                 // string eggName
+            typeof(string),                 // string eggDesc
+            typeof(string),                 // string eggAnim
+            typeof(float),                  // float eggMass
+            typeof(string),                 // string babyId
+            typeof(float),                  // float fertilityCycles
+            typeof(float),                  // float incubationCycles
+            typeof(List<FertilityMonitor.BreedingChance>),  // List<FertilityMonitor.BreedingChance> eggChances
+            typeof(int),                    // int eggSortOrder = -1
+            typeof(bool),                   // bool is_ranchable = true
+            typeof(bool),                   // bool add_fish_overcrowding_monitor = false
+            typeof(float),                  // float egg_anim_scale = 1f
+            typeof(bool)                    // bool deprecated = false
         })]
         public static class EntityTemplates_ExtendEntityToFertileCreature_Patch
         {
