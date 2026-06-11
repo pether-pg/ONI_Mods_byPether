@@ -40,6 +40,8 @@ namespace FragrantFlowers
                 list.Add(new CarePackageInfo(Plant_SpinosaConfig.SEED_ID , Settings.Instance.Rose.SeedsInCarePackage, null));
                 list.Add(new CarePackageInfo(Plant_DuskLavenderConfig.SEED_ID, Settings.Instance.Lavender.SeedsInCarePackage, null));
                 list.Add(new CarePackageInfo(Plant_RimedMallowConfig.SEED_ID, Settings.Instance.Mallow.SeedsInCarePackage, null));
+                list.Add(new CarePackageInfo(DuskjamConfig.ID, 2f, () => DiscoveredResources.Instance.IsDiscovered(Plant_DuskLavenderConfig.SEED_ID)));
+                list.Add(new CarePackageInfo(SpinosaSyrupConfig.ID, 2f, () => DiscoveredResources.Instance.IsDiscovered(Plant_SpinosaConfig.SEED_ID)));
                 traverse.SetValue(list);
             }
         }
