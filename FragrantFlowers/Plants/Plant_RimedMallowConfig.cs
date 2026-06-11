@@ -7,15 +7,16 @@ using Klei.AI;
 
 namespace FragrantFlowers
 {
-    public class Plant_RimedMallowConfig : IEntityConfig
-    {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+    public class Plant_RimedMallowConfig : IEntityConfig, IHasDlcRestrictions
+	{
+		public string[] GetDlcIds() => (string[])null; // Obsolete
 
-        //===> BASE INFORMATION <=========================================
-        public const string ID = "RimedMallowPlant";
+		public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+		public string[] GetForbiddenDlcIds() => (string[])null;
+
+		//===> BASE INFORMATION <=========================================
+		public const string ID = "RimedMallowPlant";
 		public const string SEED_ID = "IceMallowSeed";
 		public const string PlantKanim = "plant_rimedmallow_kanim";
         public const string SeedKanim = "seed_rimedmallow_kanim";
@@ -103,7 +104,8 @@ namespace FragrantFlowers
 			
 			EntityTemplates.MakeHangingOffsets(EntityTemplates.CreateAndRegisterPreviewForPlant(
 				EntityTemplates.CreateAndRegisterSeedForPlant(
-					gameObject, 
+					gameObject,
+					(IHasDlcRestrictions)this,
 					SeedProducer.ProductionType.Harvest, 
 					SEED_ID,
 					STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME,

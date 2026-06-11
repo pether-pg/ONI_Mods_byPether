@@ -8,7 +8,6 @@ namespace FragrantFlowers
     class FragrantPlantsTuning
     {
         public static bool DebugMode = false;
-        public static string[] SupportedVersions = DlcManager.AVAILABLE_EXPANSION1_ONLY;
         public static CropsTuning SpinosaTuning;
         public static CropsTuning DuskbloomTuning;
         public static CropsTuning MallowTuning;

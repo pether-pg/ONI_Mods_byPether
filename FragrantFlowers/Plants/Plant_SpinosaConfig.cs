@@ -7,12 +7,13 @@ using Klei.AI;
 
 namespace FragrantFlowers
 {
-    public class Plant_SpinosaConfig : IEntityConfig
+    public class Plant_SpinosaConfig : IEntityConfig, IHasDlcRestrictions
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         //===> BASE INFORMATION <=========================================
         public const string ID = "SpinosaPlant";
@@ -65,6 +66,7 @@ namespace FragrantFlowers
 
             EntityTemplates.CreateAndRegisterPreviewForPlant(EntityTemplates.CreateAndRegisterSeedForPlant(
                 gameObject,
+                (IHasDlcRestrictions)this,
                 SeedProducer.ProductionType.Harvest, //Implies the seed will be produced upon harvest.
                 SEED_ID,
                 STRINGS.SEEDS.SPINOSA.SEED_NAME,

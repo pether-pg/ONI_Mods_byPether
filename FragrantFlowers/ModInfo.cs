@@ -19,7 +19,7 @@ namespace FragrantFlowers
             Namespace = GetType().Namespace;
             Debug.Log($"{Namespace}: Loaded from: {this.mod.ContentPath}");
             Debug.Log($"{Namespace}: DLL version: {GetType().Assembly.GetName().Version} " +
-                        $"supporting game build {this.mod.packagedModInfo.minimumSupportedBuild} ({this.mod.packagedModInfo.supportedContent})");
+                        $"supporting game build {this.mod.packagedModInfo.minimumSupportedBuild}");
 
             PUtil.InitLibrary();
             new POptions().RegisterOptions(this, typeof(Settings));

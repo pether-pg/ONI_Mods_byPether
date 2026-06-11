@@ -7,12 +7,13 @@ using Klei.AI;
 
 namespace FragrantFlowers
 {
-    public class Plant_SuperDuskLavenderConfig : IEntityConfig
+    public class Plant_SuperDuskLavenderConfig : IEntityConfig, IHasDlcRestrictions
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         //===> BASE INFORMATION <=========================================
         public const string ID = "DuskberryLavender";

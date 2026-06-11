@@ -3,12 +3,16 @@ using System.Collections.Generic;
 
 namespace FragrantFlowers
 {
-    class RoseAromaCanConfig : IEntityConfig
+    class RoseAromaCanConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "RoseAromaCan";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {
