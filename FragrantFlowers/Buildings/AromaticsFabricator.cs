@@ -11,8 +11,8 @@ namespace FragrantFlowers
         public const float WORKING_TIME = 600;
         private string LastGermId = string.Empty;
 
-        public static readonly Tag BasicCanIngridientTag = SimHashes.Ethanol.CreateTag();
-        public static readonly float BasicCanIngridientMass = 100;
+        public static readonly Tag BasicCanIngredientTag = SimHashes.Ethanol.CreateTag();
+        public static readonly float BasicCanIngredientMass = 100;
         public static Dictionary<string, string> RecipesScents = new Dictionary<string, string>();
 
         public static void RegisterAromaticsRecipe(ComplexRecipe.RecipeElement[] ingredients, string germId, string Description)
@@ -82,8 +82,8 @@ namespace FragrantFlowers
                 return;
             }
 
-            foreach (var ingridient in recipe.ingredients)
-                buildStorage.ConsumeIgnoringDisease(ingridient.material, ingridient.amount * Delta(dt));
+            foreach (var ingredient in recipe.ingredients)
+                buildStorage.ConsumeIgnoringDisease(ingredient.material, ingredient.amount * Delta(dt));
 
             string currentGermId = GetGermIdFromRecipe(recipe);
             SpawnGerms(gameObject, currentGermId, dt);
