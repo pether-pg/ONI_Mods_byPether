@@ -36,6 +36,7 @@ namespace SignsTagsAndRibbons
             {
                 "off", "art_a", "art_b", "art_c", "art_d", "art_e", "art_f", "art_g", "art_h", "art_i", "art_j", "art_l"
             };
+            go.AddOrGet<UserNameable>();
         }
     }
 }
