@@ -38,6 +38,8 @@ namespace FragrantFlowers
 
         public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
 
+        public const float PlantFiberProduction = 2f;          // PlantFiber per cycle
+
         public ComplexRecipe Recipe;
 
         //===> DEFINE THE BASE TEMPLATE <=====================================================================
@@ -119,6 +121,7 @@ namespace FragrantFlowers
             }
             });
 
+            gameObject.AddOrGet<PlantFiberProducer>().amount = PlantFiberProduction * Crop_DuskberryConfig.GROW_TIME / 600;
             gameObject.AddOrGet<StandardCropPlant>();
             gameObject.AddOrGet<LoopingSounds>();
             gameObject.AddOrGet<BlightVulnerable>();

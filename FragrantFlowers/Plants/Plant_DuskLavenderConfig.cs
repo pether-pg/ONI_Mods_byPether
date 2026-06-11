@@ -39,6 +39,8 @@ namespace FragrantFlowers
         public const float TemperatureWarningHigh = 313.15f;   //  40°C: Plant will stop growing (Highest Temp)
         public const float TemperatureLethalHigh = 333.15f;    //  60°C: Plant will die (Highest Temp)
 
+        public const float PlantFiberProduction = 4f;          // PlantFiber per cycle
+
         public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
 
         public ComplexRecipe Recipe;
@@ -149,6 +151,7 @@ namespace FragrantFlowers
                 }
             });
 
+            gameObject.AddOrGet<PlantFiberProducer>().amount = PlantFiberProduction * Crop_DuskbloomConfig.GROW_TIME / 600;
             gameObject.AddOrGet<StandardCropPlant>();
             gameObject.AddOrGet<LoopingSounds>();
             gameObject.AddOrGet<BlightVulnerable>();
