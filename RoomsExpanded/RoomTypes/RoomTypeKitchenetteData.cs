@@ -17,7 +17,7 @@ namespace RoomsExpanded
             ConstraintPrimary = RoomConstraints.COOK_TOP;
             ConstrantsAdditional = new RoomConstraints.Constraint[4]
                                         {
-                                        RoomConstraints.REFRIGERATOR,
+                                        RoomConstraints.KITCHENREFRIGERATOR,
                                         RoomConstraints.DECORATIVE_ITEM,
                                         RoomConstraints.MINIMUM_SIZE_12,
                                         RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Kitchenette.MaxSize)
