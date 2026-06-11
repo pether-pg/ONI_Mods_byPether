@@ -40,5 +40,38 @@ namespace RoomsExpanded
                 __result = roll < (1 + Settings.Instance.NurseryGenetic.Bonus) * chance;
             }
         }
+
+        [HarmonyPatch(typeof(PropSurfaceSatellite1Config))]
+        [HarmonyPatch("CreatePrefab")]
+        public static class PropSurfaceSatellite1Config_CreatePrefab_Patch
+        {
+            public static void Postfix(ref GameObject __result)
+            {
+                if (Settings.Instance.NurseryGenetic.IncludeRoom)
+                    __result.AddTag(GameTags.RoomProberBuilding);
+            }
+        }
+
+        [HarmonyPatch(typeof(PropSurfaceSatellite2Config))]
+        [HarmonyPatch("CreatePrefab")]
+        public static class PropSurfaceSatellite2Config_CreatePrefab_Patch
+        {
+            public static void Postfix(ref GameObject __result)
+            {
+                if (Settings.Instance.NurseryGenetic.IncludeRoom)
+                    __result.AddTag(GameTags.RoomProberBuilding);
+            }
+        }
+
+        [HarmonyPatch(typeof(PropSurfaceSatellite3Config))]
+        [HarmonyPatch("CreatePrefab")]
+        public static class PropSurfaceSatellite3Config_CreatePrefab_Patch
+        {
+            public static void Postfix(ref GameObject __result)
+            {
+                if (Settings.Instance.NurseryGenetic.IncludeRoom)
+                    __result.AddTag(GameTags.RoomProberBuilding);
+            }
+        }
     }
 }

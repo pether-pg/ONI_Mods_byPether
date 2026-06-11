@@ -25,7 +25,7 @@ namespace FragrantFlowers
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(AromaticsFabricator.BasicCanIngridientTag, AromaticsFabricator.BasicCanIngridientMass),
+                new ComplexRecipe.RecipeElement(AromaticsFabricator.BasicCanIngredientTag, AromaticsFabricator.BasicCanIngredientMass),
                 new ComplexRecipe.RecipeElement(PrickleFruitConfig.ID, 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]

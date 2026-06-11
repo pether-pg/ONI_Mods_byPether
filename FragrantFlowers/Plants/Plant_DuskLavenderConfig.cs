@@ -39,6 +39,8 @@ namespace FragrantFlowers
         public const float TemperatureWarningHigh = 313.15f;   //  40°C: Plant will stop growing (Highest Temp)
         public const float TemperatureLethalHigh = 333.15f;    //  60°C: Plant will die (Highest Temp)
 
+        public const float PlantFiberProduction = 4f;          // PlantFiber per cycle
+
         public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
 
         public ComplexRecipe Recipe;
@@ -135,8 +137,8 @@ namespace FragrantFlowers
                 true, // Implies this Crop will grow old and eventualy yeilds a produce.
                 false, // does it require Backwall_Foundation?
                 2400f, // Max age this Crop can grow, or the time it require for it to complete its growth.
-                0f, // Minium Radiation required by this Crop.
-                9800f, // Maxium value of Radiation this Crop can get before stop growing and dying.
+                0f, // Minimum Radiation required by this Crop.
+                9800f, // Maximum value of Radiation this Crop can get before stop growing and dying.
                 "LavenderOriginal", // Crop trait id.
                 "Lavender Original"); // Crop trait name.
 
@@ -150,6 +152,7 @@ namespace FragrantFlowers
                 }
             });
 
+            gameObject.AddOrGet<PlantFiberProducer>().amount = PlantFiberProduction * Crop_DuskbloomConfig.GROW_TIME / 600;
             gameObject.AddOrGet<StandardCropPlant>();
             gameObject.AddOrGet<LoopingSounds>();
             gameObject.AddOrGet<BlightVulnerable>();

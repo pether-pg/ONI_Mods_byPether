@@ -38,6 +38,8 @@ namespace FragrantFlowers
 
         public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
 
+        public const float PlantFiberProduction = 2f;          // PlantFiber per cycle
+
         public ComplexRecipe Recipe;
 
         //===> DEFINE THE BASE TEMPLATE <=====================================================================
@@ -53,7 +55,7 @@ namespace FragrantFlowers
 
             gameObject.AddOrGet<SeedProducer>().Configure(
                 Plant_DuskLavenderConfig.SEED_ID,  // It takes the seed definitions from its standard counterpart.
-                SeedProducer.ProductionType.Harvest, // Implies that this Crop will yeild its seed upon harvest.
+                SeedProducer.ProductionType.Harvest, // Implies that this Crop will yield its seed upon harvest.
                 1); // Number of seeds it will produce each time.
 
             return gameObject;
@@ -102,11 +104,11 @@ namespace FragrantFlowers
                 true, // Implies this Crop can be drowned by liquids.
                 true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
                 true, // Implies this Crop requires a solid ground to grow.
-                true, // Implies this Crop will grow old and eventualy yeilds a produce.
-                false, // does it require Backwall_Foundation?
+                false,
+                true, // Implies this Crop will grow old and eventually yields a produce.
                 2400f, // Max age this Crop can grow, or the time it require for it to complete its growth.
-                0f, // Minium Radiation required by this Crop.
-                9800f, // Maxium value of Radiation this Crop can get before stop growing and dying.
+                0f, // Minimum Radiation required by this Crop.
+                9800f, // Maximum value of Radiation this Crop can get before stop growing and dying.
                 "SuperLavenderOriginal", // Crop trait id.
                 "Fruiting Lavender Original"); // Crop trait name.
 
@@ -120,6 +122,7 @@ namespace FragrantFlowers
             }
             });
 
+            gameObject.AddOrGet<PlantFiberProducer>().amount = PlantFiberProduction * Crop_DuskberryConfig.GROW_TIME / 600;
             gameObject.AddOrGet<StandardCropPlant>();
             gameObject.AddOrGet<LoopingSounds>();
             gameObject.AddOrGet<BlightVulnerable>();
