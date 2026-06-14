@@ -57,7 +57,7 @@ namespace FragrantFlowers
             decorProvider.SetValues(DECOR.BONUS.TIER0);
             decorProvider.overrideName = STRINGS.CROPS.SPINOSAROSE.NAME;
 
-            DefineRecipe();
+            //DefineRecipe();
 
             return go;
         }
