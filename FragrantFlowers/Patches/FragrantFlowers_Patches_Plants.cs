@@ -80,5 +80,19 @@ namespace FragrantFlowers
                 RegisterStrings.MakeIndustrialProductStrings(RoseAromaCanConfig.ID, STRINGS.AROMACANS.ROSE.NAME, STRINGS.AROMACANS.ROSE.DESC);
             }
         }
+
+        [HarmonyPatch(typeof(MicrobeMusherConfig), "ConfigureBuildingTemplate")]
+        public class MicrobeMusherConfig_Patch
+        {
+            public static void Postfix(GameObject go, Tag prefab_tag)
+            {
+                var ingr = FishFoodConfig.recipe.ingredients[0];
+                ingr.possibleMaterials = ingr.possibleMaterials.Append(new Tag[] {
+                    Plant_DuskLavenderConfig.SEED_ID,
+                    Plant_SpinosaConfig.SEED_ID,
+                    Plant_RimedMallowConfig.SEED_ID
+                });
+            }
+        }
     }
 }
