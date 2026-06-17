@@ -12,7 +12,7 @@ namespace BiobotUpgrades
         {
             base.OnLoad(harmony);
 
-			var requiredDlcs = this.mod.packagedModInfo.GetRequiredDlcIds(;
+			var requiredDlcs = this.mod.packagedModInfo.GetRequiredDlcIds();
 			string dlcInfo = "All";
 			if(requiredDlcs != null) 
 				dlcInfo =string.Join(", ", requiredDlcs);
