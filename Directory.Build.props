@@ -18,9 +18,10 @@
 		<!--Automatic yaml file generation:-->
 		<GenerateMetadata>true</GenerateMetadata>
 		<!--include plib, set to false in mod project if you dont want plib merged+included-->
-		<PLib>true</PLib>		
+		<PLib>true</PLib>
+		<TwitchLib>false</TwitchLib>
 	</PropertyGroup>
-	
+
 	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
 		<DebugSymbols>true</DebugSymbols>
 		<DebugType>full</DebugType>
@@ -44,7 +45,7 @@
 
 	<PropertyGroup>
 		<!--Marks Deprecated warnings as errors-->
-		<WarningsAsErrors>CS0618,CS0612</WarningsAsErrors>
+		<!--<WarningsAsErrors>CS0618,CS0612</WarningsAsErrors>-->
 		<!--Ignore this warning for System.Compression -->
 		<NoWarn>MSB3277</NoWarn>
 	</PropertyGroup>
@@ -194,6 +195,12 @@
 		<PackageReference Include="PLib" Version="*" />
 	</ItemGroup>
 	
+	<ItemGroup Condition="'$(TwitchLib)' == 'true'">
+		<Reference Include="ONITwitchLib">
+			<HintPath>$(SolutionDir)/ONITwitchLib.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
 	<ItemGroup Condition="'$(IsMod)' == 'true'">
 		<!--<PackageReference Include="Aze.Publicise.MSBuild.Task" Version="*">
 			<PrivateAssets>all</PrivateAssets>
