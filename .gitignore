@@ -874,3 +874,4 @@ SignsTagsAndRibbons/bin/Release/Newtonsoft.Json.xml
 /*/obj
 /*/bin
 /.vs/
+/Directory.Build.props.user
