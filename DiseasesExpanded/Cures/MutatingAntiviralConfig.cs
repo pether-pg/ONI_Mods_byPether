@@ -3,13 +3,17 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class MutatingAntiviralConfig : IEntityConfig
+    class MutatingAntiviralConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "MutatingAntiviral";
         public const string EffectID = "MutatingAntiviralEffect";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         private void DefineRecipe(Tag[] mainIngridients, float[] amounts)
         {

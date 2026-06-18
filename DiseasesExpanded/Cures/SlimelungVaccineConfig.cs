@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DiseasesExpanded
 {
-    class SlimelungVaccineConfig : IEntityConfig
+    class SlimelungVaccineConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "SlimelungVaccine";
         public const string EFFECT_ID = "SlimelungVaccineEffect";
@@ -19,7 +19,11 @@ namespace DiseasesExpanded
             return (effects != null && effects.HasEffect(EFFECT_ID));
         }
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

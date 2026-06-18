@@ -6,7 +6,7 @@ using DiseasesExpanded.RandomEvents.EntityScripts;
 namespace DiseasesExpanded.RandomEvents.Configs
 {
 	// Try to make it similar to https://github.com/asquared31415/ONITwitch/blob/main/ONITwitchCore/Content/Entities/SurpriseBoxConfig.cs
-	public class GermySurpriseBoxConfig : IEntityConfig
+	public class GermySurpriseBoxConfig : IEntityConfig, IHasDlcRestrictions
 	{
 		public const string ID = "GermySurpriseBox";
 		private const string Anim = "germy_surprise_box_kanim";
@@ -56,11 +56,11 @@ namespace DiseasesExpanded.RandomEvents.Configs
 
 		public void OnSpawn(GameObject inst)
 		{
-		}
+        }
+        public string[] GetDlcIds() => (string[])null; // Obsolete
 
-		public string[] GetDlcIds()
-		{
-			return DlcManager.AVAILABLE_ALL_VERSIONS;
-		}
-	}
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
+    }
 }

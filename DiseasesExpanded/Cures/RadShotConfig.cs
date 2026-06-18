@@ -3,13 +3,17 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class RadShotConfig : IEntityConfig
+    class RadShotConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "RadShot";
         public const string EFFECT_ID = "RadShotEffect";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public GameObject CreatePrefab()
         {

@@ -3,11 +3,15 @@ using UnityEngine;
 
 namespace DiseasesExpanded
 {
-    class GassyGermFlask : IEntityConfig
+    class GassyGermFlask : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = nameof(GassyGermFlask);
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {
