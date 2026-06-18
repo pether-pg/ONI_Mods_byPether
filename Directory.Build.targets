@@ -48,7 +48,7 @@
 	</Target>
 
 	<PropertyGroup>
-		<TargetFolder Condition="'$(GameLibsFolder)' != '../Lib'">$(ModFolder)\$(TargetName)_dev\</TargetFolder>
+		<TargetFolder Condition="'$(GameLibsFolder)' != '../Lib'">$(ModFolder)\$(TargetName)\</TargetFolder>
 		<TargetFolder Condition="'$(GameLibsFolder)' == '../Lib'">../Builds\$(TargetName)</TargetFolder>
 	</PropertyGroup>
 
