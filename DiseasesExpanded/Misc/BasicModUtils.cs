@@ -61,5 +61,10 @@ namespace DiseasesExpanded
             Strings.Add($"STRINGS.CREATURES.SPECIES.GEYSER.{type_id.ToUpperInvariant()}.NAME", name);
             Strings.Add($"STRINGS.CREATURES.SPECIES.GEYSER.{type_id.ToUpperInvariant()}.DESC", desc);
         }
+
+        public static void MakeMiscTagStrings(string id, string name)
+        {
+            Strings.Add($"STRINGS.MISC.TAGS.{id.ToUpperInvariant()}", name);
+        }
     }
 }

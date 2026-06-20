@@ -103,6 +103,9 @@ namespace DiseasesExpanded
                 BasicModUtils.MakeCuresStrings(RustSickness2CureConfig.ID, STRINGS.CURES.RUST_2_CURE.NAME, STRINGS.CURES.RUST_2_CURE.DESC, STRINGS.CURES.RUST_2_CURE.DESC);
                 BasicModUtils.MakeCuresStrings(RustSickness3CureConfig.ID, STRINGS.CURES.RUST_3_CURE.NAME, STRINGS.CURES.RUST_3_CURE.DESC, STRINGS.CURES.RUST_3_CURE.DESC);
 
+                BasicModUtils.MakeMiscTagStrings(NanobotBottleConfig.TAG_ID, STRINGS.TAGS.DISPOSABLE_GERMS.PROPER_NAME);
+
+                BasicModUtils.MakeGeyserStrings(RustyWaterGeyserConfig.ID, STRINGS.GEYSERS.RUSTY_WATER.NAME, STRINGS.GEYSERS.RUSTY_WATER.DESC);
                 BasicModUtils.MakeGeyserStrings(RustyWaterGeyser_Data.TYPE, STRINGS.GEYSERS.RUSTY_WATER.NAME, STRINGS.GEYSERS.RUSTY_WATER.DESC);
                 BasicModUtils.MakeGeyserStrings(RustyWaterGeyser_Data.TYPE_2, STRINGS.GEYSERS.RUSTY_WATER.NAME, STRINGS.GEYSERS.RUSTY_WATER.DESC);
             }

@@ -349,19 +349,19 @@ namespace DiseasesExpanded
             public class SUPERSERUM
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Super Serum", SerumSuperConfig.ID);
-                public static LocString DESC = (LocString)"Enhances duplicant's attributes and makes them immune to most dangerous pathogens.";
+                public static LocString DESC = (LocString)"Enhances duplicant's attributes and makes them immune to the most dangerous pathogens.";
             }
 
             public class TUMMYSERUM
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Tummy Serum", SerumTummyConfig.ID);
-                public static LocString DESC = (LocString)"Calms even most angry tummy and makes it immune to subsequent infections.";
+                public static LocString DESC = (LocString)"Calms even the most angry tummy and makes it immune to subsequent infections.";
             }
 
             public class YUMMYSERUM
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Yummy Serum", SerumYummyConfig.ID);
-                public static LocString DESC = (LocString)"Stimulates duplicant's digestive system and makes them immune to most ravenous pathogens.";
+                public static LocString DESC = (LocString)"Stimulates duplicant's digestive system and makes them immune to the most ravenous pathogens.";
             }
 
             public class MUTATINGANTIVIRAL
@@ -379,7 +379,7 @@ namespace DiseasesExpanded
             public class HAPPYPILL
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Happy Pill", HappyPillConfig.ID);
-                public static LocString DESC = $"Improves overall {UI.FormatAsLink("happiness", "MORALE")} of affected duplicant but reduces their motivation to perform even most basic tasks.";
+                public static LocString DESC = $"Improves overall {UI.FormatAsLink("happiness", "MORALE")} of affected duplicant but reduces their motivation to perform even the most basic tasks.";
             }
 
             public class SUNBURNCURE
@@ -397,7 +397,7 @@ namespace DiseasesExpanded
             public class RUST_3_CURE
             {
                 public static LocString NAME = (LocString)UI.FormatAsLink("Spare Parts Shot", RustSickness3CureConfig.ID);
-                public static LocString DESC = "Replaces parts most damaged by " + DISEASES.RUST_SICKNESS_3.NAME + ".";
+                public static LocString DESC = "Replaces parts damaged by " + DISEASES.RUST_SICKNESS_3.NAME + ".";
             }
         }
 
