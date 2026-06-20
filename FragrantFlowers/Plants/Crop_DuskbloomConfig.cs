@@ -8,12 +8,13 @@ using Klei.AI;
 
 namespace FragrantFlowers
 {
-    public class Crop_DuskbloomConfig : IEntityConfig
+    public class Crop_DuskbloomConfig : IEntityConfig, IHasDlcRestrictions
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public const string ID = "Duskbloom";
         public const string SPICE_ID = "DuskbloomSpice";
@@ -40,7 +41,8 @@ namespace FragrantFlowers
                 SimHashes.Creature,
                 new List<Tag> { 
                     GameTags.CookingIngredient, 
-                    GameTags.IndustrialIngredient 
+                    GameTags.IndustrialIngredient,
+                    GameTags.PedestalDisplayable
                 });
             go.AddOrGet<EntitySplitter>();
             go.AddOrGet<SimpleMassStatusItem>();
@@ -51,7 +53,12 @@ namespace FragrantFlowers
             def.spoilTime = 4800f;
             def.staleTime = def.spoilTime / 2;
 
-            DefineRecipe();
+            go.AddOrGet<OccupyArea>().SetCellOffsets(EntityTemplates.GenerateOffsets(1, 1)); ;
+            DecorProvider decorProvider = go.AddOrGet<DecorProvider>();
+            decorProvider.SetValues(DECOR.BONUS.TIER0);
+            decorProvider.overrideName = STRINGS.CROPS.DUSKBLOOM.NAME;
+
+            //DefineRecipe();
 
             return go;
         }
@@ -100,7 +107,7 @@ namespace FragrantFlowers
                 Color.white,
                 statBonus: new AttributeModifier(Db.Get().Attributes.Ranching.Id, 3, nameof(Spices)),
                 imageName: SPICE_SPRITE,
-                dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
+                dlcID: DlcManager.EXPANSION1
             );
 
             return spice;

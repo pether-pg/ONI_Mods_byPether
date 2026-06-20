@@ -5,12 +5,16 @@ using UnityEngine;
 namespace DiseasesExpanded.RandomEvents.Configs
 
 {
-    class MorbAlienConfig : IEntityConfig
+    class MorbAlienConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "AlienGlom";
         public const string BASE_TRAIT_ID = "GlomBaseTrait";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public GameObject CreatePrefab()
         {

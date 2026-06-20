@@ -43,6 +43,7 @@ namespace SignsTagsAndRibbons
 				"off", "art_a", "art_b", "art_c", "art_d", "art_e", "art_f", "art_g", "art_h", "art_i", "art_j", "art_k", "art_l", "art_m", "art_n", 
 				"art_o", "art_p", "art_q", "art_r", "art_s", "art_t", "art_u", "art_v", "art_w", "art_x", "art_y", "art_z"
 			};
+			go.AddOrGet<UserNameable>();
 		}
 	}
 }

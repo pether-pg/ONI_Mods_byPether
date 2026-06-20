@@ -7,12 +7,13 @@ using Klei.AI;
 
 namespace FragrantFlowers
 {
-    internal class Crop_DuskberryConfig : IEntityConfig
+    internal class Crop_DuskberryConfig : IEntityConfig, IHasDlcRestrictions
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public const string ID = "Duskberry";
         public const float GROW_TIME = 4500f;
@@ -39,13 +40,14 @@ namespace FragrantFlowers
 
             EdiblesManager.FoodInfo foodInfo = new EdiblesManager.FoodInfo(
                 ID,
-                "",
                 1200000f,
                 -1,
                 255.15f,
                 277.15f,
                 3200f,
-                true);
+                true,
+                GetRequiredDlcIds(),
+                GetForbiddenDlcIds());
 
             ExpandBerrySludgeRecipe();
 

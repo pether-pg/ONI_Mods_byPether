@@ -139,6 +139,17 @@ namespace DiseasesExpanded
             }
         }
 
+        private static byte _rustGerms = Invalid;
+        public static byte RustGermIdx
+        {
+            get
+            {
+                if (_rustGerms == Invalid)
+                    _rustGerms = Db.Get().Diseases.GetIndex(RustGerms.ID);
+                return _rustGerms;
+            }
+        }
+
         //---------- FragrantFlowers ----------
         private static byte _roseScent = Invalid;
         public static byte RoseScentIdx

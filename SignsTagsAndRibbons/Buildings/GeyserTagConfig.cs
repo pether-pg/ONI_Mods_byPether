@@ -60,6 +60,7 @@ namespace SignsTagsAndRibbons
                 "art_tungsten_volcano",
                 "art_niobium_volcano"
             };
+            go.AddOrGet<UserNameable>();
         }
     }
 }

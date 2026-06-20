@@ -102,11 +102,13 @@ namespace DiseasesExpanded
                 BasicModUtils.MakeCuresStrings(SunburnCureConfig.ID, STRINGS.CURES.SUNBURNCURE.NAME, STRINGS.CURES.SUNBURNCURE.DESC, STRINGS.CURES.SUNBURNCURE.DESC);
                 BasicModUtils.MakeCuresStrings(RustSickness2CureConfig.ID, STRINGS.CURES.RUST_2_CURE.NAME, STRINGS.CURES.RUST_2_CURE.DESC, STRINGS.CURES.RUST_2_CURE.DESC);
                 BasicModUtils.MakeCuresStrings(RustSickness3CureConfig.ID, STRINGS.CURES.RUST_3_CURE.NAME, STRINGS.CURES.RUST_3_CURE.DESC, STRINGS.CURES.RUST_3_CURE.DESC);
+
+                BasicModUtils.MakeGeyserStrings(RustyWaterGeyser_Data.TYPE, STRINGS.GEYSERS.RUSTY_WATER.NAME, STRINGS.GEYSERS.RUSTY_WATER.DESC);
+                BasicModUtils.MakeGeyserStrings(RustyWaterGeyser_Data.TYPE_2, STRINGS.GEYSERS.RUSTY_WATER.NAME, STRINGS.GEYSERS.RUSTY_WATER.DESC);
             }
 
             public static void Postfix()
             {
-
                 BasicModUtils.MakeCuresStrings(GassyVaccineConfig.ID, GassyVaccineConfig.Name, GassyVaccineConfig.Desc, GassyVaccineConfig.Desc);
                 BasicModUtils.MakeCuresStrings(SlimelungVaccineConfig.ID, SlimelungVaccineConfig.Name, SlimelungVaccineConfig.Desc, SlimelungVaccineConfig.Desc);
                 BasicModUtils.MakeCuresStrings(AllergyVaccineConfig.ID, AllergyVaccineConfig.Name, AllergyVaccineConfig.Desc, AllergyVaccineConfig.Desc);
@@ -279,7 +281,7 @@ namespace DiseasesExpanded
 
                 if (Settings.Instance.FrostPox.IncludeDisease)          __instance.Add(new FrostShards(statsOnly));
                 if (Settings.Instance.MooFlu.IncludeDisease)            __instance.Add(new GassyGerms(statsOnly));
-                if (Settings.Instance.MooFlu.IncludeDisease)            __instance.Add(new RustGerms(statsOnly));
+                if (Settings.Instance.RustDust.IncludeDisease)          __instance.Add(new RustGerms(statsOnly));
                 if (Settings.Instance.AlienGoo.IncludeDisease)          __instance.Add(new AlienGerms(statsOnly));
                 if (Settings.Instance.MutatingVirus.IncludeDisease)     __instance.Add(new MutatingGerms(statsOnly));
                 if (Settings.Instance.MedicalNanobots.IncludeDisease)   __instance.Add(new MedicalNanobots(statsOnly));

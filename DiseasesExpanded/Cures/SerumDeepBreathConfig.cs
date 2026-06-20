@@ -4,7 +4,7 @@ using Klei.AI;
 
 namespace DiseasesExpanded
 {
-    class SerumDeepBreathConfig : IEntityConfig
+    class SerumDeepBreathConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "DeepBreathSerum";
         public const string EFFECT_ID = "DeepBreathSerumEffect";
@@ -23,7 +23,11 @@ namespace DiseasesExpanded
             return serumEffect;
         }
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

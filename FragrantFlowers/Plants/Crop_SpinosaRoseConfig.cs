@@ -8,12 +8,13 @@ using Database;
 
 namespace FragrantFlowers
 {
-    public class Crop_SpinosaRoseConfig : IEntityConfig
+    public class Crop_SpinosaRoseConfig : IEntityConfig, IHasDlcRestrictions
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public const string ID = "SpinosaRose";
         public const string SPICE_ID = "SpinosaRoseSpice";
@@ -40,7 +41,8 @@ namespace FragrantFlowers
                 SimHashes.Creature,
                 new List<Tag>{
                     GameTags.CookingIngredient,
-                    GameTags.IndustrialIngredient
+                    GameTags.IndustrialIngredient,
+                    GameTags.PedestalDisplayable
                 });
             go.AddOrGet<EntitySplitter>();
             go.AddOrGet<SimpleMassStatusItem>();
@@ -50,8 +52,12 @@ namespace FragrantFlowers
             def.rotTemperature = 277.15f;
             def.spoilTime = 4800f;
             def.staleTime = def.spoilTime / 2;
+            go.AddOrGet<OccupyArea>().SetCellOffsets(EntityTemplates.GenerateOffsets(1, 1)); ;
+            DecorProvider decorProvider = go.AddOrGet<DecorProvider>();
+            decorProvider.SetValues(DECOR.BONUS.TIER0);
+            decorProvider.overrideName = STRINGS.CROPS.SPINOSAROSE.NAME;
 
-            DefineRecipe();
+            //DefineRecipe();
 
             return go;
         }
@@ -95,13 +101,13 @@ namespace FragrantFlowers
                 SPICE_ID,
                 new Spice.Ingredient[2] {
                     new Spice.Ingredient() { IngredientSet = new Tag[1] { ID }, AmountKG = 0.1f },
-                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.SandStone.CreateTag() }, AmountKG = 3f }
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Sand.CreateTag() }, AmountKG = 3f }
                 },
                 RoseScent.colorValue,
                 Color.white,
                 statBonus: new AttributeModifier(Db.Get().Attributes.Learning.Id, 3, nameof(Spices)),
                 imageName: SPICE_SPRITE,
-                dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
+                dlcID: DlcManager.EXPANSION1
             );
 
             return spice;

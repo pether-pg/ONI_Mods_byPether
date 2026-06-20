@@ -9,12 +9,13 @@ using Database;
 
 namespace FragrantFlowers
 {
-    public class Crop_CottonBollConfig : IEntityConfig
+    public class Crop_CottonBollConfig : IEntityConfig, IHasDlcRestrictions
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public const string ID = "RimedCotton";
         public const string SPICE_ID = "CottonBollSpice";
@@ -99,13 +100,13 @@ namespace FragrantFlowers
                 SPICE_ID,
                 new Spice.Ingredient[2] {
                     new Spice.Ingredient() { IngredientSet = new Tag[1] { ID }, AmountKG = 0.1f },
-                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Ice.CreateTag() }, AmountKG = 3f }
+                    new Spice.Ingredient() { IngredientSet = new Tag[1] { SimHashes.Granite.CreateTag() }, AmountKG = 3f }
                 },
                 MallowScent.colorValue,
                 Color.white,
                 statBonus: new AttributeModifier(Db.Get().Attributes.Athletics.Id, 3, nameof(Spices)),
                 imageName: SPICE_SPRITE,
-                dlcID: DlcManager.AVAILABLE_EXPANSION1_ONLY
+                dlcID: DlcManager.EXPANSION1
             );
 
             return spice;

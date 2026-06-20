@@ -3,13 +3,17 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class RustSickness2CureConfig : IEntityConfig
+    class RustSickness2CureConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "RustSickness2Cure";
         public const string EFFECT_ID = "RustSickness2CureEffect";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public GameObject CreatePrefab()
         {

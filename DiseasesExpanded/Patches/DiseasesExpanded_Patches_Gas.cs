@@ -44,7 +44,7 @@ namespace DiseasesExpanded
 
                 Sicknesses sicknesses = gameObject.GetSicknesses();
                 if(sicknesses != null)
-                    foreach (SicknessInstance sicknessInstance in sicknesses)
+                    foreach (SicknessInstance sicknessInstance in sicknesses.ModifierList)
                         if (sicknessInstance.modifier.Id == GasSickness.ID)
                         {
                             SimMessages.ModifyDiseaseOnCell(cell, GermIdx.GassyGermsIdx, GasSickness.GERMS_PER_FART);

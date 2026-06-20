@@ -3,12 +3,16 @@ using System.Collections.Generic;
 
 namespace FragrantFlowers
 {
-    class LavenderAromaCanConfig : IEntityConfig
+    class LavenderAromaCanConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "LavenderAromaCan";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -23,7 +27,7 @@ namespace FragrantFlowers
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[2]
             {
-                new ComplexRecipe.RecipeElement(AromaticsFabricator.BasicCanIngridientTag, AromaticsFabricator.BasicCanIngridientMass),
+                new ComplexRecipe.RecipeElement(AromaticsFabricator.BasicCanIngredientTag, AromaticsFabricator.BasicCanIngredientMass),
                 new ComplexRecipe.RecipeElement(Crop_DuskbloomConfig.ID, 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]

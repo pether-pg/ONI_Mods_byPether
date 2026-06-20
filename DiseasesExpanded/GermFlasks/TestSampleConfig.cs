@@ -4,13 +4,17 @@ using Klei.AI;
 
 namespace DiseasesExpanded
 {
-    class TestSampleConfig : IEntityConfig
+    class TestSampleConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "TestSample";
         public const string EFFECT_ID = "JustGotTested";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -82,7 +86,7 @@ namespace DiseasesExpanded
 
             List<string> infectingGerms = new List<string>();
 
-            foreach(var s in sicknesses)
+            foreach(var s in sicknesses.ModifierList)
             {
                 string germId;
                 if (TryGetSicknessGerm(s.Sickness.Id, out germId))

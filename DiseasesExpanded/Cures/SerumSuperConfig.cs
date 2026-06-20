@@ -4,11 +4,17 @@ using Klei.AI;
 
 namespace DiseasesExpanded
 {
-    class SerumSuperConfig : IEntityConfig
+    class SerumSuperConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "SuperSerum";
         public const string EFFECT_ID = "SuperSerumEffect";
         public static ComplexRecipe recipe;
+
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public static string Name { get => STRINGS.CURES.SUPERSERUM.NAME; }
         public static string Desc { get => STRINGS.CURES.SUPERSERUM.DESC; }
@@ -35,8 +41,6 @@ namespace DiseasesExpanded
 
             return serumEffect;
         }
-
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
         public void OnPrefabInit(GameObject inst)
         {

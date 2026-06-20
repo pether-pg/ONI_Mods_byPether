@@ -51,5 +51,15 @@ namespace DiseasesExpanded
             Strings.Add($"STRINGS.ITEMS.PILLS.{id.ToUpperInvariant()}.DESC", desc);
         }
 
+        public static void MakeCodexCategoryString(string category, string text)
+        {
+            Strings.Add($"STRINGS.UI.CODEX.CATEGORYNAMES.{category}", text);
+        }
+
+        public static void MakeGeyserStrings(string type_id, string name, string desc)
+        {
+            Strings.Add($"STRINGS.CREATURES.SPECIES.GEYSER.{type_id.ToUpperInvariant()}.NAME", name);
+            Strings.Add($"STRINGS.CREATURES.SPECIES.GEYSER.{type_id.ToUpperInvariant()}.DESC", desc);
+        }
     }
 }

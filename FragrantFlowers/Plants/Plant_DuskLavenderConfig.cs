@@ -7,12 +7,13 @@ using Klei.AI;
 
 namespace FragrantFlowers
 {
-    public class Plant_DuskLavenderConfig : IEntityConfig
+    public class Plant_DuskLavenderConfig : IEntityConfig, IHasDlcRestrictions
     {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+        public string[] GetDlcIds() => (string[]) null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[]) null;
 
         //===> BASE INFORMATION <=========================================
         public const string ID = "DuskbloomLavender";
@@ -39,6 +40,8 @@ namespace FragrantFlowers
         public const float TemperatureWarningHigh = 313.15f;   //  40°C: Plant will stop growing (Highest Temp)
         public const float TemperatureLethalHigh = 333.15f;    //  60°C: Plant will die (Highest Temp)
 
+        public const float PlantFiberProduction = 4f;          // PlantFiber per cycle
+
         public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
 
         public ComplexRecipe Recipe;
@@ -62,6 +65,7 @@ namespace FragrantFlowers
             EntityTemplates.CreateAndRegisterPreviewForPlant(
                 EntityTemplates.CreateAndRegisterSeedForPlant(
                     gameObject,
+                    (IHasDlcRestrictions)this,
                     SeedProducer.ProductionType.Harvest, //Implies the seed will be produced upon harvest.
                     SEED_ID,
                     STRINGS.SEEDS.DUSKLAVENDER.SEED_NAME,
@@ -132,10 +136,11 @@ namespace FragrantFlowers
                 true, // Implies this Crop can be drowned by liquids.
                 true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
                 true, // Implies this Crop requires a solid ground to grow.
-                true, // Implies this Crop will grow old and eventualy yeilds a produce.
+                false,// does it require Backwall_Foundation?
+                true, // Implies this Crop will grow old and eventually yields a produce.
                 2400f, // Max age this Crop can grow, or the time it require for it to complete its growth.
-                0f, // Minium Radiation required by this Crop.
-                9800f, // Maxium value of Radiation this Crop can get before stop growing and dying.
+                0f, // Minimum Radiation required by this Crop.
+                9800f, // Maximum value of Radiation this Crop can get before stop growing and dying.
                 "LavenderOriginal", // Crop trait id.
                 "Lavender Original"); // Crop trait name.
 
@@ -149,6 +154,7 @@ namespace FragrantFlowers
                 }
             });
 
+            gameObject.AddOrGet<PlantFiberProducer>().amount = PlantFiberProduction * Crop_DuskbloomConfig.GROW_TIME / 600;
             gameObject.AddOrGet<StandardCropPlant>();
             gameObject.AddOrGet<LoopingSounds>();
             gameObject.AddOrGet<BlightVulnerable>();
@@ -192,6 +198,5 @@ namespace FragrantFlowers
         public void OnSpawn(GameObject inst)
         {
         }
-
     }
 }

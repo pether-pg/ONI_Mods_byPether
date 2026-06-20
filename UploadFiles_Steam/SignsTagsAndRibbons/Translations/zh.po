@@ -1,0 +1,1121 @@
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.BIOHAZARD_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.BIOHAZARD_TAG"
+msgid "Biohazard Alert"
+msgstr "生物危害警报"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.COLDSPOT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.COLDSPOT_TAG"
+msgid "Cold Spot"
+msgstr "低温点"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.COMET_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.COMET_TAG"
+msgid "Comet Alert"
+msgstr "彗星警报"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.DANGER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.DANGER_TAG"
+msgid "Danger Alert"
+msgstr "危险警报"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.ELETRIC_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.ELETRIC_TAG"
+msgid "Electricity Alert"
+msgstr "电力警报"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.HOTSPOT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.HOTSPOT_TAG"
+msgid "Hot Spot"
+msgstr "高温点"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.LIGHT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.LIGHT_TAG"
+msgid "Brightness Alert"
+msgstr "亮度警报"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.NOSALERT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.NOSALERT_TAG"
+msgid "Select Alert Tag"
+msgstr "选择警报标签"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.RADIATION_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.RADIATION_TAG"
+msgid "Radiation Alert"
+msgstr "辐射警报"
+
+#. SignsTagsAndRibbons.STRINGS.ALERT_TAGS.WARNING_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.ALERT_TAGS.WARNING_TAG"
+msgid "Warning"
+msgstr "警告"
+
+#. SignsTagsAndRibbons.STRINGS.BACK_ART_BUTTON.TEXT
+msgctxt "SignsTagsAndRibbons.STRINGS.BACK_ART_BUTTON.TEXT"
+msgid "Previous Tag"
+msgstr "上一个标签"
+
+#. SignsTagsAndRibbons.STRINGS.BACK_ART_BUTTON.TOOLTIP
+msgctxt "SignsTagsAndRibbons.STRINGS.BACK_ART_BUTTON.TOOLTIP"
+msgid "Changes Tag backwards to another of the same tier. {Hotkey}"
+msgstr "向后更改为同一层级的另一个标签。{Hotkey}"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.DESC"
+msgid "A wall sign for alerts and dangers."
+msgstr "用于警报和危险的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.EFFECT"
+msgid ""
+"This sign is a visual representation of many different alerts. Select the "
+"type of alert using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Warning\n"
+" - Hot Spot\n"
+" - Cold Spot\n"
+" - Comet Alert\n"
+" - Biohazard Alert\n"
+" - Radiation Alert\n"
+" - Brightness Alert\n"
+" - Electricity Alert\n"
+" - Danger Alert"
+msgstr ""
+"此标志是多种不同警报的视觉表示。使用菜单选项选择警报类型。\n"
+"\n"
+"标签列表：\n"
+" - 警告\n"
+" - 高温点\n"
+" - 低温点\n"
+" - 彗星警报\n"
+" - 生物危害警报\n"
+" - 辐射警报\n"
+" - 亮度警报\n"
+" - 电力警报\n"
+" - 危险警报"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.ALERT.NAME"
+msgid "Danger Sign"
+msgstr "危险标志"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.DESC"
+msgid "A danger ribbon mark for corners."
+msgstr "用于角落的危险警示带标记。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.EFFECT"
+msgid "It serves to demark a corner segment of a dangerous ribbon line."
+msgstr "用于标示危险警示带线路的转角段。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERCORNER.NAME"
+msgid "Danger Ribbon Corner"
+msgstr "危险警示带转角"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.DESC"
+msgid "A danger ribbon element."
+msgstr "一个危险警示带元素。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.EFFECT"
+msgid "It serves to demark a straight line used to outline a dangerous area."
+msgstr "用于标示划定危险区域轮廓的直线。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.DANGERRIBBON.NAME"
+msgid "Danger Ribbon"
+msgstr "危险警示带"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.DESC"
+msgid "A wall tag for gases."
+msgstr "用于气体的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.EFFECT"
+msgid ""
+"This tag is a visual representation of gases in an industrial environment. "
+"Select the type of gas using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Oxygen\n"
+" - Polluted Oxygen\n"
+" - Carbon Dioxide\n"
+" - Hydrogen\n"
+" - Natural Gas\n"
+" - Propane\n"
+" - Chlorine\n"
+" - Helium\n"
+" - Sour Gas\n"
+" - Steam\n"
+" - Nuclear Fallout"
+msgstr ""
+"此标签是工业环境中气体的视觉表示。使用菜单选项选择气体类型。\n"
+"\n"
+"标签列表：\n"
+" - 氧气\n"
+" - 污染氧\n"
+" - 二氧化碳\n"
+" - 氢气\n"
+" - 天然气\n"
+" - 丙烷\n"
+" - 氯气\n"
+" - 氦气\n"
+" - 酸气\n"
+" - 蒸汽\n"
+" - 核尘埃"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GAS.NAME"
+msgid "Gas Tag"
+msgstr "气体标签"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.DESC"
+msgid "A wall tag for geysers, vents and volcanos."
+msgstr "用于间歇泉、喷口和火山的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.EFFECT"
+msgid "This tag is a visual representation of geological formations."
+msgstr "此标签是地质构造的视觉表示。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.GEYSER.NAME"
+msgid "Geyser Tag"
+msgstr "间歇泉标签"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.DESC"
+msgid "A wall sign for directive environmental information."
+msgstr "用于指示性环境信息的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.EFFECT"
+msgid ""
+"This sign is a visual representation many different directive informations "
+"regarding environment. Select the type of directive using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Atmo Suit\n"
+" - Jet Suit\n"
+" - Lead Suit\n"
+" - Dormitory\n"
+" - Infirmary\n"
+" - Workshop\n"
+" - Research Facility\n"
+" - Observatory\n"
+" - Restroom\n"
+" - Refectory\n"
+" - Farm\n"
+" - Critter Ranch\n"
+" - Rocket Platform"
+msgstr ""
+"此标志是多种不同环境指示信息的视觉表示。使用菜单选项选择指示类型。\n"
+"\n"
+"标签列表：\n"
+" - 气压服\n"
+" - 喷气服\n"
+" - 铅服\n"
+" - 宿舍\n"
+" - 医务室\n"
+" - 工作室\n"
+" - 研究设施\n"
+" - 天文台\n"
+" - 洗手间\n"
+" - 餐厅\n"
+" - 农场\n"
+" - 动物牧场\n"
+" - 火箭平台"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.INFO.NAME"
+msgid "Info Sign"
+msgstr "信息标志"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.DESC"
+msgid "A wall tag for letters."
+msgstr "用于字母的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.EFFECT"
+msgid "This tag serves to show a single letter."
+msgstr "此标签用于显示单个字母。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LETTER.NAME"
+msgid "Letter Tag"
+msgstr "字母标签"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.DESC"
+msgid "A wall tag for liquids."
+msgstr "用于液体的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.EFFECT"
+msgid ""
+"This tag is a visual representation of liquids in an industrial environment. "
+"Select the type of liquid using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Water\n"
+" - Polluted Water\n"
+" - Salt Water\n"
+" - Brine\n"
+" - Ethanol\n"
+" - Crude Oil\n"
+" - Petroleum\n"
+" - Super Coolant\n"
+" - Naphtha\n"
+" - Visco-Gel\n"
+" - Liquid Oxygen\n"
+" - Liquid Hydrogen\n"
+" - Liquid Carbon Dioxide\n"
+" - Nuclear Waste"
+msgstr ""
+"此标签是工业环境中液体的视觉表示。使用菜单选项选择液体类型。\n"
+"\n"
+"标签列表：\n"
+" - 水\n"
+" - 污染水\n"
+" - 盐水\n"
+" - 浓盐水\n"
+" - 乙醇\n"
+" - 原油\n"
+" - 石油\n"
+" - 超级冷却剂\n"
+" - 石脑油\n"
+" - 粘性凝胶\n"
+" - 液态氧\n"
+" - 液态氢\n"
+" - 液态二氧化碳\n"
+" - 核废料"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LIQUID.NAME"
+msgid "Liquid Tag"
+msgstr "液体标签"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.DESC"
+msgid "A wall tag for geysers, vents and volcanos."
+msgstr "用于间歇泉、喷口和火山的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.EFFECT"
+msgid "This tag is a visual representation of geological formations."
+msgstr "此标签是地质构造的视觉表示。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.LOCATION.NAME"
+msgid "Location Tag"
+msgstr "位置标签"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.MENU_SUBCATEGORY.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.MENU_SUBCATEGORY.NAME"
+msgid "Signs, Tags and Ribbons"
+msgstr "标志、标签和警示带"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.DESC"
+msgid "A wall meter scale used in open liquid reservoirs."
+msgstr "用于开放式液体储罐的墙式计量刻度。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.EFFECT"
+msgid ""
+"This scale is often used to measure the amount of liquid in a reservoir."
+msgstr "此刻度通常用于测量储罐中的液体量。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.METERSCALE.NAME"
+msgid "Meter Scale"
+msgstr "计量刻度"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.DESC"
+msgid "A wall tag for numbers."
+msgstr "用于数字的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.EFFECT"
+msgid "This tag serves to show a single digit."
+msgstr "此标签用于显示单个数字。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.NUMBER.NAME"
+msgid "Number Tag"
+msgstr "数字标签"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.DESC"
+msgid "A small tag for gas and liquid elements."
+msgstr "用于气体和液体元素的小标签。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.EFFECT"
+msgid "This tag is a visual representation of gases and liquids."
+msgstr "此标签是气体和液体的视觉表示。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SMALL_EMELENT.NAME"
+msgid "Small Element Tag"
+msgstr "小元素标签"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.DESC"
+msgid "A wall tag for solids."
+msgstr "用于固体的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.EFFECT"
+msgid ""
+"This tag is a visual representation of solids in an industrial environment. "
+"Select the type of solids using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Agriculture\n"
+" - Consumable Ore\n"
+" - Critter Egg\n"
+" - Cultivable Soil\n"
+" - Filtration Medium\n"
+" - Industrial Ingredient\n"
+" - Liquefiable\n"
+" - Manufacture Material\n"
+" - Medical Supplies\n"
+" - Metal Ore\n"
+" - Miscellaneous\n"
+" - Organic\n"
+" - Rare Resource\n"
+" - Raw Mineral\n"
+" - Refined Metal\n"
+" - Refined Mineral\n"
+" - Cooking Ingredient\n"
+" - Edibles\n"
+" - Seeds\n"
+" - Compostables"
+msgstr ""
+"此标签是工业环境中固体的视觉表示。使用菜单选项选择固体类型。\n"
+"\n"
+"标签列表：\n"
+" - 农业\n"
+" - 可消耗矿石\n"
+" - 小动物蛋\n"
+" - 可耕种土壤\n"
+" - 过滤介质\n"
+" - 工业原料\n"
+" - 可液化\n"
+" - 制造材料\n"
+" - 医疗用品\n"
+" - 金属矿石\n"
+" - 杂项\n"
+" - 有机\n"
+" - 稀有资源\n"
+" - 原始矿物\n"
+" - 精炼金属\n"
+" - 精炼矿物\n"
+" - 烹饪原料\n"
+" - 食物\n"
+" - 种子\n"
+" - 可堆肥物"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SOLID.NAME"
+msgid "Solid Tag"
+msgstr "固体标签"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.DESC"
+msgid "A wall tag for system and sensors."
+msgstr "用于系统和传感器的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.EFFECT"
+msgid ""
+"This tag is a visual representation of many different kinds of eletronics, "
+"systems and sensors signs. Select the type of system using the menu "
+"option. \n"
+"\n"
+"List of tags: \n"
+" - Closed Cycle\n"
+" - Organic Recycle\n"
+" - Recycle\n"
+" - Power Toggle\n"
+" - Gas Element Sensor\n"
+" - Liquid Sensor\n"
+" - Power Sensor\n"
+" - Pressure Sensor\n"
+" - Temperature Sensor\n"
+" - Time Sensor"
+msgstr ""
+"此标签是多种不同电子设备、系统和传感器标志的视觉表示。使用菜单选项选择系统类型。\n"
+"\n"
+"标签列表：\n"
+" - 封闭循环\n"
+" - 有机回收\n"
+" - 回收\n"
+" - 电源开关\n"
+" - 气体元素传感器\n"
+" - 液体传感器\n"
+" - 电力传感器\n"
+" - 压力传感器\n"
+" - 温度传感器\n"
+" - 时间传感器"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.SYSTEM.NAME"
+msgid "System Tag"
+msgstr "系统标签"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.DESC
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.DESC"
+msgid "A wall tag for utilities."
+msgstr "用于公用设施的墙标。"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.EFFECT
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.EFFECT"
+msgid ""
+"This tag is a visual representation of many different kinds of utilities "
+"signs. Select the type of utility using the menu option. \n"
+"\n"
+"List of tags: \n"
+" - Direction\n"
+" - Diagonal Direction\n"
+" - Both Direction\n"
+" - Gas Pump\n"
+" - Liquid Pump\n"
+" - Solid Conveyor"
+msgstr ""
+"此标签是多种不同公用设施标志的视觉表示。使用菜单选项选择公用设施类型。\n"
+"\n"
+"标签列表：\n"
+" - 方向\n"
+" - 对角线方向\n"
+" - 双向\n"
+" - 气体泵\n"
+" - 液体泵\n"
+" - 固体传送带"
+
+#. SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.BUILDINGS.UTILITY.NAME"
+msgid "Utility Tag"
+msgstr "公用设施标签"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.CHLORINE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.CHLORINE_TAG"
+msgid "Chlorine Gas"
+msgstr "氯气"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.CO2_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.CO2_TAG"
+msgid "Carbon Dioxide Gas"
+msgstr "二氧化碳"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.FALLOUT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.FALLOUT_TAG"
+msgid "Nuclear Fallout"
+msgstr "核尘埃"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.HELIUM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.HELIUM_TAG"
+msgid "Helium Gas"
+msgstr "氦气"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.HYDROGEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.HYDROGEN_TAG"
+msgid "Hydrogen Gas"
+msgstr "氢气"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.METHANE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.METHANE_TAG"
+msgid "Natural Gas"
+msgstr "天然气"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.NOGAS_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.NOGAS_TAG"
+msgid "Select Gas"
+msgstr "选择气体"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.OXYGEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.OXYGEN_TAG"
+msgid "Oxygen Gas"
+msgstr "氧气"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.POXYGEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.POXYGEN_TAG"
+msgid "Polluted Oxygen"
+msgstr "污染氧"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.PROPANE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.PROPANE_TAG"
+msgid "Propane Gas"
+msgstr "丙烷"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.SOUR_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.SOUR_TAG"
+msgid "Sour Gas"
+msgstr "酸气"
+
+#. SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.STEAM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.GAS_ELEMENT_TAGS.STEAM_TAG"
+msgid "Steam"
+msgstr "蒸汽"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.ATMO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.ATMO_TAG"
+msgid "Atmo Suit"
+msgstr "气压服"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.CRITTERRANCH_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.CRITTERRANCH_TAG"
+msgid "Critter Ranch"
+msgstr "动物牧场"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.DORMITORY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.DORMITORY_TAG"
+msgid "Dormitory"
+msgstr "宿舍"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.FARM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.FARM_TAG"
+msgid "Farm"
+msgstr "农场"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.FOOD_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.FOOD_TAG"
+msgid "Refectory"
+msgstr "餐厅"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.INFIRMARY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.INFIRMARY_TAG"
+msgid "Infirmary"
+msgstr "医务室"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.JET_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.JET_TAG"
+msgid "Jet Suit"
+msgstr "喷气服"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.LEADSUIT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.LEADSUIT_TAG"
+msgid "Lead Suit"
+msgstr "铅服"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.NOINFO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.NOINFO_TAG"
+msgid "Select Info Tag"
+msgstr "选择信息标签"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.OBSERVATORY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.OBSERVATORY_TAG"
+msgid "Observatory"
+msgstr "天文台"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.RESEARCH_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.RESEARCH_TAG"
+msgid "Research Facility"
+msgstr "研究设施"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.RESTROOM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.RESTROOM_TAG"
+msgid "Restroom"
+msgstr "洗手间"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.ROCKET_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.ROCKET_TAG"
+msgid "Rocket Platform"
+msgstr "火箭平台"
+
+#. SignsTagsAndRibbons.STRINGS.INFO_TAGS.WORKSHOP_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.INFO_TAGS.WORKSHOP_TAG"
+msgid "Workshop"
+msgstr "工作室"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.A_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.A_TAG"
+msgid "A"
+msgstr "A"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.B_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.B_TAG"
+msgid "B"
+msgstr "B"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.C_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.C_TAG"
+msgid "C"
+msgstr "C"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.D_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.D_TAG"
+msgid "D"
+msgstr "D"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.E_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.E_TAG"
+msgid "E"
+msgstr "E"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.F_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.F_TAG"
+msgid "F"
+msgstr "F"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.G_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.G_TAG"
+msgid "G"
+msgstr "G"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.H_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.H_TAG"
+msgid "H"
+msgstr "H"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.I_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.I_TAG"
+msgid "I"
+msgstr "I"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.J_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.J_TAG"
+msgid "J"
+msgstr "J"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.K_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.K_TAG"
+msgid "K"
+msgstr "K"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.L_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.L_TAG"
+msgid "L"
+msgstr "L"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.M_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.M_TAG"
+msgid "M"
+msgstr "M"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.N_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.N_TAG"
+msgid "N"
+msgstr "N"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.NOLETTER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.NOLETTER_TAG"
+msgid "Letters Tag"
+msgstr "字母标签"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.O_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.O_TAG"
+msgid "O"
+msgstr "O"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.P_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.P_TAG"
+msgid "P"
+msgstr "P"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Q_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Q_TAG"
+msgid "Q"
+msgstr "Q"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.R_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.R_TAG"
+msgid "R"
+msgstr "R"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.S_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.S_TAG"
+msgid "S"
+msgstr "S"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.T_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.T_TAG"
+msgid "T"
+msgstr "T"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.U_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.U_TAG"
+msgid "U"
+msgstr "U"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.V_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.V_TAG"
+msgid "V"
+msgstr "V"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.W_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.W_TAG"
+msgid "W"
+msgstr "W"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.X_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.X_TAG"
+msgid "X"
+msgstr "X"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Y_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Y_TAG"
+msgid "Y"
+msgstr "Y"
+
+#. SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Z_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LETTER_TAGS.Z_TAG"
+msgid "Z"
+msgstr "Z"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.BRINE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.BRINE_TAG"
+msgid "Brine"
+msgstr "浓盐水"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.COOL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.COOL_TAG"
+msgid "Super Coolant"
+msgstr "超级冷却剂"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.CRUDEOIL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.CRUDEOIL_TAG"
+msgid "Crude Oil"
+msgstr "原油"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.ETHANOL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.ETHANOL_TAG"
+msgid "Ethanol"
+msgstr "乙醇"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_02_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_02_TAG"
+msgid "Liquid Oxygen"
+msgstr "液态氧"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_CO2_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_CO2_TAG"
+msgid "Liquid Carbon Dioxide"
+msgstr "液态二氧化碳"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_H_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.LIQUID_H_TAG"
+msgid "Liquid Hydrogen"
+msgstr "液态氢"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NAPHTHA_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NAPHTHA_TAG"
+msgid "Naphtha"
+msgstr "石脑油"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NOLIQUID_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NOLIQUID_TAG"
+msgid "Select Liquid"
+msgstr "选择液体"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NWASTE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.NWASTE_TAG"
+msgid "Nuclear Waste"
+msgstr "核废料"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.PETROLEUM_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.PETROLEUM_TAG"
+msgid "Petroleum"
+msgstr "石油"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.POLLUTEDWATER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.POLLUTEDWATER_TAG"
+msgid "Polluted Water"
+msgstr "污染水"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.SALTWATER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.SALTWATER_TAG"
+msgid "Salt Water"
+msgstr "盐水"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.VISCO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.VISCO_TAG"
+msgid "Visco-Gel"
+msgstr "粘性凝胶"
+
+#. SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.WATER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.LIQUID_ELEMENT_TAGS.WATER_TAG"
+msgid "Water"
+msgstr "水"
+
+#. SignsTagsAndRibbons.STRINGS.NEXT_ART_BUTTON.TEXT
+msgctxt "SignsTagsAndRibbons.STRINGS.NEXT_ART_BUTTON.TEXT"
+msgid "Next Tag"
+msgstr "下一个标签"
+
+#. SignsTagsAndRibbons.STRINGS.NEXT_ART_BUTTON.TOOLTIP
+msgctxt "SignsTagsAndRibbons.STRINGS.NEXT_ART_BUTTON.TOOLTIP"
+msgid "Changes Tag forward to another of the same tier. {Hotkey}"
+msgstr "向前更改为同一层级的另一个标签。{Hotkey}"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.EIGHT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.EIGHT_TAG"
+msgid "8"
+msgstr "8"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.FIVE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.FIVE_TAG"
+msgid "5"
+msgstr "5"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.FOUR_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.FOUR_TAG"
+msgid "4"
+msgstr "4"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.NINE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.NINE_TAG"
+msgid "9"
+msgstr "9"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.NONUMBER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.NONUMBER_TAG"
+msgid "Numbers Tag"
+msgstr "数字标签"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.ONE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.ONE_TAG"
+msgid "1"
+msgstr "1"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.SEVEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.SEVEN_TAG"
+msgid "7"
+msgstr "7"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.SIX_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.SIX_TAG"
+msgid "6"
+msgstr "6"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.THREE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.THREE_TAG"
+msgid "3"
+msgstr "3"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.TWO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.TWO_TAG"
+msgid "2"
+msgstr "2"
+
+#. SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.ZERO_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.NUMBER_TAGS.ZERO_TAG"
+msgid "0"
+msgstr "0"
+
+#. SignsTagsAndRibbons.STRINGS.SIDESCREEN.TITLE
+msgctxt "SignsTagsAndRibbons.STRINGS.SIDESCREEN.TITLE"
+msgid "Select Variant"
+msgstr "选择变体"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.AGRICULTURE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.AGRICULTURE_TAG"
+msgid "Agriculture"
+msgstr "农业"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.COMPOSTABLE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.COMPOSTABLE_TAG"
+msgid "Compostables"
+msgstr "可堆肥物"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CONSUMORE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CONSUMORE_TAG"
+msgid "Consumable Ore"
+msgstr "可消耗矿石"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.COOKINGING_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.COOKINGING_TAG"
+msgid "Cooking Ingredient"
+msgstr "烹饪原料"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CRITTEREGG_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CRITTEREGG_TAG"
+msgid "Critter Egg"
+msgstr "小动物蛋"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CULSOIL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.CULSOIL_TAG"
+msgid "Cultivable Soil"
+msgstr "可耕种土壤"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.EDIBLES_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.EDIBLES_TAG"
+msgid "Edibles"
+msgstr "食物"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.FILTRATION_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.FILTRATION_TAG"
+msgid "Filtration Medium"
+msgstr "过滤介质"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.INDING_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.INDING_TAG"
+msgid "Industrial Ingredient"
+msgstr "工业原料"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.LIQUEFIABLE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.LIQUEFIABLE_TAG"
+msgid "Liquefiable"
+msgstr "可液化"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MANUFACT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MANUFACT_TAG"
+msgid "Manufactured Material"
+msgstr "制造材料"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MEDSUP_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MEDSUP_TAG"
+msgid "Medical Supplies"
+msgstr "医疗用品"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.METALORE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.METALORE_TAG"
+msgid "Metal Ore"
+msgstr "金属矿石"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MISC_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.MISC_TAG"
+msgid "Miscellaneous"
+msgstr "杂项"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.NOSOLID_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.NOSOLID_TAG"
+msgid "Select Solid"
+msgstr "选择固体"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.ORGANIC_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.ORGANIC_TAG"
+msgid "Organic"
+msgstr "有机"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.RARE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.RARE_TAG"
+msgid "Rare Resource"
+msgstr "稀有资源"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.RAWMINERAL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.RAWMINERAL_TAG"
+msgid "Raw Mineral"
+msgstr "原始矿物"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.REFMETAL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.REFMETAL_TAG"
+msgid "Refined Metal"
+msgstr "精炼金属"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.REFMINERAL_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.REFMINERAL_TAG"
+msgid "Refined Mineral"
+msgstr "精炼矿物"
+
+#. SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.SEEDS_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SOLID_ELEMENT_TAGS.SEEDS_TAG"
+msgid "Seeds"
+msgstr "种子"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.CLOSEDCY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.CLOSEDCY_TAG"
+msgid "Closed Cycle"
+msgstr "封闭循环"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.GASSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.GASSEN_TAG"
+msgid "Gas Element Sensor"
+msgstr "气体元素传感器"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.LIQUIDSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.LIQUIDSEN_TAG"
+msgid "Liquid Element Sensor"
+msgstr "液体元素传感器"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.MOTIONSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.MOTIONSEN_TAG"
+msgid "Motion Sensor"
+msgstr "运动传感器"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.NOSYS_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.NOSYS_TAG"
+msgid "Select System Tag"
+msgstr "选择系统标签"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.ORGANICCY_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.ORGANICCY_TAG"
+msgid "Organic Recycle"
+msgstr "有机回收"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.POWER_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.POWER_TAG"
+msgid "Power Toggle"
+msgstr "电源开关"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.POWERSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.POWERSEN_TAG"
+msgid "Power Sensor"
+msgstr "电力传感器"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.PRESSURESEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.PRESSURESEN_TAG"
+msgid "Pressure Sensor"
+msgstr "压力传感器"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.RECYCLE_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.RECYCLE_TAG"
+msgid "Recycle"
+msgstr "回收"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.TEMPSEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.TEMPSEN_TAG"
+msgid "Temperature Sensor"
+msgstr "温度传感器"
+
+#. SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.TIMESEN_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.SYSTEM_TAGS.TIMESEN_TAG"
+msgid "Time Sensor"
+msgstr "时间传感器"
+
+#. SignsTagsAndRibbons.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "SignsTagsAndRibbons.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr "Pholith"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.ARROW_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.ARROW_TAG"
+msgid "Direction"
+msgstr "方向"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.BOTHARROW_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.BOTHARROW_TAG"
+msgid "Both Directions"
+msgstr "双向"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.DIAGARROW_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.DIAGARROW_TAG"
+msgid "Diagonal Direction"
+msgstr "对角线方向"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.GASPUMP_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.GASPUMP_TAG"
+msgid "Gas Pump"
+msgstr "气体泵"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.LIQUIDPUMP_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.LIQUIDPUMP_TAG"
+msgid "Liquid Pump"
+msgstr "液体泵"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.NOSUT_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.NOSUT_TAG"
+msgid "Select Utility Tag"
+msgstr "选择公用设施标签"
+
+#. SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.SOLIDCON_TAG
+msgctxt "SignsTagsAndRibbons.STRINGS.UTILITY_TAGS.SOLIDCON_TAG"
+msgid "Solid Conveyor"
+msgstr "固体传送带"

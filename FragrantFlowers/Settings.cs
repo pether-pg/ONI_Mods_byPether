@@ -27,7 +27,7 @@ namespace FragrantFlowers
             }
         }
 
-        public static void PLib_Initalize()
+        public static void PLib_Initialize()
         {
             _instance = POptions.ReadSettings<Settings>();
         }
@@ -71,7 +71,7 @@ namespace FragrantFlowers
 
             [JsonProperty]
             [Limit(0.1f, 0.75f)]
-            [Option("Average Density", "How densly will the flowers spawn?")]
+            [Option("Average Density", "How densely will the flowers spawn?")]
             public float AverageDensity { get; set; }
 
             [JsonProperty]

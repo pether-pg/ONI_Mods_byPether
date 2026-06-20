@@ -3,12 +3,16 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class NanobotUpgrade_SpawnIncreaseConfig : IEntityConfig
+    class NanobotUpgrade_SpawnIncreaseConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "NanobotUpgrade_SpawnIncrease";
         public const MutationVectors.Vectors VECTOR = MutationVectors.Vectors.Res_Replication;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

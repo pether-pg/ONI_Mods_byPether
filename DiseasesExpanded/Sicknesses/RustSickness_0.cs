@@ -105,14 +105,14 @@ namespace DiseasesExpanded
 
                 return new List<Descriptor>()
                 {
-                    new Descriptor( STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.NAME.Replace("{CHANCE}", chances[0].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_1.NAME),
-                                    STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.TOOLTIP.Replace("{CHANCE}", chances[0].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_1.NAME),
+                    new Descriptor( STRINGS.SYMPTOMS.DEVELOPMENT_CHANCE.NAME.Replace("{CHANCE}", chances[0].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_1.NAME),
+                                    STRINGS.SYMPTOMS.DEVELOPMENT_CHANCE.TOOLTIP.Replace("{CHANCE}", chances[0].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_1.NAME),
                                     Descriptor.DescriptorType.Symptom),
-                    new Descriptor( STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.NAME.Replace("{CHANCE}", chances[1].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
-                                    STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.TOOLTIP.Replace("{CHANCE}", chances[1].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
+                    new Descriptor( STRINGS.SYMPTOMS.DEVELOPMENT_CHANCE.NAME.Replace("{CHANCE}", chances[1].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
+                                    STRINGS.SYMPTOMS.DEVELOPMENT_CHANCE.TOOLTIP.Replace("{CHANCE}", chances[1].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_2.NAME),
                                     Descriptor.DescriptorType.Symptom),
-                    new Descriptor( STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.NAME.Replace("{CHANCE}", chances[2].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_3.NAME),
-                                    STRINGS.SYMPTHOMS.DEVELOPMENT_CHANCE.TOOLTIP.Replace("{CHANCE}", chances[2].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_3.NAME),
+                    new Descriptor( STRINGS.SYMPTOMS.DEVELOPMENT_CHANCE.NAME.Replace("{CHANCE}", chances[2].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_3.NAME),
+                                    STRINGS.SYMPTOMS.DEVELOPMENT_CHANCE.TOOLTIP.Replace("{CHANCE}", chances[2].ToString("F0")).Replace("{SICKNESS}", STRINGS.DISEASES.RUST_SICKNESS_3.NAME),
                                     Descriptor.DescriptorType.Symptom)
                 };
             }

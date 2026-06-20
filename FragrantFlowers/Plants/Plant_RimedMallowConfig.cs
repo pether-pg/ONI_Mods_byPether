@@ -7,23 +7,24 @@ using Klei.AI;
 
 namespace FragrantFlowers
 {
-    public class Plant_RimedMallowConfig : IEntityConfig
-    {
-        public string[] GetDlcIds()
-        {
-            return DlcManager.AVAILABLE_EXPANSION1_ONLY;
-        }
+    public class Plant_RimedMallowConfig : IEntityConfig, IHasDlcRestrictions
+	{
+		public string[] GetDlcIds() => (string[])null; // Obsolete
 
-        //===> BASE INFORMATION <=========================================
-        public const string ID = "RimedMallowPlant";
+		public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+		public string[] GetForbiddenDlcIds() => (string[])null;
+
+		//===> BASE INFORMATION <=========================================
+		public const string ID = "RimedMallowPlant";
 		public const string SEED_ID = "IceMallowSeed";
 		public const string PlantKanim = "plant_rimedmallow_kanim";
         public const string SeedKanim = "seed_rimedmallow_kanim";
-		public const int WIDTH = 1;
-		public const int HEIGHT = 3;
+        public const int WIDTH = 1;
+        public const int HEIGHT = 3;
 
-		//===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
-		private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
+        //===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
+        private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
         {
             grow = "basic_grow",
             grow_pst = "basic_grow_pst",
@@ -35,59 +36,60 @@ namespace FragrantFlowers
         //===> TEMPERATURE SETTINGS <=====================================
         public const float DefaultTemperature = 253.15f;       // -20°C: Normal Temperature
         public const float TemperatureLethalLow = 118.15f;     //-155ºC: Plant will die (Lowest Temp)
-        public const float TemperatureWarningLow = 183.15f;    // -60°C: Plant will stop growing (Lowest Temp)
-        public const float TemperatureWarningHigh = 273.15f;   //   0°C: Plant will stop growing (Highest Temp)
+        public const float TemperatureWarningLow = 223.15f;    // -50°C: Plant will stop growing (Lowest Temp)
+        public const float TemperatureWarningHigh = 263.15f;   // -10°C: Plant will stop growing (Highest Temp)
         public const float TemperatureLethalHigh = 283.15f;    //  10°C: Plant will die (Highest Temp)
 
         public const float Fertilization = 0.0016666667f;         // Ice Fertilization Needed
 
         public ComplexRecipe Recipe;
 
-		//===> DEFINE THE BASE TEMPLATE <=====================================================================
-		public GameObject CreatePrefab()
-		{
+        //===> DEFINE THE BASE TEMPLATE <=====================================================================
+        public GameObject CreatePrefab()
+        {
 
-			float mass = 2f;
-			EffectorValues tier = DECOR.BONUS.TIER1;
-			GameObject gameObject = EntityTemplates.CreatePlacedEntity(
-				ID, 
-				STRINGS.PLANTS.RIMEDMALLOW.NAME,
-				STRINGS.PLANTS.RIMEDMALLOW.DESC, 
-				mass, 
-				Assets.GetAnim(PlantKanim), 
-				"idle_empty", 
-				Grid.SceneLayer.BuildingFront,
-				WIDTH,
-				HEIGHT, 
-				tier, 
-				default(EffectorValues), 
-				SimHashes.Creature, 
-				new List<Tag> { GameTags.Hanging },
-				253.15f
-				);
+            float mass = 2f;
+            EffectorValues tier = DECOR.BONUS.TIER1;
+            GameObject gameObject = EntityTemplates.CreatePlacedEntity(
+                ID,
+                STRINGS.PLANTS.RIMEDMALLOW.NAME,
+                STRINGS.PLANTS.RIMEDMALLOW.DESC,
+                mass,
+                Assets.GetAnim(PlantKanim),
+                "idle_empty",
+                Grid.SceneLayer.BuildingFront,
+                WIDTH,
+                HEIGHT,
+                tier,
+                default(EffectorValues),
+                SimHashes.Creature,
+                new List<Tag> { GameTags.Hanging },
+                253.15f
+                );
 
-			EntityTemplates.MakeHangingOffsets(gameObject, WIDTH, HEIGHT);
-			EntityTemplates.ExtendEntityToBasicPlant(
-				gameObject,
-				TemperatureLethalLow,
-				TemperatureWarningLow,
-				TemperatureWarningHigh,
-				TemperatureLethalHigh,
-				null, 
-				true, 
-				0f, 
-				0.15f,
-				Crop_CottonBollConfig.ID, 
-				true, 
-				true,
-				true, 
-				true,
-				2400f,
-				0f, 
-				9800f, 
-				"RimedMallowOriginal",
-				"Rimed Mallow Original"
-				);
+            EntityTemplates.MakeHangingOffsets(gameObject, WIDTH, HEIGHT);
+            EntityTemplates.ExtendEntityToBasicPlant(
+                gameObject,
+                TemperatureLethalLow,
+                TemperatureWarningLow,
+                TemperatureWarningHigh,
+                TemperatureLethalHigh,
+                null,
+                true,
+                0f,
+                0.15f,
+                Crop_CottonBollConfig.ID,
+                true,
+                true,
+                true,
+                false,// does it require Backwall_Foundation?
+                true,
+                2400f,
+                0f,
+                9800f,
+                "RimedMallowOriginal",
+                "Rimed Mallow Original"
+                );
 
 			EntityTemplates.ExtendPlantToFertilizable(gameObject, new PlantElementAbsorber.ConsumeInfo[]
 			{
@@ -102,7 +104,8 @@ namespace FragrantFlowers
 			
 			EntityTemplates.MakeHangingOffsets(EntityTemplates.CreateAndRegisterPreviewForPlant(
 				EntityTemplates.CreateAndRegisterSeedForPlant(
-					gameObject, 
+					gameObject,
+					(IHasDlcRestrictions)this,
 					SeedProducer.ProductionType.Harvest, 
 					SEED_ID,
 					STRINGS.SEEDS.RIMEDMALLOW.SEED_NAME,
@@ -138,16 +141,16 @@ namespace FragrantFlowers
 			def.singleEmitQuantity = 100000;
 			gameObject.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = MallowScent.ID;
 
-			return gameObject;
-		}
+            return gameObject;
+        }
 
-		public void OnPrefabInit(GameObject inst)
-		{
-		}
+        public void OnPrefabInit(GameObject inst)
+        {
+        }
 
-		public void OnSpawn(GameObject inst)
-		{
-		}
+        public void OnSpawn(GameObject inst)
+        {
+        }
 
-	}
+    }
 }

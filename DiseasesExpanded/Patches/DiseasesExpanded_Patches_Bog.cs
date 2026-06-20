@@ -32,7 +32,7 @@ namespace DiseasesExpanded
         {
             public static void Postfix(ref GameObject __result)
             {
-                if (!Settings.Instance.BogInsects.IncludeDisease)
+                if (!Settings.Instance.BogInsects.IncludeDisease || !DlcManager.IsContentSubscribed(DlcManager.EXPANSION1_ID))
                     return;
 
                 DiseaseDropper.Def def = __result.AddOrGetDef<DiseaseDropper.Def>();
@@ -41,6 +41,19 @@ namespace DiseasesExpanded
                 def.averageEmitPerSecond = 1000;
                 def.singleEmitQuantity = 100000;
                 __result.AddOrGet<DiseaseSourceVisualizer>().alwaysShowDisease = BogInsects.ID;
+            }
+        }
+
+        [HarmonyPatch(typeof(MosquitoHungerMonitor))]
+        [HarmonyPatch("OnPrefabInit")]
+        public static class MosquitoHungerMonitor_OnPrefabInit_Patch
+        {
+            public static void Postfix()
+            {
+                if (!Settings.Instance.BogInsects.IncludeDisease || !DlcManager.IsContentSubscribed(DlcManager.DLC4_ID))
+                    return;
+
+                MosquitoHungerMonitor.ImmunityEffectNames = MosquitoHungerMonitor.ImmunityEffectNames.Append(MudMaskConfig.EffectID);
             }
         }
     }

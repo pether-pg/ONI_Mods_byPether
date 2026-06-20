@@ -3,12 +3,16 @@ using System.Collections.Generic;
 
 namespace FragrantFlowers
 {
-    class SpinosaCakeConfig : IEntityConfig
+    class SpinosaCakeConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "SpinosaCake";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -23,9 +27,13 @@ namespace FragrantFlowers
 
             ComplexRecipe.RecipeElement[] ingredients = new ComplexRecipe.RecipeElement[3]
             {
-              new ComplexRecipe.RecipeElement(SpinosaSyrupConfig.ID, 1f),
-              new ComplexRecipe.RecipeElement(ColdWheatConfig.SEED_ID, 3f),
-              new ComplexRecipe.RecipeElement(RawEggConfig.ID, 1f)
+                new ComplexRecipe.RecipeElement(SpinosaSyrupConfig.ID, 1f),
+                new ComplexRecipe.RecipeElement(new Tag[]
+                {
+                    ColdWheatConfig.SEED_ID,
+                    FernFoodConfig.ID
+                }, 2f),
+                new ComplexRecipe.RecipeElement(RawEggConfig.ID, 1f)
             };
             ComplexRecipe.RecipeElement[] results = new ComplexRecipe.RecipeElement[1]
             {
@@ -40,7 +48,7 @@ namespace FragrantFlowers
                 sortOrder = 1
             };
 
-            EdiblesManager.FoodInfo info = new EdiblesManager.FoodInfo(ID, "EXPANSION1_ID", 4200000f, 5, 255.15f, 277.15f, 2400f, true); // see TUNING.FOOD.FOOD_TYPES.BERRY_PIE
+            EdiblesManager.FoodInfo info = new EdiblesManager.FoodInfo(ID, 6000000f, 5, 255.15f, 277.15f, 2400f, true, GetRequiredDlcIds(), GetForbiddenDlcIds()); // see TUNING.FOOD.FOOD_TYPES.BERRY_PIE
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.FOOD.SPINOSACAKE.NAME, STRINGS.FOOD.SPINOSACAKE.DESC, 1f, true, Assets.GetAnim("food_rosecake_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             return EntityTemplates.ExtendEntityToFood(looseEntity, info);
         }

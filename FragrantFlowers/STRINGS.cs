@@ -87,7 +87,7 @@ namespace FragrantFlowers
             public class SPINOSACAKE
             {
                 public static LocString NAME = UI.FormatAsLink("Spinosa Cake", SpinosaCakeConfig.ID);
-                public static LocString DESC = $"A delicious cake made from {UI.FormatAsLink("Raw Egg", RawEggConfig.ID)} and {UI.FormatAsLink("Sleat Wheet Grains", "ColdWheatSeed")} with {UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Crop_SpinosaHipsConfig.ID)} on top.";
+                public static LocString DESC = $"A delicious cake made from {UI.FormatAsLink("Raw Egg", RawEggConfig.ID)} and {UI.FormatAsLink("Sleet Wheat Grains", "ColdWheatSeed")} with {UI.FormatAsLink(CROPS.SPINOSAHIPS.NAME, Crop_SpinosaHipsConfig.ID)} on top.";
             }
         }
 
@@ -115,7 +115,7 @@ namespace FragrantFlowers
             public class SMELLEDMALLOW
             {
                 public static LocString NAME = (LocString)"Smelled Mallow";
-                public static LocString DESC = (LocString)"This duplicant just smelled some Mallow and is invigorted to work faster.";
+                public static LocString DESC = (LocString)"This duplicant just smelled some Mallow and is invigorated to work faster.";
             }
         }
 
@@ -135,8 +135,8 @@ namespace FragrantFlowers
 
             public class RIMEDMALLOW
             {
-                public static LocString SEED_NAME = UI.FormatAsLink("Iced Mallow Seed", Plant_RimedMallowConfig.ID.ToUpperInvariant());
-                public static LocString SEED_DESC = $"The chill {UI.FormatAsLink("Seed", "PLANTS")} of a " + UI.FormatAsLink("Iced Mallow", Plant_RimedMallowConfig.ID) + ".";
+                public static LocString SEED_NAME = UI.FormatAsLink("Rimed Mallow Seed", Plant_RimedMallowConfig.ID.ToUpperInvariant());
+                public static LocString SEED_DESC = $"The chill {UI.FormatAsLink("Seed", "PLANTS")} of a " + UI.FormatAsLink("Rimed Mallow", Plant_RimedMallowConfig.ID) + ".";
             }
         }
 
@@ -145,14 +145,14 @@ namespace FragrantFlowers
             public class SPINOSA
             {
                 public static LocString NAME = UI.FormatAsLink("Blooming Spinosa", Plant_SpinosaConfig.ID);
-                public static LocString DESC = $"A rather thorny sten plant that blooms with a beautiful {UI.FormatAsLink("Spinosa Rose", Crop_SpinosaRoseConfig.ID)}.";
+                public static LocString DESC = $"A rather thorny stem plant that blooms with a beautiful {UI.FormatAsLink("Spinosa Rose", Crop_SpinosaRoseConfig.ID)}.";
                 public static LocString DOMESTICATED_DESC = $"In domesticated environment this crop requires copious amounts of {UI.FormatAsLink("Water", "WATER")}, and {UI.FormatAsLink("Dirt", "DIRT")} as fertilizer. Also requires direct exposure to sunlight.";
             }
 
             public class SUPERSPINOSA
             {
                 public static LocString NAME = UI.FormatAsLink("Fruiting Spinosa", Plant_SuperSpinosaConfig.ID);
-                public static LocString DESC = $"A rather thorny sten plant that produces an edible {UI.FormatAsLink("Spinosa Hips", Crop_SpinosaHipsConfig.ID)}.";
+                public static LocString DESC = $"A rather thorny stem plant that produces an edible {UI.FormatAsLink("Spinosa Hips", Crop_SpinosaHipsConfig.ID)}.";
                 public static LocString DOMESTICATED_DESC = $"In domesticated environment this crop requires copious amounts of {UI.FormatAsLink("Water", "WATER")}, and {UI.FormatAsLink("Dirt", "DIRT")} as fertilizer. Also requires direct exposure to sunlight.";
             }
 
@@ -229,14 +229,6 @@ namespace FragrantFlowers
                 public static LocString NAME = UI.FormatAsLink("Rimed Spice", Crop_CottonBollConfig.SPICE_ID);
                 public static LocString DESC = "Fresh like an icicle in the morning, this spice invigorates duplicants with icy energy.";
             }
-        }
-
-        public class CODEX
-        {
-            public static LocString AROMATICPLANTSUBTITLE = "Aromatic Plant";
-            public static LocString FOODPLANTSUBTITLE = "Food Plant";
-            public static LocString PERFUMEINGREDIENTTITLE = "Perfume Ingredient";
-            public static LocString CONSUMABLETTITLE = "Consumable";
         }
 
         public class TRANSLATION

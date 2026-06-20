@@ -118,11 +118,11 @@ namespace DiseasesExpanded
 
                 return new List<Descriptor>()
                 {
-                    new Descriptor( STRINGS.SYMPTHOMS.POWER_USAGE.NAME.Replace("{POWER}", watt.value.ToString()),
-                                    STRINGS.SYMPTHOMS.POWER_USAGE.TOOLTIP.Replace("{POWER}", watt.value.ToString()),
+                    new Descriptor( STRINGS.SYMPTOMS.POWER_USAGE.NAME.Replace("{POWER}", watt.value.ToString()),
+                                    STRINGS.SYMPTOMS.POWER_USAGE.TOOLTIP.Replace("{POWER}", watt.value.ToString()),
                                     Descriptor.DescriptorType.Symptom),
-                    new Descriptor( STRINGS.SYMPTHOMS.DEATH_CHANCE.NAME.Replace("{CHANCE}", chance.ToString()),
-                                    STRINGS.SYMPTHOMS.DEATH_CHANCE.TOOLTIP.Replace("{CHANCE}", chance.ToString()),
+                    new Descriptor( STRINGS.SYMPTOMS.DEATH_CHANCE.NAME.Replace("{CHANCE}", chance.ToString()),
+                                    STRINGS.SYMPTOMS.DEATH_CHANCE.TOOLTIP.Replace("{CHANCE}", chance.ToString()),
                                     Descriptor.DescriptorType.Symptom)
                 };
             }

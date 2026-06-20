@@ -42,7 +42,7 @@ namespace DiseasesExpanded
                 if (sicknesses == null)
                     return false;
 
-                foreach (SicknessInstance si in sicknesses)
+                foreach (SicknessInstance si in sicknesses.ModifierList)
                     foreach (ExposureType et in TUNING.GERM_EXPOSURE.TYPES)
                         if (et.sickness_id == si.Sickness.id && !string.IsNullOrEmpty(et.germ_id))
                             return true;

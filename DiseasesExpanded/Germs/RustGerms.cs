@@ -19,9 +19,9 @@ namespace DiseasesExpanded
                 infect_immediately = true,
                 excluded_traits = new List<string>() { },
                 base_resistance = 0,
-                excluded_effects = new List<string>() 
+                excluded_effects = new List<string>()
                 {
-                    RustSickness_0.RECOVERY_ID
+                    RustSickness_0.RECOVERY_ID // Higher stages use the same EffectId
                 }
             };
         }
@@ -40,7 +40,7 @@ namespace DiseasesExpanded
                   temperature_half_lives: new Disease.RangeInfo(10f, 1200f, 1200f, 10f),
                   pressure_range: new Disease.RangeInfo(0.0f, 0.0f, 1000f, 1000f),
                   pressure_half_lives: Disease.RangeInfo.Idempotent(),
-                  1.0f,
+                  5.0f,
                   statsOnly)
         {
             UVHalfLife = UVLampSupport.UVHalfLife_GetFromRadKillRate(radiationKillRate);
@@ -56,15 +56,17 @@ namespace DiseasesExpanded
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_diffScale_minDiffCount(Element.State.Solid, 0.4f, 3000f, 1200f, 1E-06f, 1000000));
 
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.BleachStone));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.OxyRock));
             this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.Rust));
 
             // Gas
 
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, -60f, 1200f, 100000f, 0.005f, 5100));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.StateGrowthRule_maxPerKg_diffScale_minDiffCount(Element.State.Gas, 250f, 6000f, 1200f, 100000f, 0.005f, 5100));
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.ThriveAndSpreadInElement(SimHashes.Steam));
-            this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveAndSpreadInElement(SimHashes.CarbonDioxide));
             this.AddGrowthRule((GrowthRule)GermGrowthRules.GrowthLike_Slimelung_Oxygen(SimHashes.Oxygen));
+            this.AddGrowthRule((GrowthRule)GermGrowthRules.GrowthLike_Slimelung_Oxygen(SimHashes.Hydrogen));
 
             this.AddGrowthRule((GrowthRule)GermGrowthRules.SurviveInElement(SimHashes.ChlorineGas));
 

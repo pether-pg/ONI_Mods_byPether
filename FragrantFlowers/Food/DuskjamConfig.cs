@@ -3,12 +3,16 @@ using System.Collections.Generic;
 
 namespace FragrantFlowers
 {
-    class DuskjamConfig : IEntityConfig
+    class DuskjamConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "Duskjam";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {
@@ -39,7 +43,7 @@ namespace FragrantFlowers
                 sortOrder = 1
             };
 
-            EdiblesManager.FoodInfo info = new EdiblesManager.FoodInfo(ID, "EXPANSION1_ID", 2400000f, 3, 255.15f, 277.15f, 19200f, true); // see TUNING.FOOD.FOOD_TYPES.WORMSUPERFOOD
+            EdiblesManager.FoodInfo info = new EdiblesManager.FoodInfo(ID, 2400000f, 3, 255.15f, 277.15f, 19200f, true, GetRequiredDlcIds(), GetForbiddenDlcIds()); // see TUNING.FOOD.FOOD_TYPES.WORMSUPERFOOD
             GameObject looseEntity = EntityTemplates.CreateLooseEntity(ID, STRINGS.FOOD.DUSKJAM.NAME, STRINGS.FOOD.DUSKJAM.DESC, 1f, true, Assets.GetAnim("food_duskjam_kanim"), "object", Grid.SceneLayer.Front, EntityTemplates.CollisionShape.RECTANGLE, 0.8f, 0.4f, true);
             return EntityTemplates.ExtendEntityToFood(looseEntity, info);
         }

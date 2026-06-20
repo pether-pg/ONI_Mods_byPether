@@ -40,6 +40,7 @@ namespace SignsTagsAndRibbons
                 "art_propane_gas", "art_propane_liquid", "art_radwaste_liquid", "art_salt_water", "art_sour_gas", "art_steam_gas", "art_super_coolant", "art_visco_gel",
                 "art_water"
             };
+            go.AddOrGet<UserNameable>();
         }
     }
 }

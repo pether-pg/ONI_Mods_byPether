@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class MudMaskConfig : IEntityConfig
+    class MudMaskConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "MudMask";
         public const string EffectID = "MudMaskEffect";
@@ -15,7 +15,11 @@ namespace DiseasesExpanded
             return (effects != null && effects.HasEffect(EffectID));
         }
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

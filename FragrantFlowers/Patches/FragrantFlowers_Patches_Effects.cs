@@ -23,6 +23,34 @@ namespace FragrantFlowers
             }
         }
 
+        [HarmonyPatch(typeof(EntityTemplates))]
+        [HarmonyPatch("ExtendEntityToFertileCreature")]
+        [HarmonyPatch(new Type[] { 
+            typeof(GameObject),             // GameObject prefab
+            typeof(IHasDlcRestrictions),    // IHasDlcRestrictions dlcRestrictions
+            typeof(string),                 // string eggId
+            typeof(string),                 // string eggName
+            typeof(string),                 // string eggDesc
+            typeof(string),                 // string eggAnim
+            typeof(float),                  // float eggMass
+            typeof(string),                 // string babyId
+            typeof(float),                  // float fertilityCycles
+            typeof(float),                  // float incubationCycles
+            typeof(List<FertilityMonitor.BreedingChance>),  // List<FertilityMonitor.BreedingChance> eggChances
+            typeof(int),                    // int eggSortOrder = -1
+            typeof(bool),                   // bool is_ranchable = true
+            typeof(bool),                   // bool add_fish_overcrowding_monitor = false
+            typeof(float),                  // float egg_anim_scale = 1f
+            typeof(bool)                    // bool deprecated = false
+        })]
+        public static class EntityTemplates_ExtendEntityToFertileCreature_Patch
+        {
+            public static void Postfix(ref GameObject __result)
+            {
+                __result.AddOrGet<LavenderSmelling>();
+            }
+        }
+
         [HarmonyPatch(typeof(Artable))]
         [HarmonyPatch("OnCompleteWork")]
         public static class Artable_OnCompleteWork_Patch

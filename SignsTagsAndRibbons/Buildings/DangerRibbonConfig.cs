@@ -31,6 +31,7 @@ namespace SignsTagsAndRibbons
         public override void DoPostConfigureComplete(GameObject go)
         {
             GeneratedBuildings.RemoveLoopingSounds(go);
+            go.AddOrGet<UserNameable>();
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class AlienSicknessCureConfig : IEntityConfig
+    class AlienSicknessCureConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "AlienSicknessCure";
         public const string EFFECT_ID = "AlienSicknessCureEffect";
@@ -22,7 +22,11 @@ namespace DiseasesExpanded
             return effect;
         }
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

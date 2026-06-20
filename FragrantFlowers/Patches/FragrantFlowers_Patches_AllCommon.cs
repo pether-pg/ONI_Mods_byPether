@@ -15,11 +15,11 @@ namespace FragrantFlowers
         [HarmonyPatch("Init")]
         public static class ColorSet_Init_Patch
         {
-            static bool initalized = false;
+            static bool initialized = false;
 
             public static void Postfix(ColorSet __instance)
             {
-                if (initalized)
+                if (initialized)
                     return;
 
                 Dictionary<string, Color32> namedLookup = Traverse.Create(__instance).Field("namedLookup").GetValue<Dictionary<string, Color32>>();
@@ -27,7 +27,7 @@ namespace FragrantFlowers
                 namedLookup.Add(MallowScent.ID, MallowScent.colorValue);
                 namedLookup.Add(LavenderScent.ID, LavenderScent.colorValue);
 
-                initalized = true;
+                initialized = true;
             }
         }
 

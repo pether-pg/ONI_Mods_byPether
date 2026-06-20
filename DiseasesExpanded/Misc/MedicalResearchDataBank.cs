@@ -4,10 +4,16 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class MedicalResearchDataBank : IEntityConfig
+    class MedicalResearchDataBank : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = nameof(MedicalResearchDataBank);
         public const string MedicalResearchTypeId = "medical";
+
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public static void GrantResearchPoints(GameObject go, float amount = 1)
         {
@@ -82,8 +88,6 @@ namespace DiseasesExpanded
                 return true;
             return false;
         }
-
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
 
         public void OnPrefabInit(GameObject inst)
         {

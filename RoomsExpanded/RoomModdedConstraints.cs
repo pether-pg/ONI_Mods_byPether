@@ -26,6 +26,8 @@ namespace RoomsExpanded
             "ToePlant",         // from DLC - Tranquil Toes
             "IceFlower",        // from Frost Pack DLC
             "GardenDecorPlant", // from Prehistoric DLC
+            "FilamentPlant",    // from Aqua Planet DLC
+            "Bulbloom",         // from Aqua Planet DLC
             "FrostBlossom",     // from Omni Flora
             "IcyShroom",        // from Omni Flora
             "MyrthRose",        // from Omni Flora
