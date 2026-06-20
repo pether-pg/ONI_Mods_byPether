@@ -1,0 +1,1411 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+"Language: ru\n" 
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.DESC"
+msgid "Germcatchers collect germ samples for medical study and vaccine production."
+msgstr "Микробоуловители собирают образцы микробов для медицинских исследований и производства вакцин."
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.EFFECT"
+msgid "Gathers ambient <link=\"DISEASE\">germs</link> and stores them in the <link=\"TESTSAMPLE\">flasks</link> for future research at an <link=\"APOTHECARY\">Apothecary</link> and vaccine production."
+msgstr "Собирает окружающие <link=\"DISEASE\">микробы</link> и сохраняет их в <link=\"TESTSAMPLE\">колбы</link> для будущих исследований в <link=\"APOTHECARY\">аптеке</link> и производства вакцин."
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.GERMCATCHER.NAME"
+msgid "Germcatcher"
+msgstr "Микробоуловитель"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.DESC"
+msgid "Shields the asteroid from cosmic radiation."
+msgstr "Защищает астероид от космической радиации."
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.EFFECT"
+msgid "When powered, generates shield around the asteroid to protect the surface from cosmic <link=\"RADIATION\">Radiation</link>. \n\nRequires line of sight to space."
+msgstr "Во время работы создает барьер, защищающий поверхность от космической <link=\"RADIATION\">радиации</link>. \n\nДля функционирования здания требуется открытый доступ к космической среде."
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.SHIELDGENERATOR.NAME"
+msgid "Shield Generator"
+msgstr "Генератор радщита"
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.DESC"
+msgid "Vaccines produced here can grant your duplicants immunity for various diseases."
+msgstr "Производимые в этом строении вакцины дают вашим дубликантам иммунитет к различным болезням."
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECT
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.EFFECT"
+msgid "Vaccine Apothecary uses <link=\"RADIATION\">Radiation</link> to weaken <link=\"DISEASE\">germs</link> stored in a <link=\"TESTSAMPLE\">flasks</link> to produce life-saving vaccines.\n\nIt must be operated by highly-trained <link=\"ROLES\">medical</link> personel and it is suggested to use radiation protection for the time of vaccine preparation."
+msgstr "Ядерная аптека использует <link=\"RADIATION\">радиацию</link> для ослабления хранящихся в <link=\"TESTSAMPLE\">колбах</link> <link=\"DISEASE\">микробов</link> и их дальнейшего использования в производстве жизненно важных вакцин. \n\nСтроением должен управлять высококвалифицированный <link=\"ROLES\">медицинский</link> персонал. Во время изготовления вакцин рекомендуется использовать радиационную защиту."
+
+#. DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME
+msgctxt "DiseasesExpanded.STRINGS.BUILDINGS.VACCINEAPOTHECARY.NAME"
+msgid "Vaccine Apothecary"
+msgstr "Ядерная аптека"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.DESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.DESC"
+msgid "Conducted in laboratory conditions, forces Unstable Virus to mutate back it's severity genoms to a weaker form."
+msgstr "Данное лабораторное исследование снижает тяжесть заражения нестабильным вирусом."
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.NAME
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.NAME"
+msgid "<link=\"MUTATINGGERMS\">Controlled Severity Mutation</link>"
+msgstr "<link=\"MUTATINGGERMS\">Контролируемая мутация тяжести</link>"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ATTACK.RECIPEDESC"
+msgid "Weakens Unstable Virus severity"
+msgstr "Снижает тяжесть нестабильного вируса"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.DESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.DESC"
+msgid "Conducted in laboratory conditions, forces Unstable Virus to mutate back it's environmental genoms to a weaker form."
+msgstr "Данное лабораторное исследование снижает способность нестабильного вируса выживать в различных средах."
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.NAME
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.NAME"
+msgid "<link=\"MUTATINGGERMS\">Controlled Environmental Mutation</link>"
+msgstr "<link=\"MUTATINGGERMS\">Контролируемая экологическая мутация</link>"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.ENVIRONMENTAL.RECIPEDESC"
+msgid "Weakens Unstable Virus ability to live in various environments"
+msgstr "Снижает способность нестабильного вируса выживать в различных средах."
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.DESC"
+msgid "Conducted in laboratory conditions, reduces ability of Unstable Virus to mutate."
+msgstr "Данное лабораторное исследование снижает способность нестабильного вируса к мутации."
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.NAME
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.NAME"
+msgid "<link=\"MUTATINGGERMS\">Mutation Rate Reduction</link>"
+msgstr "<link=\"MUTATINGGERMS\">Снижение скорости мутаций</link>"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.MUTATIONRATEREDUCTION.RECIPEDESC"
+msgid "Slows down mutation rate of Unstable Virus."
+msgstr "Замедляет скорость мутации нестабильного вируса."
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.DESC"
+msgid "Conducted in laboratory conditions, forces Unstable Virus to mutate back it's resiliance genoms to a weaker form."
+msgstr "Данное лабораторное исследование снижает устойчивость нестабильного вируса."
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.NAME"
+msgid "<link=\"MUTATINGGERMS\">Controlled Resiliance Mutation</link>"
+msgstr "<link=\"MUTATINGGERMS\">Контролируемая мутация устойчивости</link>"
+
+#. DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.CONTROLLEDMUTATION.RESILIANCE.RECIPEDESC"
+msgid "Weakens Unstable Virus resiliance"
+msgstr "Снижает устойчивость нестабильного вируса"
+
+#. DiseasesExpanded.STRINGS.CURES.ALIENCURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.ALIENCURE.DESC"
+msgid "Discourages <link=\"ALIENGERMS\">Alien Goo</link> from inhabiting the body of affected duplicant."
+msgstr "Вызывает отторжение <link=\"ALIENGERMS\">инопланетной слизи</link> в теле пораженного дубликанта."
+
+#. DiseasesExpanded.STRINGS.CURES.ALIENCURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.ALIENCURE.NAME"
+msgid "Alien Cure"
+msgstr "Лекарство от чужого"
+
+#. DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.DESC"
+msgid "Prevents allergic reactions in the future."
+msgstr "Предотвращает аллергическую реакцию в будущем."
+
+#. DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.ANTIHISTAMINEBOOSTER.NAME"
+msgid "Allergy Immuno Booster"
+msgstr "Противоаллергенный стимулятор"
+
+#. DiseasesExpanded.STRINGS.CURES.DEEPBREATH.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.DEEPBREATH.DESC"
+msgid "Slightly improves duplicant's breath and germ resistance."
+msgstr "Слегка освежает дыхание дубликанта и улучшает сопротивление к болезням."
+
+#. DiseasesExpanded.STRINGS.CURES.DEEPBREATH.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.DEEPBREATH.NAME"
+msgid "Deep Breath Serum"
+msgstr "Мятная таблетка"
+
+#. DiseasesExpanded.STRINGS.CURES.GASCURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.GASCURE.DESC"
+msgid "If a berry sprouts in a duplicant's belly, their farts will smell like flowers"
+msgstr "Если в животе дубликанта цветут цветы, то и его газы будут пахнуть соответствующе."
+
+#. DiseasesExpanded.STRINGS.CURES.GASCURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.GASCURE.NAME"
+msgid "Sprouting Tablet"
+msgstr "Цветочная таблетка"
+
+#. DiseasesExpanded.STRINGS.CURES.HAPPYPILL.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.HAPPYPILL.DESC"
+msgid "Improves overall <link=\"MORALE\">happines</link> of affectected duplicant but reduces their motivation to perform even most basic tasks."
+msgstr "Улучшает <link=\"MORALE\">настроение</link> дубликанта, но снижает его мотивацию к выполнению даже самых простых задач."
+
+#. DiseasesExpanded.STRINGS.CURES.HAPPYPILL.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.HAPPYPILL.NAME"
+msgid "Happy Pill"
+msgstr "Радостин"
+
+#. DiseasesExpanded.STRINGS.CURES.MUDMASK.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUDMASK.DESC"
+msgid "When covered in mud, duplicants are not so tasty for <link=\"BOGINSECTS\">Bog Bugs</link>."
+msgstr "Покрытые грязью дубликанты уже не такие вкусные для <link=\"BOGINSECTS\">Мошкары</link>."
+
+#. DiseasesExpanded.STRINGS.CURES.MUDMASK.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUDMASK.NAME"
+msgid "Muddy Salve"
+msgstr "Грязевой бальзам"
+
+#. DiseasesExpanded.STRINGS.CURES.MUTATINGANTIVIRAL.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUTATINGANTIVIRAL.DESC"
+msgid "Cures from, and grants immunity to <link=\"MUTATINGGERMS\">Mutating Disease</link> for a short time."
+msgstr "Излечивает <link=\"MUTATINGGERMS\">мутирующую инфекцию</link> и дает временный иммунитет к ней."
+
+#. DiseasesExpanded.STRINGS.CURES.MUTATINGANTIVIRAL.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.MUTATINGANTIVIRAL.NAME"
+msgid "Unstable Antiviral"
+msgstr "Нестабильное противовирусное"
+
+#. DiseasesExpanded.STRINGS.CURES.RADSHOT.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.RADSHOT.DESC"
+msgid "Uranium contains about 18 million kCal per gram - enough to quickly satisfy even the most <link=\"HUNGERGERMS\">overwhelming hunger</link>."
+msgstr "Обогащенный уран содержит около 18 миллионов ккал на грамм – этого достаточно, чтобы быстро утолить даже самый <link=\"HUNGERGERMS\">сильный голод</link>."
+
+#. DiseasesExpanded.STRINGS.CURES.RADSHOT.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.RADSHOT.NAME"
+msgid "Sweet Rad Shot"
+msgstr "Укол сладкой радиации"
+
+#. DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.DESC"
+msgid "Thick and full of sugar, Sweet Sap Shot condenses many calories into one syringe to quickly satisfy even the most <link=\"HUNGERGERMS\">overwhelming hunger</link>."
+msgstr "Густой и полный сахара, укол сладкой смолы содержит много калорий в одном шприце и может быстро утолить даже самый <link=\"HUNGERGERMS\">сильный голод</link>."
+
+#. DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.SAPSHOT.NAME"
+msgid "Sweet Sap Shot"
+msgstr "Укол сладкой смолы"
+
+#. DiseasesExpanded.STRINGS.CURES.SUNBURNCURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.SUNBURNCURE.DESC"
+msgid "Cures duplicant from severe <link=\"SUNBURNSICKNESS\">Sunburn</link>."
+msgstr "Лечит дубликантов от тяжелых <link=\"SUNBURNSICKNESS\">солнечных ожогов</link>."
+
+#. DiseasesExpanded.STRINGS.CURES.SUNBURNCURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.SUNBURNCURE.NAME"
+msgid "Sun Lotion"
+msgstr "Крем после загара"
+
+#. DiseasesExpanded.STRINGS.CURES.SUPERSERUM.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.SUPERSERUM.DESC"
+msgid "Enhances duplicant's attributes and makes them immune to most dangerous pathogens."
+msgstr "Улучшает характеристики дубликанта и дает иммунитет к наиболее опасным патогенам."
+
+#. DiseasesExpanded.STRINGS.CURES.SUPERSERUM.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.SUPERSERUM.NAME"
+msgid "Super Serum"
+msgstr "Супер-сыворотка"
+
+#. DiseasesExpanded.STRINGS.CURES.TUMMYSERUM.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.TUMMYSERUM.DESC"
+msgid "Calms even most angry tummy and makes it immune to subsequent infections."
+msgstr "Успокаивает даже самый раздраженный животик и дает иммунитет к кишечным инфекциям."
+
+#. DiseasesExpanded.STRINGS.CURES.TUMMYSERUM.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.TUMMYSERUM.NAME"
+msgid "Tummy Serum"
+msgstr "Уголь активированный"
+
+#. DiseasesExpanded.STRINGS.CURES.VACCINE.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.VACCINE.DESC"
+msgid "Grants immunity to {0} disease."
+msgstr "Дает иммунитет к болезни {0}"
+
+#. DiseasesExpanded.STRINGS.CURES.VACCINE.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.VACCINE.NAME"
+msgid "{0} Vaccine"
+msgstr "Вакцина от {0}"
+
+#. DiseasesExpanded.STRINGS.CURES.YUMMYSERUM.DESC
+msgctxt "DiseasesExpanded.STRINGS.CURES.YUMMYSERUM.DESC"
+msgid "Stimulates duplicant's digestive system and makes them immune to most ravenous pathogens."
+msgstr "Стимулирует пищеварительную систему дубликантов и дает иммунитет к самым хищным патогенам."
+
+#. DiseasesExpanded.STRINGS.CURES.YUMMYSERUM.NAME
+msgctxt "DiseasesExpanded.STRINGS.CURES.YUMMYSERUM.NAME"
+msgid "Yummy Serum"
+msgstr "Мясная таблетка"
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTION"
+msgid "Alien microbes increase duplicant's skills. However, this feels unnatural and makes infected duplicant stressed out. The goo is perfectly adapted for space travels and it will rapidly grow wherever Radiation is present."
+msgstr "Инопланетные микробы улучшают навыки дубликанта. Однако этот неестественный симбиоз вызывает стресс у зараженного. Инопланетная слизь идеально приспособлена для космических путешествий и будет быстро расти везде, где присутствует радиация."
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Enhances and stresses the duplicant."
+msgstr "Усиливает дубликанта, но вызывает стресс."
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.EXPOSURE_INFO"
+msgid "Got exposed to Alien Goo"
+msgstr "Подвергается воздействию инопланетной слизи"
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area affected by Alien Goo."
+msgstr "Область может стать причиной заражения инопланетной слизью."
+
+#. DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.ALIENSICKNESS.NAME"
+msgid "<link=\"ALIENSICKNESS\">Alien Symbiot</link>"
+msgstr "<link=\"ALIENSICKNESS\">Инопланетный симбионт</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTION"
+msgid "Bog Bugs are lured by <link=\"SWAMPHARVESTPLANT\">Bog Bucket</link> sweet scent, but they can also feed on duplicants..."
+msgstr "Мошкару привлекает сладкий аромат <link=\"SWAMPHARVESTPLANT\">болотника</link>, но они могут покуситься и на дубликантов..."
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Annoying bites of small Bog Bugs"
+msgstr "Раздражающие укусы мелкой мошкары"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area can result in Bog Bugs bites"
+msgstr "Область может стать причиной укусов мошкары."
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.NAME"
+msgid "<link=\"BOGSICKNESS\">Bog Bugs Infestation</link>"
+msgstr "<link=\"BOGSICKNESS\">Нападение мошкары</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.BOGSICKNESS.POPFXTEXT"
+msgid "Bog Bug Bite!"
+msgstr "Укусы мошкары!"
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTION"
+msgid "Little shards of frost cover duplicant's skin in a pretty patterns, reducing their resistance for temperature and diseases."
+msgstr "Мелкие кристаллы инея покрывают кожу дубликанта красивыми узорами, снижая устойчивость к перепадам температур и болезням."
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Pretty, but pretty cold frost patterns on the skin."
+msgstr "Красивые, но довольно холодные морозные узоры на коже."
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area causes Frost Pox."
+msgstr "Область может стать причиной заражения морозпой."
+
+#. DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.FROSTSICKNESS.NAME"
+msgid "<link=\"FROSTSICKNESS\">Frost Pox</link>"
+msgstr "<link=\"FROSTSICKNESS\">Морозпа</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTION"
+msgid "Whatever it is in the <link=\"GASGRASS\">Gas Grass</link>, it makes everything around fart..."
+msgstr "Что бы это ни было в <link=\"GASGRASS\">газовой траве</link>, оно заставляет все вокруг пукать..."
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Makes duplicant fart like a mad Moo."
+msgstr "Заставляет дубликанта пукать как бешеная Му-Му."
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area causes Moo Flu."
+msgstr "Область может стать причиной заражения мутеоризмом."
+
+#. DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.GASSICKNESS.NAME"
+msgid "<link=\"GASSICKNESS\">Moo Flu</link>"
+msgstr "<link=\"GASSICKNESS\">Мутеоризм</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTION"
+msgid "The hunger of the ravenous plants seems to be infectious..."
+msgstr "Голод хищных растений, видимо, заразен..."
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "Makes duplicant hungry all the time."
+msgstr "Заставляет дубликантов постоянно чувствовать голод."
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area causes Everlasting Hunger."
+msgstr "Область может стать причиной заражения неутолимым голодом."
+
+#. DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.HUNGERSICKNESS.NAME"
+msgid "<link=\"HUNGERSICKNESS\">Everlasting Hunger</link>"
+msgstr "<link=\"HUNGERSICKNESS\">Неутолимый голод</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTION"
+msgid "Virus causing the disease is very unstable and often mutates. Results may be different each time."
+msgstr "Вызывающий инфекцию вирус очень нестабилен и часто мутирует. Симптомы могут быть каждый раз разными."
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.DESCRIPTIVE_SYMPTOMS"
+msgid "May affect duplicants in many different ways"
+msgstr "Может по-разному влиять на дубликантов."
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.EXPOSURE_INFO"
+msgid "Got infected by Mutating Virus."
+msgstr "Заразился мутирующим вирусом."
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.LEGEND_HOVERTEXT"
+msgid "Area affected by Mutating Disease."
+msgstr "Область может стать причиной заражения мутирующей инфекцией."
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.NAME"
+msgid "<link=\"MUTATINGSICKNESS\">Mutating Disease</link>"
+msgstr "<link=\"MUTATINGSICKNESS\">Мутирующая инфекция</link>"
+
+#. DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.POPFXTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.MUTATINGSICKNESS.POPFXTEXT"
+msgid "Painful cough!"
+msgstr "Болезненный кашель!"
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTION"
+msgid "The tale says one duplicant slept 100 cycles after hurting herself on the Spindle, but it is possible she just faked it not to clean the toilets..."
+msgstr "В легенде говорится, что один дубликант проспал 100 циклов после того, как укололся шипом, но, возможно, он просто притворялся, чтобы не чистить туалеты..."
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTIVE_SYMPTOMS
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.DESCRIPTIVE_SYMPTOMS"
+msgid "Periodically causes duplicant to fall asleep in random places."
+msgstr "Заставляет дубликанта периодически засыпать в случайных местах."
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.EXPOSURE_INFO"
+msgid "Got hurt by the Spindle of a {0}.\n\nAs a result, this duplicant will fall asleep in random places.\nImprove Farming skill or wear protective equipment to prevent future infections.\nUse Espresso Machine to prevent Narcoleptic Naps.\n"
+msgstr "Этот дубликант укололся шипом {0}.\n\nТеперь он будет засыпать в случайных местах.\nВысокий навык земледелия или защитное снаряжение позволяют предотвратить заражение.\nИспользуйте эспрессо-машину, чтобы предотвратить нарколептический сон.\n"
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.LEGEND_HOVERTEXT"
+msgid "Area affected by Sleeping Curse."
+msgstr "Присутствует риск получения сонного проклятья."
+
+#. DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.NAME
+msgctxt "DiseasesExpanded.STRINGS.DISEASES.SPINDLYCURSE.NAME"
+msgid "<link=\"SPINDLYCURSE\">Sleeping Curse</link>"
+msgstr "<link=\"SPINDLYCURSE\">Сонное проклятие</link>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.ALIENASSIMILATION.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.ALIENASSIMILATION.DESC"
+msgid "Alien Symbiot completed assimilation and no longer provides benefits to the host."
+msgstr "Чужеродный симбионт завершил ассимиляцию и больше не дает хозяину никаких преимуществ."
+
+#. DiseasesExpanded.STRINGS.EFFECTS.ALIENASSIMILATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.ALIENASSIMILATION.NAME"
+msgid "Assimilation Successful"
+msgstr "Ассимиляция успешно завершена"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.DESC"
+msgid "This duplicant was cured from Alien Symbiot."
+msgstr "Этот дубликант недавно излечился от инопланетного симбионта и получил временный иммунитет к этой <style=\"KKeyword\">болезни</style>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.ALIENRECOVERY.NAME"
+msgid "Alien Symbiot Recovery"
+msgstr "Выздоровление после инопланетного симбионта"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.DESC"
+msgid "This duplicant just recovered from Bog Bugs Infestation."
+msgstr "Этот дубликант недавно излечился от нападения мошкары и получил временный иммунитет к этой <style=\"KKeyword\">болезни</style>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.BOGRECOVERY.NAME"
+msgid "Bog Bugs Infestation Recovery"
+msgstr "Выздоровление после нападения мошкары"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.DESC"
+msgid "This duplicant just recovered from Frost Pox."
+msgstr "Этот дубликант недавно излечился от морозпы и получил временный иммунитет к этой <style=\"KKeyword\">болезни</style>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.FROSTRECOVERY.NAME"
+msgid "Frost Pox Recovery"
+msgstr "Выздоровление после морозпы"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.DESC"
+msgid "This duplicant just recovered from Moo Flu."
+msgstr "Этот дубликант недавно излечился от мутеоризма и получил временный иммунитет к этой <style=\"KKeyword\">болезни</style>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.GASRECOVERY.NAME"
+msgid "Moo Flu Recovery"
+msgstr "Выздоровление после мутеоризма"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.DESC"
+msgid "This duplicant just recovered from Everlasting Hunger."
+msgstr "Этот дубликант недавно излечился от неутолимого голода и получил временный иммунитет к этой <style=\"KKeyword\">болезни</style>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.HUNGERRECOVERY.NAME"
+msgid "Everlasting Hunger Recovery"
+msgstr "Выздоровление после неутолимого голода"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.DESC"
+msgid "This Duplicant just delivered germ sample for futher testing."
+msgstr "Этот дубликант только что доставил образец микробов для дальнейшего анализа."
+
+#. DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.JUSTGOTTESTED.NAME"
+msgid "Just Got Tested"
+msgstr "Только что сдал анализы"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.DESC"
+msgid "This duplicant just recovered from Mutating Disease."
+msgstr "Этот дубликант недавно излечился от мутирующей инфекции и получил временный иммунитет к этой <style=\"KKeyword\">болезни</style>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDRECOVERY.NAME"
+msgid "Mutating Disease Recovery"
+msgstr "Выздоровление после мутирующей инфекции"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.DESC"
+msgid "This duplicant is suffering from various symptoms of mutating disease."
+msgstr "Этот дубликант страдает от различных симптомов мутирующей инфекции."
+
+#. DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.MUTATEDSYMPTOMS.NAME"
+msgid "Mutating Disease Symptoms"
+msgstr "Симптомы мутирующей инфекции"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.NANOBOTENHANCEMENT.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.NANOBOTENHANCEMENT.DESC"
+msgid "This Duplicant is getting health boost from friendly Nanobot enhancement."
+msgstr "Этот дупликант получает усиления от дружественных наноботов."
+
+#. DiseasesExpanded.STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.NANOBOTENHANCEMENT.NAME"
+msgid "Nanobot Enhancement"
+msgstr "Усиление наноботами"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.DESC"
+msgid "This duplicant just recovered from Sleeping Curse."
+msgstr "Этот дубликант недавно излечился от сонного проклятья и получил временный иммунитет к этой <style=\"KKeyword\">болезни</style>"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.SPINDLYRECOVERY.NAME"
+msgid "Sleeping Curse Recovery"
+msgstr "Выздоровление после сонного проклятия"
+
+#. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYTHORNS.DESC
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.SPINDLYTHORNS.DESC"
+msgid "This Plant developed protective thorns, similar to Grub Fruit spindles. Touching it may cause Sleeping Curse..."
+msgstr "У этого растения появились защитные шипы, как у личинкокоса. Один укол может вызвать сонное проклятие..."
+
+#. DiseasesExpanded.STRINGS.EFFECTS.SPINDLYTHORNS.NAME
+msgctxt "DiseasesExpanded.STRINGS.EFFECTS.SPINDLYTHORNS.NAME"
+msgid "Spindly Thorns"
+msgstr "Тонкие шипы"
+
+#. DiseasesExpanded.STRINGS.GERMFLASK.DESC
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.DESC"
+msgid "Contains gathered {0} germs."
+msgstr "Содержит собранные микробы {0}."
+
+#. DiseasesExpanded.STRINGS.GERMFLASK.DESC_NOGERM
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.DESC_NOGERM"
+msgid "Contains gathered {0}."
+msgstr "Содержит собранные {0}."
+
+#. DiseasesExpanded.STRINGS.GERMFLASK.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASK.NAME"
+msgid "{0} Flask"
+msgstr "Колба с {0}"
+
+#. DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.DESC
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.DESC"
+msgid "Used to gather <link=\"DISEASE\">germ</link> sample from infected duplicant into a flask for futher testing."
+msgstr "Используется для сбора образца <link=\"DISEASE\">микробов</link> зараженного дубликанта для дальнейшего анализа."
+
+#. DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMFLASKSAMPLE.NAME"
+msgid "Test Sample Flask"
+msgstr "Колба для анализов"
+
+#. DiseasesExpanded.STRINGS.GERMS.ABANDONED.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ABANDONED.DESCRIPTION"
+msgid "Those germs no longer exist, and if they do, they will die quickly."
+msgstr "Этих микробов больше не существует, а если и появятся, то быстро умрут."
+
+#. DiseasesExpanded.STRINGS.GERMS.ABANDONED.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ABANDONED.LEGEND_HOVERTEXT"
+msgid "Abandoned Germs present.\n"
+msgstr "Присутствуют несуществующие микробы.\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.ABANDONED.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ABANDONED.NAME"
+msgid "Abandoned Germs"
+msgstr "Несуществующие микробы"
+
+#. DiseasesExpanded.STRINGS.GERMS.ALIENGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ALIENGERMS.LEGEND_HOVERTEXT"
+msgid "Alien Goo present\n"
+msgstr "Присутствует инопланетная слизь\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.ALIENGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.ALIENGERMS.NAME"
+msgid "<link=\"ALIENGERMS\">Alien Goo</link>"
+msgstr "<link=\"ALIENGERMS\">Инопланетная слизь</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.LEGEND_HOVERTEXT"
+msgid "Bog Bugs present.\n"
+msgstr "Присутствует мошкара.\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.BOGINSECTS.NAME"
+msgid "<link=\"BOGINSECTS\">Bog Bugs</link>"
+msgstr "<link=\"BOGINSECTS\">Мошкара</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.LEGEND_HOVERTEXT"
+msgid "Frost Shards present.\n"
+msgstr "Присутствуют кристаллы морозпы.\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.FROSTHARDS.NAME"
+msgid "<link=\"FROSTHARDS\">Frost Shards</link>"
+msgstr "<link=\"FROSTHARDS\">Морозпа</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.LEGEND_HOVERTEXT"
+msgid "GassyGerms present\n"
+msgstr "Присутствуют микробы мутеоризма\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.GASSYGERMS.NAME"
+msgid "<link=\"GASSYGERMS\">Gassy Germs</link>"
+msgstr "<link=\"GASSYGERMS\">Мутеоризм</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.LEGEND_HOVERTEXT"
+msgid "Hungerms present\n"
+msgstr "Присутствуют микробы неутолимого голода\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.HUNGERGERMS.NAME"
+msgid "<link=\"HUNGERGERMS\">Hungerms</link>"
+msgstr "<link=\"HUNGERGERMS\">Неутолимый голод</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.DESCRIPTION
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.DESCRIPTION"
+msgid "Medical Nanobots are engineeded with sole purpose of fighting malicious germs and improving duplicants' health."
+msgstr "Медицинские наноботы разработаны с единственной целью — бороться с вредоносными микробами и укреплять здоровье дубликантов."
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.LEGEND_HEADER
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.LEGEND_HEADER"
+msgid "Included features:\n"
+msgstr "Активированы следующие улучшения:\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.LEGEND_HOVERTEXT"
+msgid "Medical Nanobots present\n"
+msgstr "Присутствуют медицинские наноботы\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Medical Nanobots</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Медицинские наноботы</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.RADIATION_HELP_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.RADIATION_HELP_PATTERN"
+msgid "Radiation Kill Rate: {0}"
+msgstr "Радиационная смертность: {0}"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.TEMPERATURE_HELP_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.TEMPERATURE_HELP_PATTERN"
+msgid "Optimal Temperature: {0} to {1}"
+msgstr "Оптимальная температура: от {0} до {1}"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.UPGRADE_HELP_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.UPGRADE_HELP_PATTERN"
+msgid "Use {0} to develop nanobots."
+msgstr "Используйте {0} для улучшения наноботов."
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERION_EFFICIENCY_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERION_EFFICIENCY_PATTERN"
+msgid "Efficiency: Attributes: <color=#00FF00>{0}</color>, Breathing: <color=#00FF00>{1}</color>, Calories: <color=#00FF00>{2}</color> - Healing: <color=#00FF00>{3}</color>, Energy: <color=#00FF00>{4}</color>, Stress reduction: <color=#00FF00>{5}</color>"
+msgstr "Эффективность: Атрибуты: <color=#00FF00>{0}</color>, Дыхание: <color=#00FF00>{1}</color>, Калории: <color=#00FF00>{2}</color> - Лечение: <color=#00FF00>{3}</color>, Энергия: <color=#00FF00>{4}</color>, Снижение стресса: <color=#00FF00>{5}</color>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERSION_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERSION_PATTERN"
+msgid "Version {ATTACK}/{RESILIANCE}"
+msgstr "Версия {ATTACK}/{RESILIANCE}"
+
+#. DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERSION_RESILIANCE_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MEDICALNANOBOTS.VERSION_RESILIANCE_PATTERN"
+msgid "Resiliance: Germ Resistance: <color=#00FF00>{0}</color>, Duration: <color=#00FF00>{1}</color>, Perpetum Mobile: <color=#00FF00>{2}</color> - Exposure Threshold: <color=#00FF00>{3}</color>, Radiation: <color=#00FF00>{4}</color>, Temperature: <color=#00FF00>{5}</color>"
+msgstr "Устойчивость: Устойчивость к микробам: <color=#00FF00>{0}</color>, Продолжительность: <color=#00FF00>{1}</color>, Вечный двигатель: <color=#00FF00>{2}</color > - Порог воздействия: <color=#00FF00>{3}</color>, Радиация: <color=#00FF00>{4}</color>, Температура: <color=#00FF00>{5}</color>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.LEGEND_HEADER
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.LEGEND_HEADER"
+msgid "Genoms' values:\n"
+msgstr "Характеристики генома:\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.LEGEND_HOVERTEXT"
+msgid "Unstable Virus present\n"
+msgstr "Присутствует нестабильный вирус\n"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_HELP_PATTERN"
+msgid "Use {0} to mutate the germs in more safe direction."
+msgstr "Используйте {0}, чтобы заставить вирус мутировать в более безопасную форму."
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.MUTATION_SPEED_PATTERN"
+msgid "Estimated mutation speed: {0:F2} (mutation rate reduction Lvl: {1})"
+msgstr "Предполагаемая скорость мутации: {0:F2} (уровень снижения частоты мутаций: {1})"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.NAME"
+msgid "<link=\"MUTATINGGERMS\">Unstable Virus</link>"
+msgstr "<link=\"MUTATINGGERMS\">Нестабильный вирус</link>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_PATTERN"
+msgid "Strain {ATTACK}/{RESILIANCE}"
+msgstr "Штамм {ATTACK}/{RESILIANCE}"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_RESILIANCE_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_RESILIANCE_PATTERN"
+msgid "Resiliance: Infectibility: <color=#FF0000>{0}</color>, Duration: <color=#FF0000>{1}</color>, Germ Coughing: <color=#FF0000>{2}</color> - Exposure Threshold: <color=#FF0000>{3}</color>, Radiation: <color=#FF0000>{4}</color>, Temperature: <color=#FF0000>{5}</color>"
+msgstr "Устойчивость: Инфицируемость: <color=#FF0000>{0}</color>, Продолжительность: <color=#FF0000>{1}</color>, Бактериальный кашель: <color=#FF0000>{2}</color> – Порог заражения: <color=#FF0000>{3}</color>, Радиация: <color=#FF0000>{4}</color>, Температура: <color=#FF0000>{5}</color>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_SEVERITY_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.STRAIN_SEVERITY_PATTERN"
+msgid "Severity: Attributes: <color=#FF0000>{0}</color>, Breathing: <color=#FF0000>{1}</color>, Calories: <color=#FF0000>{2}</color> - Damage: <color=#FF0000>{3}</color>, Exhaustion: <color=#FF0000>{4}</color>, Stress: <color=#FF0000>{5}</color>"
+msgstr "Тяжесть: Атрибуты: <color=#FF0000>{0}</color>, Дыхание: <color=#FF0000>{1}</color>, Калории: <color=#FF0000>{2}</color> - Урон: <color=#FF0000>{3}</color>, Истощение: <color=#FF0000>{4}</color>, Стресс: <color=#FF0000>{5}</color>"
+
+#. DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN
+msgctxt "DiseasesExpanded.STRINGS.GERMS.MUTATINGGERMS.TREAT_POTENTIAL_PATTERN"
+msgid "Threat potential: {0}%"
+msgstr "Потенциальная угроза: {0}%"
+
+#. DiseasesExpanded.STRINGS.MEDICALRESEARCH.DESC
+msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.DESC"
+msgid "<link=\"RESEARCH\">Medical Research</link> is required to unlock medical technologies.\nIt can be conducted by studying germ samples at an <link=\"APOTHECARY\">Apothecary</link> or obtained by doctors while tending their patients."
+msgstr "Для разблокирования медицинских технологий требуется <link=\"RESEARCH\">медицинское исследование</link>.\nЕго можно провести путем изучения образцов микробов в <link=\"APOTHECARY\">аптеке</link> или во время ухода врачей за пациентами."
+
+#. DiseasesExpanded.STRINGS.MEDICALRESEARCH.NAME
+msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.NAME"
+msgid "<link=\"RESEARCH\">Medical Research</link>"
+msgstr "<link=\"RESEARCH\">Медицинское исследование</link>"
+
+#. DiseasesExpanded.STRINGS.MEDICALRESEARCH.RECIPEDESC
+msgctxt "DiseasesExpanded.STRINGS.MEDICALRESEARCH.RECIPEDESC"
+msgid "Unlocks medical technologies."
+msgstr "Открывает доступ к медицинским технологиям."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.ATTRIBUTES.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.ATTRIBUTES.DESC"
+msgid "Medical Nanobots will enhance duplicant's skils and attributes, making them better at all errands."
+msgstr "Медицинские наноботы будут улучшать навыки и характеристики дубликантов, что позволит им лучше выполнять любые поручения."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.ATTRIBUTES.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.ATTRIBUTES.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot BioEnhancement Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Наномодуль биоулучшения</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.BREATHING.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.BREATHING.DESC"
+msgid "Medical Nanobots will recycle some of exhaled CO2 to redirect Oxygen back to duplicant's bloodstream."
+msgstr "Медицинские наноботы будут перерабатывать часть выдыхаемого CO2 и отправлять кислород обратно в кровоток дубликанта."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.BREATHING.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.BREATHING.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Oxygen Recycle Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Наномодуль переработки СО2</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.CALORIES.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.CALORIES.DESC"
+msgid "Medical Nanobots will stimulate duplicants' metabolism better to reduce amount of calories required for survival."
+msgstr "Медицинские наноботы будут регулировать метаболизм дубликантов, уменьшая количество калорий, необходимых для выживания."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.CALORIES.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.CALORIES.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Metabolism++ Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Наномодуль Метаболизм+</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.DURATION.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.DURATION.DESC"
+msgid "Optimizes efficiency with which Nanobots operate in duplicant's system, making thier effects last longer."
+msgstr "Оптимизирует эффективность работы наноботов в организме дубликанта, продлевая срок действия их эффектов."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.DURATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.DURATION.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Operative Optimization</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Наномодуль операционной оптимизации</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.EXHAUSTION.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.EXHAUSTION.DESC"
+msgid "Medical Nanobots stimulate duplicant's exhaustion levels to make them more rested and invigorated."
+msgstr "Медицинские наноботы будут регулировать уровень утомления дубликантов, позволяя им дольше оставаться бодрыми."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.EXHAUSTION.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.EXHAUSTION.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Invigorating Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Наномодуль Бодрость+</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.HEALTH.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.HEALTH.DESC"
+msgid "Makes Medical Nanobots better at repairing damaged tissues."
+msgstr "Повышает эффективность медицинских наноботов в восстановлении поврежденных мягких тканей."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.HEALTH.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.HEALTH.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot BioRepair Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Наномодуль биоремонта</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.DESC"
+msgid "Construct and release more Medical Nanobots."
+msgstr "Создать и выпустить больше медицинских нанороботов."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTS.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Medical Nanobot Swarm</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Рой медицинских наноботов</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.DESC"
+msgid "Medical Nanobots stored in a gas container, easy to deploy anywhere in the base."
+msgstr "Медицинские наноботы в газовом контейнере. Легко доставить в любую точку на базе."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.MORENANOBOTSBOTTLED.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Medical Nanobot Swarm (Bottled)</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Рой медицинских наноботов (в канистре)</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RADIATION.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RADIATION.DESC"
+msgid "Coats Nanobots with additional lead layer, allowing them to survive more extreme radiation levels."
+msgstr "Покрывает наноботов дополнительным слоем свинца, позволяя им выдерживать более высокие уровни радиации."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RADIATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RADIATION.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Leaden Coating</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Свинцовое нанопокрытие</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RESISTANCE.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RESISTANCE.DESC"
+msgid "Improves Nanobots' fighting algorithms, increasing germ resistance of affected duplicants."
+msgstr "Улучшает боевые алгоритмы наноботов, тем самым повышая сопротивление к болезням у дубликантов."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RESISTANCE.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.RESISTANCE.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot ImmunoBoost Protocol</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Протокол иммунного ответа</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.DESC"
+msgid "Medical Nanobots loss rate will be reduced, allowing them to survive longer in the hostile atmosphere."
+msgstr "Снижает скорость отключения наноботов, позволяя им дольше выживать в неблагоприятной среде."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.SPAWNING.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Perpetum Mobile Protocol</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Протокол Вечный Двигатель</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.STRESS.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.STRESS.DESC"
+msgid "Medical Nanobots will by more efficient while calming down stressed duplicants."
+msgstr "Медицинские наноботы будут регулировать уровень стресса, успокаивая перенапряженных дубликантов."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.STRESS.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.STRESS.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Stress Relief Module</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Наномодуль снятия стресса</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.TEMPERATURE.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.TEMPERATURE.DESC"
+msgid "Coats Nanobots with additional insulation layer, allowing them to survive more extreme temperatures."
+msgstr "Покрывает наноботов дополнительным слоем изоляции, позволяя им выдерживать более высокие перепады температур."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.TEMPERATURE.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.TEMPERATURE.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Insulation Coating</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Изоляционное нанопокрытие</link>"
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.THRESHOLD.DESC
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.THRESHOLD.DESC"
+msgid "Medical Nanobots will enter duplicant's system more easily."
+msgstr "Облегчает проникновение медицинских наноботов в организм дубликанта."
+
+#. DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.THRESHOLD.NAME
+msgctxt "DiseasesExpanded.STRINGS.NANOBOTDEVELOPMENT.THRESHOLD.NAME"
+msgid "<link=\"MEDICALNANOBOTS\">Nanobot Integration Protocol</link>"
+msgstr "<link=\"MEDICALNANOBOTS\">Протокол интеграции</link>"
+
+#. DiseasesExpanded.STRINGS.NOTIFICATIONS.NANOBOTUPGRADE.PATTERN
+msgctxt "DiseasesExpanded.STRINGS.NOTIFICATIONS.NANOBOTUPGRADE.PATTERN"
+msgid "New nanobot update is ready: {0}"
+msgstr "Готово обновление для наноботов: {0}"
+
+#. DiseasesExpanded.STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN
+msgctxt "DiseasesExpanded.STRINGS.NOTIFICATIONS.VIRUSMUTATED.PATTERN"
+msgid "New virus mutation observed: {0}"
+msgstr "Обнаружена новая мутация вируса: {0}"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.NAME"
+msgid "Adopt Stray Pet"
+msgstr "Приютить бездомного питомца"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.ADOPT_STRAY_PET.TOAST"
+msgid "It was so poor and cute and helpless and we had to adopt it!"
+msgstr "Он был такой милый и беспомощный, мы были обязаны его приютить!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.NAME"
+msgid "Blooming Graves"
+msgstr "Цветущие могилы"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.BLOOMING_GRAVES.TOAST"
+msgid "Death cannot be healed. But it can bloom!"
+msgstr "Смерть нельзя исцелить. Но она может расцвести!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.NAME"
+msgid "Disinfecting Cursor"
+msgstr "Обеззараживающий курсор"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST"
+msgid "Your cursor just got upgraded with portable Purification Kit!"
+msgstr "Ваш курсор только что был улучшен портативным обеззараживателем!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_DISINFECTING.TOAST_END"
+msgid "Oh no... It's broken..."
+msgstr "О нет...Он сломался..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.NAME"
+msgid "Radioactive Cursor"
+msgstr "Радиоактивный курсор"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST"
+msgid "Your cursor just got upgraded with portable Radiation Emitter! \nIt now glows with around {0} rads!"
+msgstr "Ваш курсор только что был улучшен портативным излучателем радиации! \nТеперь он излучает примерно {0} рад!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.CURSOR_RADIOACTIVE.TOAST_END"
+msgid "Oh no... It's broken..."
+msgstr "О нет...Он сломался..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.NAME"
+msgid "Eradicate Germs"
+msgstr "Уничтожить микробов"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.ERADICATE_GERMS.TOAST"
+msgid "Most of the germs were eradicated from the environment."
+msgstr "Большая часть микробов в окружающей среде была уничтожена."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.FILTHY_FOOD.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.FILTHY_FOOD.NAME"
+msgid "Filthy Food"
+msgstr "Грязная еда"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.FILTHY_FOOD.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.FILTHY_FOOD.TOAST"
+msgid "Your food supply has been infected with food poisoning."
+msgstr "Ваши запасы еды были заражены пищевым отравлением."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.NAME"
+msgid "Great Migration"
+msgstr "Великая миграция"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST"
+msgid "Researchers proclaim cycle of the Bog Bugs. All dwellings increase population."
+msgstr "Исследователи объявили цикл мошкары. Количество назойливых насекомых увеличилось вдвое."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_BOG_BUG_MIGRATION.TOAST_END"
+msgid "Swarms of Bog Bugs started migrating away."
+msgstr "Рой мошкары улетает прочь."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.NAME"
+msgid "Great Migration"
+msgstr "Великая миграция"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.GREAT_SANISHELL_MIGRATION.TOAST"
+msgid "Researchers proclaim cycle of the Sanishell. All dwellings increase population."
+msgstr "Исследователи объявили цикл крабушка. Количество санитаров водоемов увеличилось вдвое."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.HUNGRY_PET.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.HUNGRY_PET.NAME"
+msgid "Hungry Pet"
+msgstr "Голодный питомец"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.HUNGRY_PET.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.HUNGRY_PET.TOAST"
+msgid "One of your critters is more hungry than usually. You should probably investigate..."
+msgstr "Одно из ваших существ выглядит более голодным, чем обычно. Наверное, вам стоит его проверить..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.HURTING_TUMMY.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.HURTING_TUMMY.NAME"
+msgid "Hurting Tummy"
+msgstr "Животик болит"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.HURTING_TUMMY.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.HURTING_TUMMY.TOAST"
+msgid "One of your duplicants got hurting tummy. It's nothing good for sure..."
+msgstr "У одного из ваших дубликантов болит живот. Это явно не к добру..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.NAME"
+msgid "Intense Pollination"
+msgstr "Интенсивное опыление"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_POLLINATION.TOAST"
+msgid "All of the plants released increased amount of pollen."
+msgstr "Все растения выделили большое количество пыльцы."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.NAME"
+msgid "Intense Radiation"
+msgstr "Интенсивная радиация"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST"
+msgid "We noticed increased readings on our radiation-measuring aparature."
+msgstr "Наши приборы уловили увеличение радиационного фона."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.INTENSE_RADIATION.TOAST_END"
+msgid "Radiation levels seem to be back to normal."
+msgstr "Уровень радиации, похоже, вернулся к норме."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.NAME"
+msgid "Mandatory Testing"
+msgstr "Диспансеризация"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.MANDATORY_TESTING.TOAST"
+msgid "All duplicants got encouraged to perform mandatory health tests. If one is infected with germs, our tests collect germ samples."
+msgstr "Всем дубликантам было предложено пройти обязательное медицинское обследование. Если дубликант болен, то будет получен образец его микробов."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.NAME"
+msgid "Miraculous Recovery"
+msgstr "Чудесное выздоровление"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.MIRACULOUS_RECOVERY.TOAST"
+msgid "A miracle! Our duplicants are no longer sick!"
+msgstr "Чудо! Наши дубликанты больше не больны!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.NAME"
+msgid "Nanobot Update"
+msgstr "Обновление для наноботов"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST"
+msgid "New update to Nanobot software got rushed for release! "
+msgstr "Обновление программного обеспечения для наноботов спешит в релиз!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_END
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_END"
+msgid "Hotfix released: Malicious issues of Nanobot software got fixed."
+msgstr "Выпущено исправление: вредоносные ошибки программного обеспечения были устранены."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_MALICIOUS
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NANOBOT_UPDATE.TOAST_MALICIOUS"
+msgid "Sadly, it may contain some bugs..."
+msgstr "К сожалению, оно может содержать ошибки..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.NAME"
+msgid "Night of the Living Dead"
+msgstr "Ночь живых мертвецов"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.NIGHT_OF_THE_LIVING_DEAD.TOAST"
+msgid "The end is nigh!"
+msgstr "Конец близко!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PANIC_MODE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PANIC_MODE.NAME"
+msgid "PANIC MODE!!!"
+msgstr "РЕЖИМ ПАНИКИ!!!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PANIC_MODE.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PANIC_MODE.TOAST"
+msgid "AAAAAAAAAAAAAAAAAAAAAA!!!!!"
+msgstr "AAAAAAAAAAAAAAAAAAAAAA!!!!!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.NAME"
+msgid "Plague of Hunger"
+msgstr "Чума голода"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PLAGUE_OF_HUNGER.TOAST"
+msgid "A kilogram of Wheat for a Diamond, and three kilograms of Meal Lice for a Diamond, but do not harm Burgers and Pie!"
+msgstr "Килограмм пшеницы за алмаз и три килограмма пищевика за алмаз, но не трогайте бургеры и пироги!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.NAME"
+msgid "Print Some Germs"
+msgstr "Напечатать немного микробов"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.PRINT_SOME_GERMS.TOAST"
+msgid "Additional germs were printed from all Printing Pods."
+msgstr "Дополнительные микробы были напечатаны на всех биопринтерах."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.NAME"
+msgid "Regressive Mutation"
+msgstr "Регрессивная мутация"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.REGRESSIVE_VIRUS_MUTATION.TOAST"
+msgid "We observed slightly less dangerous variant of the Virus."
+msgstr "Мы обнаружили чуть менее опасный штамм вируса."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.NAME"
+msgid "Resupply First Aid Kits"
+msgstr "Поставка первой помощи"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.RESUPPLY_FIRST_AID_KIT.TOAST"
+msgid "Those medical supplies could be helpful... or better not..."
+msgstr "Эти медикаменты могут пригодиться... но лучше бы не пригодились..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.NAME"
+msgid "Slimy Polluted Oxygen"
+msgstr "Заслизьненный кислород"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SLIMY_POLLUTED_OXYGEN.TOAST"
+msgid "All Polluted Oxygen is now even more yucky..."
+msgstr "Весь загрязненный кислород теперь еще более мерзкий..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPACE_SCREAM.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPACE_SCREAM.NAME"
+msgid "In Space No One Can Hear You Scream"
+msgstr "В космосе никто не услышит твоего крика"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPACE_SCREAM.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPACE_SCREAM.TOAST"
+msgid "We received strange distress signal from our rocket..."
+msgstr "Мы получили странный сигнал бедствия от одной из наших ракет..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.DESC"
+msgid "I wonder what is inside?"
+msgstr "Интересно, что внутри?"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.NAME"
+msgid "Surprise Box"
+msgstr "Коробка-сюрприз"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.TOAST_BODY
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.TOAST_BODY"
+msgid "I wonder what is inside?"
+msgstr "Интересно, что внутри?"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.TOAST_TITLE
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_GERMY_SURPRISE_BOX.TOAST_TITLE"
+msgid "Surprise Box"
+msgstr "Коробка-сюрприз"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.NAME"
+msgid "Spawn Infected Element"
+msgstr "Напечатать зараженный материал"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPAWN_INFECTED_ELEMENT.TOAST"
+msgid "Spawned some {0} filled with germs."
+msgstr "Напечатать немного {0} с микробами."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.NAME"
+msgid "Spindly Plants"
+msgstr "Шипастые растения"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPINDLY_PLANTS.TOAST"
+msgid "Our plants have developed protective spindles. We must be careful not to get hurt..."
+msgstr "Наши растения отрастили защитные шипы. Надо быть осторожным, чтобы не уколоться..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.NAME"
+msgid "Sprout Flowers"
+msgstr "Ростки цветов"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST"
+msgid "New flower just sprouted!"
+msgstr "Только что пророс новый цветок!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST_FAILED
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SPROUT_FLOWERS.TOAST_FAILED"
+msgid "New flower tried to sprout... but it failed... maybe next time...?"
+msgstr "Новый цветок пытался прорасти...но не смог...может, в следующий раз?"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.STRAY_COMET.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.STRAY_COMET.NAME"
+msgid "Stray Comet"
+msgstr "Блуждающая комета"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.STRAY_COMET.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.STRAY_COMET.TOAST"
+msgid "Hey, look! A shooting star!"
+msgstr "Эй, смотри! Падающая звезда!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.NAME"
+msgid "Sudden Mutation"
+msgstr "Неожиданная мутация"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_PLANT_MUTATION.TOAST"
+msgid "Some of our plants mutated to have bigger leaves, richer fruits and... is that a tentacle?!?!"
+msgstr "Некоторые из наших растений мутировали и стали иметь более крупные листья, более насыщенные плоды и... это что, щупальце?!?!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.NAME"
+msgid "Sudden Mutation"
+msgstr "Неожиданная мутация"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.TOAST
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS.SUDDEN_VIRUS_MUTATION.TOAST"
+msgid "We observed new mutation strain..."
+msgstr "Мы обнаружили новый штамм вируса..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.DESC"
+msgid "Cute and fluffy like a cloud Puffy."
+msgstr "Милый и пушистый как облачко пуфф."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.FLUFFYPUFFY.NAME"
+msgid "Fluffy Puffy"
+msgstr "Пушистый пуфф"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.DESC"
+msgid "This Beeta may look angry, but it will never ever sting anyone."
+msgstr "Эта Бета может выглядеть сердитой, но никогда никого не ужалит."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.HARMLESSBEE.NAME"
+msgid "Harmless Bee"
+msgstr "Безобидная пчелка"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.DESC"
+msgid "Shining light of hope and joy."
+msgstr "Сияющий свет надежды и радости."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.LITTLESUNSHINE.NAME"
+msgid "Little Sunshine"
+msgstr "Маленькое Солнышко"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.DESC"
+msgid "Cute little and totally harmless alien."
+msgstr "Миленький и совершенно безобидный инопланетянин."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.MORBALIEN.NAME"
+msgid "Little Alien"
+msgstr "Маленький пришелец"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.DESC"
+msgid "This shy slickster's fur is devoid of lively colors it would normally have."
+msgstr "Мех этого застенчивого скользеца лишен ярких цветов, которые он обычно имеет."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PALESLICKSTER.NAME"
+msgid "Pale Slickster"
+msgstr "Бледный скользец"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.DESC"
+msgid "Favorite Slug of Papa Disease."
+msgstr "Любимый слизень Отца Разложения."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.PLAGUESLUG.NAME"
+msgid "Plague Slug"
+msgstr "Чумной слизень"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.DESC
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.DESC"
+msgid "Whatever is stored inside, it must be useful somehow..."
+msgstr "Что бы ни было внутри, оно должно быть хоть как-то полезно..."
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.NAME
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_CONFINGS.RANDOMFIRSTAIDKIT.NAME"
+msgid "First Aid Pack"
+msgstr "Посылка первой помощи"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TEXT
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TEXT"
+msgid "Open Kit"
+msgstr "Открыть набор"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.FIRSTAIDKITOPENER.TOOLTIP"
+msgid "Let's see what's inside!"
+msgstr "Посмотрим, что внутри!"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TEXT
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TEXT"
+msgid "Open"
+msgstr "Открыть"
+
+#. DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.RANDOM_EVENTS_ENTITYSCRIPTS.GERMYSURPRISEBOX.TOOLTIP"
+msgid "Open this box to receive your surprise!"
+msgstr "Открыть коробку, чтобы получить свой сюрприз!"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.NAME
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.NAME"
+msgid "Gathering"
+msgstr "Сбор микробов"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.PROGRESS
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.PROGRESS"
+msgid " {GERMS} - {PROGRESS}%"
+msgstr " {GERMS} - {PROGRESS}%"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.GATHERING.TOOLTIP"
+msgid "This building is currently gathering ambient germs."
+msgstr "Это строение в данный момент собирает окружающие микробы."
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.NAME
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.NAME"
+msgid "Shield Status"
+msgstr "Статус щита"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.PROGRESS
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.PROGRESS"
+msgid ": {PROGRESS}%"
+msgstr ": {PROGRESS}%"
+
+#. DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.STATUSITEMS.SHIELDPOWERUP.TOOLTIP"
+msgid "This building generates protective shield: "
+msgstr "Это строение создает защитный барьер:"
+
+#. DiseasesExpanded.STRINGS.TAGS.DISPOSABLE_GERMS.PROPER_NAME
+msgctxt "DiseasesExpanded.STRINGS.TAGS.DISPOSABLE_GERMS.PROPER_NAME"
+msgid "Disposable Germs"
+msgstr "Одноразовые микробы"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.DESC"
+msgid "Insects bites will cause additional damage to this Duplicant."
+msgstr "Укусы насекомых наносят дополнительный урон этому дубликанту."
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.NAME
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.NAME"
+msgid "Insect Allergies"
+msgstr "Аллергия на насекомых"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC"
+msgid "Allergic reaction to insect bites"
+msgstr "Аллергическая реакция на укусы насекомых"
+
+#. DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.INSECTALLERGIES.SHORT_DESC_TOOLTIP"
+msgid "Insect Allergies make small bites more dangerous."
+msgstr "Аллергия на насекомых делает даже маленькие укусы опасными."
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.DESC"
+msgid "This duplicant won't wash their hands."
+msgstr "Этот дубликант не моет руки."
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.NAME
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.NAME"
+msgid "Filthy"
+msgstr "Грязнуля"
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC"
+msgid "This duplicant is not excited with a concept of personal hygiene."
+msgstr "Этого дубликанта не волнует понятие личной гигиены."
+
+#. DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC_TOOLTIP
+msgctxt "DiseasesExpanded.STRINGS.TRAITS.NOTWASHINGHANDS.SHORT_DESC_TOOLTIP"
+msgid "Washing hands is not something that this duplicant is interested with."
+msgstr "Мытье рук не заботит этого дубликанта."
+
+#. DiseasesExpanded.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "DiseasesExpanded.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "pether.pg"
+msgstr "RealWiseSerpent"
+
+#. DiseasesExpanded.STRINGS.UNSPECIFIEDFLASK.DESC
+msgctxt "DiseasesExpanded.STRINGS.UNSPECIFIEDFLASK.DESC"
+msgid "and contained"
+msgstr "неопределенной болезни"
+
+#. DiseasesExpanded.STRINGS.UNSPECIFIEDFLASK.NAME
+msgctxt "DiseasesExpanded.STRINGS.UNSPECIFIEDFLASK.NAME"
+msgid "<link=\"DISEASE\">Sample</link>"
+msgstr "<link=\"DISEASE\">неопределенной болезнью</link>"
+
