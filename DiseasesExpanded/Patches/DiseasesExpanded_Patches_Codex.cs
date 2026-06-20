@@ -10,22 +10,6 @@ namespace DiseasesExpanded
 {
     class DiseasesExpanded_Patches_Codex
     {
-
-        //[HarmonyPatch(typeof(CodexCache), "CollectYAMLEntries")]
-        public class CodexEntryGenerator_GenerateSomeEntries_Patch
-        {
-            public static void Postfix()
-            {
-                var r = CodexEntryGenerator.GenerateCategoryEntry("MEDICINE", Strings.Get("STRINGS.UI.CODEX.CATEGORYNAMES.MEDICINE"),
-                    GeneratePillsEntries(),
-                    Def.GetUISprite("Apothecary").first
-                );
-                var temp = CodexCache.FindEntry("HOME");
-                (temp as CategoryEntry)?.entriesInCategory.Add(r);
-                CodexEntryGenerator.PopulateCategoryEntries(new List<CategoryEntry>() { r });
-            }
-        }
-
         private static void FixNameLinks(GameObject __result)
         {
             string id = __result.PrefabID().ToString();
@@ -34,101 +18,132 @@ namespace DiseasesExpanded
             __result.AddOrGet<KSelectable>().SetName(UI.FormatAsLink(name, id));
         }
 
-        public static void GenerateTitleContainers(string title, string subtitls, List<ContentContainer> contentContainerList)
+        [HarmonyPatch(typeof(CodexCache), "CollectEntries")]
+        public class CodexCache_CollectEntries_Patch
         {
-            contentContainerList.Add(new ContentContainer(new List<ICodexWidget>()
-                        {
-                            new CodexText(title, CodexTextStyle.Title),
-                            new CodexText() {stringKey = subtitls,
-                            style = CodexTextStyle.Subtitle },
-                            new CodexDividerLine()
-                            }, ContentContainer.ContentLayout.Vertical));
+            public static void Postfix(string folder, List<CodexEntry> __result)
+            {
+                if (folder != string.Empty)
+                    return;
+
+                CodexEntry temp;
+
+                if (Settings.Instance.AlienGoo.IncludeDisease &&
+                    (temp = CreateCodexEntry(AlienSicknessCureConfig.ID, $"STRINGS.CODEX.ADVANCEDCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if ((temp = CreateCodexEntry(AllergyVaccineConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if ((temp = CreateCodexEntry(AntihistamineBoosterConfig.ID, $"STRINGS.CODEX.ANTIHISTAMINE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.MooFlu.IncludeDisease &&
+                    (temp = CreateCodexEntry(GasCureConfig.ID, $"STRINGS.CODEX.BASICCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.MooFlu.IncludeDisease &&
+                    (temp = CreateCodexEntry(GassyVaccineConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if ((temp = CreateCodexEntry(HappyPillConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.HungerGerms.IncludeDisease &&
+                    (temp = CreateCodexEntry(HungermsVaccineConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.BogInsects.IncludeDisease &&
+                    (temp = CreateCodexEntry(MudMaskConfig.ID, $"STRINGS.CODEX.BASICCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.MutatingVirus.IncludeDisease &&
+                    (temp = CreateCodexEntry(MutatingAntiviralConfig.ID, $"STRINGS.CODEX.BASICCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.HungerGerms.IncludeDisease &&
+                    (temp = CreateCodexEntry(RadShotConfig.ID, $"STRINGS.CODEX.ADVANCEDCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.RustDust.IncludeDisease &&
+                    (temp = CreateCodexEntry(RustSickness2CureConfig.ID, $"STRINGS.CODEX.ADVANCEDCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.RustDust.IncludeDisease &&
+                    (temp = CreateCodexEntry(RustSickness3CureConfig.ID, $"STRINGS.CODEX.ADVANCEDCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.HungerGerms.IncludeDisease &&
+                    (temp = CreateCodexEntry(SapShotConfig.ID, $"STRINGS.CODEX.ADVANCEDCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.FrostPox.IncludeDisease &&
+                    (temp = CreateCodexEntry(SerumDeepBreathConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.AlienGoo.IncludeDisease &&
+                    (temp = CreateCodexEntry(SerumSuperConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.MooFlu.IncludeDisease &&
+                    (temp = CreateCodexEntry(SerumTummyConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if (Settings.Instance.BogInsects.IncludeDisease && Settings.Instance.HungerGerms.IncludeDisease &&
+                    (temp = CreateCodexEntry(SerumYummyConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if ((temp = CreateCodexEntry(SlimelungVaccineConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if ((temp = CreateCodexEntry(SunburnCureConfig.ID, $"STRINGS.CODEX.ADVANCEDCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if ((temp = CreateCodexEntry(ZombieSporesVaccineConfig.ID, $"STRINGS.CODEX.BASICBOOSTER.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+
+                if ((temp = CreateCodexEntry(TestSampleConfig.ID, $"STRINGS.CODEX.BASICCURE.SUBTITLE", "MEDICINES")) != null)
+                    __result.Add(temp);
+            }
         }
 
-        public static void GenerateRecipesContainers(Tag tag, List<ContentContainer> contentContainerList)
+        private static CodexEntry CreateCodexEntry(string id, string subtitle, string category)
         {
-            List<ICodexWidget> content3 = new List<ICodexWidget>();
-            List<ICodexWidget> content4 = new List<ICodexWidget>();
-            foreach (ComplexRecipe recipe in ComplexRecipeManager.Get().recipes)
-            {
-                if (((IEnumerable<ComplexRecipe.RecipeElement>)recipe.ingredients).Any(i => i.material == tag))
-                    content3.Add(new CodexRecipePanel(recipe));
-                if (((IEnumerable<ComplexRecipe.RecipeElement>)recipe.results).Any(i => i.material == tag))
-                    content4.Add(new CodexRecipePanel(recipe, true));
-            }
-            ContentContainer contents1 = new ContentContainer(content3, ContentContainer.ContentLayout.Vertical);
-            ContentContainer contents2 = new ContentContainer(content4, ContentContainer.ContentLayout.Vertical);
-            if (content3.Count > 0)
-            {
-                contentContainerList.Add(new ContentContainer(new List<ICodexWidget>()
-                            {
-                            new CodexSpacer(),
-                            new CodexCollapsibleHeader(CODEX.HEADERS.ELEMENTCONSUMEDBY, contents1)
-                            }, ContentContainer.ContentLayout.Vertical));
-                contentContainerList.Add(contents1);
-            }
-            if (content4.Count > 0)
-            {
-                contentContainerList.Add(new ContentContainer(new List<ICodexWidget>()
-                            {
-                            new CodexSpacer(),
-                            new CodexCollapsibleHeader(CODEX.HEADERS.ELEMENTPRODUCEDBY, contents2)
-                            }, ContentContainer.ContentLayout.Vertical));
-                contentContainerList.Add(contents2);
-            }
-        }
+            GameObject go = Assets.GetPrefab(id);
 
-        public static Dictionary<string, CodexEntry> GeneratePillsEntries()
-        {
-            List<string> hideInCodex = new List<string>() { 
-                HungermsVaccineConfig.ID, 
-                IntermediateRadPillConfig.ID,
-                //AntihistamineBoosterConfig.ID
+            if (go == null)
+                return null;
+
+            List<ContentContainer> containers = new List<ContentContainer>
+            {
+                new ContentContainer(new List<ICodexWidget>()
+                    {
+                        new CodexText(go.GetProperName(), CodexTextStyle.Title),
+                        new CodexText() { stringKey = subtitle, style = CodexTextStyle.Subtitle },
+                        new CodexDividerLine()
+                    }, ContentContainer.ContentLayout.Vertical)
             };
 
-            List<GameObject> prefabsWithComponent = Assets.GetPrefabsWithComponent<MedicinalPill>();
-            Dictionary<string, CodexEntry> res = new Dictionary<string, CodexEntry>();
+            Sprite first = Def.GetUISprite(go).first;
+            CodexEntryGenerator.GenerateImageContainers(first, containers);
 
-            foreach (GameObject go in prefabsWithComponent)
+            List<ICodexWidget> content = new List<ICodexWidget>
             {
-                if (!hideInCodex.Contains(go.PrefabID().ToString()))
-                {
-                    FixNameLinks(go);
-                    List<ContentContainer> contentContainerList = new List<ContentContainer>
-                    {
-                        new ContentContainer(new List<ICodexWidget>()
-                        {
-                            new CodexText(go.GetProperName(), CodexTextStyle.Title),
-                            new CodexDividerLine()
-                            }, ContentContainer.ContentLayout.Vertical)
-                    };
+                new CodexText(go.GetComponent<InfoDescription>()?.description, CodexTextStyle.Body),
+            };
 
-                    Sprite first = Def.GetUISprite(go).first;
-                    CodexEntryGenerator.GenerateImageContainers(first, contentContainerList);
-                    List<ICodexWidget> content = new List<ICodexWidget>();
-                    Tag tag = go.PrefabID();
-                    content.Add(new CodexText()
-                    {
-                        stringKey = $"STRINGS.ITEMS.PILLS.{tag.ToString().ToUpper()}.DESC",
-                        style = CodexTextStyle.Body
-                    });
-                    ContentContainer contentContainer = new ContentContainer(content, ContentContainer.ContentLayout.Vertical);
-                    contentContainerList.Add(contentContainer);
+            ContentContainer contentContainer = new ContentContainer(content, ContentContainer.ContentLayout.Vertical);
+            containers.Add(contentContainer);
 
-                    CodexEntry entry = new CodexEntry("MEDICINE", contentContainerList, go.GetProperName());
-                    entry.icon = first;
+            CodexEntry entry = new CodexEntry(category, containers, go.GetProperName());
+            entry.icon = first;
 
-                    GenerateRecipesContainers(tag, contentContainerList);
+            entry.id = id;
+            entry.disabled = false;
 
-                    entry.parentId = "MEDICINE";
-                    //entry.id = tag.ToString();
+            entry.contentMadeAndUsed.Add(new CodexEntry_MadeAndUsed() { tag = id });
 
-                    CodexCache.AddEntry(tag.ToString(), entry);
-                    res.Add(tag.ToString(), entry);
-
-                }
-            }
-            return res;
+            return entry;
         }
     }
 }
