@@ -4,13 +4,17 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class NanobotSwarmConfig : IEntityConfig
+    class NanobotSwarmConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "NanobotSwarm";
         public const int SPAWNED_BOTS_COUNT = 1_000_000;
         public const int SPAWNED_BOTS_COUNT_PER_TILE = SPAWNED_BOTS_COUNT / 6;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

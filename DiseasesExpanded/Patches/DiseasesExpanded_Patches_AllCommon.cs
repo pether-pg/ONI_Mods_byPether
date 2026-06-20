@@ -280,7 +280,7 @@ namespace DiseasesExpanded
 
                 if (Settings.Instance.FrostPox.IncludeDisease)          __instance.Add(new FrostShards(statsOnly));
                 if (Settings.Instance.MooFlu.IncludeDisease)            __instance.Add(new GassyGerms(statsOnly));
-                if (Settings.Instance.MooFlu.IncludeDisease)            __instance.Add(new RustGerms(statsOnly));
+                if (Settings.Instance.RustDust.IncludeDisease)          __instance.Add(new RustGerms(statsOnly));
                 if (Settings.Instance.AlienGoo.IncludeDisease)          __instance.Add(new AlienGerms(statsOnly));
                 if (Settings.Instance.MutatingVirus.IncludeDisease)     __instance.Add(new MutatingGerms(statsOnly));
                 if (Settings.Instance.MedicalNanobots.IncludeDisease)   __instance.Add(new MedicalNanobots(statsOnly));

@@ -4,14 +4,18 @@ using UnityEngine;
 
 namespace DiseasesExpanded.RandomEvents.Configs
 {
-    class PaleSlicksterConfig : IEntityConfig
+    class PaleSlicksterConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "PaleSlickster";
         public const string BASE_TRAIT_ID = "PaleSlicksterBaseTrait";
 
         public static Color PaleHighlight = new Color(0.25f, 0.25f, 0.25f);
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public GameObject CreatePrefab()
         {

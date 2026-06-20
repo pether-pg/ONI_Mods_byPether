@@ -3,12 +3,16 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class NanobotUpgrade_RadiationProtectionConfig : IEntityConfig
+    class NanobotUpgrade_RadiationProtectionConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "NanobotUpgrade_RadiationProtection";
         public const MutationVectors.Vectors VECTOR = MutationVectors.Vectors.Res_RadiationResistance;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

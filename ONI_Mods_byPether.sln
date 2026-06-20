@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36212.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IlluminationSensor", "IlluminationSensor\IlluminationSensor.csproj", "{EB780B87-F724-4C0E-BADD-1F0FCFFDB912}"
 EndProject
@@ -17,13 +17,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResearchRequirements", "Res
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SymbioticGerms", "SymbioticGerms\SymbioticGerms.csproj", "{D35B1E06-8D7C-415C-B1CB-E51CA1D2D35E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiseasesExpanded", "DiseasesExpanded\DiseasesExpanded.csproj", "{A2261940-DAE1-47BB-962D-DBF4C3F01376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiseasesExpanded", "DiseasesExpanded\DiseasesExpanded.csproj", "{A2261940-DAE1-47BB-962D-DBF4C3F01376}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSkillpoints", "FreeSkillpoints\FreeSkillpoints.csproj", "{A10CB788-41B2-4C26-ADD2-627D6E1651CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplayerStorage", "MultiplayerStorage\MultiplayerStorage.csproj", "{B9B88F10-383F-4CED-9BF2-201EDAB2EDD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinedConduitDisplay", "CombinedConduitDisplay\CombinedConduitDisplay.csproj", "{4871B5A6-CABC-4418-B861-D9052BF2586F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CombinedConduitDisplay", "CombinedConduitDisplay\CombinedConduitDisplay.csproj", "{4871B5A6-CABC-4418-B861-D9052BF2586F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurableBuildMenus", "ConfigurableBuildMenus\ConfigurableBuildMenus.csproj", "{E4199AC3-96B9-460C-811E-CE5BDCE59C63}"
 EndProject
@@ -53,11 +53,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DietVariety", "DietVariety\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleFoodMod", "ExampleFoodMod\ExampleFoodMod.csproj", "{516A4D42-5693-474D-8189-C6A1F28CB4FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UninstalledModCrashHandler", "UninstalledModCrashHandler\UninstalledModCrashHandler.csproj", "{DEA164D5-798A-4F41-81A5-8D1405A995A4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridCellHelper", "GridCellHelper\GridCellHelper.csproj", "{2EA7BA63-4D76-4196-A390-1D3D42E82D05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiobotUpgrades", "BiobotUpgrades\BiobotUpgrades.csproj", "{5FA1FE0F-F714-4BDB-B534-27B0E1A94D4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiobotUpgrades", "BiobotUpgrades\BiobotUpgrades.csproj", "{5FA1FE0F-F714-4BDB-B534-27B0E1A94D4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.props.default = Directory.Build.props.default
+		Directory.Build.props.user = Directory.Build.props.user
+		Directory.Build.targets = Directory.Build.targets
+		ONITwitchLib.dll = ONITwitchLib.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -165,10 +172,6 @@ Global
 		{516A4D42-5693-474D-8189-C6A1F28CB4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{516A4D42-5693-474D-8189-C6A1F28CB4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{516A4D42-5693-474D-8189-C6A1F28CB4FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DEA164D5-798A-4F41-81A5-8D1405A995A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEA164D5-798A-4F41-81A5-8D1405A995A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEA164D5-798A-4F41-81A5-8D1405A995A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEA164D5-798A-4F41-81A5-8D1405A995A4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EA7BA63-4D76-4196-A390-1D3D42E82D05}.Release|Any CPU.ActiveCfg = Release|Any CPU

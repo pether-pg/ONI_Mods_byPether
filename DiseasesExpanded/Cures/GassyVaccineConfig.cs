@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DiseasesExpanded
 {
-    class GassyVaccineConfig : IEntityConfig
+    class GassyVaccineConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "GassyVaccine";
         public const string EffectID = "GassyVaccineEffect";
@@ -13,7 +13,11 @@ namespace DiseasesExpanded
         public static string Name { get => string.Format(STRINGS.CURES.VACCINE.NAME, GermIdx.GetGermName(GermIdx.GassyGermsIdx)); }
         public static string Desc { get => string.Format(STRINGS.CURES.VACCINE.DESC, GermIdx.GetGermName(GermIdx.GassyGermsIdx)); }
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

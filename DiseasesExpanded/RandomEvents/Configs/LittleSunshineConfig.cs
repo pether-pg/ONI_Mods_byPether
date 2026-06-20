@@ -4,12 +4,16 @@ using UnityEngine;
 
 namespace DiseasesExpanded.RandomEvents.Configs
 {
-    class LittleSunshineConfig : IEntityConfig
+    class LittleSunshineConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "LittleSunshine";
         public const string BASE_TRAIT_ID = "LittleSunshineBaseTrait";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public GameObject CreatePrefab()
         {

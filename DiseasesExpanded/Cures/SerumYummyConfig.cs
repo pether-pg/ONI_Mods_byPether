@@ -4,7 +4,7 @@ using Klei.AI;
 
 namespace DiseasesExpanded
 {
-    class SerumYummyConfig : IEntityConfig
+    class SerumYummyConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "YummySerum";
         public const string EFFECT_ID = "YummySerumEffect";
@@ -24,7 +24,11 @@ namespace DiseasesExpanded
             return serumEffect;
         }
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

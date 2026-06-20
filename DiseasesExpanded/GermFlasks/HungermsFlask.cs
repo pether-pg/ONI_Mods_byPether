@@ -2,11 +2,15 @@
 
 namespace DiseasesExpanded
 {
-    class HungermsFlask : IEntityConfig
+    class HungermsFlask : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = nameof(HungermsFlask);
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

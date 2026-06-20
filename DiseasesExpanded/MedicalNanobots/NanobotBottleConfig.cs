@@ -3,14 +3,18 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class NanobotBottleConfig : IEntityConfig
+    class NanobotBottleConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "NanobotBottle";
         public const int SPAWNED_BOTS_COUNT = NanobotSwarmConfig.SPAWNED_BOTS_COUNT;
         public const float OXYGEN_MASS = 1.0f;
         public static Tag BOTTLED_NANOBOTS_TAG = TagManager.Create("BottledNanobots", STRINGS.TAGS.DISPOSABLE_GERMS.PROPER_NAME);
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

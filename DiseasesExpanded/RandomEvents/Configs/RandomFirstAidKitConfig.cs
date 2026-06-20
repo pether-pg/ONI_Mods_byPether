@@ -6,11 +6,15 @@ using UnityEngine;
 
 namespace DiseasesExpanded.RandomEvents.Configs
 {
-    class RandomFirstAidKitConfig : IEntityConfig
+    class RandomFirstAidKitConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "RandomFirstAidKit";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public GameObject CreatePrefab()
         {

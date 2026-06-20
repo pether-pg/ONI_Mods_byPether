@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DiseasesExpanded
 {
-    class HungermsVaccineConfig : IEntityConfig
+    class HungermsVaccineConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "HungermsVaccine";
         public const string EffectID = "HungermsVaccineEffect";
@@ -13,7 +13,12 @@ namespace DiseasesExpanded
         public static string Name { get => string.Format(STRINGS.CURES.VACCINE.NAME, GermIdx.GetGermName(GermIdx.HungerGermsIdx)); }
         public static string Desc { get => string.Format(STRINGS.CURES.VACCINE.DESC, GermIdx.GetGermName(GermIdx.HungerGermsIdx)); }
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {
