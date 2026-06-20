@@ -74,11 +74,11 @@ namespace DiseasesExpanded
             public int CalculateGermCountPerCycle()
             {
                 int total = NanobotBottleConfig.SPAWNED_BOTS_COUNT;
-                float RoiForMax = 20;
+                float cyclesToRoI = 5;
                 int maxLevel = 16;
                 int level = MedicalNanobotsData.Instance.GetDevelopmentLevel(MutationVectors.Vectors.Res_Replication);
 
-                return (int)((1 + level) * total / (RoiForMax * maxLevel));
+                return (int)((1 + level) * total / (cyclesToRoI * maxLevel));
             }
 
             public string GetStatusItemProgress()

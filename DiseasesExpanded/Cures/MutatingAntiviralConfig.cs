@@ -53,6 +53,8 @@ namespace DiseasesExpanded
 
             AddToIngridientLists(ingridientTags, ingridientFloats, BasicForagePlantConfig.ID, 2);
             AddToIngridientLists(ingridientTags, ingridientFloats, ForestForagePlantConfig.ID, 0.25f);
+            if (DlcManager.IsContentSubscribed(DlcManager.DLC5_ID))
+                AddToIngridientLists(ingridientTags, ingridientFloats, MusselTongueConfig.ID, 4 / 7.0f);
             if (DlcManager.IsContentSubscribed(DlcManager.DLC4_ID))
                 AddToIngridientLists(ingridientTags, ingridientFloats, GardenForagePlantConfig.ID, 2);
             if (DlcManager.IsContentSubscribed(DlcManager.DLC2_ID))

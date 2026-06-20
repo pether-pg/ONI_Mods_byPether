@@ -5,6 +5,7 @@
 		<ModName>[Vanilla + DLC] Diseases Expanded</ModName>
 		<ModDescription>todo</ModDescription>
 		<TwitchLib>true</TwitchLib>
+		<IsPacked>true</IsPacked>
 		<!--optional dlc requirement, example here requires spaced out and frosty, adjust to own needs and uncomment if you want that:-->
 		<!--<RequiredDlcIds>EXPANSION1_ID,DLC2_ID</RequiredDlcIds>-->
 	</PropertyGroup>

@@ -85,7 +85,8 @@ namespace DiseasesExpanded
                 tex.LoadImage(data);
                 Sprite sprite = Sprite.Create(tex, new Rect(0, (256-74), 74, 74), new Vector2(0.5f, 0.5f));
                 HashedString key = new HashedString(Assets_OnPrefabInit_Patch.SpriteName);
-                Assets.Sprites.Add(key, sprite);
+                if(!Assets.Sprites.ContainsKey(key))
+                    Assets.Sprites.Add(key, sprite);
             }
         }
 
