@@ -58,7 +58,7 @@ namespace FragrantFlowers
             decorProvider.SetValues(DECOR.BONUS.TIER0);
             decorProvider.overrideName = STRINGS.CROPS.DUSKBLOOM.NAME;
 
-            DefineRecipe();
+            //DefineRecipe();
 
             return go;
         }

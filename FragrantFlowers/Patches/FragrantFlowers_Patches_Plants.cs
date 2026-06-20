@@ -80,5 +80,32 @@ namespace FragrantFlowers
                 RegisterStrings.MakeIndustrialProductStrings(RoseAromaCanConfig.ID, STRINGS.AROMACANS.ROSE.NAME, STRINGS.AROMACANS.ROSE.DESC);
             }
         }
+
+        [HarmonyPatch(typeof(AntihistamineConfig), "CreatePrefab")]
+        public static class AntihistamineConfig_CreatePrefab_Patch
+        {
+            public static void Postfix()
+            {
+                AntihistamineConfig.recipes[0].ingredients[0].possibleMaterials =
+                    AntihistamineConfig.recipes[0].ingredients[0].possibleMaterials.Append(Crop_DuskbloomConfig.ID);
+                AntihistamineConfig.recipes[0].ingredients[0].possibleMaterialAmounts =
+                    AntihistamineConfig.recipes[0].ingredients[0].possibleMaterialAmounts.Append(1f);
+            }
+        }
+
+        [HarmonyPatch(typeof(IntermediateCureConfig), "CreatePrefab")]
+        public static class IntermediateCureConfig_CreatePrefab_Patch
+        {
+            public static void Postfix()
+            {
+                var ing = IntermediateCureConfig.recipe.ingredients[0];
+
+                if (ing.possibleMaterialAmounts != null)
+                    ing.possibleMaterialAmounts = ing.possibleMaterialAmounts.Append(1f);
+
+                ing.material = null;
+                ing.possibleMaterials = ing.possibleMaterials.Append(Crop_SpinosaRoseConfig.ID);
+            }
+        }
     }
 }
