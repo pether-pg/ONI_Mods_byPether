@@ -3,11 +3,15 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded.MutatingDisease
 {
-    class ControlledResilianceMutationConfig : IEntityConfig
+    class ControlledResilianceMutationConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "ControlledResilianceMutation";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

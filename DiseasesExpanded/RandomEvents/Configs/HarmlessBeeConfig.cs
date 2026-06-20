@@ -4,12 +4,16 @@ using UnityEngine;
 
 namespace DiseasesExpanded.RandomEvents.Configs
 {
-    class HarmlessBeeConfig : IEntityConfig
+    class HarmlessBeeConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "HarmlessBee";
         public const string BASE_TRAIT_ID = "HarmlessBeeBaseTrait";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public GameObject CreatePrefab()
         {

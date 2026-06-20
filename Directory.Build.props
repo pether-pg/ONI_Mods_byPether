@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+	<Import Condition=" !Exists('Directory.Build.props.user') " Project="Directory.Build.props.default" />
+	<Import Condition=" Exists('Directory.Build.props.user') " Project="Directory.Build.props.user" />
+
+	<!--Global properties for all projects, override as needed-->
+	<PropertyGroup>
+		<APIVersion>2</APIVersion>
+		<Optimize>true</Optimize>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<LangVersion>preview</LangVersion>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<!--ILMerging:-->
+		<IsPacked>true</IsPacked>
+		<!--set this to false for any utility library:-->
+		<IsMod>true</IsMod>
+		<!--Automatic yaml file generation:-->
+		<GenerateMetadata>true</GenerateMetadata>
+		<!--include plib, set to false in mod project if you dont want plib merged+included-->
+		<PLib>true</PLib>
+		<TwitchLib>false</TwitchLib>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+		<DebugSymbols>true</DebugSymbols>
+		<DebugType>full</DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>bin\Debug\</OutputPath>
+		<DefineConstants>DEBUG;TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<Prefer32Bit>false</Prefer32Bit>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+		<DebugType>pdbonly</DebugType>
+		<Optimize>true</Optimize>
+		<OutputPath>bin\Release\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<ErrorReport>prompt</ErrorReport>
+		<WarningLevel>4</WarningLevel>
+		<Prefer32Bit>false</Prefer32Bit>
+	</PropertyGroup>
+	<!--<UsingTask TaskName="RecursiveFolderHashing" AssemblyFile="HashService.dll"/>-->
+
+	<PropertyGroup>
+		<!--Marks Deprecated warnings as errors-->
+		<WarningsAsErrors>CS0618,CS0612</WarningsAsErrors>
+		<!--Ignore this warning for System.Compression -->
+		<NoWarn>MSB3277</NoWarn>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<Optimize>False</Optimize>
+	</PropertyGroup>
+
+	<!--Game Release Versions-->
+	<PropertyGroup>
+		<WhattaBlast>549456</WhattaBlast>
+		<QoL2023June>560597</QoL2023June>
+		<PackedSnacks>581003</PackedSnacks>
+		<QoL2024Feb>596100</QoL2024Feb>
+		<FrostyPlanetBeta>616718</FrostyPlanetBeta>
+		<FrostyPlanetRelease>622222</FrostyPlanetRelease>
+		<QOL2024NovBeta>641371</QOL2024NovBeta>
+		<QOL2024NovRelease>644960</QOL2024NovRelease>
+		<BionicBoostBeta>645088</BionicBoostBeta>
+		<BionicBoosterRelease>646687</BionicBoosterRelease>
+		<JanuaryHotfix1>648807</JanuaryHotfix1>
+		<JanuaryHotfix2>651155</JanuaryHotfix2>
+		<JanuaryHotfix3>652372</JanuaryHotfix3>
+		<FebruaryQOL_Beta>659075</FebruaryQOL_Beta>
+		<FebruaryQOL_Hotfix3>661174</FebruaryQOL_Hotfix3>
+		<PrehistoricRelease>674504</PrehistoricRelease>
+		<QOL2025NovBeta>699556</QOL2025NovBeta>
+		<QOL2025NovRelease>700386</QOL2025NovRelease>
+		<QOL2026MarchRelease>722606</QOL2026MarchRelease>
+		<BeachedDlcBeta>731233</BeachedDlcBeta>
+		<BeachedDlcRelease>736649</BeachedDlcRelease>
+		<!--Latest-->
+		<TargetGameVersion>$(BeachedDlcRelease)</TargetGameVersion>
+	</PropertyGroup>
+
+
+	<!--Copyright notice-->
+	<PropertyGroup>
+		<CurrentYear>$([System.DateTime]::Now.ToString(`yyyy`))</CurrentYear>
+		<Author>Pether.pg</Author>
+		<AuthorWithRonivan>Ronivan, Pether.pg</AuthorWithRonivan>
+		<AssemblyCopyright>Copyright ©$(Author) $(CurrentYear)</AssemblyCopyright>
+		<RonivanCopyright>Copyright ©$(AuthorWithRonivan) $(CurrentYear)</RonivanCopyright>
+		<!--Default values, override in project file if needed:-->
+		<Copyright>$(AssemblyCopyright)</Copyright>
+		<Version>$([System.DateTime]::Now.ToString('yyyy.MM.dd.HHmm'))</Version>
+		<MinimumSupportedBuild>$(TargetGameVersion)</MinimumSupportedBuild>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!--Normal Versions of the main dlls-->
+		<AssemblyNormal>$(GameLibsFolder)/Assembly-CSharp.dll</AssemblyNormal>
+		<AssemblyFirstpassNormal>$(GameLibsFolder)/Assembly-CSharp-firstpass.dll</AssemblyFirstpassNormal>
+		<!--Publicized Versions of the main dlls, everything here is made public-->
+		<AssemblyPublicized>$(SolutionDir)/PublicisedAssembly/Assembly-CSharp_public.dll</AssemblyPublicized>
+		<AssemblyFirstpassPublicized>$(SolutionDir)/PublicisedAssembly/Assembly-CSharp-firstpass_public.dll</AssemblyFirstpassPublicized>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>$(AssemblyNormal)</HintPath>
+			<HintPath Condition="'$(GameLibsFolder)' == '../Lib'">$(GameLibsFolder)/Assembly-CSharp_public.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Assembly-CSharp-firstpass">
+			<HintPath>$(AssemblyFirstpassNormal)</HintPath>
+			<HintPath Condition="'$(GameLibsFolder)' == '../Lib'">$(GameLibsFolder)/Assembly-CSharp-firstpass_public.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<!--<Reference Include="netstandard">
+			<HintPath>$(GameLibsFolder)/netstandard.dll</HintPath>
+			<Private>False</Private>
+		</Reference>-->
+		<!--<Reference Include="mscorlib">
+			<HintPath>$(GameLibsFolder)/mscorlib.dll</HintPath>
+			<Private>False</Private>
+		</Reference>-->
+		<Reference Include="0Harmony">
+			<HintPath>$(GameLibsFolder)/0Harmony.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="FMODUnity">
+			<HintPath>$(GameLibsFolder)/FMODUnity.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>$(GameLibsFolder)/UnityEngine.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>$(GameLibsFolder)/UnityEngine.CoreModule.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>$(GameLibsFolder)/Newtonsoft.Json.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>$(GameLibsFolder)/Unity.TextMeshPro.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>$(GameLibsFolder)/UnityEngine.AssetBundleModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>$(GameLibsFolder)/UnityEngine.PhysicsModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>$(GameLibsFolder)/UnityEngine.Physics2DModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>$(GameLibsFolder)/UnityEngine.ParticleSystemModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>$(GameLibsFolder)/UnityEngine.ImageConversionModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>$(GameLibsFolder)/UnityEngine.TextRenderingModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>$(GameLibsFolder)/UnityEngine.UI.dll</HintPath>
+			<!--<HintPath>$(SolutionDir)/PublicisedAssembly/UnityEngine.UI_public.dll</HintPath>-->
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>$(GameLibsFolder)/UnityEngine.UIModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="UnityEngine.WebRequestModule">
+			<HintPath>$(GameLibsFolder)/UnityEngine.UnityWebRequestModule.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="com.rlabrecque.steamworks.net">
+			<HintPath>$(GameLibsFolder)\com.rlabrecque.steamworks.net.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(PLib)' == 'true'">
+		<PackageReference Include="PLib" Version="*" />
+	</ItemGroup>
+	
+	<ItemGroup Condition="'$(TwitchLib)' == 'true'">
+		<Reference Include="ONITwitchLib">
+			<HintPath>$(SolutionDir)/ONITwitchLib.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(IsMod)' == 'true'">
+		<!--<PackageReference Include="Aze.Publicise.MSBuild.Task" Version="*">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>-->
+		<PackageReference Include="Lib.Harmony.Ref" Version="2.4.2"/>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(IsPacked)' == 'true'">
+		<PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="*">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<!--<ItemGroup Condition="'$(IsMod)' == 'true'">
+		<PackageReference Include="ONIModLauncher.MSBuild.Task" Version="*" >
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>-->
+</Project>

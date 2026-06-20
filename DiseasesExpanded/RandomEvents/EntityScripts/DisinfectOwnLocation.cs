@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPro;
 
 namespace DiseasesExpanded.RandomEvents.EntityScripts
 {
@@ -46,7 +47,8 @@ namespace DiseasesExpanded.RandomEvents.EntityScripts
         public void DisinfectSceneEntries<T>(int cell, int radius, ScenePartitionerLayer layer) where T : KMonoBehaviour
         {
             var entries = ListPool<ScenePartitionerEntry, DisinfectOwnLocation>.Allocate();
-            GameScenePartitioner.Instance.GatherEntries(new Extents(cell, radius), layer, entries);
+            Extents extents = new Extents(cell, radius);
+            GameScenePartitioner.Instance.GatherEntries(extents.x, extents.y, extents.width, extents.height, layer, entries);
 
             foreach (var entry in entries)
             {

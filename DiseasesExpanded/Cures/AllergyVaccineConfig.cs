@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DiseasesExpanded
 {
-    class AllergyVaccineConfig : IEntityConfig
+    class AllergyVaccineConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "AllergyVaccine";
         public const string EFFECT_ID = "AllergyVaccineEffect";
@@ -13,7 +13,11 @@ namespace DiseasesExpanded
         public static string Name { get => string.Format(STRINGS.CURES.VACCINE.NAME, GermIdx.GetGermName(GermIdx.PollenGermsIdx)); }
         public static string Desc { get => string.Format(STRINGS.CURES.VACCINE.DESC, GermIdx.GetGermName(GermIdx.PollenGermsIdx)); }
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

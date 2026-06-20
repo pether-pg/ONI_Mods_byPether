@@ -4,13 +4,17 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class SunburnCureConfig : IEntityConfig
+    class SunburnCureConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "SunburnCure";
         public const string EFFECT_ID = "SunburnCureEffect";
         ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

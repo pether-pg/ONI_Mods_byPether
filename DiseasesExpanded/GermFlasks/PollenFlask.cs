@@ -2,11 +2,15 @@
 
 namespace DiseasesExpanded
 {
-    class PollenFlask : IEntityConfig
+    class PollenFlask : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = nameof(PollenFlask);
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public void OnPrefabInit(GameObject inst)
         {

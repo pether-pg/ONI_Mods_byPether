@@ -4,12 +4,16 @@ using UnityEngine;
 
 namespace DiseasesExpanded.RandomEvents.Configs
 {
-    class PlagueSlugConfig : IEntityConfig
+    class PlagueSlugConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "PlagueSlug";
         public const string BASE_TRAIT_ID = "PlagueSlugBaseTrait";
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public GameObject CreatePrefab()
         {
