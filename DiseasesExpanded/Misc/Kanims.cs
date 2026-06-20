@@ -42,7 +42,7 @@ namespace DiseasesExpanded
 
         public static HashedString ShieldGenerator = (HashedString)"shield_generator_kanim";
 
-        public static HashedString PaleSlickster = (HashedString)"oilfloater_pale_75_kanim";
+        public static HashedString PaleSlickster = (HashedString)"oilfloater_kanim"; // From vanilla OilFloaterConfig.cs
 
         public static HashedString MedicalResearch = (HashedString)"custom_research_icon_kanim";
 
