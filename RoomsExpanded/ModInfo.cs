@@ -15,10 +15,15 @@ namespace RoomsExpanded
         {
             base.OnLoad(harmony);
 
+            var requiredDlcs = this.mod.packagedModInfo.GetRequiredDlcIds();
+            string dlcInfo = "All";
+            if (requiredDlcs != null)
+                dlcInfo = string.Join(", ", requiredDlcs);
+
             Namespace = GetType().Namespace;
             Debug.Log($"{Namespace}: Loaded from: {this.mod.ContentPath}");
             Debug.Log($"{Namespace}: Mod version: {this.mod.packagedModInfo.version} " +
-                        $"supporting game build {this.mod.packagedModInfo.minimumSupportedBuild} ({this.mod.packagedModInfo.supportedContent})");
+                        $"supporting game build {this.mod.packagedModInfo.minimumSupportedBuild} ({dlcInfo})");
 
             BackupConfig.Instance.RestoreBackup(JsonSerializer<Settings>.GetDefaultFilename());
 

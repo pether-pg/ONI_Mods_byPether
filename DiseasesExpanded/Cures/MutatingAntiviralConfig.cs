@@ -3,13 +3,17 @@ using System.Collections.Generic;
 
 namespace DiseasesExpanded
 {
-    class MutatingAntiviralConfig : IEntityConfig
+    class MutatingAntiviralConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "MutatingAntiviral";
         public const string EffectID = "MutatingAntiviralEffect";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_ALL_VERSIONS;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => (string[])null;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         private void DefineRecipe(Tag[] mainIngridients, float[] amounts)
         {
@@ -49,6 +53,8 @@ namespace DiseasesExpanded
 
             AddToIngridientLists(ingridientTags, ingridientFloats, BasicForagePlantConfig.ID, 2);
             AddToIngridientLists(ingridientTags, ingridientFloats, ForestForagePlantConfig.ID, 0.25f);
+            if (DlcManager.IsContentSubscribed(DlcManager.DLC5_ID))
+                AddToIngridientLists(ingridientTags, ingridientFloats, MusselTongueConfig.ID, 4 / 7.0f);
             if (DlcManager.IsContentSubscribed(DlcManager.DLC4_ID))
                 AddToIngridientLists(ingridientTags, ingridientFloats, GardenForagePlantConfig.ID, 2);
             if (DlcManager.IsContentSubscribed(DlcManager.DLC2_ID))

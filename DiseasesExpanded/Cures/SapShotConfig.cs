@@ -4,13 +4,17 @@ using TUNING;
 
 namespace DiseasesExpanded
 {
-    class SapShotConfig : IEntityConfig
+    class SapShotConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "SapShot";
         public const string EFFECT_ID = "SapShotEffect";
         public static ComplexRecipe recipe;
 
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
 
         public GameObject CreatePrefab()
         {

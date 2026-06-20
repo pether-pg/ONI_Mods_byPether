@@ -4,11 +4,18 @@ using Klei.AI;
 
 namespace DiseasesExpanded
 {
-    class SerumTummyConfig : IEntityConfig
+    class SerumTummyConfig : IEntityConfig, IHasDlcRestrictions
     {
         public const string ID = "TummySerum";
         public const string EFFECT_ID = "TummySerumEffect";
         public static ComplexRecipe recipe;
+
+        public string[] GetDlcIds() => (string[])null; // Obsolete
+
+        public string[] GetRequiredDlcIds() => DlcManager.EXPANSION1;
+
+        public string[] GetForbiddenDlcIds() => (string[])null;
+
         public static string Name { get => STRINGS.CURES.TUMMYSERUM.NAME; }
         public static string Desc { get => STRINGS.CURES.TUMMYSERUM.DESC; }
 
@@ -22,8 +29,6 @@ namespace DiseasesExpanded
 
             return serumEffect;
         }
-
-        public string[] GetDlcIds() => DlcManager.AVAILABLE_EXPANSION1_ONLY;
 
         public void OnPrefabInit(GameObject inst)
         {
