@@ -9,6 +9,7 @@ namespace SymbioticGerms
     {
         [HarmonyPatch(typeof(CreatureCalorieMonitor.Instance))]
         [HarmonyPatch("Poop")]
+        [HarmonyPatch(new Type[] { typeof(PoopData) })]
         public class CreatureCalorieMonitor_Poop_Patch
         {
             public static void Prefix(CreatureCalorieMonitor.Instance __instance)
@@ -29,7 +30,7 @@ namespace SymbioticGerms
         }
 
         [HarmonyPatch(typeof(Crop))]
-        [HarmonyPatch("SpawnSomeFruit")]
+        [HarmonyPatch("SpawnAndGetSomeFruit")]
         public class Crop_SpawnFruit_Patch
         {
 
