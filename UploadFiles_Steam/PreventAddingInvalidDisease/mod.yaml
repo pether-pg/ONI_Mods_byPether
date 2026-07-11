@@ -1,0 +1,3 @@
+title: '[Tmp] Prevent Adding Invalid Disease'
+description: "Prevent adding invalid Disease."
+staticID: 'pether-pg.PreventAddingInvalidDisease'

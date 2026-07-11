@@ -252,9 +252,12 @@ namespace DiseasesExpanded
                 if (Settings.Instance.RustDust.IncludeDisease)
                 {
                     __instance.Add(new RustSickness_0());
-                    __instance.Add(new RustSickness_1());
-                    __instance.Add(new RustSickness_2());
-                    __instance.Add(new RustSickness_3());
+                    if(DlcManager.IsContentSubscribed(DlcManager.DLC3_ID))
+                    {
+                        __instance.Add(new RustSickness_1());
+                        __instance.Add(new RustSickness_2());
+                        __instance.Add(new RustSickness_3());
+                    }
                 }
             }
         }

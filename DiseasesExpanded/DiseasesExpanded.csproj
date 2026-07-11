@@ -6,6 +6,8 @@
 		<ModDescription>Adds more diseases to the game, along with related cure items, to enrich the germy part of the game.</ModDescription>
 		<TwitchLib>true</TwitchLib>
 		<IsPacked>true</IsPacked>
+		<AssemblyVersion>2026.7.11.1309</AssemblyVersion>
+		<FileVersion>2026.7.11.1309</FileVersion>
 		<!--optional dlc requirement, example here requires spaced out and frosty, adjust to own needs and uncomment if you want that:-->
 		<!--<RequiredDlcIds>EXPANSION1_ID,DLC2_ID</RequiredDlcIds>-->
 	</PropertyGroup>
