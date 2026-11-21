@@ -78,8 +78,9 @@
 		<QOL2026MarchRelease>722606</QOL2026MarchRelease>
 		<BeachedDlcBeta>731233</BeachedDlcBeta>
 		<BeachedDlcRelease>736649</BeachedDlcRelease>
+		<QOL2026NovemberRelease>764025</QOL2026NovemberRelease>
 		<!--Latest-->
-		<TargetGameVersion>$(BeachedDlcRelease)</TargetGameVersion>
+		<TargetGameVersion>$(QOL2026NovemberRelease)</TargetGameVersion>
 	</PropertyGroup>
 
 

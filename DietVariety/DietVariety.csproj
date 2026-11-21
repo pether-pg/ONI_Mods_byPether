@@ -4,6 +4,8 @@
 	<PropertyGroup>
 		<ModName>[Vanilla + DLC] Diet Variety</ModName>
 		<ModDescription>Encourages and rewards duplicants to enrich their diets with more variety.</ModDescription>
+		<AssemblyVersion>2026.11.21.1404</AssemblyVersion>
+		<FileVersion>2026.11.21.1404</FileVersion>
 		<!--optional dlc requirement, example here requires spaced out and frosty, adjust to own needs and uncomment if you want that:-->
 		<!--<RequiredDlcIds>EXPANSION1_ID,DLC2_ID</RequiredDlcIds>-->
 	</PropertyGroup>

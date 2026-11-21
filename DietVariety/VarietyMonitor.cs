@@ -10,14 +10,19 @@ namespace DietVariety
     {
         public const string EFFECT_ID = "DietVarietyEffect";
 
-        private static readonly EventSystem.IntraObjectHandler<VarietyMonitor> OnDeadTagAddedDelegate = GameUtil.CreateHasTagHandler<VarietyMonitor>(GameTags.Dead, (System.Action<VarietyMonitor, object>)((component, data) => component.OnDeath(data)));
+
+        private static readonly System.Action<object, object> OnDeadTagAddedDelegate = 
+            GameUtil.CreateHasTagHandler<VarietyMonitor>(
+                GameTags.Dead, 
+                (System.Action<VarietyMonitor, TagChangedEventData>)((component, data) => component.OnDeath(data))
+            );
 
         protected override void OnSpawn()
         {
             base.OnSpawn();
 
             this.gameObject.Subscribe((int)GameHashes.EatCompleteEater, new System.Action<object>(OnEatComplete));
-            GameUtil.SubscribeToTags<VarietyMonitor>(this, VarietyMonitor.OnDeadTagAddedDelegate, true);
+            GameUtil.SubscribeToTags<VarietyMonitor>(this, VarietyMonitor.OnDeadTagAddedDelegate, (object)this, true);
 
             InitalizeEffect();
         }
