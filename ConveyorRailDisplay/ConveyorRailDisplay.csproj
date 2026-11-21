@@ -4,6 +4,8 @@
 	<PropertyGroup>
 		<ModName>[Vanilla + DLC] Conveyor Rail Display</ModName>
 		<ModDescription>Moves Conveyor Rail to the front when related layer is selected to increase rail network visibility.</ModDescription>
+		<AssemblyVersion>2026.11.21.1658</AssemblyVersion>
+		<FileVersion>2026.11.21.1658</FileVersion>
 		<!--optional dlc requirement, example here requires spaced out and frosty, adjust to own needs and uncomment if you want that:-->
 		<!--<RequiredDlcIds>EXPANSION1_ID,DLC2_ID</RequiredDlcIds>-->
 	</PropertyGroup>

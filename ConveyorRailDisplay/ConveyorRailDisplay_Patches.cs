@@ -74,11 +74,11 @@ namespace ConveyorRailDisplay
             public static void Postfix(ref OverlayModes.SolidConveyor __instance)
             {
                 IsLayerOn = true;
-                HashSet<SaveLoadRoot> layerTargets = Traverse.Create(__instance).Field("layerTargets")?.GetValue<HashSet<SaveLoadRoot>>();
+                HybridListHashSet<SaveLoadRoot> layerTargets = Traverse.Create(__instance).Field("layerTargets")?.GetValue<HybridListHashSet<SaveLoadRoot>>();
                 if (layerTargets == null)
                     return;
 
-                foreach (SaveLoadRoot layerTarget in layerTargets)
+                foreach (SaveLoadRoot layerTarget in layerTargets.AsList())
                     if (!((UnityEngine.Object) layerTarget == (UnityEngine.Object) null))
                         ZAxis.ModifyVectorZAxis(layerTarget);
             }
