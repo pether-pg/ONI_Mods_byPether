@@ -4,6 +4,8 @@
 	<PropertyGroup>
 		<ModName>[Vanilla + DLC] Real Calories Info</ModName>
 		<ModDescription>Displays only amount of calories that are permitted to consume.</ModDescription>
+		<AssemblyVersion>2026.11.21.1737</AssemblyVersion>
+		<FileVersion>2026.11.21.1737</FileVersion>
 		<!--optional dlc requirement, example here requires spaced out and frosty, adjust to own needs and uncomment if you want that:-->
 		<!--<RequiredDlcIds>EXPANSION1_ID,DLC2_ID</RequiredDlcIds>-->
 	</PropertyGroup>
