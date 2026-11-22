@@ -4,6 +4,8 @@
 	<PropertyGroup>
 		<ModName>Fragrant Flowers</ModName>
 		<ModDescription>Adds flowers spreading new aromas into the air.</ModDescription>
+		<AssemblyVersion>2026.11.21.1829</AssemblyVersion>
+		<FileVersion>2026.11.21.1829</FileVersion>
 		<!--optional dlc requirement, example here requires spaced out and frosty, adjust to own needs and uncomment if you want that:-->
 		<!--<RequiredDlcIds>EXPANSION1_ID,DLC2_ID</RequiredDlcIds>-->
 	</PropertyGroup>

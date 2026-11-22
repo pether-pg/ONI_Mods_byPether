@@ -22,6 +22,7 @@ namespace FragrantFlowers
         public const string SeedKanim = "seed_spinosa_kanim";
         public const int WIDTH = 1;
         public const int HEIGHT = 2;
+        public static readonly Crop.CropVal CROP_VAL_HARVEST = new Crop.CropVal(Crop_SpinosaRoseConfig.ID, Crop_SpinosaRoseConfig.GROW_TIME, 1, true);
 
         //===> DEFINE THE ANIMATION SETTINGS FOR A STANDARD CROP PLANT <=
         private static StandardCropPlant.AnimSet animSet = new StandardCropPlant.AnimSet
@@ -116,6 +117,7 @@ namespace FragrantFlowers
 
             EntityTemplates.ExtendEntityToBasicPlant(
                 gameObject,
+                CROP_VAL_HARVEST,
                 TemperatureLethalLow,
                 TemperatureWarningLow,
                 TemperatureWarningHigh,
@@ -133,7 +135,6 @@ namespace FragrantFlowers
                 true, // Implies that this Crop is sensible to Atmospheric Pressure
                 0f, // Pressure which this Crop will die
                 0.15f, // Pressure which this Crop will stop growing.
-                cropID,
                 true, // Implies this Crop can be drowned by liquids.
                 true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
                 true, // Implies this Crop requires a solid ground to grow.

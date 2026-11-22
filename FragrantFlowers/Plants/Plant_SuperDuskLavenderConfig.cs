@@ -37,6 +37,8 @@ namespace FragrantFlowers
         public const int WIDTH = 1;
         public const int HEIGHT = 2;
 
+        public static readonly Crop.CropVal CROP_VAL_HARVEST = new Crop.CropVal(Crop_DuskberryConfig.ID, Crop_DuskberryConfig.GROW_TIME, 1, true);
+
         public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
 
         public const float PlantFiberProduction = 2f;          // PlantFiber per cycle
@@ -84,6 +86,7 @@ namespace FragrantFlowers
 
             EntityTemplates.ExtendEntityToBasicPlant(
                 gameObject,
+                CROP_VAL_HARVEST,
                 TemperatureLethalLow,
                 TemperatureWarningLow,
                 TemperatureWarningHigh,
@@ -101,7 +104,6 @@ namespace FragrantFlowers
                 true, // Implies that this Crop is sensible to Atmospheric Pressure
                 0f, // Pressure which this Crop will die
                 0.15f, // Pressure which this Crop will stop growing.
-                cropID,
                 true, // Implies this Crop can be drowned by liquids.
                 true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
                 true, // Implies this Crop requires a solid ground to grow.

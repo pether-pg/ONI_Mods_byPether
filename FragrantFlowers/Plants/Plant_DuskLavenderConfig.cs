@@ -44,6 +44,8 @@ namespace FragrantFlowers
 
         public const float Fertilization = 0.014f;         // Phosphorite Fertilization Needed
 
+        public static readonly Crop.CropVal CROP_VAL_HARVEST = new Crop.CropVal(Crop_DuskbloomConfig.ID, Crop_DuskbloomConfig.GROW_TIME, 1, true);
+
         public ComplexRecipe Recipe;
 
         //===> DEFINE THE BASE TEMPLATE <=====================================================================
@@ -115,34 +117,30 @@ namespace FragrantFlowers
 
             EntityTemplates.ExtendEntityToBasicPlant(
                 gameObject,
+                CROP_VAL_HARVEST,
                 TemperatureLethalLow,
                 TemperatureWarningLow,
                 TemperatureWarningHigh,
-                TemperatureLethalHigh,
-
-                //===> SAFE ATMOSPHERE ELEMENTS <===================================================================================
-                // Plant will not grow in any element other than the ones here.
+                TemperatureLethalHigh,                
                 new SimHashes[]{
                     SimHashes.Oxygen,
                     SimHashes.ContaminatedOxygen,
                     SimHashes.CarbonDioxide
-                },
-
-                //===> BASE SETTINGS <==============================================================================================
-                true, // Implies that this Crop is sensible to Atmospheric Pressure
-                0f, // Pressure which this Crop will die
-                0.15f, // Pressure which this Crop will stop growing.
-                cropID,
-                true, // Implies this Crop can be drowned by liquids.
-                true, // Implies this Crop can receive Micro Fertilizer buff in the agricultural room.
-                true, // Implies this Crop requires a solid ground to grow.
-                false,// does it require Backwall_Foundation?
-                true, // Implies this Crop will grow old and eventually yields a produce.
-                2400f, // Max age this Crop can grow, or the time it require for it to complete its growth.
-                0f, // Minimum Radiation required by this Crop.
-                9800f, // Maximum value of Radiation this Crop can get before stop growing and dying.
-                "LavenderOriginal", // Crop trait id.
-                "Lavender Original"); // Crop trait name.
+                }, // SimHashes[] safe_elements
+                true, // bool pressure_sensitive
+                0f, // float pressure_lethal_low
+                0.15f, // float pressure_warning_low
+                true, // bool can_drown
+                true, // bool can_tinker
+                true, // bool require_solid_tile
+                false,// bool require_Backwall_Foundation = false
+                true, // bool should_grow_old = true
+                2400f, // float max_age = 2400f
+                0f, // float min_radiation = 0.0f
+                9800f, // float max_radiation = 2200f,
+                "LavenderOriginal", // string baseTraitId = null
+                "Lavender Original" // string baseTraitName = null
+            );
 
             //===> SOLID FERTILIZER THIS CROP REQUIRES <============================================================================
             EntityTemplates.ExtendPlantToFertilizable(gameObject, new PlantElementAbsorber.ConsumeInfo[]

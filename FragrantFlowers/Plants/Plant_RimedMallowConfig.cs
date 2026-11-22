@@ -42,6 +42,8 @@ namespace FragrantFlowers
 
         public const float Fertilization = 0.0016666667f;         // Ice Fertilization Needed
 
+        public static readonly Crop.CropVal CROP_VAL_HARVEST = new Crop.CropVal(Crop_CottonBollConfig.ID, Crop_CottonBollConfig.GROW_TIME, 1, true);
+
         public ComplexRecipe Recipe;
 
         //===> DEFINE THE BASE TEMPLATE <=====================================================================
@@ -70,6 +72,7 @@ namespace FragrantFlowers
             EntityTemplates.MakeHangingOffsets(gameObject, WIDTH, HEIGHT);
             EntityTemplates.ExtendEntityToBasicPlant(
                 gameObject,
+                CROP_VAL_HARVEST,
                 TemperatureLethalLow,
                 TemperatureWarningLow,
                 TemperatureWarningHigh,
@@ -78,7 +81,6 @@ namespace FragrantFlowers
                 true,
                 0f,
                 0.15f,
-                Crop_CottonBollConfig.ID,
                 true,
                 true,
                 true,
